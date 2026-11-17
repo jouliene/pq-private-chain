@@ -95,3 +95,79 @@ admission. No architecture-wide participation or annual capacity PASS is made.
 **Gate1 finite functional path passes.** Root accepted actual receipts. Gate2
 requires a newly declared source/profile and allocation; no larger workload or
 pipeline implementation is authorized by this document.
+
+## Paired full Gate2 result
+
+The predeclared eight96ordinary blocks +96separate funding completed under the
+same proof profile. Actual full receipt SHA256
+`8343cfd3ddb63520555a43e1b8b318a3ddb816c1454b6094f6c1e6ff96765964`;
+`GATE2_FULL01.json` contains author read-only arithmetic replay, source/build/
+profile/workload pins, all individual process costs and exact copy/byte counts.
+No native/build/proof run or source change was made for this readback.
+
+| Question | Gate1 observation | Full Gate2 observation |
+|---|---|---|
+| Ordinary block service |96 complete receive→verify→durable RETAIN20.837566s |Eight genuine96 blocks20.615336–21.047986s, mean20.781193s |
+| Upload/service serialization |13.949979s PUT +20.837566s destination =34.787545s arithmetic, not sojourn |Six distinct, newly unadmitted ordinary body-transfer overlaps13.379003–13.442527s each;80.444821s total; archive connections2 |
+| Offered queue |No finite offered-load schedule |768payments at fixed[0,0,T,2T,3T,4T,5T,6T],T30.27456s; last ACK287.618316s before fixed363.29472s |
+| Backlog/restart |Failure/rollback, publication lostACK, retry/reopen controls |Pending peak4batch IDs/672,640,976B frame work on disk; credits2;159.457134s explicit credit backpressure; validator down90.824782s; fresh open and full current-tip retry add0proofs |
+| Fixed-end obligations |Explicit RETAIN/pending0 |All8batches accepted, no future/pending/uploading/ready/validating work, credits0, missed offers0, late transitions0;75.676404s drain margin |
+| Complete cryptographic work |96funding +96invalid attempts +96validordinary |96funding +768newordinary =864physical destination proof attempts/96source signatures; no new-body cached verdict |
+| Durable state |All14tables equal except local catalog ID |All14tables equal; height9/1728leaves/1536NFs/864cores,fees1,825,416,864,liabilities0;864full bodies1,513,556,768B/pending0 |
+
+There are21 complete archive RPCs:10PUT and11GET, including the priced full
+current-tip retry GET. Producer→archive sent1,513,872,676B and received520B;
+archive→validator sent1,682,007,932B and received572B. Each endpoint's independent
+per-call arithmetic matches its peer. All13 role process incarnations exit0.
+Two actual PID namespaces each deny5known producer/DB/proof/frame/blob files.
+All40 offer-state transitions precede the cutoff. Postdeadline records contain
+only stop/terminal events, no late payment ACK used to repair the drain.
+
+The receiver's two native lifetimes cost67.819430self CPU seconds plus3.604015
+already-waited helper CPU seconds. Direct sender processes cost5.121601CPU s;
+archive costs11.572017CPU s and performs0payment proofs. bwrap wrappers together
+cost0.005333CPU s; they are not the receiver. Native self RSS max407,936KiB,
+waited helper max227,780KiB and sampled simultaneous role-tree max411,572KiB are
+separate, not a sum. Linux native physical read_bytes total815,104B while logical
+rchar is much larger: page cache was uncontrolled/warm, not cold-storage evidence.
+
+**Controller/oracle cost is material and separate:**155.098410user +63.687373
+system =218.785783CPU s; measured wall431.700683s. Its deltas start after source/
+installation/build pin preflight and include preparation, monitoring/scheduling
+and postdeadline SQL/identity checks; no per-phase CPU split exists. Its allowed
+affinity is0..11, unlike roleCPUs0/1/2. Cumulative controller peak933,504KiB includes
+earlier process history/preflight. Do not call this complete controller startup
+cost, a validator RSS peak, or a whole experiment using only three CPUs. Final
+receipt serialization follows the last samples. The source alone does not permit
+charging all218.8CPU s to protocol service or dropping it from experiment cost.
+
+Fresh genuine864-proof generation separately took6639.207363s/6619.042769CPU s,
+with248,668KiB wait4 peak. It includes private bridge/local verification and is
+not live wallet throughput or a sum of simultaneous process-tree RSS.
+
+All producer output copies are now charged: source public bodies/DB/scans
+3,048,188,982B +Parent public copies1,513,875,869B +Parent JSON/claim provenance
+1,650,975,430B +supervisor2091B +prepared frames1,513,872,156B =7,726,914,528B
+logical. Allocated7,744,724,992B leaves845,209,600B under the declared8GiB output
+watchdog. Provenance is laboratory overhead, not protocol archive data. Gate1's
+older producer-copy listing did not include/enforce Parent JSON/claim provenance
+under the same combined watchdog; no retroactive complete-copy claim is made.
+Reusable installation/vendor/build targets are outside this output-disk budget.
+
+Archive final10objects occupy1,513,872,156B logical/1,513,926,656B allocated.
+Destination final DB occupies1,523,658,752B logical/1,523,662,848B allocated;
+sampled DB/journal peak1,524,398,760B logical/1,524,404,224B allocated. The explicit
+2GiB RETAIN quota is local finite provisioning. Actual ordinary bodies average
+1,751,265.75B: an analytic all-valid100M ordinary-payment year still implies
+175.126575TB of raw bodies per retained copy, before metadata/replicas. No owner
+traffic cap, pruned-node success or annual affordability approval follows.
+
+The finite uncertainty from Gate1 was resolved by actual bounded overlap, drain,
+backpressure and restart, without dropping proof validation or reducing payment
+parameters. This establishes the declared finite local full-duplex/fanout1
+retained-node slice. It does not establish stationary queue stability, WAN TCP,
+PoW cost/propagation, arbitrary larger-state service, archive availability or
+formal joint PQ/privacy assurance. Root owns that participation decision and
+has provisionally retained CP03 under the explicit finite full-RETAIN validator
+plus separate opaque archive research model, authorizing Gate3. Annual owner
+budget acceptance remains separate; the global blockchain Goal remains ACTIVE.

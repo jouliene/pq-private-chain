@@ -1,0 +1,616 @@
+{
+  "RPC_bytes": {
+    "flows": {
+      "archive_to_validator": {
+        "archive_received": 572,
+        "archive_sent": 1682007932,
+        "validator_received": 1682007932,
+        "validator_sent": 572
+      },
+      "producer_to_archive": {
+        "archive_received": 1513872676,
+        "archive_sent": 520,
+        "producer_received": 520,
+        "producer_sent": 1513872676
+      }
+    },
+    "get_calls_including_full_tip_retry": 11,
+    "put_calls": 10,
+    "unit": "actual application bytes; TCP/IP headers/retransmits outside model"
+  },
+  "Root_research_decision": {
+    "limits": "Not owner acceptance of an annual participation/storage budget, pruned-node viability, WAN throughput, consensus/mining implementation or joint PQ/privacy theorem. Global blockchain Goal remains ACTIVE.",
+    "next_work": "Root will separately inspect/allocate bounded native fixed-tree helper work; not started by this readback.",
+    "state": "Root provisionally retains CP03 for the explicit finite full-RETAIN validator plus separate opaque archive research model; Gate3 authorized after independent actual review"
+  },
+  "canonical_oracle": {
+    "all14_equal_except_local_catalog_id": true,
+    "fee_escrow": 1825416864,
+    "final_height": 9,
+    "final_leaf_count": 1728,
+    "full_retention": {
+      "archive_committed_bytes": 0,
+      "bodies": 864,
+      "cached_bytes": 1513556768,
+      "full_bytes": 1513556768,
+      "missing_full": 0,
+      "pending": 0,
+      "retention": 1,
+      "unexported_bytes": 0
+    },
+    "table_counts": {
+      "anchors": 10,
+      "archive_objects": 0,
+      "archive_pending": 0,
+      "archive_segments": 0,
+      "blocks": 9,
+      "bodies": 864,
+      "body_cache": 1,
+      "cores": 864,
+      "leaves": 1728,
+      "meta": 1,
+      "node_undo": 3751,
+      "nodes": 3486,
+      "nullifiers": 1536,
+      "sources": 96
+    },
+    "unconsumed_liabilities": 0
+  },
+  "classification": "Actual predeclared eight96ordinary blocks plus96separate funding proofs; finite local full-duplex retained-node experiment, not annual capacity/participation or PQ assurance",
+  "comparison": {
+    "Gate1_ordinary96_destination_seconds": 20.837565988,
+    "Gate1_serial_PUT_plus_destination_cost_sum_seconds": 34.787545409,
+    "Gate2_ordinary96_destination_seconds": {
+      "max": 21.047985961,
+      "mean": 20.781193250375,
+      "min": 20.615335901999998
+    },
+    "all_valid100M_ordinary_body_copy_analytic_TB_per_year": 175.126575,
+    "ordinary_body_mean_bytes": 1751265.75,
+    "ordinary_full_body_bytes": 1344972096,
+    "projection_scope": "Analytic all-valid offered scenario, not annual measured service or an owner traffic cap; excludes metadata/replicas.",
+    "qualification": "Gate1 sum was arithmetic, not sojourn. Gate2 records actual sojourns and true distinct-object transfer overlap. No compression/parameter reduction or proof-validation omission occurred."
+  },
+  "findings": [
+    "Declared finite pipeline passes and drains after burst/backpressure/stopped-validator/retry with all offered IDs and bytes accounted.",
+    "No new functional failure found; afterdeadline rows are only stop/terminal, not late payment ACKs.",
+    "Separate controller/oracle cost218.785783CPU s is material and not native validation; no measured phase split permits attributing all of it to protocol or ignoring it in whole-experiment cost.",
+    "Warm/uncontrolled cache, local full-duplex application pacing/fanout1, tiny-state history and RETAIN remain material limits.",
+    "Measured raw-body growth remainsabout175.127TB/year per retained copy at100M valid ordinary payments; no pruned participant, archive availability, mining cost or PQ theorem is supplied.",
+    "Root has provisionally retained the explicit finite full-RETAIN validator + separate opaque archive research model and authorized Gate3. No source change/helper/rerun begins here."
+  ],
+  "finite_result": {
+    "accepted_ordinary_payments": 768,
+    "actual_validator_stopped_seconds": 90.824782386,
+    "all13_role_incarnations_exit0": true,
+    "both_actual_PID_namespaces_and_known5_file_denials": [
+      {
+        "actual_checked_at_ns": 850677185628769,
+        "denied_known_files": 5,
+        "host_pid": 2454670,
+        "private_pid_namespace": true
+      },
+      {
+        "actual_checked_at_ns": 850849173483937,
+        "denied_known_files": 5,
+        "host_pid": 2456263,
+        "private_pid_namespace": true
+      }
+    ],
+    "cleanup_seconds": 0.07108409504871815,
+    "credit_backpressure_seconds": 159.457133909,
+    "deadline_counts": {
+      "accepted": 8,
+      "future": 0,
+      "pending": 0,
+      "ready": 0,
+      "uploading": 0,
+      "validating": 0
+    },
+    "deadline_credits": 0,
+    "deadline_lag_ns": 2031198,
+    "distinct_accepted_full_bodies": 864,
+    "drain_margin_seconds": 75.67640352999996,
+    "funding_proofs_separate": 96,
+    "last_ACK_seconds": 287.61831647,
+    "late_controller_actions": [],
+    "late_transitions": [],
+    "missed_due_ids": [],
+    "observation_seconds": 363.29472,
+    "offered_ordinary_payments": 768,
+    "passed": true,
+    "peak_archive_connections": 2,
+    "peak_credits": 2,
+    "physical_receiving_proof_attempts": 864,
+    "postdeadline_payment_ACKs": false,
+    "receiving_source_signature_attempts": 96,
+    "source_pending_peak_batches": 4,
+    "source_pending_peak_frame_bytes_on_disk": 672640976,
+    "tip_retry_additional_proof_attempts": 0
+  },
+  "format": "CP04-GATE2-FULL-AUTHOR-READBACK01",
+  "individual_role_process_costs": [
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-genesis",
+      "pid": 2454618,
+      "sampled_role_tree_peak_rss_kib": 18392,
+      "system_seconds": 0.009021,
+      "user_seconds": 0.036084,
+      "wait4_peak_rss_kib": 26608,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 0.1419602989917621
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-funding",
+      "pid": 2454620,
+      "sampled_role_tree_peak_rss_kib": 18268,
+      "system_seconds": 0.426369,
+      "user_seconds": 0.495139,
+      "wait4_peak_rss_kib": 26608,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 13.985699046985246
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary1",
+      "pid": 2455331,
+      "sampled_role_tree_peak_rss_kib": 18296,
+      "system_seconds": 0.13180799999999998,
+      "user_seconds": 0.362981,
+      "wait4_peak_rss_kib": 26616,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 13.927576513029635
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary2",
+      "pid": 2455361,
+      "sampled_role_tree_peak_rss_kib": 18292,
+      "system_seconds": 0.141818,
+      "user_seconds": 0.356572,
+      "wait4_peak_rss_kib": 26616,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 13.9321657869732
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary3",
+      "pid": 2455434,
+      "sampled_role_tree_peak_rss_kib": 18320,
+      "system_seconds": 0.115079,
+      "user_seconds": 0.37945,
+      "wait4_peak_rss_kib": 26616,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 13.924246825044975
+    },
+    {
+      "actual_CPU_affinity": [
+        2
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "validator-initial",
+      "pid": 2454668,
+      "sampled_role_tree_peak_rss_kib": 410536,
+      "system_seconds": 0.0012649999999999998,
+      "user_seconds": 0.0012649999999999998,
+      "wait4_peak_rss_kib": 26616,
+      "wait4_scope": "bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO",
+      "wall_seconds": 81.16205577610526
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary4",
+      "pid": 2455484,
+      "sampled_role_tree_peak_rss_kib": 18272,
+      "system_seconds": 0.120306,
+      "user_seconds": 0.380625,
+      "wait4_peak_rss_kib": 26616,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 13.953375500976108
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary5",
+      "pid": 2456368,
+      "sampled_role_tree_peak_rss_kib": 18292,
+      "system_seconds": 0.152729,
+      "user_seconds": 0.38487699999999997,
+      "wait4_peak_rss_kib": 26620,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 13.972832912928425
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary6",
+      "pid": 2456458,
+      "sampled_role_tree_peak_rss_kib": 18268,
+      "system_seconds": 0.15592999999999999,
+      "user_seconds": 0.384764,
+      "wait4_peak_rss_kib": 26624,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 14.019003135967068
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary7",
+      "pid": 2456537,
+      "sampled_role_tree_peak_rss_kib": 18296,
+      "system_seconds": 0.151594,
+      "user_seconds": 0.38938799999999996,
+      "wait4_peak_rss_kib": 26624,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 14.026211579097435
+    },
+    {
+      "actual_CPU_affinity": [
+        0
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "producer-ordinary8",
+      "pid": 2456579,
+      "sampled_role_tree_peak_rss_kib": 18284,
+      "system_seconds": 0.172544,
+      "user_seconds": 0.374523,
+      "wait4_peak_rss_kib": 26628,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 14.009901750017889
+    },
+    {
+      "actual_CPU_affinity": [
+        2
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "validator-restarted",
+      "pid": 2456261,
+      "sampled_role_tree_peak_rss_kib": 411572,
+      "system_seconds": 0.001869,
+      "user_seconds": 0.0009339999999999999,
+      "wait4_peak_rss_kib": 26620,
+      "wait4_scope": "bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO",
+      "wall_seconds": 217.17407065897714
+    },
+    {
+      "actual_CPU_affinity": [
+        1
+      ],
+      "exit": 0,
+      "first_wait4": true,
+      "name": "archive",
+      "pid": 2454617,
+      "sampled_role_tree_peak_rss_kib": 18972,
+      "system_seconds": 3.358298,
+      "user_seconds": 8.213719,
+      "wait4_peak_rss_kib": 26608,
+      "wait4_scope": "direct Python role process; archive threads share process counters",
+      "wall_seconds": 403.35595817200374
+    }
+  ],
+  "measured_different_new_ordinary_body_transfer_overlaps": [
+    {
+      "downloading_new_unadmitted": "ordinary1",
+      "end_ns": 850730734561806,
+      "seconds": 13.442527251,
+      "start_ns": 850717292034555,
+      "uploading": "ordinary2"
+    },
+    {
+      "downloading_new_unadmitted": "ordinary2",
+      "end_ns": 850751432233718,
+      "seconds": 13.433931037,
+      "start_ns": 850737998302681,
+      "uploading": "ordinary3"
+    },
+    {
+      "downloading_new_unadmitted": "ordinary4",
+      "end_ns": 850900565824529,
+      "seconds": 13.415911478,
+      "start_ns": 850887149913051,
+      "uploading": "ordinary5"
+    },
+    {
+      "downloading_new_unadmitted": "ordinary5",
+      "end_ns": 850921194100272,
+      "seconds": 13.385836488,
+      "start_ns": 850907808263784,
+      "uploading": "ordinary6"
+    },
+    {
+      "downloading_new_unadmitted": "ordinary6",
+      "end_ns": 850942047754385,
+      "seconds": 13.387611142,
+      "start_ns": 850928660143243,
+      "uploading": "ordinary7"
+    },
+    {
+      "downloading_new_unadmitted": "ordinary7",
+      "end_ns": 850962773472182,
+      "seconds": 13.379003137,
+      "start_ns": 850949394469045,
+      "uploading": "ordinary8"
+    }
+  ],
+  "method": "Read-only full public receipts/events and independent arithmetic replay; no native/build/proof rerun, no source edits, no repeated full-body/SQL hash campaign. SQL equality refers to executed external oracle and its retained14-table digest/count artifact.",
+  "per_batch": [
+    {
+      "admit_durable_retain_wall_seconds": 5.468477737,
+      "batch": "ordinary1",
+      "canonical_ACK_seconds": 34.633530596,
+      "frame_bytes": 168122212,
+      "incarnation_proof_attempts": 192,
+      "incarnation_signature_attempts": 96,
+      "inclusive_command_wall_seconds": 20.700252938,
+      "inclusive_native_self_CPU_seconds": 6.966703,
+      "observed_offer_to_ACK_seconds": 34.633530596,
+      "offer_due_seconds": 0.0,
+      "parse_copy_wall_seconds": 0.791162692,
+      "receive_wall_seconds": 14.429757643
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.488603583,
+      "batch": "ordinary2",
+      "canonical_ACK_seconds": 55.298340331,
+      "frame_bytes": 168135204,
+      "incarnation_proof_attempts": 288,
+      "incarnation_signature_attempts": 96,
+      "inclusive_command_wall_seconds": 20.6588876,
+      "inclusive_native_self_CPU_seconds": 6.916256000000002,
+      "observed_offer_to_ACK_seconds": 55.298340331,
+      "offer_due_seconds": 0.0,
+      "parse_copy_wall_seconds": 0.737250249,
+      "receive_wall_seconds": 14.423469663
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.850871252,
+      "batch": "ordinary3",
+      "canonical_ACK_seconds": 183.752568676,
+      "frame_bytes": 168045412,
+      "incarnation_proof_attempts": 96,
+      "incarnation_signature_attempts": 0,
+      "inclusive_command_wall_seconds": 21.047985961,
+      "inclusive_native_self_CPU_seconds": 7.326536999999999,
+      "observed_offer_to_ACK_seconds": 153.478008676,
+      "offer_due_seconds": 30.27456,
+      "parse_copy_wall_seconds": 0.761023901,
+      "receive_wall_seconds": 14.427539868
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.443953663,
+      "batch": "ordinary4",
+      "canonical_ACK_seconds": 204.37430727,
+      "frame_bytes": 168082340,
+      "incarnation_proof_attempts": 192,
+      "incarnation_signature_attempts": 0,
+      "inclusive_command_wall_seconds": 20.615335901999998,
+      "inclusive_native_self_CPU_seconds": 6.876436,
+      "observed_offer_to_ACK_seconds": 143.82518727,
+      "offer_due_seconds": 60.54912,
+      "parse_copy_wall_seconds": 0.741227768,
+      "receive_wall_seconds": 14.421061076
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.645203422,
+      "batch": "ordinary5",
+      "canonical_ACK_seconds": 225.229625868,
+      "frame_bytes": 168188132,
+      "incarnation_proof_attempts": 288,
+      "incarnation_signature_attempts": 0,
+      "inclusive_command_wall_seconds": 20.850248186,
+      "inclusive_native_self_CPU_seconds": 7.100137000000002,
+      "observed_offer_to_ACK_seconds": 134.405945868,
+      "offer_due_seconds": 90.82368,
+      "parse_copy_wall_seconds": 0.753067011,
+      "receive_wall_seconds": 14.442456005
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.51395991,
+      "batch": "ordinary6",
+      "canonical_ACK_seconds": 245.955479863,
+      "frame_bytes": 168152548,
+      "incarnation_proof_attempts": 384,
+      "incarnation_signature_attempts": 0,
+      "inclusive_command_wall_seconds": 20.72119872,
+      "inclusive_native_self_CPU_seconds": 6.978448,
+      "observed_offer_to_ACK_seconds": 124.857239863,
+      "offer_due_seconds": 121.09824,
+      "parse_copy_wall_seconds": 0.766002738,
+      "receive_wall_seconds": 14.431833209
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.642504497,
+      "batch": "ordinary7",
+      "canonical_ACK_seconds": 266.795097512,
+      "frame_bytes": 168180772,
+      "incarnation_proof_attempts": 480,
+      "incarnation_signature_attempts": 0,
+      "inclusive_command_wall_seconds": 20.833886824,
+      "inclusive_native_self_CPU_seconds": 7.085607000000001,
+      "observed_offer_to_ACK_seconds": 115.422297512,
+      "offer_due_seconds": 151.3728,
+      "parse_copy_wall_seconds": 0.758061493,
+      "receive_wall_seconds": 14.424263996
+    },
+    {
+      "admit_durable_retain_wall_seconds": 5.633448776,
+      "batch": "ordinary8",
+      "canonical_ACK_seconds": 287.61831647,
+      "frame_bytes": 168119524,
+      "incarnation_proof_attempts": 576,
+      "incarnation_signature_attempts": 0,
+      "inclusive_command_wall_seconds": 20.821749872,
+      "inclusive_native_self_CPU_seconds": 7.079444000000003,
+      "observed_offer_to_ACK_seconds": 105.97095647,
+      "offer_due_seconds": 181.64736,
+      "parse_copy_wall_seconds": 0.750115363,
+      "receive_wall_seconds": 14.429508282
+    }
+  ],
+  "physical_output_copies": {
+    "ALL_producer_charged": {
+      "allocated_bytes": 7744724992,
+      "files": 6084,
+      "logical_bytes": 7726914528
+    },
+    "Parent_JSON_claim_provenance": {
+      "allocated_bytes": 1656356864,
+      "files": 1728,
+      "logical_bytes": 1650975430
+    },
+    "Parent_public_copies": {
+      "allocated_bytes": 1521303552,
+      "files": 2592,
+      "logical_bytes": 1513875869
+    },
+    "archive_final": {
+      "allocated_bytes": 1513926656,
+      "files": 10,
+      "logical_bytes": 1513872156
+    },
+    "destination_final": {
+      "allocated_bytes": 1523662848,
+      "files": 1,
+      "logical_bytes": 1523658752
+    },
+    "destination_sampled_disk_peak": {
+      "allocated_bytes": 1524404224,
+      "files": 2,
+      "logical_bytes": 1524398760
+    },
+    "prepared_frames": {
+      "allocated_bytes": 1513926656,
+      "files": 10,
+      "logical_bytes": 1513872156
+    },
+    "producer_allocated_headroom_under8GiB": 845209600,
+    "producer_supervisor": {
+      "allocated_bytes": 8192,
+      "files": 2,
+      "logical_bytes": 2091
+    },
+    "scope": "All generated/network/provenance output copies charged; reusable installed code/vendor/build targets are not this output-disk budget. Parent provenance is experiment overhead, not protocol archive data.",
+    "source_producer_public": {
+      "allocated_bytes": 3053129728,
+      "files": 1752,
+      "logical_bytes": 3048188982
+    }
+  },
+  "provenance": {
+    "build_sha256": "17674777c6395e7b41e8170dfae31a2c849334463e5b84f6df14c7a5eb2ee8a6",
+    "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+    "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+    "source_sha256": "5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5",
+    "workload_sha256": "bf2f47737e226bc170f16f44ba9747c22c4e8bb76bcb4487d48e9bf5a5fe5e70"
+  },
+  "raw_result_sha256": "8343cfd3ddb63520555a43e1b8b318a3ddb816c1454b6094f6c1e6ff96765964",
+  "resources": {
+    "archive": {
+      "CPU_seconds": 11.572016999999999,
+      "actual_proof_attempts": 0,
+      "actual_source_signature_attempts": 0,
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "peak_rss_kib": 26608,
+      "process_wall_seconds": 403.35595817200374,
+      "scope": "Opaque durable-byte storage/GET only, not admission; measured fanout1 on two independent full-duplex application-paced links"
+    },
+    "bwrap_wrappers_only": {
+      "CPU_seconds_sum": 0.005332999999999999,
+      "scope": "Not native verification cost"
+    },
+    "controller_oracles": {
+      "allowed_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "peak_rss_kib_cumulative": 933504,
+      "qualification": "Material separate experimental cost. CPU/wall deltas start after source/install/build pin preflight, include preparation/metadata/scheduling and postdeadline SQL/identity checks, and have no per-phase split. Cumulative RSS includes earlier process history/preflight. Affinity0..11 differs from fixed roleCPUs; not a whole-experiment3CPU claim.",
+      "scope": "Separate experimental scheduler/preparation/metadata/oracle cost; SQL correctness checks run after measured observation end, not hidden inside validator service",
+      "system_seconds_delta": 63.687373,
+      "user_seconds_delta": 155.09841,
+      "wall_seconds": 431.7006833329797
+    },
+    "direct_sender_processes": {
+      "CPU_seconds": 5.121601,
+      "count": 10,
+      "peak_rss_kib_max_not_sum": 26628,
+      "sum_serial_process_wall_seconds": 125.89297335001174
+    },
+    "native_receiver_two_incarnations": {
+      "actual_native_affinity": [
+        "2",
+        "2"
+      ],
+      "already_waited_helper_CPU_seconds": 3.604015,
+      "linux_self_read_bytes_sum": 815104,
+      "linux_self_write_bytes_sum": 1532039168,
+      "native_self_peak_rss_kib_max_not_sum": 407936,
+      "sampled_simultaneous_role_tree_peak_rss_kib": 411572,
+      "scope": "Native absolute snapshots after Ledger/provider drop, before final JSON/exit; exclude bwrap wrapper CPU. Separate cumulative peaks are never summed. Sampling may miss short simultaneous peaks.",
+      "self_CPU_seconds": 67.81943000000001,
+      "waited_helper_peak_rss_kib_max_not_sum": 227780
+    },
+    "separate_full_genuine_generator": {
+      "CPU_seconds": 6619.042769,
+      "proofs": 864,
+      "receipt_sha256": "1d2d55a839f0a8f665664449266c0ac7d7268c2492a5f7ccccff226401821d22",
+      "scope": "Pregeneration/private bridge/local validation included; not live wallet throughput; wait4 peak not simultaneous tree sum",
+      "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2",
+      "wait4_peak_rss_kib": 248668,
+      "wall_seconds": 6639.207362955087
+    }
+  },
+  "total_decisive_overlap_seconds": 80.444820533
+}

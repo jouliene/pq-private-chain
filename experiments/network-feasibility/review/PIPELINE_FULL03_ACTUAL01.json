@@ -1,0 +1,588 @@
+{
+  "format": "CP04-INDEPENDENT-PIPELINE-FULL03-REVIEW01",
+  "reviewed_utc": "2026-11-17T10:03:58.944441+00:00",
+  "decision": "PASS finite declared Gate2 profile; GO to Gate3 under explicit full-RETAIN validator plus separately provisioned opaque archive research model",
+  "passed": true,
+  "input_pins": {
+    "source_sha256": "5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5",
+    "build_sha256": "17674777c6395e7b41e8170dfae31a2c849334463e5b84f6df14c7a5eb2ee8a6",
+    "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+    "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+    "workload_sha256": "bf2f47737e226bc170f16f44ba9747c22c4e8bb76bcb4487d48e9bf5a5fe5e70"
+  },
+  "result_sha256": "8343cfd3ddb63520555a43e1b8b318a3ddb816c1454b6094f6c1e6ff96765964",
+  "prepared_sha256": "c6f4bad9d3f1824b29298dc89ff77bbfa14fb799df7453747aed65f3fba90c00",
+  "canonical_receipt_sha256": "fb4d913344265212280e40e553e2fa907bba8314f1109562cd9cb1508ac8c65c",
+  "actual_observation": {
+    "seconds": 363.29472,
+    "last_canonical_ack_seconds": 287.61831647,
+    "margin_seconds": 75.67640353,
+    "accepted_ordinary_blocks": 8,
+    "ordinary_payments": 768,
+    "remaining_credits": 0,
+    "peak_credits": 2,
+    "queue_peaks": {
+      "future": 8,
+      "pending": 4,
+      "uploading": 1,
+      "ready": 2,
+      "validating": 1,
+      "accepted": 8
+    },
+    "credit_backpressure_seconds": 159.457133909,
+    "restart_down_seconds": 90.824782386,
+    "retry_new_proofs": 0,
+    "distinct_body_overlap_seconds": [
+      13.442527251,
+      13.433931037,
+      13.415911478,
+      13.385836488,
+      13.387611142,
+      13.379003137
+    ]
+  },
+  "proof_verification": {
+    "genuine_public_only_proofs_initial_incarnation": 288,
+    "genuine_public_only_proofs_restarted_incarnation": 576,
+    "total": 864,
+    "source_signature_attempts": 96,
+    "opaque_archive_proof_attempts": 0,
+    "scope": "Read actual fresh native counters, approved source and isolated-process evidence. Reviewer did not rerun cryptography."
+  },
+  "namespace_readback": [
+    {
+      "actual_checked_at_ns": 850677185628769,
+      "denied_known_files": 5,
+      "host_pid": 2454670,
+      "private_pid_namespace": true
+    },
+    {
+      "actual_checked_at_ns": 850849173483937,
+      "denied_known_files": 5,
+      "host_pid": 2456263,
+      "private_pid_namespace": true
+    }
+  ],
+  "independently_recomputed_application_bytes": {
+    "producer_sent": 1513872676,
+    "producer_received": 520,
+    "archive_put_received": 1513872676,
+    "archive_put_sent": 520,
+    "archive_get_received": 572,
+    "archive_get_sent": 1682007932,
+    "validator_sent": 572,
+    "validator_received": 1682007932
+  },
+  "all14_direct_SQL_comparison": {
+    "anchors": {
+      "rows": 10,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "archive_objects": {
+      "rows": 0,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "archive_pending": {
+      "rows": 0,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "archive_segments": {
+      "rows": 0,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "blocks": {
+      "rows": 9,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "bodies": {
+      "rows": 864,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "body_cache": {
+      "rows": 1,
+      "all_fields_equal": true,
+      "excluded_fields": [
+        "catalog_id"
+      ]
+    },
+    "cores": {
+      "rows": 864,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "leaves": {
+      "rows": 1728,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "meta": {
+      "rows": 1,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "node_undo": {
+      "rows": 3751,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "nodes": {
+      "rows": 3486,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "nullifiers": {
+      "rows": 1536,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    },
+    "sources": {
+      "rows": 96,
+      "all_fields_equal": true,
+      "excluded_fields": []
+    }
+  },
+  "actual_disk_stat_only": {
+    "producer": {
+      "logical_bytes": 1513872156,
+      "allocated_bytes": 1513926656,
+      "files": 10
+    },
+    "archive": {
+      "logical_bytes": 1513872156,
+      "allocated_bytes": 1513926656,
+      "files": 10
+    },
+    "validator": {
+      "logical_bytes": 1523658752,
+      "allocated_bytes": 1523662848,
+      "files": 1
+    }
+  },
+  "charged_producer_copies_and_provenance": {
+    "logical_bytes": 7726914528,
+    "allocated_bytes": 7744724992,
+    "files": 6084
+  },
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 864,
+    "cached_bytes": 1513556768,
+    "full_bytes": 1513556768,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "roles": [
+    {
+      "name": "producer-genesis",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 0.1419602989917621,
+      "user_seconds": 0.036084,
+      "system_seconds": 0.009021,
+      "wait4_peak_rss_kib": 26608,
+      "sampled_role_tree_peak_rss_kib": 18392,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513889792,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513889792,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-funding",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 13.985699046985246,
+      "user_seconds": 0.495139,
+      "system_seconds": 0.426369,
+      "wait4_peak_rss_kib": 26608,
+      "sampled_role_tree_peak_rss_kib": 18268,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513922560,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513922560,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary1",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 13.927576513029635,
+      "user_seconds": 0.362981,
+      "system_seconds": 0.13180799999999998,
+      "wait4_peak_rss_kib": 26616,
+      "sampled_role_tree_peak_rss_kib": 18296,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary2",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 13.9321657869732,
+      "user_seconds": 0.356572,
+      "system_seconds": 0.141818,
+      "wait4_peak_rss_kib": 26616,
+      "sampled_role_tree_peak_rss_kib": 18292,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary3",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 13.924246825044975,
+      "user_seconds": 0.37945,
+      "system_seconds": 0.115079,
+      "wait4_peak_rss_kib": 26616,
+      "sampled_role_tree_peak_rss_kib": 18320,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "validator-initial",
+      "exit": 0,
+      "cpu_affinity": [
+        2
+      ],
+      "wall_seconds": 81.16205577610526,
+      "user_seconds": 0.0012649999999999998,
+      "system_seconds": 0.0012649999999999998,
+      "wait4_peak_rss_kib": 26616,
+      "sampled_role_tree_peak_rss_kib": 410536,
+      "disk_peak_sampled": {
+        "allocated_bytes": 509317120,
+        "files": 2,
+        "logical_bytes": 509311032
+      },
+      "final_disk": {
+        "allocated_bytes": 509005824,
+        "files": 1,
+        "logical_bytes": 509001728
+      },
+      "wait4_scope": "bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO"
+    },
+    {
+      "name": "producer-ordinary4",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 13.953375500976108,
+      "user_seconds": 0.380625,
+      "system_seconds": 0.120306,
+      "wait4_peak_rss_kib": 26616,
+      "sampled_role_tree_peak_rss_kib": 18272,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary5",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 13.972832912928425,
+      "user_seconds": 0.38487699999999997,
+      "system_seconds": 0.152729,
+      "wait4_peak_rss_kib": 26620,
+      "sampled_role_tree_peak_rss_kib": 18292,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary6",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 14.019003135967068,
+      "user_seconds": 0.384764,
+      "system_seconds": 0.15592999999999999,
+      "wait4_peak_rss_kib": 26624,
+      "sampled_role_tree_peak_rss_kib": 18268,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary7",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 14.026211579097435,
+      "user_seconds": 0.38938799999999996,
+      "system_seconds": 0.151594,
+      "wait4_peak_rss_kib": 26624,
+      "sampled_role_tree_peak_rss_kib": 18296,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "producer-ordinary8",
+      "exit": 0,
+      "cpu_affinity": [
+        0
+      ],
+      "wall_seconds": 14.009901750017889,
+      "user_seconds": 0.374523,
+      "system_seconds": 0.172544,
+      "wait4_peak_rss_kib": 26628,
+      "sampled_role_tree_peak_rss_kib": 18284,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    },
+    {
+      "name": "validator-restarted",
+      "exit": 0,
+      "cpu_affinity": [
+        2
+      ],
+      "wall_seconds": 217.17407065897714,
+      "user_seconds": 0.0009339999999999999,
+      "system_seconds": 0.001869,
+      "wait4_peak_rss_kib": 26620,
+      "sampled_role_tree_peak_rss_kib": 411572,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1524404224,
+        "files": 2,
+        "logical_bytes": 1524398760
+      },
+      "final_disk": {
+        "allocated_bytes": 1523662848,
+        "files": 1,
+        "logical_bytes": 1523658752
+      },
+      "wait4_scope": "bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO"
+    },
+    {
+      "name": "archive",
+      "exit": 0,
+      "cpu_affinity": [
+        1
+      ],
+      "wall_seconds": 403.35595817200374,
+      "user_seconds": 8.213719,
+      "system_seconds": 3.358298,
+      "wait4_peak_rss_kib": 26608,
+      "sampled_role_tree_peak_rss_kib": 18972,
+      "disk_peak_sampled": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "final_disk": {
+        "allocated_bytes": 1513926656,
+        "files": 10,
+        "logical_bytes": 1513872156
+      },
+      "wait4_scope": "direct Python role process; archive threads share process counters"
+    }
+  ],
+  "native_lifetimes": [
+    {
+      "actual_cpu_allowed_list": "2",
+      "checked_nonoverlapping_inclusive_command_cpu_sums": {
+        "self_system_seconds": 2.1398639999999998,
+        "self_user_seconds": 20.390054000000003,
+        "waited_child_system_seconds": 1.06264,
+        "waited_child_user_seconds": 2.541375
+      },
+      "linux_self_io_cumulative": {
+        "cancelled_write_bytes": 0,
+        "rchar": 2349907401,
+        "read_bytes": 229376,
+        "syscr": 550831,
+        "syscw": 125745,
+        "wchar": 512428015,
+        "write_bytes": 510586880
+      },
+      "native_main_wall_seconds": 81.121054913,
+      "nested_stage_cpu_not_added": true,
+      "scope": "Absolute native self and already-waited-child usage, sampled after Ledger/provider drop. CPU includes process startup and all completed commands; final terminal JSON serialization/exit follows sample. Main wall includes launcher/oracle idle. Linux IO is self only, excludes helper IO. Peak RSS fields are cumulative separate maxima, never a simultaneous sum; sampled external role-tree peak is separate.",
+      "self_inblock": 448,
+      "self_oublock": 997240,
+      "self_peak_rss_kib_cumulative": 406828,
+      "self_system_seconds": 2.143885,
+      "self_user_seconds": 20.390272,
+      "waited_child_inblock": 0,
+      "waited_child_oublock": 0,
+      "waited_child_peak_rss_kib_cumulative": 227780,
+      "waited_child_system_seconds": 1.06264,
+      "waited_child_user_seconds": 2.541375
+    },
+    {
+      "actual_cpu_allowed_list": "2",
+      "checked_nonoverlapping_inclusive_command_cpu_sums": {
+        "self_system_seconds": 3.596994,
+        "self_user_seconds": 41.682252000000005,
+        "waited_child_system_seconds": 0.0,
+        "waited_child_user_seconds": 0.0
+      },
+      "linux_self_io_cumulative": {
+        "cancelled_write_bytes": 0,
+        "rchar": 7390841501,
+        "read_bytes": 585728,
+        "syscr": 1772896,
+        "syscw": 251633,
+        "wchar": 1023801186,
+        "write_bytes": 1021452288
+      },
+      "native_main_wall_seconds": 217.133606343,
+      "nested_stage_cpu_not_added": true,
+      "scope": "Absolute native self and already-waited-child usage, sampled after Ledger/provider drop. CPU includes process startup and all completed commands; final terminal JSON serialization/exit follows sample. Main wall includes launcher/oracle idle. Linux IO is self only, excludes helper IO. Peak RSS fields are cumulative separate maxima, never a simultaneous sum; sampled external role-tree peak is separate.",
+      "self_inblock": 1144,
+      "self_oublock": 1995024,
+      "self_peak_rss_kib_cumulative": 407936,
+      "self_system_seconds": 3.601339,
+      "self_user_seconds": 41.683934,
+      "waited_child_inblock": 0,
+      "waited_child_oublock": 0,
+      "waited_child_peak_rss_kib_cumulative": 0,
+      "waited_child_system_seconds": 0.0,
+      "waited_child_user_seconds": 0.0
+    }
+  ],
+  "controller_cost": {
+    "allowed_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "peak_rss_kib_cumulative": 933504,
+    "scope": "Separate experimental scheduler/preparation/metadata/oracle cost; SQL correctness checks run after measured observation end, not hidden inside validator service",
+    "system_seconds_delta": 63.687373,
+    "user_seconds_delta": 155.09841,
+    "wall_seconds": 431.7006833329797
+  },
+  "checks": [
+    "Frozen 18-file source pins and profile match actual result",
+    "Replayed every timestamped offer/state transition against unchanged schedule and fixed cutoff; credit release follows canonical ACK",
+    "Recomputed backpressure intervals and six different not-yet-admitted body transfer overlaps from raw archive rows",
+    "Reconciled all 21 RPCs, ten producer PUTs, eleven validator GETs including retry, and application byte conservation",
+    "All 13 role terminal statuses, resource rows and two native lifetime CPU-coverage checks reviewed",
+    "Direct row-wise equality of all 14 SQL tables including complete body bytes, excluding only independent body_cache.catalog_id",
+    "Actual ten archive object names/sizes and producer/archive/validator disk stats checked without duplicating content hash campaign",
+    "Recomputed nonoverlapping inclusive native CPU sums from original role stage rows, rather than relying only on precomputed coverage",
+    "All eight ACK response records equal actual native role rows; postdeadline rows contain no apply/init/open verdict"
+  ],
+  "reviewer_diagnostic": "First metadata-only oracle omitted initial future=8 peak, then corrected; raw issue retained in PIPELINE_FULL03_READBACK_DIAGNOSTIC01.json. No workload rerun or implementation change.",
+  "limits": [
+    "Full raw-body retention remains about 175 TB/year per copy at the sizing input, plus growing canonical state and common history. Validator and archive copies duplicate costs. No owner economic acceptance inferred.",
+    "Remote durable ACK is not integrated with LocalArchive SQL eviction; ordinary pruned participation and fresh economical bootstrap remain unimplemented. This model deliberately does not evict.",
+    "Finite pre-generated eight-batch loopback workload with one PUT/one GET and 100 Mbit/s per direction plus 40 ms RPC; not WAN, arbitrary fanout, sustained annual service or online proof-generation throughput.",
+    "Controller CPU delta starts after preflight pin checks; cumulative 933504 KiB peak includes preflight. Observer spans/costs are separate, never added to nested validator spans. Native wrapper wait4 undercounts and is not used as native CPU authority.",
+    "Gate3 joint wallet/backup/rewind bridge is still unimplemented and separately gated. No PoW, production, full privacy or post-quantum theorem claim."
+  ],
+  "no_new_native_or_private_execution": true
+}

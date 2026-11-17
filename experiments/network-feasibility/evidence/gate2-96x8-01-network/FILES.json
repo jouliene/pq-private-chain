@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "bytes": 228823,
+      "file": "RESULT.json",
+      "sha256": "8343cfd3ddb63520555a43e1b8b318a3ddb816c1454b6094f6c1e6ff96765964",
+      "source": "experiments/network-feasibility/transport/.work/gate2-96x8-01/RESULT.json"
+    },
+    {
+      "bytes": 1772112,
+      "file": "PREPARED.json",
+      "sha256": "c6f4bad9d3f1824b29298dc89ff77bbfa14fb799df7453747aed65f3fba90c00",
+      "source": "experiments/network-feasibility/transport/.work/gate2-96x8-01/PREPARED.json"
+    },
+    {
+      "bytes": 1668,
+      "file": "CANONICAL_AFTER_DEADLINE.json",
+      "sha256": "fb4d913344265212280e40e553e2fa907bba8314f1109562cd9cb1508ac8c65c",
+      "source": "experiments/network-feasibility/transport/.work/gate2-96x8-01/CANONICAL_AFTER_DEADLINE.json"
+    }
+  ],
+  "format": "CP04-FULL-PIPELINE-SAFE-EVIDENCE01",
+  "scope": "Unchanged actual public experiment metadata; no private wallet data or bulk body/database copies"
+}

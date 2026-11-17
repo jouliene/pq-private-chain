@@ -1,102 +1,98 @@
-# Network resource decision — Gate1 accepted, Gate2 pending
+# Network resource decision — finite Gate2 passed; Gate3 authorized
 
-The actual 96-payment separate-process path passes its functional and finite
-retention controls. Retain the unchanged CP03 backend for the declared next queue
-experiment. Do not yet accept an annual participation model or begin full Gate3
-integration. A concrete remote pruning mechanism and its costs are still open;
-the observed scheduling gap alone does not justify changing cryptography.
+The declared eight-batch workload passed independent review. Root provisionally
+retains CP03 with **fully retaining validators and a separately provisioned opaque
+serving archive** for Gate3. This implemented model does not evict and has no
+unfinished export obligation. This is a finite research allocation, not owner
+acceptance of annual costs or ordinary-home-node economics.
 
-## Measured result and next falsifiable question
+## Measured service decision
 
-The ordinary destination command took **20.837566 s**, including receive,
-identity checks, parse/copy, real proof/state validation and durable RETAIN.
-Producer upload took **13.949979 s**. Their serialized stage-cost sum is
-**34.787545 s**, above the **30.27456 s** comparison interval for 96 payments at
-100 million offered payments per 365-day year. It is not an observed sojourn or
-steady throughput. The next declared test must actually overlap upload and
-destination service, measure shared archive contention, and account for all
-queues during a burst and stopped/restarted validator.
+Eight new96-payment batches, including an initial two-batch burst, were offered
+at T=30.27456s. All768 ordinary payments were accepted by **287.618316s**, before
+the fixed **363.294720s** observation end. The validator was actually stopped for
+**90.824782s**, reopened its database, retried the canonical tip with zero new
+proof/admission work, and completed the queue. All queues and outstanding credits
+were zero at the fixed end. Credits peaked at two; source-pending peaked at four
+batches; actual credit backpressure was159.457134s. Different queue maxima are
+not assumed simultaneous. Six distinct ordinary-body PUT/GET overlaps were
+observed. This answers Gate1's scheduling uncertainty for the finite workload;
+it does not establish indefinite stable service.
 
-The experiment uses application-paced local loopback, independent full-duplex
-100 Mbit/s directions, one archive PUT and one GET slot, and 40 ms once per RPC.
-It does not reproduce WAN loss, congestion, TCP windows, cold disks or a year of
-indexed state. See [the complete Gate1 cost record](../../experiments/network-feasibility/transport/GATE1_REVIEW.md),
-[independent readback](../../experiments/network-feasibility/review/GATE1_96_READBACK01.json)
-and [predeclared Gate2 profile](../../experiments/network-feasibility/GATE2_PROFILE.json).
+All14 source/destination SQL tables matched, excluding only local catalog identity.
+Isolated native validator processes checked all864 genuine proofs (96 funding,
+768 ordinary) and96 source signatures. All13 role incarnations exited successfully.
+Current-tip retry is not a new payment. Gate1's malformed-final-proof/atomicity,
+interrupted transfer and archive crash/lost-ACK controls remain closed evidence.
 
-## Role costs and projections
+See [predeclared profile](../../experiments/network-feasibility/GATE2_PROFILE.json),
+[raw network evidence](../../experiments/network-feasibility/evidence/gate2-96x8-01-network/RESULT.json),
+[author readback](../../experiments/network-feasibility/transport/GATE2_FULL01.json)
+and [independent review](../../experiments/network-feasibility/review/PIPELINE_FULL03_ACTUAL01.json).
+The historical profile declaration is deliberately not rewritten after execution.
 
-All annual figures below are analytical scenarios derived from current formats
-and the actual 96-payment sample. The owner specified the offered payment count,
-not an annual traffic cap, hardware budget, archive replication count or catch-up
-deadline. No laboratory funding is extrapolated as permissionless issuance.
+This was paced loopback:100Mbit/s **per direction**,40ms once/RPC, onePUT/oneGET,
+CPUs0/1/2 for measured roles,4GiB address space and8GiB disk per role. Shared host,
+warm/uncontrolled caches and tiny state are explicit. It is not WAN, cold-disk,
+arbitrary-fanout or year-long capacity evidence. The separate experimental
+controller had affinity0..11 and consumed **218.785783 CPU seconds** after pin
+preflight; its cumulative933504KiB RSS peak includes preflight. Preparation,
+scheduling and post-observation SQL oracle costs are additional experiment costs.
+No phase split was measured; do not claim the whole experiment used only3CPUs.
 
-| Role | Actual evidence | Annual sizing implication and unresolved cost |
+## Complete role costs and projections
+
+The owner supplied100M offered payments/year, **no annual traffic limit**. Annual
+values are analytical projections, not observations or universal rejection caps.
+The768 ordinary bodies total1344972096B, mean1751265.75B/payment.
+
+| Role | Actual evidence | Annual implication and unresolved cost |
 |---|---|---|
-| Ordinary validating node | Ordinary 96 receive-to-commit 20.838 s, native CPU 7.348 s; retained actual 192-body database 340.255 MB including funding. Sampled campaign process-tree peak 463,940 KiB. | One incoming full-body copy averages about 44.43 Mbit/s. Current RETAIN adds about 175.160 TB/year of bodies. A pruned ordinary-node path is not yet implemented through the network archive. Public state, history, undo and indexes continue growing even after body eviction. |
-| Archive | Actual final 505.183 MB contains genesis, funding, valid ordinary and a separately charged invalid-control frame. All crash/retry traffic is counted. It stores opaque bytes and performs no payment validation. | About 175.160 TB/year per full-body copy, before metadata, replication and repair. Each additional full stream repeats that egress duty; six outgoing copies average about 266.61 Mbit/s before framing/retries. An ACK is a configured server's durability assertion, not proof of permanent future availability. |
-| Miner | No mining executed. A miner accepting these payments inherits genuine validation and relevant relay/history obligations. | Puzzle work, competitive hardware, reward issuance and economic security are unimplemented and unpriced. They are not zero and cannot replace the ordinary-node cost row. |
-| Wallet | Existing receiving composition is genuine. The new common-history selective witness algorithm is not integrated yet. Actual ordinary reduced record is 4,952 B; framed common scan averages 5,022.417 B/payment at 96-body blocks. | About 502.242 GB/year of common scan at this batching, before request/retry overhead. At an uncontended 100 Mbit/s, one year's transfer alone takes about 11.16 hours; receipt decryption, number of receiving keys, authentication and local witness work are additional. No ownership-selective remote fetching is assumed. |
+| Validating node | Complete ordinary96 commands about20.62–20.85s. Across funding/ordinary/restart/retry, native SELF CPU67.819430s plus waited helpers3.604015s separately. Sampled tree peak411572KiB. FinalDB1523658752B logical, retained bodies1513556768B, pending/missing/unexported0. | **175.126575TB/year** per body copy, about44.43Mbit/s mean incoming body traffic, plus growing public state/history/undo/indexes. Full retention exists; remote-pruned participation does not. |
+| Archive | Ten opaque objects1513872156B logical/1513926656B allocated, CPU11.572017s. PUT RX1513872676B and GET TX1682007932B include framing, funding and retry. No payment verification or remaining partial object. | Another175.126575TB/year per copy before replication/repair. Six full streams average about266.56Mbit/s egress before overhead. ACK is a durability assertion, not permanent availability; same-host roles are not independent failure domains. |
+| Miner | No mining executed. Admission inherits genuine validation and relevant relay/history duties. | Puzzle work, issuance, competitive hardware and economic security remain unimplemented and unpriced, not zero. |
+| Wallet | Genuine receiving/proving exists; Gate3 joint local witnesses, rewind and isolated recovery are pending. Ordinary reduced record4952B, common scan framing5022.417B/payment at96-body batching. | About**502.242GB/year** common scan plus requests/retries, per-key receiving and witness work. Transfer alone about11.16h at uncontended100Mbit/s. No ownership-selective remote fetching. |
 
-The producer created 96 credit plus 96 ordinary genuine proofs in 1,439.136 s.
-That includes private bridge checks, fixture receiving/membership work, repeated
-local ledger admission and safe public output. It is separate from sender/network
-service and is not live wallet throughput. Gate2 uses newly generated proofs;
-repeated delivery of existing payments does not count as new offered workload.
+Generation is separate:96credit+768ordinary complete proofs took6639.207363s wall,
+6619.042769 CPU seconds and first-wait4 peak248668KiB. It includes private bridge,
+fixture receipt/membership and local admissions. Pre-generated proofs drove the
+network experiment; this is not live wallet throughput. All producer physical
+copies, including Parent metadata/proofs and prepared frames, total**7744724992
+allocated bytes**, below the declared8GiB allocation. Duplicates are charged.
+Safe raw generation metadata is in
+[evidence/gate2-96x8-01-producer/](../../experiments/network-feasibility/evidence/gate2-96x8-01-producer/).
 
-Current-schema field counting for a 100M two-input/two-output ordinary scenario
-gives about **83.200 GB** for nullifier IDs, CORE IDs, funded leaf origin/commitment/
-body IDs and occupied tree values alone. This excludes reduced history, headers,
-row keys and overhead, indexes, undo, archive catalogs, funding and journals.
-It is neither a measured large database nor a minimum required by every possible
-protocol. The actual source-derived node formula reproduces the observed 799
-nodes for 384 funded leaves. Do not infer constant-size state from a body-cache
-quota or erase spent nullifiers when an anchor expires.
+Existing source-derived state field counting gives83.200GB/year for two-nullifier,
+two-output fields and occupied tree values. Row/index/undo/header/history/catalog
+overhead is excluded. This is neither measured year-sized SQL nor a protocol-wide
+minimum. [RESOURCE_MODEL01.json](../../experiments/network-feasibility/evidence/RESOURCE_MODEL01.json)
+and resource_model.py preserve that calculation and its historical Gate1 sample.
+Using the new body mean, one year's bodies alone need about162.15days at100Mbit/s
+or16.22days at1Gbit/s without contention. Validation, incoming traffic, availability
+and older years are additional. Trusted database opening is not authenticated
+bootstrap; no checkpoint verifier is implemented or priced as free.
 
-Fresh full validation currently needs genesis replay. One year's full bodies
-alone take about **162.19 days at 100 Mbit/s** or **16.22 days at 1 Gbit/s** to
-transfer without contention. Those are transfer-only calculations: validation,
-current incoming traffic, server availability, indexes and older years are
-additional. Opening an operator-trusted local database is not authenticated
-bootstrap. No checkpoint verifier is implemented or priced as free.
+## Participation decision and next investment
 
-Reproduce the byte/state calculation without new proofs or database mutations:
+The selected finite research model is implemented and services the declared
+workload. **Affordability/decentralization at the annual sizing input remains
+unresolved.** Validator plus archive body copies alone are350.253TB/year. Storage,
+history availability, growing state and new-node bootstrap remain material
+architectural problems. Faster processing does not settle them; owner acceptance
+is not inferred.
 
-```sh
-python3 -I experiments/network-feasibility/resource_model.py \
-  --workload experiments/network-feasibility/producer/.work/gate1-96.public/workload.json \
-  --approve-workload 338ddf2f36ea74d7e193dd7f14b4d779588bb0fffa5c3c36f2f820aa4bfcfc42 \
-  --output /absolute/new/resource-model.json
-```
-
-[RESOURCE_MODEL01.json](../../experiments/network-feasibility/evidence/RESOURCE_MODEL01.json)
-contains actual read-only SQL/page and scan lengths, formulas' outputs and their
-scope. Independently regenerated workloads have their own exact manifest digest;
-the historical Gate1 generator remains available at commit `2ab99fb`.
-
-## Participation decision boundary
-
-The proposed ordinary participant would verify every incoming complete payment,
-retain a bounded recent full-body cache plus explicitly growing public state and
-common history, and retrieve older full blocks from provisioned archives when
-serving/replaying/deep-rewinding. Archive loss would fail closed; it must never
-permit unchecked acceptance. Replicas and incentives remain separate duties.
-
-This is presently a **specified direction, not a demonstrated implementation**.
-The TCP frame archive does not produce the local catalog's `DurableBatch`.
-Canonical local eviction requires matching committed archive objects. Local
-archive tiering only moves bytes to another volume of the same operator; it
-does not make remote pruning exist. A remote policy needs explicit durable
-publication, restart-safe catalog/eviction and bounded verified retrieval, with
-no forged local locators or silent policy conversion. The independent
+Remote pruning is unimplemented: the network frame ACK is not the local catalog's
+DurableBatch. A later change needs explicit remote durability policy, authenticated
+object identity, restart-safe catalog/eviction and bounded verified refetch with
+fail-closed availability. Forged local locators, silent policy conversion or
+forgetting nullifiers/undo on anchor expiry are invalid. The earlier
 [participation review](../../experiments/network-feasibility/review/GATE2_PROFILE_PARTICIPATION_REVIEW01.md)
-identifies exact API seams and the smallest genuine failure/retrieval test.
+identifies these seams. Today's selected model pays for full copies instead.
 
-After Gate2, decide separately whether the measured configuration services its
-finite offered workload and whether a concrete participation model is supportable
-enough to retain for the next research investment. A finite drain, a larger disk
-quota, or an external archive in a diagram cannot decide the second question.
-Owner acceptance of proposed costs remains separate. Full wallet integration,
-independent clean-checkout reproduction and milestone publication are pending.
-Formal PQ/privacy composition, network anonymity and production readiness remain
-qualified as stated in [OBLIGATIONS.md](OBLIGATIONS.md).
+Next execute actual Gate3 receiving/local witnesses, changing-root expiry, rewind,
+backup-only fresh-process recovery and new spending. Independent clean-checkout
+reproduction and reviewed publication follow. Final handoff must decide whether
+a specific storage/bootstrap change precedes permissionless PoW integration;
+this finite pass alone does not justify a full consensus build. Formal PQ/privacy,
+network anonymity and production readiness remain separate in
+[OBLIGATIONS.md](OBLIGATIONS.md).

@@ -1,0 +1,7 @@
+{
+  "scope": "Reviewer-only metadata oracle, no native workload rerun",
+  "first_attempt_exit": 1,
+  "cause": "Reviewer queue peak replay omitted initial state with eight future batches; observed seven after first transition. Raw recorded peak eight is correct.",
+  "correction": "Initialize peak future=8 before replaying transitions.",
+  "workload_failure": false
+}
