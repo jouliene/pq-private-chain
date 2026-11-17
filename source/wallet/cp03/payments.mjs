@@ -62,7 +62,10 @@ export function preparePayment(wallet, helperSha256, {anchor, inputs, outputs, s
       }
       packet = encodePrivatePacket(statement, witnessInputs, notes);
       const token = Object.freeze({type: 'CP03-prepared-private-payment'});
-      payments.set(token, {statement, envelopes, packet, used: false, arity: n});
+      let settled;
+      const settlement = new Promise(resolve => { settled = resolve; });
+      payments.set(token, {statement, envelopes, packet, used: false, inFlight: false, retired: false,
+        settlement, settled, arity: n});
       packet = undefined; return token;
     } catch (error) {
       if (error instanceof WalletInputError) throw error;
@@ -75,7 +78,7 @@ export function preparePayment(wallet, helperSha256, {anchor, inputs, outputs, s
 }
 
 export function publicPayment(payment) {
-  const value = state(payment);
+  const value = state(payment); need(!value.retired);
   return {arity: value.arity, statement: Buffer.from(value.statement),
     envelopes: value.envelopes.map(envelope => Buffer.from(envelope))};
 }
@@ -83,18 +86,42 @@ export function publicPayment(payment) {
 // Only the installed private-parent bridge may be passed as this trusted callback.
 // Do not log/hash/serialize the packet. The callback must wait for child termination.
 export async function consumePrivatePacket(payment, operation) {
-  const value = state(payment); need(!value.used && typeof operation === 'function');
-  value.used = true;
-  try { return await operation(value.packet); }
-  finally { value.packet.fill(0); value.packet = null; }
+  const value = state(payment); need(!value.used && !value.retired && typeof operation === 'function');
+  value.used = true; value.inFlight = true;
+  try {
+    const result = await operation(value.packet);
+    need(!value.retired); return result;
+  } finally {
+    value.packet.fill(0); value.packet = null; value.inFlight = false;
+    if (value.retired) payments.delete(payment);
+    value.settled();
+  }
 }
 
 export function completeBody(payment, authorization, proof) {
-  const value = state(payment); need(value.used && value.packet === null);
+  const value = state(payment); need(!value.retired && value.used && value.packet === null);
   // Assembly makes no statement that proof/authorization is valid or admitted.
   return encodeBody(value.statement, value.envelopes, authorization, proof);
 }
 
 export function disposePayment(payment) {
-  const value = state(payment); value.packet?.fill(0); payments.delete(payment);
+  const value = state(payment); need(!value.inFlight);
+  value.packet?.fill(0); value.packet = null; payments.delete(payment); value.settled();
+}
+
+// Non-secret lifecycle only; no additional private-packet getter or consumer.
+export function paymentLifecycle(payment) {
+  const value = payments.get(payment);
+  return value ? Object.freeze({used: value.used, inFlight: value.inFlight, retired: value.retired}) : null;
+}
+export function retirePayment(payment) {
+  const value = payments.get(payment);
+  if (!value) return Promise.resolve();
+  value.retired = true;
+  if (!value.inFlight) {
+    value.packet?.fill(0); value.packet = null; payments.delete(payment); value.settled();
+  }
+  // An active consumer retains its packet until its existing awaited operation
+  // has ended. The approved Parent callback must wait for actual child exit.
+  return value.settlement;
 }

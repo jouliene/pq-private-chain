@@ -5997,12 +5997,16 @@
       "sha256": "1a9f67ae8ff6819764523b4e7a3ad0599a910ae0be729d431fc714a98316b54b"
     },
     "source/experiments/compact-receiving-v1/cp03/hash-core.mjs": {
-      "bytes": 4380,
-      "sha256": "e265f431b398479cd7705f9c11b601320631ab3055f018a9ff78d5d4011aa70d"
+      "bytes": 11872,
+      "sha256": "fbe9c59f2ba1edf26f2948dcab61527a6c269d98f07995b8e138a6d06ae58b97"
     },
     "source/experiments/compact-receiving-v1/cp03/hash-core/src/main.rs": {
-      "bytes": 4053,
-      "sha256": "cfb57462b86e9a92b28997390b61a7749715436b21842f696a843885da4b3164"
+      "bytes": 4445,
+      "sha256": "0aac46589d038fac7ad1845472d2eb0b42653f94b11e1bb15a4e76355add4ffd"
+    },
+    "source/experiments/compact-receiving-v1/cp03/hash-core/src/tree.rs": {
+      "bytes": 16964,
+      "sha256": "f1fb839a66c93708ab0b6388bf70b04d2d5106442a9eeefba9e7e9545fb3c989"
     },
     "source/experiments/compact-receiving-v1/cp03/receipt.mjs": {
       "bytes": 10415,
@@ -6045,12 +6049,16 @@
       "sha256": "c67748b24d3b6f55a125f24c67389c55c0233e0c3ee40c37fb8d97d93366bb56"
     },
     "source/wallet/cp03/keys.mjs": {
-      "bytes": 9529,
-      "sha256": "c99f6c79822e34ed4480cf8e921af764f3997e121e126724847b3c96cfa558d4"
+      "bytes": 10748,
+      "sha256": "04e8447b92e1d3c9f544d455a54d10d3412d87f8ba6555c5c57a6fc7e09a7a7c"
+    },
+    "source/wallet/cp03/local_witnesses.mjs": {
+      "bytes": 23692,
+      "sha256": "91189647d71b80a1e2854cbb8997949af21788b5c53db76dc99c9e2a59cb9ad1"
     },
     "source/wallet/cp03/payments.mjs": {
-      "bytes": 5694,
-      "sha256": "cb2d607f508c7f8f087e76b2744e53bd5d27df7fd58086822230b6542b7f18d0"
+      "bytes": 6870,
+      "sha256": "268f9397c9138470c19d77abdfb67ebf9b9c462dac6effeca96e6cabec31af48"
     },
     "source/wallet/cp03/private_prover.mjs": {
       "bytes": 7764,
@@ -6061,8 +6069,8 @@
       "sha256": "8e0ef239b3f9c4e128946f0f4c92701748d5af868b4c0134045e52206b676464"
     },
     "source/wallet/cp03/recovery.mjs": {
-      "bytes": 14775,
-      "sha256": "b827ebfcac3f3bb46fa94559955f6048fca46278a8bcbb2415c8ecbf2188215a"
+      "bytes": 15041,
+      "sha256": "e31adf14869dfd411147da01f139a314a94bc0a252a69db93a22bf36662de013"
     },
     "vendor/ahash-0.8.12/.cargo-checksum.json": {
       "bytes": 2280,
@@ -23174,6 +23182,6 @@
     "AGENTS.md",
     "docs/"
   ],
-  "source_or_fixture_files": 1503,
+  "source_or_fixture_files": 1505,
   "vendor_files": 4275
 }

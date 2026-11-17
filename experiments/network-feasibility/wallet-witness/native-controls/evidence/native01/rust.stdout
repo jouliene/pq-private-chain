@@ -1,0 +1,10 @@
+
+running 5 tests
+test tree::tests::forget_discovery_uniqueness_and_capacity ... ok
+test tree::tests::full_capacity_geometry_and_exact_caps ... ok
+test tree::tests::malformed_state_shapes_and_fields_fail_closed ... ok
+test tree::tests::padding_is_temporary_and_real_sibling_replaces_view ... ok
+test tree::tests::sequential_block_roots_and_paths_match_small_full_oracle ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.52s
+

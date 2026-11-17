@@ -102,3 +102,66 @@ readback. External oracle comparisons may supply no witness or owned-index map.
 No material contradiction requires abandoning this boundary. Exact wire review,
 native-port review and actual isolated receipt/witness/proof/restore/branch/resource
 evidence remain necessary before any Gate3 acceptance.
+
+## Exact opcode6 proposal follow-up
+
+The proposed `CPTRQ006`/`CPTRST06`/`CPTRP006` grammar resolves the sizing and
+continuation questions at the design level. Its bounds calculate exactly:
+
+- State: `64 + 40*80 + 64*(96 + 40*64) = 173248` bytes.
+- Entire request: `41 + 24 + 173248 + 64*16 + 256*152 = 213249` bytes.
+- Response: `92 + 173248 + 64*2584 = 338716` bytes.
+
+Index-sorted target records, exact completed masks determined by sibling interval
+end versus count, derived waiting references, lexicographically sorted unique
+existing forget handles, and rejection of token reuse even when forgotten in the
+same call make this a concrete canonical grammar. Stored target leaf digests and
+projected-path folding bind native path results to the retained target; Node still
+binds that target to the actual discovered `(origin,CM)` occurrence and opening.
+Reserved bytes, flags, field words and exact EOF must be checked on both sides.
+Count `2^40` is valid as one level40 forest root; hashing NODE still uses only
+levels0..39. Initialization, empty-block advance and zero-leaf projection must
+have explicit permitted forms and cannot implicitly reset an existing wallet.
+
+**Returning the previous root is not required.** The requirement is that only a
+private branded immutable checkpoint from accepted initialization/advance enters
+the call, with its Node cursor/revision/inventory binding intact. Native checks
+canonical state and prior projected-path consistency; Node checks returned
+`count == prior.count + incomingLeaves` and the exact validated block root/count.
+An empty advance also preserves prior root/count. Echoing a previous root would
+not authenticate an externally imported checkpoint and adds no missing authority
+to this local capability model. A new epoch or journal restore cannot bypass that
+binding by accepting arbitrary serialized state.
+
+The native author is still implementing this proposal at this review point.
+These conclusions approve the grammar direction, not unseen source, native
+correspondence, the five-second operating budget, or actual wallet integration.
+
+## Frozen native source readback
+
+Reviewed the implemented candidate at:
+
+- `hash-core/src/main.rs`: `0aac46589d038fac7ad1845472d2eb0b42653f94b11e1bb15a4e76355add4ffd`
+- `hash-core/src/tree.rs`: `f1fb839a66c93708ab0b6388bf70b04d2d5106442a9eeefba9e7e9545fb3c989`
+- `hash-core.mjs`: `fbe9c59f2ba1edf26f2948dcab61527a6c269d98f07995b8e138a6d06ae58b97`
+
+The actual implementation enforces the proposed bounds/grammar, canonical prefix
+forest, completed-sibling masks, unique index/token and forget/discovery rules.
+It folds stored target leaves through padded paths before and after advance;
+only the unpadded state is serialized. The clone-padding capture loop preserves
+multiple targets sharing a sibling and accepts the full-count level40 root.
+The JS wrapper sorts a private forget copy, derives expected target index/order,
+and checks the returned state/witness mapping. It clears transient request/output
+copies and returns operational failures. Native input limit selection preserves
+old opcode bounds. There is no caller-selected hash program or path oracle.
+
+Read the five Rust control bodies and13 JS control groups: they include the
+padding-continuation trap, a small full-tree path/root oracle, malformed state,
+forget/discovery, full-count geometry, real wrapper/native framing and legacy
+AUTH/NOTE/NF. They remain **unexecuted by this reviewer**; source assertions are
+not runtime PASS. Actual whole-block work folds up to64 paths twice and rebuilds
+empty hashes, so resource/timeout claims still require execution.
+
+Disposition: **source GO for Root's new pinned build and bounded component
+controls**. Source/ELF closure must include the new `tree.rs`; actual installed
+correspondence and wallet same-witness proof/recovery remain later gates.

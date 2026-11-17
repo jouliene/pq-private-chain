@@ -116,11 +116,9 @@ function stable(a, b) {
   return ['dev', 'ino', 'size', 'mtimeNs', 'ctimeNs'].every(key => a[key] === b[key]);
 }
 
-// No old wallet database, witness or spent-state snapshot is accepted.
-// The endpoint and inventory basis must come from the operator's documented trust path.
-// This function cannot authenticate that external provenance or network consensus.
-export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis = 'unknown', context = undefined) {
-  need(['unknown', 'conditional-on-independent-current-inventory'].includes(inventoryBasis));
+// Internal PUBLIC parser boundary shared by legacy recovery and the local witness
+// coordinator. Callbacks are fixed trusted code, never supplied by a scan/peer.
+export function prepareHistoryContext(trustedEndpoint, context = undefined) {
   const endpoint = {chain: Buffer.from(bytes(trustedEndpoint.chain, 32)),
     genesisId: Buffer.from(bytes(trustedEndpoint.genesisId, 64)),
     blockId: Buffer.from(bytes(trustedEndpoint.blockId, 64)), height: trustedEndpoint.height,
@@ -128,27 +126,69 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
   need(endpoint.blockVersion === 3 || endpoint.blockVersion === 4);
   need(typeof endpoint.height === 'bigint' && endpoint.height >= 0n && endpoint.height < (1n << 64n));
   if (endpoint.height === 0n) need(endpoint.blockId.equals(endpoint.genesisId));
-  const genesis = genesisContext(context, endpoint);
+  return {endpoint, genesis: genesisContext(context, endpoint)};
+}
+function position(next) {
+  return {height: next.height, id: next.id, leafCount: next.leafCount, root: next.root,
+    fees: next.fees, liabilities: next.liabilities};
+}
+export function visitAuthenticatedHistory(scanFile, trustedEndpoint, context, onWindow) {
+  need(typeof onWindow === 'function');
+  const {endpoint, genesis} = prepareHistoryContext(trustedEndpoint, context);
+  let fd;
+  try {
+    fd = fs.openSync(scanFile, fs.constants.O_RDONLY | fs.constants.O_NONBLOCK | fs.constants.O_NOFOLLOW);
+    const before = fs.fstatSync(fd, {bigint: true}); need(before.isFile());
+    let prior = {height: 0n, id: endpoint.genesisId, leafCount: 0n, root: genesis.root,
+      fees: 0n, liabilities: genesis.liabilities};
+    let parsedPrior = prior, readBytes = 0n, windowPayments = 0;
+    const window = [];
+    function applyWindow() {
+      if (window.length === 0) return;
+      need(window.length <= 256 && windowPayments <= 256);
+      const result = onWindow(window, prior);
+      need(!(result && typeof result.then === 'function'));
+      prior = position(window.at(-1)); window.length = 0; windowPayments = 0;
+    }
+    for (;;) {
+      const prefix = exact(fd, 4, true); if (prefix === null) break;
+      const size = prefix.readUInt32LE();
+      need(size > 0 && size <= (endpoint.blockVersion === 4 ? 1224804 : 153292) && parsedPrior.height < endpoint.height);
+      const raw = exact(fd, size); readBytes += 4n + BigInt(size);
+      const next = block(raw, endpoint, parsedPrior); parsedPrior = position(next);
+      if (windowPayments + next.records.length > 256 || window.length >= 256) applyWindow();
+      window.push(next); windowPayments += next.records.length;
+    }
+    applyWindow();
+    need(prior.height === endpoint.height && prior.id.equals(endpoint.blockId) &&
+      readBytes === before.size && stable(before, fs.fstatSync(fd, {bigint: true})));
+    return {endpoint, cursor: prior, readBytes};
+  } finally {
+    if (fd !== undefined) {
+      try { fs.closeSync(fd); } catch { throw new WalletOperationalError(); }
+    }
+  }
+}
+
+// No old wallet database, witness or spent-state snapshot is accepted.
+// The endpoint and inventory basis must come from the operator's documented trust path.
+// This function cannot authenticate that external provenance or network consensus.
+export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis = 'unknown', context = undefined) {
+  need(['unknown', 'conditional-on-independent-current-inventory'].includes(inventoryBasis));
+  const {endpoint} = prepareHistoryContext(trustedEndpoint, context);
   return withWallet(wallet, value => {
     need(value.chain.equals(endpoint.chain));
-    let fd, published = false;
+    let published = false;
     const recipients = [], unspent = new Map();
     function cleanup(wipeCandidates) {
       let clean = !wipeCandidates || disposeAllCandidates(unspent.values());
-      // Each resource gets its own attempt even when a previous cleanup failed.
       while (recipients.length) {
         const recipient = recipients.pop();
         try { value.adapter.disposeRecipient(recipient); } catch { clean = false; }
       }
-      if (fd !== undefined) {
-        const closing = fd; fd = undefined;
-        try { fs.closeSync(closing); } catch { clean = false; }
-      }
       return clean;
     }
     try {
-      fd = fs.openSync(scanFile, fs.constants.O_RDONLY | fs.constants.O_NONBLOCK | fs.constants.O_NOFOLLOW);
-      const before = fs.fstatSync(fd, {bigint: true}); need(before.isFile());
       let recipientsPrepared = false;
       function prepareRecipients() {
         if (recipientsPrepared) return;
@@ -156,19 +196,9 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
         recipientsPrepared = true;
       }
       if (endpoint.blockVersion === 3) prepareRecipients();
-      let prior = {height: 0n, id: endpoint.genesisId, leafCount: 0n, root: genesis.root,
-        fees: 0n, liabilities: genesis.liabilities};
-      // Retain only public cursor fields, never an old block's record buffers.
-      function position(next) {
-        return {height: next.height, id: next.id, leafCount: next.leafCount, root: next.root,
-          fees: next.fees, liabilities: next.liabilities};
-      }
-      let parsedPrior = prior, readBytes = 0n, windowPayments = 0;
-      const window = [];
-      function applyWindow() {
-        if (window.length === 0) return;
-        need(window.length <= 256 && windowPayments <= 256);
-        // One complete checked helper response before any effects in this window.
+      const walked = visitAuthenticatedHistory(scanFile, endpoint, context, (window, start) => {
+        let prior = start;
+        const windowPayments = window.reduce((sum, next) => sum + next.records.length, 0);
         let contexts = [];
         if (windowPayments > 0) {
           prepareRecipients();
@@ -177,7 +207,6 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
         need(contexts.length === windowPayments);
         let at = 0;
         for (const next of window) {
-          // Public lookahead never changes the order of wallet effects.
           const spentHere = new Set();
           for (const record of next.records) for (const nf of record.parsed.nullifiers) {
             const id = nf.toString('hex'); need(!spentHere.has(id)); spentHere.add(id);
@@ -186,14 +215,13 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
           }
           const entries = [], occurrences = new Map();
           for (let index = 0; index < next.records.length; index++) for (let ordinal = 0; ordinal < 2; ordinal++) {
-            const context = contexts[at + index][ordinal], envelope = next.records[index].envelopes[ordinal];
-            need(value.adapter.digest(context, envelope).equals(next.records[index].parsed.receipts[ordinal]));
-            const info = value.adapter.contextInfo(context), id = info.origin.toString('hex') + ':' + info.cm.toString('hex');
+            const item = contexts[at + index][ordinal], envelope = next.records[index].envelopes[ordinal];
+            need(value.adapter.digest(item, envelope).equals(next.records[index].parsed.receipts[ordinal]));
+            const info = value.adapter.contextInfo(item), id = info.origin.toString('hex') + ':' + info.cm.toString('hex');
             need(!occurrences.has(id)); occurrences.set(id, prior.leafCount + BigInt(2 * index + ordinal));
-            entries.push({context, envelope});
+            entries.push({context: item, envelope});
           }
-          const collected = entries.length === 0 ? {candidates: []} : value.adapter.collectLocalCandidates(recipients, entries);
-          const pending = collected.candidates;
+          const pending = entries.length === 0 ? [] : value.adapter.collectLocalCandidates(recipients, entries).candidates;
           try {
             for (const candidate of pending) {
               const id = candidate.nf.toString('hex'), occurrence = candidate.origin.toString('hex') + ':' + candidate.cm.toString('hex');
@@ -207,34 +235,16 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
             if (!disposeAllCandidates(pending)) throw new WalletOperationalError();
             throw error;
           }
-          prior = position(next);
-          at += next.records.length;
+          prior = position(next); at += next.records.length;
         }
         need(at === windowPayments);
-        window.length = 0; windowPayments = 0;
-      }
-      for (;;) {
-        const prefix = exact(fd, 4, true); if (prefix === null) break;
-        const size = prefix.readUInt32LE(); need(size > 0 && size <= (endpoint.blockVersion === 4 ? 1224804 : 153292) &&
-          parsedPrior.height < endpoint.height);
-        const raw = exact(fd, size); readBytes += 4n + BigInt(size);
-        // Validate this whole block against the separate parsing cursor first.
-        const next = block(raw, endpoint, parsedPrior);
-        parsedPrior = position(next);
-        // Whole blocks are never split. Empty Network04 frames also consume a
-        // bounded window slot and must advance the applied endpoint cursor.
-        if (windowPayments + next.records.length > 256 || window.length >= 256) applyWindow();
-        window.push(next); windowPayments += next.records.length;
-      }
-      applyWindow();
-      need(prior.height === endpoint.height && prior.id.equals(endpoint.blockId) &&
-        readBytes === before.size && stable(before, fs.fstatSync(fd, {bigint: true})));
+      });
       let balance = 0n;
       for (const candidate of unspent.values()) balance += candidate.opening.note.readBigUInt64LE(8);
       need(balance <= MAX);
       if (!cleanup(false)) throw new WalletOperationalError();
       const token = Object.freeze({type: 'CP03-recovered-private-wallet-view'});
-      recovered.set(token, {unspent, balance, endpoint, leafCount: prior.leafCount, root: prior.root});
+      recovered.set(token, {unspent, balance, endpoint, leafCount: walked.cursor.leafCount, root: walked.cursor.root});
       published = true;
       return {state: token, history_linkage_complete: true,
         payment_validity: 'delegated-to-independently-supplied-endpoint',

@@ -1,0 +1,100 @@
+{
+  "actual_build_provenance": "Root verified new tree.rs in actual helper depfile;291compiled inputs/113artifacts, build105.855634s/424880KiB and8provider controls. This report does not repeat that build/readback.",
+  "actual_helper_sha256": "830abcd29b8cdec9aa8d2b76a1fb5c78ff365aba203da58b247ac4e46e23b1bb",
+  "classification": "Actual public helper/structural component controls only; not integrated private-wallet, genuine payment, recovery/rewind/expiry, annual resource or joint PQ/privacy assurance",
+  "fixed_caps": {
+    "all_tree_caps_below_1MiB": true,
+    "depth": 40,
+    "legacy_request_bytes": 135723,
+    "legacy_response_bytes": 82434,
+    "max_new_leaves": 256,
+    "max_owned": 64,
+    "response_bytes": 338716,
+    "state_bytes": 173248,
+    "whole_request_bytes": 213249
+  },
+  "format": "CP03-NATIVE-TREE-COMPONENT-RESULT01",
+  "frozen_source_sha256": {
+    "experiments/network-feasibility/wallet-witness/native-controls/controls.mjs": "b1b76315bd116df9ebae0dc15acc988350b5d1717e1163d82c6e1bcbb01cfc89",
+    "source/experiments/compact-receiving-v1/cp03/hash-core.mjs": "fbe9c59f2ba1edf26f2948dcab61527a6c269d98f07995b8e138a6d06ae58b97",
+    "source/experiments/compact-receiving-v1/cp03/hash-core/src/main.rs": "0aac46589d038fac7ad1845472d2eb0b42653f94b11e1bb15a4e76355add4ffd",
+    "source/experiments/compact-receiving-v1/cp03/hash-core/src/tree.rs": "f1fb839a66c93708ab0b6388bf70b04d2d5106442a9eeefba9e7e9545fb3c989"
+  },
+  "guarantee_boundary": [
+    "Serialized state is the unpadded canonical frontier plus completed target siblings; padded temporary paths are not persisted.",
+    "Runtime tree state is bounded O(D+K*D), not a retained all-history vector; full-tree storage appears only in public controls.",
+    "Canonical state/path folding is not authentication: Node must privately bind chain/genesis/profile/cursor/inventory/revision and exact authenticated root/count.",
+    "All helper/state/token/path transfers remain private local pipes; no selection/state bytes/digests or raw private diagnostics are persisted by these component results.",
+    "Best-effort buffer wiping is not a compiler/allocator erasure theorem.",
+    "Integrated receiving, genuine spend, expiry, branch rewind, backup restore and isolation remain separate acceptance work."
+  ],
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "installed_core_sources_match_frozen": true,
+  "js": {
+    "actual_process": {
+      "affinity_cpu": 0,
+      "first_wait4": true,
+      "maxrss_kib": 72544,
+      "process_exit": 0,
+      "system_seconds": 0.045037,
+      "timeout": false,
+      "user_seconds": 0.15138,
+      "wall_seconds": 0.1969626849750057,
+      "wrapper_exit": 0
+    },
+    "checks": 13,
+    "coverage": [
+      "Genesis/empty; first discovery; padding-only-view continuation; next real sibling",
+      "Index-ordered witnesses, forget and new discovery, malformed tokens/K/geometry/fields and capacities",
+      "Native trailing/bad-flag/noncanonical-field/same-call-alias input rejection with no success output",
+      "Production response decoder rejects malformed/truncated/trailing/noncanonical replies",
+      "One block with64owned targets and256incoming leaves;257leaf API rejection",
+      "Legacy AUTH/NOTE/NF outputs canonical64-byte field digests; legacy request/reply caps unchanged"
+    ],
+    "maximum_bound_exercised": {
+      "completed": true,
+      "helper_call_timeout_milliseconds": 5000,
+      "incoming_leaves_per_block": 256,
+      "owned_targets": 64,
+      "qualification": "Actual positive max-owned/max-new-leaf case completed inside the13-check process; whole group wall0.196963s is not an isolated per-block latency measurement or a benchmark of every mature maximum-state shape."
+    },
+    "not_claimed": "This13-check suite is not an independent broad legacy statement/batch/payment smoke or private-wallet integration.",
+    "stderr_empty": true
+  },
+  "passed": true,
+  "public_evidence_directory": "evidence/native01",
+  "public_evidence_manifest_sha256": "375613441fa98bdc51298b1e44c5db6709f26f0d903d9610c92058630a18097a",
+  "raw_public_evidence_sha256": {
+    "js.json": "0d9450249e40351378e34cc29df5ade036fb1fb8340bf1b423b91270f13123bc",
+    "js.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "js.stdout": "eba1cacf9100e91cd93c94a54f7103b0831de07c31a65829842e5cfcb761a043",
+    "rust.json": "42cd2beec6d7fe6862a5e506951526cf63484462399d9e62ef87d3ab6022f1fa",
+    "rust.stderr": "ce5ff9db827997902b5db1f2bcad5c995ee3da160393c9031cf9b5122b35440a",
+    "rust.stdout": "ecd26808d08a58da6d1f7b694b73b57b2231dc831af24519ca2ea52cc6649f7a"
+  },
+  "readback_method": "Read existing raw JS/Rust receipts/stdout/stderr and targeted frozen source identity/copy checks. No native/build/proof rerun or redundant dependency/ELF sweep.",
+  "rust": {
+    "actual_process": {
+      "affinity_cpu": 0,
+      "first_wait4": true,
+      "maxrss_kib": 172968,
+      "process_exit": 0,
+      "system_seconds": 0.07013599999999999,
+      "timeout": false,
+      "user_seconds": 1.16798,
+      "wall_seconds": 1.2453512439969927,
+      "wrapper_exit": 0
+    },
+    "cargo_compile_seconds_rounded": 0.71,
+    "passed_tests": [
+      "tree::tests::forget_discovery_uniqueness_and_capacity",
+      "tree::tests::full_capacity_geometry_and_exact_caps",
+      "tree::tests::malformed_state_shapes_and_fields_fail_closed",
+      "tree::tests::padding_is_temporary_and_real_sibling_replaces_view",
+      "tree::tests::sequential_block_roots_and_paths_match_small_full_oracle"
+    ],
+    "qualification": "Outer1.245351s/172968KiB covers Cargo test compilation plus test execution. Neither is isolated production-helper latency/RSS. Tests include a small test-only full-tree oracle and a structural full-capacity shape, not trillion-leaf execution.",
+    "stderr_scope": "Nonfatal existing dependency/style/deprecation/dead-code warnings and Cargo progress; no test failures or private stream output.",
+    "test_suite_run_seconds_rounded": 0.52
+  }
+}

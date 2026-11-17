@@ -31,20 +31,25 @@ preflight; not a whole-experiment three-CPU claim. Annual bodies175.126575TB/cop
 Safe raw metadata in evidence/gate2-96x8-01-{producer,network}/. Full producer
 readbacks and SOURCE03/build03/profile remain closed evidence, not rerun targets.
 
-Root owns contracts, status, Git, manifests, integration/acceptance and a fresh
-isolated Gate3 fixture. Sole heavy slot currently FREE; no build/proof job allocated.
-arch_consensus_roles (Sol/high): Gate2 report complete. Now owns fixed native helper
-main.rs/new tree.rs and hash-core.mjs plus native-controls/. Port reviewed bounded
-selective frontier as one stateless whole-block fixed helper call; source only
-until Root allocates build. No cryptographic relation or parameter change.
-arch_private_repro (Sol/high): owns wallet recovery.mjs, keys.mjs, new joint local
-witness coordinator and focused wallet controls. Reuse canonical parser/receiving;
-enforce inventory lease, joint bounded openings/cursor/frontier/anchor journal,
-atomic publication and branch revocation. No ledger/oracle path fallback.
-arch_proof_alternatives (Astra/high): owns independent review/. Reviews exact
-stateless native interface and then nonauthor source/acceptance. Initial interface
-has no architectural blocker; unpadded continuation and private branded state
-binding are mandatory. No heavy run or duplicate study.
+Root owns contracts, status, Git, manifests, integration/acceptance and the isolated
+Gate3 wallet actor/policy. ALLOCATION19 fresh gate3a build TERMINAL PASS, and
+ALLOCATION20 native helper13JS+5Rustcontrols TERMINAL PASS. No heavy job LIVE.
+Do not poll/restart sessions72725,14274,5063,58517 or rebuild these exact inputs.
+Fresh source CORE_MANIFEST1b9888399a91102b84f05970ce65100d77a0a8a56519c35b13cbb8deb915a1aa;
+new helper/tree/jointwallet reviewed; W1 packet callback lifetime fixed in source.
+All3 proof program/profile prepared identities unchanged; all10867installationpins
+rechecked after component controls. Safe build receipts in evidence/gate3a-build/.
+arch_consensus_roles (Sol/high): owns native helper and controls; frozen source,
+actual component-result readback only now, no additional run. Native13JS checks
+0.196963s/72544KiB;5Rust tests1.245351s/172968KiB including compile; raw
+wallet-witness/native-controls/.work/native01. No private-wallet PASS inferred.
+arch_private_repro (Sol/high): core wallet files frozen/reviewed. Now owns ONLY
+wallet-integration/run.py, the public controller and isolated process launcher.
+It must retain actual positive native admission coverage for every generated
+body, exact14-table rejection invariance, safe backup-only process restart and
+all resource costs. No membership API or raw private stream logging/hash.
+arch_proof_alternatives (Astra/high): core wallet/native source GO complete; now
+reviews Root actor/isolation and runner acceptance. Actual5/264proof runs pending.
 Four agents total, no nested agents; one writer per owned area, Root sole Git writer.
 
 Root chosen logical API: fixedHashCore(helperSha).treeAdvance(chain,
@@ -54,14 +59,26 @@ LEAF/NODE domains, canonical native validation, one helper child per block;
 zero leaves supports genesis/empty. Native state is UNPADDED; paths/root from a
 padded clone. No keys/openings leave Node. Native state is not an authenticated
 backup/import; Node binds it to chain/genesis/profile/cursor/inventory/revision.
-Exact binary grammar/caps and changed source await review and a fresh build.
+Exact binary grammar/caps and changed sources passed source review/new build
+and component controls. Genuine wallet same-witness execution remains pending.
 Gate3 acceptance still requires actual isolated receive/spend/backup restore,
 >256 changing-root expiry, selected-branch rewind and invalid/valid followups.
 
-Native Goal readback ACTIVE10:09UTC. Regular owner report09:58UTC; material update
-10:13UTC after full independent review; next regular approximately10:28UTC.
+Native Goal readback ACTIVE10:09UTC. Owner material update10:46UTC; next regular
+approximately11:00UTC, material findings sooner.
 No percentage claim. Latest progress: actual Gate2 accepted, resource decision
-recorded, Gate3 source work allocated. No Gate3 functional PASS yet.
+recorded, Gate3 source work allocated. No Gate3 functional PASS yet. Root actual isolation01 public probe passed:
+wallet-integration/.work/isolation01/RESULT.json, own+descendant real namespaces,
+2actual DB path denials, deliberately open inheritable DB FDs excluded, socket
+families INET/INET6/UNIX deniedEPERM. This is only a capability pilot, not an actual
+wallet/prover run. GATE3_PROFILE.json now predeclares small5proof diagnostic and
+full264proof/5400s sequence, K8/R8/A256; full run remains unallocated. Reviewer W1
+found external prepare callback could lose a private packet on throw/Promise;
+author replaced it with direct coordinator-owned preparation and deferred
+retirement of active consumer, one tracked pending packet. Reviewer closed W1
+in source; actual joint lifecycle controls are wired into the new actor, not yet
+executed. Actor also positively admits/rolls back orphan child before its later
+Anchor rejection and executes joint deep-selected-replay revocation/recovery.
 
 ## Closed evidence to reuse
 
@@ -138,13 +155,14 @@ closed prerequisites. Pipeline SOURCE03 has18frozen files and unchanged profile.
 ## Exact restart / next useful actions
 
 1. Read current ownership and actual agent/job state. All producer/network campaigns
-   above are closed; do not repeat them. Local HEADad26c0f contains full generation
-   evidence; network evidence/decision and Gate3 work are not yet committed.
-2. Review native helper/wallet interface and source together. Resolve unpadded-state,
-   canonical decoder, inventory/rollback/publication and capability boundaries.
-   Update CORE_MANIFEST only for deliberate reviewed source changes; new clean
-   installation required. Root allocates one native build/control campaign.
-3. Build a fresh public/private Gate3 acceptance controller with wallet and all
+   above are closed; do not repeat them. Local HEADad8a76bec4dafa51131d423963821b8cfa450249 records reviewed full Gate2
+   evidence/decision (actual local commit success; not pushed). Gate3 is uncommitted.
+2. Native/helper/wallet source review, new gate3a build and13+5component controls
+   are closed. Review run.py and actor/isolation final wiring. Freeze an exact
+   experiment SOURCE.json (including fixed joint_controls/oracle dependencies).
+   Preserve evidence/isolation01 exact prior policy/source/result; overlay extension
+   must be exercised by actual wallet run, not silently inherit the pilot outcome.
+3. Finish the fresh public/private Gate3 acceptance controller with wallet and all
    helper/prover descendants denied ledger DB/FD/proc/network membership routes.
    Reuse actual namespace machinery. Do not log/hash secrets, backup, paths/tokens.
 4. Execute a small genuine receipt/local-witness/new-spend/backup-only fresh-process
@@ -202,3 +220,20 @@ SOURCE02 is historical, not the active build03/source identity.
 Joint hiding/knowledge/Fiat-Shamir-QROM/recipient-anonymity assumptions remain
 qualified in docs/network-feasibility/OBLIGATIONS.md. Finite tests establish no
 whole-system PQ level, IP anonymity, consensus or production security.
+
+Allocation19 exact start: python3 -I scripts/setup.py prepare --label gate3a;
+then discover explicit .tools Node/libcrypto, inspect actual runtime candidate,
+install with read-back digest and build --cargo /home/neo/.cargo/bin/cargo --seconds900.
+No rerun of earlier completed installations. Source/editor changes outside CORE
+are limited to new Gate3 fixture and runner while this source snapshot is frozen.
+
+Allocation19 TERMINAL PASS: gate3a build session5063 exit0,105.855634s/424880KiB,
+99.717110user+4.997264system s,8actual providercontrols. Runtime candidate
+35f25d60c7927da7214e9d976df18eb2437835eb08d94884901ca4489cb58829; all14
+runtimepins match existing approved Node24.22.1/OpenSSL3.5.9/libcrypto3.0.13.
+New installation c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b,
+helper830abcd29b8cdec9aa8d2b76a1fb5c78ff365aba203da58b247ac4e46e23b1bb.
+Root checked actual compiled tree.rs depfile/source identity. Created only empty
+public/evidence mountpoints in NEW gate3a source; no old installation/pinned file
+changed. ALLOCATION20: native13JScontrols and5Rustunitcontrols, <=120s each, CPU0,
+no proof creation. Preserve logs under wallet-witness/native-controls/.work/native01.

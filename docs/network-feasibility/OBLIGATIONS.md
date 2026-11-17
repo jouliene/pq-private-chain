@@ -3,8 +3,10 @@
 Named question: can a versioned 96-distinct-ordinary-payment block preserve the
 complete CP03 payment predicate and wallet privacy boundary while paying the
 actual destination and archive costs? This map authorizes no parameter change.
-Baseline is public `d8f800037b5efbb76a5a1d6d4d3100e55f676a00`; the network
-adapter and integrated streaming wallet have not yet passed this review.
+Baseline is public `d8f800037b5efbb76a5a1d6d4d3100e55f676a00`. The network
+adapter and declared finite Gate2 workload passed functional/resource review as
+recorded in [RESOURCE_DECISION.md](RESOURCE_DECISION.md). The joint local-witness
+wallet is under implementation/acceptance; no integrated Gate3 PASS follows yet.
 
 The existing evidence permits a labelled research experiment. It has not
 demonstrated a currently applicable soundness, authorization or ledger-privacy
@@ -94,6 +96,17 @@ be an external test oracle, never the path supplier attributed to streaming
 construction. All wallet requests must be common history requests independent of
 owned notes; no unique subtree/range, recipient-dependent retry or key-miss report.
 The experiment does not hide IP addresses, activity or timing.
+
+The selected new local builder is a fixed depth40 stateless native operation on
+an unpadded frontier and bounded target paths. It uses the existing LEAF/NODE
+framing, not a new payment relation or hash. Native canonical state decoding is
+not authenticated bootstrap: only a private coordinator checkpoint bound to the
+full applied cursor, chain/genesis, inventory and selected revision is admissible.
+The coordinator jointly journals openings/spentness/frontier/cursor, freezes the
+inventory and owns a single prepared packet with deferred retirement until its
+actual consumer terminates. Source review and helper controls do not establish
+wallet receipt, proof, expiry/rewind or backup acceptance. Actual no-DB/FD/proc/
+membership-route isolation of the wallet and descendants remains a run criterion.
 
 Bind history chain/genesis/order and endpoints to the declared independent
 validating source. Hash linkage alone accepts a coherent server-selected stale

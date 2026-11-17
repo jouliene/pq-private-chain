@@ -9,6 +9,7 @@ const INVENTORY_FORMAT = 'CP03-KEY-INVENTORY-01';
 const MAX_KEYS = 1024;
 const MAX_BACKUP = 16 * 1024 * 1024;
 const wallets = new WeakMap();
+const leases = new WeakMap();
 export class WalletOperationalError extends Error {
   constructor() { super('CP03 wallet operation failed'); this.name = 'WalletOperationalError'; }
 }
@@ -54,13 +55,13 @@ export function createWallet(chain, helperSha256) {
     const adapter = createReceiptAdapter(chain, helperSha256);
     spending = randomFields(5);
     const owner = adapter.auth(spending), pair = newReceivingKey();
-    const value = {chain: Buffer.from(chain), id: crypto.randomBytes(32), version: 1n,
+    const value = {chain: Buffer.from(chain), id: crypto.randomBytes(32), version: 1n, helperSha256,
       spending, adapter, keys: [{descriptor: adapter.descriptor(owner, pair.publicKey), key: pair.privateKey}]};
     return brand(value);
   } catch { spending?.fill(0); throw new WalletOperationalError(); }
 }
 export function rotateReceivingKey(wallet) {
-  const value = state(wallet); need(value.keys.length < MAX_KEYS && value.version < (1n << 64n) - 1n);
+  const value = state(wallet); need(!value.activeLease && value.keys.length < MAX_KEYS && value.version < (1n << 64n) - 1n);
   try {
     const pair = newReceivingKey();
     const descriptor = value.adapter.descriptor(value.adapter.auth(value.spending), pair.publicKey);
@@ -138,7 +139,7 @@ export function restoreBackup(backup, configuredChain, helperSha256, expectedInv
       } finally { shared?.fill(0); recovered?.fill(0); }
       keys.push({descriptor: d, key});
     }
-    value = {chain, id, version, spending, adapter, keys};
+    value = {chain, id, version, spending, adapter, keys, helperSha256};
     const actualInventory = inventoryOf(value);
     if (expectedInventory !== null) {
       objectKeys(expectedInventory, Object.keys(actualInventory));
@@ -158,7 +159,28 @@ export function restoreBackup(backup, configuredChain, helperSha256, expectedInv
 export function withWallet(wallet, operation) {
   const value = state(wallet); need(typeof operation === 'function'); return operation(value);
 }
+// Internal coordinator capability. The holder alone can release this lease;
+// callers keep no key copy in the lease or its public inventory identity.
+export function leaseWallet(wallet, helperSha256) {
+  const value = state(wallet); need(!value.activeLease && value.helperSha256 === helperSha256);
+  const inventory = Object.freeze(inventoryOf(value));
+  const token = Object.freeze({type: 'CP03-private-wallet-inventory-lease'});
+  leases.set(token, {wallet, value, inventory}); value.activeLease = token;
+  return token;
+}
+export function withWalletLease(token, operation) {
+  const held = leases.get(token); need(!!held && typeof operation === 'function');
+  need(wallets.get(held.wallet) === held.value && held.value.activeLease === token);
+  const actual = inventoryOf(held.value);
+  need(Object.keys(held.inventory).every(key => actual[key] === held.inventory[key]));
+  return operation(held.value, held.inventory);
+}
+export function releaseWalletLease(token) {
+  const held = leases.get(token); need(!!held && held.value.activeLease === token);
+  held.value.activeLease = null; leases.delete(token);
+}
 export function disposeWallet(wallet) {
-  const value = state(wallet); value.spending.fill(0); value.keys.length = 0; wallets.delete(wallet);
+  const value = state(wallet); need(!value.activeLease);
+  value.spending.fill(0); value.keys.length = 0; wallets.delete(wallet);
   // Native KeyObjects and immutable JS strings may survive until GC; no erasure theorem.
 }

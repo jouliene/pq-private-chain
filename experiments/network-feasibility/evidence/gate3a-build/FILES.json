@@ -1,0 +1,26 @@
+{
+  "format": "CP04-SAFE-PUBLIC-EVIDENCE01",
+  "files": {
+    "build.json": {
+      "sha256": "d4404a9f65a4f7b0f6f92001624105eb9295de6fbf09a648170fc294fcec1fa4",
+      "bytes": 578493,
+      "original": ".work/gate3a/source/fresh/build.json"
+    },
+    "provider-controls.json": {
+      "sha256": "814271b90bae6ca988a0a7b1062e60aa2dc45e4ba866ec1bcb99fecdb973da85",
+      "bytes": 5385,
+      "original": ".work/gate3a/source/fresh/provider-controls.json"
+    },
+    "runtime-candidate.json": {
+      "sha256": "35f25d60c7927da7214e9d976df18eb2437835eb08d94884901ca4489cb58829",
+      "bytes": 12294,
+      "original": ".work/gate3a/runtime-candidate.json"
+    },
+    "toolchain.json": {
+      "sha256": "3df0cb7bf685ead4b6973dec571fd90e7043c06318a44921d464346cdd6865e0",
+      "bytes": 2242,
+      "original": ".work/gate3a/fresh/toolchain.json"
+    }
+  },
+  "scope": "Actual new build/provider/runtime receipts; no private proof run"
+}

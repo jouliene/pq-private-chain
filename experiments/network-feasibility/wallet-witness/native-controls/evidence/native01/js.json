@@ -1,0 +1,19 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+    "--disable-sigusr1",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-witness/native-controls/controls.mjs",
+    "/home/neo/jouliene/pq-private-chain/.work/gate3a/source",
+    "830abcd29b8cdec9aa8d2b76a1fb5c78ff365aba203da58b247ac4e46e23b1bb"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 72544,
+  "process_exit": 0,
+  "system_seconds": 0.045037,
+  "timeout": false,
+  "user_seconds": 0.15138,
+  "wall_seconds": 0.1969626849750057,
+  "wrapper_exit": 0
+}

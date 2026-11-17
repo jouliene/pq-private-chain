@@ -1,6 +1,7 @@
 //! Fixed private-stdin hash adapter. No proof, source authorization or funding verdict.
 use compact_arity_v3::{hash, permutation::P, statement::{Statement, MAX}};
 use std::io::{Read, Write};
+mod tree;
 const BATCH: usize = 256;
 const LIMIT: usize = 41 + 2 + BATCH * (2 + 528);
 #[derive(Clone, Copy)]
@@ -35,6 +36,7 @@ fn framed_statement<'a>(payload: &'a [u8], at: &mut usize) -> Result<&'a [u8], F
 fn evaluate(b: &[u8]) -> Result<Vec<u8>, Failure> {
     if b.len() < 41 || &b[..8] != b"CPCH0301" { return Err(Failure::Input); }
     let chain: [u8;32] = b[9..41].try_into().unwrap();
+    if b[8]!=6&&b.len()>LIMIT { return Err(Failure::Input); }
     let payload = &b[41..];
     match b[8] {
         1 => Ok(encode(hash::hash(&chain, hash::AUTH, &words(payload,5)?))),
@@ -67,19 +69,26 @@ fn evaluate(b: &[u8]) -> Result<Vec<u8>, Failure> {
             // Nothing is emitted until the entire batch has passed, including EOF.
             Ok(out)
         }
+        6 => tree::advance(&chain,payload),
         _ => Err(Failure::Input),
     }
 }
 fn run() -> Result<(),Failure> {
     let mut b=Vec::new();
-    let read=std::io::stdin().take((LIMIT+1) as u64).read_to_end(&mut b);
+    let mut input=std::io::stdin().lock();
+    let prefix=input.by_ref().take(9).read_to_end(&mut b);
+    let limit=if b.len()==9 && &b[..8]==b"CPCH0301" && b[8]==6 {tree::REQUEST_MAX}else{LIMIT};
+    let read=prefix.and_then(|_|input.take((limit+1-b.len())as u64).read_to_end(&mut b));
     let result=match read {
         Err(_)=>Err(Failure::Io),
-        Ok(_)=>if b.len()<=LIMIT { evaluate(&b) } else { Err(Failure::Input) },
+        Ok(_)=>if b.len()<=limit { evaluate(&b) } else { Err(Failure::Input) },
     };
     // Best-effort clearing, not a guaranteed allocator/compiler erasure boundary.
     b.fill(0);
-    std::io::stdout().write_all(&result?).map_err(|_|Failure::Io)
+    let mut out=result?;
+    let written=std::io::stdout().write_all(&out);
+    out.fill(0);
+    written.map_err(|_|Failure::Io)
 }
 fn main() {
     if let Err(error)=run() {

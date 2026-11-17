@@ -1,0 +1,32 @@
+{
+  "files": {
+    "js.json": {
+      "bytes": 655,
+      "sha256": "0d9450249e40351378e34cc29df5ade036fb1fb8340bf1b423b91270f13123bc"
+    },
+    "js.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "js.stdout": {
+      "bytes": 177,
+      "sha256": "eba1cacf9100e91cd93c94a54f7103b0831de07c31a65829842e5cfcb761a043"
+    },
+    "rust.json": {
+      "bytes": 621,
+      "sha256": "42cd2beec6d7fe6862a5e506951526cf63484462399d9e62ef87d3ab6022f1fa"
+    },
+    "rust.stderr": {
+      "bytes": 6965,
+      "sha256": "ce5ff9db827997902b5db1f2bcad5c995ee3da160393c9031cf9b5122b35440a"
+    },
+    "rust.stdout": {
+      "bytes": 472,
+      "sha256": "ecd26808d08a58da6d1f7b694b73b57b2231dc831af24519ca2ea52cc6649f7a"
+    }
+  },
+  "format": "CP03-NATIVE-TREE-PUBLIC-EVIDENCE01",
+  "helper_sha256": "830abcd29b8cdec9aa8d2b76a1fb5c78ff365aba203da58b247ac4e46e23b1bb",
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "scope": "Unchanged safe existing public component output; no replay, private state/selection/witness streams or Gate3 acceptance"
+}

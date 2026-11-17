@@ -42,3 +42,11 @@ acceptance and independent review. No real Gate3 expiry/recovery/spend result ye
 A fresh private fixture is required because completed Gate2 keys were destroyed.
 All six directive criteria remain mandatory. Native and global Goals stay ACTIVE;
 STATUS.md records exact ownership and next allocation. Preserve all closed runs.
+
+Checkpoint 2026-11-17 10:52 UTC: fixed native selective frontier and joint wallet
+implementation passed source review; one material packet-ownership defect was
+corrected before execution. New gate3a installation built successfully,13JS
+helper controls and5Rust unit controls passed. No proof relation/parameter change.
+The real isolated actor and public controller are being integrated for the
+predeclared5-proof short cycle and264-proof expiry/reorg/recovery campaign.
+Neither genuine Gate3 campaign has executed yet; no completion claim follows.
