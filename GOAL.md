@@ -115,3 +115,18 @@ Its fresh CI44090899086 exposed a distinct child-startup failure after Popen.
 The next bounded discriminator is a public-only namespace/runtime preflight
 before any build; no isolation policy or private logging change is authorized.
 Criterion6 remains incomplete; native/global Goal ACTIVE.
+
+## 2026-11-17 13:29UTC — evidenced delivery prerequisite, incomplete
+
+Native objective/status read back ACTIVE. All local and independent execution
+criteria1..5 remain substantiated. Actual hosted preflight44092592703 on ef9262a
+failed isolated-loopback setup before Node/build/wallet/proof:
+`bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`.
+The exact public receipt and independent review are preserved. Criterion6 lacks
+successful actual hosted smoke and release readback; no milestone completion or
+production/PQ claim is made. No identical retry or weaker isolation is justified.
+STATUS.md contains the precise supported-runner prerequisite and first unchanged
+public preflight command, followed by genuine full CI and release steps. All
+authorized independent milestone work is complete; provisioning a new CI service
+or relaxing host restrictions was not silently substituted. Keep the native and
+global Goal ACTIVE pending that prerequisite. No final release has been created.

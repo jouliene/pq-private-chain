@@ -118,3 +118,44 @@ after. The source GO stands. This is a local result with the recorded local
 kernel/sysctls, not proof that the hosted runner permits the same namespaces.
 The earlier pre-correction local receipt remains separately preserved; no private
 or genuine proof test was added or relabelled by this diagnostic.
+
+
+## Actual hosted preflight — external prerequisite not satisfied
+
+Independently read run44092592703 at revision ef9262a's public receipt, SHA256
+`9ce0c4cfaab5f97b249b4a7a8aeca297cf91f05049c4fecadc8a0e44c5ece6bf`. The unchanged fixed /usr/bin/true sandbox exits1 after
+0.004740970s with first-wait4, empty stdout, no timeout/overflow and public stderr:
+`bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`.
+Only one probe ran; Node, compilation and wallet/proofs did not run. Source pins
+are stable. The hosted record reports userns_clone=1, AppArmor unprivileged-userns
+restriction=1 and a nonzero namespace limit. The local final control used the same
+isolation/preflight source and identical bwrap/true binaries, passed, and recorded
+restriction=0. The environments also differ in kernel and other host properties;
+this is not a controlled proof of a unique AppArmor cause.
+
+The observed blocking prerequisite is precise: this hosted environment does not
+permit the selected unchanged sandbox to configure its isolated loopback address.
+It is not a payment-proof failure, Node-runtime failure, missing-binary error or
+wallet result. [Ubuntu24.04 release notes](https://documentation.ubuntu.com/release-notes/24.04/#unprivileged-user-namespace-restrictions)
+document that its default restricted unprivileged-user-namespace policy can allow
+namespace creation while denying subsequent capabilities. That is consistent with
+the observation, but no actual kernel/audit denial establishing AppArmor as the
+unique cause was captured. Preserve that uncertainty and all preceding failures.
+
+No further identical hosted retry, native rebuild, proof campaign, crypto change
+or wallet workaround is justified. The meaningful remaining work within this
+milestone is preserving the fixed failure evidence, recording exact supported
+runner prerequisites and pending criterion6, and a resumable public handoff. The
+existing independent local build/private/public acceptance remains valid at its
+stated environment and scope. Publication of source does not turn failed automatic
+CI into a pass or complete this milestone's delivery requirement.
+
+Resume first with this exact public preflight on an independently approved,
+properly provisioned supported runner that already permits the required sandbox
+operations. If it passes, run the unchanged automatic build/provider/public/private/
+wallet checks and retain their actual results. Merely naming a different runner,
+using an optional server or copying an old successful receipt does not satisfy
+that gate. Do not remove namespace isolation, disable host restrictions, broaden
+host access, suppress failures, or launch a new CI-infrastructure project as an
+implicit part of this narrow repair. Runner provisioning/selection remains an
+explicit prerequisite decision for Root/owner, not a claimed completed action.

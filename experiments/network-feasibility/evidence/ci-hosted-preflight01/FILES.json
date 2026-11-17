@@ -1,0 +1,21 @@
+{
+  "bounded_milestone_complete": false,
+  "conclusion": "failure",
+  "files": {
+    "RESULT.json": {
+      "bytes": 3618,
+      "sha256": "9ce0c4cfaab5f97b249b4a7a8aeca297cf91f05049c4fecadc8a0e44c5ece6bf"
+    },
+    "RUN.json": {
+      "bytes": 1527,
+      "sha256": "060eb02fe0c623f18450a280249295df4ae1f9cd9073ca20f69158dcc44e8903"
+    }
+  },
+  "format": "NETWORK-HOSTED-PREREQUISITE01",
+  "global_goal": "ACTIVE",
+  "head_sha": "ef9262a3277e9d4f1aa412237630038ad78bdca7",
+  "remaining_acceptance_criterion": 6,
+  "run_id": 44092592703,
+  "scope": "Public isolated-loopback startup denied before Node, build, wallet or proofs; not a cryptographic failure or unique AppArmor causal attribution.",
+  "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44092592703"
+}

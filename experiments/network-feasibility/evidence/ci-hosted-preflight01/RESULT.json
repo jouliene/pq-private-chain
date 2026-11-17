@@ -1,0 +1,121 @@
+{
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/bin:/bin",
+    "RAYON_NUM_THREADS": "1",
+    "RUST_BACKTRACE": "0",
+    "TZ": "UTC"
+  },
+  "format": "CP04-CI-PUBLIC-SANDBOX-PREFLIGHT01",
+  "host": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "gid": 1001,
+    "kernel": "7.0.0-1017-azure",
+    "machine": "x86_64",
+    "namespaces": {
+      "mnt": "mnt:[4026531832]",
+      "net": "net:[4026531833]",
+      "pid": "pid:[4026531836]",
+      "user": "user:[4026531837]"
+    },
+    "uid": 1001
+  },
+  "last_stage": "sandbox_true",
+  "passed": false,
+  "per_probe_seconds": 10,
+  "per_stream_cap_bytes": 8192,
+  "probes": [
+    {
+      "argv": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--new-session",
+        "--unshare-user",
+        "--unshare-pid",
+        "--unshare-net",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--cap-drop",
+        "ALL",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--symlink",
+        "usr/bin",
+        "/bin",
+        "--symlink",
+        "usr/lib",
+        "/lib",
+        "--symlink",
+        "usr/lib64",
+        "/lib64",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--tmpfs",
+        "/tmp",
+        "--chdir",
+        "/usr",
+        "--seccomp",
+        "5",
+        "--",
+        "/usr/bin/true"
+      ],
+      "first_wait4": true,
+      "maxrss_kib": 12488,
+      "output_overflow": false,
+      "passed": false,
+      "public_fixed_command": [
+        "/usr/bin/true"
+      ],
+      "readonly_files": [],
+      "readonly_trees": [],
+      "resource_scope": "bubblewrap leader first-wait4, not whole descendant tree CPU",
+      "returncode": 1,
+      "stderr": "bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted\n",
+      "stdout": "",
+      "system_seconds": 0.002239,
+      "timeout": false,
+      "user_seconds": 0.001501,
+      "wall_seconds": 0.0047409700000002886,
+      "writable_trees": []
+    }
+  ],
+  "readonly_sysctls": {
+    "/proc/sys/kernel/apparmor_restrict_unprivileged_userns": {
+      "value": "1"
+    },
+    "/proc/sys/kernel/unprivileged_userns_clone": {
+      "value": "1"
+    },
+    "/proc/sys/user/max_user_namespaces": {
+      "value": "58137"
+    }
+  },
+  "runtime": {
+    "/usr/bin/bwrap": {
+      "mode": "0o100755",
+      "sha256": "e318903862396f96de3df57264e0158682b952fd3fb53ac23d876413e7b30f71"
+    },
+    "/usr/bin/true": {
+      "mode": "0o100755",
+      "sha256": "8a63c98320173f79e263115e10cefc170155e47d1fd4b5a70e4429d2699cae28"
+    }
+  },
+  "scope": "Fixed /usr/bin/true then pinned Node --version only; no wallet, private data, installation, native verifier or proof. Public stderr retained. Tests sandbox/runtime startup, not the complete wallet mount closure.",
+  "source_after": {
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+  },
+  "source_before": {
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+  }
+}
