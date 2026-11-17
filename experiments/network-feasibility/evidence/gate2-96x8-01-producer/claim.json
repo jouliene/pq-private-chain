@@ -1,0 +1,13 @@
+{
+  "backup_custody": false,
+  "diagnostic": false,
+  "format": "CP04-NETWORK-PRODUCER-CLAIM03",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "ordinary_batch_count": 8,
+  "ordinary_count": 768,
+  "private_streams_persisted": false,
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "proof_job_ceiling": 864,
+  "rolling_lanes": 96,
+  "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2"
+}

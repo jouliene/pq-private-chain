@@ -1,0 +1,23 @@
+{
+  "batch": 6,
+  "kind": "ordinary",
+  "body_count": 96,
+  "anchor": {
+    "height": "6",
+    "block_id": "f808326f6a8238c327dc5046ea29e5b5c2b68b8c344cb660a3b8e5cd6886ccd6d6a9e8b4bb43e14e728f332b8ec75853c84a0dee3fa7256dcdc4e30b6210f63a",
+    "leaf_count": "1152",
+    "root_le": "bd8a6d1953897a4f641cce29765b81c16578bd4c15ddba35d9b7a44ccdaad342343859518bada945b65329cb621418b221f921bca4f72be1eb3c7b41318a0c88",
+    "fee_escrow": "1217089440",
+    "unconsumed_liabilities": "0"
+  },
+  "endpoint": {
+    "height": "7",
+    "block_id": "f06fadb8482dc790bbe747d9557fc7bef2ed2d410b78db89a0f38bb782dfd29e79ab6cfc645ee325b6b66fea784a7611fa02d365c937fd9d2c506e996fdf08a1",
+    "leaf_count": "1344",
+    "root_le": "7dce41ed803e70052cc475a3d46e99728408238d8b478008cacd592d11f7dd9eb644d70bbae0a92eac17849459ca6c29c2d644b8593d4090ef4e5568641146bb",
+    "fee_escrow": "1419865248",
+    "unconsumed_liabilities": "0"
+  },
+  "inclusive_wall_seconds": 764.8414530240009,
+  "admission_wall_seconds": 7.570683849000372
+}

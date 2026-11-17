@@ -1,0 +1,383 @@
+{
+  "format": "CP04-INDEPENDENT-PRODUCER-FULL03-REVIEW01",
+  "reviewed_utc": "2026-11-17T09:49:46.964224+00:00",
+  "decision": "GO: qualifies as fixed fresh 96-credit plus eight 96-ordinary-block input for the approved isolated pipeline; no Gate2 network acceptance yet",
+  "passed": true,
+  "workload_sha256": "bf2f47737e226bc170f16f44ba9747c22c4e8bb76bcb4487d48e9bf5a5fe5e70",
+  "receipt_sha256": "1d2d55a839f0a8f665664449266c0ac7d7268c2492a5f7ccccff226401821d22",
+  "costs_sha256": "fbda840fc1ee754ec83796b9db096872a9a144c4b361d22407ff807cd8361f36",
+  "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "source_files_rechecked": {
+    "README.md": "00c1a007eeba56795a763f9935f94daec86f05916c1214de0014ee0079cf6051",
+    "driver.mjs": "308ef061a2aaf88f5dc349f31f4c6e71236eee24f3df444374c3b9de74e6d50e",
+    "retain-init.mjs": "a4841ed0ad15d1d6c8c968acee6df85e923a6fad27110e07d75dd14f389ced9e",
+    "run.py": "91413514034dde2c5e58bbb375685aa46379aeaab4ba4a26da94402cafe0d92a"
+  },
+  "actual_process": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+      "--disable-sigusr1",
+      "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/driver.mjs",
+      "gate2-96x8-01",
+      "/home/neo/jouliene/pq-private-chain/.work/network01/fresh/installation.json",
+      "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+      "96"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 248668,
+    "process_exit": 0,
+    "system_seconds": 752.019179,
+    "timeout": false,
+    "user_seconds": 5867.02359,
+    "wall_seconds": 6639.207362955087,
+    "wrapper_exit": 0
+  },
+  "checks": {
+    "all_864_cost_rows_and_individual_cost_files": true,
+    "all_864_public_statement_prefixes_and_body_lengths": true,
+    "all_864_SQL_prefixes_and_header_body_ids": true,
+    "all_1728_commitment_leaf_positions": true,
+    "all_1536_nullifiers_distinct_equal_SQL": true,
+    "all_96_credit_sources_equal_consumed_SQL_sources": true,
+    "all_nine_header_hashes_parent_links_sizes_endpoints_and_SQL": true,
+    "all_eight_saved_batch_receipts": true,
+    "retention_init_binary_pre_post_and_reopened_head": true,
+    "fee_conservation_exact": true,
+    "source_profile_installation_manifest_hashes": true
+  },
+  "sql_table_counts": {
+    "anchors": 10,
+    "archive_objects": 0,
+    "archive_pending": 0,
+    "archive_segments": 0,
+    "blocks": 9,
+    "bodies": 864,
+    "body_cache": 1,
+    "cores": 864,
+    "leaves": 1728,
+    "meta": 1,
+    "node_undo": 3751,
+    "nodes": 3486,
+    "nullifiers": 1536,
+    "sources": 96
+  },
+  "accounting": {
+    "total_credit": 9600000000,
+    "fee_escrow": 1825416864,
+    "unconsumed_liabilities": 0,
+    "remaining_private_value_implied_by_verified_relation": 7774583136,
+    "full_retained_body_bytes": 1513556768,
+    "hard_bytes": 2147483648,
+    "unexported_bytes": 0
+  },
+  "batches": [
+    {
+      "batch": 0,
+      "bodies": 96,
+      "body_bytes": 168584672,
+      "encoded_block_bytes": 168591428,
+      "endpoint": {
+        "height": "1",
+        "block_id": "6b51e7c055a1310e24098ed8fad190188107baeefcae4f136cc20ae8896efa83cb5ca154e633be6bcf1e975adcac65804ff7526908905d004c21be263d47dd83",
+        "leaf_count": "192",
+        "root_le": "88f2ab58125aa29df17645a05710724f995d1367b6bc03f1d09a4842e58976653f4064090efd1b3964edc4c82d01bdefabd1bc37f6527b8dc39191259337a158",
+        "fee_escrow": "203210400",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 177.78303284675349,
+      "caller_wall_sum": 503.4529929849999,
+      "inclusive_generation_wall": 520.401041169,
+      "admission_wall": 11.344195154000015
+    },
+    {
+      "batch": 1,
+      "bodies": 96,
+      "body_bytes": 168115456,
+      "encoded_block_bytes": 168122212,
+      "endpoint": {
+        "height": "2",
+        "block_id": "6316762f8fd1c7e4c288c21e3e5c6368892111fc374d9f8eac375fbda0732d763a08b9802bd09cb91880514fa625d303e5a8e89f9bbba35511b09c1b8cb38c31",
+        "leaf_count": "384",
+        "root_le": "6852ae085b71dcf6c184f174c3e6f908a93c7b65bb25aad7fa05778fb9258465a008d010b5ba3bb5b6589324cf2111bc6ed112d52eea909dfdb9394dacdbb28c",
+        "fee_escrow": "405986208",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 178.65152703772765,
+      "caller_wall_sum": 506.34315607200006,
+      "inclusive_generation_wall": 755.960173818,
+      "admission_wall": 7.294422328999964
+    },
+    {
+      "batch": 2,
+      "bodies": 96,
+      "body_bytes": 168128448,
+      "encoded_block_bytes": 168135204,
+      "endpoint": {
+        "height": "3",
+        "block_id": "6faf24cf5807e6a5aaeaec52fb51ec6d09827371743ccf09a894e47133267dd476d61d90b5b132d3cf9df2071bb90f44a2cca3db0e8517b3f4d9a8021dd11bc2",
+        "leaf_count": "576",
+        "root_le": "88b6304440a5a57b4200e8b710c158e702b7adfa8c624e75fd7de006f96029310311abea4271f7116ab333e6fa455978639cd965723e484bba38b5ee430cb75d",
+        "fee_escrow": "608762016",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 180.53561677096877,
+      "caller_wall_sum": 513.2950433140008,
+      "inclusive_generation_wall": 767.2347302029999,
+      "admission_wall": 7.617183329000138
+    },
+    {
+      "batch": 3,
+      "bodies": 96,
+      "body_bytes": 168038656,
+      "encoded_block_bytes": 168045412,
+      "endpoint": {
+        "height": "4",
+        "block_id": "520c0a47aedffb480cb1df2217c3f73b3823c44448f313fd29e337fd5b1be1d9b7a3a7fbcd575fb35b766f700fee6f21e2a99ef312fb58d70cddadf91b4fcee8",
+        "leaf_count": "768",
+        "root_le": "f7a912e9a9ddc69964579cd9b6864b6fe4d5b7e8e888baeb2849099c38997826cf709397d30437ccb2486dc684907caed4ac22e5c4f88f6f77b3fb8466859de1",
+        "fee_escrow": "811537824",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 178.3202534596203,
+      "caller_wall_sum": 506.3958866760016,
+      "inclusive_generation_wall": 756.8467043310001,
+      "admission_wall": 7.3939061149996705
+    },
+    {
+      "batch": 4,
+      "bodies": 96,
+      "body_bytes": 168075584,
+      "encoded_block_bytes": 168082340,
+      "endpoint": {
+        "height": "5",
+        "block_id": "3816a7e028376e98f39da378b7731bb73497a1de2086350c611ec732a764f53ca2a4980c9aa1c994a9abb013da97df259671c7ba02d79e0408cdadf8eb1a0b0b",
+        "leaf_count": "960",
+        "root_le": "b0e725994c61183b95c98c6363be5f10157704cc0b79357ea8ed29091125cf1a8affa0ecf7b275b025c8f4eb0d3dd359be63aefeacc999fb840390bfbed44e57",
+        "fee_escrow": "1014313632",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 177.94260945089627,
+      "caller_wall_sum": 504.778587038998,
+      "inclusive_generation_wall": 756.793579684,
+      "admission_wall": 9.022371083000209
+    },
+    {
+      "batch": 5,
+      "bodies": 96,
+      "body_bytes": 168181376,
+      "encoded_block_bytes": 168188132,
+      "endpoint": {
+        "height": "6",
+        "block_id": "f808326f6a8238c327dc5046ea29e5b5c2b68b8c344cb660a3b8e5cd6886ccd6d6a9e8b4bb43e14e728f332b8ec75853c84a0dee3fa7256dcdc4e30b6210f63a",
+        "leaf_count": "1152",
+        "root_le": "bd8a6d1953897a4f641cce29765b81c16578bd4c15ddba35d9b7a44ccdaad342343859518bada945b65329cb621418b221f921bca4f72be1eb3c7b41318a0c88",
+        "fee_escrow": "1217089440",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 180.69789613748435,
+      "caller_wall_sum": 514.2017149830023,
+      "inclusive_generation_wall": 770.2251921049995,
+      "admission_wall": 7.498379656000063
+    },
+    {
+      "batch": 6,
+      "bodies": 96,
+      "body_bytes": 168145792,
+      "encoded_block_bytes": 168152548,
+      "endpoint": {
+        "height": "7",
+        "block_id": "f06fadb8482dc790bbe747d9557fc7bef2ed2d410b78db89a0f38bb782dfd29e79ab6cfc645ee325b6b66fea784a7611fa02d365c937fd9d2c506e996fdf08a1",
+        "leaf_count": "1344",
+        "root_le": "7dce41ed803e70052cc475a3d46e99728408238d8b478008cacd592d11f7dd9eb644d70bbae0a92eac17849459ca6c29c2d644b8593d4090ef4e5568641146bb",
+        "fee_escrow": "1419865248",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 180.16696647391655,
+      "caller_wall_sum": 511.7006989929946,
+      "inclusive_generation_wall": 764.8414530240009,
+      "admission_wall": 7.570683849000372
+    },
+    {
+      "batch": 7,
+      "bodies": 96,
+      "body_bytes": 168174016,
+      "encoded_block_bytes": 168180772,
+      "endpoint": {
+        "height": "8",
+        "block_id": "ba905e305fe46fe2e078aa234ed398dcd82936c14bc2770628e0105e4bdff641b9d7acef658a1d4bf4fffda67f423acc6db0ee3ede8f5ed6f4695100a69c21c5",
+        "leaf_count": "1536",
+        "root_le": "fdcbf8557d70ad11bcae3ab060b18c0d1356149c0c75c20bdfc658e6cd40ac160ffe7d7cf4346766ac61ebe5de9922c15906c145dff294bf1068e260c67a48f8",
+        "fee_escrow": "1622641056",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 180.97498155850917,
+      "caller_wall_sum": 516.9039944510077,
+      "inclusive_generation_wall": 775.6709416000004,
+      "admission_wall": 9.903053302000277
+    },
+    {
+      "batch": 8,
+      "bodies": 96,
+      "body_bytes": 168112768,
+      "encoded_block_bytes": 168119524,
+      "endpoint": {
+        "height": "9",
+        "block_id": "a2f48c02886d0977a1201f5bb8d51e3222abff9bf1e8302e850ac6dfbc35fef6510ec4b5f6b202e909dbdb5b6dd70503b93c1593c469c492980e714a3a5591dc",
+        "leaf_count": "1728",
+        "root_le": "5a337d9aa82bb1391714be4ba414944d05139bdcb7712c29537e89551534fb4400b5268683e299fe5b88b0d23e0699f1545895e98c8bc8896d8c2a137138e5f2",
+        "fee_escrow": "1825416864",
+        "unconsumed_liabilities": "0"
+      },
+      "worker_wall_sum": 179.40241447940934,
+      "caller_wall_sum": 511.8580498979995,
+      "inclusive_generation_wall": 765.7241133570001,
+      "admission_wall": 7.540138061000034
+    }
+  ],
+  "independent_parent_and_full_body_samples": [
+    {
+      "body": "credit000.body",
+      "parent_sha256": "f69cd65fd0027bb0215eca08a373601d2242056ce6b71640856cc863ec7e232a",
+      "body_sha256": "7aa5716712946f5d01a5342b907f8ce05ec76a6c241a31f923b630caea056b92",
+      "proof_bytes": 1736202,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "credit095.body",
+      "parent_sha256": "e223a6b48fe12d0857d384f76bcf550a997329ac3489293e980f38589e264e09",
+      "body_sha256": "f99634439a7f7518c707b0305b5eb382cfaea1dc56f9c14b2c3479f5524f0a93",
+      "proof_bytes": 1739530,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch01-000.body",
+      "parent_sha256": "e27dc49524992ffd678915d2be205fc3fbf9d47e94031f80d77f84e1cbe3968e",
+      "body_sha256": "c8d761cdb2e535dc9e239800db0d6f22ff8c9f2df0ae34f569beb8178a6d55fe",
+      "proof_bytes": 1755146,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch01-095.body",
+      "parent_sha256": "b1b8f9dc60c0c36675e9a9566be3ccca6223dd05d30c109f554943b8e5cacc76",
+      "body_sha256": "b9673eccda92f10eaaaab4ab4c9a30dc5c135986a7ce1d07bb070a0d9575196a",
+      "proof_bytes": 1753866,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch02-000.body",
+      "parent_sha256": "eb64fea50e369eed25cdf43350f162b832899fe7310a49dcec9d7cb37717d24a",
+      "body_sha256": "354566446c2ace8b708ab7056a3b0b908da75555b82e2079f7880efe1d41bbdc",
+      "proof_bytes": 1735434,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch02-095.body",
+      "parent_sha256": "55ce0698a282a8a211b300be9b734afb4e0354844dd85949d917508def3b540c",
+      "body_sha256": "3cc5fcb662c7b5a28bfc79dba6809d4923adb0c4a67e832ff6b2de71ab9d5942",
+      "proof_bytes": 1739594,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch03-000.body",
+      "parent_sha256": "6fb2c084656dc7ff18d016d04452372340f873e89cf9bb6f8bdbdb8c13f2a5de",
+      "body_sha256": "36251863b9174ffa5c391efbe05fcdef655b8c4ccccc603c6802716eedafe980",
+      "proof_bytes": 1755594,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch03-095.body",
+      "parent_sha256": "c448b51cf3d6c4ac7a670d00d019e02e1c5aa5e37b4bb13b464ed638d0874a84",
+      "body_sha256": "02fcbfaba983c125add8b46f9fa81653f4dd456a5d5c8d9247df7abbf75baae7",
+      "proof_bytes": 1741130,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch04-000.body",
+      "parent_sha256": "1f85ddb4ec1b4286e73e74d28967f8032ecec580f1b293a0dc7f0747302507a2",
+      "body_sha256": "a2d71d57685df7cdd3c7c2814a6c24e45374add1f4416504f80ea71e93fb55a1",
+      "proof_bytes": 1743434,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch04-095.body",
+      "parent_sha256": "92c044f17e6dc32ff12a23bc916e27f0900d385e910955e6f283cc35024bb337",
+      "body_sha256": "80e19aec0fd3e3b1a751a60d6ce9cfa9d522294213e100daa71891f6c311e68c",
+      "proof_bytes": 1737034,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch05-000.body",
+      "parent_sha256": "651dda6941734015db27c58e3c3e0dfc192d8431b28bf6656d0f654b1282fa3c",
+      "body_sha256": "589a852fea5d70e8369e9d874240351e7564b08e847818bdd8491eaa5f650cc7",
+      "proof_bytes": 1745738,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch05-095.body",
+      "parent_sha256": "8969f6380773598d9d5b5000f95adf640f69624221dfd35f5ede68085b830a89",
+      "body_sha256": "d455d1e4f72ab37185c3b99170bb85281796226fdfc106cf5b9fbc33627a4b59",
+      "proof_bytes": 1747722,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch06-000.body",
+      "parent_sha256": "e789284278eb64a5204325be2792b3e444547878fd29d278bbcfbcf0ec5f5b94",
+      "body_sha256": "013a4cb37c984e3484c3ccb951bf797a270040cc6aa1a5abb841818475699544",
+      "proof_bytes": 1743946,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch06-095.body",
+      "parent_sha256": "f1a77b80966f42f6f5a5d26bd28d97728679fc4256b87997b772028034a1648b",
+      "body_sha256": "1e413607c03f079a7b46361ea43e43e998e27ff7c6371a35b08935c5bb8069cd",
+      "proof_bytes": 1756490,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch07-000.body",
+      "parent_sha256": "454ebe5489bccfd142a5f501371ef655a8a8e1b32d3c544f7ed0f45c85d77a1d",
+      "body_sha256": "d38227114448aa88a50e00e1020e7e4f5b9f79baadef0c38816e94dd8c315ca8",
+      "proof_bytes": 1736586,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch07-095.body",
+      "parent_sha256": "df335f5de715721c560274df74789024f3a41ead61c5ebac514f77b70091fff2",
+      "body_sha256": "e63a5bfe63c73efae61f9952b1535e51da69e871c1c169a477bf099e92cf4cf4",
+      "proof_bytes": 1747978,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch08-000.body",
+      "parent_sha256": "67c295f6aa094f60e3b763ecba80bb58e335c3799f198fb829fe07a1558b0a05",
+      "body_sha256": "008a15d80fa9d16415a9e9216bf42e94f3b940d139d548f9a540167d4770f270",
+      "proof_bytes": 1733514,
+      "actual_parent_exit": 0
+    },
+    {
+      "body": "batch08-095.body",
+      "parent_sha256": "7574e658c033582f4deb1860fd5a05e88165617ff697a78368465d0bafbc5954",
+      "body_sha256": "5fed0e4ab504de85d2aef6221acea01e03d77c9561cba2337fd7f91044c38e44",
+      "proof_bytes": 1746762,
+      "actual_parent_exit": 0
+    }
+  ],
+  "sample_scope": "18 original Parent receipts and complete body/proof section hashes: first and last in every batch. No second full Parent-map pass; author separate all864 metadata readback is supporting evidence, not represented as reviewer execution. Remaining body payloads will be hashed and genuinely verified by the approved isolated pipeline.",
+  "generation_cost_scope": "Whole generator process, per-worker wait4, caller proof-publication, inclusive batch and repeated producer admission are distinct nested costs; do not add overlapping scopes. Peaks are not summed. resource_profile_pass=false correctly makes no network claim.",
+  "not_executed": [
+    "native proof verification rerun",
+    "new proof generation",
+    "network pipeline",
+    "private input access",
+    "whole installation dependency rehash"
+  ],
+  "limitations": [
+    "Finite fixture uses newly created wallets, latest-batch receipt scanning and local membership. Not Gate3 wallet discovery/backup acceptance.",
+    "No throughput, annual participation, security-theorem or production claim.",
+    "Retain/archive bytes and future pipeline disk copies remain explicitly charged by the approved profile."
+  ]
+}

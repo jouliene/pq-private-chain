@@ -1,0 +1,40 @@
+{
+  "actual_process": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+      "--disable-sigusr1",
+      "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/driver.mjs",
+      "gate2-96x8-01",
+      "/home/neo/jouliene/pq-private-chain/.work/network01/fresh/installation.json",
+      "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+      "96"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 248668,
+    "process_exit": 0,
+    "system_seconds": 752.019179,
+    "timeout": false,
+    "user_seconds": 5867.02359,
+    "wall_seconds": 6639.207362955087,
+    "wrapper_exit": 0
+  },
+  "fixed_source_failure_stage": null,
+  "format": "CP04-NETWORK-PRODUCER-RECEIPT03",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "passed": true,
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "raw_private_streams_persisted_or_hashed": false,
+  "result": {
+    "accepted_blocks": 9,
+    "credit_proofs": 96,
+    "format": "CP04-NETWORK-PIPELINE-PRODUCER01",
+    "ordinary_proofs": 768,
+    "private_material_or_mapping_persisted": false,
+    "resource_profile_pass": false
+  },
+  "scope": "Gate2 fresh96x8 generator; fixture-local receiving/membership, not Gate3 discovery or node throughput/privacy/PQ assurance",
+  "source_runtime_unchanged": true,
+  "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2"
+}

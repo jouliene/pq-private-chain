@@ -1,0 +1,15 @@
+{
+  "address_space_limit_bytes": 536870912,
+  "cpu": 0,
+  "first_wait4": true,
+  "format": "CP04-PUBLIC-FULL-READBACK-PROCESS01",
+  "maxrss_kib": 35708,
+  "process_exit": 0,
+  "scope": "Public metadata data-readback only; no native/proof/helper execution or private access",
+  "script_sha256": "23672bdbb5a450af06e628c87def5169d88f7a74cf6f1a1c17fa8eb5b8b1bd7b",
+  "system_seconds": 3.21071,
+  "timeout": false,
+  "user_seconds": 8.518555,
+  "wall_cpu_limit_seconds": 90,
+  "wall_seconds": 13.178366223000921
+}

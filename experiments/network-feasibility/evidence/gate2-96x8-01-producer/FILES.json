@@ -1,0 +1,86 @@
+{
+  "files": [
+    {
+      "bytes": 509,
+      "file": "claim.json",
+      "sha256": "4f88b370239933f313d09b5737b7a160bbc95e0a70f9f0e7b0a316dd4402229d",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01/claim.json"
+    },
+    {
+      "bytes": 1582,
+      "file": "receipt.json",
+      "sha256": "1d2d55a839f0a8f665664449266c0ac7d7268c2492a5f7ccccff226401821d22",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01/receipt.json"
+    },
+    {
+      "bytes": 1008,
+      "file": "retention-init.json",
+      "sha256": "ec60362803ba5085d34238df740ecf7320729a2848f027d3c096616a0589a612",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/retention-init.json"
+    },
+    {
+      "bytes": 128416,
+      "file": "workload.json",
+      "sha256": "bf2f47737e226bc170f16f44ba9747c22c4e8bb76bcb4487d48e9bf5a5fe5e70",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/workload.json"
+    },
+    {
+      "bytes": 515734,
+      "file": "proof-costs.json",
+      "sha256": "fbda840fc1ee754ec83796b9db096872a9a144c4b361d22407ff807cd8361f36",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/proof-costs.json"
+    },
+    {
+      "bytes": 997,
+      "file": "batch01-receipt.json",
+      "sha256": "5f80a71d2eb94243087b83c205a3881b1f45e65cb5e4cb68285a7dc99d3776da",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch01-receipt.json"
+    },
+    {
+      "bytes": 1001,
+      "file": "batch02-receipt.json",
+      "sha256": "3a72492a6e37deba18e4f7ae15ffade1d4e729fd45ae7a2e1fc19a2a77c7f8c1",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch02-receipt.json"
+    },
+    {
+      "bytes": 1002,
+      "file": "batch03-receipt.json",
+      "sha256": "4d1099ba375aad19eb8482f79ca10c4938efc33e09cdba9531f54618900a64c4",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch03-receipt.json"
+    },
+    {
+      "bytes": 998,
+      "file": "batch04-receipt.json",
+      "sha256": "5b884b7fafc042fcce2d815f162daa1e6320079be0eedbfebf4c2cae5e01d0f6",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch04-receipt.json"
+    },
+    {
+      "bytes": 1004,
+      "file": "batch05-receipt.json",
+      "sha256": "d5520dd243f235b947c1c8b30055eba1a81d0449073399e0fbade2f092942bbf",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch05-receipt.json"
+    },
+    {
+      "bytes": 1005,
+      "file": "batch06-receipt.json",
+      "sha256": "f773b3c51686015cf2211a170bb5c100ea9150076aa66e57a760dd63dac81db0",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch06-receipt.json"
+    },
+    {
+      "bytes": 1005,
+      "file": "batch07-receipt.json",
+      "sha256": "d3010d619db185f9042fed3c5d108b750c1604842162e47e019b5469159ca56e",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch07-receipt.json"
+    },
+    {
+      "bytes": 1005,
+      "file": "batch08-receipt.json",
+      "sha256": "13faf96920a84ae873fecd04758b1af343299680e096be844163286ce4221ebd",
+      "source": "experiments/network-feasibility/producer/.work/gate2-96x8-01.public/batch08-receipt.json"
+    }
+  ],
+  "format": "CP04-FULL-GENERATOR-SAFE-EVIDENCE01",
+  "private_material_copied": false,
+  "resource_profile_pass": false,
+  "scope": "Unchanged actual public generation receipts and manifest; proof bodies and original large Parent maps remain in local public generated artifacts and are reproducible, not Git payloads"
+}

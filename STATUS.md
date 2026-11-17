@@ -1,6 +1,6 @@
 # Network feasibility: ACTIVE
 
-Native Goal read back ACTIVE on 2026-11-17 08:11 UTC. Global blockchain ACTIVE.
+Native Goal read back ACTIVE on 2026-11-17 08:58 UTC. Global blockchain ACTIVE.
 Canonical project: /home/neo/jouliene/pq-private-chain. Read the complete
 NETWORK_FEASIBILITY_GOAL.md. Historical public baseline d8f800037b5efbb76a5a1d6d4d3100e55f676a00.
 Local Gate1 checkpoint2ab99fb2f5e76452eb49b1eb9c6e3f0d66816e99; Gate2 source work is not yet
@@ -22,12 +22,31 @@ backpressure,1.50145s stopped/freshreopen/tipretry0proof. All14tablesequal,
 8genuineproofs/2signatures,totalretained14025974B/pending0. All8rolesexit0.
 Root and independentactualreview PASS;
 review/PIPELINE_DIAGNOSTIC03_ACTUAL01.json ffa288d6ad5ddd59c43857f1372a19f2961f665443a55de728275df7f13c04f1.
-SOLE HEAVY ALLOCATION17: producer gate2-96x8-01,864genuineproofs,10800s/CPU0/4GiB,
-LIVE session72700; unchangedSOURCE380d4c43/profile9b86ab/installationa39001d9.
-Diagnostic evidence+allocation checkpoint committedd08ec8a. Do not restart label.
-No other heavy job while generation is active; source/profile/runtime pins frozen.
-At08:19UTC239completedpubliccostreceipts:96credits,96batch1 and47batch2 ordinary;
-generation notterminal. A public batch1 receipt exists; no final workload yet.
+ALLOCATION17 producer gate2-96x8-01 TERMINAL exit0 at09:42:22UTC; do not poll or
+restart session72700. Actual96credits+768ordinary proofs/9blocks,6639.207363s,
+248668KiB first-wait4 maxrss,5867.023590user+752.019179system seconds. No timeout,
+source/runtime unchanged; raw private streams not persisted/hashed. Receipt
+1d2d55a839f0a8f665664449266c0ac7d7268c2492a5f7ccccff226401821d22.
+Workload bf2f47737e226bc170f16f44ba9747c22c4e8bb76bcb4487d48e9bf5a5fe5e70.
+Root personally read actual manifest, source scope flag and final public SQL:
+1728leaves/1536NFs/864cores/96consumed sources,total9.6B,fees1825416864,
+liabilities0. All864bodies retained1513556768B,pending0; nativeDB1523658752B.
+Ordinary768body bytes1344972096; credit96body bytes168584672. Generator
+resource_profile_pass:false means network profile not tested, not a failed run.
+Safe unchanged raw metadata copied to evidence/gate2-96x8-01-producer/ (655266B).
+Author actual readback PASS: all864 original Parent metadata/statement prefixes,
+batch/SQL endpoints and resources matched;13.178366s/35708KiB public-only checker.
+Readback e991475e1305ab30a16ed25a82e13e0bedf8f7476af370fc76d8593024ad4403.
+Independent actual qualification GO, no material open finding:
+review/PRODUCER_FULL03_ACTUAL01.json9053e80682aab17c7867d25d53ba71f5430d017619e0e5cde63ebe2fc350ce25.
+Reviewer checked all864 statement/cost rows, all1728 leaf positions,1536NFs,
+9headers/SQL endpoints and18 sampled original Parent/body/proof-section hashes.
+Root personally read the evidence and scope; no proof/native/build rerun.
+SOLE HEAVY ALLOCATION18: execute the unchanged full pipeline gate2-96x8-01,
+build03/SOURCE5a65e5df/profile9b86ab/workloadbf2f4773, exactly the command below.
+600s outer/363.29472s observation,30s cleanup,declaredCPU/memory/disk/link limits.
+Session not yet launched at this checkpoint. No other heavy job or source edit.
+Producer/transport/profile/runtime pins remain frozen.
 Only count public per-proof cost/batch receipts for progress; never inspect
 private streams/keys. Preserve source labels and process state.
 Transport candidate committeda68ef72; all18sourcefiles remain frozen.
@@ -36,18 +55,30 @@ but pipeline source/diagnostic remains separate; Root will allocate the next job
 
 Root owns contracts, profiles, status, Git, integration and acceptance.
 arch_consensus_roles (Sol/high) owns transport/, Gate1 cost table and Gate2 source.
-arch_private_repro (Sol/high) owns frozen producer/ successor; now performs cheap
-source-only wallet local-bridge contract preparation under wallet-witness/.
+arch_private_repro (Sol/high) owns frozen producer/ successor; full-generator
+readback complete under producer/evidence/. Its single Parent-metadata pass is
+TERMINAL PASS; do not poll/restart its session76688. Agent idle until next gate.
 No Gate3 integration/native work, canonical edits or cross-gate secret keeper.
 arch_proof_alternatives (Astra/high) owns independent review/. Conditional finite
-full-RETAIN model review complete; no actual Gate2 PASS presumed. It is reviewing
-the bridge contract and Root's narrow prototype deep-rewind lifecycle fix.
+full-RETAIN model, bridge contract and narrow deep-rewind fix reviews complete;
+full-generator independent qualification also complete under review/. Agent idle
+until the actual full network result, which must receive separate review.
 Root owns that prototype change and controls. No canonical/live-job input changed.
 Remote pruning is not claimed; validator and archive full copies are charged.
 Four agents total, no nested agents, one heavy job.
+Local checkpoint0e58e605c425201fee95909192c7d23a9ec11dd3 records the reviewed
+prototype fix/contract and live-job resume state. Commit succeeded; not pushed.
+Remaining immediate action is allocated full pipeline18. Do not invent duplicate
+independent tasks or begin
+Gate3 integration while this measured resource decision is still pending.
 
-Owner regular update07:58UTC; next regular update by approximately08:28UTC, meaningful
+Owner regular update09:28UTC; next regular update by approximately09:58UTC, meaningful
 material updates sooner. Russian user communication; English code/documents.
+The last substantive source progress was the reproduced/repaired/reviewed
+stale-epoch defect, actual14+25controls and localcommit0e58e60. Previous and
+recent continuations were VERIFIED WAIT on session72700. Current continuation:
+PROGRESS, full generation actually completed and Root read final public evidence.
+No external blocker. The supervisor session is TERMINAL, not merely timed out.
 
 ## Closed evidence to reuse
 
@@ -117,10 +148,9 @@ Stopvalidator aftersecond ordinarycanonicalACK for3T; freshreopen, currentretry
 charged, no loss/doubleapply. Fresh2GiBraw RETAINquota,8GiBperrole diskwatchdog,
 4GiBAS/role,CPUs0/1/2,100Mbit/s per direction/full-duplex applicationpacing,
 40ms once/RPC. Research allocation, not ownerbudget or annualmodel acceptance.
-Generator ceiling864proofs/10800s/CPU0/4GiB; source-review and small2lanes x3batches
-(8proofs,360s) precede expensive allocation. SOURCE03 source review GO; allocation14 authorizes only8proof diagnostic.
-Actual diagnostic readback and independent review PASS; full generation needs
-Root allocation. Pipeline SOURCE03 source GO after review:18files, declared profile unchanged.
+Generator ceiling864proofs/10800s/CPU0/4GiB was respected by allocation17.
+The source review,8proof diagnostic,build03 and small network diagnostic are
+closed prerequisites. Pipeline SOURCE03 has18frozen files and unchanged profile.
 
 ## Exact restart / next useful actions
 
@@ -141,13 +171,14 @@ Root allocation. Pipeline SOURCE03 source GO after review:18files, declared prof
    Diagnostic workload617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a.
    Build03 andsmallpipeline areterminalPASS; do notrerun. Read safeevidence
    evidence/transport-build03/ and evidence/gate2-diagnostic01-network/.
-   Independentactualpipeline review PASS. Allocation17 full864proofgeneration
-   gate2-96x8-01 usesunchangedproducerSOURCE380d4c43; inspectlivejob first.
-   Preserve completedpublicproof-cost/batch receipts; private keys existonlyin
-   runningproducerRAM and aredestroyedonexit. No privatecrashresume fallback.
+   Independentactualpipeline diagnostic review PASS. Allocation17 full864proof
+   generation gate2-96x8-01 is TERMINAL PASS with producerSOURCE380d4c43.
+   Preserve completed public proof-cost/batch receipts and original Parent maps;
+   its private keys were ephemeral and no backup/keeper exists for Gate3.
    Then run declaredfull96pipeline withsameSOURCE5a65e5df/build03/profile9b86ab.
-4. Build/review transport successor and run diagnostic/full finite network series
-   after required datasets exist. No inference of overlap replaces actual run.
+4. Independent full-generator qualification is GO. Execute allocation18 using
+   the exact full pipeline below. No rebuild or repeated diagnostic is needed.
+   No inference of overlap replaces this actual full run.
 5. Review service and participation separately. An annual175TBfullcopy remains
    material. Ordinary validating node/archive/miner/wallet cost table must include
    storage, fan-out, common-history scan and bootstrap; unimplemented mining is
@@ -177,11 +208,9 @@ Actual build03 ELF:
 Network04 manifest remains:
 663bf4e49424f8259997cd71950391dc0f9f297e4ae4a87366329041d7d20831.
 
-Allocation17 is the existing exec session72700, launched07:52UTC. Inspect that
-session or actual producer processes and terminal receipt before any new job.
-Supervisor receipt will appear at producer/.work/gate2-96x8-01/receipt.json;
-public completed per-proof cost records and later batch receipts accumulate under
-producer/.work/gate2-96x8-01.public/. No final workload.json means no full PASS.
+Allocation17 session72700 completed exit0 at09:42:22UTC after6639.207363s.
+Read actual producer/.work/gate2-96x8-01/receipt.json and completed public
+producer/.work/gate2-96x8-01.public/workload.json. Do not restart or poll it.
 These paths are under experiments/network-feasibility/. Do not rerun this label
 or access private buffers/streams. A completed source must have actual864cost
 rows,96credits/768ordinary,9blocks,1728leaves,1536NFs/864cores/96sources,
@@ -189,7 +218,7 @@ fee1825416864,total9600000000,liabilities0. Review all actual resource outcomes.
 
 Only after terminal successful generation and actual public readback/review,
 Root assigns the next sole heavy allocation. The already reviewed network command
-is below; substitute the ACTUAL completed workload digest, not a guessed value:
+is below with the actual completed workload digest:
 
 ```sh
 python3 -I experiments/network-feasibility/transport/pipeline.py \
@@ -200,7 +229,7 @@ python3 -I experiments/network-feasibility/transport/pipeline.py \
   --approve-source 5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5 \
   --approve-profile 9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8 \
   --workload experiments/network-feasibility/producer/.work/gate2-96x8-01.public/workload.json \
-  --approve-workload ACTUAL_COMPLETED_WORKLOAD_SHA256
+  --approve-workload bf2f47737e226bc170f16f44ba9747c22c4e8bb76bcb4487d48e9bf5a5fe5e70
 ```
 
 Closed Gate1 source/build/data and actual diagnostics remain in committed safe
