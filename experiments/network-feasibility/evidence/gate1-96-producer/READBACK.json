@@ -1,0 +1,55 @@
+{
+  "body_pins_checked": true,
+  "by_arity": {
+    "0": {
+      "body_bytes": 168600992,
+      "caller_wall_seconds_sum": 514.5673361369999,
+      "count": 96,
+      "proof_bytes": 167696384,
+      "worker_rss_kib_max": 168300,
+      "worker_wall_seconds_sum": 181.90873376326635
+    },
+    "2": {
+      "body_bytes": 168153728,
+      "caller_wall_seconds_sum": 604.8535334109989,
+      "count": 96,
+      "proof_bytes": 167685632,
+      "worker_rss_kib_max": 168308,
+      "worker_wall_seconds_sum": 212.3593193484703
+    }
+  },
+  "counts": {
+    "cores": 192,
+    "credits": 96,
+    "funded_leaves": 384,
+    "nullifiers": 192,
+    "ordinary": 96
+  },
+  "format": "NETWORK04-GATE1-PRODUCER-READBACK01",
+  "records": {
+    "claim.json": {
+      "bytes": 341,
+      "sha256": "3a97e13b7ae5fff7960f3601c90edf3e0a3a5faf501bc4cbf1b68b78e07c6b57"
+    },
+    "proof-costs.json": {
+      "bytes": 107084,
+      "sha256": "b4b19c6f6338467aef777a19632b446d6f6316bf0bbaac0a6eaf2c2073839f9a"
+    },
+    "receipt.json": {
+      "bytes": 1451,
+      "sha256": "868d40b19425403a7a9f734bd9cfa3959d77af6893bdf8a1e27f10809f07373d"
+    },
+    "workload.json": {
+      "bytes": 28954,
+      "sha256": "338ddf2f36ea74d7e193dd7f14b4d779588bb0fffa5c3c36f2f820aa4bfcfc42"
+    }
+  },
+  "scope": "192 genuine new proofs and producer admission; full96 network path still pending",
+  "state": {
+    "fee_escrow": 405986208,
+    "pending_export": 0,
+    "retained_raw_body_bytes": 336754720,
+    "total": 9600000000,
+    "unconsumed_liabilities": 0
+  }
+}

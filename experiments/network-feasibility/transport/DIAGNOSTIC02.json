@@ -1,0 +1,93 @@
+{
+  "actual_filesystem_boundary": {
+    "actual_namespace_hidden_file_checks": 5,
+    "actual_validator_host_pid": 2350680,
+    "destination_argv_has_no_fixture_paths": true,
+    "private_pid_namespace": true,
+    "producer_fixtures_database_and_archive_subtrees_masked": true,
+    "validator_namespace_pid": 2
+  },
+  "all14_equal_excluding_local_catalog_id": true,
+  "build_sha256": "95dfe473fa71a1f1a60153195352842a79fc1e46da0305001ea40545f2e2e5fc",
+  "classification": "Actual2ordinary/four-genuine-proof diagnostic with corrected native totals; not96 Gate1/WAN/yearcapacity",
+  "format": "CP04-TRANSPORT-DIAGNOSTIC02-SUMMARY",
+  "invalid_all14_unchanged": true,
+  "measurement": "Native absolute totals include process startup/completed commands through sample after Ledger/provider drop; final JSON serialization/exit follows. External bwrap wait4 is wrapper-only. Cumulative self/child RSS maxima are separate; external simultaneous tree RSS is sampled and may miss short peaks. Main process wall includes external oracle idle.",
+  "native_lifetime": {
+    "actual_cpu_allowed_list": "2",
+    "checked_nonoverlapping_inclusive_command_cpu_sums": {
+      "self_system_seconds": 0.07622200000000001,
+      "self_user_seconds": 1.6140560000000002,
+      "waited_child_system_seconds": 0.016819,
+      "waited_child_user_seconds": 0.058367
+    },
+    "linux_self_io_cumulative": {
+      "cancelled_write_bytes": 45056,
+      "rchar": 145557629,
+      "read_bytes": 0,
+      "syscr": 3931,
+      "syscw": 1980,
+      "wchar": 7573426,
+      "write_bytes": 7565312
+    },
+    "native_main_wall_seconds": 3.249300446,
+    "nested_stage_cpu_not_added": true,
+    "scope": "Absolute native self and already-waited-child usage, sampled after Ledger/provider drop. CPU includes process startup and all completed commands; final terminal JSON serialization/exit follows sample. Main wall includes launcher/oracle idle. Linux IO is self only, excludes helper IO. Peak RSS fields are cumulative separate maxima, never a simultaneous sum; sampled external role-tree peak is separate.",
+    "self_inblock": 0,
+    "self_oublock": 14776,
+    "self_peak_rss_kib_cumulative": 81648,
+    "self_system_seconds": 0.079688,
+    "self_user_seconds": 1.61606,
+    "waited_child_inblock": 0,
+    "waited_child_oublock": 0,
+    "waited_child_peak_rss_kib_cumulative": 63528,
+    "waited_child_system_seconds": 0.016819,
+    "waited_child_user_seconds": 0.058367
+  },
+  "native_reopen_lifetime": {
+    "actual_cpu_allowed_list": "2",
+    "checked_nonoverlapping_inclusive_command_cpu_sums": {
+      "self_system_seconds": 0.030411000000000004,
+      "self_user_seconds": 1.081794,
+      "waited_child_system_seconds": 0.0,
+      "waited_child_user_seconds": 0.0
+    },
+    "linux_self_io_cumulative": {
+      "cancelled_write_bytes": 0,
+      "rchar": 145471299,
+      "read_bytes": 0,
+      "syscr": 3517,
+      "syscw": 4,
+      "wchar": 2867,
+      "write_bytes": 0
+    },
+    "native_main_wall_seconds": 1.115282109,
+    "nested_stage_cpu_not_added": true,
+    "scope": "Absolute native self and already-waited-child usage, sampled after Ledger/provider drop. CPU includes process startup and all completed commands; final terminal JSON serialization/exit follows sample. Main wall includes launcher/oracle idle. Linux IO is self only, excludes helper IO. Peak RSS fields are cumulative separate maxima, never a simultaneous sum; sampled external role-tree peak is separate.",
+    "self_inblock": 0,
+    "self_oublock": 0,
+    "self_peak_rss_kib_cumulative": 65012,
+    "self_system_seconds": 0.033542,
+    "self_user_seconds": 1.082419,
+    "waited_child_inblock": 0,
+    "waited_child_oublock": 0,
+    "waited_child_peak_rss_kib_cumulative": 0,
+    "waited_child_system_seconds": 0.0,
+    "waited_child_user_seconds": 0.0
+  },
+  "passed": true,
+  "physical_proof_attempts": 6,
+  "result_sha256": "ffce63cd97f463bff8504b3b2cf4f0685624181b85148b0316afc3800c0f1ac2",
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 4,
+    "cached_bytes": 6981022,
+    "full_bytes": 6981022,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "source_sha256": "813b0492ec01f2cb130e1cbd746b61eff5dd32bcc4608782be80cf823d06bace",
+  "source_signature_attempts": 2
+}

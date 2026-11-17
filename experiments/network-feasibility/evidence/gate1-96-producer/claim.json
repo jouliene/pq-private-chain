@@ -1,0 +1,9 @@
+{
+  "diagnostic": false,
+  "format": "CP04-NETWORK-PRODUCER-CLAIM01",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "ordinary_count": 96,
+  "private_streams_persisted": false,
+  "proof_job_ceiling": 192,
+  "source_sha256": "572433969448de0a293e80b59c278f275122e926dddf9ac61f1e195fbe0e82d3"
+}

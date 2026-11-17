@@ -25,8 +25,11 @@ swaps, VM/UI, mnemonic design and compulsory cell-format migration are outside
 this milestone. No component or finite test establishes the missing joint
 PQ/privacy theorem or production readiness. No owner annual traffic cap exists.
 
-Checkpoint2026-11-17: new Network04 core/compatibility and actual four-proof
-diagnostic plus separate-process count2functional path passed. Native lifetime
-resource correction is source-reviewed;96ordinary+96credit generation is active.
-None of the six final acceptance criteria is yet closed. Resume from STATUS.md
-and the live job receipt; preserve these intermediate outcomes and limitations.
+Checkpoint 2026-11-17 07:07 UTC: Gate1 is functionally complete and independently
+reviewed. Actual 96-credit/96-ordinary generation and separate-process transfer,
+genuine verification, atomic durable retention, failure controls and fresh reopen
+passed. Ordinary destination 20.837566s; serial PUT+destination 34.787545s versus
+30.27456s nominal offered interval. Gate2's declared eight-batch pipeline/restart
+experiment will test actual overlap/backlog. No annual participation acceptance
+or Gate3 completion follows. Native and global Goals remain ACTIVE. Resume from
+STATUS.md; do not regenerate the closed Gate1 campaigns.

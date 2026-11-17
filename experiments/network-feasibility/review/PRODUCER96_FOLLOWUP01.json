@@ -1,0 +1,7 @@
+{
+  "format": "NETWORK04-REVIEW-FOLLOWUP01",
+  "sampled_parent_proof_and_statement_hashes_match_exact_body_sections": 4,
+  "reblocking_cost_clarification_resolved": true,
+  "reblocking_document_sha256": "018bbb1176848a0900f6677ba3ff1e45690973b34e9110fd829a8b21b7168bd3",
+  "no_native_or_private_execution": true
+}

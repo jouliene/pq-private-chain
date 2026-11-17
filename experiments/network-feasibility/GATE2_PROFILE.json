@@ -1,0 +1,117 @@
+{
+  "decision_question": "Can bounded actual producer PUT / destination GET-validation overlap service the finite offered schedule, including a stopped validator and durable restart, without unaccounted backlog or duplicate application?",
+  "diagnostic_network_profile": {
+    "fixed_observation_end_seconds": 12,
+    "lanes": 2,
+    "offer_offsets_seconds": [
+      0,
+      0,
+      0.5
+    ],
+    "ordinary_batches": 3,
+    "outer_watchdog_seconds": 120,
+    "scope": "Changed-path functional diagnostic only; not the declared96-payment offered-load capacity test",
+    "stop_after_second_ordinary_ack_seconds": 1.5
+  },
+  "format": "CP04-GATE2-PROFILE01",
+  "gates": {
+    "gate1": "Actual96 functional PASS and independent resourceGO for this experiment",
+    "gate2": "NOT EXECUTED; no capacity or participation acceptance",
+    "gate3": "Full integration stays gated on reviewed provisionallyretained resource/participationmodel",
+    "global": "ACTIVE; no production or jointPQ/privacyassurance claim"
+  },
+  "generator_allocation": {
+    "address_space_limit_bytes": 4294967296,
+    "all_private_material_ram_only_not_logged_or_hashed": true,
+    "cpu": 0,
+    "diagnostic_lanes": 2,
+    "diagnostic_ordinary_batches": 3,
+    "diagnostic_total_proofs": 8,
+    "diagnostic_watchdog_seconds": 360,
+    "one_heavy_job_at_a_time": true,
+    "total_proof_ceiling": 864,
+    "watchdog_seconds": 10800
+  },
+  "measurement_obligations": [
+    "Every offered, pending, uploading, archive-durable, downloading, accepted and outstanding ID/byte atfixedend",
+    "Actual overlap, all queue peaks, backpressure durations and complete drain or exact remainder",
+    "All role incarnations, native CPU/RSS/IO distinct from namespace wrapper; nested stages not added",
+    "Funding/proving/preparation/retry separately priced; all physical copies and archive duties counted",
+    "Fresh receiver cannot read producerfixtures; external canonical-state oracle separate",
+    "Exact supply/fee/nullifier/root counts and all14tables checked afterfinitecampaign"
+  ],
+  "network_campaign_outer_watchdog_seconds": 600,
+  "queues": {
+    "all_prepared_frames_charged_as_disk": true,
+    "archive_put_get_overlap": "Measured, not inferred from isolated-stage times",
+    "concurrent_put_max": 1,
+    "concurrent_validator_get_or_admit_max": 1,
+    "finite_source_pending_ids_max": 8,
+    "no_unbounded_payload_queue": true,
+    "release_credit_only_after_validator_canonical_ack": true,
+    "reserved_or_archive_durable_unadmitted_frames_max": 2
+  },
+  "research_resources": {
+    "address_space_limit_bytes_per_process": 4294967296,
+    "archive_cpu": 1,
+    "disk_watchdog_bytes_per_role": 8589934592,
+    "fresh_validator_retain_raw_body_quota_bytes": 2147483648,
+    "latency_milliseconds_once_per_rpc": 40,
+    "link_application_bits_per_second_each_direction": 100000000,
+    "link_duplex": "Separate paced ingress and egress permits full-duplex overlap; explicitly not a shared100Mbit/saggregate link",
+    "network_model": "Local loopback application pacing, not WAN TCP/loss/window evidence",
+    "producer_cpu": 0,
+    "sample_role_tree_rss_separately": true,
+    "steady_policy": "RETAIN all accepted bodies for this finite queue experiment; annual ordinary-node participation remains a separate decision",
+    "validator_cpu": 2
+  },
+  "restart": {
+    "exact_current_canonical_retry_after_reopen": true,
+    "fresh_process_reopens_same_durable_db": true,
+    "new_blocks_require_real_verification": true,
+    "offered_clock_continues": true,
+    "retry_receive_parse_hash_work_and_bytes_charged": true,
+    "trigger": "After second ordinary durable canonical ACK",
+    "validator_down_seconds": 90.82368
+  },
+  "schedule": {
+    "burst": "Two batches at zero; one additional initial batch above nominal subsequent spacing. Finite burst, not an asserted exact yearly arrival trace.",
+    "count_source_pending_as_backlog": true,
+    "fixed_observation_end_seconds": 363.29472,
+    "no_schedule_extension_to_achieve_drain": true,
+    "offer_clock_independent_of_backpressure_or_completions": true,
+    "ordinary_offer_offsets_seconds": [
+      0,
+      0,
+      30.27456,
+      60.54912,
+      90.82368,
+      121.09824,
+      151.3728,
+      181.64736
+    ],
+    "seconds_per_96_at_owner_rate": 30.27456
+  },
+  "source_of_requirement": {
+    "owner": "100 million offered payments per 365-day year; no annual traffic cap",
+    "researcher_choices": "All finite workload, machine, queue, link, restart and observation limits below"
+  },
+  "status": "declared-before-generation-and-network-execution",
+  "workload": {
+    "accepted_blocks_including_funding": 9,
+    "distinct_total_proofs": 864,
+    "fresh_credit_proofs": 96,
+    "fresh_ordinary_proofs": 768,
+    "funding_measured_separately_before_offer_clock": true,
+    "gate3_secret_custody": false,
+    "initial_credit_per_lane_atoms": 100000000,
+    "inputs_per_ordinary": 2,
+    "ordinary_blocks": 8,
+    "ordinary_per_block": 96,
+    "outputs_per_payment": 2,
+    "pregenerated": true,
+    "private_pair_shuffle_each_batch": true,
+    "rolling_lanes": 96,
+    "unchanged_complete_relation_and_security_parameters": true
+  }
+}

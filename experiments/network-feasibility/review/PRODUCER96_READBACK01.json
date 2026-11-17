@@ -1,0 +1,118 @@
+{
+  "format": "NETWORK04-PRODUCER96-INDEPENDENT-READBACK01",
+  "decision": "Actual192-proof producer completion supported; distinct96 network path and resource decision pending",
+  "workload_sha256": "338ddf2f36ea74d7e193dd7f14b4d779588bb0fffa5c3c36f2f820aa4bfcfc42",
+  "producer_receipt_sha256": "868d40b19425403a7a9f734bd9cfa3959d77af6893bdf8a1e27f10809f07373d",
+  "proof_costs_sha256": "b4b19c6f6338467aef777a19632b446d6f6316bf0bbaac0a6eaf2c2073839f9a",
+  "source_sha256": "572433969448de0a293e80b59c278f275122e926dddf9ac61f1e195fbe0e82d3",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "representative_parent_body_checks": [
+    {
+      "body": "credit000.body",
+      "parent_receipt_sha256": "29d9cdae5f1bfcbcf60805a9ad3aa828c59b013b8d09de98f5d2dab1a10d67dd",
+      "worker_wall_seconds": 1.849315981962718,
+      "caller_wall_seconds": 5.2505030029999995,
+      "first_wait4": {
+        "origin": "main",
+        "pid": 2319882,
+        "status": 0
+      },
+      "proof_bytes": 1745674
+    },
+    {
+      "body": "credit095.body",
+      "parent_receipt_sha256": "5172b1455734f3d45d9f95bb7ff4453cc08043daf818023d5ae04325b4bab7f9",
+      "worker_wall_seconds": 1.8486590539105237,
+      "caller_wall_seconds": 5.277684910000011,
+      "first_wait4": {
+        "origin": "main",
+        "pid": 2325190,
+        "status": 0
+      },
+      "proof_bytes": 1747082
+    },
+    {
+      "body": "ordinary047.body",
+      "parent_receipt_sha256": "5f20758a01ecf3fc49b5057522b3d974a2351cf54d0eb9c727f9558917995b59",
+      "worker_wall_seconds": 3.134868722059764,
+      "caller_wall_seconds": 9.041891179999919,
+      "first_wait4": {
+        "origin": "main",
+        "pid": 2339978,
+        "status": 0
+      },
+      "proof_bytes": 1744970
+    },
+    {
+      "body": "ordinary095.body",
+      "parent_receipt_sha256": "3974e3c7b650b3c229bf4f75281e66b913795ed93310aa1039de3fe624130645",
+      "worker_wall_seconds": 1.8846605339786038,
+      "caller_wall_seconds": 5.310955807999941,
+      "first_wait4": {
+        "origin": "main",
+        "pid": 2347262,
+        "status": 0
+      },
+      "proof_bytes": 1741066
+    }
+  ],
+  "all192cost_row_aggregates": {
+    "0": {
+      "body_bytes": 168600992,
+      "proof_bytes": 167696384,
+      "worker_wall_seconds": 181.90873376326635,
+      "worker_user_seconds": 173.567058,
+      "worker_system_seconds": 6.060992,
+      "private_proving_call_wall_seconds": 514.5673361369999
+    },
+    "2": {
+      "body_bytes": 168153728,
+      "proof_bytes": 167685632,
+      "worker_wall_seconds": 212.3593193484703,
+      "worker_user_seconds": 198.189387,
+      "worker_system_seconds": 6.70974,
+      "private_proving_call_wall_seconds": 604.8535334109989
+    }
+  },
+  "sql": {
+    "meta_total_height_leaves_fees_liabilities": [
+      9600000000,
+      2,
+      384,
+      405986208,
+      0
+    ],
+    "counts": {
+      "sources": 96,
+      "nullifiers": 192,
+      "cores": 192,
+      "leaves": 384,
+      "bodies": 192,
+      "blocks": 2,
+      "archive_pending": 0
+    },
+    "consumed_sources": 96,
+    "cache_retention_cached_unexported_archived": [
+      1,
+      336754720,
+      0,
+      0
+    ]
+  },
+  "whole_generator_process": {
+    "wall_seconds": 1439.1363744769478,
+    "user_seconds": 1245.034091,
+    "system_seconds": 163.817912,
+    "maxrss_kib": 248724,
+    "process_exit": 0,
+    "wrapper_exit": 0,
+    "first_wait4": true
+  },
+  "scope": [
+    "Reviewer sampled4actual Parent receipts/body hashes, not192-receipt/native-verifier rerun",
+    "All192cost rows summed, public manifest checked, direct small SQL counts/accounting checked",
+    "Worker wall excludes Parent pre/postflight; caller wall includes body publication/receipt read; neither equals whole wallet throughput",
+    "Outer wait4 cumulative peak is not simultaneous process-tree memory",
+    "Private material not read; no new proofs/native execution"
+  ]
+}

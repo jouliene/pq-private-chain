@@ -1,0 +1,94 @@
+{
+  "format": "NETWORK04-GATE1-96-INDEPENDENT-READBACK01",
+  "actual_result_sha256": "732f1c969b4e18f03f5a7d70ccbae17279c13147c5b99e1f5e100c081c89a098",
+  "decision": "Functional96 network slice supported; GO for explicit finite bounded pipelined queue experiment, not annual/ordinary-node participation acceptance",
+  "independent_readonly_checks": [
+    "Streamed byte-for-byte equality of all14 final SQL tables, excluding only local catalog_id; no full-body hash rerun",
+    "Proof attempts96/192/288/288 and source signatures96; actual final Proof result plus retained all-table atomicity assertion",
+    "Ten expected terminal statuses, empty stderr, native terminal/affinity2 and cumulative CPU coverage",
+    "Both application-byte link balances including interrupted and crash/retried requests",
+    "Four archived filenames/sizes and no partial; prior source/runtime review reused"
+  ],
+  "table_rows": {
+    "anchors": 3,
+    "archive_objects": 0,
+    "archive_pending": 0,
+    "archive_segments": 0,
+    "blocks": 2,
+    "bodies": 192,
+    "body_cache": 1,
+    "cores": 192,
+    "leaves": 384,
+    "meta": 1,
+    "node_undo": 833,
+    "nodes": 799,
+    "nullifiers": 192,
+    "sources": 96
+  },
+  "application_bytes": {
+    "producer_sent": 673856896,
+    "producer_received": 208,
+    "archive_sent": 673344252,
+    "archive_received": 673857156,
+    "validator_sent": 260,
+    "validator_received": 673344044
+  },
+  "storage": {
+    "retained_body_bytes": 336754720,
+    "destination_database_logical_bytes": 340254720,
+    "destination_database_allocated_bytes": 340258816,
+    "archive_blob_logical_bytes": 505183300,
+    "archive_blob_allocated_bytes": 505204736,
+    "archive_objects_include_invalid_candidate": true,
+    "retention_pending": 0
+  },
+  "native_lifetime": {
+    "actual_cpu_allowed_list": "2",
+    "checked_nonoverlapping_inclusive_command_cpu_sums": {
+      "self_system_seconds": 2.954602999999999,
+      "self_user_seconds": 21.937921999999997,
+      "waited_child_system_seconds": 1.157482,
+      "waited_child_user_seconds": 2.712217
+    },
+    "linux_self_io_cumulative": {
+      "cancelled_write_bytes": 126976,
+      "rchar": 1598537788,
+      "read_bytes": 8192,
+      "syscr": 367761,
+      "syscw": 84152,
+      "wchar": 342430404,
+      "write_bytes": 341086208
+    },
+    "native_main_wall_seconds": 85.923052397,
+    "nested_stage_cpu_not_added": true,
+    "scope": "Absolute native self and already-waited-child usage, sampled after Ledger/provider drop. CPU includes process startup and all completed commands; final terminal JSON serialization/exit follows sample. Main wall includes launcher/oracle idle. Linux IO is self only, excludes helper IO. Peak RSS fields are cumulative separate maxima, never a simultaneous sum; sampled external role-tree peak is separate.",
+    "self_inblock": 16,
+    "self_oublock": 666184,
+    "self_peak_rss_kib_cumulative": 405336,
+    "self_system_seconds": 2.9591380000000003,
+    "self_user_seconds": 21.939095000000002,
+    "waited_child_inblock": 0,
+    "waited_child_oublock": 0,
+    "waited_child_peak_rss_kib_cumulative": 227760,
+    "waited_child_system_seconds": 1.157482,
+    "waited_child_user_seconds": 2.712217
+  },
+  "observed_timing": {
+    "ordinary96_destination_inclusive_seconds": 20.837565988,
+    "producer_ordinary_put_process_seconds": 13.949979420984164,
+    "serial_sum_seconds": 34.787545408984165,
+    "offered96_interval_seconds": 30.27456,
+    "destination_margin_seconds": 9.436994012,
+    "serial_overrun_seconds": 4.512985408984164,
+    "pipeline_overlap_measured": false
+  },
+  "namespace_evidence": "Recorded actual5 forbidden-path checks + private PID namespace; no repeat live probe after exit",
+  "caveats": [
+    "All8offered batches must contain new distinct valid payments; pre-generation cost priced separately",
+    "Source1 bwrap measurement defect fixed by source2 native final counters; never price validator from wrapper wait4",
+    "Native self/child cumulative peaks are separate; simultaneous tree sampled463940KiB",
+    "Cold pagecache/tiny-state/local-loopback profile only",
+    "An archive invalid-candidate retained copy and resends are real measured costs, not normal annual steady-state data",
+    "No independent native proof rerun in this readback; actual final clean-checkout gate still pending"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "files": {
+    "BUILD.json": {
+      "bytes": 59464,
+      "sha256": "95dfe473fa71a1f1a60153195352842a79fc1e46da0305001ea40545f2e2e5fc"
+    },
+    "CANONICAL.json": {
+      "bytes": 1652,
+      "sha256": "d81ebc207c366d4c5e509409ac7d4cb402a8bd1bfbe22d93e0e4b015700af312"
+    },
+    "RESULT.json": {
+      "bytes": 96485,
+      "sha256": "ffce63cd97f463bff8504b3b2cf4f0685624181b85148b0316afc3800c0f1ac2"
+    },
+    "build-process.json": {
+      "bytes": 657,
+      "sha256": "0479b4fa66f14dccb7798f54b0f525bcaa8f6f47a77dc93abaa7156c7159381e"
+    },
+    "build.stderr": {
+      "bytes": 5905,
+      "sha256": "aa533b1c92326aab3d8a25bd62672b9917fa3733e2784b4d920320bb7ddcf2b3"
+    },
+    "build.stdout": {
+      "bytes": 136430,
+      "sha256": "3c2149e824f934d96061e1e89d883bbed31ad6bc90cc6b466108fbe8513d6429"
+    },
+    "ldd-process.json": {
+      "bytes": 476,
+      "sha256": "334dcddd7d13b2e85b340a7b8e8f0b2b974cd2b86d27c50e72e4623cea9217ca"
+    },
+    "ldd.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ldd.stdout": {
+      "bytes": 374,
+      "sha256": "41bf38d25e2ba00c5e50f2d7550d9a37639fdbdabbb9c180d2238a2b54317382"
+    }
+  },
+  "format": "NETWORK04-TRANSPORT02-RAW-PUBLIC-EVIDENCE",
+  "functional_diagnostic2_pass": true,
+  "gate1_96_pass": false,
+  "native_lifetime_measured": true
+}
