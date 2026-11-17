@@ -5,8 +5,10 @@ Native Goal read back ACTIVE2026-11-17 12:59UTC; global blockchain ACTIVE.
 Execute NETWORK_FEASIBILITY_GOAL.md. Published historical baseline:
 `d8f800037b5efbb76a5a1d6d4d3100e55f676a00` (GitHub readback12:43UTC).
 Current tested source revision: `a9357c27d7458277b80b78ac887696a9ea9a99a8`.
-Local commits220aa4b/a9357c2 are not yet published. Their history preserves prior
-allocation journals, reviewed failures and exact restart commands. No external blocker.
+Public main c5e2f36ddb6c225e7d4c17363ffe0eeba93ce49f includes these reviewed
+commits. Its automatic CI44088764296 FAILED at the isolated wallet prelaunch.
+Exact fixed public failure receipts are preserved; correction is limited to test
+ordering. No external blocker or cryptographic parameter change.
 
 ## Accepted results
 
@@ -140,3 +142,36 @@ in review/REMOTE_REPRO_REQUIREMENTS.md. Canonical root unchanged.
 
 Owner short reports delivered around12:28,12:37,12:43,12:45,12:49UTC; next regular
 12:58UTC with material updates sooner. No invented completion percentage.
+
+Publication checkpoint13:03UTC: ordinary push succeeded; public main readback
+exactc5e2f36ddb6c225e7d4c17363ffe0eeba93ce49f. Automatic pushCI44088764296
+is IN_PROGRESS on exactly thatSHA, https://github.com/jouliene/pq-private-chain/actions/runs/44088764296.
+No source/parameter change since independentexecutiona9357c2; final commit added
+reviewed docs/safeevidence only. Releaseartifact notyetpublished. Continue actualCI
+readback, then release/upload/verify; criterion6 NOTcomplete until then.
+
+## CI failure and allocation32: test-order correction
+
+Actual pushCI44088764296 terminated FAILURE13:05:29UTC on c5e2f36. Clean build,
+public verification, legacy fresh-private and witness probe all passed. Isolated
+wallet failed pre-Popen: ValueError/fixedreasonnull, zeroevents/proofs/nativecalls/
+observerepochs and no childexit receipt. Seven fixed public JSONs are retained in
+`experiments/network-feasibility/evidence/ci-failed01/`; no private raw output.
+The exact historical exception text was sanitized and has NOT been recovered.
+
+Source reconstruction found legacy private_smoke leaves public ledger.sqlite in
+installation source_root; the unchanged wallet mount policy rejects every DB in
+that tree before spawning. A public-only clean-tree/SQLite discriminator confirms
+this ordering incompatibility. Minimal correction moves isolated small5 directly
+after build, before the unchanged legacy public/private/witness step. No source,
+crypto/profile, permissions or policy change; no evidence deletion. Wallet README
+now states the clean installation/order prerequisite. Independent source review
+passed in review/CI_ORDER_REPAIR_REVIEW01.md; Root read the actual public control
+and confirmed no accepted installation/source-pin overlap. Next is one genuine
+hosted clean CI rerun after ordinary commit/push.
+
+Root owns Git/status/publication; arch_private_repro owns failure diagnosis;
+arch_consensus_roles owns terminal public tree control; arch_proof_alternatives
+owns independent repair review. No local heavy job. Allocation32 is the next
+automatic hosted CI after reviewed push; preserve failed44088764296. Do not rerun
+closed network/fullwallet campaigns. Release and criterion6 remain pending.

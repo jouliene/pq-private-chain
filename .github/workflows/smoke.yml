@@ -39,6 +39,18 @@ jobs:
           task_runtime_sha=$(sha256sum .work/ci01/runtime-candidate.json | cut -d ' ' -f1)
           python3 -I scripts/setup.py install --label ci01 --approve-runtime "$task_runtime_sha"
           python3 -I scripts/setup.py build --label ci01 --cargo "$HOME/.cargo/bin/cargo" --seconds 900
+      # Run before legacy private_smoke writes a public ledger into source_root.
+      # The isolated wallet intentionally refuses any database in that mount.
+      - name: Isolated local witnesses and backup-only fresh-process spend
+        shell: bash
+        run: |
+          set -euo pipefail
+          task_installation=.work/ci01/fresh/installation.json
+          task_installation_sha=$(sha256sum "$task_installation" | cut -d ' ' -f1)
+          task_wallet_source_sha=$(sha256sum experiments/network-feasibility/wallet-integration/SOURCE.json | cut -d ' ' -f1)
+          mkdir -p .work/ci01/source/experiments/compact-all-payments-v3/public
+          mkdir -p .work/ci01/source/experiments/compact-all-payments-v3/evidence
+          python3 -I experiments/network-feasibility/wallet-integration/run.py --label ci-wallet01 --profile small --installation "$task_installation" --approve-installation "$task_installation_sha" --approve-source "$task_wallet_source_sha"
       - name: Genuine public and fresh private checks
         shell: bash
         run: |
@@ -51,16 +63,6 @@ jobs:
           task_workload_sha=$(sha256sum "$task_workload" | cut -d ' ' -f1)
           task_witness_sha=$(sha256sum experiments/architecture-feasibility/witness-stream/SOURCE.json | cut -d ' ' -f1)
           python3 -I experiments/architecture-feasibility/witness-stream/probe.py --installation "$task_installation" --approve-installation "$task_installation_sha" --approve-source "$task_witness_sha" --workload "$task_workload" --approve-workload "$task_workload_sha" --output "$PWD/.work/ci01/witness-result.json"
-      - name: Isolated local witnesses and backup-only fresh-process spend
-        shell: bash
-        run: |
-          set -euo pipefail
-          task_installation=.work/ci01/fresh/installation.json
-          task_installation_sha=$(sha256sum "$task_installation" | cut -d ' ' -f1)
-          task_wallet_source_sha=$(sha256sum experiments/network-feasibility/wallet-integration/SOURCE.json | cut -d ' ' -f1)
-          mkdir -p .work/ci01/source/experiments/compact-all-payments-v3/public
-          mkdir -p .work/ci01/source/experiments/compact-all-payments-v3/evidence
-          python3 -I experiments/network-feasibility/wallet-integration/run.py --label ci-wallet01 --profile small --installation "$task_installation" --approve-installation "$task_installation_sha" --approve-source "$task_wallet_source_sha"
       - name: Retain only fixed public result records
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

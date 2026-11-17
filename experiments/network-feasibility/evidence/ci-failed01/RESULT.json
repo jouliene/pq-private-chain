@@ -1,0 +1,14 @@
+{
+  "events": [],
+  "failure_type": "ValueError",
+  "fixed_failure_reason": null,
+  "format": "CP04-WALLET-INTEGRATION-RESULT01",
+  "installation_sha256": "474e6fed93b15fab964f6456c8005b1fe6fe9b9acf94f0be5b7fcdb0cad2717f",
+  "native_cli": [],
+  "passed": false,
+  "private_raw_streams_or_backup_persisted_or_hashed": false,
+  "profile": "small",
+  "proofs": [],
+  "source_runtime_unchanged": true,
+  "source_sha256": "be2910ea2ef974bb87778b0b8e605f299bdc44b9987afecddcc86df4b63eaaa8"
+}

@@ -1,0 +1,67 @@
+{
+  "actual_failure_stage": "Isolated local witnesses and backup-only fresh-process spend",
+  "conclusion": "failure",
+  "failure_observations": {
+    "child_exit_receipt": false,
+    "events": 0,
+    "fixed_failure_reason": null,
+    "native_calls": 0,
+    "observer_epochs": 0,
+    "proofs": 0,
+    "type": "ValueError"
+  },
+  "files": {
+    "RESULT.json": {
+      "bytes": 486,
+      "original_artifact_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/RESULT.json",
+      "sha256": "ed27e773bf6720b10a2545f370c7a107d4906712b40317947410018f1557ee2e"
+    },
+    "build-result.json": {
+      "bytes": 279,
+      "original_artifact_path": ".work/ci01/build-result.json",
+      "sha256": "d27c800bf8f38ff33839a232dd67a40496a46fdb07c84ac20cff8a6f7514623b"
+    },
+    "claim.json": {
+      "bytes": 374,
+      "original_artifact_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/claim.json",
+      "sha256": "db95d2fcc0deab1b415f161c54c84cc29febb78c9561b81ad938311af8b21b28"
+    },
+    "original-process.json": {
+      "bytes": 591,
+      "original_artifact_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/original-process.json",
+      "sha256": "8a6a24c0c3cbf57e9ac76d8c5977d00b261640aed655a494b963d56a53dd8071"
+    },
+    "private-private01.json": {
+      "bytes": 1565,
+      "original_artifact_path": ".work/ci01/private-private01.json",
+      "sha256": "975b09764542a27dc4c1a82d05f638334a9b136618541ca0edc450e0ccd03d53"
+    },
+    "public01-result.json": {
+      "bytes": 1834,
+      "original_artifact_path": ".work/ci01/public01-result.json",
+      "sha256": "c31e2c994d25bf29f4bdc7a4e8510e6fe80aaeba3586f82c37a62b2e9b7b5d2a"
+    },
+    "witness-result.json": {
+      "bytes": 3460,
+      "original_artifact_path": ".work/ci01/witness-result.json",
+      "sha256": "8509af51449c46be068d9bd7fd316ccfca3729f58d1a823ca88b5dffa4de8f5e"
+    }
+  },
+  "format": "NETWORK-CI-FAILURE01",
+  "head_sha": "c5e2f36ddb6c225e7d4c17363ffe0eeba93ce49f",
+  "historical_exact_exception_recovered": false,
+  "preceding_steps_passed": [
+    "build",
+    "public verification",
+    "fresh legacy private smoke",
+    "witness probe"
+  ],
+  "private_material_included": false,
+  "run_id": 44088764296,
+  "run_readback": {
+    "bytes": 1402,
+    "path": "RUN.json",
+    "sha256": "ff9b85775d6d225e8105e240954942845196cab6c9da7a815cf04ed6d608e906"
+  },
+  "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44088764296"
+}

@@ -101,3 +101,11 @@ admissions,fourrollbacks,twoatomicAnchor rejections and identical canonical14sta
 Root recomputed the final maps and read independentreview3218e857b24929a8821bacbc498b41f0b98b7110d7b9c7af7e151ef92dede4b9.
 Criteria1..5 have reviewed evidence; publication/actualautomaticCI criterion6
 remains required. Native/globalGoal stays ACTIVE. No further proving is allocated.
+
+Checkpoint2026-11-17 13:13UTC: actual automatic CI44088764296 failed at isolated
+wallet prelaunch after preceding checks passed. Failure evidence is preserved.
+A source-order incompatibility was reproduced without private input/proving:
+legacy private smoke leaves a public DB in the later prohibited source mount.
+The narrowly reviewed candidate reorders checks, preserving all prohibitions.
+Actual new hosted CI remains required; criterion6 and bounded milestone are NOT
+complete. Native/global Goal remains ACTIVE. STATUS.md has allocation32/restart.

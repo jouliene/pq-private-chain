@@ -19,6 +19,13 @@ research allocations, not owner annual budgets or production service targets.
 
 Use a new installation built from this checkout following `BUILD.md`; historical
 research files, previous experiment databases and private fixtures are not needed.
+Run this isolated experiment immediately after the fresh build, before the
+legacy `scripts/private_smoke.py` scenario. That scenario leaves a public ledger
+database inside the installation source tree. The isolated wallet deliberately
+rejects database-bearing source mounts; preserve that evidence and use a new
+installation if the legacy scenario has already run. The isolated experiment
+keeps its own public databases outside the mounted source tree.
+
 The additional isolation prerequisite is Linux x86-64 with `/usr/bin/bwrap`,
 enabled user/PID/mount/network namespaces, and procfs access to the caller's own
 children. The experiment fails if required isolation is unavailable. It does not

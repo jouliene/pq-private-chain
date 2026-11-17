@@ -1,0 +1,42 @@
+{
+  "actual_exit": 0,
+  "actual_stderr": "",
+  "budget_seconds": 10,
+  "command": [
+    "python3",
+    "-I",
+    "-B",
+    "-c",
+    "import sys\nsys.dont_write_bytecode=True\nimport importlib.util,json,sqlite3,tempfile,time\nfrom pathlib import Path\nsource=Path('/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py')\nspec=importlib.util.spec_from_file_location('unchanged_isolation',source);iso=importlib.util.module_from_spec(spec);spec.loader.exec_module(iso)\nstarted=time.monotonic()\nwith tempfile.TemporaryDirectory(prefix='public-ci-source-tree-') as scratch:\n tree=Path(scratch)/'source';out=tree/'experiments/cp03-private-cycle/evidence/private01.public';out.mkdir(parents=True)\n def check(label):\n  try:result=iso.inspect_tree(tree);return {'label':label,'accepted':True,'returned_exact_tree':result==tree}\n  except BaseException as e:return {'label':label,'accepted':False,'type':type(e).__name__,'reason':str(e)}\n clean=check('clean_minimal_source_tree')\n database=out/'ledger.sqlite'\n con=sqlite3.connect(database);con.execute('CREATE TABLE public_sentinel(value INTEGER NOT NULL)');con.execute('INSERT INTO public_sentinel VALUES (1)');con.commit();con.close()\n dirty=check('after_harmless_public_sqlite_creation')\n size=database.stat().st_size\n print(json.dumps({'clean':clean,'sqlite_present':database.is_file(),'sqlite_bytes':size,'sqlite_relative_path':str(database.relative_to(tree)),'dirty':dirty,'wall_seconds':time.monotonic()-started,'no_existing_database_contents_read':True,'private_data_or_crypto':False,'scratch_removed_on_return':True},sort_keys=True))\n"
+  ],
+  "format": "CI-SOURCE-TREE-CONTROL01",
+  "interpretation": "Controlled ordering incompatibility reproduced; historical CI exception not recovered. Preserve inspect_tree database exclusion; run isolated wallet check before source-mutating legacy private smoke.",
+  "result": {
+    "clean": {
+      "accepted": true,
+      "label": "clean_minimal_source_tree",
+      "returned_exact_tree": true
+    },
+    "dirty": {
+      "accepted": false,
+      "label": "after_harmless_public_sqlite_creation",
+      "reason": "no database in wallet mount",
+      "type": "ValueError"
+    },
+    "no_existing_database_contents_read": true,
+    "private_data_or_crypto": false,
+    "scratch_removed_on_return": true,
+    "sqlite_bytes": 8192,
+    "sqlite_present": true,
+    "sqlite_relative_path": "experiments/cp03-private-cycle/evidence/private01.public/ledger.sqlite",
+    "wall_seconds": 0.006943013984709978
+  },
+  "source_sha256": {
+    ".github/workflows/smoke.yml": "a9b56d4002c41b4cc9093d021d3a5ef20eb2caa04912e924e14c1209ef0ec016",
+    "experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "experiments/network-feasibility/wallet-integration/run.py": "3e99ecde6534fa1dceee15f02c0f6eb636659aacd13bf118cab5faf827477a75",
+    "scripts/private_smoke.py": "3fa7fa64964f8b310174c31ad66132a86111b4636b4d2ea32c451c79ee96bb63",
+    "source/wallet/cp03/cycle.mjs": "c67748b24d3b6f55a125f24c67389c55c0233e0c3ee40c37fb8d97d93366bb56"
+  },
+  "total_subprocess_wall_seconds": 0.041866702027618885
+}
