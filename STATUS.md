@@ -135,3 +135,24 @@ Key-authenticated read-only/basic namespace inspection passed; no password read,
 sudo, installation or remote heavy job. See review/REMOTE_REPRO_REQUIREMENTS.md.
 This is available experiment space, not an owner annual budget. Canonical root
 remains this repository. Prior detailed allocation journals remain in Git history.
+
+## Allocation34: supported alternate-host discriminator
+
+Previous goal turn is PROGRESS: it corrected a real test-order defect and produced
+an exact hosted startup-denial receipt. On continuation, readback confirms the
+blocker unchanged, but ordinary supported runner selection is an independent
+authorized route; treating all further work as external-only was premature.
+The reviewer explicitly reassessed that conclusion.
+
+One manual public-only Ubuntu22.04 preflight is allocated: unchanged namespace/
+seccomp/probe and official Node SHA; no build, private actor, hostpolicy change or
+new CI service. Root owns workflow/Git/execution. Independent review is in the
+existing CI_ORDER_REPAIR_REVIEW01.md. Ubuntu22 remains a listed GitHub runner
+(its deprecation is noted in the official runner-images documentation).
+A pass proves only startup. Existing installation requires /usr/bin/openssl and
+clean runtime linkage to exact3.0.13; project-local LD_LIBRARY_PATH is not an
+accepted adaptation and is explicitly prohibited in private children. Source
+analysis found that merely changing --libcrypto cannot make the full build work.
+If host startup passes, evaluate a bounded exact Noble userland environment or a
+coherent reviewed installation adaptation before any full build. No accepted
+proof/wallet/runtime check is weakened, and no full264 campaign is repeated.

@@ -130,3 +130,9 @@ public preflight command, followed by genuine full CI and release steps. All
 authorized independent milestone work is complete; provisioning a new CI service
 or relaxing host restrictions was not silently substituted. Keep the native and
 global Goal ACTIVE pending that prerequisite. No final release has been created.
+
+Continuation revalidation: previous turn made concrete progress, but the
+external-only conclusion was too broad. One ordinary supported alternate-host
+public startup test remains available without modifying host restrictions.
+Allocation34 in STATUS.md names its exact limited question; all six criteria
+remain mandatory and the native/global Goal stays ACTIVE.

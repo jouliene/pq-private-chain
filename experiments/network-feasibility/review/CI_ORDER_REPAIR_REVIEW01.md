@@ -159,3 +159,47 @@ that gate. Do not remove namespace isolation, disable host restrictions, broaden
 host access, suppress failures, or launch a new CI-infrastructure project as an
 implicit part of this narrow repair. Runner provisioning/selection remains an
 explicit prerequisite decision for Root/owner, not a claimed completed action.
+
+
+## Reassessment: one supported alternate-host trial
+
+**GO for one public-only Ubuntu22.04 hosted preflight with the unchanged script,
+isolation policy and official Node digest, before any build.** Choosing another
+ordinary supported runner within the existing automatic workflow is routine CI
+compatibility work authorized by the delivery objective. It need not create a
+new service or infrastructure project. The prior external-prerequisite disposition
+must not be read as forbidding that discriminating trial or requiring a separate
+owner permission merely to select a supported runner.
+
+This changes the host premise while keeping the tested boundary: same user/PID/
+mount/network/IPC/UTS namespaces, capability drop, fixed seccomp, empty host-root
+policy, FD handling and fixed public commands. Keep the10s per-probe/8KiB per-stream
+limits, record actual host/kernel/bwrap/runtime/source identities and preserve
+both earlier hosted failures. Do not change a host restriction, request privileged
+exceptions, suppress a failure or replace the real private tests with the probe.
+A host label is not a cryptographic/security guarantee; the exact unchanged
+controls and actual receipts determine the limited result.
+
+Passing this public startup probe would justify separately allocated fresh runtime
+discovery/approval and the existing actual CI checks. It would not transplant an
+old installation approval, establish the complete wallet mount/observation
+boundary or complete criterion6 by itself. An exact project-local libcrypto is
+compatible with this approach only if the existing explicit installation mechanism
+captures its identity and real loaded dependency closure, with genuine provider
+checks still mandatory. No system-library overwrite, global loader setting or
+permission relaxation is implied. The separate source review of that dependency
+path remains required before a native build. This review started no host trial,
+build, private process or new proof campaign.
+
+
+Reviewed environment-probe.yml SHA256 `cbc42b0fee3749fb07bde88847f8191029b90bb3a0daf007dde00169c67f71d2`: **source GO**.
+The manual-only Ubuntu22.04 workflow uses the same pinned checkout/upload actions,
+contents:read and no persisted checkout credentials. It provisions only ordinary
+public startup prerequisites, verifies the official Node archive checksum, invokes
+the unchanged fixed preflight and always uploads exactly one public receipt. It
+has a5-minute job guard in addition to the script's per-probe bounds, performs no
+build/proof/private test, and changes no host restriction or isolation policy.
+A diagnostic-only commit using [skip ci] avoids an identical known-unsupported
+Noble automatic attempt; it is not an automatic acceptance result. Dispatch this
+probe once and inspect its actual receipt. A manual diagnostic pass cannot replace
+successful automatic push/PR smoke or complete the milestone.

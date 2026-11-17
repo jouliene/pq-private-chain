@@ -131,6 +131,41 @@ the minimal workflow reorder and rerun hosted CI under a new immutable revision.
 All original failure receipts remain FAIL. No264-proof regeneration or unrelated
 component replay is justified by this pre-child ordering defect.
 
+## Later decision: Ubuntu22.04 with a project-local OpenSSL3.0.13
+
+Read-only source decision: **not currently a workflow-only supported path**.
+Whether that hosted image passes the unchanged public sandbox preflight remains
+a separate unexecuted host-capability question. No claim about its actual installed
+OpenSSL version or namespace policy is inferred here.
+
+* `scripts/prepare_runtime.py:30` accepts an explicit libcrypto pathname, but
+  lines31–33 hardcode `/usr/bin/openssl`, require its clean-environment ldd output
+  to contain that exact selected library path, and require OpenSSL3.0.13. A new
+  project-local CLI/library pair cannot satisfy this by PATH selection.
+* `scripts/common.py:26,39` clears inherited environment. `scripts/build.py:78`
+  sets LIBRARY_PATH only for link-time search; no reviewed runtime RPATH/RUNPATH
+  is emitted. Lines46–57 inspect fresh ELFs with clean-environment ldd, reject
+  unapproved libraries, and require the ledger to load the selected exact crypto.
+  Linking against a local SONAME alone does not make runtime loading local.
+* `source/experiments/compact-history-v3/src/native_sha3.rs:10,38–42` dynamically
+  links crypto and checks the actual library version tuple(3,0,13). The gate
+  cannot be met merely by retaining metadata from a different library.
+* `private_parent.py:146,186` and `wallet/cp03/private_prover.mjs:61–63` reject
+  LD_* overrides; ledger/provider workers also use fixed cleared environments.
+  Exporting LD_LIBRARY_PATH/RUSTFLAGS in the workflow is not a supported escape.
+
+The cheapest next discriminator is still the ordinary-host PUBLIC preflight;
+passing it would establish sandbox startup, not full build/runtime compatibility.
+If that host is retained, a project-local3.0.13 installation needs a separately
+authorized coherent installation-source adaptation: explicit selected/pinned local
+OpenSSL CLI plus exact3.0.13/library correspondence, and a pinned runtime search
+path in fresh crypto-linked ELFs with unchanged clean-environment linkage/runtime
+checks. Review the actual local provider/config dependency closure as part of that
+installation. This is conceptually compatible with unchanged cryptographic and
+sandbox policy, but requires reviewed source/manifests and a new actual build;
+it is not already achieved by the current --libcrypto option. No implementation,
+OpenSSL build, proof or additional host probe was performed for this decision.
+
 Root integration note: the separate executed public discriminator is
 CI_SOURCE_TREE_CONTROL01.json; do not run the unused proposal again. The exact
 workflow-only repair is independently reviewed in CI_ORDER_REPAIR_REVIEW01.md.
