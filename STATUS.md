@@ -1,9 +1,9 @@
 # Network feasibility complete; global blockchain objective active
 
 Canonical project: `/home/neo/jouliene/pq-private-chain`.
-Native Goal last read back ACTIVE on2026-11-17; global blockchain development
-remains ACTIVE as directed. All six NETWORK_FEASIBILITY_GOAL.md criteria are now
-substantiated. The bounded experiment is COMPLETE; no further CI/proving/tuning
+All six NETWORK_FEASIBILITY_GOAL.md criteria are substantiated by the final
+requirement audit below. The native tracker represents this bounded directive
+and can close; the global blockchain project remains ACTIVE and unfinished. The bounded experiment is COMPLETE; no further CI/proving/tuning
 is allocated to it. Architecture retention is provisional for the stated finite
 research model. Formal PQ/privacy assurance and production readiness are separate.
 
@@ -133,3 +133,40 @@ sync from wallet-owned joint cursors, preserving ownership-independent fetches a
 atomic rewind checks. It does not solve the175TB/year first-copy payment obligation.
 Full PoW/permissionless issuance follows the explicit payment/storage participation
 decision. Formal PQ/privacy assurance and production readiness remain separate.
+
+## Final requirement audit and tracker disposition
+
+Previous continuation classification: **PROGRESS**, from actual CI/publication.
+Current audit used the complete directive, present source/results, clean Git
+state, exact public main/tag readbacks and actual completed CI. Specialists used
+read-only source/result inspection; no closed heavy experiment was repeated.
+
+| Requirement | Decisive evidence inspected | Disposition and scope |
+|---|---|---|
+| 1:96 distinct ordinary payments, complete separate-role path and failure controls | gate1-96-producer workload/proof-costs/receipt; gate1-96-transport RESULT/CANONICAL; adapter codec/schema controls; actual role receipts | PASS.192 distinct funding+ordinary bodies; invalid final proof reaches Proof rejection after96 attempts with all14 tables unchanged; interrupted intake and persisted-object/lost-ACK/restart controls; actual masked receiver boundaries and complete RETAIN bytes. |
+| 2:predeclared offered load, backlog/restart/retention and explicit participation decision | Gate2 profile and participation review; gate2-96x8-01-network RESULT/CANONICAL_AFTER_DEADLINE; producer receipts; RESOURCE_DECISION | PASS for the declared finite model.768 ordinary payments;864 proofs/96 source signatures; all8 acknowledgements and zero backlog at fixed363.29472s end;90.824782s actual stop/restart; retry adds no proof work;1513556768 body bytes retained. Node/archive/miner/wallet costs, warm/tiny-state/loopback limits and annual projections are separate. |
+| 3:common-history local witnesses, real expiry/rewind/recovery/new spend | wallet/full source; wallet-full01 RESULT, original/restore receipts and both Anchor rejection snapshots | PASS.264 distinct genuine proofs; changing roots make h2 ineligible at tip258; same old note is refreshed/spent; orphan/selected-branch state and deep replay exercised; original exit0 precedes new backup-restored process and fresh admitted spend. |
+| 4:accurate exact crypto obligations and no weakened payment relation | OBLIGATIONS, SECURITY, actual sealed registry/profile, receiving KDF/AEAD and source-authority code; unchanged CORE/wallet manifests | PASS as qualified research. ML-KEM1024, receipt composition, ML-DSA87 laboratory authority, Poseidon2 and hiding-FRI assumptions remain distinct. Known provider-fault qualification and unproved joint knowledge/privacy/QROM obligations remain disclosed. No numerical whole-protocol PQ or production claim. |
+| 5:non-implementer independent clean reproduction | Gate5 clean build/process receipts; reviewer-small02 RESULT; reviewer-public01 RESULT; independent SQL/proof association readbacks | PASS. Non-author reviewer independently built and ran NEW small5, then fresh public verification of264 proofs/265 admissions/four rollbacks/two atomic Anchor failures with matching canonical14 state. Original full private expiry/rewind was independently reviewed; no second private264 or unchanged network rerun is claimed. |
+| 6:reviewed published code/decision/reproduction/evidence and real automatic CI | tested38dd771; published review7f4cc94; CI44104449760 actual push success; smoke.yml push/PR triggers; RELEASE_READBACK01; downloaded delivery-result | PASS. Public tag equals tested revision; later main changes are documentation/evidence only. Archive size462551040B and serverSHA match the locally hashed upload.9424-byte final JSON was downloaded byte-for-byte. BUILD and wallet README supply actual fresh setup/reproduction commands. |
+
+Evidence paths above are under experiments/network-feasibility, including its
+wallet-integration/evidence and review directories; the role decision is under
+docs/network-feasibility. Exact full revisions/hashes are recorded in the existing
+source-correspondence and release records rather than reconstructed from names.
+
+Two boundary qualifications are explicit. The actual selected-branch retained-fund
+spend follows backup restoration; there is no extra original-process proof made
+immediately from the shallow-rewound in-memory checkpoint. Integrated recovery
+traffic/time and Node/helper/tree resources are measured; an isolated algorithm-only
+peak RSS is not claimed. The selected RETAIN/opaque-archive path exercises live
+ordinals0..95 and structural SQL ordinal127/cache controls. The alternate native
+LocalArchive export lifecycle at ordinals>15 is source-reviewed/structurally tested,
+not an executed remote-pruning result or an unpaid retention dependency.
+
+All six requirements are complete in their original declared research scope.
+Global permissionless issuance/consensus, annual participation affordability,
+network anonymity and formal joint PQ/privacy assurance remain unfinished global
+work, as the directive explicitly separates them. No new suffix/proof/storage
+implementation is silently added to this completed Goal. The next bounded
+recommendation remains POST_GATE3_INVESTMENT_DECISION.md.

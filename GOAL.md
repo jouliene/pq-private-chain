@@ -1,11 +1,13 @@
 # Network feasibility complete; global blockchain objective active
 
 NETWORK_FEASIBILITY_GOAL.md is complete: all six acceptance criteria, including
-actual automatic CI and public release readback, are substantiated. Native Goal
-was read back ACTIVE on2026-11-17 and is kept active for the global objective;
-this does not allocate more work to the closed bounded experiment. The global independent permissionless, private-by-default,
-post-quantum blockchain objective remains ACTIVE. This bounded experiment's
-completion and provisional architecture/resource decision are separate statuses.
+actual automatic CI and public release readback, are substantiated. The native
+Goal tracks this bounded directive and is eligible for closure after the final
+requirement audit below. The earlier decision to keep that tracker active merely
+to represent the global project conflated two distinct scopes. The global
+independent permissionless, private-by-default, post-quantum blockchain objective
+remains ACTIVE as unfinished project work; closing this experiment does not close
+that objective or establish production security.
 
 Deliver a running, independently reproduced network/payment slice with genuine
 96-payment blocks, complete receive/verify/atomic durable retention costs,
@@ -179,3 +181,17 @@ PROVISIONALLY RETAINED for the finite full-RETAIN/archive model, and the global
 blockchain objective remains ACTIVE. No production/PQ theorem or annual owner
 cost acceptance follows. Stop this milestone's tuning; next-stage recommendation
 and precise evidence/reproduction handoff are in STATUS.md and RESOURCE_DECISION.
+
+## Final completion audit — 2026-11-17
+
+The preceding turn was concrete progress: successful automatic push CI, safe
+public evidence publication, exact release/tag readback and final result download.
+The continuation re-read the complete directive and audited its requirements
+against current source, immutable raw results and live public GitHub state.
+Independent specialists re-examined Gate1/2 and Gate3/5; Root checked the exact
+cryptographic map, source correspondence, public revision, CI and release assets.
+The requirement-by-requirement disposition and scope qualifications are in STATUS.
+No mandatory item remains incomplete for this bounded directive. No large proof
+campaign was repeated, acceptance scope reduced, or new successor work started.
+Close the native bounded Goal using its supported completion control; keep the
+global project's unresolved objectives and next-stage decision active separately.
