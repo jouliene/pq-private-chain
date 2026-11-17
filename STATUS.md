@@ -175,3 +175,35 @@ arch_consensus_roles owns terminal public tree control; arch_proof_alternatives
 owns independent repair review. No local heavy job. Allocation32 is the next
 automatic hosted CI after reviewed push; preserve failed44088764296. Do not rerun
 closed network/fullwallet campaigns. Release and criterion6 remain pending.
+
+Allocation32 publication readback: ordinary push of reviewed workflow repair
+246ab5388c960ef5575acf56e4d5faa28b6df4b3 succeeded. GitHub main equals that SHA.
+Automatic pushCI44090899086 is IN_PROGRESS on exactly that SHA; previous failure
+44088764296 remains preserved. No source/proof/profile or installation-pin change.
+Next: actual CI outcome and fixed public receipts; if successful, publish and
+verify the prepared release artifact/delivery record. No new local heavy job.
+
+Allocation32 terminated FAILURE (CI44090899086). Build passed; isolated child
+now starts but exits1 after0.065790911s, with no fixed actor stage, event, proof
+or observation epoch. The old pre-Popen ordering obstruction was passed; this
+is a distinct unlocalized namespace/runtime startup failure. Fixed public
+records and actual CI metadata are preserved in evidence/ci-failed02. No private
+raw stderr was retained or reconstructed, and no exact kernel cause is claimed.
+
+Allocation33: add a minimal public-only startup preflight before CI build. Use
+unchanged isolation.command/seccomp for /usr/bin/true then official pinned Node
+--version, bounded separate records and only public stderr. It must fail CI on
+failed prerequisites; never disable host policy or skip wallet checks. Independent
+review and one cheap local control precede the next ordinary push. If hosted
+preflight fails, no build/proof campaign runs; investigate that exact evidence.
+Root owns workflow/status/Git; arch_private_repro owns ci_preflight.py;
+arch_proof_alternatives reviews. No heavy local job; previous jobs terminal.
+
+Allocation33 source review GO: new public diagnostic only; final script
+e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee.
+Reviewer-requested inclusive final10s guard applied; both tiny local versions
+preserved. Final true/Node probes exit0 in0.016010s/0.019177s; complete receipt
+review/CI_PREFLIGHT_LOCAL02.json543e6e1e2f8ed2861dc51bf657f25704f4e144253220c9415c82f4aee7522d58.
+This is startup evidence only, not a new private/proof campaign or hostedPASS.
+Next: publish this reviewed early discriminator; actual hosted failure determines
+the remaining prerequisite without rebuilding if preflight fails.

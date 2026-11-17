@@ -109,3 +109,9 @@ legacy private smoke leaves a public DB in the later prohibited source mount.
 The narrowly reviewed candidate reorders checks, preserving all prohibitions.
 Actual new hosted CI remains required; criterion6 and bounded milestone are NOT
 complete. Native/global Goal remains ACTIVE. STATUS.md has allocation32/restart.
+
+The reviewed order correction was published as246ab5388c960ef5575acf56e4d5faa28b6df4b3.
+Its fresh CI44090899086 exposed a distinct child-startup failure after Popen.
+The next bounded discriminator is a public-only namespace/runtime preflight
+before any build; no isolation policy or private logging change is authorized.
+Criterion6 remains incomplete; native/global Goal ACTIVE.

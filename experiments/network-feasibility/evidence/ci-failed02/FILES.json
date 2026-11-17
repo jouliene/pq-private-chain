@@ -1,0 +1,47 @@
+{
+  "conclusion": "failure",
+  "exact_startup_reason": "unknown",
+  "files": {
+    "RESULT.json": {
+      "bytes": 507,
+      "original_artifact_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/RESULT.json",
+      "sha256": "e2236f636b06543fff42f984d428db92416c2c8cfd73f163267ac776b98e5646"
+    },
+    "build-result.json": {
+      "bytes": 279,
+      "original_artifact_path": ".work/ci01/build-result.json",
+      "sha256": "70fb3f040a7a45815c44eed2bd74745da789e4b86fe7ba4436dfc1a4bcbfde57"
+    },
+    "claim.json": {
+      "bytes": 374,
+      "original_artifact_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/claim.json",
+      "sha256": "d7d0d224fcc27a6f6b36bbac0639aaaddbe1342c7aa81fd7a7b4be6e26420522"
+    },
+    "original-process.json": {
+      "bytes": 910,
+      "original_artifact_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/original-process.json",
+      "sha256": "99ea769f0c2652151f8714ff4e0241fcf94a52ca2a86d723a431c9a66629f80d"
+    }
+  },
+  "format": "NETWORK-CI-FAILURE02",
+  "head_sha": "246ab5388c960ef5575acf56e4d5faa28b6df4b3",
+  "observations": {
+    "build_passed": true,
+    "events": 0,
+    "fixed_actor_failure_stage": null,
+    "isolated_wrapper_exit": 1,
+    "isolated_wrapper_wall_seconds": 0.06579091100002188,
+    "native_calls": 0,
+    "observer_epochs": 0,
+    "old_pre_popen_obstruction_passed": true,
+    "proofs": 0
+  },
+  "private_material_included": false,
+  "run_id": 44090899086,
+  "run_readback": {
+    "bytes": 1402,
+    "path": "RUN.json",
+    "sha256": "73522db07d9f1369dd4a90be573fe2c0a4a0f2c8c67dfbc4cb28d09efba19d2a"
+  },
+  "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44090899086"
+}
