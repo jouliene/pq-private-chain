@@ -1,0 +1,65 @@
+{
+  "canonical_source_changed": false,
+  "cases": [
+    {
+      "height": 1,
+      "leaves": 2,
+      "paths_matched": 2,
+      "peak_frontier_digests": 1,
+      "public_test_targets": [
+        0,
+        1
+      ],
+      "remote_membership_queries": 0,
+      "retained_path_digests": 80,
+      "root_hex": "2fb2b221bc33d7aaeb60367de2be20afc8662f822569d3967fd55f91acbb8b54ed82f40b2dcb4936959692c8edfb2b835245a85efd81238c48d880e912558a62"
+    },
+    {
+      "height": 2,
+      "leaves": 4,
+      "paths_matched": 3,
+      "peak_frontier_digests": 2,
+      "public_test_targets": [
+        0,
+        2,
+        3
+      ],
+      "remote_membership_queries": 0,
+      "retained_path_digests": 120,
+      "root_hex": "79db4e3eee9f82cfc468382ed887f58a1bd9a63f2bafea5b2d3f8877bc28c95aa4a1adb6aa85a8a5776b72e2b1232d3c083f67bd86a4a4aa33d679fba4c30c26"
+    },
+    {
+      "height": 3,
+      "leaves": 6,
+      "paths_matched": 3,
+      "peak_frontier_digests": 2,
+      "public_test_targets": [
+        0,
+        3,
+        5
+      ],
+      "remote_membership_queries": 0,
+      "retained_path_digests": 120,
+      "root_hex": "216319df4106523dcdb5568d89594c7fab811a0ad0ad7ab7edd465ea07a58698e1c9f3997cb1b67a3cc606cdda0a26b4258eb9ca4733fad2f508ec3a40a00928"
+    }
+  ],
+  "format": "CP03-PUBLIC-LOCAL-WITNESS01",
+  "installation_sha256": "e3101e769c55c01f11e9213453afec1edb70e07708d139eb37e2a5bff6d3628c",
+  "negative_controls": 4,
+  "private_material_read": false,
+  "public_fixture_pins": {
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/block01.header": "58b705fd7b89fe80042d6ef4ccef3adbaab1c04798ca4353a7a24fe0b688fa29",
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/block02.header": "4409718753594e306d83b97af60c8dfc5a30910aceef4bd99027a406b0bbba9f",
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/block03.header": "6ad021b2a53a3f38b4492c5ef9dd3f8dd0f34e26f6a737c63878f4d40f0ee7f6",
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/credit0.body": "837e1f79137b812769497b81b60ae1b313deea0db26339b87641739ec8073500",
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/genesis.bin": "23170a87998a6ae22b587b36d4f16a51a23d169fd600876b894c96c70a8178ff",
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/payer2x2.body": "320f414d2be6a483c834b98fb987a0f5b4b0a6925daa5d2f52940b8c65b143df",
+    "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/restored1x2.body": "957d302adec7aa1e98a9d6e1dcdf18d05f289535b852772f9112a2f97c512845"
+  },
+  "scope": "new public fixed-endpoint witness check on generated genuine public bodies; full sparse oracle retained; not streaming RSS, private integration, network throughput or PQ theorem",
+  "self_maxrss_kib": 31400,
+  "source_sha256": "0937fa1ad1c0c48a5ee62b52f4aada185d74a15f673045fbf96b4ce1abd9195a",
+  "succeeded": true,
+  "wall_seconds": 1.5701213979999693,
+  "workload_sha256": "60164e0592511261d7999049b867bb43538658818fc1735c890f91da672282bb"
+}

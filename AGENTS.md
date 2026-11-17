@@ -1,14 +1,17 @@
-# Active authenticated incremental synchronization milestone
+# Completed authenticated incremental synchronization milestone
 
-Read INCREMENTAL_WALLET_SYNC_GOAL.md completely. It is the current owner directive.
-Native Goal was installed and its user-edited substantive objective read back ACTIVE.
+INCREMENTAL_WALLET_SYNC_GOAL.md is the preserved completed owner directive.
+Its implementation, independent clean reproduction and actual public CI passed.
+See STATUS.md and experiments/incremental-sync/PUBLICATION.json. Stop expanding
+synchronization; the nominated next proof-size experiment has not started.
+The global blockchain objective remains ACTIVE independently.
 Canonical baseline:2b87d1e5fcb9090390c476138bbd174d6034a6a9. Preserve historical
 NETWORK_FEASIBILITY_GOAL.md and all264/864 proof evidence; no closed campaign is
 reopened absent a specific new defect. STATUS.md is the live queue/ownership map.
-Implement actual direct-range serving and wallet-owned authenticated continuation,
-measure exact read/authentication scaling, genuine spending/recovery/branch tests,
-independent clean reproduction and existing automatic CI/publication. Stop after
-this bounded acceptance. Keep the global blockchain objective separate and active.
+Actual direct-range serving, wallet-owned continuation, exact scaling, genuine
+spending/recovery/branch tests and independent reproduction are accepted. Do not
+turn this completed work into further wallet or CI tuning. Keep the global
+blockchain objective separate and active.
 
 # Public implementation working guidance
 

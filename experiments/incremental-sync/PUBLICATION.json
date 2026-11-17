@@ -1,0 +1,36 @@
+{
+  "format": "CP04-INCREMENTAL-SYNC-PUBLICATION01",
+  "bounded_milestone": "COMPLETE",
+  "global_blockchain_objective": "ACTIVE",
+  "owner_baseline": "2b87d1e5fcb9090390c476138bbd174d6034a6a9",
+  "independent_clean_tested_commit": "17dd4e73f4fbde9fee2129d0fd761b864eefe42f",
+  "automatic_ci_tested_public_commit": "78ef14fd25f00b8f9c0b37db83e969192e6e2bb1",
+  "ci": {
+    "run_id": 44146325047,
+    "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44146325047",
+    "actual_conclusion": "success",
+    "raw_evidence": "evidence/ci01/INDEX.json"
+  },
+  "source_manifests": {
+    "CORE_MANIFEST.json": "6737bffc428f5f1e795b35ba41455a92cc34f9779ff8b12b0d7678062a20af9f",
+    "experiments/network-feasibility/wallet-integration/SOURCE.json": "94c5912d4892677caa82cf72eb65572362be05f826408bb7f8e6762f3b9c3232",
+    "experiments/network-feasibility/wallet-integration/PUBLIC_REPLAY_SOURCE.json": "e81dcae1e1afed73fc839f00b67f75277299cf4f4bc623b0117e123e36300366",
+    "experiments/incremental-sync/TRACE_SOURCE.json": "f10c13580d84cbf5730f7f9aae2795a4e1e922d2c581dcb704ddadda4edded62"
+  },
+  "final_delivery_scope": "Containing commit adds only documentation/public evidence to the CI-tested revision; exact public containing SHA is in the owner handoff/Git history. skip-ci does not attest execution on a later commit. No executable, dependency, workflow or protocol changes.",
+  "acceptance": {
+    "actual_serving_wallet": true,
+    "exact_scaling": true,
+    "genuine_receive_spend_recovery_branches": true,
+    "adversarial_controls": true,
+    "non_implementing_clean_reproduction": true,
+    "actual_automatic_ci_and_public_source": true
+  },
+  "next_experiment": "NEXT_EXPERIMENT.md; NOT STARTED",
+  "limitations": [
+    "Process-local joint wallet state; cold recovery/deep replay still scan full common history.",
+    "Hash linkage does not supply payment validity, consensus, freshness or availability.",
+    "Approx175.126575TB/year first-copy full bodies at100M offered payments is unchanged and not owner-approved affordability.",
+    "No completed permissionless blockchain, production security or formal PQ/privacy theorem."
+  ]
+}

@@ -1,4 +1,4 @@
-# Authenticated incremental wallet synchronization — ACTIVE
+# Authenticated incremental wallet synchronization — COMPLETE
 
 Authoritative owner directive: INCREMENTAL_WALLET_SYNC_GOAL.md, preserving the full
 preceding user prompt. Native Goal objective was installed, then the owner's edited
@@ -22,9 +22,14 @@ projection is unchanged and not an owner-adopted budget. After acceptance stop
 sync expansion and name the next precise proof-size/storage experiment.
 Global blockchain development remains active independently of this milestone.
 
-Current checkpoint: implementation, component/adversarial controls, genuine nine-proof
-integration, exact scaling and independent clean reproduction PASS. Tested source
-17dd4e73f4fbde9fee2129d0fd761b864eefe42f is frozen. Actual publication/CI is the
-remaining gate. No heavy job remains. See STATUS.md for the exact resume action.
-Do not mark this bounded Goal COMPLETE until that gate is substantiated; global
-blockchain development remains ACTIVE independently.
+Final checkpoint: all six bounded acceptance criteria are substantiated. Source
+implementation17dd4e73f4fbde9fee2129d0fd761b864eefe42f passed non-author clean
+reproduction. Published candidate78ef14fd25f00b8f9c0b37db83e969192e6e2bb1 passed actual
+automatic CI44146325047. Final handoff changes documentation/evidence only.
+See experiments/incremental-sync/PUBLICATION.json and RESULTS.md.
+
+Stop synchronization expansion; no heavy job or implementation work remains in
+this milestone. Global blockchain development remains ACTIVE independently.
+The next complete-payment proof-size experiment is named, NOT STARTED. No annual
+storage-cost acceptance, production readiness or formal PQ/privacy theorem is
+implied. Native bounded status is updated only after final public push/readback.

@@ -45,3 +45,35 @@ Final documentation review covers the files pinned in CLEAN_FINAL_DOCUMENT_PINS0
 NEXT_EXPERIMENT is an unstarted complete-payment-size screening gate, not a winner or authorization to rerun closed native attempts. Its exact historical DCH/Pack excerpts/hash correspondence were independently checked, and it correctly distinguishes that lattice failure from the nominated WHIR/sumcheck construction. Complete-relation mapping and security correspondence must precede dependent proof work. This is an adequate concrete stopping-boundary deliverable; no further wallet/CI tuning or consensus project is implied.
 
 The safe fixed34-file raw evidence allowlist is CLEAN_SAFE_EVIDENCE01.json (2307544B). It excludes private channels/configuration, databases/proof payloads and large Parent pin maps. Root owns copying, final CI, commit/push and milestone closure. No further reviewer execution is required absent a new concrete failure.
+
+## Final documentation delta (2026-11-18)
+
+Read the compact STATUS/GOAL and updated RESULTS/RESOURCE_DECISION after S05. They correctly mark criteria1–5 PASS and actual publication/CI pending; no global completion or additional experiment is implied. The bottom resource-decision stale pending-independent sentence is corrected. Independently recomputed all raw trace rows: maximum current Buffer payload4576/17008/33472B and journal37456/149168/298672B for32/128/260, with nine checkpoints, exactly match the added text. These remain payload counters, not total heap/RSS. No new finding; publication/actual-CI GO remains. No native job or source change was made.
+
+Document SHA256 readback:
+
+- `experiments/incremental-sync/RESULTS.md`: `11e72fcaa6a0e63d9ec2d76925b7bd4a6b75f103db4759715348c8c709ad5cb2`
+- `docs/network-feasibility/RESOURCE_DECISION.md`: `07c1d42da3d179f23f5e1d67aac9d8bd704516fa2b913c4f9d672be86734e2f0`
+- `STATUS.md`: `4abd82e61891bb3216e474f6c72042773739b34492852fbd40a9c9e0e07aead4`
+- `GOAL.md`: `03e71346a96d92a8f391a85fd282900b2d71862203a022a32df62b8c43b22a3a`
+
+## Actual public CI and final acceptance delta (2026-11-18)
+
+Independent readback substantiates actual automatic run44146325047 SUCCESS on public commit `78ef14fd25f00b8f9c0b37db83e969192e6e2bb1`. Every recorded job step succeeded. All13 fixed files in evidence/ci01/INDEX.json match their recorded sizes/SHA256. The CI wallet result `f7965a6e58b5f4653e36de97c83ce314ed9ac4c5bee201bec20c6ee9acc6e52f` uses the approved incremental source94c5912d: nine fresh proof associations/ten positive admissions,44 atomic malformed controls, one late-window control,13 full-reference/no-op checks, final height260/leaves12/fees12682394/liabilities0. Both original and restore actors exit0, preserve the unchanged namespace/FD/socket checks, and report the new-process backup spend. The reviewed controller still awaits original termination before creating restore. Source/runtime checks and all actual native CLI receipt validation flags pass. This CI readback uses fixed public summaries/process evidence; it does not claim another independent raw-proof or SQL audit of the hosted VM.
+
+The actual31 parser and six compiled serving controls pass. Existing53-call public verification/admission checks, genuine legacy three-proof private cycle and public local-witness checks also pass. The legacy local-membership smoke is a separate check and is not substituted for the isolated incremental wallet. CI does not rerun the full420-call scaling trace or264-proof fixture reconstruction; the independently executed S05 supplies those decisive checks.
+
+Installation identities are intentionally distinct: complete fresh installation `e3101e769c55c01f11e9213453afec1edb70e07708d139eb37e2a5bff6d3628c` is shared by serving/wallet/witness; inner legacy installation `f2fcca8e625725f436c5a298d73425780d24e6a475f5394097fc3fbe77a8c0e7` is recorded by build/public replay. Build/public ledger ELF SHA agrees. Neither identity is incorrectly equated with the independent clean installation.
+
+Read-only current closure check verifies5795 CORE file digests, all three wallet/public-replay/trace source closures and four source-manifest hashes. Workflow and focused parser/wallet/serving test bytes also match the independently tested clean revision. Thus the current final handoff changes do not alter executable inputs. No new job, provider bypass, source edit or Git operation was performed by the reviewer.
+
+**Final technical acceptance GO:** all six bounded milestone requirements are substantiated by implementation, direct measurements, genuine scenarios, adversarial checks, non-author clean reproduction and actual public CI. Global blockchain development remains ACTIVE; next proof-size experiment remains NOT STARTED. Final metadata may be committed with `[skip ci]` because it does not change executed code. The handoff must state both the CI-tested78ef14fd commit and the actual later documentation/evidence commit SHA; it must not claim CI executed on that later SHA. Root still owns final push/readback and native Goal closure. No unresolved material finding remains.
+
+Current final-document pins (before Root's metadata commit):
+
+- `AGENTS.md`: `5274339e4c733cb23117beae15b1da0cbaab9545cbfbcf2bc9f1b6804c599564`
+- `GOAL.md`: `3e7cbc695721289cab10ee6554de7b98be32dc403838d40f5b322877a4909e25`
+- `STATUS.md`: `d55dee46a94e9fb9561c0e145c0bc4346bbaa4f0c6f1d418a1201c578fe7c759`
+- `README.md`: `7989890ed73743fcdb04796b9cd89f6ef3d64b385500eaf4d025cef02670d28c`
+- `experiments/incremental-sync/RESULTS.md`: `12f8cb1979d16e9da3db0cac6023dc66b39ea0e078e07956cae0bbe9e9de7a3d`
+- `experiments/incremental-sync/PUBLICATION.json`: `d550d67f84f9e957726bb15b3a90b29f009bfff26caa129dcd26a579ee8f6607`

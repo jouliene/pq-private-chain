@@ -1,8 +1,8 @@
 # Incremental synchronization acceptance record
 
-Status: implementation, genuine scenarios, exact scaling and independent clean
-reproduction PASS. Actual publication/CI remains required. The bounded milestone
-is not yet complete; the global blockchain objective remains ACTIVE.
+Status: **ACCEPTED — bounded synchronization milestone complete.** Implementation,
+genuine scenarios, exact scaling, independent clean reproduction and actual
+public CI passed. The global blockchain objective remains **ACTIVE**.
 
 Baseline: `2b87d1e5fcb9090390c476138bbd174d6034a6a9`.
 Current executable source checkpoint: `17dd4e73f4fbde9fee2129d0fd761b864eefe42f`.
@@ -189,7 +189,18 @@ Raw independent receipts are retained under
 original hashes in [CLEAN_SAFE_EVIDENCE01.json](review/CLEAN_SAFE_EVIDENCE01.json).
 The [final independent disposition](review/CLEAN_REPRODUCTION01.md) gives GO for
 publication and actual CI, with no unresolved material implementation/privacy
-finding. Actual CI/publication is still pending.
+finding. Actual automatic push CI passed on `78ef14fd25f00b8f9c0b37db83e969192e6e2bb1`:
+[run 44146325047](https://github.com/jouliene/pq-private-chain/actions/runs/44146325047). Root downloaded its fixed public artifact and checked
+all successful steps, the fresh nine-proof incremental scenario, 31 parser/six
+compiled serving controls, existing public/private ledger checks and witness
+checks. Raw receipts and hashes are in [evidence/ci01](evidence/ci01/INDEX.json).
+
+The final delivery commit adds documentation and public evidence only relative
+to that CI-tested public revision. Source, tests, dependency pins, workflow and
+experiment programs remain byte-identical; the final metadata commit uses
+`[skip ci]` to avoid repeating the same heavy checks for report-only changes.
+This does not claim that CI executed on the later documentation commit. See
+[PUBLICATION.json](PUBLICATION.json) for immutable tested identities and scope.
 
 ## Unchanged limits and stopping boundary
 
@@ -205,7 +216,6 @@ state and replication. The owner set no annual traffic budget and has not adopte
 that storage model. Incremental wallet updates do not implement remote pruning,
 bootstrap availability, full consensus or a formal PQ/privacy theorem.
 
-After the remaining actual CI/publication gate, stop this
-synchronization milestone. The next experiment must address complete-payment
+The bounded acceptance is complete. Stop this synchronization milestone. The next experiment must address complete-payment
 proof size or the full storage/participation obligation; no additional wallet or
 CI tuning milestone follows automatically.

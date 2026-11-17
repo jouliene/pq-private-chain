@@ -1,4 +1,4 @@
-# Authenticated incremental synchronization — ACTIVE
+# Authenticated incremental synchronization — COMPLETE
 
 Canonical: `/home/neo/jouliene/pq-private-chain`.
 Owner baseline: `2b87d1e5fcb9090390c476138bbd174d6034a6a9`.
@@ -14,19 +14,21 @@ closed historical evidence. No global time/token or annual traffic cap was set.
 3. Genuine receiving, spending, branch/expiry and new-process backup spend: PASS.
 4. Parser, direct-serving and integrated adversarial atomic controls: PASS.
 5. Non-implementing clean build, fresh nine-proof cycle and full trace: PASS.
-6. Reviewed public commit and its actual automatic CI: PENDING.
+6. Reviewed public commit and its actual automatic CI: PASS on `78ef14fd25f00b8f9c0b37db83e969192e6e2bb1`.
 
-No heavy process remains. Root is collecting the final public receipts/review,
-then must commit and push without force, verify public SHA and observe the actual
-`Research payment smoke` run for that revision. Diagnose a real failure before
-retrying; do not inherit old CI success. Until that gate passes the bounded native
-Goal remains ACTIVE. Inspect `git status`, actual GitHub run and this queue before
-resuming; do not repeat the completed build, proof or trace campaigns.
+No heavy process or implementation work remains. Actual automatic CI:
+[https://github.com/jouliene/pq-private-chain/actions/runs/44146325047](https://github.com/jouliene/pq-private-chain/actions/runs/44146325047), all steps PASS. Public artifacts
+were downloaded and read back; immutable identities are in
+`experiments/incremental-sync/PUBLICATION.json`. The final handoff adds only
+reviewed documentation/evidence; the tested source, tests, workflow and manifests
+are unchanged. It does not claim a second CI run on that report-only commit.
 
-After acceptance, stop synchronization expansion. Update the final delivery
-identity and bounded Goal status. The nominated next complete-proof/storage
-experiment in `experiments/incremental-sync/NEXT_EXPERIMENT.md` is NOT STARTED.
-No full consensus, pruning or automatic follow-on wallet/CI milestone is authorized.
+Stop synchronization expansion. The next complete-proof/storage experiment in
+`experiments/incremental-sync/NEXT_EXPERIMENT.md` is nominated, NOT STARTED.
+No full consensus, pruning or follow-on wallet/CI tuning milestone follows from
+this acceptance. Resume future development only under its substantive next task;
+do not rerun the closed 264/864-proof campaigns or this acceptance without a new
+specific defect. The global blockchain objective remains ACTIVE.
 
 ## Ownership
 
@@ -36,8 +38,8 @@ No full consensus, pruning or automatic follow-on wallet/CI milestone is authori
 - arch_proof_alternatives: non-implementing source/privacy review and clean execution.
 
 Three specialists, no nested agents. One heavy job at a time; component authors
-are finished and source-frozen. The reviewer is finishing its evidence/acceptance
-record only. No private keys, backups, notes or witnesses enter public artifacts.
+are finished and source-frozen. The reviewer completed its evidence/acceptance
+record. No private keys, backups, notes or witnesses enter public artifacts.
 
 ## Executed evidence
 

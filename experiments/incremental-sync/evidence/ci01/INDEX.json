@@ -1,0 +1,80 @@
+{
+  "format": "CP04-ACTUAL-PUBLIC-CI-READBACK01",
+  "passed": true,
+  "run_id": 44146325047,
+  "ci_tested_commit": "78ef14fd25f00b8f9c0b37db83e969192e6e2bb1",
+  "ci_url": "https://github.com/jouliene/pq-private-chain/actions/runs/44146325047",
+  "files": [
+    {
+      "file": "build-result.json",
+      "bytes": 279,
+      "sha256": "cb01f02e57e639f6f4dd5a4e771f67eac19cb413fe390fd42e607ca8c9ca801b"
+    },
+    {
+      "file": "public01-result.json",
+      "bytes": 1834,
+      "sha256": "61973794c346068dc36dc7fdb7afc7084ba43beb30cf574043ab868fa3fced60"
+    },
+    {
+      "file": "private-private01.json",
+      "bytes": 1564,
+      "sha256": "6397bb4df59d8033af07f6a5a58f1b8988a99c434b38854fcbf9effb80a3407f"
+    },
+    {
+      "file": "witness-result.json",
+      "bytes": 3460,
+      "sha256": "761b39d7d145fdc51e6f06f73209ef36576092b14cdaefb93dcf954d71761cb0"
+    },
+    {
+      "file": "sync-parser.json",
+      "bytes": 933,
+      "sha256": "89bc69c8d42785770efbec90feb40140d437907187721c5d08f590f8ef5b3a99"
+    },
+    {
+      "file": "serving-RESULT.json",
+      "bytes": 1105,
+      "sha256": "ea06778fa476ef19eb7d77e96798ed7e23c54fb27d365c2fa085de07eb4ad12e"
+    },
+    {
+      "file": "serving-public-test.stdout",
+      "bytes": 735,
+      "sha256": "bcd16d68cfea3403e6b3ad1b4dc19dfc27317ad487469eef774467d0f8112153"
+    },
+    {
+      "file": "serving-public-test.stderr",
+      "bytes": 7120,
+      "sha256": "f20a6775a1f91eb52ccc328d8e8881a858073ec6a2e002e2e9960f695e57aad8"
+    },
+    {
+      "file": "CI_RUN.json",
+      "bytes": 1768,
+      "sha256": "393ff1275414c3072e6e877f21d1848bdeed09327a69dcd9d96c8d965b165572"
+    },
+    {
+      "file": "wallet/RESULT.json",
+      "bytes": 381315,
+      "sha256": "f7965a6e58b5f4653e36de97c83ce314ed9ac4c5bee201bec20c6ee9acc6e52f"
+    },
+    {
+      "file": "wallet/claim.json",
+      "bytes": 381,
+      "sha256": "88acc066797e1ce4d33b9d48f7f2bacac086a8014d4d58ff66e26984a35f62ae"
+    },
+    {
+      "file": "wallet/original-process.json",
+      "bytes": 150396,
+      "sha256": "9d7e9e4dd80b759a07e0ab911320eb75301c497c3a71d3131641305098154a9d"
+    },
+    {
+      "file": "wallet/restore-process.json",
+      "bytes": 24665,
+      "sha256": "63a15e4fd6d8dd291e60095e9394c19718af9310b84eb344b19146e0b3601d44"
+    }
+  ],
+  "all_steps_success": true,
+  "genuine_incremental_proofs": 9,
+  "parser_controls": 31,
+  "compiled_serving_controls": 6,
+  "same_source_and_accounting": true,
+  "scope": "Actual GitHub run/artifact readback; separate from non-implementing clean S05. No private artifacts copied."
+}

@@ -1,8 +1,9 @@
 # Authenticated incremental wallet synchronization
 
-This bounded milestone implements `INCREMENTAL_WALLET_SYNC_GOAL.md`. The native
-Goal and global blockchain objective remain ACTIVE. Source review and component
-checks are intermediate evidence; this file does not declare acceptance.
+This bounded milestone implements `INCREMENTAL_WALLET_SYNC_GOAL.md` and is
+accepted. The global blockchain objective remains ACTIVE. See
+[RESULTS.md](RESULTS.md), [PUBLICATION.json](PUBLICATION.json) and the independent
+review for actual execution, exact tested revisions, public CI and limitations.
 
 The wallet owns its joint cursor, receiving inventory lease, spentness and local
 witness state. `localWitnessSyncRequest` emits a common public range from that
@@ -79,7 +80,7 @@ Approximately1.75MB per complete payment and175TB/year per first body copy at
 100M offered payments remain unresolved. This change does not implement remote
 pruning, bootstrap availability, mnemonic/unknown-key recovery, full PoW or
 formal joint PQ/privacy security. Final results, tested/published revisions,
-independent reproduction and CI must be recorded before bounded completion.
+independent reproduction and CI are recorded in the acceptance documents.
 
 ## Portable genuine-history fixture and exact scaling run
 
@@ -125,4 +126,4 @@ freshness and consensus are not supplied by the linkage experiment.
 `EXPECTED_COUNTS.json` is a separate analytical oracle from the accepted genuine
 fixture. It is not an executed server result. The measured rows must match its
 counts; the old repeated-prefix counterfactual is derived from exact frame sizes,
-not from timing ratios. Reviewer execution and final results remain required.
+not from timing ratios. Independent execution and final results are linked above.

@@ -9,7 +9,8 @@ acceptance of annual costs or ordinary-home-node economics.
 
 The authenticated-continuation implementation now passes Root's genuine nine-proof
 wallet scenario and exact32/128/260-block scaling experiment. Independent clean
-execution also passed; publication/CI is still pending. The current measured update
+execution and actual public CI also passed; the bounded synchronization milestone
+is accepted. The current measured update
 path removes the repeated-prefix obligation described in the historical Gate3
 section below; complete payment storage and assurance qualifications are unchanged.
 See the [current acceptance record](../../experiments/incremental-sync/RESULTS.md).
@@ -186,9 +187,8 @@ identifies these seams. Today's selected model pays for full copies instead.
 
 The historical network milestone's clean reproduction and automatic CI remain
 closed evidence. Independent execution of the current synchronization milestone
-has also passed; its own CI and publication gates remain and do not inherit the
-historical PASS.
-After those gates pass, stop expanding synchronization work. The next concrete
+and its own public CI have also passed, with separate source identities and raw
+receipts in the acceptance record. Stop expanding synchronization work. The next concrete
 proof-size experiment is specified in
 [NEXT_EXPERIMENT.md](../../experiments/incremental-sync/NEXT_EXPERIMENT.md); it is
 a future bounded gate, not an experiment started by this milestone.

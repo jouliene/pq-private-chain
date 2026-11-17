@@ -93,3 +93,22 @@ prerequisite. Never sweep `.work`, secrets, generated databases or binaries into
 a new manifest. The historical IMPORT_MAP remains the initial-import record;
 do not rewrite it to conceal later development. Preserve algorithm/profile IDs
 unless the protocol change itself explicitly requires a coherent version change.
+
+## Incremental synchronization delivery
+
+Baseline: `2b87d1e5fcb9090390c476138bbd174d6034a6a9`. Non-implementing clean
+reproduction tested implementation `17dd4e73f4fbde9fee2129d0fd761b864eefe42f`.
+Published candidate `78ef14fd25f00b8f9c0b37db83e969192e6e2bb1` passed actual automatic
+[CI44146325047](https://github.com/jouliene/pq-private-chain/actions/runs/44146325047), including the new incremental
+nine-proof cycle and the existing relevant checks. The final handoff commit is
+documentation/evidence only relative to that CI revision; its `[skip ci]` marker
+avoids a duplicate heavy job for unchanged executable source. No CI success is
+attributed to an unexecuted later commit. Final public SHA is reported in the
+owner handoff and is recoverable from the containing Git history.
+
+See [PUBLICATION.json](../experiments/incremental-sync/PUBLICATION.json),
+[results](../experiments/incremental-sync/RESULTS.md),
+[reproduction commands](../experiments/incremental-sync/README.md) and the
+[non-implementing review](../experiments/incremental-sync/review/CLEAN_REPRODUCTION01.md).
+This completes wallet synchronization only. Global blockchain development,
+complete-payment storage costs and formal PQ/privacy obligations remain open.
