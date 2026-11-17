@@ -1,0 +1,109 @@
+{
+  "fixture_sha256": "8907fff56f7b6418c0752c8160cdbae13e10a0ddb19de884d89e99f924a5abe9",
+  "body": 1747478,
+  "body_prefix": 4876,
+  "envelope": 1742602,
+  "envelope_header": 206,
+  "prelude": 60364,
+  "sections": {
+    "random": {
+      "bytes": 81796,
+      "values": 12800,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 58752
+    },
+    "trace": {
+      "bytes": 816516,
+      "values": 747520,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 58752
+    },
+    "quotient": {
+      "bytes": 243076,
+      "values": 102400,
+      "salts": 81920,
+      "count": 4,
+      "siblings": 58752
+    },
+    "fixed": {
+      "bytes": 214916,
+      "values": 145920,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 58752
+    },
+    "fold_0": {
+      "bytes": 65348,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 48704
+    },
+    "fold_1": {
+      "bytes": 55492,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 38848
+    },
+    "fold_2": {
+      "bytes": 46532,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 29888
+    },
+    "fold_3": {
+      "bytes": 37572,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 20928
+    },
+    "fold_4": {
+      "bytes": 29252,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 12608
+    },
+    "fold_5": {
+      "bytes": 22404,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 5760
+    },
+    "fold_6": {
+      "bytes": 18820,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 2176
+    },
+    "fold_7": {
+      "bytes": 16964,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 320
+    },
+    "fold_8": {
+      "bytes": 16644,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 0
+    },
+    "fold_9": {
+      "bytes": 16644,
+      "values": 6400,
+      "salts": 10240,
+      "count": 4,
+      "siblings": 0
+    }
+  },
+  "tail": 56
+}

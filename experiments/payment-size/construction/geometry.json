@@ -1,0 +1,46 @@
+{
+  "cp03_wrapper_input": {
+    "distinct_main_salted_rows": 159,
+    "main_frontier_digests": 918,
+    "minimum_keccak_f1600_permutations_main_tree": 13881,
+    "minimum_main_binary_merges": 1076,
+    "permutations_per_binary_node": 3,
+    "permutations_per_main_leaf": 67
+  },
+  "kind": "pinned-source arithmetic and published-fixture readback",
+  "provekit_commit": "893f6d5866d52124e12c4a90a71c0f4d625f083b",
+  "retained_p3_hiding_intermediate": {
+    "codeword_symbols": 1024,
+    "message_symbols": 512,
+    "pow_bits": 30,
+    "queries": 237,
+    "query_approx_before_pow_bits": 49.3014934470108,
+    "query_approx_with_classical_pow_bits": 79.3014934470108,
+    "uniform_symbols": 237,
+    "unique_decoding_radius": 0.13427734375
+  },
+  "spartan": {
+    "five_fold_commitment_count": 34,
+    "five_fold_max_composed_target_after_merkle_slack": 116,
+    "fixture_constraints": 4,
+    "fixture_guest_input_bytes": 52884,
+    "fixture_security_target": 80,
+    "mask": {
+      "fixture_masked": [
+        2130706252,
+        2130706038,
+        2130705836
+      ],
+      "fixture_unmasked": [
+        19,
+        23,
+        29
+      ],
+      "linear_minor_determinant_mod_p": 2130706369,
+      "rank_of_three_masked_claims": 3,
+      "scope": "three terminal matrix claims in isolation; fixed public unit vector"
+    },
+    "raw_ideal_classical_birthday_exponent_eight_symbols": 123.95473874979704
+  },
+  "spartan_commit": "14d6da4211eda59e65cfd0af5e2dcd89d523edc3"
+}

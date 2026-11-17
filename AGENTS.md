@@ -1,3 +1,14 @@
+# Active complete-payment proof-size milestone
+
+Read GOAL.md and STATUS.md. The owner opened a new bounded milestone on top of
+the published synchronization release. CP03 is the preserved reference. Keep
+candidate source, construction analysis and non-author review in their assigned
+areas under experiments/payment-size. Execute one heavy job at a time.
+The tenfold size target is a screening objective. Count complete ordinary
+payments and disclose preprocessing and dependencies. For acceptance reproduce
+three new private 2x2 payment proofs, public verification and semantic controls.
+Retain the independent global blockchain objective.
+
 # Completed authenticated incremental synchronization milestone
 
 INCREMENTAL_WALLET_SYNC_GOAL.md is the preserved completed owner directive.
