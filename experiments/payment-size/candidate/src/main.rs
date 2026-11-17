@@ -1,4 +1,5 @@
 use compact_all_payments_v3::engine;
+use compact_arity_v3::statement::Arity;
 use compact_proof_v1::{
     codec::MODULUS,
     types::{Cap, Challenge, Val},
@@ -15,6 +16,7 @@ enum Error {
     Io,
     Shape,
     Statement,
+    ExpectedStatement,
     Identity,
     Truncated,
     Trailing,
@@ -116,6 +118,19 @@ fn run() -> Result<()> {
         let body =
             engine::bounded(Path::new(input), cp03_history::BODY_MAX).map_err(|_| Error::Io)?;
         println!("{}", transport::controls(&body)?);
+        return Ok(());
+    }
+    if let [_, command, input, expected] = args.as_slice()
+        && command == "verify-against"
+    {
+        let expected = engine::bounded(Path::new(expected), Arity::Two.bytes())
+            .map_err(|_| Error::ExpectedStatement)?;
+        if expected.len() != Arity::Two.bytes() {
+            return Err(Error::ExpectedStatement);
+        }
+        let body =
+            engine::bounded(Path::new(input), cp03_history::BODY_MAX).map_err(|_| Error::Io)?;
+        println!("{}", transport::verify_against(&body, &expected)?);
         return Ok(());
     }
     let (pack, input, output) = match args.as_slice() {

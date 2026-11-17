@@ -106,13 +106,15 @@ def main():
                      cwd=ROOT, seconds=60, cap=256 * 1024)
         common.need(pack_proc["wrapper_exit"] == pack_proc["process_exit"] == 0 and not err, "pack")
         pack = json.loads(encoded)
-        check, verify_proc, deps = isolated(candidate, {"payment":compact}, ["verify","/inputs/payment"], inst["pins"])
+        check, verify_proc, deps = isolated(candidate,
+            {"payment": compact, "expected": original/"statement.bin"},
+            ["verify-against", "/inputs/payment", "/inputs/expected"], inst["pins"])
         legacy, legacy_proc, base_deps = isolated(baseline, {n:original/n for n in ("proof.bin","statement.bin")}, ["valid-public","/inputs"], inst["pins"])
-        common.need(pack["legacy_body_roundtrip_checked"] and check["accepted"] and legacy["valid"]["accepted"] and
+        common.need(pack["legacy_body_roundtrip_checked"] and check["accepted"] and check["expected_statement_checked"] and legacy["valid"]["accepted"] and
                     check["legacy_body_sha256"] == digest(body) and check["candidate_body_bytes"] == compact.stat().st_size, "exact real verification")
         rows.append(dict(label=label, chain=raw[36:68].hex(), statement_sha256=digest(original/"statement.bin"),
             proof_sha256=digest(original/"proof.bin"), body_sha256=digest(body), candidate_sha256=digest(compact),
-            source_body_bytes=len(raw), source_proof_bytes=len(raw)-4876, candidate_body_bytes=compact.stat().st_size,
+            expected_instance_bytes=528, source_body_bytes=len(raw), source_proof_bytes=len(raw)-4876, candidate_body_bytes=compact.stat().st_size,
             candidate_proof_bytes=compact.stat().st_size-4876, reference_prover={k:parent[k] for k in
             ("child_wall_seconds","wait4_user_seconds","wait4_system_seconds","wait4_maxrss_kib")},
             reference_prover_stages={k:v for k,v in manifest.items() if k.endswith("_seconds")}, pack=pack, pack_process=resources(pack_proc),

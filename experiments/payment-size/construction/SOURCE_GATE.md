@@ -41,3 +41,26 @@ git clone --filter=blob:none --no-checkout https://github.com/worldfnd/provekit.
 python3 -I experiments/payment-size/construction/check_geometry.py "$tmpdir/spartan" "$tmpdir/provekit" > "$tmpdir/geometry.json"
 diff -u experiments/payment-size/construction/geometry.json "$tmpdir/geometry.json"
 ```
+
+## Independent ceiling and acceptance map for the CP03 representation
+
+I inspected the candidate `transport.rs`, `transcript.rs` and `main.rs` at Git blob IDs `d3d9e635b1c5159cd8aa4163b905b13434a86af1`, `fe811369d21964e02f4fa04ef98b88abbcbb9247` and `a8ce6855e4bd5f10bf314c6c1681272618d1d8d2`. The packing code compares every omitted fixed opening against a fresh public opening and checks equality at repeated coordinates. It uses child coordinates for FRI siblings and parent coordinates for salts. The expansion code computes coordinates from the original typed transcript schedule, rebuilds the deterministic fixed tree from approved public inputs, checks its root against the original registry, restores the full envelope, and calls the original verifier on the canonical statement. `run` also requires the two-input statement, the applicable fee floor and binding of both actual ciphertexts. No private state is required for this transformation. Ledger transitions and historical availability remain separate.
+
+Let `Expand(x,c)` either reject or output `p`, where `x` includes the application statement and public verifier-owned parameters. The candidate acceptance predicate includes `VerifyCP03(x,p)`. Thus a successful candidate prover yields a successful CP03 prover for the same statement by public, efficient expansion, with no additional cryptographic argument or extraction layer. Any CP03 knowledge guarantee applicable to this composed prover has the same unresolved model restrictions as the original. For honest proofs `c = Pack(x,p)`, observable lengths and duplicate-query patterns are publicly computable from `x,p`. Efficient post-processing preserves the corresponding CP03 indistinguishability property under the same assumptions, including independent honest randomness. This reasoning requires an honest producer and covers the ledger transcript; it imposes no constraint on deliberate auxiliary communications by a malicious payer. Canonical ledger identity, choice of body hash and any coexistence of both encodings need a later protocol decision.
+
+`compaction_floor.py` independently scans wire sections without reconstructing the prover's transcript. Removing by repeated coordinate cannot omit more rows than removing *every* repeated byte string within each row/salt section. All nonfixed frontier digests stay in this candidate. This yields a rigorous ceiling on the potential savings for each measured body, independent of any assumption about random-field compressibility.
+
+| Historical 2x2 body | Original bytes | Fixed omission | Upper bound on duplicate savings | Minimum candidate bytes | Maximum reduction |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| payer2x2 | 1,747,478 | 214,916 | 56,368 | 1,476,194 | 15.524316% |
+| nf-alternate | 1,743,574 | 214,724 | 56,680 | 1,472,170 | 15.565958% |
+
+Both bodies retain at least **742,848 distinct main-row value bytes alone**, over four times the complete-body screen. They also retain 335,488 and 331,776 bytes of nonfixed frontier digests respectively. The bound covers this chosen grammar. It neither proves an information-theoretic lower bound on arbitrary encodings nor bounds other proof systems. Semantically deriving both fixed OOD evaluations from authenticated public preprocessing could additionally address up to `2 × 114 × 40 = 9,120` wire bytes before any costs, but cannot close this gap. A different opening protocol or trace layout is required for the next order-of-magnitude attempt.
+
+An approximately 15% saving scales to roughly 27 decimal TB per 100M analogous bodies per first stored copy. That could be an operational improvement while remaining far from the predeclared tenfold screen. Actual fresh-payment percentages and resource costs belong to the measured campaign. Of the assessed options the reversible CP03 representation has the strongest implementation and security correspondence for a **bounded complete comparison**. A valid complete proof under this representation establishes a smaller encoding of CP03; it does not establish a materially different compact proving system. Defer consensus selection until the complete-body result, verification costs, operational benefit and alternate constructions are weighed together.
+
+```sh
+python3 -I experiments/payment-size/construction/compaction_floor.py \
+  fixtures/cp03-reference/payer2x2.body fixtures/cp03-reference/nf-alternate.body \
+  | diff -u experiments/payment-size/construction/compaction_floor.json -
+```

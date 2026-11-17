@@ -1,0 +1,252 @@
+{
+  "rows": [
+    {
+      "sample": 1,
+      "label": "psizesample01",
+      "cycle_receipt": {
+        "actual_process": {
+          "affinity_cpu": 0,
+          "command": [
+            "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+            "--disable-sigusr1",
+            "/home/neo/jouliene/pq-private-chain/.work/sync01/source/wallet/cp03/cycle.mjs",
+            "fresh/operator.json",
+            "614b4551c13914f76ec82076033e0347c6753ff7fbab487c427101e48458f903",
+            "psizesample01"
+          ],
+          "first_wait4": true,
+          "group_cleanup": "SIGKILL sent before reap",
+          "maxrss_kib": 168296,
+          "process_exit": 0,
+          "system_seconds": 2.9214,
+          "timeout": false,
+          "user_seconds": 30.659589,
+          "wall_seconds": 33.725812143064104,
+          "wrapper_exit": 0
+        },
+        "endpoint_dependency": "independently supplied local validating endpoint; no consensus implementation",
+        "fixed_source_failure_stage": null,
+        "format": "CP03-PUBLIC-PRIVATE-SMOKE01",
+        "membership_dependency": "local public Ledger; owned-note indices are queried locally",
+        "passed": true,
+        "private_input_or_raw_output_persisted_or_hashed": false,
+        "public_workload": "/home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/cp03-private-cycle/evidence/psizesample01.public/workload.json",
+        "result": {
+          "format": "CP03-FRESH-PRIVATE-REPRO01",
+          "fresh_backup_only_restore_and_admitted_spend": true,
+          "genuine_proofs_created": 3,
+          "private_credit_payment_receipt": true,
+          "production_ready": false,
+          "resource_profile_pass": false,
+          "whole_protocol_pq_privacy_theorem": false
+        },
+        "source_runtime_unchanged": true
+      },
+      "public_payment_files": {
+        "body": {
+          "path": "experiments/cp03-private-cycle/evidence/psizesample01.public/payer2x2.body",
+          "sha256": "edc4a1f240e674f05292c8114da2af258fb7c40724deb24e9d441356245bff7a"
+        },
+        "parent_receipt": {
+          "path": "experiments/compact-all-payments-v3/evidence/cp03-cycle-psizesample01-payer.json",
+          "sha256": "b3eeb99834b0175ac6b9f94b03b47985b47519e3d3f71329ed9043199c9cb696"
+        },
+        "statement": {
+          "path": "experiments/compact-all-payments-v3/public/cp03-cycle-psizesample01-payer/statement.bin",
+          "sha256": "3b2e25f3a1440ced23a8a460241765dfe255a21225e24a075e6494ba74607027"
+        },
+        "proof": {
+          "path": "experiments/compact-all-payments-v3/public/cp03-cycle-psizesample01-payer/proof.bin",
+          "sha256": "0af477976603c0a15b9e0901e9be49835c2d87f84d682f93ef3ce57c8128dfcf"
+        }
+      },
+      "actual_worker": {
+        "binary_sha256": "f9615dc3509c972fdc26bf9b57d5bb7eb0fe5c465c746bc108cfa7a329292d11",
+        "arity": 2,
+        "process_exit": 0,
+        "wrapper_exit": 0,
+        "first_wait4": {
+          "origin": "main",
+          "pid": 2648409,
+          "status": 0
+        },
+        "child_wall_seconds": 1.8928770310012624,
+        "wait4_maxrss_kib": 168176,
+        "wait4_system_seconds": 0.070905,
+        "wait4_user_seconds": 1.79761,
+        "private_input_written_or_hashed": false,
+        "source_pins_unchanged": true,
+        "runtime_pins_unchanged": true
+      },
+      "source_body_bytes": 1754838,
+      "candidate_body_bytes": 1484274,
+      "initial_launcher_cpu_seconds": 0.00279
+    },
+    {
+      "sample": 2,
+      "label": "psizesample02",
+      "cycle_receipt": {
+        "actual_process": {
+          "affinity_cpu": 0,
+          "command": [
+            "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+            "--disable-sigusr1",
+            "/home/neo/jouliene/pq-private-chain/.work/sync01/source/wallet/cp03/cycle.mjs",
+            "fresh/operator.json",
+            "614b4551c13914f76ec82076033e0347c6753ff7fbab487c427101e48458f903",
+            "psizesample02"
+          ],
+          "first_wait4": true,
+          "group_cleanup": "SIGKILL sent before reap",
+          "maxrss_kib": 168296,
+          "process_exit": 0,
+          "system_seconds": 2.7664210000000002,
+          "timeout": false,
+          "user_seconds": 29.981816,
+          "wall_seconds": 32.8868654279504,
+          "wrapper_exit": 0
+        },
+        "endpoint_dependency": "independently supplied local validating endpoint; no consensus implementation",
+        "fixed_source_failure_stage": null,
+        "format": "CP03-PUBLIC-PRIVATE-SMOKE01",
+        "membership_dependency": "local public Ledger; owned-note indices are queried locally",
+        "passed": true,
+        "private_input_or_raw_output_persisted_or_hashed": false,
+        "public_workload": "/home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/cp03-private-cycle/evidence/psizesample02.public/workload.json",
+        "result": {
+          "format": "CP03-FRESH-PRIVATE-REPRO01",
+          "fresh_backup_only_restore_and_admitted_spend": true,
+          "genuine_proofs_created": 3,
+          "private_credit_payment_receipt": true,
+          "production_ready": false,
+          "resource_profile_pass": false,
+          "whole_protocol_pq_privacy_theorem": false
+        },
+        "source_runtime_unchanged": true
+      },
+      "public_payment_files": {
+        "body": {
+          "path": "experiments/cp03-private-cycle/evidence/psizesample02.public/payer2x2.body",
+          "sha256": "ff8b9b47f7d755ca4860b5fd93d60d5ccda3632874e2c8d72cec9212f43d546d"
+        },
+        "parent_receipt": {
+          "path": "experiments/compact-all-payments-v3/evidence/cp03-cycle-psizesample02-payer.json",
+          "sha256": "1700c76ba7e187676a11e93f876e538ffecea8fea88e1179f1c6073cd72a0639"
+        },
+        "statement": {
+          "path": "experiments/compact-all-payments-v3/public/cp03-cycle-psizesample02-payer/statement.bin",
+          "sha256": "76dda543a849a799841a67593cfb0a3df71c4d970768b1fcf58b7f0098e670da"
+        },
+        "proof": {
+          "path": "experiments/compact-all-payments-v3/public/cp03-cycle-psizesample02-payer/proof.bin",
+          "sha256": "6375e1c36a9eb289cb2bb13fd6ba2a3754179588f20b63f7eb892fd40cd0fa96"
+        }
+      },
+      "actual_worker": {
+        "binary_sha256": "f9615dc3509c972fdc26bf9b57d5bb7eb0fe5c465c746bc108cfa7a329292d11",
+        "arity": 2,
+        "process_exit": 0,
+        "wrapper_exit": 0,
+        "first_wait4": {
+          "origin": "main",
+          "pid": 2648767,
+          "status": 0
+        },
+        "child_wall_seconds": 1.8773202549200505,
+        "wait4_maxrss_kib": 168176,
+        "wait4_system_seconds": 0.05797,
+        "wait4_user_seconds": 1.795077,
+        "private_input_written_or_hashed": false,
+        "source_pins_unchanged": true,
+        "runtime_pins_unchanged": true
+      },
+      "source_body_bytes": 1758614,
+      "candidate_body_bytes": 1494506,
+      "initial_launcher_cpu_seconds": 0.0032069999999999998
+    },
+    {
+      "sample": 3,
+      "label": "psizesample03",
+      "cycle_receipt": {
+        "actual_process": {
+          "affinity_cpu": 0,
+          "command": [
+            "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+            "--disable-sigusr1",
+            "/home/neo/jouliene/pq-private-chain/.work/sync01/source/wallet/cp03/cycle.mjs",
+            "fresh/operator.json",
+            "614b4551c13914f76ec82076033e0347c6753ff7fbab487c427101e48458f903",
+            "psizesample03"
+          ],
+          "first_wait4": true,
+          "group_cleanup": "SIGKILL sent before reap",
+          "maxrss_kib": 168180,
+          "process_exit": 0,
+          "system_seconds": 2.889605,
+          "timeout": false,
+          "user_seconds": 30.71085,
+          "wall_seconds": 33.73922271293122,
+          "wrapper_exit": 0
+        },
+        "endpoint_dependency": "independently supplied local validating endpoint; no consensus implementation",
+        "fixed_source_failure_stage": null,
+        "format": "CP03-PUBLIC-PRIVATE-SMOKE01",
+        "membership_dependency": "local public Ledger; owned-note indices are queried locally",
+        "passed": true,
+        "private_input_or_raw_output_persisted_or_hashed": false,
+        "public_workload": "/home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/cp03-private-cycle/evidence/psizesample03.public/workload.json",
+        "result": {
+          "format": "CP03-FRESH-PRIVATE-REPRO01",
+          "fresh_backup_only_restore_and_admitted_spend": true,
+          "genuine_proofs_created": 3,
+          "private_credit_payment_receipt": true,
+          "production_ready": false,
+          "resource_profile_pass": false,
+          "whole_protocol_pq_privacy_theorem": false
+        },
+        "source_runtime_unchanged": true
+      },
+      "public_payment_files": {
+        "body": {
+          "path": "experiments/cp03-private-cycle/evidence/psizesample03.public/payer2x2.body",
+          "sha256": "6d7e372dc611c46a2009d5d54c099a7e6ea977b5bb28785a496d1a01f76e1fe2"
+        },
+        "parent_receipt": {
+          "path": "experiments/compact-all-payments-v3/evidence/cp03-cycle-psizesample03-payer.json",
+          "sha256": "f2e3c374c17e64d0e5b36153b6433639f8b0b2a510c1d49d905b5a489ec28dd0"
+        },
+        "statement": {
+          "path": "experiments/compact-all-payments-v3/public/cp03-cycle-psizesample03-payer/statement.bin",
+          "sha256": "c646a95ce046b656cd1b9758daf9bee71513ede026bdd968f5b7f55fb7171711"
+        },
+        "proof": {
+          "path": "experiments/compact-all-payments-v3/public/cp03-cycle-psizesample03-payer/proof.bin",
+          "sha256": "6c674569d67fc1f248cb62bd7fe122180216f6b65fdfc7699d041f7c1d3e1405"
+        }
+      },
+      "actual_worker": {
+        "binary_sha256": "f9615dc3509c972fdc26bf9b57d5bb7eb0fe5c465c746bc108cfa7a329292d11",
+        "arity": 2,
+        "process_exit": 0,
+        "wrapper_exit": 0,
+        "first_wait4": {
+          "origin": "main",
+          "pid": 2649173,
+          "status": 0
+        },
+        "child_wall_seconds": 1.8497052500024438,
+        "wait4_maxrss_kib": 168180,
+        "wait4_system_seconds": 0.058414,
+        "wait4_user_seconds": 1.767143,
+        "private_input_written_or_hashed": false,
+        "source_pins_unchanged": true,
+        "runtime_pins_unchanged": true
+      },
+      "source_body_bytes": 1750806,
+      "candidate_body_bytes": 1486258,
+      "initial_launcher_cpu_seconds": 0.002742
+    }
+  ],
+  "scope": "Fresh CP03 ordinary proofs followed by public candidate encoding; funding/restore proofs are outside the ordinary sample. Initial outer launcher CPU observations are retained solely to document the accounting error. Use final measured workers for resources.",
+  "original_measurement_sha256": "be94eb0fa0265f22af99b8943b8d192a067d605b93d1f927fe239780aa1ffaf4"
+}

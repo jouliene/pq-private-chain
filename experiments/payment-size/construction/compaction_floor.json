@@ -1,0 +1,26 @@
+[
+  {
+    "body": "payer2x2.body",
+    "sha256": "8907fff56f7b6418c0752c8160cdbae13e10a0ddb19de884d89e99f924a5abe9",
+    "baseline_bytes": 1747478,
+    "omitted_fixed_bytes": 214916,
+    "repeat_saving_upper_bytes": 56368,
+    "minimum_this_transport_bytes": 1476194,
+    "maximum_this_transport_saving_percent": 15.524316,
+    "distinct_main_row_values": 159,
+    "retained_main_value_bytes_floor": 742848,
+    "retained_nonfixed_frontier_digest_bytes": 335488
+  },
+  {
+    "body": "nf-alternate.body",
+    "sha256": "c3d2e1df725c809a9c984dd56d1a83e7b1a5631e66a0d6b6b4de4b1463cd9ff3",
+    "baseline_bytes": 1743574,
+    "omitted_fixed_bytes": 214724,
+    "repeat_saving_upper_bytes": 56680,
+    "minimum_this_transport_bytes": 1472170,
+    "maximum_this_transport_saving_percent": 15.565958,
+    "distinct_main_row_values": 159,
+    "retained_main_value_bytes_floor": 742848,
+    "retained_nonfixed_frontier_digest_bytes": 331776
+  }
+]

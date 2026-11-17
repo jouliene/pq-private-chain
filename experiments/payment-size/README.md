@@ -54,10 +54,11 @@ build records their current hashes and checks stability. These local measurement
 require trusting the build host and its compiler, as does the CP03 reference.
 
 The comparison verifies each file in its own new Linux mount, PID and network
-namespaces using bubblewrap. Only the selected body, verifier ELF and its
+namespaces using bubblewrap. Only the selected body, the verifier-selected 528-byte statement, verifier ELF and its
 pinned dynamic libraries are mounted, together with GNU time for worker CPU/RSS
 and private /proc and /dev. The outer process measures wall time including namespace
-startup. GNU time measures CPU to 0.01 s and peak RSS of its verifier child. There
+startup. GNU time measures CPU to 0.01 s and peak RSS of its verifier child. The expected statement is byte-identical to the one inside a valid body and is
+charged separately when externally supplied. There
 is no repository, wallet, sender-supplied preprocessing, proof cache, database
 or previous process in that filesystem. The process reconstructs all needed
 per-proof data locally. The legacy check separately receives the public full

@@ -279,6 +279,14 @@ fn crypto(registry: &Registry, full: &[u8]) -> Result<Value> {
 }
 
 pub fn run(body: &[u8], pack: bool) -> Result<(Vec<u8>, Value)> {
+    run_checked(body, pack, None)
+}
+
+pub fn verify_against(body: &[u8], expected: &[u8]) -> Result<Value> {
+    run_checked(body, false, Some(expected)).map(|(_, result)| result)
+}
+
+fn run_checked(body: &[u8], pack: bool, expected: Option<&[u8]>) -> Result<(Vec<u8>, Value)> {
     let begin = Instant::now();
     let split = prefix_len(body)?;
     let mut prefix = body.get(..split).ok_or(Error::Truncated)?.to_vec();
@@ -290,6 +298,11 @@ pub fn run(body: &[u8], pack: bool) -> Result<(Vec<u8>, Value)> {
     let statement = cp03_history::body::parse_prefix(&prefix).map_err(|_| Error::Statement)?;
     if statement.statement().arity != Arity::Two || statement.statement().fee < engine::FEES[2] {
         return Err(Error::Statement);
+    }
+    if let Some(expected) = expected
+        && expected != statement.statement_bytes()
+    {
+        return Err(Error::ExpectedStatement);
     }
     if receipt_digests(statement.statement(), statement.envelopes())?
         != statement.statement().receipts
@@ -323,6 +336,7 @@ pub fn run(body: &[u8], pack: bool) -> Result<(Vec<u8>, Value)> {
     let candidate_len = candidate.as_ref().map_or(body.len(), Vec::len);
     let result = json!({
         "accepted": true,
+        "expected_statement_checked": expected.is_some(),
         "arity": statement.statement().arity.n(),
         "candidate_body_bytes": candidate_len,
         "candidate_proof_bytes": candidate_len - split,
