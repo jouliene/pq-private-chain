@@ -12,7 +12,20 @@ Gate1 FUNCTIONAL PASS, independently reviewed. GO for the declared finite Gate2
 pipeline experiment; no annual capacity, ordinary-node participation or production
 PASS. All Gate1 jobs terminal. Allocation14 gate2-diagnostic01 TERMINAL PASS,
 66.698950s/168304KiB,8genuineproofs/fourblocks; do not duplicate.
-SOLE HEAVY ALLOCATION15: transport build03,180s/CPU0/4GiB, Root launching.
+Allocation15 build03 TERMINAL PASS107.569332s/424456KiB;292compiledinputs,
+110artifacts/defaultledgerfeatures/nativepins personally checked by Root.
+BUILD17674777c6395e7b41e8170dfae31a2c849334463e5b84f6df14c7a5eb2ee8a6.
+Allocation16 gate2-diagnostic01 network TERMINAL PASS. RESULT
+8d58f6d52abb5ed2c2f12be421fcf49df9b59a651d7ccf5e33f2542a275e8c1a.
+3ordinary ACKby5.370508s within12s; realdifferentbodyoverlap,2credits,actual
+backpressure,1.50145s stopped/freshreopen/tipretry0proof. All14tablesequal,
+8genuineproofs/2signatures,totalretained14025974B/pending0. All8rolesexit0.
+Root and independentactualreview PASS;
+review/PIPELINE_DIAGNOSTIC03_ACTUAL01.json ffa288d6ad5ddd59c43857f1372a19f2961f665443a55de728275df7f13c04f1.
+SOLE HEAVY ALLOCATION17: producer gate2-96x8-01,864genuineproofs,10800s/CPU0/4GiB,
+Root launching unchangedSOURCE380d4c43/profile9b86ab/installationa39001d9.
+No other heavy job while generation is active; source/profile/runtime pins frozen.
+Transport candidate committeda68ef72; all18sourcefiles remain frozen.
 Producer source committed83df035. Full96x8 generation is independently qualified,
 but pipeline source/diagnostic remains separate; Root will allocate the next job.
 
@@ -101,9 +114,13 @@ Root allocation. Pipeline SOURCE03 source GO after review:18files, declared prof
    Actual diagnostic PASS:66.698950s/168304KiB,16leaves/12NFs/8cores,fees16907038,
    total200M/liabilities0,RETAIN14025974B/pending0; independent review agrees.
    Diagnostic workload617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a.
-   Run build03 allocation15, inspect terminal BUILD/nativepins; then allocate
-   gate2-diagnostic01 network using the existing8proof dataset. Only after actual
-   pipeline readback allocate full864proof generation; one heavy job at a time.
+   Build03 andsmallpipeline areterminalPASS; do notrerun. Read safeevidence
+   evidence/transport-build03/ and evidence/gate2-diagnostic01-network/.
+   Independentactualpipeline review PASS. Allocation17 full864proofgeneration
+   gate2-96x8-01 usesunchangedproducerSOURCE380d4c43; inspectlivejob first.
+   Preserve completedpublicproof-cost/batch receipts; private keys existonlyin
+   runningproducerRAM and aredestroyedonexit. No privatecrashresume fallback.
+   Then run declaredfull96pipeline withsameSOURCE5a65e5df/build03/profile9b86ab.
 4. Build/review transport successor and run diagnostic/full finite network series
    after required datasets exist. No inference of overlap replaces actual run.
 5. Review service and participation separately. An annual175TBfullcopy remains

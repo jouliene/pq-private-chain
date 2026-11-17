@@ -1,0 +1,16 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/usr/bin/ldd",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/build03/target/release/cp04-network-role01"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 19292,
+  "process_exit": 0,
+  "system_seconds": 0.004934,
+  "timeout": false,
+  "user_seconds": 0.0018889999999999998,
+  "wall_seconds": 0.01278267102316022,
+  "wrapper_exit": 0
+}

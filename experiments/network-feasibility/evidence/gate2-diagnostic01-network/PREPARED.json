@@ -1,0 +1,534 @@
+{
+  "batch_size": 2,
+  "chain": "dbc6485aa23414bbf6cef655f7ad425aa7fa9c04a183cab8af5622ff5d524aab",
+  "charged_external_producer_disk": {
+    "allocated_bytes": 57937920,
+    "files": 72,
+    "logical_bytes": 57724176
+  },
+  "endpoint": {
+    "block_id": "bb87fb28db62675f312c39c0e6782a68dcfc8025d1798ae25339ff9decbea0942821a4342264d5c20028c300075b37d5f67bce46366fc594944f899933c3e8c8",
+    "fee_escrow": "16907038",
+    "height": "4",
+    "leaf_count": "16",
+    "root_le": "1a8b6d098ed2a8c0ce9cf737a92134ba9d583302497a1a3cc8f884a8fa034c9c8d521c367a924f577c69b40c89ad088790167832056b2a56968d1ef04d54294e",
+    "unconsumed_liabilities": "0"
+  },
+  "format": "CP04-PIPELINE-PREPARED01",
+  "known_actual_new_proof": "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-000/proof.bin",
+  "objects": {
+    "funding": {
+      "block_id": "bd2ca26bfa8fa24c53337870d473a2a4f47b16b47370ebc72f75a5915eef776a1763e5dedd01dcb48175cb8a0c89888f7e7b51431b37ee08f8e93ccca5a02c27",
+      "bytes": 3519390,
+      "height": 1,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/gate2-diagnostic01/producer/funding.frame",
+      "sha256": "127ac99ee737550059255a35c49e2848e6384176a50546979ca5ba16568dfa95"
+    },
+    "genesis": {
+      "bytes": 5672,
+      "kind": 1,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/gate2-diagnostic01/producer/genesis.bin",
+      "sha256": "caea67d17900bda09293eda1de958b1486a04d3c296fd3c668c6e76efec879cd"
+    },
+    "ordinary1": {
+      "block_id": "b0c980e600435bea551ee690d6fca5c5b1630c8cff654a14962083092831526a4c3799d361112be3922e39a2117f11f8d5f8ce4a73fb1888676a80750b2aa721",
+      "bytes": 3502808,
+      "height": 2,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/gate2-diagnostic01/producer/ordinary1.frame",
+      "sha256": "fc5db42e41dd3ca956a24b3908b20a8791ce83efd04185ce05475ad3a4d3ba8d"
+    },
+    "ordinary2": {
+      "block_id": "66fbe5b556543c0cccb723fe47a7f176ab6e2895c6f0b2a5245bfb465143bf33b9319b5068093f11cf6288dbd0558d118cd7ab63144299ec9f41c4e17803af96",
+      "bytes": 3504664,
+      "height": 3,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/gate2-diagnostic01/producer/ordinary2.frame",
+      "sha256": "ff5f5a537886af004a86b96a912a8ba544446f355b97e2b3736811c30ccb48cf"
+    },
+    "ordinary3": {
+      "block_id": "bb87fb28db62675f312c39c0e6782a68dcfc8025d1798ae25339ff9decbea0942821a4342264d5c20028c300075b37d5f67bce46366fc594944f899933c3e8c8",
+      "bytes": 3500568,
+      "height": 4,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/gate2-diagnostic01/producer/ordinary3.frame",
+      "sha256": "ccc9aebfd5b46f290d49f4d1f5d2c4e1fac9efb81b48ea8d4c190e913567eca3"
+    }
+  },
+  "ordinary_batch_count": 3,
+  "ordinary_count": 6,
+  "parent_evidence_provenance_disk": {
+    "allocated_bytes": 15335424,
+    "files": 16,
+    "logical_bytes": 15286869
+  },
+  "parent_public_copies_disk": {
+    "allocated_bytes": 14094336,
+    "files": 24,
+    "logical_bytes": 14023785
+  },
+  "producer_supervisor_disk": {
+    "allocated_bytes": 8192,
+    "files": 2,
+    "logical_bytes": 2076
+  },
+  "proof_public_root": "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public",
+  "scope": "public launcher construction and immutable-copy accounting before offer clock; not acceptance",
+  "source_pins": {
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-000.body": "a387cab372610972d44ec4bb4288bd49ad6cbe48314905838af2fb3dc78fd29e",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-001.body": "4ffb6aaee1cd54a259aec25a7a629e869789599761ec7f4b0100baaf8a7cdaae",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-000.body": "583d7026c108e6332b91d43a6699a2fa76ecc3d22d73430a554a18a191be931a",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-001.body": "aca7b909bc0e2f198418bec7e94533a9fe3dfe69a278b466538e5ac0bedf508e",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-000.body": "8a2e66a23c1b3756ba98568ff342eee286286194a935beb56739dbfe42ea483c",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-001.body": "78b2a6a1d8b5a986ed9d296acc49e76f0950abbbf0caac45c6416d4d223e6d1f",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block001.header": "216c81bebf51533ad7027027794f14c1b6f5ceaa7fffea0b29d5a0e8614dbea8",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block002.header": "354c990154b584f4657fbb2cb0f6018b313ed49bd9913da71af780f03f2e256e",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block003.header": "71ceffff945b1670cb0856b915801acae8457d0bd64cfb3846fa480428f3deb8",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block004.header": "6adc26ebf1a59c650000d5e1e4d13356540196d1ce24289c8b39dee9ca59fe1f",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/credit000.body": "81d4cc28ca05e7a3afeb842da2717ebc826fd7c3ce5df50e6cf17cb50f73266e",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/credit001.body": "c563e1c9e64d5702c2cb756aeb94f2d18f18ee8c37366094b0eca97c9fc597a1",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/genesis.bin": "caea67d17900bda09293eda1de958b1486a04d3c296fd3c668c6e76efec879cd",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/proof-costs.json": "66ae04e358af22877278fdee1f91b0e089b14cddfb1acffb1336f184eb1c176e",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/workload.json": "617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a"
+  },
+  "source_producer_public_disk": {
+    "allocated_bytes": 28499968,
+    "files": 30,
+    "logical_bytes": 28411446
+  },
+  "stat_only_external_files": {
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-000.claim": {
+      "blocks": 8,
+      "inode": 41181512,
+      "mtime_ns": 1794899744871570582,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-000.json": {
+      "blocks": 3736,
+      "inode": 41181513,
+      "mtime_ns": 1794899748991540998,
+      "size": 1910844
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-001.claim": {
+      "blocks": 8,
+      "inode": 41181514,
+      "mtime_ns": 1794899752724514195,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-001.json": {
+      "blocks": 3736,
+      "inode": 41181515,
+      "mtime_ns": 1794899756877484380,
+      "size": 1910841
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-000.claim": {
+      "blocks": 8,
+      "inode": 41181516,
+      "mtime_ns": 1794899761924448153,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-000.json": {
+      "blocks": 3736,
+      "inode": 41181517,
+      "mtime_ns": 1794899766164417723,
+      "size": 1910843
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-001.claim": {
+      "blocks": 8,
+      "inode": 41181518,
+      "mtime_ns": 1794899769948390568,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-001.json": {
+      "blocks": 3736,
+      "inode": 41181519,
+      "mtime_ns": 1794899774041361200,
+      "size": 1910831
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-000.claim": {
+      "blocks": 8,
+      "inode": 41181520,
+      "mtime_ns": 1794899778922326181,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-000.json": {
+      "blocks": 3736,
+      "inode": 41181521,
+      "mtime_ns": 1794899782984297043,
+      "size": 1910832
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-001.claim": {
+      "blocks": 8,
+      "inode": 41181522,
+      "mtime_ns": 1794899786634270863,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-001.json": {
+      "blocks": 3736,
+      "inode": 41181523,
+      "mtime_ns": 1794899790677241867,
+      "size": 1910831
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-000.claim": {
+      "blocks": 8,
+      "inode": 41181508,
+      "mtime_ns": 1794899730231675739,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-000.json": {
+      "blocks": 3736,
+      "inode": 41181509,
+      "mtime_ns": 1794899734434645545,
+      "size": 1910818
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-001.claim": {
+      "blocks": 8,
+      "inode": 41181510,
+      "mtime_ns": 1794899735788635818,
+      "size": 25
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-001.json": {
+      "blocks": 3736,
+      "inode": 41181511,
+      "mtime_ns": 1794899739821606850,
+      "size": 1910829
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b01-ordinary-000/manifest.json": {
+      "blocks": 16,
+      "inode": 47464388,
+      "mtime_ns": 1794899747994548157,
+      "size": 5224
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b01-ordinary-000/proof.bin": {
+      "blocks": 3424,
+      "inode": 47464387,
+      "mtime_ns": 1794899747987548207,
+      "size": 1749450
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b01-ordinary-000/statement.bin": {
+      "blocks": 8,
+      "inode": 47464386,
+      "mtime_ns": 1794899747987548207,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b01-ordinary-001/manifest.json": {
+      "blocks": 16,
+      "inode": 47464392,
+      "mtime_ns": 1794899755878491552,
+      "size": 5244
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b01-ordinary-001/proof.bin": {
+      "blocks": 3408,
+      "inode": 47464391,
+      "mtime_ns": 1794899755871491603,
+      "size": 1743242
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b01-ordinary-001/statement.bin": {
+      "blocks": 8,
+      "inode": 47464390,
+      "mtime_ns": 1794899755870491610,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b02-ordinary-000/manifest.json": {
+      "blocks": 16,
+      "inode": 47464396,
+      "mtime_ns": 1794899765126425173,
+      "size": 5236
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b02-ordinary-000/proof.bin": {
+      "blocks": 3432,
+      "inode": 47464395,
+      "mtime_ns": 1794899765118425230,
+      "size": 1755594
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b02-ordinary-000/statement.bin": {
+      "blocks": 8,
+      "inode": 47464394,
+      "mtime_ns": 1794899765118425230,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b02-ordinary-001/manifest.json": {
+      "blocks": 16,
+      "inode": 47464400,
+      "mtime_ns": 1794899773079368102,
+      "size": 5231
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b02-ordinary-001/proof.bin": {
+      "blocks": 3400,
+      "inode": 47464399,
+      "mtime_ns": 1794899773072368152,
+      "size": 1738954
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b02-ordinary-001/statement.bin": {
+      "blocks": 8,
+      "inode": 47464398,
+      "mtime_ns": 1794899773072368152,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b03-ordinary-000/manifest.json": {
+      "blocks": 16,
+      "inode": 47464404,
+      "mtime_ns": 1794899782016303986,
+      "size": 5222
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b03-ordinary-000/proof.bin": {
+      "blocks": 3432,
+      "inode": 47464403,
+      "mtime_ns": 1794899782009304037,
+      "size": 1753802
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b03-ordinary-000/statement.bin": {
+      "blocks": 8,
+      "inode": 47464402,
+      "mtime_ns": 1794899782009304037,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b03-ordinary-001/manifest.json": {
+      "blocks": 16,
+      "inode": 47464408,
+      "mtime_ns": 1794899789710248802,
+      "size": 5238
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b03-ordinary-001/proof.bin": {
+      "blocks": 3392,
+      "inode": 47464407,
+      "mtime_ns": 1794899789703248852,
+      "size": 1736650
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-b03-ordinary-001/statement.bin": {
+      "blocks": 8,
+      "inode": 47464406,
+      "mtime_ns": 1794899789703248852,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-000/manifest.json": {
+      "blocks": 16,
+      "inode": 47464380,
+      "mtime_ns": 1794899733382653102,
+      "size": 5222
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-000/proof.bin": {
+      "blocks": 3416,
+      "inode": 47464379,
+      "mtime_ns": 1794899733375653152,
+      "size": 1746314
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-000/statement.bin": {
+      "blocks": 8,
+      "inode": 47464378,
+      "mtime_ns": 1794899733375653152,
+      "size": 448
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-001/manifest.json": {
+      "blocks": 16,
+      "inode": 47464384,
+      "mtime_ns": 1794899738859613760,
+      "size": 5232
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-001/proof.bin": {
+      "blocks": 3432,
+      "inode": 47464383,
+      "mtime_ns": 1794899738851613817,
+      "size": 1753866
+    },
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public/net2-gate2-diagnostic01-credit-001/statement.bin": {
+      "blocks": 8,
+      "inode": 47464382,
+      "mtime_ns": 1794899738851613817,
+      "size": 448
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-000.body": {
+      "blocks": 3432,
+      "inode": 43675139,
+      "mtime_ns": 1794899749042540631,
+      "size": 1754326
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-000.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675140,
+      "mtime_ns": 1794899749053540553,
+      "size": 535
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-001.body": {
+      "blocks": 3416,
+      "inode": 43675141,
+      "mtime_ns": 1794899756935483964,
+      "size": 1748118
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-001.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675142,
+      "mtime_ns": 1794899756946483885,
+      "size": 538
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch01-receipt.json": {
+      "blocks": 8,
+      "inode": 43675143,
+      "mtime_ns": 1794899758272474367,
+      "size": 988
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-000.body": {
+      "blocks": 3440,
+      "inode": 43675144,
+      "mtime_ns": 1794899766222417306,
+      "size": 1760470
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-000.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675145,
+      "mtime_ns": 1794899766233417228,
+      "size": 540
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-001.body": {
+      "blocks": 3408,
+      "inode": 43675146,
+      "mtime_ns": 1794899774089360855,
+      "size": 1743830
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-001.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675147,
+      "mtime_ns": 1794899774099360784,
+      "size": 522
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch02-receipt.json": {
+      "blocks": 8,
+      "inode": 43675148,
+      "mtime_ns": 1794899775370351664,
+      "size": 995
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-000.body": {
+      "blocks": 3440,
+      "inode": 43675149,
+      "mtime_ns": 1794899783032296699,
+      "size": 1758678
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-000.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675150,
+      "mtime_ns": 1794899783049296577,
+      "size": 530
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-001.body": {
+      "blocks": 3408,
+      "inode": 43675151,
+      "mtime_ns": 1794899790724241530,
+      "size": 1741526
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-001.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675152,
+      "mtime_ns": 1794899790746241372,
+      "size": 528
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/batch03-receipt.json": {
+      "blocks": 8,
+      "inode": 43675153,
+      "mtime_ns": 1794899792043232071,
+      "size": 998
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block001.header": {
+      "blocks": 8,
+      "inode": 43675156,
+      "mtime_ns": 1794899793228223573,
+      "size": 344
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block002.header": {
+      "blocks": 8,
+      "inode": 43675157,
+      "mtime_ns": 1794899793228223573,
+      "size": 344
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block003.header": {
+      "blocks": 8,
+      "inode": 43675158,
+      "mtime_ns": 1794899793229223566,
+      "size": 344
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/block004.header": {
+      "blocks": 8,
+      "inode": 43675159,
+      "mtime_ns": 1794899793229223566,
+      "size": 344
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/credit000.body": {
+      "blocks": 3432,
+      "inode": 43675135,
+      "mtime_ns": 1794899734495645107,
+      "size": 1755737
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/credit000.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675136,
+      "mtime_ns": 1794899734513644977,
+      "size": 513
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/credit001.body": {
+      "blocks": 3448,
+      "inode": 43675137,
+      "mtime_ns": 1794899739883606405,
+      "size": 1763289
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/credit001.body.proof-cost.json": {
+      "blocks": 8,
+      "inode": 43675138,
+      "mtime_ns": 1794899739898606297,
+      "size": 530
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/final.checked.scan": {
+      "blocks": 104,
+      "inode": 43675155,
+      "mtime_ns": 1794899793217223652,
+      "size": 50182
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/final.scan": {
+      "blocks": 104,
+      "inode": 43675154,
+      "mtime_ns": 1794899793184223889,
+      "size": 50182
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/genesis.bin": {
+      "blocks": 16,
+      "inode": 43675132,
+      "mtime_ns": 1794899726662701382,
+      "size": 5672
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/producer.sqlite": {
+      "blocks": 27856,
+      "inode": 43675133,
+      "mtime_ns": 1794899792026232193,
+      "size": 14258176
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/proof-costs.json": {
+      "blocks": 24,
+      "inode": 43675161,
+      "mtime_ns": 1794899793229223566,
+      "size": 8971
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/retention-init.json": {
+      "blocks": 8,
+      "inode": 43675134,
+      "mtime_ns": 1794899728985684691,
+      "size": 1000
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/workload.json": {
+      "blocks": 8,
+      "inode": 43675160,
+      "mtime_ns": 1794899793229223566,
+      "size": 2696
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01/claim.json": {
+      "blocks": 8,
+      "inode": 43540580,
+      "mtime_ns": 1794899726540702259,
+      "size": 503
+    },
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/gate2-diagnostic01/receipt.json": {
+      "blocks": 8,
+      "inode": 43540581,
+      "mtime_ns": 1794899794307215836,
+      "size": 1573
+    }
+  }
+}

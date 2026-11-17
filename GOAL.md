@@ -31,7 +31,8 @@ genuine verification, atomic durable retention, failure controls and fresh reope
 passed. Ordinary destination 20.837566s; serial PUT+destination 34.787545s versus
 30.27456s nominal offered interval. Gate2's declared eight-batch pipeline/restart
 experiment will test actual overlap/backlog. Its changed rolling producer has
-passed an independently checked8proof/fourblock diagnostic; network queue
-implementation and full workload remain pending. No annual participation acceptance
+passed an independently checked8proof/fourblock diagnostic; the new network queue/restart path also passed its independently checked small
+diagnostic. Full864proof generation is allocated next; the actual96x8load result,
+participation decision and wallet gate remain pending. No annual participation acceptance
 or Gate3 completion follows. Native and global Goals remain ACTIVE. Resume from
 STATUS.md; do not regenerate the closed Gate1 campaigns.

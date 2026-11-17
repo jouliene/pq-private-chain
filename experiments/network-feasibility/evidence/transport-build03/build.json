@@ -1,0 +1,25 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+    "build",
+    "--offline",
+    "--locked",
+    "--release",
+    "-j1",
+    "--message-format=json",
+    "--manifest-path",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/build03/crate/Cargo.toml",
+    "--bin",
+    "cp04-network-role01"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 424456,
+  "process_exit": 0,
+  "system_seconds": 4.938153,
+  "timeout": false,
+  "user_seconds": 102.205145,
+  "wall_seconds": 107.56933196703903,
+  "wrapper_exit": 0
+}

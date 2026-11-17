@@ -1,0 +1,120 @@
+{
+  "format": "CP04-INDEPENDENT-PIPELINE-DIAGNOSTIC03-ACTUAL01",
+  "disposition": "PASS for changed-path2x3 diagnostic; GO for Root allocation of864proof generation and subsequent reviewed full96x8 pipeline, no full Gate2 service acceptance yet",
+  "scope": "Independent raw public receipt/timestamp arithmetic and all14table byte comparison; no new native/proof/network execution or full installation hash campaign",
+  "pins": {
+    "RESULT": "8d58f6d52abb5ed2c2f12be421fcf49df9b59a651d7ccf5e33f2542a275e8c1a",
+    "PREPARED": "42cae514456efc11b06e32c501168154bb72f8be3420c603c6441c8c0c780ea2",
+    "CANONICAL_AFTER_DEADLINE": "13dcee5df8f47dda07226d298611b172935ee07a1664f67a73d95a8d0058b188",
+    "build": "17674777c6395e7b41e8170dfae31a2c849334463e5b84f6df14c7a5eb2ee8a6",
+    "source": "5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5",
+    "profile": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+    "installation": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+    "workload": "617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a"
+  },
+  "checks": {
+    "roles_exit0": 8,
+    "scheduled_offers": 3,
+    "accepted_at12s": 3,
+    "fixed_deadline_credit_remaining": 0,
+    "credit_peak": 2,
+    "last_ack_seconds": 5.370508104,
+    "distinct_nonretry_body_overlap_seconds": [
+      0.280056972,
+      0.268125251
+    ],
+    "backpressure_seconds": 0.422670776,
+    "actual_stopped_seconds": 1.50145024,
+    "proofs_across_incarnations": 8,
+    "source_signatures": 2,
+    "retry_extra_proofs": 0,
+    "namespace_checks_recorded": [
+      {
+        "actual_checked_at_ns": 843043949819748,
+        "denied_known_files": 5,
+        "host_pid": 2381952,
+        "private_pid_namespace": true
+      },
+      {
+        "actual_checked_at_ns": 843048692273079,
+        "denied_known_files": 5,
+        "host_pid": 2382634,
+        "private_pid_namespace": true
+      }
+    ],
+    "actual_application_bytes": {
+      "archive_get_received": 312,
+      "archive_get_sent": 17538078,
+      "archive_put_received": 14033362,
+      "archive_put_sent": 260,
+      "producer_received": 260,
+      "producer_sent": 14033362,
+      "validator_received": 17538078,
+      "validator_sent": 312
+    },
+    "all14publictables_equal_except_local_catalogid": {
+      "anchors": 5,
+      "archive_objects": 0,
+      "archive_pending": 0,
+      "archive_segments": 0,
+      "blocks": 4,
+      "bodies": 8,
+      "body_cache": 1,
+      "cores": 8,
+      "leaves": 16,
+      "meta": 1,
+      "node_undo": 180,
+      "nodes": 67,
+      "nullifiers": 12,
+      "sources": 2
+    },
+    "raw_retained_body_bytes": 14025974,
+    "archive_object_count": 5,
+    "archive_stored_frame_bytes": 14033102,
+    "no_archive_partials": true,
+    "producer_allcopies_charged": {
+      "allocated_bytes": 71983104,
+      "files": 77,
+      "logical_bytes": 71757278
+    }
+  },
+  "native_cost": {
+    "self_cpu_seconds": 3.3410450000000003,
+    "waited_helper_cpu_seconds": 0.075832,
+    "max_self_rss_kib": 83988,
+    "max_helper_rss_kib": 63548,
+    "sampled_tree_max_kib": 113232,
+    "peaks_not_added": true
+  },
+  "controller_scope": {
+    "reported": {
+      "allowed_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "peak_rss_kib_cumulative": 933504,
+      "scope": "Separate experimental scheduler/preparation/metadata/oracle cost; SQL correctness checks run after measured observation end, not hidden inside validator service",
+      "system_seconds_delta": 1.936205,
+      "user_seconds_delta": 5.490833,
+      "wall_seconds": 15.85435125802178
+    },
+    "qualification": "CPU delta and wall begin after installation/build preflight pin checks; cumulative RSS includes earlier preflight. These are not equal measurement spans or full startup CPU. Controller affinity0..11 is separate experimental orchestration, not nativeCPU2 pricing."
+  },
+  "limitations": [
+    "Namespace denial readback is actual launcher evidence; ended processes were not independently re-probed",
+    "Archive objects checked by retained count/name/stat/endpoint transfer evidence; bodies not rehashed wholesale",
+    "Source/runtime postcheck and full compiled closure are existing actual campaign/build evidence; build receipt/defaultfeatures checked here, ELF and292inputs not redundantly rehashed",
+    "Only6ordinary diagnostic payments, tiny state and short1.5s restart; no full96offered load/yearcapacity/remotepruning/Gate3/PQ claim",
+    "Whole experiment must retain controller/preflight instrumentation costs separately from measured ordinary role service; no silent resource-budget increase"
+  ]
+}

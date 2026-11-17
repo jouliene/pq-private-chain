@@ -1,0 +1,163 @@
+{
+  "ack_seconds_from_offer_epoch": {
+    "ordinary1": 0.927407173,
+    "ordinary2": 1.468436226,
+    "ordinary3": 5.370508104
+  },
+  "actual_application_byte_conservation": {
+    "archive_get_received": 312,
+    "archive_get_sent": 17538078,
+    "archive_put_received": 14033362,
+    "archive_put_sent": 260,
+    "producer_received": 260,
+    "producer_sent": 14033362,
+    "validator_received": 17538078,
+    "validator_sent": 312
+  },
+  "actual_archive_body_transfer_overlap_intervals": [
+    {
+      "end_ns": 843046435546488,
+      "get_sha256": "fc5db42e41dd3ca956a24b3908b20a8791ce83efd04185ce05475ad3a4d3ba8d",
+      "put_sha256": "ff5f5a537886af004a86b96a912a8ba544446f355b97e2b3736811c30ccb48cf",
+      "scope": "Different ordinary batch data-transfer intervals; GET was not already admitted at its start, no ACK/metrics-tail overlap",
+      "seconds": 0.280056972,
+      "start_ns": 843046155489516
+    },
+    {
+      "end_ns": 843046935604651,
+      "get_sha256": "ff5f5a537886af004a86b96a912a8ba544446f355b97e2b3736811c30ccb48cf",
+      "put_sha256": "ccc9aebfd5b46f290d49f4d1f5d2c4e1fac9efb81b48ea8d4c190e913567eca3",
+      "scope": "Different ordinary batch data-transfer intervals; GET was not already admitted at its start, no ACK/metrics-tail overlap",
+      "seconds": 0.268125251,
+      "start_ns": 843046667479400
+    }
+  ],
+  "actual_stopped_to_restart_seconds": 1.50145024,
+  "archive_connection_peak": 2,
+  "archive_direct_cpu_seconds": 0.202598,
+  "build_sha256": "17674777c6395e7b41e8170dfae31a2c849334463e5b84f6df14c7a5eb2ee8a6",
+  "charged_producer_ALLcopies_disk": {
+    "allocated_bytes": 71983104,
+    "files": 77,
+    "logical_bytes": 71757278
+  },
+  "controller_oracle_measurement": {
+    "allowed_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "peak_rss_kib_cumulative": 933504,
+    "qualification": "CPU/wall deltas begin after source/install/build pin preflight, not complete controller process startup. RSS is cumulative whole-process peak including earlier preflight; it is not a per-stage or per-role validator peak. Controller affinity0..11 is separate from fixed roleCPUs0/1/2.",
+    "scope": "Separate experimental scheduler/preparation/metadata/oracle cost; SQL correctness checks run after measured observation end, not hidden inside validator service",
+    "system_seconds_delta": 1.936205,
+    "user_seconds_delta": 5.490833,
+    "wall_seconds": 15.85435125802178
+  },
+  "credit_backpressure_seconds": 0.422670776,
+  "external_afterdeadline_all14_equal": true,
+  "final_archive_disk": {
+    "allocated_bytes": 14045184,
+    "files": 5,
+    "logical_bytes": 14033102
+  },
+  "final_destination_disk": {
+    "allocated_bytes": 14258176,
+    "files": 1,
+    "logical_bytes": 14258176
+  },
+  "finding": "No new functional failure found. All3 ordinary ACKs preceded12s cutoff; afterdeadline rows are archive terminal and validator stop/terminal only, not late payment ACKs. Full768ordinary offered-load decision remains untested. Source03 unchanged; no rerun.",
+  "fixed_deadline": {
+    "accepted_batches": 3,
+    "accepted_ordinary_payments": 6,
+    "controller_deadline_observation_lag_ns": 172721,
+    "counts": {
+      "accepted": 3,
+      "future": 0,
+      "pending": 0,
+      "ready": 0,
+      "uploading": 0,
+      "validating": 0
+    },
+    "credits": 0,
+    "late_transitions": [],
+    "missed_due_ids": [],
+    "offered_batches": 3,
+    "offered_ordinary_payments": 6
+  },
+  "fixed_observation_seconds": 12,
+  "format": "CP04-GATE2-DIAGNOSTIC-READBACK01",
+  "namespace_checks": [
+    {
+      "actual_checked_at_ns": 843043949819748,
+      "denied_known_files": 5,
+      "host_pid": 2381952,
+      "private_pid_namespace": true
+    },
+    {
+      "actual_checked_at_ns": 843048692273079,
+      "denied_known_files": 5,
+      "host_pid": 2382634,
+      "private_pid_namespace": true
+    }
+  ],
+  "native_cpu_seconds": {
+    "already_waited_helpers": 0.075832,
+    "scope": "Absolute two native incarnations; bwrap leader totals excluded; final receipt serialization/exit after samples",
+    "self": 3.3410450000000003
+  },
+  "native_proof_signature_counters_by_ordinary_ack": [
+    {
+      "batch": "ordinary1",
+      "proof_attempts": 4,
+      "source_signature_attempts": 2
+    },
+    {
+      "batch": "ordinary2",
+      "proof_attempts": 6,
+      "source_signature_attempts": 2
+    },
+    {
+      "batch": "ordinary3",
+      "proof_attempts": 2,
+      "source_signature_attempts": 0
+    }
+  ],
+  "passed": true,
+  "peak_reserved_or_unadmitted_credits": 2,
+  "postdeadline_cleanup_seconds": 0.1419106130488217,
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "queue_peaks": {
+    "accepted": 3,
+    "future": 3,
+    "pending": 2,
+    "ready": 1,
+    "uploading": 1,
+    "validating": 1
+  },
+  "result_sha256": "8d58f6d52abb5ed2c2f12be421fcf49df9b59a651d7ccf5e33f2542a275e8c1a",
+  "retention": {
+    "archive_committed_bytes": 0,
+    "bodies": 8,
+    "cached_bytes": 14025974,
+    "full_bytes": 14025974,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "retry_additional_proofs": 0,
+  "scope": "Actual2lanes\u00d73ordinary batches/8genuine proofs functional pipeline diagnostic, not96-payment load, WAN or yearly service evidence",
+  "sender_direct_cpu_seconds": 0.31063599999999997,
+  "source_sha256": "5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5",
+  "workload_sha256": "617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a"
+}
