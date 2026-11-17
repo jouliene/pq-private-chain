@@ -1,0 +1,76 @@
+{
+  "format": "CP04-INDEPENDENT-TRANSPORT-SOURCE03-REVIEW01",
+  "source_sha256": "5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5",
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "disposition": "GO for Root-allocated bounded fresh build and real2x3 diagnostic; full96x8 network allocation requires actual build/diagnostic review",
+  "scope": "Source review only; no reviewer native build, network service, verifier, private key or proof execution",
+  "source_file_pins": {
+    "CORE_SOURCE01.json": "79971fe908629d6cb4a7eef7474680e416b9e11db4252cae51a89c6d2e5239bc",
+    "Cargo.lock": "34537a69abfb5a5d84f6148f1ce3f8ebf1cd33d8b58d48b6869ae6bcd72f9b85",
+    "Cargo.toml": "fb1af71691dba7f94c65e7bce2aa941bb147008fd227c9884754809f57e0d701",
+    "README.md": "397d6879eb1826ceda33a97c8ef1bd3eaa70a7c1db2dcb38de9e87cc6e280f1c",
+    "archive.py": "6c61ed224196ec917044284802f25f3e4b96e8c4353ffd1b03725ac47bedb908",
+    "build.py": "fee9eadf33653465703c42e632a13ab7a039db4bdae3f9c7e66fba88711ec9be",
+    "campaign.py": "3f9424b0d55d3bd473865f725ebd80b74ee1e4f2a13c62f99facfd89f53a9851",
+    "oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
+    "pipeline.py": "4358436308fb459e36af40797889a8201f2e7b26e06caba7d836af251a18bca3",
+    "prepare.py": "bb6905378e869d23eaa95807c0e4c94836d5d1478e3ba3b53a1c13c2a8a872bf",
+    "prepare_pipeline.py": "d0b720e5dea666feb11a6b59c89eb55cec5e337e01e81229cb5c5f858938a119",
+    "sender.py": "15dd12ed499d40fc9299b56ba737b9b346603541139b5642260dd219652d430e",
+    "src/main.rs": "49e373bf18ff14c4da4e58bccc5a7c0114e17c0b14dbfe1e8a4914763fd3fdec",
+    "src/metrics.rs": "31e7c30fba533447a17bf058fc006efbae7ad6b4a827a64a2fa13e8133859284",
+    "src/wire.rs": "597bc4719dbce2c9c04ee4c2614cf45f2e6cd801fa061a6532ef254b30bd9665",
+    "tests/pipeline_states.py": "afc6512791bb7fc576402aaa402317f2fb856cc9337fee2ce7db42ade201e286",
+    "tests/schema04.py": "16ab5d173768f450bc05427238a8cb244755ee16decac91925dd764cab92976d",
+    "tests/source_controls.py": "f705518e69c6f1ec19b4d4ad17365e4eef89ef5f825ad2094e40ef3241a96f50"
+  },
+  "preserved_executed_source02": "813b0492ec01f2cb130e1cbd746b61eff5dd32bcc4608782be80cf823d06bace",
+  "checks_executed_by_reviewer": [
+    "Exact18source pins and SOURCE03 equality",
+    "Python AST parse",
+    "Exact retained executed SOURCE02 files",
+    "Byte equality of wire, metrics, build, Cargo manifests, oracle, old prepare and canonical-core identity record"
+  ],
+  "changed_native_scope": "Explicit512MiB/2GiB local RETAIN argument plus hard_bytes readback only; genuine apply_expected, retry identity, proof/provider program and lifetime metrics unchanged",
+  "resolved_findings": [
+    {
+      "id": "G2-DISK",
+      "origin": "Root review",
+      "resolution": "All original source public files, producer DB/scans, Parent proof directories, Parent .json/.claim provenance, supervisor files and prepared frames charged under8GiB; duplicate provenance stat-only and not verifier authority"
+    },
+    {
+      "id": "G2-DEADLINE",
+      "origin": "Root and reviewer review",
+      "resolution": "Central Offers cutoff and control-start guards reject late state transitions; fixed scheduled due IDs differ from materialized offers; row receipt vs processing timestamps retained; exact-end snapshot before priced teardown cannot be repaired by late SQL equality"
+    },
+    {
+      "id": "G2-OVERLAP",
+      "origin": "Independent reviewer",
+      "counterexample": "Same-object PUT ACK/close/metrics tail and sequential GET start may intersect despite no next-batch transfer overlap",
+      "resolution": "Decisive intervals require distinct ordinary object IDs and exclude previously admitted retry GET; timestamps bracket PUT body receive/write/hash and GET body send, GET starts after ACK yield resumes; all RPC overlaps reported separately, no duration threshold invented"
+    },
+    {
+      "id": "G2-ENDPOINT",
+      "origin": "Emerging-source observation",
+      "resolution": "Frozen prepare enforces exact6fields against final canonical header; independent all14SQL equality still required"
+    }
+  ],
+  "reviewed_invariants": [
+    "Independent fixed offer/end clock; at most8pending IDs,1PUT,1validator request and2reserved/uploaded/unadmitted credits",
+    "Only canonical ACK releases a credit; stopped validator leaves other credits occupied; exact already-admitted tip retry has no credit transition and adds no proof attempt",
+    "Ordered new batches use genuine current-state admission; source manifest framing is not validation",
+    "Two real native incarnations, observed stopped duration, fresh durable open, same second ordinary block retry, cumulative native attempt accounting across incarnations",
+    "Receiver hides producer workload/DB, prepared frames, archive and public proof-copy subtree in privatePID namespace; actual native host PID namespace/denials checked on each incarnation",
+    "Native cumulative SELF/CHILDREN CPU covers nonoverlapping inclusive commands; wrapper-only wait4 labelled; public typed failures/raw terminal/cleanup receipts retained",
+    "Fixed-end states remain conservative if a pre-end received event is processed after cutoff; late evidence is retained without attributing late completion as on-time service",
+    "External SQL/state checks after observation cannot repair fixed-end unfinished queues; conservation includes all actual endpoint application bytes and retries"
+  ],
+  "limitations": [
+    "Actual overlap, successful restart and full96offered service remain unexecuted for this source",
+    "2GiB RETAIN is finite research local policy; not remote-backed pruning or annual ordinary-node participation",
+    "Source/controller CPU, disk polling and external oracle costs explicitly separate; sampled RSS/disk peaks are not cgroup hard limits",
+    "Body-transfer intervals are host application-service intervals including pacing/read/write/hash, not packet capture or WAN evidence",
+    "Source preparation and postcheck cost belong to whole experiment but not ordinary offered service; no live-wallet throughput claim",
+    "A failed/incomplete cleanup can lack native terminal/complete byte counters; actual receipts and unknown status must remain failure, not inferred PASS"
+  ]
+}

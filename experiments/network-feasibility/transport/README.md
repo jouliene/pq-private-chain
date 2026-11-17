@@ -1,7 +1,8 @@
 # Network04 transport and retained-validator discriminator
 
-Active implementation of Gate1 in NETWORK_FEASIBILITY_GOAL.md. No network
-campaign or new proof generation has executed yet. Root owns the normative
+Gate1 actual96 functional network path passed; GATE1_REVIEW.md and GATE1_96.json
+retain the measured scope and costs. The SOURCE03 Gate2 successor below is
+source-only until separately reviewed, built and executed. Root owns the normative
 CP_NETWORK_04 contract/manifest, source freezes and heavy allocations. Existing
 legacy CP03 fixtures and proof/security parameters remain unchanged.
 
@@ -161,3 +162,83 @@ Never sum cumulative RSS maxima.
 No protocol, canonical source, proof, acceptance or transport framing changed.
 Corrected SOURCE02 must be reviewed/built and pass diagnostic2 before a96-payment
 network campaign. Root's independent proof-generation allocation is separate.
+
+
+## SOURCE03 fixed Gate2 successor
+
+Exact SOURCE02 source and its actual results are preserved under
+freezes/source02/ and .work/gate1-96/. No canonical ledger/wallet/proof source or
+installed runtime changes. SOURCE03 adds only explicit native local quota,
+per-RPC common-host monotonic timestamps, nonblocking Role polling with retained
+row receipt timestamps, and the fixed pipeline.py/prepare_pipeline.py path.
+The native argv optional RETAIN_BYTES permits the reviewed512MiB or2GiB local
+quotas; Gate2 requires2GiB. Complete proof admission remains unchanged.
+
+Root's GATE2_PROFILE.json defines the full8×96/96funding schedule and the separate
+2×3/2funding diagnostic. The new strict workload format is
+CP04-NETWORK-PIPELINE-WORKLOAD01, with ordinary_count=total, batch_size and
+ordinary_batch_count. Exact relative entries/6-field endpoint remain unchanged.
+The input parser checks body identities/order/arity/full-size/endpoint; it never
+substitutes for real destination proof verification. Funding completes before
+the independent offer clock. Only owner-pair/lane order is shuffled in generation,
+so both input notes retain their common private owner.
+
+Two credits bound reserved upload, durable-ready and validator-active batches;
+only canonical ACK releases credit. Archive supports1PUT+1GET, not arbitrary
+fanout; successful Gate1 observed peak1 and cannot establish actual overlap.
+Successor records all RPC intersections plus decisive data-transfer intersections
+of different ordinary batch IDs, excluding already-admitted tip retry GETs and
+ACK/metric tails, under the same declared
+one archiveCPU and separate full-duplex application links. The source pending
+queue holds at most8IDs; its pre-generated files and all physical copies count
+as disk, not a hidden RAM payload queue. The controller itself and its CPU/IO
+are separate experimental orchestration, not an unpriced payment verifier.
+
+Central cutoff guards reject state transitions first processed after fixed end,
+including sender reap→ready. Old received-row time and actual controller processing
+time remain separately auditable. Such a boundary is conservatively unfinished,
+not silently accepted later. No namespace check/reap/restart can reschedule the
+offer clock. The deadline snapshot cannot materialize missed due offers: it
+reports them explicitly and fails drain. Uploading/validating include a reserved
+start whose child/pipe operation has not yet completed; late rows/actions are
+separate. Final role receipts retain row receipt timestamps and partial public
+failure output. Correctness SQL runs after observation; never use its late state
+to repair an unfinished fixed-end queue.
+
+Full outer watchdog600s includes preparation/funding and cleanup while preserving
+363.29472s observation; diagnostic outer120s preserves12s observation. Cleanup
+has a separate30s full/10s diagnostic grace, bounded by the outer watchdog, and
+is priced after the deadline. Failed or unfinished states/unknown outcomes remain
+in RESULT. Native absolute metrics from both incarnations, individual sender
+CPU and every actual RPC byte remain available; bwrap wait4 stays wrapper-only.
+
+Producer8GiB experiment-disk enforcement includes prepared frames, original
+public workload/bodies/DB/scans, public Parent proof copies, large Parent JSON
+and tiny claim files, and supervisor claim/receipt files. Duplicate Parent copies
+and provenance are stat-only non-authoritative measurement overhead; they are
+not required protocol archive data. Producer already checked Parent receipt hashes;
+we do not copy/re-hash large receipt maps. Payload/manifest source identity checks
+remain. All external copy sizes/inodes/mtime snapshots must stay unchanged.
+
+Source-only9state/credit/deadline controls and actual8proof public fixture
+framing/stat checks passed; neither is native verification or pipeline capacity.
+After explicit Source03/build/profile/workload review and allocation:
+
+```sh
+python3 -I experiments/network-feasibility/transport/build.py \
+  --label build03 --installation .work/network01/fresh/installation.json \
+  --approve-installation INSTALLATION_SHA --approve-source SOURCE03_SHA
+python3 -I experiments/network-feasibility/transport/pipeline.py \
+  --label gate2-diagnostic01 --build-label build03 --approve-build BUILD_SHA \
+  --installation .work/network01/fresh/installation.json \
+  --approve-installation INSTALLATION_SHA --approve-source SOURCE03_SHA \
+  --approve-profile GATE2_PROFILE_SHA \
+  --workload experiments/network-feasibility/producer/.work/gate2-diagnostic01.public/workload.json \
+  --approve-workload WORKLOAD_SHA
+```
+
+A full8×96 run requires its own allocation and actual diagnostic readback; the
+small diagnostic is not96capacity. No generation, build or run follows merely
+from this README. The Gate1 cost table's measured fanout is1; k replicas require
+k real egress copies and separately provisioned archive/link capacity, not free
+additional100Mbit/s budgets.

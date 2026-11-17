@@ -56,7 +56,7 @@ def main():
  def emit(v):
   with lock:print(json.dumps(v,sort_keys=True),flush=True)
  def handler(s):
-  s=Counted(s);begin=time.monotonic();row={'role':'archive'};slot=None;acquired=False;part=None;sent=received=0;spooling=False;latency_done=False;valid_request=False
+  s=Counted(s);begin=time.monotonic();begin_ns=time.monotonic_ns();row={'role':'archive','started_monotonic_ns':begin_ns};slot=None;acquired=False;part=None;sent=received=0;spooling=False;latency_done=False;valid_request=False
   try:
    s.settimeout(120);s.setsockopt(socket.IPPROTO_TCP,socket.TCP_NODELAY,1);row['socket_buffers']=buffers(s)
    request=exact(s,HEADER.size);received+=len(request);magic,op,kind,reserved,size,h=HEADER.unpack(request)
@@ -69,11 +69,11 @@ def main():
    if op in(1,3):
     part=root/(str(threading.get_ident())+'.part')
     with lock:counters['incomplete_spools']+=1;counters['incomplete_spools_peak']=max(counters['incomplete_spools_peak'],counters['incomplete_spools']);spooling=True
-    hasher=hashlib.sha256();remaining=size
+    hasher=hashlib.sha256();remaining=size;row['body_transfer_started_ns']=time.monotonic_ns()
     with part.open('xb')as f:
      while remaining:
       b=exact(s,min(CHUNK,remaining));received+=len(b);f.write(b);hasher.update(b);remaining-=len(b)
-     f.flush();os.fsync(f.fileno())
+     row['body_transfer_finished_ns']=time.monotonic_ns();f.flush();os.fsync(f.fileno())
     need(s.recv(1)==b'','PUT trailing bytes');need(hasher.digest()==h,'PUT byte digest')
     if final.exists():need(final.is_file()and not final.is_symlink()and final.stat().st_size==size and digest(final)==h,'existing object identity');part.unlink()
     else:os.link(part,final);part.unlink()
@@ -81,7 +81,7 @@ def main():
     with lock:counters['full_bytes_written']+=size
     time.sleep(.040);latency_done=True # One additional RTT at response boundary.
     if op==3:
-     emit({'publication_crash_before_ack':True,'object_sha256':h.hex(),'object_bytes':size,'application_sent':s.sent,'application_received':s.received,'counters_before_exit':dict(counters),'resources':usage()});os._exit(79)
+     emit({'publication_crash_before_ack':True,'started_monotonic_ns':begin_ns,'finished_monotonic_ns':time.monotonic_ns(),'object_sha256':h.hex(),'object_bytes':size,'application_sent':s.sent,'application_received':s.received,'counters_before_exit':dict(counters),'resources':usage()});os._exit(79)
     sent+=send(s,[ACK.pack(b'CPACK004',0,size,h)])
    else:
     need(s.recv(1)==b'','GET trailing request');need(final.is_file()and not final.is_symlink()and final.stat().st_size==size,'GET object')
@@ -89,10 +89,11 @@ def main():
     need(digest(final)==h,'GET durable bytes corrupted')
     def parts():
      yield ACK.pack(b'CPACK004',0,size,h)
+     row['body_transfer_started_ns']=time.monotonic_ns()
      with final.open('rb')as f:
       yield from iter(lambda:f.read(CHUNK),b'')
     time.sleep(.040);latency_done=True
-    sent+=send(s,parts())
+    sent+=send(s,parts());row['body_transfer_finished_ns']=time.monotonic_ns()
    row['complete']=True
   except BaseException as e:row.update(complete=False,error_type=type(e).__name__,error=str(e))
   finally:
@@ -104,7 +105,7 @@ def main():
    s.close();sent=s.sent;received=s.received
    with lock:
     counters['requests']+=1;counters['sent']+=sent;counters['received']+=received;counters['active']-=1;snapshot=dict(counters)
-   row.update(wall_seconds=time.monotonic()-begin,application_sent=sent,application_received=received,resources_cumulative=usage(),counters=snapshot)
+   row.update(finished_monotonic_ns=time.monotonic_ns(),wall_seconds=time.monotonic()-begin,application_sent=sent,application_received=received,resources_cumulative=usage(),counters=snapshot)
    emit(row);connections.release()
  server=socket.socket();server.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1);server.bind(('127.0.0.1',a.port));server.listen(2);server.settimeout(.2)
  signal.signal(signal.SIGTERM,lambda *_:stop.set());signal.signal(signal.SIGINT,lambda *_:stop.set())

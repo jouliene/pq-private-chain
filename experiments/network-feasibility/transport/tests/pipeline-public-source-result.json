@@ -1,0 +1,18 @@
+{
+  "scope": "Public fixture source/framing/stat-only check, no native/proof verification or pipeline timing",
+  "objects": 5,
+  "ordinary_count": 6,
+  "batch_size": 2,
+  "ordinary_batch_count": 3,
+  "charged_external_producer_disk": {
+    "logical_bytes": 57724176,
+    "allocated_bytes": 57937920,
+    "files": 72
+  },
+  "parent_evidence_provenance_disk": {
+    "logical_bytes": 15286869,
+    "allocated_bytes": 15335424,
+    "files": 16
+  },
+  "passed": true
+}

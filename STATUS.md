@@ -11,7 +11,8 @@ published. No external blocker. Preserve exclusive labels, failed runs and pins.
 Gate1 FUNCTIONAL PASS, independently reviewed. GO for the declared finite Gate2
 pipeline experiment; no annual capacity, ordinary-node participation or production
 PASS. All Gate1 jobs terminal. Allocation14 gate2-diagnostic01 TERMINAL PASS,
-66.698950s/168304KiB,8genuineproofs/fourblocks. HEAVY SLOT FREE; do not duplicate.
+66.698950s/168304KiB,8genuineproofs/fourblocks; do not duplicate.
+SOLE HEAVY ALLOCATION15: transport build03,180s/CPU0/4GiB, Root launching.
 Producer source committed83df035. Full96x8 generation is independently qualified,
 but pipeline source/diagnostic remains separate; Root will allocate the next job.
 
@@ -81,25 +82,28 @@ charged, no loss/doubleapply. Fresh2GiBraw RETAINquota,8GiBperrole diskwatchdog,
 Generator ceiling864proofs/10800s/CPU0/4GiB; source-review and small2lanes x3batches
 (8proofs,360s) precede expensive allocation. SOURCE03 source review GO; allocation14 authorizes only8proof diagnostic.
 Actual diagnostic readback and independent review PASS; full generation needs
-Root allocation. Pipeline source is still being completed/reviewed.
+Root allocation. Pipeline SOURCE03 source GO after review:18files, declared profile unchanged.
 
 ## Exact restart / next useful actions
 
 1. Allocation14 is terminal; do not poll/restart session98784. Read its receipt
    and review/PRODUCER_DIAGNOSTIC03_ACTUAL01.json. Preserve closed Gate1 sources,
    evidence and datasets. Do not overwrite labels or generated installations.
-2. Finish/review Gate2 producer and transport source against declared profile.
-   Producer owner and transport owner coordinate exact multibatch workload ABI.
-   Resolve512MiB legacy wrapper versus new2GiBfresh quota without silent change
-   to canonical installed source. Reviewer inspects profile and pruning model.
+2. Source review complete. TransportSOURCE03:
+   5a65e5df52328659dab6b754584d1fb48a43990e63eaf0c69ce203db04d6beb5.
+   Review/TRANSPORT_SOURCE_REVIEW03.json gives GO for build+smallpipeline only.
+   Root closed all-copy/provenance disk charge and actualcutoff findings; reviewer
+   closed false same-frame/ACK-tail overlap. Decisive overlap requires different
+   ordinary frame body phases, excluding current-tip retry. Preserve SOURCE02.
 3. Gate1 checkpoint committed2ab99fb. ProducerSOURCE03 frozen/reviewed:
    380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2.
    Profile9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8.
    Actual diagnostic PASS:66.698950s/168304KiB,16leaves/12NFs/8cores,fees16907038,
    total200M/liabilities0,RETAIN14025974B/pending0; independent review agrees.
    Diagnostic workload617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a.
-   Prefer changed pipeline diagnostic before the expensive full864proof campaign
-   if source is ready; never overlap two heavy jobs.
+   Run build03 allocation15, inspect terminal BUILD/nativepins; then allocate
+   gate2-diagnostic01 network using the existing8proof dataset. Only after actual
+   pipeline readback allocate full864proof generation; one heavy job at a time.
 4. Build/review transport successor and run diagnostic/full finite network series
    after required datasets exist. No inference of overlap replaces actual run.
 5. Review service and participation separately. An annual175TBfullcopy remains

@@ -15,7 +15,7 @@ def save(p,v):
  with Path(p).open('x')as f:json.dump(v,f,indent=2,sort_keys=True);f.write('\n')
 class Role:
  def __init__(self,name,command,cpu,env,work,deadline,watch):
-  self.name=name;self.command=list(map(str,command));self.start=time.monotonic();self.deadline=deadline;self.watch=watch;self.rows=[];self.buffers={};self.done=False;self.receipt=None;parent=os.getpid()
+  self.name=name;self.command=list(map(str,command));self.start=time.monotonic();self.deadline=deadline;self.watch=watch;self.rows=[];self.row_receipt_ns=[];self.buffers={};self.done=False;self.receipt=None;parent=os.getpid()
   def limit():
    need(ctypes.CDLL(None).prctl(1,signal.SIGKILL,0,0,0)==0 and os.getppid()==parent,'PDEATHSIG');os.sched_setaffinity(0,{cpu})
    for kind,value in [(resource.RLIMIT_CORE,0),(resource.RLIMIT_AS,4*1024**3),(resource.RLIMIT_NOFILE,64),(resource.RLIMIT_CPU,180)]:resource.setrlimit(kind,(value,value))
@@ -34,16 +34,16 @@ class Role:
   self.process_tree_peak_rss_kib=max(self.process_tree_peak_rss_kib,rss(self.p.pid));need(self.process_tree_peak_rss_kib<=4*1024**2,'sampled role-tree RSS ceiling')
  def sample(self):
   need(time.monotonic()<self.deadline,'campaign watchdog');self.watch();self.observe()
- def drain(self,until=None):
+ def drain(self,until=None,timeout=.02):
   while True:
    self.sample()
-   for key,_ in self.selector.select(.02):
+   for key,_ in self.selector.select(timeout):
     f=key.fileobj;b=os.read(f.fileno(),65536)
     if not b:self.selector.unregister(f);continue
     self.buffers[f].extend(b);need(len(self.buffers[f])<=8*1024**2,'role public output cap')
    out=self.buffers[self.p.stdout]
    while b'\n'in out:
-    line,_,rest=out.partition(b'\n');out[:]=rest;row=json.loads(line);self.rows.append(row)
+    line,_,rest=out.partition(b'\n');out[:]=rest;row=json.loads(line);self.rows.append(row);self.row_receipt_ns.append(time.monotonic_ns())
     if until is not None and until(row):return row
    terminal=os.waitid(os.P_PID,self.p.pid,os.WEXITED|os.WNOHANG|os.WNOWAIT)
    if terminal is not None:
@@ -60,7 +60,7 @@ class Role:
   except ProcessLookupError:pass
   pid,status,u=os.wait4(self.p.pid,0);self.done=True;self.p.returncode=os.waitstatus_to_exitcode(status)
   self.selector.close()
-  self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'raw_wait_status':status,'exit':self.p.returncode,'first_wait4':True,'wall_seconds':time.monotonic()-self.start,'user_seconds':u.ru_utime,'system_seconds':u.ru_stime,'wait4_peak_rss_kib':u.ru_maxrss,'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'rows':self.rows,'wait4_scope':('bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO'if self.name.startswith('validator')else'direct Python role process; archive threads share process counters'),'scope':'Never substitute bwrap wrapper CPU/RSS for the native validator. Sampled simultaneous tree RSS may miss short peaks; archive thread cumulative resources overlap and are not summed','public_stderr':self.buffers[self.p.stderr].decode('utf8','replace')}
+  self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'raw_wait_status':status,'exit':self.p.returncode,'first_wait4':True,'wall_seconds':time.monotonic()-self.start,'user_seconds':u.ru_utime,'system_seconds':u.ru_stime,'wait4_peak_rss_kib':u.ru_maxrss,'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'rows':self.rows,'row_receipt_monotonic_ns':list(self.row_receipt_ns),'wait4_scope':('bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO'if self.name.startswith('validator')else'direct Python role process; archive threads share process counters'),'scope':'Never substitute bwrap wrapper CPU/RSS for the native validator. Sampled simultaneous tree RSS may miss short peaks; archive thread cumulative resources overlap and are not summed','public_stderr':self.buffers[self.p.stderr].decode('utf8','replace')}
   need(self.p.returncode==expected,'role terminal exit '+self.name)
   need(not self.buffers[self.p.stderr],'role unexpected stderr '+self.name)
   return self.receipt
@@ -80,7 +80,7 @@ class Role:
     if not b:break
     room=8*1024**2-len(self.buffers[f]);self.buffers[f].extend(b[:max(0,room)])
   public_out=self.buffers[self.p.stdout].decode('utf8','replace');public_err=self.buffers[self.p.stderr].decode('utf8','replace')
-  self.selector.close();self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'cleanup':'group SIGKILL before first reap','wall_seconds':time.monotonic()-self.start,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'rows':self.rows,'remaining_public_stdout':public_out,'public_stderr':public_err,**terminal}
+  self.selector.close();self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'cleanup':'group SIGKILL before first reap','wall_seconds':time.monotonic()-self.start,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'rows':self.rows,'row_receipt_monotonic_ns':list(self.row_receipt_ns),'remaining_public_stdout':public_out,'public_stderr':public_err,**terminal}
   return self.receipt
 
 def native_lifetime(receipt):

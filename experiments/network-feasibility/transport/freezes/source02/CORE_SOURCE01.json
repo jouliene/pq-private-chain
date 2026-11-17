@@ -1,0 +1,21 @@
+{
+  "format": "CP04-NETWORK-CORE-SOURCE01",
+  "scope": "source freeze; not compiled or proof-tested",
+  "files": {
+    "source/crates/ledger-cp03/src/admission.rs": "1530cd71e2635a592bc37cb6cdbba36f268f3877c7a13d8bd25e38a241527ece",
+    "source/crates/ledger-cp03/src/archive_io.rs": "1fe4abe2a806aef50c77af9a3cb863140a6d89e1f4602fbd93cfb2ea8659f548",
+    "source/crates/ledger-cp03/src/cache.rs": "f733dbb74858a497127ed3fbaa28c2a4e2e0b3aba663d449fdc424a3068a2024",
+    "source/crates/ledger-cp03/src/error.rs": "11e96f5eec35ca239f12a84174e70ff1aab6ae88485cbc4ac1f9776510a4ef6b",
+    "source/crates/ledger-cp03/src/lib.rs": "fe3881e7d950b3826086dcb2a14cac658b46e7c3c161e455eb670d396425e00d",
+    "source/crates/ledger-cp03/src/main.rs": "6fb1ceed686528f6a270b1c14751ce839e8b3df6a94e59cfc9ae94fb4cb512c0",
+    "source/crates/ledger-cp03/src/scan.rs": "ce4eef7fef5633bff4558c7802f5e7a3862de61780ad845f6f280f2e753941e4",
+    "source/crates/ledger-cp03/src/store.rs": "473ba8e0d326beaddf446f247da542ff65d4f1f9c639ff1f1507c31bb365b0ea",
+    "source/crates/ledger-cp03/src/store_archive.rs": "20e9181c965bc2300de95463f206a62d230d98adb570e87af6520a9231066b77",
+    "source/crates/ledger-cp03/src/tree.rs": "4a94350969b1b060fdc2cf005a1adede25ac8a9cdafeea2c8b9d3d6249737bf3",
+    "source/crates/ledger-cp03/src/trusted.rs": "2c9aa588fc5169f56003813e194d29e70ef92bf7b8d3ea7670772daeebd01b91",
+    "source/crates/ledger-cp03/src/schema-network04.sql": "83cab4bab10e465cca1ede4556fb3d0eb0278aae16333dec1d4539b66056aa9a",
+    "source/experiments/compact-history-v3/src/lib.rs": "a0fa57665a128f2f173dee81a12e66eed0dca9c29bacc09f2ca062c09b91ffed",
+    "source/experiments/compact-history-v3/src/genesis.rs": "1e2e6ac45b9c6727bd48233d9b7065d324e96eb8e7fd293783ac9544189ae25f",
+    "source/experiments/compact-history-v3/src/history.rs": "fc58f04561935a6a25e201997ea59d428587783f7d9ab8e3315d3f9900eacdfb"
+  }
+}

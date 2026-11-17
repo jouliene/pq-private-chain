@@ -1,0 +1,23 @@
+{
+  "files": {
+    "CORE_SOURCE01.json": "79971fe908629d6cb4a7eef7474680e416b9e11db4252cae51a89c6d2e5239bc",
+    "Cargo.lock": "34537a69abfb5a5d84f6148f1ce3f8ebf1cd33d8b58d48b6869ae6bcd72f9b85",
+    "Cargo.toml": "fb1af71691dba7f94c65e7bce2aa941bb147008fd227c9884754809f57e0d701",
+    "README.md": "3689a202ceb8efe8763ed4edaf5fe92c2b70d359fc4b66188ddc4a1e5c3dfb24",
+    "archive.py": "ebcbccb52d713fa491fa71aa222677a1e38812f33b2ab0a973c8ee383393a0cb",
+    "build.py": "fee9eadf33653465703c42e632a13ab7a039db4bdae3f9c7e66fba88711ec9be",
+    "campaign.py": "d50ce76ef52ae5eb08f387ff6733edc0d94486b96964bc073d5a0114e483a22b",
+    "oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
+    "prepare.py": "bb6905378e869d23eaa95807c0e4c94836d5d1478e3ba3b53a1c13c2a8a872bf",
+    "sender.py": "460f2c114ded0ad91cde96e7b6e0ed753641e8e865ef0f948b6b287d3deae447",
+    "src/main.rs": "a63c183eeba73f86bdb19b87c54291b884a761f2ca2204f9fb5a8cebf980108a",
+    "src/metrics.rs": "31e7c30fba533447a17bf058fc006efbae7ad6b4a827a64a2fa13e8133859284",
+    "src/wire.rs": "597bc4719dbce2c9c04ee4c2614cf45f2e6cd801fa061a6532ef254b30bd9665",
+    "tests/schema04.py": "16ab5d173768f450bc05427238a8cb244755ee16decac91925dd764cab92976d",
+    "tests/source_controls.py": "f705518e69c6f1ec19b4d4ad17365e4eef89ef5f825ad2094e40ef3241a96f50"
+  },
+  "format": "CP04-TRANSPORT-SOURCE01",
+  "parent_source_sha256": "a7f6efd64077d54d5adda35d77da50fae20420301c17f9c8a361bd79be35c24e",
+  "revision": 2,
+  "scope": "Reviewed-candidate native lifetime measurement repair; actual SOURCE01 functional diagnostic preserved; SOURCE02 unbuilt/unrun"
+}

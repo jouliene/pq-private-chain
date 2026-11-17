@@ -31,6 +31,14 @@ all14 tables matched producer except the random local catalog ID.
 | Native validator whole lifecycle |85.923052 including oracle idle|24.898233 self +3.869699 waited helpers|405,336KiB self /227,760KiB helper separate maxima; sampled simultaneous tree463,940KiB |
 | Fresh native reopen |1.206745|1.207688|64,880KiB native peak |
 
+The measured topology has **one producer, one archive, one destination (fanout1)**.
+Each declared producer→archive and archive→destination link has its own100Mbit/s
+application budget with reverse request/ACK bytes counted. Archive GET overlaps
+destination receive; the two are one transfer. This gives no free replica or
+relay fanout: k destinations require k complete egress copies, and a single
+shared100Mbit/s archive egress would share its budget across them. Current archive
+source permits only one GET, so simultaneous k-way fanout is not implemented.
+
 The ordinary producer PUT plus destination service is
 13.949979421+20.837565988=**34.787545409s**, a serialized **stage-cost sum**.
 It is not observed end-to-end sojourn or steady throughput: this campaign archived

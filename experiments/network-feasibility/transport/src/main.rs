@@ -16,9 +16,10 @@ pub type Result<T>=std::result::Result<T,Failure>;
 pub fn need(ok:bool,message:&str)->Result<()>{if !ok{return Err(message.to_string().into())}Ok(())}
 fn unhex<const N:usize>(s:&str)->Result<[u8;N]>{need(s.len()==N*2&&s.bytes().all(|b|b.is_ascii_digit()||(b'a'..=b'f').contains(&b)),"canonical hex")?;let mut out=[0u8;N];for(i,b)in out.iter_mut().enumerate(){*b=u8::from_str_radix(&s[2*i..2*i+2],16)?;}Ok(out)}
 fn hex(b:&[u8])->String{b.iter().map(|x|format!("{x:02x}")).collect()}
-fn head(l:&Ledger)->Result<Value>{let h=l.head()?;let c=l.cache_usage()?;let a=l.verification_attempts();Ok(json!({"height":h.height,"block_id":hex(&h.id),"leaf_count":h.leaf_count,"root_le":hex(&h.root.iter().flat_map(|x|x.to_le_bytes()).collect::<Vec<_>>()),"fee_escrow":h.fees,"unconsumed_liabilities":h.liabilities,"cached_bytes":c.cached_bytes,"unexported_bytes":c.unexported_bytes,"archive_committed_bytes":c.archive_committed_bytes,"proof_attempts":a.proofs,"source_signature_attempts":a.source_signatures,"block_version":l.block_version(),"retention":format!("{:?}",c.policy.retention())}))}
+fn head(l:&Ledger)->Result<Value>{let h=l.head()?;let c=l.cache_usage()?;let a=l.verification_attempts();Ok(json!({"height":h.height,"block_id":hex(&h.id),"leaf_count":h.leaf_count,"root_le":hex(&h.root.iter().flat_map(|x|x.to_le_bytes()).collect::<Vec<_>>()),"fee_escrow":h.fees,"unconsumed_liabilities":h.liabilities,"hard_bytes":c.policy.hard_bytes(),"cached_bytes":c.cached_bytes,"unexported_bytes":c.unexported_bytes,"archive_committed_bytes":c.archive_committed_bytes,"proof_attempts":a.proofs,"source_signature_attempts":a.source_signatures,"block_version":l.block_version(),"retention":format!("{:?}",c.policy.retention())}))}
 fn run()->Result<()>{
-    let args=std::env::args().collect::<Vec<_>>();need(args.len()==4,"validator DB CHAIN ARCHIVE_ADDRESS")?;
+    let args=std::env::args().collect::<Vec<_>>();need([4,5].contains(&args.len()),"validator DB CHAIN ARCHIVE_ADDRESS [RETAIN_BYTES]")?;
+    let retain_bytes=if args.len()==5{args[4].parse::<u64>()?}else{512*1024*1024};need([512*1024*1024,2*1024*1024*1024].contains(&retain_bytes),"reviewed retain quota")?;
     let db=PathBuf::from(&args[1]);let chain=unhex::<32>(&args[2])?;let address=&args[3];let mut ledger:Option<Ledger>=None;
     println!("{}",json!({"ready":true,"pid":std::process::id(),"role":"validator","direct_fixture_paths":false}));std::io::stdout().flush()?;
     let mut input=std::io::BufReader::new(std::io::stdin());let mut line=Vec::new();
@@ -35,7 +36,7 @@ fn run()->Result<()>{
                     let kind=if op=="init"{1}else{2};if kind==1{need(size<=339320,"genesis cap")?;need(ledger.is_none(),"already initialized")?;}
                     let (frame,net)=metrics::measure(&mut rows,"receive-identity",||wire::get(address,id,size,kind))??;
                     if op=="init"{
-                        ledger=Some(metrics::measure(&mut rows,"trusted-init-durable",||Ledger::create_with_archive_policy(&db,chain,&frame,CachePolicy::retaining(512*1024*1024)?))??);
+                        ledger=Some(metrics::measure(&mut rows,"trusted-init-durable",||Ledger::create_with_archive_policy(&db,chain,&frame,CachePolicy::retaining(retain_bytes)?))??);
                         Ok(json!({"accepted":true,"transport":net,"state":head(ledger.as_ref().unwrap())?}))
                     }else{
                         let (header,bodies)=metrics::measure(&mut rows,"bounded-frame-parse-copy",||wire::decode(&frame))??;drop(frame);
