@@ -1,0 +1,246 @@
+{
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 24832,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.002692,
+    "user_seconds": 0.0,
+    "wall_seconds": 29.816852002986707
+  },
+  "boundary": {
+    "actual_node_host_pid": 2481175,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "denied_paths": 4,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "host_proc_root_denied": true,
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 3,
+    "namespaces": {
+      "mnt": "mnt:[4026532890]",
+      "net": "net:[4026532894]",
+      "pid": "pid:[4026532893]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "fixed_failure_stage": null,
+  "passed": true,
+  "restore": false,
+  "sampling": {
+    "confirmed_permission_exit_races": 0,
+    "epochs": 486,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 316340,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 12735,
+        "first_seconds": 0.2507421199698001,
+        "host_pid": 2481175,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 264,
+          "reaped_child_user": 1782,
+          "self_system": 15,
+          "self_user": 61
+        },
+        "last_seconds": 29.807496430003084,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 129656,
+        "samples": 486,
+        "starttime_ticks": 85564844
+      },
+      {
+        "fd_identity_checks": 339,
+        "first_seconds": 1.5472382990410551,
+        "host_pid": 2481194,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 5,
+          "reaped_child_user": 170,
+          "self_system": 58,
+          "self_user": 267
+        },
+        "last_seconds": 6.529075448052026,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 20,
+        "peak_sampled_rss_kib": 160352,
+        "samples": 82,
+        "starttime_ticks": 85564977
+      },
+      {
+        "fd_identity_checks": 84,
+        "first_seconds": 3.8783807350555435,
+        "host_pid": 2481195,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 166
+        },
+        "last_seconds": 5.5466252360492945,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 21,
+        "peak_sampled_rss_kib": 164168,
+        "samples": 28,
+        "starttime_ticks": 85565211
+      },
+      {
+        "fd_identity_checks": 343,
+        "first_seconds": 6.733030786039308,
+        "host_pid": 2481203,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 5,
+          "reaped_child_user": 175,
+          "self_system": 57,
+          "self_user": 267
+        },
+        "last_seconds": 11.783739547012374,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 29,
+        "peak_sampled_rss_kib": 160376,
+        "samples": 83,
+        "starttime_ticks": 85565498
+      },
+      {
+        "fd_identity_checks": 90,
+        "first_seconds": 9.064419950009324,
+        "host_pid": 2481206,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 174
+        },
+        "last_seconds": 10.862334665027447,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 30,
+        "peak_sampled_rss_kib": 164756,
+        "samples": 30,
+        "starttime_ticks": 85565734
+      },
+      {
+        "fd_identity_checks": 344,
+        "first_seconds": 14.579102696035989,
+        "host_pid": 2481334,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 5,
+          "reaped_child_user": 173,
+          "self_system": 57,
+          "self_user": 270
+        },
+        "last_seconds": 19.62370275799185,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 51,
+        "peak_sampled_rss_kib": 160340,
+        "samples": 83,
+        "starttime_ticks": 85566282
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 16.91020588099491,
+        "host_pid": 2481335,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 4,
+          "self_user": 169
+        },
+        "last_seconds": 18.64144718903117,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 52,
+        "peak_sampled_rss_kib": 164220,
+        "samples": 29,
+        "starttime_ticks": 85566518
+      },
+      {
+        "fd_identity_checks": 340,
+        "first_seconds": 22.249104246031493,
+        "host_pid": 2481401,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 169,
+          "self_system": 57,
+          "self_user": 270
+        },
+        "last_seconds": 27.294793677981943,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 83,
+        "peak_sampled_rss_kib": 160336,
+        "samples": 83,
+        "starttime_ticks": 85567051
+      },
+      {
+        "fd_identity_checks": 84,
+        "first_seconds": 24.64434577000793,
+        "host_pid": 2481404,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 165
+        },
+        "last_seconds": 26.312085230019875,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 84,
+        "peak_sampled_rss_kib": 167868,
+        "samples": 28,
+        "starttime_ticks": 85567288
+      }
+    ],
+    "permission_exit_evidence_first64": [],
+    "raced_exits": 0,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  },
+  "terminal_cpu": {
+    "actual_node_host_pid": 2481175,
+    "clock_ticks_per_second": 100,
+    "node_self_seconds": 0.76,
+    "node_waited_descendant_seconds": 20.46,
+    "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+    "starttime_ticks": 85564844,
+    "ticks": {
+      "reaped_child_system": 264,
+      "reaped_child_user": 1782,
+      "self_system": 15,
+      "self_user": 61
+    }
+  },
+  "terminal_metrics": {
+    "counts": {
+      "history_bytes": 73790,
+      "history_reads": 3,
+      "history_wall_seconds": 0.17561761499999556,
+      "proofs": 4
+    },
+    "format": "CP04-ISOLATED-WALLET-DONE01",
+    "private_material_persisted_or_hashed": false,
+    "process_self": {
+      "fsRead": 0,
+      "fsWrite": 13744,
+      "involuntaryContextSwitches": 814,
+      "maxRSS": 132716,
+      "systemCPUTime": 156768,
+      "userCPUTime": 613095,
+      "voluntaryContextSwitches": 1271
+    },
+    "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+    "restore": false
+  }
+}

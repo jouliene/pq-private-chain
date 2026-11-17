@@ -1,0 +1,80 @@
+{
+  "conclusion": "Source02 correctly rejected same-identity live PermissionError. Original receipt/local-witness spend completed, but fresh backup-only spend and complete small5 did not. Exec-transition explanation is unproven by these receipts.",
+  "conditional_retry_requirements": [
+    "Fixed monotonic deadline and attempt cap; charge retry wall time.",
+    "Bind original PID/starttime across all attempts; never reset expected identity.",
+    "Restart full policy observation; require successful namespaces/seccomp/mount/FD and closing identity check, or independently confirmed same-identity exit/double absence.",
+    "Persistent live/unreadable/ambiguous/changed identity remains fatal.",
+    "Keep first-failure fixed metadata plus bounded retries/elapsed/terminal classification; no raw private exception strings.",
+    "Keep mandatory actual Parent/prover observation and all existing isolation checks."
+  ],
+  "failure": {
+    "classification": "live",
+    "confirmed_exit": false,
+    "errno": 13,
+    "error_type": "PermissionError",
+    "expected_starttime_ticks": 85567958,
+    "host_pid": 2481489,
+    "observed_starttime_ticks": 85567958,
+    "observed_state": "R",
+    "operation": "fd_directory"
+  },
+  "format": "CP04-INDEPENDENT-SMALL02-FAILURE-REVIEW01",
+  "inputs": {
+    "RESULT.json": "48b5fe203bb90a7e52bb93c5606e94fe655f1d5698c17f81fbd8ae71f95761a0",
+    "original-process.json": "7c4d727d761854c6a75960481d2bc290ba2f8e818123354065d5f524825a2944",
+    "restore-process.json": "531d3aa8277823810c7a10f5228335e26055529c105a9c6fc9b6661c24601f70"
+  },
+  "original_actor": {
+    "admitted_events": [
+      {
+        "height": "1",
+        "op": "admit",
+        "proof_bodies": 2,
+        "restore": false,
+        "seconds": 11.930866800015792
+      },
+      {
+        "height": "2",
+        "op": "admit",
+        "proof_bodies": 1,
+        "restore": false,
+        "seconds": 19.720527578960173
+      },
+      {
+        "height": "3",
+        "op": "admit",
+        "proof_bodies": 1,
+        "restore": false,
+        "seconds": 27.417472996981815
+      }
+    ],
+    "passed": true,
+    "registered_proof_count": 4,
+    "terminal_cpu": {
+      "actual_node_host_pid": 2481175,
+      "clock_ticks_per_second": 100,
+      "node_self_seconds": 0.76,
+      "node_waited_descendant_seconds": 20.46,
+      "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+      "starttime_ticks": 85564844,
+      "ticks": {
+        "reaped_child_system": 264,
+        "reaped_child_user": 1782,
+        "self_system": 15,
+        "self_user": 61
+      }
+    },
+    "wrapper_exit": 0
+  },
+  "passed": false,
+  "restore_actor": {
+    "passed": false,
+    "public_scan_received": true,
+    "registered_restore_proofs": 0,
+    "wrapper_exit": -9
+  },
+  "scope": "Independent read-only inspection of actual public RESULT and two actor process receipts; no native/proof execution.",
+  "source_runtime_unchanged": true,
+  "source_sha256": "e57fbee1d951b33051e4329b4dc6e17d01719d3b2c77f1e43b53037f5dcb5c2e"
+}

@@ -1,0 +1,11 @@
+{
+  "format": "CP04-WALLET-INTEGRATION-CLAIM01",
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "ledger_cpu": 1,
+  "oracle_db_never_mounted": true,
+  "profile": "small",
+  "proof_ceiling": 5,
+  "source_sha256": "216ec4a20d50a4dc9125ef0624882bcd2e9e347c4f25d3732c3ef179937592d5",
+  "wallet_cpu": 0,
+  "watchdog_seconds": 900
+}

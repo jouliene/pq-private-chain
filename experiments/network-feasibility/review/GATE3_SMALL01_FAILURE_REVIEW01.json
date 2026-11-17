@@ -1,0 +1,42 @@
+{
+  "format": "CP04-INDEPENDENT-SMALL01-FAILURE-REVIEW01",
+  "actual_passed": false,
+  "source_sha256": "216ec4a20d50a4dc9125ef0624882bcd2e9e347c4f25d3732c3ef179937592d5",
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "result_sha256": "89674261cf754f45e2fc1f852aed6fbb6a4051241fa8203b9765de2a8c49b267",
+  "original_process_sha256": "93a072debbc9c4fde1f62e45f4903612fc996b78795db8f31c641694a6a93870",
+  "source_runtime_unchanged": true,
+  "failure_type": "PermissionError",
+  "known_failure_operation": null,
+  "actual_wrapper": {
+    "exit": -9,
+    "first_wait4": true,
+    "maxrss_kib": 24656,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.001291,
+    "user_seconds": 0.001291,
+    "wall_seconds": 10.98223736207001
+  },
+  "registered_proofs": 1,
+  "positive_admissions": 0,
+  "actual_native_operations": [
+    "init-retain"
+  ],
+  "observed_prover_rows": [
+    {
+      "host_pid": 2478283,
+      "namespace_pid": 21,
+      "samples": 28,
+      "last_seconds": 5.618166267988272
+    },
+    {
+      "host_pid": 2478301,
+      "namespace_pid": 30,
+      "samples": 28,
+      "last_seconds": 10.913851363002323
+    }
+  ],
+  "assessment": "Likely procfs exit-race PermissionError, not exact syscall diagnosis: original receipt lacks operation/errno. No payment-cycle, backup or wallet-crypto PASS.",
+  "permitted_correction": "On PermissionError, immediately re-read PID state/identity; classify omission only if confirmed absent or Z/X. Live or unreadable/ambiguous identity must remain failure. Record fixed public operation/errno/race classification, no private stream.",
+  "reviewer_execution": "Read-only public receipts/source; no native/proof rerun."
+}

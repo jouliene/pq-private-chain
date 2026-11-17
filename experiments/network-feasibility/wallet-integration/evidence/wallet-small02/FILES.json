@@ -1,0 +1,24 @@
+{
+  "files": {
+    "RESULT.json": {
+      "bytes": 11245,
+      "sha256": "48b5fe203bb90a7e52bb93c5606e94fe655f1d5698c17f81fbd8ae71f95761a0"
+    },
+    "claim.json": {
+      "bytes": 374,
+      "sha256": "78253b48a5110ff083ba92e4ad0daa99000c46b11bc1db7bb3c5d6338250d83b"
+    },
+    "original-process.json": {
+      "bytes": 7673,
+      "sha256": "7c4d727d761854c6a75960481d2bc290ba2f8e818123354065d5f524825a2944"
+    },
+    "restore-process.json": {
+      "bytes": 2263,
+      "sha256": "531d3aa8277823810c7a10f5228335e26055529c105a9c6fc9b6661c24601f70"
+    }
+  },
+  "format": "CP04-SAFE-WALLET-EVIDENCE01",
+  "scope": "Exact public receipts. Four genuine positive admissions; original receipt/local-witness spend passed, original process exited0. Restore observer failed at live same-start PID FD directory; no restored proof or full cycle PASS. Full Parent public receipts preserved in original local label; no private streams persisted.",
+  "source_label": "wallet-small02",
+  "status": "FAILED"
+}

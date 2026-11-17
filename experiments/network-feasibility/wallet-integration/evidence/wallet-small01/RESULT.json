@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "op": "boundary",
+      "restore": false,
+      "seconds": 0.2429631130071357
+    },
+    {
+      "actual_new_ledger_exists_and_wallet_denied": true,
+      "op": "init",
+      "restore": false,
+      "seconds": 0.3028821350308135
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 6.718615805963054
+    }
+  ],
+  "failure_type": "PermissionError",
+  "fixed_failure_reason": null,
+  "format": "CP04-WALLET-INTEGRATION-RESULT01",
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "native_cli": [
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 63012,
+      "operation": "init-retain",
+      "public_result_validated": true,
+      "system_seconds": 0.031004,
+      "user_seconds": 1.076141,
+      "wall_seconds": 1.1258504419820383
+    }
+  ],
+  "passed": false,
+  "private_raw_streams_or_backup_persisted_or_hashed": false,
+  "profile": "small",
+  "proofs": [
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.8086948760319501,
+        "wait4_maxrss_kib": 168300,
+        "wait4_system_seconds": 0.059996,
+        "wait4_user_seconds": 1.724888
+      },
+      "actual_worker_namespace_pid": 21,
+      "approved_identities": {
+        "approved_runtime_digest": "eeec724d8f219ac8def86dba739a1d95cb234393870ebed9f12bde586972764d",
+        "approved_runtime_receipt_sha256": "85401558a3041278a33c3d149cb57e3a6b518a83f66597251cbd64f40ff96d86",
+        "binary_sha256": "eddc69a6fbdee87f39a5d839fed3325d76b1a69b601a31b016868bf5eb2a11fe",
+        "manifest_sha256": "c0915abe7192dc40d5251941044027d280603d7f73a898a7423351a61c6696b8"
+      },
+      "arity": 0,
+      "body": "public-output/credit-0.body",
+      "body_bytes": 1749081,
+      "body_sha256": "689beee15a8c7e9159460a7b8870a9a77adfe4a7a7b1c049b48340b86f5409cd",
+      "label": "credit-0",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/wallet-small01-credit-0.json",
+      "parent_receipt_sha256": "85a36b96721eaa7b61b9cecf3a330ad0d2936d2d71484d347b44bbee73b289c6",
+      "positive_admissions": 0,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1739658,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    }
+  ],
+  "source_runtime_unchanged": true,
+  "source_sha256": "216ec4a20d50a4dc9125ef0624882bcd2e9e347c4f25d3732c3ef179937592d5"
+}

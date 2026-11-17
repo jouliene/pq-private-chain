@@ -1,0 +1,136 @@
+{
+  "actual_wrapper": {
+    "exit": -9,
+    "first_wait4": true,
+    "maxrss_kib": 24656,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.001291,
+    "user_seconds": 0.001291,
+    "wall_seconds": 10.98223736207001
+  },
+  "boundary": {
+    "actual_node_host_pid": 2478262,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "denied_paths": 4,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "host_proc_root_denied": true,
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 3,
+    "namespaces": {
+      "mnt": "mnt:[4026532890]",
+      "net": "net:[4026532894]",
+      "pid": "pid:[4026532893]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "passed": false,
+  "restore": false,
+  "sampling": {
+    "epochs": 175,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 315820,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 4880,
+        "first_seconds": 0.23252139205578715,
+        "host_pid": 2478262,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 69,
+          "reaped_child_user": 448,
+          "self_system": 7,
+          "self_user": 21
+        },
+        "last_seconds": 10.975824065040797,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 124848,
+        "samples": 176,
+        "starttime_ticks": 85505581
+      },
+      {
+        "fd_identity_checks": 338,
+        "first_seconds": 1.5544830140424892,
+        "host_pid": 2478282,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 5,
+          "reaped_child_user": 172,
+          "self_system": 59,
+          "self_user": 270
+        },
+        "last_seconds": 6.604324261075817,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 20,
+        "peak_sampled_rss_kib": 160376,
+        "samples": 83,
+        "starttime_ticks": 85505716
+      },
+      {
+        "fd_identity_checks": 84,
+        "first_seconds": 3.9498649949673563,
+        "host_pid": 2478283,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 4,
+          "self_user": 167
+        },
+        "last_seconds": 5.618166267988272,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 21,
+        "peak_sampled_rss_kib": 165764,
+        "samples": 28,
+        "starttime_ticks": 85505955
+      },
+      {
+        "fd_identity_checks": 295,
+        "first_seconds": 6.83230126707349,
+        "host_pid": 2478292,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 40,
+          "self_user": 199
+        },
+        "last_seconds": 10.975824065040797,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 29,
+        "peak_sampled_rss_kib": 159384,
+        "samples": 68,
+        "starttime_ticks": 85506246
+      },
+      {
+        "fd_identity_checks": 84,
+        "first_seconds": 9.237215607077815,
+        "host_pid": 2478301,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 165
+        },
+        "last_seconds": 10.913851363002323,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 30,
+        "peak_sampled_rss_kib": 165392,
+        "samples": 28,
+        "starttime_ticks": 85506486
+      }
+    ],
+    "raced_exits": 0,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  }
+}

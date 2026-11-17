@@ -1,0 +1,58 @@
+{
+  "actual_host_pid": 2465673,
+  "exit": 0,
+  "external_actual_mount_denials": 2,
+  "external_namespace_readback": {
+    "mnt": true,
+    "net": true,
+    "pid": true
+  },
+  "first_wait4_wrapper_system_seconds": 0.001432,
+  "first_wait4_wrapper_user_seconds": 0.0,
+  "format": "CP04-WALLET-ISOLATION-CONTROL01",
+  "inherited_public_database_fds_open_in_parent": 2,
+  "inherited_public_database_fds_passed_to_child": 0,
+  "passed": true,
+  "probe": {
+    "denied_paths": 2,
+    "denied_socket_families": [
+      2,
+      10,
+      1
+    ],
+    "descendant": {
+      "denied_paths": 2,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "host_proc_root_denied": true,
+      "inherited_fd_identity_checks": 3,
+      "namespaces": {
+        "mnt": "mnt:[4026532889]",
+        "net": "net:[4026532893]",
+        "pid": "pid:[4026532892]"
+      },
+      "pid": 3,
+      "seccomp": "2"
+    },
+    "host_proc_root_denied": true,
+    "inherited_fd_identity_checks": 3,
+    "namespaces": {
+      "mnt": "mnt:[4026532889]",
+      "net": "net:[4026532893]",
+      "pid": "pid:[4026532892]"
+    },
+    "pid": 2,
+    "seccomp": "2"
+  },
+  "scope": "Public policy/descendant probe only; no private wallet or proof executed",
+  "source_sha256": {
+    "isolation.py": "5a601f0152a261bbea256f369a74f4c4fe01a9fbdde8a5f65c501a275087993b",
+    "isolation_control.py": "b8206c26fca54d6d826852b3d522e3a1edf4afbd22ee7e917d76155afd4550e9",
+    "isolation_probe.py": "a2b0507309cfed1620708dbd4cb1aae7ceeb54b906cb618e311d77ed39dfcc52"
+  },
+  "wall_seconds": 0.06737980211619288,
+  "wrapper_usage_is_not_wallet_tree_resource_accounting": true
+}

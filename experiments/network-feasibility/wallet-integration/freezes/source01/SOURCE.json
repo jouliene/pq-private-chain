@@ -1,0 +1,12 @@
+{
+  "files": {
+    "../transport/oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
+    "../wallet-witness/joint_controls.mjs": "a5fae49176f4f6cf74a2aefc0580292506cb696ef41e8600f457762d910d1793",
+    "GATE3_PROFILE.json": "07e296d391e47f96f6d60fe6cad99bccc03ff16315af871e5b7a901ea1f96f5e",
+    "isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "isolation_probe.py": "a2b0507309cfed1620708dbd4cb1aae7ceeb54b906cb618e311d77ed39dfcc52",
+    "run.py": "e074057760d27ee3792b8199cb08ad11149d5056918c7853e48ebd0358bdd560",
+    "wallet.mjs": "0edab447223b3424e4db9c7342f9f4e887eb4344685cdfc4bf57460c13a0722f"
+  },
+  "format": "CP04-WALLET-INTEGRATION-SOURCE01"
+}

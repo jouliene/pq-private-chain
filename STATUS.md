@@ -1,6 +1,6 @@
 # Network feasibility: ACTIVE
 
-Native Goal read back ACTIVE on 2026-11-17 08:58 UTC. Global blockchain ACTIVE.
+Native Goal read back ACTIVE on 2026-11-17 10:58 UTC. Global blockchain ACTIVE.
 Canonical project: /home/neo/jouliene/pq-private-chain. Read the complete
 NETWORK_FEASIBILITY_GOAL.md. Historical public baseline d8f800037b5efbb76a5a1d6d4d3100e55f676a00.
 Local Gate1 checkpoint2ab99fb2f5e76452eb49b1eb9c6e3f0d66816e99; Gate2 source work is not yet
@@ -33,7 +33,11 @@ readbacks and SOURCE03/build03/profile remain closed evidence, not rerun targets
 
 Root owns contracts, status, Git, manifests, integration/acceptance and the isolated
 Gate3 wallet actor/policy. ALLOCATION19 fresh gate3a build TERMINAL PASS, and
-ALLOCATION20 native helper13JS+5Rustcontrols TERMINAL PASS. No heavy job LIVE.
+ALLOCATION20 native helper13JS+5Rustcontrols TERMINAL PASS. ALLOCATION21
+small5 integrated wallet diagnostic TERMINAL FAILED on controller PermissionError;
+full264 remains gated. ALLOCATION22 small02 TERMINAL FAILED in restore process observation. Original
+receipt/local-witness spend4positiveadmissions PASSED; backup-spend unconfirmed.
+No heavy job live. Allocation23 is a <=10s public-only process diagnostic.
 Do not poll/restart sessions72725,14274,5063,58517 or rebuild these exact inputs.
 Fresh source CORE_MANIFEST1b9888399a91102b84f05970ce65100d77a0a8a56519c35b13cbb8deb915a1aa;
 new helper/tree/jointwallet reviewed; W1 packet callback lifetime fixed in source.
@@ -64,8 +68,9 @@ and component controls. Genuine wallet same-witness execution remains pending.
 Gate3 acceptance still requires actual isolated receive/spend/backup restore,
 >256 changing-root expiry, selected-branch rewind and invalid/valid followups.
 
-Native Goal readback ACTIVE10:09UTC. Owner material update10:46UTC; next regular
-approximately11:00UTC, material findings sooner.
+Native Goal readback ACTIVE10:58UTC. Owner updates during10:58-11:00UTC.
+Continue short reports at least every30minutes of active work; material results
+sooner. Report measured criterion closures, not invented completion percentages.
 No percentage claim. Latest progress: actual Gate2 accepted, resource decision
 recorded, Gate3 source work allocated. No Gate3 functional PASS yet. Root actual isolation01 public probe passed:
 wallet-integration/.work/isolation01/RESULT.json, own+descendant real namespaces,
@@ -155,8 +160,10 @@ closed prerequisites. Pipeline SOURCE03 has18frozen files and unchanged profile.
 ## Exact restart / next useful actions
 
 1. Read current ownership and actual agent/job state. All producer/network campaigns
-   above are closed; do not repeat them. Local HEADad8a76bec4dafa51131d423963821b8cfa450249 records reviewed full Gate2
-   evidence/decision (actual local commit success; not pushed). Gate3 is uncommitted.
+   above are closed; do not repeat them. Local HEADfd2fa98d54d83ca58227cfd9bbce23a7e771ff01 records reviewed Gate3
+   native/joint-wallet core, clean build and13+5component controls (actual commit
+   success; not pushed). Prior ad8a76b records Gate2. Actor/controller integration
+   remains uncommitted; raw Rust stdout EOF blank line was preserved unchanged.
 2. Native/helper/wallet source review, new gate3a build and13+5component controls
    are closed. Review run.py and actor/isolation final wiring. Freeze an exact
    experiment SOURCE.json (including fixed joint_controls/oracle dependencies).
@@ -237,3 +244,80 @@ Root checked actual compiled tree.rs depfile/source identity. Created only empty
 public/evidence mountpoints in NEW gate3a source; no old installation/pinned file
 changed. ALLOCATION20: native13JScontrols and5Rustunitcontrols, <=120s each, CPU0,
 no proof creation. Preserve logs under wallet-witness/native-controls/.work/native01.
+
+## Allocation21: isolated genuine wallet diagnostic
+
+2026-11-17 11:04UTC: Root and independent reviewer approved exact SOURCE
+216ec4a20d50a4dc9125ef0624882bcd2e9e347c4f25d3732c3ef179937592d5.
+run.py e074057760d27ee3792b8199cb08ad11149d5056918c7853e48ebd0358bdd560;
+actor0edab447223b3424e4db9c7342f9f4e887eb4344685cdfc4bf57460c13a0722f.
+Same gate3a installation c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b.
+Exclusive label wallet-small01;5genuineproofs,900s,4GiBAS,8GiBpublicdisk;
+walletCPU0/nativeledgerCPU1. No further heavy job until terminal.
+Question: actual local private witnesses plus receipt/spend and backup-only
+fresh-process spend without ledger/path/FD/socket oracle. Old Gate2 DBs optional,
+not prerequisites; actual new ledger denial checked. Public terminal handshake
+measures Node SELF and waited descendants without double-counting Parent work.
+Private backup/raw streams never written or hashed. Full expiry/reorg is NOT
+accepted by this diagnostic. Preserve exclusive failures; no source edits live.
+
+Command: python3 -I experiments/network-feasibility/wallet-integration/run.py
+--label wallet-small01 --profile small
+--installation .work/gate3a/fresh/installation.json
+--approve-installation c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b
+--approve-source 216ec4a20d50a4dc9125ef0624882bcd2e9e347c4f25d3732c3ef179937592d5
+
+Allocation21 launched with exec session55400. Do not duplicate or edit source
+while live. Poll only this session for actual terminal result.
+
+Allocation21 TERMINAL FAILED: exec session55400 exit1, wallet-small01 source01
+unchanged. Actual namespace/FD/socket boundary passed; init-retain genuine native
+exit0. First credit proof registered (1739658proofbytes/1749081bodybytes),
+second prover worker observed, then controller PermissionError at~10.98s.
+Original actor forcibly terminated during failure cleanup. Zero positive body
+admissions; no full wallet PASS. Public raw RESULT/original-process/claim and
+Parent proof receipts remain in exclusive label. Suspected procfs exit-race
+requires source evidence and narrow review, not permission bypass. Preserve exact
+source01 before changing runner; nextlabel must be new and separately allocated.
+
+Safe unchanged allocation21 public evidence copied to wallet-integration/evidence/
+wallet-small01/ (4receipts,1917676bytes), FILES digest
+53fb6501ecc7f1551fc2a7d1ba3caeb64d8820fa9ef674c2c3d65dae2ed8aa51.
+Exact run.py/SOURCE01 preserved in wallet-integration/freezes/source01/.
+Reviewer GATE3_SMALL01_FAILURE_REVIEW01.json confirms no known exact failing
+syscall and zero positive admissions; do not relabel the failure a crypto PASS.
+
+Runner SOURCE02 e57fbee1d951b33051e4329b4dc6e17d01719d3b2c77f1e43b53037f5dcb5c2e
+now binds run.py b6fc63dda50d034072b51106fbe1e5f9e238ea179c74f9024bd75a8d18ce4158.
+Root reviewed complete source01 diff. Only instrumentation changed: captured
+PID/starttime, explicit stat (permission never means absence), immediate same-PID
+exit evidence, bounded safe error metadata. Live/ambiguous/unreadable remains
+fatal. Author reports12light IPC/race controls; independent source review pending.
+No next genuine run allocated yet.
+
+Allocation22 (2026-11-17 11:14UTC): independent reviewer source GO at SOURCE02
+e57fbee1d951b33051e4329b4dc6e17d01719d3b2c77f1e43b53037f5dcb5c2e.
+Root agrees after full diff read. Execute new wallet-small02 label against same
+gate3a approved installation; small5/900s/4GiBAS/8GiBpublicdisk/CPU0+1 unchanged.
+Question: does narrow observer correction permit actual wallet cycle while live
+inaccessible-process checks remain mandatory? No crypto/core/policy change.
+Historical small01 remains FAILED; original exact syscall is unknown.
+
+Allocation22 actual exec session92973 LIVE. Do not duplicate or edit frozen
+SOURCE02 while live. Exact command equals allocation21 with label wallet-small02
+and approve-source e57fbee1d951b33051e4329b4dc6e17d01719d3b2c77f1e43b53037f5dcb5c2e.
+
+Allocation22 session92973 TERMINAL exit1. Source/runtime unchanged. Exact new
+evidence: PermissionError errno13 at fd_directory; PID2481489/start85567958
+observed still R with same identity. Source02 correctly remained fatal. Original
+actor exited0 after4positivegenuineadmissions, private receipt/localwitness spend
+and terminal resource handshake (NodeSELF0.76s/waiteddescendants20.46s, sampled
+tree316340KiB). Restore reached publichistoryscan, no restoredproof. No Gate3PASS.
+Safe exact4receipts in evidence/wallet-small02/; full rawParent/publicartifacts
+remain original.work label. Exact source02/manifest saved in freezes/source02/.
+Allocation23: arch_consensus_roles sole owner proc-observation/, <=10s/128harmless
+publicexecs undersamepolicy, no keys/proofs/nativebuild. Determine whether live
+procfs EACCES can resolve to full samePID policy observation or proven exit.
+Runner author awaits evidence for a tinybounded full-resample retry; reviewer
+requires unchangedidentity and fatal persistentlive/unreadable/ambiguous/reused.
+No subsequent genuine run allocated. Do not repeat crypto while probing OS issue.

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "RESULT.json": {
+      "bytes": 2495,
+      "sha256": "89674261cf754f45e2fc1f852aed6fbb6a4051241fa8203b9765de2a8c49b267"
+    },
+    "claim.json": {
+      "bytes": 374,
+      "sha256": "c71c652657b1555befd080d7f1f5f24fe64e5fc74fd9c24065beb84a2e35c2f6"
+    },
+    "original-process.json": {
+      "bytes": 4074,
+      "sha256": "93a072debbc9c4fde1f62e45f4903612fc996b78795db8f31c641694a6a93870"
+    },
+    "parent-evidence/wallet-small01-credit-0.json": {
+      "bytes": 1910733,
+      "sha256": "85a36b96721eaa7b61b9cecf3a330ad0d2936d2d71484d347b44bbee73b289c6"
+    }
+  },
+  "format": "CP04-SAFE-WALLET-EVIDENCE01",
+  "scope": "Exact public receipts only. One registered genuine credit proof, zero positive ledger admissions. No complete cycle PASS; absent second Parent terminal receipt is not manufactured.",
+  "source_label": "wallet-small01",
+  "status": "FAILED"
+}

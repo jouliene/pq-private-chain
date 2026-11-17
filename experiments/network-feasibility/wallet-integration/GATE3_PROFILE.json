@@ -1,0 +1,111 @@
+{
+  "format": "CP04-GATE3-RESEARCH-PROFILE01",
+  "declaration_status": "NOT_EXECUTED",
+  "decision_question": "Does the actual isolated wallet derive private local witnesses and recover/spend through expiry and selected-branch changes without a ledger/path oracle?",
+  "cryptography": "Unchanged CP03 complete relation and parameters; new fixed local tree helper opcode6 only",
+  "bounds": {
+    "depth": 40,
+    "max_live_owned_notes_per_wallet": 8,
+    "rewind_blocks": 8,
+    "accepted_anchor_window": 256,
+    "retained_receiving_keys_per_wallet_max": 2,
+    "max_live_sessions": 3,
+    "pending_private_payment_max_per_session": 1,
+    "saved_unadmitted_public_expiry_body_max": 1,
+    "socket_routes": "No external AF_INET/AF_INET6/AF_UNIX socket API; local inherited stdin/stdout and socketpair IPC only",
+    "wallet_address_space_bytes": 4294967296,
+    "experiment_public_disk_bytes": 8589934592,
+    "full_proof_ceiling": 264,
+    "small_proof_ceiling": 5,
+    "full_outer_watchdog_seconds": 5400,
+    "small_outer_watchdog_seconds": 900,
+    "one_heavy_job": true
+  },
+  "funding": {
+    "source_count": 2,
+    "credits_atoms": [
+      1000000000,
+      100000000
+    ],
+    "fees_by_arity": [
+      2116775,
+      2112174,
+      2112248
+    ],
+    "rolling_after_credit_atoms": 997883225,
+    "rolling_255_ordinary_fee_atoms": 538623240,
+    "rolling_after_255_atoms": 459259985,
+    "note": "Two 2-output synthetic credits in one block; separate payer and rolling wallets. No permissionless issuance claim."
+  },
+  "full_sequence": [
+    {
+      "stage": "funding",
+      "new_proofs": 2,
+      "selected_height": 1
+    },
+    {
+      "stage": "ordinary two-output receipt to backed-up rotated receiver key",
+      "new_proofs": 1,
+      "selected_height": 2
+    },
+    {
+      "stage": "genuine public stale-anchor draft, temporarily admitted/rolled back for positive validity control",
+      "new_proofs": 1,
+      "selected_height": 2
+    },
+    {
+      "stage": "recipient spends second note while first note remains old/unspent",
+      "new_proofs": 1,
+      "selected_height": 3
+    },
+    {
+      "stage": "same old public draft accepted then rolled back on selected common-prefix branch",
+      "new_proofs": 0,
+      "selected_height": 3
+    },
+    {
+      "stage": "255 genuine rolling payments, each in a changing-root block",
+      "new_proofs": 255,
+      "selected_height": 258
+    },
+    {
+      "stage": "actual old-anchor rejection, then local refresh and genuine spend of old note",
+      "new_proofs": 1,
+      "selected_height": 259
+    },
+    {
+      "stage": "genuine orphan-only child draft before rollback",
+      "new_proofs": 1,
+      "selected_height": 259
+    },
+    {
+      "stage": "rollback to258 and replacement rolling block",
+      "new_proofs": 1,
+      "selected_height": 259
+    },
+    {
+      "stage": "orphan child rejected; original wallet disposed; backup-only fresh process spends retained old funds on selected branch",
+      "new_proofs": 1,
+      "selected_height": 260
+    }
+  ],
+  "small_sequence": {
+    "funding_proofs": 2,
+    "ordinary_receipt_proofs": 1,
+    "recipient_spend_proofs": 1,
+    "fresh_backup_restore_spend_proofs": 1,
+    "scope": "First integrated path diagnostic; no changing-root expiry or branch PASS"
+  },
+  "requirements": [
+    "Independent full native selected endpoint and exact common history; controller supplies no owned indices/tokens/paths",
+    "One backup after receiving-key rotation and before receipt; only backup plus public inventory/genesis/endpoint/history crosses fresh-process restore boundary",
+    "Actual wallet and helper/prover descendant namespace/FD/network denial evidence; public policy pilot is insufficient alone",
+    "Complete private same-witness proofs followed by fresh public ledger verification; no cached new-payment verdict",
+    "Actual Anchor rejection and all14-table unchanged check; valid followup",
+    "Root at height2 absent at tip258 for next inclusion259, with all intervening roots genuinely changing",
+    "Inside-R joint opening/spentness/path/cursor rewind and orphan-discovery removal; deep replay unavailability control separately",
+    "Full history reread per refresh is currently implemented: charge all parser input bytes/time and memory; do not call it constant traffic",
+    "Report main wallet CPU/RSS, native helper/prover work, backup process, controller/validator costs separately; wrapper wait4 is not whole-tree CPU",
+    "Review unresolved PQ/privacy composition separately from finite functional and resource results"
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "events": [
+    {
+      "op": "boundary",
+      "restore": false,
+      "seconds": 0.2611703189322725
+    },
+    {
+      "actual_new_ledger_exists_and_wallet_denied": true,
+      "op": "init",
+      "restore": false,
+      "seconds": 0.3207509199855849
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 6.619490970973857
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 11.908384651993401
+    },
+    {
+      "height": "1",
+      "op": "admit",
+      "proof_bodies": 2,
+      "restore": false,
+      "seconds": 11.930866800015792
+    },
+    {
+      "bytes": 19366,
+      "height": "1",
+      "op": "scan",
+      "restore": false,
+      "seconds": 13.264666041941382
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 19.69736281200312
+    },
+    {
+      "height": "2",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 19.720527578960173
+    },
+    {
+      "bytes": 24618,
+      "height": "2",
+      "op": "scan",
+      "restore": false,
+      "seconds": 20.903805059031583
+    },
+    {
+      "name": "joint-lease-and-packet-controls",
+      "op": "mark",
+      "restore": false,
+      "seconds": 22.158720818930306
+    },
+    {
+      "name": "genuine-private-receipt-and-local-witnesses",
+      "op": "mark",
+      "restore": false,
+      "seconds": 22.158876435016282
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 27.39440399000887
+    },
+    {
+      "height": "3",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 27.417472996981815
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": false,
+      "seconds": 28.6111355680041
+    },
+    {
+      "name": "recipient-fresh-local-witness-spend",
+      "op": "mark",
+      "restore": false,
+      "seconds": 29.817889583995566
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": false,
+      "seconds": 29.818406097008847
+    },
+    {
+      "op": "boundary",
+      "restore": true,
+      "seconds": 30.055736277019605
+    },
+    {
+      "op": "context",
+      "restore": true,
+      "seconds": 30.089134327019565
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": true,
+      "seconds": 30.111118166940287
+    }
+  ],
+  "failure_type": "PermissionError",
+  "fixed_failure_reason": null,
+  "format": "CP04-WALLET-INTEGRATION-RESULT01",
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "native_cli": [
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 62884,
+      "operation": "init-retain",
+      "public_result_validated": true,
+      "system_seconds": 0.037,
+      "user_seconds": 1.051014,
+      "wall_seconds": 1.1069887269986793
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 76016,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.055917999999999995,
+      "user_seconds": 1.236065,
+      "wall_seconds": 1.3128628600388765
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 65212,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.041006999999999995,
+      "user_seconds": 1.057184,
+      "wall_seconds": 1.114030814031139
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 74816,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.051021,
+      "user_seconds": 1.101458,
+      "wall_seconds": 1.1710071709239855
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 65080,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.040015999999999996,
+      "user_seconds": 1.058427,
+      "wall_seconds": 1.113758494029753
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 74936,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.042970999999999995,
+      "user_seconds": 1.119268,
+      "wall_seconds": 1.181387237040326
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 67004,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.054932999999999996,
+      "user_seconds": 1.072694,
+      "wall_seconds": 1.1439984069438651
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 67000,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.039,
+      "user_seconds": 1.098021,
+      "wall_seconds": 1.1529381040018052
+    }
+  ],
+  "passed": false,
+  "private_raw_streams_or_backup_persisted_or_hashed": false,
+  "proc_observation_failure": {
+    "classification": "live",
+    "confirmed_exit": false,
+    "errno": 13,
+    "error_type": "PermissionError",
+    "expected_starttime_ticks": 85567958,
+    "host_pid": 2481489,
+    "observed_starttime_ticks": 85567958,
+    "observed_state": "R",
+    "operation": "fd_directory"
+  },
+  "profile": "small",
+  "proofs": [
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.778598707052879,
+        "wait4_maxrss_kib": 168172,
+        "wait4_system_seconds": 0.055077,
+        "wait4_user_seconds": 1.700396
+      },
+      "actual_worker_namespace_pid": 21,
+      "approved_identities": {
+        "approved_runtime_digest": "eeec724d8f219ac8def86dba739a1d95cb234393870ebed9f12bde586972764d",
+        "approved_runtime_receipt_sha256": "85401558a3041278a33c3d149cb57e3a6b518a83f66597251cbd64f40ff96d86",
+        "binary_sha256": "eddc69a6fbdee87f39a5d839fed3325d76b1a69b601a31b016868bf5eb2a11fe",
+        "manifest_sha256": "c0915abe7192dc40d5251941044027d280603d7f73a898a7423351a61c6696b8"
+      },
+      "arity": 0,
+      "body": "public-output/credit-0.body",
+      "body_bytes": 1759257,
+      "body_sha256": "b622d698ea1521559b4633ac8bb1fe7bcf6aab868c2bfc0eb1fb240ce4b109fe",
+      "label": "credit-0",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/wallet-small02-credit-0.json",
+      "parent_receipt_sha256": "1b8d26ac8833e0411566a248a2684c3ea4035c5fe0389d2c634a32550eab530b",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1749834,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.837975696893409,
+        "wait4_maxrss_kib": 168292,
+        "wait4_system_seconds": 0.054977,
+        "wait4_user_seconds": 1.759277
+      },
+      "actual_worker_namespace_pid": 30,
+      "approved_identities": {
+        "approved_runtime_digest": "eeec724d8f219ac8def86dba739a1d95cb234393870ebed9f12bde586972764d",
+        "approved_runtime_receipt_sha256": "85401558a3041278a33c3d149cb57e3a6b518a83f66597251cbd64f40ff96d86",
+        "binary_sha256": "eddc69a6fbdee87f39a5d839fed3325d76b1a69b601a31b016868bf5eb2a11fe",
+        "manifest_sha256": "c0915abe7192dc40d5251941044027d280603d7f73a898a7423351a61c6696b8"
+      },
+      "arity": 0,
+      "body": "public-output/credit-1.body",
+      "body_bytes": 1758361,
+      "body_sha256": "759631e31fd80f3da21d68f3e76f11fd38bdf963cd8133d7cfb34d3c476ef970",
+      "label": "credit-1",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/wallet-small02-credit-1.json",
+      "parent_receipt_sha256": "877d0fab32f4f0a974c62a918a1dfa22c1a526c99db49f40068fac2c59a73c14",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1748938,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.8052055969601497,
+        "wait4_maxrss_kib": 168304,
+        "wait4_system_seconds": 0.051023,
+        "wait4_user_seconds": 1.730794
+      },
+      "actual_worker_namespace_pid": 52,
+      "approved_identities": {
+        "approved_runtime_digest": "eeec724d8f219ac8def86dba739a1d95cb234393870ebed9f12bde586972764d",
+        "approved_runtime_receipt_sha256": "85401558a3041278a33c3d149cb57e3a6b518a83f66597251cbd64f40ff96d86",
+        "binary_sha256": "eddc69a6fbdee87f39a5d839fed3325d76b1a69b601a31b016868bf5eb2a11fe",
+        "manifest_sha256": "c0915abe7192dc40d5251941044027d280603d7f73a898a7423351a61c6696b8"
+      },
+      "arity": 2,
+      "body": "public-output/ordinary-receipt.body",
+      "body_bytes": 1750422,
+      "body_sha256": "a56759ecd2845562276ee631b3130127606589eef36ae840b17d59ec56242285",
+      "label": "ordinary-receipt",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/wallet-small02-ordinary-receipt.json",
+      "parent_receipt_sha256": "035f668eef0e58cd25526a1bffdc3c6ab36f3bfd31bc7ce841e662cb720966ae",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1745546,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.783088345080614,
+        "wait4_maxrss_kib": 168040,
+        "wait4_system_seconds": 0.062,
+        "wait4_user_seconds": 1.698025
+      },
+      "actual_worker_namespace_pid": 84,
+      "approved_identities": {
+        "approved_runtime_digest": "eeec724d8f219ac8def86dba739a1d95cb234393870ebed9f12bde586972764d",
+        "approved_runtime_receipt_sha256": "85401558a3041278a33c3d149cb57e3a6b518a83f66597251cbd64f40ff96d86",
+        "binary_sha256": "eddc69a6fbdee87f39a5d839fed3325d76b1a69b601a31b016868bf5eb2a11fe",
+        "manifest_sha256": "c0915abe7192dc40d5251941044027d280603d7f73a898a7423351a61c6696b8"
+      },
+      "arity": 1,
+      "body": "public-output/recipient-spend.body",
+      "body_bytes": 1741014,
+      "body_sha256": "6e839a6bc940e2e4235b06b0fedb8b3be39159d8cdc00facf72a54428c011a2c",
+      "label": "recipient-spend",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/wallet-small02-recipient-spend.json",
+      "parent_receipt_sha256": "1107fde40f1f58239dcbefea08fd414e15de24e78308b6897dc3d1a368e5c7f9",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1736202,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    }
+  ],
+  "source_runtime_unchanged": true,
+  "source_sha256": "e57fbee1d951b33051e4329b4dc6e17d01719d3b2c77f1e43b53037f5dcb5c2e"
+}

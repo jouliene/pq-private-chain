@@ -1,0 +1,77 @@
+{
+  "actual_wrapper": {
+    "exit": -9,
+    "first_wait4": true,
+    "maxrss_kib": 25052,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.001504,
+    "user_seconds": 0.001382,
+    "wall_seconds": 1.4877088570501655
+  },
+  "boundary": {
+    "actual_node_host_pid": 2481472,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "denied_paths": 4,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "host_proc_root_denied": true,
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 4,
+    "namespaces": {
+      "mnt": "mnt:[4026532889]",
+      "net": "net:[4026532893]",
+      "pid": "pid:[4026532892]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "passed": false,
+  "proc_observation_failure": {
+    "classification": "live",
+    "confirmed_exit": false,
+    "errno": 13,
+    "error_type": "PermissionError",
+    "expected_starttime_ticks": 85567958,
+    "host_pid": 2481489,
+    "observed_starttime_ticks": 85567958,
+    "observed_state": "R",
+    "operation": "fd_directory"
+  },
+  "restore": true,
+  "sampling": {
+    "confirmed_permission_exit_races": 0,
+    "epochs": 21,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 85756,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 455,
+        "first_seconds": 0.22792632703203708,
+        "host_pid": 2481472,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 1,
+          "reaped_child_user": 2,
+          "self_system": 2,
+          "self_user": 11
+        },
+        "last_seconds": 1.4839113500202075,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 94688,
+        "samples": 22,
+        "starttime_ticks": 85567823
+      }
+    ],
+    "permission_exit_evidence_first64": [],
+    "raced_exits": 0,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  }
+}

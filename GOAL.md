@@ -50,3 +50,16 @@ helper controls and5Rust unit controls passed. No proof relation/parameter chang
 The real isolated actor and public controller are being integrated for the
 predeclared5-proof short cycle and264-proof expiry/reorg/recovery campaign.
 Neither genuine Gate3 campaign has executed yet; no completion claim follows.
+
+Checkpoint 2026-11-17 11:18 UTC: two bounded small-profile attempts executed,
+both preserved as failures. small02 positively admitted four genuine proofs and
+demonstrated receipt, locally constructed witnesses and a recipient spend; the
+original wallet process exited0. Its fresh backup-restored process read common
+history but the external observer failed on live same-identity procfs EACCES
+before a new proof. Thus backup spending and the complete small cycle are not
+accepted. No private backup/raw stream was persisted or hashed. The strict
+failure remains intact while a <=10s public-only process diagnostic investigates
+whether a bounded same-PID full-observation retry resolves a transient condition.
+Do not repeat cryptographic work before that discriminator and source review.
+Full changing-root expiry/reorganisation, independent final reproduction and
+publication remain pending; native/global Goal ACTIVE.

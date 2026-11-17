@@ -36,8 +36,10 @@ source identities. Ordinary amounts, recipient identity and selected ownership/
 membership indices are intended hidden under the specific assumptions in
 [SECURITY.md](SECURITY.md). A tiny smoke scenario is not an anonymity measurement.
 
-Current block code supports sixteen bodies, uses registered laboratory genesis
-sources and has no distributed consensus. Its anchor at height h is accepted
+The current version4 research adapter supports0..128 bodies with an additional
+256MiB encoded-body cap. The preserved earlier adapter supported sixteen.
+It uses registered laboratory genesis sources and has no distributed consensus.
+Its anchor at height h is accepted
 for inclusion in h+1 through h+256; that window does not expire old balances or
 permit forgetting old nullifiers. Reorg undo and current spentness are explicit.
 
@@ -54,15 +56,31 @@ commits bytes/order but does not itself prove payment validity, consensus,
 freshness or availability. A validity-trusting wallet explicitly delegates
 omitted validation; a fully verifying wallet pays the full validation cost.
 
-The fresh private smoke restores a pre-receipt backup containing a rotated key
+The earlier fresh private smoke restores a pre-receipt backup containing a rotated key
 in a new process and proves/adopts a new spend. Its membership lookup is to its
 trusted local full ledger. Moving that owned-index API to a remote service would
-leak selected indices. The separate selective-frontier experiment constructs
-paths locally from common public history. Discovery plus path reconstruction
-needs two passes, local retained history or a future funded-leaf spool. Private
-integration, live refresh and branch-specific rewind remain unimplemented.
+leak selected indices. The current fixed native selective frontier and joint
+wallet coordinator construct paths locally while discovering receipts from common
+history. The coordinator leases key inventory and jointly journals openings,
+spentness, paths and full cursors for bounded selected-branch rewind. Source
+review, clean build and13JS/5Rust component controls passed. Real integrated
+receipt, expiry, rewind and backup-spend acceptance is still pending Gate3;
+the first isolated diagnostic failed in controller process observation.
+Refresh currently rereads history from genesis before applying its suffix, so
+bounded live wallet state does not mean constant history traffic. See STATUS.md
+for exact source identities and the next actual run.
 
 ## Roles and measured limitations
+
+The newer network-feasibility experiment passed its declared finite workload:
+eight96-ordinary-payment batches, including a burst and validator restart, reached
+durable full retention with empty queues. This provisionally retains CP03 for an
+explicit model of full-retaining validators plus separately provisioned opaque
+archives. It does not establish affordable annual participation, a pruned ordinary
+node or year-long capacity. The current role-cost decision and complete measured
+scopes are in [RESOURCE_DECISION.md](network-feasibility/RESOURCE_DECISION.md).
+The16-payment measurements below are preserved historical evidence, not the
+new adapter's capacity or a repeat of its resource test.
 
 A full validator independently checks proofs, current state and data availability;
 it retains nullifiers/occurrence state, undo/recent anchors and a body cache.
@@ -118,12 +136,15 @@ Tiny partial AIR rewrites gave only3.9–7.9% predicted byte savings with more a
 they were not selected. The old MITH ordinary proof was389MB; it is preserved as
 research evidence elsewhere, not a dependency of this published backend.
 
-The next versioned research adapter should test0..128body entries plus256MiB
-encoded-body cap at a hypothetical30s cadence. Current16/30s ordering offers
+The version4 adapter now implements the proposed0..128body entries plus256MiB
+encoded-body cap. A hypothetical30s cadence remains a research scenario.
+Historical16/30s ordering offers
 only16.8192Mslots/year;128/30s offers134.5536M, which is still not measured service
-capacity. Build genuine96-payment batches, separate archive/destination processes,
-actual bounded transport, finite mean-arrival/burst queues, recent-anchor backup
-recovery and reorgs. Preserve the complete proof relation and security parameters.
+capacity. Genuine96-payment batches, separate archive/destination processes,
+bounded transport and finite burst/restart queues have now been tested. Actual
+private local-witness refresh, recent-anchor expiry, recovery and selected-branch
+rewind remain the current integration gate. The complete proof relation and
+security parameters are preserved.
 
 Permissionless launch needs zero-source genesis and empty work blocks. Proposed
 reward entitlement is derived from the fully known non-genesis parent's identity
