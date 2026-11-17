@@ -23,8 +23,8 @@ All six new completion criteria remain pending; design/source work is not PASS.
 No nested agents. One heavy build/proof job at a time, only after explicit Root
 allocation. S01 component source is frozen and independently source-reviewed. Root allocation S02
 completed: immutable sync01 build and six structural Rust controls PASS.
-Current sole heavy allocation S03 is sync-private01 incremental nine-proof scenario;
-no other build/proof/trace job may overlap. Wallet author now owns lightweight trace.py/trace.mjs
+S03 sync-private01 incremental nine-proof scenario completed PASS. No heavy job
+is currently running; S04 trace awaits script freeze/source review. Wallet author now owns lightweight trace.py/trace.mjs
 measurement implementation; reviewer owns final integration source review. Failed run labels remain immutable.
 
 ## Agreed implementation seam
@@ -97,3 +97,45 @@ unused packet deletion and rejection. No acceptance claim or newproof result yet
   independent clean-checkout reproduction. No native source edits pending.
 - Reviewer approved final integration and new CI/test wrappers at source level.
   Actual integrated PASS, measurements, independent reproduction and CI remain pending.
+
+## S03 actual integrated result
+
+PASS, RESULT SHA33ba6bd9ad24537f7427b911c1be6393970c058ea52fd64a34c96244035f31b4.
+Nine newproofs/ten positive admissions;255legalemptyblocks;44malformed continuation
+atomic controls including one258-frame truncation after the first staged256window.
+Thirteen true genesis-reference equivalence checks and13same-head noops; one
+equal-public-range/different-owned-state comparison. Shallow rewind, deep full
+replay, stale view/packet revocation, expiry refresh and two all14-atomic Anchor
+rejections passed. Originalprocess414.14s exited before freshrestore14.82s and
+newproofadmission. Finalheight260/leaves12/NFs6,fees12682394,liabilities0,
+remaining1087317606 from1100000000 synthetic total. Coldrestore read94218B/259blocks.
+Rawpublic evidence copied under experiments/incremental-sync/evidence/sync-private01/.
+Source/runtime unchanged. Core source checkpoint commit:
+fb5e8dbeffc3f551962d4c1d971ebdb3b6ecdce2. Not yet pushed or independently reproduced.
+
+S04 refinement: reuse the already independently accepted public-only Gate5 replay
+DB as an explicitly approved development dataset instead of repeating its264proof
+verification solely for preparation. Prior RESULT:
+/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/RESULT.json
+SHA973cd516e921a7d71223ec4d62d037f5c9784098de7170cf6cbd56d22061074b.
+It is not an implicit source dependency or a new cryptographic verdict. Trace
+checks actual current native head/all14/genesis against that approved primary
+evidence; fixture work excluded from measured roles. The portable clean-review
+recipe reconstructs onefreshpublicDB from release closure using public_replay.py,
+so independent reproduction does not depend on this historical directory.
+
+## S04 running checkpoint
+
+Trace source freeze independently approved:trace.py9a1aceeeb8688dcbbd3815bef4723f42007da1d1d86d8a68162ce73f15e5e364,
+trace.mjs8b896e4fb7866e2638812d7f86e36d733e380c663a4c64795338b6956ef328f2;
+TRACE_SOURCE f10c13580d84cbf5730f7f9aae2795a4e1e922d2c581dcb704ddadda4edded62.
+Root started sole heavy trace01 at experiments/incremental-sync/.work/trace01,
+1800s internal guard. Inspect process/RESULT before retry. Old approved fixture
+and genesisSHA8d4abb801ecdb45806601b92c48c5b38f78675014729468e25e1bf16bd61f1c6
+are explicit arguments. No other jobs allocated. Expected counts are analytical
+oracle only:responses196066/742114/1492866B for32/128/260; oldprefix counterfactual
+3222784/45159040/181853424B. Runtime measurement pending.
+
+Reviewer independently validated S03 actual public proofs,14-table final state,
+same nullifier in old/refreshed/restored spends,44failure controls and process
+isolation. PRIVATE_ACTUAL01.json records this; clean execution remains pending.

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "../../scripts/common.py": "dcaabf0b472a636cb267822bba6fa9017387bc9b238e24543978cb5e5934eaa9",
+    "../network-feasibility/transport/oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
+    "../network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "../network-feasibility/wallet-integration/isolation_probe.py": "f9352dcfb3dd62353fee7e212cdaa567c98ad9fd5f7aecffae8e6847da4c0c63",
+    "../network-feasibility/wallet-integration/run.py": "1f280a0abbf6af9eb1a2ae705f52cf0534a1d42e8abb47b9d018c5afc0419616",
+    "CONTRACT.md": "b904d9dd85c559ba2966e3728ba94bc869667fb5095f2b7dbd41d07885753e3a",
+    "PROFILE.json": "4986215372c6de93bf7ef400300771a70965303f0ab65ccd3788dfb323acceec",
+    "trace.mjs": "8b896e4fb7866e2638812d7f86e36d733e380c663a4c64795338b6956ef328f2",
+    "trace.py": "9a1aceeeb8688dcbbd3815bef4723f42007da1d1d86d8a68162ce73f15e5e364"
+  },
+  "format": "CP04-INCREMENTAL-TRACE-SOURCE01"
+}

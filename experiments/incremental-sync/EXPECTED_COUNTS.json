@@ -1,0 +1,335 @@
+{
+  "actual_readonly_explain_query_plans": {
+    "header": [
+      "SEARCH blocks USING INTEGER PRIMARY KEY (rowid=?)"
+    ],
+    "reduced": [
+      "SEARCH bodies USING PRIMARY KEY (height=?)"
+    ]
+  },
+  "cases": {
+    "128": {
+      "history_frame_bytes": 686306,
+      "old_prefix_counterfactual": {
+        "authenticated_blocks": 8256,
+        "authenticated_records": 8384,
+        "history_header_bytes": 2319872,
+        "history_header_rows": 8256,
+        "raw_scan_response_bytes": 45159040,
+        "reduced_record_bytes": 42673536,
+        "reduced_record_rows": 8384,
+        "response_bytes_if_also_wrapped_in_436B_header": 45214848
+      },
+      "one_block_requests": 128,
+      "request_bytes": 55808,
+      "request_plus_response_bytes": 797922,
+      "response_bytes": 742114,
+      "response_header_bytes": 55808,
+      "same_head_wallet_fast_path_after_case": {
+        "authenticated_blocks": 0,
+        "authenticated_records": 0,
+        "request_bytes": 0,
+        "requests": 0,
+        "response_bytes": 0
+      },
+      "server_serving": {
+        "all_selected_history_blob_bytes_including_reduced": 755270,
+        "all_selected_history_header_blob_bytes": 107432,
+        "all_selected_history_header_blob_rows": 383,
+        "base_header_bytes": 35624,
+        "base_header_rows": 127,
+        "history_frame_bytes": 686306,
+        "history_header_bytes": 35904,
+        "history_header_rows": 128,
+        "reduced_record_bytes": 647838,
+        "reduced_record_rows": 129,
+        "response_bytes_written": 742114,
+        "snapshot_meta_rows": 256,
+        "sqlite_fullscan_steps_expected_not_measured": 0,
+        "target_header_bytes": 35904,
+        "target_header_rows": 128
+      },
+      "startup_fixed_tip260_per_request": {
+        "selected_body_length_scalar_bytes_if_encoded_u64": 1024,
+        "tip_body_length_rows": 128,
+        "tip_header_bytes": 35840,
+        "tip_header_rows": 128
+      },
+      "wallet_authenticated_blocks": 128,
+      "wallet_authenticated_records": 129
+    },
+    "260": {
+      "history_frame_bytes": 1379506,
+      "old_prefix_counterfactual": {
+        "authenticated_blocks": 33930,
+        "authenticated_records": 34190,
+        "history_header_bytes": 9517040,
+        "history_header_rows": 33930,
+        "raw_scan_response_bytes": 181853424,
+        "reduced_record_bytes": 171656744,
+        "reduced_record_rows": 34190,
+        "response_bytes_if_also_wrapped_in_436B_header": 181966784
+      },
+      "one_block_requests": 260,
+      "request_bytes": 113360,
+      "request_plus_response_bytes": 1606226,
+      "response_bytes": 1492866,
+      "response_header_bytes": 113360,
+      "same_head_wallet_fast_path_after_case": {
+        "authenticated_blocks": 0,
+        "authenticated_records": 0,
+        "request_bytes": 0,
+        "requests": 0,
+        "response_bytes": 0
+      },
+      "server_serving": {
+        "all_selected_history_blob_bytes_including_reduced": 1519750,
+        "all_selected_history_header_blob_bytes": 218312,
+        "all_selected_history_header_blob_rows": 779,
+        "base_header_bytes": 72584,
+        "base_header_rows": 259,
+        "history_frame_bytes": 1379506,
+        "history_header_bytes": 72864,
+        "history_header_rows": 260,
+        "reduced_record_bytes": 1301438,
+        "reduced_record_rows": 261,
+        "response_bytes_written": 1492866,
+        "snapshot_meta_rows": 520,
+        "sqlite_fullscan_steps_expected_not_measured": 0,
+        "target_header_bytes": 72864,
+        "target_header_rows": 260
+      },
+      "startup_fixed_tip260_per_request": {
+        "selected_body_length_scalar_bytes_if_encoded_u64": 2080,
+        "tip_body_length_rows": 260,
+        "tip_header_bytes": 72800,
+        "tip_header_rows": 260
+      },
+      "wallet_authenticated_blocks": 260,
+      "wallet_authenticated_records": 261
+    },
+    "32": {
+      "history_frame_bytes": 182114,
+      "old_prefix_counterfactual": {
+        "authenticated_blocks": 528,
+        "authenticated_records": 560,
+        "history_header_bytes": 149888,
+        "history_header_rows": 528,
+        "raw_scan_response_bytes": 3222784,
+        "reduced_record_bytes": 3062208,
+        "reduced_record_rows": 560,
+        "response_bytes_if_also_wrapped_in_436B_header": 3236736
+      },
+      "one_block_requests": 32,
+      "request_bytes": 13952,
+      "request_plus_response_bytes": 210018,
+      "response_bytes": 196066,
+      "response_header_bytes": 13952,
+      "same_head_wallet_fast_path_after_case": {
+        "authenticated_blocks": 0,
+        "authenticated_records": 0,
+        "request_bytes": 0,
+        "requests": 0,
+        "response_bytes": 0
+      },
+      "server_serving": {
+        "all_selected_history_blob_bytes_including_reduced": 199238,
+        "all_selected_history_header_blob_bytes": 26792,
+        "all_selected_history_header_blob_rows": 95,
+        "base_header_bytes": 8744,
+        "base_header_rows": 31,
+        "history_frame_bytes": 182114,
+        "history_header_bytes": 9024,
+        "history_header_rows": 32,
+        "reduced_record_bytes": 172446,
+        "reduced_record_rows": 33,
+        "response_bytes_written": 196066,
+        "snapshot_meta_rows": 64,
+        "sqlite_fullscan_steps_expected_not_measured": 0,
+        "target_header_bytes": 9024,
+        "target_header_rows": 32
+      },
+      "startup_fixed_tip260_per_request": {
+        "selected_body_length_scalar_bytes_if_encoded_u64": 256,
+        "tip_body_length_rows": 32,
+        "tip_header_bytes": 8960,
+        "tip_header_rows": 32
+      },
+      "wallet_authenticated_blocks": 32,
+      "wallet_authenticated_records": 33
+    }
+  },
+  "classification": "Analytically derived from actual accepted genuine selected history; not executed server/wallet measurements, new proof verification or physical IO",
+  "derivation_query_binding_note": "The successful local EXPLAIN QUERY PLAN calls emitted a sqlite3 deprecation warning for sequence binding to numbered ?1 placeholders. Future Python3.14 reproduction should bind {\"1\":128}; the actual returned plans/counts here were successful and are not server execution evidence.",
+  "fixture": {
+    "fixed_tip_body_length_rows": 1,
+    "fixed_tip_header_bytes": 280,
+    "frame_classes": [
+      {
+        "first_height": 1,
+        "last_height": 1,
+        "shape": {
+          "body_records": 2,
+          "framed_scan_bytes": 19366,
+          "header_bytes": 344,
+          "reduced_bytes": 18998
+        }
+      },
+      {
+        "first_height": 2,
+        "last_height": 2,
+        "shape": {
+          "body_records": 1,
+          "framed_scan_bytes": 5252,
+          "header_bytes": 280,
+          "reduced_bytes": 4952
+        }
+      },
+      {
+        "first_height": 3,
+        "last_height": 3,
+        "shape": {
+          "body_records": 1,
+          "framed_scan_bytes": 5188,
+          "header_bytes": 280,
+          "reduced_bytes": 4888
+        }
+      },
+      {
+        "first_height": 4,
+        "last_height": 259,
+        "shape": {
+          "body_records": 1,
+          "framed_scan_bytes": 5252,
+          "header_bytes": 280,
+          "reduced_bytes": 4952
+        }
+      },
+      {
+        "first_height": 260,
+        "last_height": 260,
+        "shape": {
+          "body_records": 1,
+          "framed_scan_bytes": 5188,
+          "header_bytes": 280,
+          "reduced_bytes": 4888
+        }
+      }
+    ],
+    "full_scan_bytes": 1379506,
+    "genesis_bytes": 5672,
+    "registered_sources": 2,
+    "selected_blocks": 260,
+    "selected_records": 261
+  },
+  "format": "INCREMENTAL-SYNC-EXPECTED-COUNTS01",
+  "limits": [
+    "FullscanStep zero is a code/query-plan expectation; compare against actual new-server counters after allocation.",
+    "Indexed lookups still have Btree lookup/page-cache/storage costs; selected SQL result blob bytes are not physical disk reads.",
+    "All public query/oracle preparation is outside measured roles.",
+    "No SQL writes or new264/864 proof campaign; only readonly queries and light header/reduced-record identity hashing.",
+    "No ownership-dependent requests, private note/witness/backup hashes or annual affordability conclusion are represented."
+  ],
+  "provenance": {
+    "approved_replay_result": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/RESULT.json",
+    "approved_replay_result_sha256": "973cd516e921a7d71223ec4d62d037f5c9784098de7170cf6cbd56d22061074b",
+    "approved_result_passed": true,
+    "canonical_all14_reference": {
+      "anchors": {
+        "rows": 256,
+        "sha256": "5737cde7da7fed2fd2a426a1df270e6a17375ce3db46d2121b5c3d37342f987d"
+      },
+      "archive_objects": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "archive_pending": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "archive_segments": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "blocks": {
+        "rows": 260,
+        "sha256": "8061f7b8279fbb81feda78f3e962cc79774d9ee50c8f65afe3acb59f02ba70eb"
+      },
+      "bodies": {
+        "rows": 261,
+        "sha256": "45006052930edd76b065acbdeed4ad4934c233334028255eaa313790a056e4b5"
+      },
+      "body_cache": {
+        "rows": 1,
+        "sha256": "b031ae50e11149c7654840aca6bd24ae3fa1b43dac3142100a6d1cd69266b2e7"
+      },
+      "cores": {
+        "rows": 261,
+        "sha256": "e3be19d453cf7d5eb8b543bbcfd55dcd4734c498d1a95568d5586bc41a681df8"
+      },
+      "leaves": {
+        "rows": 522,
+        "sha256": "b6e55174cfa25ca5554226870013108de1bd8b36607615f8d2903220190de916"
+      },
+      "meta": {
+        "rows": 1,
+        "sha256": "f16dae2a6413505cc496c8d1826e9c1b2f4cd6648701d11dc7971a5975647292"
+      },
+      "node_undo": {
+        "rows": 10923,
+        "sha256": "90602e79d4ae37feeb44405ede030239be4517606c31255e8bac595d76c807c0"
+      },
+      "nodes": {
+        "rows": 1080,
+        "sha256": "fb22662bbe4724cbf23170b1ed701fe131ce6c7f9f0e81f9fbe3d7c3df7c2584"
+      },
+      "nullifiers": {
+        "rows": 516,
+        "sha256": "3c9735188bf472b1872f626436603363de33deaf96f70df293e3eef2de307cb7"
+      },
+      "sources": {
+        "rows": 2,
+        "sha256": "e1e54649a09272b70772d1d29cbffed6ae50067b45e40dd26f60926fffad0f5d"
+      }
+    },
+    "canonical_hash_scope": "Copied from approved actual replay receipt; not rehashed here. No full body/proof BLOB column was selected or cryptographically verified. Current headers/reduced records were independently linked to the approved final block identity; pager/OS IO was not measured.",
+    "complete_payment_validity": "Existing accepted fresh public replay only; no verifier or cached verdict was executed as part of this arithmetic oracle.",
+    "current_all14_table_names_and_row_counts_match_approved_result": true,
+    "current_database_head_matches_approved_result": true,
+    "current_table_row_counts": {
+      "anchors": 256,
+      "archive_objects": 0,
+      "archive_pending": 0,
+      "archive_segments": 0,
+      "blocks": 260,
+      "bodies": 261,
+      "body_cache": 1,
+      "cores": 261,
+      "leaves": 522,
+      "meta": 1,
+      "node_undo": 10923,
+      "nodes": 1080,
+      "nullifiers": 516,
+      "sources": 2
+    },
+    "database": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/fresh-ledger.sqlite",
+    "header_and_reduced_identity_linkage_checked": true
+  },
+  "startup_qualification": {
+    "different_growing_db_shape": "If a future experiment opens after each append, startup tipheader sum equals sum requested target header bytes; startup body-length rows equal sum actual target records. That is not the current fixed260 trace.",
+    "general_tip_bounds": "At most1 tipheader blob<=8408B and128 selected full_length scalar rows per v4 open; height0 has no tipheader/bodylength rows. These bounds are independent of history length, not constant-time Btree or runtime-cost claims.",
+    "other_startup": "Genesis parsing, <=128 source registry rows, cache/tree metadata and installed-runtime preparation remain separately charged startup. Counters here do not claim exhaustive startup SQL/page/OS IO. Actual fixture has2 registered sources and5672-byte genesis.",
+    "trace_shape": "trace.py issues every case against the same complete260-height database, not a growing database. Repeated Ledger::open_counted therefore reads tip260 header/length metadata for each request, even when target<260."
+  },
+  "wire": {
+    "base_lookup_formula": "N-1 rows, sum(header_i_bytes,i=1..N-1); genesis base does not read blocks",
+    "continuation_header_bytes": 436,
+    "frame_formula": "4 outer length + 8 CPSBLK04 magic + 4 header length + actual header bytes + sum(4 reduced length + actual reduced bytes)",
+    "header_formula": "216 + 64 * body_records",
+    "old_authenticated_block_formula": "N*(N+1)/2",
+    "old_prefix_formula": "sum_i=1..N ((N-i+1)*frame_i_bytes)",
+    "serving_meta_formula": "2*N singleton meta result rows; bytes are not included in history blob byte counts",
+    "suffix_formula": "sum_i=1..N(frame_i_bytes); N requests and N response headers of436B",
+    "target_lookup_formula": "N rows, sum(header_i_bytes,i=1..N)"
+  }
+}

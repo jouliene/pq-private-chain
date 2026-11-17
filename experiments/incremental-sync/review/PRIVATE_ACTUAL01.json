@@ -1,0 +1,138 @@
+{
+  "format": "INCREMENTAL-SYNC-INDEPENDENT-PRIVATE-ACTUAL01",
+  "installation_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "limitations": [
+    "Source-linked private booleans/window staging are not publication of secret snapshots or this reviewer independently executing the private path. Clean reproduction remains pending.",
+    "Nine-proof fixture uses255legalemptyblocks after a genuinelydifferenth3root; long changing-root scaling remains separate.",
+    "Sync CPU/wall excludes reference and malformed-control work; whole Node/tree metrics include them. No algorithm-only peakRSS or physicaldisk-byte claim.",
+    "Source guard enforces actual original exit0 before fresh restore; observed boundary/process/event sequence agrees."
+  ],
+  "negative_receipts": [
+    {
+      "all14_equal": true,
+      "file": "anchor-reject-01.json",
+      "sha256": "dd1093cb32724d4878c94ad1ca5d95a9e2e348d2d318134b825181eba3a538d3"
+    },
+    {
+      "all14_equal": true,
+      "file": "anchor-reject-02.json",
+      "sha256": "a38db0f4d48c7d750f9a185798eede626d3f43d3d7c7bd9a18304ad191fa1dbd"
+    }
+  ],
+  "passed": true,
+  "processes": [
+    {
+      "actual_wrapper": {
+        "exit": 0,
+        "first_wait4": true,
+        "maxrss_kib": 26364,
+        "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+        "system_seconds": 0.002029,
+        "user_seconds": 0.001014,
+        "wall_seconds": 414.14263108198065
+      },
+      "passed": true,
+      "restore": false,
+      "sampled_tree_peak_kib": 430944,
+      "terminal_cpu": {
+        "actual_node_host_pid": 2610235,
+        "clock_ticks_per_second": 100,
+        "node_self_seconds": 18.91,
+        "node_waited_descendant_seconds": 56.98,
+        "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+        "starttime_ticks": 87762240,
+        "ticks": {
+          "reaped_child_system": 1187,
+          "reaped_child_user": 4511,
+          "self_system": 679,
+          "self_user": 1212
+        }
+      }
+    },
+    {
+      "actual_wrapper": {
+        "exit": 0,
+        "first_wait4": true,
+        "maxrss_kib": 29252,
+        "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+        "system_seconds": 0.002693,
+        "user_seconds": 0.000159,
+        "wall_seconds": 14.818259546998888
+      },
+      "passed": true,
+      "restore": true,
+      "sampled_tree_peak_kib": 362944,
+      "terminal_cpu": {
+        "actual_node_host_pid": 2614749,
+        "clock_ticks_per_second": 100,
+        "node_self_seconds": 2.95,
+        "node_waited_descendant_seconds": 7.57,
+        "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+        "starttime_ticks": 87803651,
+        "ticks": {
+          "reaped_child_system": 136,
+          "reaped_child_user": 621,
+          "self_system": 84,
+          "self_user": 211
+        }
+      }
+    }
+  ],
+  "public_associations": {
+    "all9_Parent_success_and_body_proof_statement_hashes_checked": true,
+    "distinct_proof_payloads": 9,
+    "final_same_nf_consumed_exactly_once": true,
+    "old_refreshed_restored_same_nf": true,
+    "positive_admissions": 10,
+    "public_Parent_bytes_read_once": 17196778
+  },
+  "result_sha256": "33ba6bd9ad24537f7427b911c1be6393970c058ea52fd64a34c96244035f31b4",
+  "review_wall_seconds": 0.24781624402385205,
+  "scope": "Independent public source/metadata/body/statement and finalSQL readback. No native proof rerun, build, private read or repeated dependency-closure hashes.",
+  "source_checks": {
+    "all9_runner_pins": true,
+    "six_changed_core_files_match_canonical_manifest_installed_and_approval": true
+  },
+  "source_sha256": "94c5912d4892677caa82cf72eb65572362be05f826408bb7f8e6762f3b9c3232",
+  "state": {
+    "accounting": {
+      "fees": 12682394,
+      "liabilities": 0,
+      "remaining_note_supply_by_conservation": 1087317606,
+      "total": 1100000000
+    },
+    "actual_all14_equal": true,
+    "h2_differs_h3": true,
+    "h4_to258_empty_root_count_accounting_unchanged": true,
+    "orphan_anchor_differs_selected": true,
+    "refreshed_anchor_h258_and_restored_anchor_selected_h259": true,
+    "rows": {
+      "anchors": 256,
+      "archive_objects": 0,
+      "archive_pending": 0,
+      "archive_segments": 0,
+      "blocks": 260,
+      "bodies": 6,
+      "body_cache": 1,
+      "cores": 6,
+      "leaves": 12,
+      "meta": 1,
+      "node_undo": 213,
+      "nodes": 60,
+      "nullifiers": 6,
+      "sources": 2
+    }
+  },
+  "sync": {
+    "atomic_failure_controls": 44,
+    "history_bytes": 404478,
+    "late_staged_window_failure_controls": 1,
+    "maximum_committed_journal_buffer_bytes": 355488,
+    "range_fullscan_steps_zero": true,
+    "range_responses": 7,
+    "reference_genesis_equivalence_checks": 13,
+    "same_head_noops": 13,
+    "successful_rows": 13,
+    "successful_sync_wall_seconds": 11.189984394000051
+  }
+}

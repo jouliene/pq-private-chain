@@ -80,3 +80,49 @@ Approximately1.75MB per complete payment and175TB/year per first body copy at
 pruning, bootstrap availability, mnemonic/unknown-key recovery, full PoW or
 formal joint PQ/privacy security. Final results, tested/published revisions,
 independent reproduction and CI must be recorded before bounded completion.
+
+## Portable genuine-history fixture and exact scaling run
+
+The long trace uses the already published public closure. Download and verify
+`full01-public-closure.tar` with the commands in the existing
+[public replay recipe](../network-feasibility/wallet-integration/README.md#independent-public-replay-of-the-complete-chronology).
+Use a new label, the current installation, and the current reviewed
+`PUBLIC_REPLAY_SOURCE.json` digest. This is public fixture reconstruction and
+verification, not another264-proof private generation campaign. Keep that
+preparation outside the measured serving and wallet roles. A historical accepted
+public replay DB may be an explicitly approved development dataset; it is not a
+required source dependency, an arbitrary imported wallet checkpoint or a substitute
+for the portable clean-checkout fixture recipe.
+
+For replay label `sync-public01`, approve its actual RESULT and genesis digests
+and the reviewed TRACE_SOURCE.json, then run:
+
+```sh
+sha256sum experiments/incremental-sync/TRACE_SOURCE.json
+sha256sum experiments/network-feasibility/wallet-integration/.work/sync-public01/RESULT.json
+sha256sum experiments/network-feasibility/wallet-integration/.work/sync-public01/public-inputs/genesis.bin
+python3 -I -B experiments/incremental-sync/trace.py \
+  --label trace01 \
+  --installation .work/sync01/fresh/installation.json \
+  --approve-installation ACTUAL_INSTALLATION_SHA256 \
+  --approve-source REVIEWED_TRACE_SOURCE_SHA256 \
+  --replay-result experiments/network-feasibility/wallet-integration/.work/sync-public01/RESULT.json \
+  --approve-replay ACTUAL_REPLAY_RESULT_SHA256 \
+  --genesis experiments/network-feasibility/wallet-integration/.work/sync-public01/public-inputs/genesis.bin \
+  --approve-genesis 8d4abb801ecdb45806601b92c48c5b38f78675014729468e25e1bf16bd61f1c6
+```
+
+The fixed cases are32,128,260 one-block appends. The source DB remains at its
+validated260-block tip, so the native startup checks one fixed tip header and
+body-length row per call. They are separately charged, not hidden old-prefix
+reads. This measures selected historical ranges on a fixed genuine dataset; it
+does not claim growing production DB, cold disk, WAN or B-tree page-I/O results.
+Logical SQL rows/blob bytes, exact protocol request/response bytes, actual local
+JSON pipe framing/telemetry and preloaded endpoint/oracle inputs are distinct
+reported layers. Endpoints remain independently selected; their acquisition,
+freshness and consensus are not supplied by the linkage experiment.
+
+`EXPECTED_COUNTS.json` is a separate analytical oracle from the accepted genuine
+fixture. It is not an executed server result. The measured rows must match its
+counts; the old repeated-prefix counterfactual is derived from exact frame sizes,
+not from timing ratios. Reviewer execution and final results remain required.

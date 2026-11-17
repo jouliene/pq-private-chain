@@ -31,3 +31,8 @@ Checkpoint:source components and final integration reviewed;31parser and6compile
 serving controls passed. Fresh sync01 built. Genuine nine-proof sync-private01
 is the sole current heavy job; inspect STATUS and actual process/results before
 resuming. No bounded or global completion has been claimed.
+
+S03 completed PASS:9genuineproofs including backup-only fresh-process newspend,
+branch/expiry and44atomicfailure controls. Raw evidence in STATUS. Still require
+longtrace exact scaling, non-author clean reproduction, actualCI and publicpush;
+keep GoalACTIVE. No heavy job currently running.
