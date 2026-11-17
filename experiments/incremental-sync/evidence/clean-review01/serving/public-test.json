@@ -1,0 +1,28 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--release",
+    "-j1",
+    "--manifest-path",
+    "/tmp/pq-sync-review-20261118-01/.work/reviewer01/fresh/Cargo.toml",
+    "-p",
+    "ledger-cp03",
+    "--lib",
+    "sync_serving_controls",
+    "--",
+    "--test-threads=1"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 254856,
+  "process_exit": 0,
+  "system_seconds": 0.095167,
+  "timeout": false,
+  "user_seconds": 1.458634,
+  "wall_seconds": 1.5856056760530919,
+  "wrapper_exit": 0
+}

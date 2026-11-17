@@ -4,6 +4,11 @@ These items are not features implemented or authorized by the publication Goal.
 The next architecture integration is specified in ARCHITECTURE.md. This backlog
 keeps alternatives and exploratory ideas from silently changing the protocol.
 
+After the bounded synchronization acceptance, the next nominated discriminator is
+the [complete-payment proof-size gate](../experiments/incremental-sync/NEXT_EXPERIMENT.md).
+It is not started by this milestone. The retained directions below do not override
+that priority or authorize successive wallet/CI tuning.
+
 ## Custom shared-cell representation
 
 The owner proposes our own typed cell/DAG container inspired by TON shared cells,

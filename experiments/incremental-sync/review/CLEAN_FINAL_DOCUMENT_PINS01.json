@@ -1,0 +1,11 @@
+{
+  "experiments/incremental-sync/RESULTS.md": "ff1afcbbae67726ab8d3d66bf31f292893595cb11e55814e4177068f193cd48f",
+  "experiments/incremental-sync/NEXT_EXPERIMENT.md": "745657178f138f4447b06cd7add142f4655e5766e377052ce9a4107554bad0c1",
+  "experiments/incremental-sync/PRIOR_DISPOSITION.json": "6ed44d85517b7e8f0d9c4feb7060266ffb5a6c68a020d0f55ed0b2570e198ffd",
+  "docs/network-feasibility/RESOURCE_DECISION.md": "266fb602f02dd4d189fd14a653a2056e8c4292b262a75869e7688ea650a2f833",
+  "README.md": "7989890ed73743fcdb04796b9cd89f6ef3d64b385500eaf4d025cef02670d28c",
+  "docs/ARCHITECTURE.md": "3c630eea3f0999c2e1d770a6cd93b89ccb319dd6f400d54d42124c5be3b3d739",
+  "docs/SECURITY.md": "41605dcc5c4617157b90f49de3ffd5ad557a6a61c06d8e212c2791e67baf73ca",
+  "docs/RESEARCH_BACKLOG.md": "4932489c53b06122129ee71ee8b0cc40d40eccfbed3358bea53281b54eada19b",
+  "STATUS.md": "4abd82e61891bb3216e474f6c72042773739b34492852fbd40a9c9e0e07aead4"
+}

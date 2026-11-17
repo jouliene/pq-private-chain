@@ -1,0 +1,927 @@
+{
+  "format": "CP04-CLEAN-INCREMENTAL-PRIVATE-REPRODUCTION01",
+  "passed": true,
+  "source_revision": "17dd4e73f4fbde9fee2129d0fd761b864eefe42f",
+  "result_sha256": "b9aeb7a80377b5b0d8859f4c6f3c7da6cfa5ce368c09f717fb71d0e97ca49ef3",
+  "installation_sha256": "e53643a358c2d1aa923c087340fb9bca9c29e8dec498ee1120ee6ece1f45dbce",
+  "source_sha256": "94c5912d4892677caa82cf72eb65572362be05f826408bb7f8e6762f3b9c3232",
+  "independent_new_proofs": [
+    {
+      "label": "credit-0",
+      "body_sha256": "825465105c47450fd7cba1241102550ce3086c684afac97cb1114c0e4a390909",
+      "proof_sha256": "39ee376f35819d66ae98976930a8efebfd2ceb54e4af12f7fa1d52c8d5c2a532",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "01f6a10017cdf5988ebd81c10dafa5aa6abf9b55df7c3c860a898491a74b2521",
+      "actual_worker": {
+        "child_wall_seconds": 1.8479594589443877,
+        "wait4_maxrss_kib": 168172,
+        "wait4_system_seconds": 0.067249,
+        "wait4_user_seconds": 1.7570350000000001
+      }
+    },
+    {
+      "label": "credit-1",
+      "body_sha256": "ac47bb5b1a27e10c3dadd37582381b42dcc8d93480cd3980c6b8a058158a8e6a",
+      "proof_sha256": "fa32a8a02dc1eb0b4b6863e089acb6abeffe4fb54c75907410abf64cf58c90cc",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "b1fca4038a74c33eea1bd38a10f17fc5dbaff1d89b4053cf320f5903092b8898",
+      "actual_worker": {
+        "child_wall_seconds": 1.8404721609549597,
+        "wait4_maxrss_kib": 168296,
+        "wait4_system_seconds": 0.058566999999999994,
+        "wait4_user_seconds": 1.757987
+      }
+    },
+    {
+      "label": "ordinary-receipt",
+      "body_sha256": "fb5b08e036d7859dbf507b53869de8e5dff0ffabbae372abbfc09b19d0fccd6b",
+      "proof_sha256": "433a9d2584f5e7f3818fa655a1446dc0cabb32eca049a30fa3530119c1a558c6",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "f05e8f581f1b533c17d46d4efb1cacaa7934b3391509ebc201910da315ce6d31",
+      "actual_worker": {
+        "child_wall_seconds": 1.8464021469699219,
+        "wait4_maxrss_kib": 168300,
+        "wait4_system_seconds": 0.062125,
+        "wait4_user_seconds": 1.760559
+      }
+    },
+    {
+      "label": "old-anchor-draft",
+      "body_sha256": "a16fbf5d38f69026d0e026739fbf66b50166dc1e76aca8d98e81333452f2b995",
+      "proof_sha256": "80b164341e458d404869577c7c93d36a7c6ab312be4f7c294deae4e6ce2dbed6",
+      "positive_admissions": 2,
+      "restore": false,
+      "parent_sha256": "6c9459261753d1d4745bd4a6dbb776c8ac403f6db8e279e30068684b8b045386",
+      "actual_worker": {
+        "child_wall_seconds": 1.8354687499813735,
+        "wait4_maxrss_kib": 168296,
+        "wait4_system_seconds": 0.068827,
+        "wait4_user_seconds": 1.7432059999999998
+      }
+    },
+    {
+      "label": "recipient-spend",
+      "body_sha256": "1d3130bf7ece02c568c97084a8428d14e06afe03c86c77d4fec07e9e58bc3d37",
+      "proof_sha256": "3a264d95a97d9ae25615926499a61500f5873e93202973bc0bd9d3ed4506185e",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "794405f431ae4cf40af56b7d9109d63ba5f8e724f3c32a2b561d0b2186c90589",
+      "actual_worker": {
+        "child_wall_seconds": 1.8357532520312816,
+        "wait4_maxrss_kib": 168176,
+        "wait4_system_seconds": 0.06797399999999999,
+        "wait4_user_seconds": 1.744358
+      }
+    },
+    {
+      "label": "refreshed-old-spend",
+      "body_sha256": "a1e5d4aaeba06ec6bccf0b57de253176b21ef7cddf68768bf221e3969d5ec4b7",
+      "proof_sha256": "a5972c8a8c1081415e13265966d42decfc109ab486546eff2a48656a15489973",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "a9471ba73cb08a7f4434b22f54bfc9fadebdd01fd01d6c5e4505aca1f07c8a18",
+      "actual_worker": {
+        "child_wall_seconds": 1.8936953130178154,
+        "wait4_maxrss_kib": 168048,
+        "wait4_system_seconds": 0.067326,
+        "wait4_user_seconds": 1.8026209999999998
+      }
+    },
+    {
+      "label": "orphan-child-draft",
+      "body_sha256": "a17838ab6bd65ba9ba858db1942e28d931b940fceb81f62b2e11e55e0888fce6",
+      "proof_sha256": "95478935d6151d7974851fa7d47530f1a4dd6cbc7515b1b9b3feae1b9b161be8",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "1cb2fd1781634af35e740c18a80066b1c3393b07a7edd272c78cc788cb469a21",
+      "actual_worker": {
+        "child_wall_seconds": 1.8685729620046914,
+        "wait4_maxrss_kib": 168176,
+        "wait4_system_seconds": 0.06478099999999999,
+        "wait4_user_seconds": 1.7803909999999998
+      }
+    },
+    {
+      "label": "replacement",
+      "body_sha256": "fc3f60fc4f06cda6f065d6bcec5dbe86723ca455e3fefc3b69700883768a7300",
+      "proof_sha256": "f1c3d91f177e2650552c23732a26fa028c3f06f67612113db65c209ec28faa22",
+      "positive_admissions": 1,
+      "restore": false,
+      "parent_sha256": "ff336a0107568e5744566eba827a4c6accdc925d121174ea2d92542872a59747",
+      "actual_worker": {
+        "child_wall_seconds": 1.8884217099985108,
+        "wait4_maxrss_kib": 168304,
+        "wait4_system_seconds": 0.063941,
+        "wait4_user_seconds": 1.800088
+      }
+    },
+    {
+      "label": "restored-spend",
+      "body_sha256": "2d2b930cddfd8ffbb503e107b5fdd25b3273198a11bb96dbbdf2dc74f9c837e1",
+      "proof_sha256": "b19e154ad357e0d1cb81eaf783b183ea235606412a0672ff7bb8c31edcaeaedf",
+      "positive_admissions": 1,
+      "restore": true,
+      "parent_sha256": "1b39d228253f35200f99d0c537ced5984f4235512d2940fcd99dfb44a972db31",
+      "actual_worker": {
+        "child_wall_seconds": 1.8268916569650173,
+        "wait4_maxrss_kib": 168168,
+        "wait4_system_seconds": 0.059749,
+        "wait4_user_seconds": 1.743537
+      }
+    }
+  ],
+  "positive_admissions": 10,
+  "all14_recomputed": {
+    "anchors": {
+      "rows": 256,
+      "sha256": "d357e8830ce084bd0ea67fb8a28fd66c5793eea3453b4894152674df0dacb311"
+    },
+    "archive_objects": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_pending": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_segments": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "blocks": {
+      "rows": 260,
+      "sha256": "6fcb19927ca6a5c24e2cb4d75edaf7c366db489c7bda477d9875eeffda33f556"
+    },
+    "bodies": {
+      "rows": 6,
+      "sha256": "53e986a5fb414073aed90ffcdf073464ee585b159fb78a8b336cdc7fe86ba175"
+    },
+    "body_cache": {
+      "rows": 1,
+      "sha256": "da3f64a392037481927b4d983fbfa2305eeb0864947edeeb4fc73437f61f16f2"
+    },
+    "cores": {
+      "rows": 6,
+      "sha256": "d9c02292b0419ce2505c800f32caab25fb6b15f8149ca826f5865d2fb645fe69"
+    },
+    "leaves": {
+      "rows": 12,
+      "sha256": "e2bd092138e703a220ed74eb68374339273d0d559924487406d96d44a9ab3639"
+    },
+    "meta": {
+      "rows": 1,
+      "sha256": "fea653e835e50b487d6a86accea10b2b4924322b9d67ea27e3713e075b63565a"
+    },
+    "node_undo": {
+      "rows": 213,
+      "sha256": "04533cbd7b16a21841e3b34c3b9ba207d183e71b23d45ad7b968d78fa0680ae7"
+    },
+    "nodes": {
+      "rows": 60,
+      "sha256": "c9f3343c0866083f14b9a12e4ddcdd765dc9620db3af9da0da7cedba68186ce7"
+    },
+    "nullifiers": {
+      "rows": 6,
+      "sha256": "e05b98e88cb228bfa4e3ce1521312a1c745549e0e9b317e53f6cec8c0ad02b46"
+    },
+    "sources": {
+      "rows": 2,
+      "sha256": "316f0b2b8e794d949977120623ef57bb416012abe9573cc8ab01c9ee08615794"
+    }
+  },
+  "accounting": {
+    "fees": 12682394,
+    "liabilities": 0,
+    "remaining_note_supply_by_conservation": 1087317606,
+    "total": 1100000000
+  },
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 6,
+    "cached_bytes": 10554250,
+    "full_bytes": 10554250,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "actor_receipts": [
+    {
+      "restore": false,
+      "actual_wrapper": {
+        "exit": 0,
+        "first_wait4": true,
+        "maxrss_kib": 26764,
+        "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+        "system_seconds": 0.0013729999999999999,
+        "user_seconds": 0.0013729999999999999,
+        "wall_seconds": 415.89052367198747
+      },
+      "boundary": {
+        "actual_node_host_pid": 5,
+        "approved_node_executable_inode_matched": true,
+        "denied_database_fds_passed_to_wallet": 0,
+        "descendant": {
+          "controller_number_classification": "child_namespace",
+          "controller_number_pid_namespace": "pid:[4026532897]",
+          "controller_pid": 2,
+          "controller_pid_namespace": "pid:[4026532890]",
+          "controller_proc_namespace_excluded": true,
+          "denied_paths": 2,
+          "denied_socket_families": [
+            2,
+            10,
+            1
+          ],
+          "inherited_fd_identity_checks": 3,
+          "pid": 8,
+          "procfs_pid_namespace": "pid:[4026532897]",
+          "seccomp": "2"
+        },
+        "inheritable_denied_fds_in_controller": 1,
+        "namespaces": {
+          "mnt": "mnt:[4026532894]",
+          "net": "net:[4026532898]",
+          "pid": "pid:[4026532897]"
+        },
+        "reported_namespace_pid": 2
+      },
+      "terminal_cpu": {
+        "actual_node_host_pid": 5,
+        "clock_ticks_per_second": 100,
+        "node_self_seconds": 18.34,
+        "node_waited_descendant_seconds": 56.91,
+        "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+        "starttime_ticks": 87937934,
+        "ticks": {
+          "reaped_child_system": 1103,
+          "reaped_child_user": 4588,
+          "self_system": 627,
+          "self_user": 1207
+        }
+      },
+      "counts": {
+        "atomic_failure_controls": 44,
+        "history_bytes": 310260,
+        "history_reads": 11,
+        "history_wall_seconds": 8.276691207999946,
+        "ownership_independent_equal_ranges": 1,
+        "proofs": 8,
+        "reference_equivalence_checks": 12,
+        "same_head_noops": 12,
+        "staged_window_failure_controls": 1,
+        "synchronization": [
+          {
+            "authenticated_blocks": "0",
+            "authenticated_records": "0",
+            "elapsed_seconds": 0.016472642999999607,
+            "height": "0",
+            "mode": "full-prefix-reference",
+            "node_self_system_microseconds": 2096,
+            "node_self_user_microseconds": 10334,
+            "peak_window_blocks": 0,
+            "peak_window_records": 0,
+            "read_bytes": "0",
+            "retained": {
+              "currentBufferBytes": 320,
+              "journalBufferBytes": 320,
+              "journalCheckpoints": 1,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "2",
+            "elapsed_seconds": 0.04210509400000228,
+            "height": "1",
+            "mode": "full-prefix-reference",
+            "node_self_system_microseconds": 7452,
+            "node_self_user_microseconds": 24382,
+            "peak_window_blocks": 1,
+            "peak_window_records": 2,
+            "read_bytes": "19366",
+            "retained": {
+              "currentBufferBytes": 528,
+              "journalBufferBytes": 848,
+              "journalCheckpoints": 2,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "2",
+            "elapsed_seconds": 0.05642321400000219,
+            "height": "1",
+            "mode": "full-prefix-reference",
+            "node_self_system_microseconds": 10200,
+            "node_self_user_microseconds": 30609,
+            "peak_window_blocks": 1,
+            "peak_window_records": 2,
+            "read_bytes": "19366",
+            "retained": {
+              "currentBufferBytes": 6992,
+              "journalBufferBytes": 7312,
+              "journalCheckpoints": 2,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "1",
+            "elapsed_seconds": 0.022970148999997036,
+            "height": "2",
+            "mode": "append",
+            "node_self_system_microseconds": 2082,
+            "node_self_user_microseconds": 13314,
+            "peak_window_blocks": 1,
+            "peak_window_records": 1,
+            "read_bytes": "5688",
+            "retained": {
+              "currentBufferBytes": 736,
+              "journalBufferBytes": 8048,
+              "journalCheckpoints": 3,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "1",
+            "elapsed_seconds": 0.05047285499999998,
+            "height": "2",
+            "mode": "append",
+            "node_self_system_microseconds": 10225,
+            "node_self_user_microseconds": 25647,
+            "peak_window_blocks": 1,
+            "peak_window_records": 1,
+            "read_bytes": "5688",
+            "retained": {
+              "currentBufferBytes": 7200,
+              "journalBufferBytes": 8048,
+              "journalCheckpoints": 3,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "1",
+            "elapsed_seconds": 0.0482949460000018,
+            "height": "3",
+            "mode": "append",
+            "node_self_system_microseconds": 8509,
+            "node_self_user_microseconds": 27575,
+            "peak_window_blocks": 1,
+            "peak_window_records": 1,
+            "read_bytes": "5624",
+            "retained": {
+              "currentBufferBytes": 7376,
+              "journalBufferBytes": 15424,
+              "journalCheckpoints": 4,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "258",
+            "authenticated_records": "4",
+            "elapsed_seconds": 2.5172797199999914,
+            "height": "258",
+            "mode": "append",
+            "node_self_system_microseconds": 436882,
+            "node_self_user_microseconds": 850909,
+            "peak_window_blocks": 256,
+            "peak_window_records": 4,
+            "read_bytes": "89402",
+            "retained": {
+              "currentBufferBytes": 39632,
+              "journalBufferBytes": 354768,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "255",
+            "authenticated_records": "0",
+            "elapsed_seconds": 2.616006389999995,
+            "height": "258",
+            "mode": "append",
+            "node_self_system_microseconds": 485305,
+            "node_self_user_microseconds": 845032,
+            "peak_window_blocks": 255,
+            "peak_window_records": 0,
+            "read_bytes": "59596",
+            "retained": {
+              "currentBufferBytes": 39632,
+              "journalBufferBytes": 354768,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "1",
+            "elapsed_seconds": 0.05102872000000207,
+            "height": "259",
+            "mode": "append",
+            "node_self_system_microseconds": 12297,
+            "node_self_user_microseconds": 21613,
+            "peak_window_blocks": 1,
+            "peak_window_records": 1,
+            "read_bytes": "5624",
+            "retained": {
+              "currentBufferBytes": 39648,
+              "journalBufferBytes": 355424,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "0",
+            "authenticated_records": "0",
+            "elapsed_seconds": 0.007640130999963731,
+            "height": "258",
+            "mode": "unchanged",
+            "node_self_system_microseconds": 0,
+            "node_self_user_microseconds": 7631,
+            "peak_window_blocks": 0,
+            "peak_window_records": 0,
+            "read_bytes": "0",
+            "retained": {
+              "currentBufferBytes": 39632,
+              "journalBufferBytes": 354768,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "1",
+            "authenticated_records": "1",
+            "elapsed_seconds": 0.038386220999993385,
+            "height": "259",
+            "mode": "selected-replay",
+            "node_self_system_microseconds": 10015,
+            "node_self_user_microseconds": 16020,
+            "peak_window_blocks": 1,
+            "peak_window_records": 1,
+            "read_bytes": "5688",
+            "retained": {
+              "currentBufferBytes": 39712,
+              "journalBufferBytes": 355488,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          },
+          {
+            "authenticated_blocks": "259",
+            "authenticated_records": "5",
+            "elapsed_seconds": 2.809611124999996,
+            "height": "259",
+            "mode": "full-prefix-reference",
+            "node_self_system_microseconds": 533430,
+            "node_self_user_microseconds": 946033,
+            "peak_window_blocks": 256,
+            "peak_window_records": 4,
+            "read_bytes": "94218",
+            "retained": {
+              "currentBufferBytes": 39712,
+              "journalBufferBytes": 355488,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          }
+        ]
+      },
+      "maximum_sampled_tree_rss_kib": 432188
+    },
+    {
+      "restore": true,
+      "actual_wrapper": {
+        "exit": 0,
+        "first_wait4": true,
+        "maxrss_kib": 27912,
+        "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+        "system_seconds": 0.002904,
+        "user_seconds": 0.0,
+        "wall_seconds": 14.96892025496345
+      },
+      "boundary": {
+        "actual_node_host_pid": 3526,
+        "approved_node_executable_inode_matched": true,
+        "denied_database_fds_passed_to_wallet": 0,
+        "descendant": {
+          "controller_number_classification": "child_namespace",
+          "controller_number_pid_namespace": "pid:[4026532896]",
+          "controller_pid": 2,
+          "controller_pid_namespace": "pid:[4026532890]",
+          "controller_proc_namespace_excluded": true,
+          "denied_paths": 2,
+          "denied_socket_families": [
+            2,
+            10,
+            1
+          ],
+          "inherited_fd_identity_checks": 3,
+          "pid": 8,
+          "procfs_pid_namespace": "pid:[4026532896]",
+          "seccomp": "2"
+        },
+        "inheritable_denied_fds_in_controller": 2,
+        "namespaces": {
+          "mnt": "mnt:[4026532893]",
+          "net": "net:[4026532897]",
+          "pid": "pid:[4026532896]"
+        },
+        "reported_namespace_pid": 2
+      },
+      "terminal_cpu": {
+        "actual_node_host_pid": 3526,
+        "clock_ticks_per_second": 100,
+        "node_self_seconds": 2.94,
+        "node_waited_descendant_seconds": 7.67,
+        "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+        "starttime_ticks": 87979522,
+        "ticks": {
+          "reaped_child_system": 134,
+          "reaped_child_user": 633,
+          "self_system": 80,
+          "self_user": 214
+        }
+      },
+      "counts": {
+        "atomic_failure_controls": 0,
+        "history_bytes": 94218,
+        "history_reads": 1,
+        "history_wall_seconds": 2.482791524,
+        "ownership_independent_equal_ranges": 0,
+        "proofs": 1,
+        "reference_equivalence_checks": 1,
+        "same_head_noops": 1,
+        "staged_window_failure_controls": 0,
+        "synchronization": [
+          {
+            "authenticated_blocks": "259",
+            "authenticated_records": "5",
+            "elapsed_seconds": 2.482791524,
+            "height": "259",
+            "mode": "full-prefix-reference",
+            "node_self_system_microseconds": 325416,
+            "node_self_user_microseconds": 1002616,
+            "peak_window_blocks": 256,
+            "peak_window_records": 4,
+            "read_bytes": "94218",
+            "retained": {
+              "currentBufferBytes": 39712,
+              "journalBufferBytes": 355488,
+              "journalCheckpoints": 9,
+              "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+            }
+          }
+        ]
+      },
+      "maximum_sampled_tree_rss_kib": 357320
+    }
+  ],
+  "anchor_rejections": [
+    {
+      "after": {
+        "anchors": {
+          "rows": 256,
+          "sha256": "712ba762f6eeae2c1b9596cca80ad38ce5bd66febcaaa6cbdc7293c55b53d4ee"
+        },
+        "archive_objects": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_pending": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_segments": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "blocks": {
+          "rows": 258,
+          "sha256": "f637f031fac2e554fb86dd22c412e0f6306c951f112cd4046d73dfd5508758ec"
+        },
+        "bodies": {
+          "rows": 4,
+          "sha256": "425772761a9e3bd84e878e201917c5f7d5760a64056e5b4d22ae1e8188af6078"
+        },
+        "body_cache": {
+          "rows": 1,
+          "sha256": "9448b2212383950fe0362f3ca117f58c714c696ea95e0bc3a4681ab8fbf090cc"
+        },
+        "cores": {
+          "rows": 4,
+          "sha256": "51889c5604cbc11c17ecba957d46f1eb6ae575b07b9138893b39402f9a7fb3a4"
+        },
+        "leaves": {
+          "rows": 8,
+          "sha256": "69f2553286fb9884b22ef5d97c4d60c788361cf9482b886348d3173441110c9c"
+        },
+        "meta": {
+          "rows": 1,
+          "sha256": "759e49a7c8fd1230a059955760e351296c8b3f901a2478aad3d135080657deef"
+        },
+        "node_undo": {
+          "rows": 129,
+          "sha256": "8d719cb48e84c4a20900d551527582782db19e6cc8a8355f9c1aab586cbdf2a2"
+        },
+        "nodes": {
+          "rows": 52,
+          "sha256": "5043c27bc431d1684d0370e8df9fa016c33982a21b0ee9c67a0c21b43073cfbd"
+        },
+        "nullifiers": {
+          "rows": 3,
+          "sha256": "b083ef6e138952dd9418ce75297fedb18578c1ff22526ff4e2fba5e43a63e20c"
+        },
+        "sources": {
+          "rows": 2,
+          "sha256": "316f0b2b8e794d949977120623ef57bb416012abe9573cc8ab01c9ee08615794"
+        }
+      },
+      "all14_unchanged": true,
+      "before": {
+        "anchors": {
+          "rows": 256,
+          "sha256": "712ba762f6eeae2c1b9596cca80ad38ce5bd66febcaaa6cbdc7293c55b53d4ee"
+        },
+        "archive_objects": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_pending": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_segments": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "blocks": {
+          "rows": 258,
+          "sha256": "f637f031fac2e554fb86dd22c412e0f6306c951f112cd4046d73dfd5508758ec"
+        },
+        "bodies": {
+          "rows": 4,
+          "sha256": "425772761a9e3bd84e878e201917c5f7d5760a64056e5b4d22ae1e8188af6078"
+        },
+        "body_cache": {
+          "rows": 1,
+          "sha256": "9448b2212383950fe0362f3ca117f58c714c696ea95e0bc3a4681ab8fbf090cc"
+        },
+        "cores": {
+          "rows": 4,
+          "sha256": "51889c5604cbc11c17ecba957d46f1eb6ae575b07b9138893b39402f9a7fb3a4"
+        },
+        "leaves": {
+          "rows": 8,
+          "sha256": "69f2553286fb9884b22ef5d97c4d60c788361cf9482b886348d3173441110c9c"
+        },
+        "meta": {
+          "rows": 1,
+          "sha256": "759e49a7c8fd1230a059955760e351296c8b3f901a2478aad3d135080657deef"
+        },
+        "node_undo": {
+          "rows": 129,
+          "sha256": "8d719cb48e84c4a20900d551527582782db19e6cc8a8355f9c1aab586cbdf2a2"
+        },
+        "nodes": {
+          "rows": 52,
+          "sha256": "5043c27bc431d1684d0370e8df9fa016c33982a21b0ee9c67a0c21b43073cfbd"
+        },
+        "nullifiers": {
+          "rows": 3,
+          "sha256": "b083ef6e138952dd9418ce75297fedb18578c1ff22526ff4e2fba5e43a63e20c"
+        },
+        "sources": {
+          "rows": 2,
+          "sha256": "316f0b2b8e794d949977120623ef57bb416012abe9573cc8ab01c9ee08615794"
+        }
+      },
+      "body_sha256": "a16fbf5d38f69026d0e026739fbf66b50166dc1e76aca8d98e81333452f2b995",
+      "expected": "Anchor",
+      "label": "old-anchor-draft",
+      "positive_admissions_before_rejection": 2
+    },
+    {
+      "after": {
+        "anchors": {
+          "rows": 256,
+          "sha256": "486e9aad7b0bd344492b24474745909d6f0b9b400e37f5f72f7c949a4bde69bb"
+        },
+        "archive_objects": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_pending": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_segments": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "blocks": {
+          "rows": 259,
+          "sha256": "02c6756cc7e8f2ae47fbb413703157008443937f0a1a9cf8e733fb8b87cf0d54"
+        },
+        "bodies": {
+          "rows": 5,
+          "sha256": "12160f1e39b17911e6026f69035d28d620640f20a0102296e100b286b54131c8"
+        },
+        "body_cache": {
+          "rows": 1,
+          "sha256": "8dbcaaf16d0c46072d698158f4fc3584717d29b7530eb79b36298b57afe990d4"
+        },
+        "cores": {
+          "rows": 5,
+          "sha256": "bee556d8ee3824d429fc6a2f9f5012f6107af1aaf79623f714f934dc5bba598c"
+        },
+        "leaves": {
+          "rows": 10,
+          "sha256": "9a7c0edc84a25f22d64569b6000087e57a2cc0826d1941df64f02a971f79f607"
+        },
+        "meta": {
+          "rows": 1,
+          "sha256": "ec77c53b9cdd314b136b9626079f770b87748b48e530abbe49aa1e799a57c70f"
+        },
+        "node_undo": {
+          "rows": 171,
+          "sha256": "d657bb669fe2ab3054fc20f7bba575b6a02cba6693c3139e6e2853664d93abdc"
+        },
+        "nodes": {
+          "rows": 57,
+          "sha256": "83f595548c45ebb788c7cdbe5c3d69dc07b836ffcc60b7e52f50e5eb7eabd258"
+        },
+        "nullifiers": {
+          "rows": 5,
+          "sha256": "cc2f7c6e0d0cca0fda6412dbdb853c4776caa9f0ba445acd55b00796134d003f"
+        },
+        "sources": {
+          "rows": 2,
+          "sha256": "316f0b2b8e794d949977120623ef57bb416012abe9573cc8ab01c9ee08615794"
+        }
+      },
+      "all14_unchanged": true,
+      "before": {
+        "anchors": {
+          "rows": 256,
+          "sha256": "486e9aad7b0bd344492b24474745909d6f0b9b400e37f5f72f7c949a4bde69bb"
+        },
+        "archive_objects": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_pending": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "archive_segments": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "blocks": {
+          "rows": 259,
+          "sha256": "02c6756cc7e8f2ae47fbb413703157008443937f0a1a9cf8e733fb8b87cf0d54"
+        },
+        "bodies": {
+          "rows": 5,
+          "sha256": "12160f1e39b17911e6026f69035d28d620640f20a0102296e100b286b54131c8"
+        },
+        "body_cache": {
+          "rows": 1,
+          "sha256": "8dbcaaf16d0c46072d698158f4fc3584717d29b7530eb79b36298b57afe990d4"
+        },
+        "cores": {
+          "rows": 5,
+          "sha256": "bee556d8ee3824d429fc6a2f9f5012f6107af1aaf79623f714f934dc5bba598c"
+        },
+        "leaves": {
+          "rows": 10,
+          "sha256": "9a7c0edc84a25f22d64569b6000087e57a2cc0826d1941df64f02a971f79f607"
+        },
+        "meta": {
+          "rows": 1,
+          "sha256": "ec77c53b9cdd314b136b9626079f770b87748b48e530abbe49aa1e799a57c70f"
+        },
+        "node_undo": {
+          "rows": 171,
+          "sha256": "d657bb669fe2ab3054fc20f7bba575b6a02cba6693c3139e6e2853664d93abdc"
+        },
+        "nodes": {
+          "rows": 57,
+          "sha256": "83f595548c45ebb788c7cdbe5c3d69dc07b836ffcc60b7e52f50e5eb7eabd258"
+        },
+        "nullifiers": {
+          "rows": 5,
+          "sha256": "cc2f7c6e0d0cca0fda6412dbdb853c4776caa9f0ba445acd55b00796134d003f"
+        },
+        "sources": {
+          "rows": 2,
+          "sha256": "316f0b2b8e794d949977120623ef57bb416012abe9573cc8ab01c9ee08615794"
+        }
+      },
+      "body_sha256": "a17838ab6bd65ba9ba858db1942e28d931b940fceb81f62b2e11e55e0888fce6",
+      "expected": "Anchor",
+      "label": "orphan-child-draft",
+      "positive_admissions_before_rejection": 1
+    }
+  ],
+  "native_cli_count": 297,
+  "legal_empty_blocks": 255,
+  "genuine_preceding_root_change_and_empty_invariance_checked": true,
+  "marks": [
+    {
+      "name": "joint-lease-and-packet-controls",
+      "op": "mark",
+      "restore": false,
+      "seconds": 32.31335101509467
+    },
+    {
+      "name": "genuine-private-receipt-and-local-witnesses",
+      "op": "mark",
+      "restore": false,
+      "seconds": 32.31352217402309
+    },
+    {
+      "name": "old-draft-genuine-positive-before-expiry",
+      "op": "mark",
+      "restore": false,
+      "seconds": 40.121707377023995
+    },
+    {
+      "name": "recipient-fresh-local-witness-spend",
+      "op": "mark",
+      "restore": false,
+      "seconds": 49.3254412880633
+    },
+    {
+      "name": "old-origin-draft-valid-on-common-prefix",
+      "op": "mark",
+      "restore": false,
+      "seconds": 51.76020389806945
+    },
+    {
+      "name": "empty-block-anchor-expiry-atomic-rejection",
+      "op": "mark",
+      "restore": false,
+      "seconds": 367.5325043690391
+    },
+    {
+      "name": "old-note-refreshed-and-spent",
+      "op": "mark",
+      "restore": false,
+      "seconds": 379.92133168003056
+    },
+    {
+      "name": "orphan-child-genuine-positive-before-reorg",
+      "op": "mark",
+      "restore": false,
+      "seconds": 387.7271538730711
+    },
+    {
+      "name": "joint-rewind-orphan-discovery-and-spentness-repaired",
+      "op": "mark",
+      "restore": false,
+      "seconds": 407.180527365068
+    },
+    {
+      "name": "joint-deep-replay-revocation-and-recovery",
+      "op": "mark",
+      "restore": false,
+      "seconds": 415.86826785001904
+    },
+    {
+      "name": "incremental-reference-equivalence-and-noop",
+      "op": "mark",
+      "restore": false,
+      "seconds": 415.8689734970685
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": false,
+      "seconds": 415.869699645089
+    },
+    {
+      "name": "backup-only-new-process-spend",
+      "op": "mark",
+      "restore": true,
+      "seconds": 430.8545014500851
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": true,
+      "seconds": 430.8598190310877
+    }
+  ],
+  "private_data_handling": {
+    "keys_backup_private_streams_logged_or_hashed": false,
+    "readback_inputs": "public RESULT/process/Parent/body/SQL only"
+  },
+  "resource_caveat": "Node SELF vs waited descendants and nested Parent costs are distinct. Whole controller is not sync-only. Reference/malformed controls excluded from successful sync spans."
+}

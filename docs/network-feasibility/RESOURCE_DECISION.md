@@ -1,4 +1,4 @@
-# Network resource decision — finite network and wallet results
+# Network resource decision — retention and wallet synchronization
 
 The declared eight-batch workload passed independent review. Root provisionally
 retains CP03 with **fully retaining validators and a separately provisioned opaque
@@ -6,6 +6,13 @@ serving archive**. The full finite wallet campaign also passed independent
 evidence review. This implemented model does not evict and has no
 unfinished export obligation. This is a finite research allocation, not owner
 acceptance of annual costs or ordinary-home-node economics.
+
+The authenticated-continuation implementation now passes Root's genuine nine-proof
+wallet scenario and exact32/128/260-block scaling experiment. Independent clean
+execution also passed; publication/CI is still pending. The current measured update
+path removes the repeated-prefix obligation described in the historical Gate3
+section below; complete payment storage and assurance qualifications are unchanged.
+See the [current acceptance record](../../experiments/incremental-sync/RESULTS.md).
 
 ## Measured service decision
 
@@ -52,7 +59,7 @@ The768 ordinary bodies total1344972096B, mean1751265.75B/payment.
 | Validating node | Complete ordinary96 commands about20.62–20.85s. Across funding/ordinary/restart/retry, native SELF CPU67.819430s plus waited helpers3.604015s separately. Sampled tree peak411572KiB. FinalDB1523658752B logical, retained bodies1513556768B, pending/missing/unexported0. | **175.126575TB/year** per body copy, about44.43Mbit/s mean incoming body traffic, plus growing public state/history/undo/indexes. Full retention exists; remote-pruned participation does not. |
 | Archive | Ten opaque objects1513872156B logical/1513926656B allocated, CPU11.572017s. PUT RX1513872676B and GET TX1682007932B include framing, funding and retry. No payment verification or remaining partial object. | Another175.126575TB/year per copy before replication/repair. Six full streams average about266.56Mbit/s egress before overhead. ACK is a durability assertion, not permanent availability; same-host roles are not independent failure domains. |
 | Miner | No mining executed. Admission inherits genuine validation and relevant relay/history duties. | Puzzle work, issuance, competitive hardware and economic security remain unimplemented and unpriced, not zero. |
-| Wallet | Full264-proof campaign passed receipt/local witness construction, expiry refresh, joint rewind/deep replay and backup-only fresh-process spend.265 reads transferred187364746B because refresh rereads history. | One pass over an annual common scan projects about**502.242GB** at96-body batching, plus per-key receiving/witness work. This is NOT the current wallet's annual traffic: repeated full-prefix reads cost extra. No ownership-selective remote fetching. |
+| Wallet | Historical full264-proof campaign established local witnesses and recovery. The new nine-proof scenario preserves those paths with authenticated continuation; measured260 one-block appends return1492866B and authenticate260 blocks. Clean independent execution reproduced the exact counts. | Ordinary updates now charge one common-history pass plus bounded per-request framing. Conditional96-payment batching gives about502.696GB responses +0.454GB requests/year; endpoint acquisition, transport/retry, key scanning, reorganization and cold replay remain additional. No ownership-selective fetching. |
 
 Generation is separate:96credit+768ordinary complete proofs took6639.207363s wall,
 6619.042769 CPU seconds and first-wait4 peak248668KiB. It includes private bridge,
@@ -73,7 +80,7 @@ or16.22days at1Gbit/s without contention. Validation, incoming traffic, availabi
 and older years are additional. Trusted database opening is not authenticated
 bootstrap; no checkpoint verifier is implemented or priced as free.
 
-## Actual integrated wallet cost
+## Historical integrated wallet campaign at the reviewed baseline
 
 The predeclared full campaign used K8 owned notes, R8 retained rewind checkpoints
 and A256 accepted-anchor history; these are finite research bounds. It created
@@ -95,9 +102,9 @@ not live network throughput or an exhaustive memory-peak measurement.
 The265 full-history reads total187364746B and26.718863s processing, versus the
 last1374318B common-history response. The136.33 cumulative/final ratio includes
 all wallet sessions, replays and restore; it is not a universal multiplier.
-Refresh authenticates the complete prefix before applying new suffix leaves.
-This is real functional local-witness recovery, but not incremental network
-synchronization. All public experiment copies cost2083110912 allocatedB at
+That baseline refresh authenticated the complete prefix before applying new
+suffix leaves. It was functional local-witness recovery; the subsequent
+continuation implementation below replaces its ordinary synchronization path. All public experiment copies cost2083110912 allocatedB at
 measurement. Source/runtime stayed unchanged; no private backup/stream was
 persisted or hashed. Full evidence is
 [wallet-full01](../../experiments/network-feasibility/wallet-integration/evidence/wallet-full01/RESULT.json)
@@ -124,6 +131,42 @@ Those delivery copies are additional to the original experiment's at-measurement
 disk figure; build/source/toolchain/Git storage is a separate infrastructure cost.
 
 
+## Authenticated continuation: corrected wallet cost
+
+The current source checkpoint is17dd4e73f4fbde9fee2129d0fd761b864eefe42f. In the
+fixed genuine260-block dataset,260 one-block append requests total113360B; replies
+total1492866B, including436B of continuation framing per reply. Wallet authentication
+covers260 blocks and261 reduced payment records. The exact old repeated-prefix
+response obligation for those same frames is181853424B and33930 authenticated
+blocks. Smaller32/128-block cases match the same formula. Actual indexed serving
+rows/blob counts, base/target/startup checks and SQL fullscan counters are recorded
+in the [raw trace](../../experiments/incremental-sync/evidence/trace01/RESULT.json).
+Physical disk pages, WAN behaviour and a growing production DB were not measured.
+
+For frame lengths F_i and N updates, responses are `sum(F_i) + 436*N`; requests
+are `436*N`. Ready unchanged heads require zero history requests/authentication.
+The previous response cost was `sum((N-i+1)*F_i)`. A shallow reorganization charges
+its replacement suffix from the wallet's retained joint checkpoint; a deeper
+selection and cold recovery charge a full replay. Neither reorganization nor
+recovery cost is hidden in the append claim. Actual cold restoration in the small
+genuine scenario reads94218B/259blocks and then proves and admits a new spend.
+
+For an explicit analytical scenario of all100M offered two-input ordinary payments
+being included in96-payment blocks, there are1041667 blocks. Current reduced
+records plus common block framing cost502241666744B. One request and one response
+header per block add454166812B in each direction:502695833556B responses and
+454166812B requests, or503150000368B combined. This is approximately503.150GB of
+protocol range traffic, not complete annual wallet operation or an owner budget.
+Endpoint acquisition, other transport framing, retries, reorganization, full cold
+scans and retained-key receiving/witness CPU are additional. Different batching,
+update cadence, arities or a future privacy scheme change this calculation.
+
+The exact finite improvement does not establish a numerical PQ/privacy theorem.
+Complete payment proof parameters, default private receiving, value/ownership/
+membership constraints, nullifiers, source authorization and atomic admission are
+unchanged. Requests reveal only common public ranges under the same synchronization
+state/target; this does not hide source choice, IP address, timing or activity.
+
 ## Participation decision and next investment
 
 The selected finite research model is implemented and services the declared
@@ -141,19 +184,14 @@ forgetting nullifiers/undo on anchor expiry are invalid. The earlier
 [participation review](../../experiments/network-feasibility/review/GATE2_PROFILE_PARTICIPATION_REVIEW01.md)
 identifies these seams. Today's selected model pays for full copies instead.
 
-Independent clean-checkout reproduction and automatic push CI passed. The exact
-public revision/release and final readback are recorded in STATUS.md and the
-release's delivery-result.json. The next bounded development recommendation
-is an authenticated
-common-history suffix mechanism: start only from the wallet's own authenticated
-joint cursor, validate every new link through an independently selected endpoint,
-and fetch the same public ranges regardless of ownership. Require linear
-cumulative append traffic/authentication, unchanged genuine spend and rollback
-semantics, and atomic rejection of malformed/wrong-base continuations. Charge one
-full cold recovery and any deep replay explicitly. Stop after one reviewed result;
-this is a separate milestone, not an extra condition for closing this experiment.
-The [bounded decision](../../experiments/network-feasibility/review/POST_GATE3_INVESTMENT_DECISION.md)
-states the concrete tests and prohibited shortcuts.
+The historical network milestone's clean reproduction and automatic CI remain
+closed evidence. Independent execution of the current synchronization milestone
+has also passed; its own CI and publication gates remain and do not inherit the
+historical PASS.
+After those gates pass, stop expanding synchronization work. The next concrete
+proof-size experiment is specified in
+[NEXT_EXPERIMENT.md](../../experiments/incremental-sync/NEXT_EXPERIMENT.md); it is
+a future bounded gate, not an experiment started by this milestone.
 
 This removes repeated prefixes but leaves the first-copy175.126575TB/year
 obligation. The subsequent global architecture priority is a materially smaller

@@ -1,0 +1,44 @@
+{
+  "format": "CP04-CLEAN-PUBLIC-FIXTURE-REPRODUCTION01",
+  "passed": true,
+  "result_sha256": "91a1b0020fc0b130d27e0160047139424aa41ee46bf7c8b65299ad262dcdda5b",
+  "source_revision": "17dd4e73f4fbde9fee2129d0fd761b864eefe42f",
+  "source_sha256": "e81dcae1e1afed73fc839f00b67f75277299cf4f4bc623b0117e123e36300366",
+  "installation_sha256": "e53643a358c2d1aa923c087340fb9bca9c29e8dec498ee1120ee6ece1f45dbce",
+  "public_closure_sha256": "6ee13309b7c0d5fafb6363787076a86be0334799c850e670147571903cbae094",
+  "all14_independently_recomputed_equal_result_and_closure": true,
+  "head": {
+    "block_id": "f7c2da454a72d158464973994f9338cf6d2a29d4920557aff5137cd9286f7038818312baef7a6a27cea1814b970864612eb4f7c49774ecc42150670c21778649",
+    "block_version": "4",
+    "chain": "93b63bc067ed0e63984f99eea48c6a3e63e8dff87553bf389b091d3fba41e046",
+    "fee_escrow": "551305634",
+    "genesis_id": "5e4b89b8c92c62e5bd89df3df8dfe34d8500f05295167ebcc468f7a224d81565381f78c8f42ba2b5b9c327cbe3cfa8c261aeb4fff75a98ab0d9cb4bfcde10e17",
+    "height": "260",
+    "leaf_count": "522",
+    "root_le": "fb875b9cd6ab981f9126a98975f5697399af0c5bd3cb0630d6df65dba0e5a3c7c7e2f56ac792b0ecd619f105a5daf3887b3747cbcf1a24aef2342743182b84b7",
+    "schema": "CP03-LEDGER-CLI-01",
+    "unconsumed_liabilities": "0"
+  },
+  "coverage_count": 264,
+  "positive_proof_admissions": 265,
+  "successful_block_admissions": 264,
+  "atomic_anchor_rejections": 2,
+  "rollbacks": 4,
+  "new_proofs_generated": 0,
+  "native_cli_count": 273,
+  "retention": {
+    "archive_committed_bytes": 0,
+    "bodies": 261,
+    "cached_bytes": 457020724,
+    "full_bytes": 457020724,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "actual_outer": {
+    "exit": 0,
+    "wall_seconds": 341.1456997350324
+  },
+  "scope": "Public-only genuine fixture preparation for incremental trace; unchanged original replay receipt scope text refers to prior small5, while this new S05 separately executed nine-proof incremental scenario."
+}

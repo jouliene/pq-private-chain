@@ -1,0 +1,484 @@
+{
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 28156,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.002813,
+    "user_seconds": 0.0,
+    "wall_seconds": 498.9781385390088
+  },
+  "boundary": {
+    "actual_node_host_pid": 7,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "controller_number_classification": "child_namespace",
+      "controller_number_pid_namespace": "pid:[4026532897]",
+      "controller_pid": 2,
+      "controller_pid_namespace": "pid:[4026532891]",
+      "controller_proc_namespace_excluded": true,
+      "denied_paths": 2,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "procfs_pid_namespace": "pid:[4026532897]",
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 2,
+    "namespaces": {
+      "mnt": "mnt:[4026532894]",
+      "net": "net:[4026532898]",
+      "pid": "pid:[4026532897]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "experiment_pipe_bytes": {
+    "controller_to_wallet": 63984,
+    "scope": "Actual local binary-framed JSON control pipes, including hex requests/paths/telemetry. History payload travels via readonly files, counted separately by server/wallet. Binary436B protocol request sizes are a different layer; do not double-count.",
+    "validated_frames_by_operation": {
+      "boundary": {
+        "controller_frame_bytes": 16,
+        "frames": 1,
+        "wallet_frame_bytes": 586
+      },
+      "case-complete": {
+        "controller_frame_bytes": 48,
+        "frames": 3,
+        "wallet_frame_bytes": 1930
+      },
+      "case-start": {
+        "controller_frame_bytes": 48,
+        "frames": 3,
+        "wallet_frame_bytes": 110
+      },
+      "native-work-complete": {
+        "controller_frame_bytes": 16,
+        "frames": 1,
+        "wallet_frame_bytes": 34
+      },
+      "noop": {
+        "controller_frame_bytes": 48,
+        "frames": 3,
+        "wallet_frame_bytes": 1254
+      },
+      "range": {
+        "controller_frame_bytes": 50368,
+        "frames": 420,
+        "wallet_frame_bytes": 390311
+      },
+      "sync-row": {
+        "controller_frame_bytes": 6720,
+        "frames": 420,
+        "wallet_frame_bytes": 234720
+      },
+      "sync-start": {
+        "controller_frame_bytes": 6720,
+        "frames": 420,
+        "wallet_frame_bytes": 20711
+      },
+      "terminal": {
+        "controller_frame_bytes": 0,
+        "frames": 1,
+        "wallet_frame_bytes": 306
+      }
+    },
+    "wallet_to_controller": 649962
+  },
+  "fixed_failure_stage": null,
+  "passed": true,
+  "restore": false,
+  "sampling": {
+    "complete_same_pid_policy_after_permission": 0,
+    "confirmed_permission_exit_races": 1,
+    "epochs": 8832,
+    "maximum_sampled_whole_tree_rss_kib": 154988,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 177130,
+        "first_seconds": 0.2415056760655716,
+        "host_pid": 7,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 195,
+          "reaped_child_user": 167,
+          "self_system": 225,
+          "self_user": 683
+        },
+        "last_seconds": 498.9556792390067,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 152952,
+        "samples": 8832,
+        "starttime_ticks": 88029709
+      },
+      {
+        "fd_identity_checks": 36,
+        "first_seconds": 188.44170236110222,
+        "host_pid": 712,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 188.44300050102174,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 547,
+        "peak_sampled_rss_kib": 30196,
+        "samples": 1,
+        "starttime_ticks": 88048538
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 188.90565343108028,
+        "host_pid": 775,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 188.90670190099627,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 610,
+        "peak_sampled_rss_kib": 2104,
+        "samples": 1,
+        "starttime_ticks": 88048584
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 189.212888107053,
+        "host_pid": 817,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 189.2139603330288,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 652,
+        "peak_sampled_rss_kib": 2040,
+        "samples": 1,
+        "starttime_ticks": 88048615
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 497.20242283004336,
+        "host_pid": 1932,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 497.2039344520308,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1507,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 88079413
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 497.25438705505803,
+        "host_pid": 1937,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 497.25590146007016,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1512,
+        "peak_sampled_rss_kib": 2108,
+        "samples": 1,
+        "starttime_ticks": 88079419
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 497.56282449001446,
+        "host_pid": 1977,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 497.56397343811113,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1552,
+        "peak_sampled_rss_kib": 448,
+        "samples": 1,
+        "starttime_ticks": 88079450
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 497.6656159131089,
+        "host_pid": 1990,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 497.66673447203357,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1565,
+        "peak_sampled_rss_kib": 2104,
+        "samples": 1,
+        "starttime_ticks": 88079460
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 497.9731242120033,
+        "host_pid": 2028,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 497.9741560399998,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1603,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 88079491
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.0246604960412,
+        "host_pid": 2035,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.0260737501085,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1610,
+        "peak_sampled_rss_kib": 328,
+        "samples": 1,
+        "starttime_ticks": 88079496
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.17897851311136,
+        "host_pid": 2051,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.1800546660088,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1626,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 88079511
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.3330909020733,
+        "host_pid": 2071,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.33454197109677,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1646,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 88079527
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.3851306301076,
+        "host_pid": 2077,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.3861759150168,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1652,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 88079532
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.43669094110373,
+        "host_pid": 2081,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.4385212380439,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1656,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 88079537
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.5914318880532,
+        "host_pid": 2100,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.59316931210924,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1675,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 88079553
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.6948821140686,
+        "host_pid": 2113,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.6964759080438,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1688,
+        "peak_sampled_rss_kib": 2072,
+        "samples": 1,
+        "starttime_ticks": 88079563
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.7982167600421,
+        "host_pid": 2124,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.79985386307817,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1699,
+        "peak_sampled_rss_kib": 2068,
+        "samples": 1,
+        "starttime_ticks": 88079573
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 498.90194005402736,
+        "host_pid": 2135,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 498.9038107180968,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1710,
+        "peak_sampled_rss_kib": 1068,
+        "samples": 1,
+        "starttime_ticks": 88079584
+      }
+    ],
+    "permission_exit_evidence_first64": [
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 88079383,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 88079383,
+          "host_pid": 1893,
+          "observed_starttime_ticks": 88079383,
+          "observed_state": "R",
+          "operation": "fd_identity"
+        },
+        "host_pid": 1893,
+        "observed_starttime_ticks": 88079383,
+        "observed_state": "R",
+        "operation": "fd_identity",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.00045625108759850264,
+          "final_disposition": "confirmed_exit"
+        }
+      }
+    ],
+    "permission_retry_wall_seconds": 0.00045625108759850264,
+    "scope": "Existing finite Actor policy sampler; no private pipe or FD link target reads."
+  },
+  "terminal_cpu_ticks": {
+    "reaped_child_system": 195,
+    "reaped_child_user": 167,
+    "self_system": 225,
+    "self_user": 683
+  },
+  "terminal_metrics": {
+    "cases": 3,
+    "format": "CP04-INCREMENTAL-TRACE-DONE01",
+    "new_proofs": 0,
+    "node_process_maxrss_kib": 152840,
+    "node_process_self": {
+      "system": 2256363,
+      "user": 6835248
+    },
+    "owned_note_claim": false,
+    "passed": true,
+    "resource_scope": "Whole Node process includes key setup, reference replay and cleanup; not sync-only cost."
+  }
+}

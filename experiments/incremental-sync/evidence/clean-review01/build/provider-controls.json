@@ -1,0 +1,157 @@
+{
+  "actual_process": {
+    "affinity_cpu": 0,
+    "command": [
+      "/tmp/pq-sync-review-20261118-01/.work/reviewer01/target/release/provider-controls",
+      "/tmp/pq-sync-review-20261118-01/.work/reviewer01/public/a.request",
+      "/tmp/pq-sync-review-20261118-01/.work/reviewer01/public/b.request"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 50684,
+    "process_exit": 0,
+    "system_seconds": 0.05475,
+    "timeout": false,
+    "user_seconds": 0.5970409999999999,
+    "wall_seconds": 0.6554029559483752,
+    "wrapper_exit": 0
+  },
+  "result": {
+    "controls": [
+      {
+        "expected_valid": true,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50552,
+          "self_system_seconds": 0,
+          "self_user_seconds": 0.0007160000000000499,
+          "waited_child_system_seconds": 0.010838,
+          "waited_child_user_seconds": 0.023648,
+          "wall_seconds": 0.03553222
+        },
+        "name": "genuine_valid_a",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": true,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50552,
+          "self_system_seconds": 0.0006730000000000017,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0.009131,
+          "waited_child_user_seconds": 0.024347999999999998,
+          "wall_seconds": 0.034976942
+        },
+        "name": "genuine_valid_b",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0.00032199999999999937,
+          "self_user_seconds": 0.0003749999999999032,
+          "waited_child_system_seconds": 0.010043,
+          "waited_child_user_seconds": 0.022094000000000003,
+          "wall_seconds": 0.033936716
+        },
+        "name": "different_registered_key",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0.0006450000000000032,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0.007927,
+          "waited_child_user_seconds": 0.025763999999999995,
+          "wall_seconds": 0.035069985
+        },
+        "name": "corrupt_signature",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 1.000000000001e-06,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 2.484e-06
+        },
+        "name": "short_key",
+        "native_worker_expected": false,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 1.000000000001e-06,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 2.259e-06
+        },
+        "name": "short_message",
+        "native_worker_expected": false,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 1.000000000001e-06,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 2.245e-06
+        },
+        "name": "short_signature",
+        "native_worker_expected": false,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22372,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 1.000000000001e-06,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 2.24e-06
+        },
+        "name": "signature_suffix",
+        "native_worker_expected": false,
+        "passed": true
+      }
+    ],
+    "format": "CP03-ACTUAL-PROVIDER-CONTROLS02",
+    "operational_fault_injection": false,
+    "payment_or_issuance_admission": false,
+    "preparation": {
+      "cumulative_self_maxrss_kib": 22372,
+      "cumulative_waited_child_maxrss_kib": 0,
+      "self_system_seconds": 0.013179999999999999,
+      "self_user_seconds": 0.500075,
+      "waited_child_system_seconds": 0,
+      "waited_child_user_seconds": 0,
+      "wall_seconds": 0.513301042
+    },
+    "private_input": false,
+    "scope": "public files read before timing; CPU self plus separately waited workers; RSS counters cumulative, not per-call or simultaneous tree; provider destruction outside preparation/verification samples"
+  }
+}

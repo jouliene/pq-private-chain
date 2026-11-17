@@ -1,0 +1,16 @@
+{
+  "format": "INCREMENTAL-CLEAN-PUBLIC-CLOSURE-READY01",
+  "archive": "/tmp/pq-sync-review-20261118-01/.work/public-release/full01-public-closure.tar",
+  "archive_sha256": "29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4",
+  "closure": "/tmp/pq-sync-review-20261118-01/.work/public-release/full01-public-closure/closure.json",
+  "closure_sha256": "6ee13309b7c0d5fafb6363787076a86be0334799c850e670147571903cbae094",
+  "artifact_count": 265,
+  "payload_bytes": 462280798,
+  "manifest_bytes": 49348,
+  "exact_member_allowlist": true,
+  "regular_files_only": true,
+  "all_payload_sizes_sha256_verified_during_extraction": true,
+  "source": "Independent anonymous public release download",
+  "no_database_or_private_material_copied": true,
+  "wall_seconds": 1.0854678329778835
+}

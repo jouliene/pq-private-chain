@@ -1,0 +1,11 @@
+
+running 6 tests
+test store::sync_serving_controls::sync_serving_direct_range_ignores_unrequested_corrupt_prefix_and_exceeds_256 ... ok
+test store::sync_serving_controls::sync_serving_fixed_grammar_and_rejections ... ok
+test store::sync_serving_controls::sync_serving_same_head_is_constant_and_reads_no_frames ... ok
+test store::sync_serving_controls::sync_serving_snapshot_blocks_concurrent_replacement_until_completion ... ok
+test store::sync_serving_controls::sync_serving_writer_interruption_counts_actual_bytes_and_retry_is_clean ... ok
+test store::sync_serving_controls::sync_serving_wrong_context_and_cursors_publish_nothing ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

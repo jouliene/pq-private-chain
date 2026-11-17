@@ -1,0 +1,371 @@
+{
+  "format": "CP04-CLEAN-INCREMENTAL-TRACE-REPRODUCTION01",
+  "passed": true,
+  "result_sha256": "66b986d62009a2db90607c88a64e299631772b4de000c00d7624287eb0db3568",
+  "root_result_sha256": "aa14df387f1c2c3e5fdaa502b3bc66aba700b0ea66e412de4a6195bffb0dffe7",
+  "expected_counts_sha256": "ea428696834ac82e9e11a30f81f48b98ba295862dc778eb1cef09fc16dd4ab0c",
+  "source_revision": "17dd4e73f4fbde9fee2129d0fd761b864eefe42f",
+  "source_sha256": "f10c13580d84cbf5730f7f9aae2795a4e1e922d2c581dcb704ddadda4edded62",
+  "installation_sha256": "e53643a358c2d1aa923c087340fb9bca9c29e8dec498ee1120ee6ece1f45dbce",
+  "fresh_public_replay_sha256": "91a1b0020fc0b130d27e0160047139424aa41ee46bf7c8b65299ad262dcdda5b",
+  "all420_rows_functional_and_exact_read_authentication_counts_equal_root": true,
+  "all420_row_sums_equal_analytical_oracle": true,
+  "comparisons_exclude_timing_and_rss_equality": true,
+  "summaries": [
+    {
+      "actual_request_bytes": 13952,
+      "actual_requests": 32,
+      "actual_response_bytes": 196066,
+      "actual_wallet_blocks": 32,
+      "actual_wallet_records": 33,
+      "baseline_scope": "Exact arithmetic from actual genuine frame sizes; repeated legacy CPU/service was not executed.",
+      "maximum_sampled_sync_bracket_tree_rss_kib": 90228,
+      "old_repeated_prefix_blocks_counterfactual": 528,
+      "old_repeated_prefix_bytes_counterfactual": 3222784,
+      "old_repeated_prefix_records_counterfactual": 560,
+      "prefix": 32,
+      "server_cli_cost": {
+        "maximum_individual_cli_rss_kib": 66756,
+        "scope": "Fresh CLI leader first-wait4 CPU includes registry preparation. Wrapper wall also includes held ELF checks; startup/serving spans are nested, not additive.",
+        "system_seconds": 1.459171,
+        "user_seconds": 34.461579,
+        "wall_seconds": 36.41047529305797
+      },
+      "server_serving": {
+        "base_header_bytes": 8744,
+        "base_header_rows": 31,
+        "history_frame_bytes": 182114,
+        "history_header_bytes": 9024,
+        "history_header_rows": 32,
+        "reduced_record_bytes": 172446,
+        "reduced_record_rows": 33,
+        "response_bytes_written": 196066,
+        "snapshot_meta_rows": 64,
+        "sqlite_fullscan_steps": 0,
+        "target_header_bytes": 9024,
+        "target_header_rows": 32,
+        "wall_nanoseconds": 384607939
+      },
+      "server_startup": {
+        "tip_body_length_rows": 32,
+        "tip_header_bytes": 8960,
+        "tip_header_rows": 32,
+        "wall_nanoseconds": 35551467115
+      },
+      "sync_cost": {
+        "node_self_system_microseconds": 108060,
+        "node_self_user_microseconds": 405286,
+        "waited_system_ticks": 9,
+        "waited_user_ticks": 8,
+        "wall_nanoseconds": 676293936
+      }
+    },
+    {
+      "actual_request_bytes": 55808,
+      "actual_requests": 128,
+      "actual_response_bytes": 742114,
+      "actual_wallet_blocks": 128,
+      "actual_wallet_records": 129,
+      "baseline_scope": "Exact arithmetic from actual genuine frame sizes; repeated legacy CPU/service was not executed.",
+      "maximum_sampled_sync_bracket_tree_rss_kib": 96840,
+      "old_repeated_prefix_blocks_counterfactual": 8256,
+      "old_repeated_prefix_bytes_counterfactual": 45159040,
+      "old_repeated_prefix_records_counterfactual": 8384,
+      "prefix": 128,
+      "server_cli_cost": {
+        "maximum_individual_cli_rss_kib": 66756,
+        "scope": "Fresh CLI leader first-wait4 CPU includes registry preparation. Wrapper wall also includes held ELF checks; startup/serving spans are nested, not additive.",
+        "system_seconds": 5.9209879999999995,
+        "user_seconds": 138.443724,
+        "wall_seconds": 146.3417244880693
+      },
+      "server_serving": {
+        "base_header_bytes": 35624,
+        "base_header_rows": 127,
+        "history_frame_bytes": 686306,
+        "history_header_bytes": 35904,
+        "history_header_rows": 128,
+        "reduced_record_bytes": 647838,
+        "reduced_record_rows": 129,
+        "response_bytes_written": 742114,
+        "snapshot_meta_rows": 256,
+        "sqlite_fullscan_steps": 0,
+        "target_header_bytes": 35904,
+        "target_header_rows": 128,
+        "wall_nanoseconds": 1557556328
+      },
+      "server_startup": {
+        "tip_body_length_rows": 128,
+        "tip_header_bytes": 35840,
+        "tip_header_rows": 128,
+        "wall_nanoseconds": 142821137808
+      },
+      "sync_cost": {
+        "node_self_system_microseconds": 436572,
+        "node_self_user_microseconds": 1401730,
+        "waited_system_ticks": 40,
+        "waited_user_ticks": 27,
+        "wall_nanoseconds": 2512215698
+      }
+    },
+    {
+      "actual_request_bytes": 113360,
+      "actual_requests": 260,
+      "actual_response_bytes": 1492866,
+      "actual_wallet_blocks": 260,
+      "actual_wallet_records": 261,
+      "baseline_scope": "Exact arithmetic from actual genuine frame sizes; repeated legacy CPU/service was not executed.",
+      "maximum_sampled_sync_bracket_tree_rss_kib": 118856,
+      "old_repeated_prefix_blocks_counterfactual": 33930,
+      "old_repeated_prefix_bytes_counterfactual": 181853424,
+      "old_repeated_prefix_records_counterfactual": 34190,
+      "prefix": 260,
+      "server_cli_cost": {
+        "maximum_individual_cli_rss_kib": 66756,
+        "scope": "Fresh CLI leader first-wait4 CPU includes registry preparation. Wrapper wall also includes held ELF checks; startup/serving spans are nested, not additive.",
+        "system_seconds": 11.990832,
+        "user_seconds": 282.780928,
+        "wall_seconds": 298.83846636197995
+      },
+      "server_serving": {
+        "base_header_bytes": 72584,
+        "base_header_rows": 259,
+        "history_frame_bytes": 1379506,
+        "history_header_bytes": 72864,
+        "history_header_rows": 260,
+        "reduced_record_bytes": 1301438,
+        "reduced_record_rows": 261,
+        "response_bytes_written": 1492866,
+        "snapshot_meta_rows": 520,
+        "sqlite_fullscan_steps": 0,
+        "target_header_bytes": 72864,
+        "target_header_rows": 260,
+        "wall_nanoseconds": 3172246601
+      },
+      "server_startup": {
+        "tip_body_length_rows": 260,
+        "tip_header_bytes": 72800,
+        "tip_header_rows": 260,
+        "wall_nanoseconds": 291613465521
+      },
+      "sync_cost": {
+        "node_self_system_microseconds": 1030967,
+        "node_self_user_microseconds": 3070522,
+        "waited_system_ticks": 91,
+        "waited_user_ticks": 55,
+        "wall_nanoseconds": 5554433185
+      }
+    }
+  ],
+  "reference_cases": [
+    {
+      "equivalent": true,
+      "prefix": 32,
+      "reference_cost": {
+        "node_self_system_microseconds": 34929,
+        "node_self_user_microseconds": 139783,
+        "waited_system_ticks": "3",
+        "waited_user_ticks": "6",
+        "wall_nanoseconds": "264691184"
+      },
+      "reference_metrics": {
+        "blocks": "32",
+        "mode": "full-prefix-reference",
+        "peak_window_blocks": 32,
+        "peak_window_records": 33,
+        "read_bytes": "182114",
+        "records": "33",
+        "retained": {
+          "currentBufferBytes": 4576,
+          "journalBufferBytes": 37456,
+          "journalCheckpoints": 9,
+          "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+        }
+      },
+      "zero_owned_notes": true
+    },
+    {
+      "equivalent": true,
+      "prefix": 128,
+      "reference_cost": {
+        "node_self_system_microseconds": 158917,
+        "node_self_user_microseconds": 452971,
+        "waited_system_ticks": "13",
+        "waited_user_ticks": "23",
+        "wall_nanoseconds": "978357701"
+      },
+      "reference_metrics": {
+        "blocks": "128",
+        "mode": "full-prefix-reference",
+        "peak_window_blocks": 128,
+        "peak_window_records": 129,
+        "read_bytes": "686306",
+        "records": "129",
+        "retained": {
+          "currentBufferBytes": 16864,
+          "journalBufferBytes": 149168,
+          "journalCheckpoints": 9,
+          "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+        }
+      },
+      "zero_owned_notes": true
+    },
+    {
+      "equivalent": true,
+      "prefix": 260,
+      "reference_cost": {
+        "node_self_system_microseconds": 398844,
+        "node_self_user_microseconds": 975536,
+        "waited_system_ticks": "37",
+        "waited_user_ticks": "46",
+        "wall_nanoseconds": "2212993556"
+      },
+      "reference_metrics": {
+        "blocks": "260",
+        "mode": "full-prefix-reference",
+        "peak_window_blocks": 255,
+        "peak_window_records": 256,
+        "read_bytes": "1379506",
+        "records": "261",
+        "retained": {
+          "currentBufferBytes": 33200,
+          "journalBufferBytes": 298672,
+          "journalCheckpoints": 9,
+          "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+        }
+      },
+      "zero_owned_notes": true
+    }
+  ],
+  "boundary": {
+    "actual_node_host_pid": 7,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "controller_number_classification": "child_namespace",
+      "controller_number_pid_namespace": "pid:[4026532897]",
+      "controller_pid": 2,
+      "controller_pid_namespace": "pid:[4026532891]",
+      "controller_proc_namespace_excluded": true,
+      "denied_paths": 2,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "procfs_pid_namespace": "pid:[4026532897]",
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 2,
+    "namespaces": {
+      "mnt": "mnt:[4026532894]",
+      "net": "net:[4026532898]",
+      "pid": "pid:[4026532897]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 28156,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.002813,
+    "user_seconds": 0.0,
+    "wall_seconds": 498.9781385390088
+  },
+  "terminal_cpu_ticks": {
+    "reaped_child_system": 195,
+    "reaped_child_user": 167,
+    "self_system": 225,
+    "self_user": 683
+  },
+  "terminal_metrics": {
+    "cases": 3,
+    "format": "CP04-INCREMENTAL-TRACE-DONE01",
+    "new_proofs": 0,
+    "node_process_maxrss_kib": 152840,
+    "node_process_self": {
+      "system": 2256363,
+      "user": 6835248
+    },
+    "owned_note_claim": false,
+    "passed": true,
+    "resource_scope": "Whole Node process includes key setup, reference replay and cleanup; not sync-only cost."
+  },
+  "experiment_pipe_bytes": {
+    "controller_to_wallet": 63984,
+    "scope": "Actual local binary-framed JSON control pipes, including hex requests/paths/telemetry. History payload travels via readonly files, counted separately by server/wallet. Binary436B protocol request sizes are a different layer; do not double-count.",
+    "validated_frames_by_operation": {
+      "boundary": {
+        "controller_frame_bytes": 16,
+        "frames": 1,
+        "wallet_frame_bytes": 586
+      },
+      "case-complete": {
+        "controller_frame_bytes": 48,
+        "frames": 3,
+        "wallet_frame_bytes": 1930
+      },
+      "case-start": {
+        "controller_frame_bytes": 48,
+        "frames": 3,
+        "wallet_frame_bytes": 110
+      },
+      "native-work-complete": {
+        "controller_frame_bytes": 16,
+        "frames": 1,
+        "wallet_frame_bytes": 34
+      },
+      "noop": {
+        "controller_frame_bytes": 48,
+        "frames": 3,
+        "wallet_frame_bytes": 1254
+      },
+      "range": {
+        "controller_frame_bytes": 50368,
+        "frames": 420,
+        "wallet_frame_bytes": 390311
+      },
+      "sync-row": {
+        "controller_frame_bytes": 6720,
+        "frames": 420,
+        "wallet_frame_bytes": 234720
+      },
+      "sync-start": {
+        "controller_frame_bytes": 6720,
+        "frames": 420,
+        "wallet_frame_bytes": 20711
+      },
+      "terminal": {
+        "controller_frame_bytes": 0,
+        "frames": 1,
+        "wallet_frame_bytes": 306
+      }
+    },
+    "wallet_to_controller": 649962
+  },
+  "whole_controller": {
+    "maxrss_kib": 57244,
+    "scope": "Whole controller including input oracles and pin pre/postchecks; excludes subprocess CPU.",
+    "system_seconds": 3.981648,
+    "user_seconds": 15.354804
+  },
+  "input_context_outside_roles": {
+    "context_json_bytes": 191618,
+    "full260_scan_bytes": 1379506,
+    "genesis_bytes": 5672,
+    "preloaded_public_endpoints": 261,
+    "reference_prefix_file_bytes": 2247926,
+    "scope": "Fixed externally selected endpoint schedule and oracle files prepared outside measured roles. Endpoint acquisition/freshness is not measured or zero-cost production traffic; all14 oracle physical IO is not instrumented."
+  },
+  "scope": "Zero-owned fresh wallets only. Real indexed serving and own-cursor synchronization; no receiving/spend claim. Preparation and end-of-case full private reference excluded from sync spans. Node SELF and waited ticks are separate; sampled sync-bracket RSS includes baseline heap, not a guaranteed peak or memory attribution. Server startup/serving timings are nested in CLI wall/CPU and must not be added twice.",
+  "new_proofs": 0,
+  "source_database_all14_unchanged": true,
+  "source_runtime_unchanged": true,
+  "actual_outer": {
+    "exit": 0,
+    "wall_seconds": 506.86426037410274
+  }
+}

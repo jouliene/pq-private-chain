@@ -44,6 +44,8 @@ how each later milestone is handed to an independent reviewer by immutable SHA.
   public verification inputs; no wallet database or private backup.
 - `experiments/network-feasibility/`: version4 larger-block transport, finite
   offered-load/restart tests, isolated local-witness wallet and public replay.
+- `experiments/incremental-sync/`: authenticated common-history continuation,
+  exact read/traffic measurements, genuine wallet integration and clean review.
 - `experiments/architecture-feasibility/`: the real distinct-payment generator,
   public ledger/archive role experiment and local witness reconstruction entry
   points. The short publication smoke does not repeat the32-proof campaign.
@@ -71,8 +73,13 @@ The finite network workload drained its queues with complete retention, and the
 controlled rewind. Independent reproduction/publication status is in STATUS.md.
 These results retain CP03 for the explicit research model in
 [the resource decision](docs/network-feasibility/RESOURCE_DECISION.md).
-The current wallet still rereads common history on refresh. The next bounded
-development recommendation is authenticated suffix synchronization; full PoW/
-issuance integration remains behind the payment/history participation decision.
+Ordinary wallet updates now request and authenticate only the new common-history
+range from the wallet's own authenticated joint state. Same-head updates need no
+history read. Retained shallow checkpoints support branch replacement; deep
+replay and cold backup recovery still require full scans. See the
+[synchronization results and reproduction commands](experiments/incremental-sync/README.md)
+for measured counts, independent acceptance and current publication status.
+The next experiment targets materially smaller complete payment proofs;
+full PoW/issuance integration remains behind the payment/history participation decision.
 Standalone valid-work PoW remains the preferred consensus direction. No full
 consensus engine, permissionless reward issuance or production security is claimed.

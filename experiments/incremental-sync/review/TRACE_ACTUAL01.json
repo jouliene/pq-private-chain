@@ -1,0 +1,244 @@
+{
+  "format": "CP04-INDEPENDENT-TRACE-READBACK01",
+  "actual_result_sha256": "aa14df387f1c2c3e5fdaa502b3bc66aba700b0ea66e412de4a6195bffb0dffe7",
+  "source_sha256": "f10c13580d84cbf5730f7f9aae2795a4e1e922d2c581dcb704ddadda4edded62",
+  "rows": 420,
+  "all_row_sums_and_exact_analytic_counts_match": true,
+  "cases": [
+    {
+      "actual_request_bytes": 13952,
+      "actual_requests": 32,
+      "actual_response_bytes": 196066,
+      "actual_wallet_blocks": 32,
+      "actual_wallet_records": 33,
+      "baseline_scope": "Exact arithmetic from actual genuine frame sizes; repeated legacy CPU/service was not executed.",
+      "maximum_sampled_sync_bracket_tree_rss_kib": 90876,
+      "old_repeated_prefix_blocks_counterfactual": 528,
+      "old_repeated_prefix_bytes_counterfactual": 3222784,
+      "old_repeated_prefix_records_counterfactual": 560,
+      "prefix": 32,
+      "server_cli_cost": {
+        "maximum_individual_cli_rss_kib": 66748,
+        "scope": "Fresh CLI leader first-wait4 CPU includes registry preparation. Wrapper wall also includes held ELF checks; startup/serving spans are nested, not additive.",
+        "system_seconds": 1.454176,
+        "user_seconds": 34.954565,
+        "wall_seconds": 36.896356689045206
+      },
+      "server_serving": {
+        "base_header_bytes": 8744,
+        "base_header_rows": 31,
+        "history_frame_bytes": 182114,
+        "history_header_bytes": 9024,
+        "history_header_rows": 32,
+        "reduced_record_bytes": 172446,
+        "reduced_record_rows": 33,
+        "response_bytes_written": 196066,
+        "snapshot_meta_rows": 64,
+        "sqlite_fullscan_steps": 0,
+        "target_header_bytes": 9024,
+        "target_header_rows": 32,
+        "wall_nanoseconds": 381494286
+      },
+      "server_startup": {
+        "tip_body_length_rows": 32,
+        "tip_header_bytes": 8960,
+        "tip_header_rows": 32,
+        "wall_nanoseconds": 36019590361
+      },
+      "sync_cost": {
+        "node_self_system_microseconds": 118574,
+        "node_self_user_microseconds": 389528,
+        "waited_system_ticks": 10,
+        "waited_user_ticks": 7,
+        "wall_nanoseconds": 677836990
+      }
+    },
+    {
+      "actual_request_bytes": 55808,
+      "actual_requests": 128,
+      "actual_response_bytes": 742114,
+      "actual_wallet_blocks": 128,
+      "actual_wallet_records": 129,
+      "baseline_scope": "Exact arithmetic from actual genuine frame sizes; repeated legacy CPU/service was not executed.",
+      "maximum_sampled_sync_bracket_tree_rss_kib": 93332,
+      "old_repeated_prefix_blocks_counterfactual": 8256,
+      "old_repeated_prefix_bytes_counterfactual": 45159040,
+      "old_repeated_prefix_records_counterfactual": 8384,
+      "prefix": 128,
+      "server_cli_cost": {
+        "maximum_individual_cli_rss_kib": 66752,
+        "scope": "Fresh CLI leader first-wait4 CPU includes registry preparation. Wrapper wall also includes held ELF checks; startup/serving spans are nested, not additive.",
+        "system_seconds": 5.857482999999999,
+        "user_seconds": 139.648064,
+        "wall_seconds": 147.5741097428836
+      },
+      "server_serving": {
+        "base_header_bytes": 35624,
+        "base_header_rows": 127,
+        "history_frame_bytes": 686306,
+        "history_header_bytes": 35904,
+        "history_header_rows": 128,
+        "reduced_record_bytes": 647838,
+        "reduced_record_rows": 129,
+        "response_bytes_written": 742114,
+        "snapshot_meta_rows": 256,
+        "sqlite_fullscan_steps": 0,
+        "target_header_bytes": 35904,
+        "target_header_rows": 128,
+        "wall_nanoseconds": 1610102333
+      },
+      "server_startup": {
+        "tip_body_length_rows": 128,
+        "tip_header_bytes": 35840,
+        "tip_header_rows": 128,
+        "wall_nanoseconds": 143943554185
+      },
+      "sync_cost": {
+        "node_self_system_microseconds": 436401,
+        "node_self_user_microseconds": 1397036,
+        "waited_system_ticks": 38,
+        "waited_user_ticks": 29,
+        "wall_nanoseconds": 2526475317
+      }
+    },
+    {
+      "actual_request_bytes": 113360,
+      "actual_requests": 260,
+      "actual_response_bytes": 1492866,
+      "actual_wallet_blocks": 260,
+      "actual_wallet_records": 261,
+      "baseline_scope": "Exact arithmetic from actual genuine frame sizes; repeated legacy CPU/service was not executed.",
+      "maximum_sampled_sync_bracket_tree_rss_kib": 146768,
+      "old_repeated_prefix_blocks_counterfactual": 33930,
+      "old_repeated_prefix_bytes_counterfactual": 181853424,
+      "old_repeated_prefix_records_counterfactual": 34190,
+      "prefix": 260,
+      "server_cli_cost": {
+        "maximum_individual_cli_rss_kib": 66752,
+        "scope": "Fresh CLI leader first-wait4 CPU includes registry preparation. Wrapper wall also includes held ELF checks; startup/serving spans are nested, not additive.",
+        "system_seconds": 11.693261999999999,
+        "user_seconds": 281.761984,
+        "wall_seconds": 297.58347288228106
+      },
+      "server_serving": {
+        "base_header_bytes": 72584,
+        "base_header_rows": 259,
+        "history_frame_bytes": 1379506,
+        "history_header_bytes": 72864,
+        "history_header_rows": 260,
+        "reduced_record_bytes": 1301438,
+        "reduced_record_rows": 261,
+        "response_bytes_written": 1492866,
+        "snapshot_meta_rows": 520,
+        "sqlite_fullscan_steps": 0,
+        "target_header_bytes": 72864,
+        "target_header_rows": 260,
+        "wall_nanoseconds": 3201787774
+      },
+      "server_startup": {
+        "tip_body_length_rows": 260,
+        "tip_header_bytes": 72800,
+        "tip_header_rows": 260,
+        "wall_nanoseconds": 290326667703
+      },
+      "sync_cost": {
+        "node_self_system_microseconds": 1400747,
+        "node_self_user_microseconds": 2980162,
+        "waited_system_ticks": 134,
+        "waited_user_ticks": 58,
+        "wall_nanoseconds": 6329570420
+      }
+    }
+  ],
+  "reference_cases": [
+    {
+      "equivalent": true,
+      "prefix": 32,
+      "reference_cost": {
+        "node_self_system_microseconds": 36042,
+        "node_self_user_microseconds": 137253,
+        "waited_system_ticks": "3",
+        "waited_user_ticks": "5",
+        "wall_nanoseconds": "262382760"
+      },
+      "reference_metrics": {
+        "blocks": "32",
+        "mode": "full-prefix-reference",
+        "peak_window_blocks": 32,
+        "peak_window_records": 33,
+        "read_bytes": "182114",
+        "records": "33",
+        "retained": {
+          "currentBufferBytes": 4576,
+          "journalBufferBytes": 37456,
+          "journalCheckpoints": 9,
+          "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+        }
+      },
+      "zero_owned_notes": true
+    },
+    {
+      "equivalent": true,
+      "prefix": 128,
+      "reference_cost": {
+        "node_self_system_microseconds": 165593,
+        "node_self_user_microseconds": 537843,
+        "waited_system_ticks": "16",
+        "waited_user_ticks": "23",
+        "wall_nanoseconds": "1087502452"
+      },
+      "reference_metrics": {
+        "blocks": "128",
+        "mode": "full-prefix-reference",
+        "peak_window_blocks": 128,
+        "peak_window_records": 129,
+        "read_bytes": "686306",
+        "records": "129",
+        "retained": {
+          "currentBufferBytes": 16864,
+          "journalBufferBytes": 149168,
+          "journalCheckpoints": 9,
+          "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+        }
+      },
+      "zero_owned_notes": true
+    },
+    {
+      "equivalent": true,
+      "prefix": 260,
+      "reference_cost": {
+        "node_self_system_microseconds": 448618,
+        "node_self_user_microseconds": 950534,
+        "waited_system_ticks": "44",
+        "waited_user_ticks": "47",
+        "wall_nanoseconds": "2308376040"
+      },
+      "reference_metrics": {
+        "blocks": "260",
+        "mode": "full-prefix-reference",
+        "peak_window_blocks": 255,
+        "peak_window_records": 256,
+        "read_bytes": "1379506",
+        "records": "261",
+        "retained": {
+          "currentBufferBytes": 33200,
+          "journalBufferBytes": 298672,
+          "journalCheckpoints": 9,
+          "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+        }
+      },
+      "zero_owned_notes": true
+    }
+  ],
+  "limitations": "Zero-owned fresh wallets only. Real indexed serving and own-cursor synchronization; no receiving/spend claim. Preparation and end-of-case full private reference excluded from sync spans. Node SELF and waited ticks are separate; sampled sync-bracket RSS includes baseline heap, not a guaranteed peak or memory attribution. Server startup/serving timings are nested in CLI wall/CPU and must not be added twice.",
+  "input_context": {
+    "context_json_bytes": 191593,
+    "full260_scan_bytes": 1379506,
+    "genesis_bytes": 5672,
+    "preloaded_public_endpoints": 261,
+    "reference_prefix_file_bytes": 2247926,
+    "scope": "Fixed externally selected endpoint schedule and oracle files prepared outside measured roles. Endpoint acquisition/freshness is not measured or zero-cost production traffic; all14 oracle physical IO is not instrumented."
+  },
+  "independent_execution": false,
+  "clean_reproduction": "S05 currently in progress; this is source-author run receipt readback only"
+}

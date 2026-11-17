@@ -1,0 +1,69 @@
+{
+  "installation_sha256": "e53643a358c2d1aa923c087340fb9bca9c29e8dec498ee1120ee6ece1f45dbce",
+  "all_installation_pins_checked": 10871,
+  "executables": {
+    "compact-all-payments-v3": {
+      "path": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/target/release/compact-all-payments-v3",
+      "sha256": "bffd5cb5ccdb972579304e039c8f93cfe828f81bae21ad587e29f626840806da"
+    },
+    "cp03-hash-core": {
+      "path": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/target/release/cp03-hash-core",
+      "sha256": "6263eb8bec7ed1bb99d9c123230297409832850696d0fbe501a53ff993f14097"
+    },
+    "ledger-cp03": {
+      "path": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/target/release/ledger-cp03",
+      "sha256": "eebb370004981a55f5affcf13471428437e5ca2335459e29000a296405959a0c"
+    },
+    "provider-controls": {
+      "path": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/target/release/provider-controls",
+      "sha256": "e43b871037e1c6247c70e89e81bc982aa13122e3df7d5abf5fe3eead65fc7cba"
+    }
+  },
+  "compiled_unique_inputs": 295,
+  "artifacts": 113,
+  "actual_build": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+      "build",
+      "--offline",
+      "--locked",
+      "--release",
+      "-j1",
+      "--message-format=json",
+      "--manifest-path",
+      "/tmp/pq-sync-review-20261118-01/.work/reviewer01/fresh/Cargo.toml",
+      "--bins"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 424080,
+    "process_exit": 0,
+    "system_seconds": 4.971855,
+    "timeout": false,
+    "user_seconds": 102.251522,
+    "wall_seconds": 107.29753910994623,
+    "wrapper_exit": 0
+  },
+  "provider_controls": 8,
+  "fresh_parent_probe": {
+    "affinity_cpu": 0,
+    "command": [
+      "/usr/bin/python3.12",
+      "-I",
+      "-B",
+      "-c",
+      "import importlib.util\nfrom pathlib import Path\np=Path('experiments/compact-all-payments-v3/private04-proposal/next07/private_parent.py').resolve()\ns=importlib.util.spec_from_file_location('installed_parent',p)\nm=importlib.util.module_from_spec(s);s.loader.exec_module(m)\nm.Parent(Path('fresh/private-approval.json'))\nprint('FRESH_PRIVATE_INSTALLATION_CHECKED')\n"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 157608,
+    "process_exit": 0,
+    "system_seconds": 0.181919,
+    "timeout": false,
+    "user_seconds": 0.9375819999999999,
+    "wall_seconds": 1.1202873369911686,
+    "wrapper_exit": 0
+  },
+  "scope": "Independent clean source/build/runtime correspondence; not private scenario PASS"
+}

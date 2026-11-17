@@ -1,0 +1,22 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/proc/2/fd/3",
+    "check-scan",
+    "93b63bc067ed0e63984f99eea48c6a3e63e8dff87553bf389b091d3fba41e046",
+    "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/public-inputs/genesis.bin",
+    "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/selected.scan",
+    "260",
+    "f7c2da454a72d158464973994f9338cf6d2a29d4920557aff5137cd9286f7038818312baef7a6a27cea1814b970864612eb4f7c49774ecc42150670c21778649",
+    "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/selected.checked.scan"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 39724,
+  "process_exit": 0,
+  "system_seconds": 0.006183,
+  "timeout": false,
+  "user_seconds": 0.007214,
+  "wall_seconds": 0.016947199939750135,
+  "wrapper_exit": 0
+}

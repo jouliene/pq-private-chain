@@ -1,0 +1,16 @@
+{
+  "hidden_empty_readonly": [
+    "/home/neo/jouliene/pq-private-chain",
+    "/home/neo/jouliene/pq-private-chain-research",
+    "/tmp/pq-gate5-20261117-01",
+    "/home/neo/.cargo/registry",
+    "/home/neo/.cargo/git"
+  ],
+  "root_readonly": true,
+  "clone_readwrite": "/tmp/pq-sync-review-20261118-01",
+  "pid_namespace": "pid:[4026532955]",
+  "node_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+  "core_manifest_sha256": "6737bffc428f5f1e795b35ba41455a92cc34f9779ff8b12b0d7678062a20af9f",
+  "source_revision": "17dd4e73f4fbde9fee2129d0fd761b864eefe42f",
+  "fresh_dev_null_readwrite": true
+}

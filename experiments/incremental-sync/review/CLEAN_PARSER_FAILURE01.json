@@ -1,0 +1,6 @@
+{
+  "failure": "EROFS at mkdtemp before controls",
+  "source_changed": false,
+  "correction": "Explicit TMPDIR within already writable clean clone; same root/masks",
+  "original_receipts": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/parser.json"
+}

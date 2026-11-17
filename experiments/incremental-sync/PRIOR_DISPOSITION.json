@@ -1,0 +1,26 @@
+{
+  "format": "CP04-NEXT-PRIOR-DISPOSITION01",
+  "scope": "Preserved historical source excerpts, not a new experiment, new security verdict or required build dependency. Native lattice DCH/Pack is distinct from WHIR/sumcheck.",
+  "records": [
+    {
+      "historical_repository": "pq-private-chain-research/development",
+      "relative_path": "experiments/architecture-feasibility/proof-alternatives/DECISION.md",
+      "sha256": "3dc9041e3068462c7eddf6b9744442fcb646a0fb7baa758376a3b0ea5fc15de4",
+      "lines": [
+        62,
+        62
+      ],
+      "verbatim_excerpt": "| C. Native lattice private membership/authority relation | Existing L-GGM-0 relation uses native matrix/ring commitment and GGM-style occurrence-derived nullifiers rather than merely placing CP03 hashes into another proof system. Complete host witness semantics were exercised; later DCH/Pack full run failed after94.555659s without a proof. Two init repairs are retained. Stage03 has concrete sparse-prior/rotation gaps, and q38/AES128/16-byte seeds/weight22/statistical settings remain diagnostic rather than the intended assured profile. | Genuine smaller proofs, if achieved, could directly reduce initial gossip and all archive copies. It does not automatically prune funded history, nullifiers or encrypted receipts. Changing encodings/authority/NF construction requires one coherent versioned payment and recovery path, not reusing CP03 wire identities. | Do not retry the failed executable unchanged. First close the exact source-level sparse-before-commitment representative and metadata bounds on producer AND verifier, plus coherent target sampler/norm/entropy parameters; then one real public operator control. Only that material change justifies a complete genuine proof attempt. Missing source machinery is an engineering obligation, not impossibility. |"
+    },
+    {
+      "historical_repository": "pq-private-chain-research/development",
+      "relative_path": "docs/audit/snapshot-2026-11-16/tests/usable-proof-review/native-factorization/complete-driver/REVIEW.md",
+      "sha256": "7889b0bcd16431ee67b8dca1f0c7e63f4ec90c408e59a69bb595b53ae617370f",
+      "lines": [
+        193,
+        195
+      ],
+      "verbatim_excerpt": "Independent readback confirms closed failure freeze e7d35520aadea261e22b8fc07cbd2370edaf1ea8c73e49527fd5c52d41257906 (18 exact files) and receipt3e7af1382d1fa34e5eac19773e32d6de84b019437dde799990f8e2de1f8b3049. All6098 before/after/current pins and726 run-archive members match. Actual native status is\u22126, frontend/wrapper1, no watchdog. Raw output contains initial runtime gate, construction, parameter binding, DCH/original-release and a static abort; no final barrier, complete proof or producer success. Cleanup reports both tracked processes exited. Wall94.555658892s, wait4 maximum individual RSS3633548KiB and sampled descendant sum3890286592B retain their different scopes. Reviewer accessed only public artifacts/source/logs, not a private fixture or process memory.\n\nThe static active caller return RVA0x3df09 maps to the call at0x3df04 in polxvec_rotation_aggregate_add. Independent read-only objdump of exact552797c8 confirms the wrapped call; source constraints.c330 is the lower-triangular accumulator. This locates the immediate failing add, not the enclosing comcnst/sparse/DCH call, private rank, scalar or operands. The passed initialization repairs remain independently justified, but have not resolved this separate genuine failure. No OOM or security-failure cause is inferred."
+    }
+  ]
+}

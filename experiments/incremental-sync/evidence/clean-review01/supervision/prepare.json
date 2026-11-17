@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "scripts/setup.py",
+    "prepare",
+    "--label",
+    "reviewer01"
+  ],
+  "exit": 0,
+  "wall_seconds": 0.8624722020467743
+}

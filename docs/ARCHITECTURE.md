@@ -3,9 +3,11 @@
 ## Preferred research path
 
 Retain individual complete CP03 private-payment proofs for the measured finite
-research participation model. The next bounded development recommendation is
-authenticated common-history suffix synchronization; the payment/history cost
-decision precedes a full consensus build. Standalone accumulated-valid-work PoW
+research participation model. Authenticated common-history continuation is now
+implemented; its independent acceptance/publication status is in STATUS.md.
+The next nominated experiment addresses materially smaller complete payment
+proofs; the payment/history cost decision precedes a full consensus build.
+Standalone accumulated-valid-work PoW
 remains the preferred eventual consensus direction, not global optimality
 or a deployed permissionless network. The owner prefers CPU-friendly public work
 entry. RandomX is a leading puzzle candidate requiring qualification; no PQ
@@ -77,9 +79,16 @@ of every full01 proof also passed. Publication/CI status is recorded in STATUS.m
 and the milestone delivery record.
 Two earlier observer failures and the bounded same-process observation repair
 are retained as evidence.
-Refresh currently rereads history from genesis before applying its suffix, so
-bounded live wallet state does not mean constant history traffic. See STATUS.md
-for exact source identities and the next actual run.
+The current continuation path starts from the wallet's own authenticated joint
+cursor and fetches indexed public ranges directly. At 260 one-block appends,
+actual responses total 1492866 bytes and 260 blocks are authenticated, compared
+with an exact old-path obligation of 181853424 bytes and 33930 blocks. Requests
+add 113360 bytes. Unchanged heads trigger no history request; shallow changes use
+retained authenticated joint checkpoints. Deep changes revoke stale capabilities
+and require explicit replay. Cold recovery still scans complete history; the
+prototype's joint cursor/journal is process-local. See the
+[results](../experiments/incremental-sync/RESULTS.md) for scopes, resource counts,
+genuine spending/recovery, independent review and reproduction commands.
 
 ## Roles and measured limitations
 
@@ -155,8 +164,10 @@ capacity. Genuine96-payment batches, separate archive/destination processes,
 bounded transport and finite burst/restart queues have now been tested. Actual
 private local-witness refresh, recent-anchor expiry, recovery and selected-branch
 rewind have passed the full finite campaign and independent evidence review.
-The complete proof relation and security parameters are preserved. Clean-checkout
-reproduction passed; publication and actual CI are the remaining delivery steps.
+The complete proof relation and security parameters are preserved. The network
+milestone's clean reproduction, publication and CI are closed historical evidence.
+Current incremental-synchronization acceptance and its distinct publication/CI
+checks are recorded in STATUS.md.
 
 Permissionless launch needs zero-source genesis and empty work blocks. Proposed
 reward entitlement is derived from the fully known non-genesis parent's identity

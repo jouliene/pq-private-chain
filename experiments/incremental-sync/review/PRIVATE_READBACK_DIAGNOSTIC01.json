@@ -1,0 +1,11 @@
+{
+  "format": "REVIEWER-READBACK-DIAGNOSTIC01",
+  "scope": "Reviewer-only Python assertion before Parent/proof/SQL reads; no implementation execution failure",
+  "failure": "Compared CORE_MANIFEST.files[path] object directly with digest instead of its sha256 member",
+  "actual_schema": {
+    "bytes": "integer",
+    "sha256": "string"
+  },
+  "discriminator": "All6 actual canonical, installed and installation-pin digests match CORE sha256 members",
+  "correction": "Read CORE files[path].sha256; no product/source changes"
+}

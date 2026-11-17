@@ -22,17 +22,9 @@ projection is unchanged and not an owner-adopted budget. After acceptance stop
 sync expansion and name the next precise proof-size/storage experiment.
 Global blockchain development remains active independently of this milestone.
 
-Checkpoint: baseline clean, no prior task heavy job live. Three specialists reused
-with disjoint ownership, no nested agents. Cross-layer format fixed at436bytes with
-u64 frame count; no intermediate peer checkpoint commit. See STATUS.md and
-experiments/incremental-sync/CONTRACT.md. Implementation/testing not yet accepted.
-
-Checkpoint:source components and final integration reviewed;31parser and6compiled
-serving controls passed. Fresh sync01 built. Genuine nine-proof sync-private01
-is the sole current heavy job; inspect STATUS and actual process/results before
-resuming. No bounded or global completion has been claimed.
-
-S03 completed PASS:9genuineproofs including backup-only fresh-process newspend,
-branch/expiry and44atomicfailure controls. Raw evidence in STATUS. Still require
-longtrace exact scaling, non-author clean reproduction, actualCI and publicpush;
-keep GoalACTIVE. No heavy job currently running.
+Current checkpoint: implementation, component/adversarial controls, genuine nine-proof
+integration, exact scaling and independent clean reproduction PASS. Tested source
+17dd4e73f4fbde9fee2129d0fd761b864eefe42f is frozen. Actual publication/CI is the
+remaining gate. No heavy job remains. See STATUS.md for the exact resume action.
+Do not mark this bounded Goal COMPLETE until that gate is substantiated; global
+blockchain development remains ACTIVE independently.

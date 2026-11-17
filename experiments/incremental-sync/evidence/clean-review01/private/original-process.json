@@ -1,0 +1,4689 @@
+{
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 26764,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.0013729999999999999,
+    "user_seconds": 0.0013729999999999999,
+    "wall_seconds": 415.89052367198747
+  },
+  "boundary": {
+    "actual_node_host_pid": 5,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "controller_number_classification": "child_namespace",
+      "controller_number_pid_namespace": "pid:[4026532897]",
+      "controller_pid": 2,
+      "controller_pid_namespace": "pid:[4026532890]",
+      "controller_proc_namespace_excluded": true,
+      "denied_paths": 2,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "procfs_pid_namespace": "pid:[4026532897]",
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 1,
+    "namespaces": {
+      "mnt": "mnt:[4026532894]",
+      "net": "net:[4026532898]",
+      "pid": "pid:[4026532897]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "fixed_failure_stage": null,
+  "passed": true,
+  "restore": false,
+  "sampling": {
+    "complete_same_pid_policy_after_permission": 0,
+    "confirmed_permission_exit_races": 11,
+    "epochs": 6836,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 432188,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 147363,
+        "first_seconds": 0.24309557699598372,
+        "host_pid": 5,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 1103,
+          "reaped_child_user": 4588,
+          "self_system": 627,
+          "self_user": 1207
+        },
+        "last_seconds": 415.8596313999733,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 246224,
+        "samples": 6836,
+        "starttime_ticks": 87937934
+      },
+      {
+        "fd_identity_checks": 345,
+        "first_seconds": 3.949187438003719,
+        "host_pid": 37,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 175,
+          "self_system": 57,
+          "self_user": 273
+        },
+        "last_seconds": 9.051667251973413,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 31,
+        "peak_sampled_rss_kib": 160356,
+        "samples": 84,
+        "starttime_ticks": 87938308
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 6.341058969032019,
+        "host_pid": 38,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 6,
+          "self_user": 171
+        },
+        "last_seconds": 8.07025487802457,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 32,
+        "peak_sampled_rss_kib": 164164,
+        "samples": 29,
+        "starttime_ticks": 87938548
+      },
+      {
+        "fd_identity_checks": 348,
+        "first_seconds": 9.284471716033295,
+        "host_pid": 46,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 5,
+          "reaped_child_user": 175,
+          "self_system": 56,
+          "self_user": 279
+        },
+        "last_seconds": 14.451201846008189,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 40,
+        "peak_sampled_rss_kib": 160400,
+        "samples": 85,
+        "starttime_ticks": 87938844
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 11.740145888994448,
+        "host_pid": 47,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 172
+        },
+        "last_seconds": 13.469617731985636,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 41,
+        "peak_sampled_rss_kib": 164228,
+        "samples": 29,
+        "starttime_ticks": 87939087
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 20.6134637639625,
+        "host_pid": 88,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 20.61478523700498,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 65,
+        "peak_sampled_rss_kib": 312,
+        "samples": 1,
+        "starttime_ticks": 87939980
+      },
+      {
+        "fd_identity_checks": 344,
+        "first_seconds": 20.79692699899897,
+        "host_pid": 103,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 176,
+          "self_system": 58,
+          "self_user": 273
+        },
+        "last_seconds": 25.900048976996914,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 80,
+        "peak_sampled_rss_kib": 160372,
+        "samples": 84,
+        "starttime_ticks": 87939993
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 23.189591164002195,
+        "host_pid": 104,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 171
+        },
+        "last_seconds": 24.91918239602819,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 81,
+        "peak_sampled_rss_kib": 167180,
+        "samples": 29,
+        "starttime_ticks": 87940234
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 30.932422548066825,
+        "host_pid": 136,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 30.9336870360421,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 109,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87941011
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 30.994006642024033,
+        "host_pid": 145,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 30.995073397061788,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 118,
+        "peak_sampled_rss_kib": 2140,
+        "samples": 1,
+        "starttime_ticks": 87941018
+      },
+      {
+        "fd_identity_checks": 347,
+        "first_seconds": 32.445780568988994,
+        "host_pid": 176,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 174,
+          "self_system": 55,
+          "self_user": 281
+        },
+        "last_seconds": 37.612853622063994,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 148,
+        "peak_sampled_rss_kib": 160376,
+        "samples": 85,
+        "starttime_ticks": 87941159
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 34.89969230303541,
+        "host_pid": 177,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 6,
+          "self_user": 172
+        },
+        "last_seconds": 36.6304686589865,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 149,
+        "peak_sampled_rss_kib": 164220,
+        "samples": 29,
+        "starttime_ticks": 87941403
+      },
+      {
+        "fd_identity_checks": 353,
+        "first_seconds": 40.23249430395663,
+        "host_pid": 190,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 174,
+          "self_system": 59,
+          "self_user": 281
+        },
+        "last_seconds": 45.4628122310387,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 160,
+        "peak_sampled_rss_kib": 160404,
+        "samples": 86,
+        "starttime_ticks": 87941940
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 42.75095889403019,
+        "host_pid": 191,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 6,
+          "self_user": 170
+        },
+        "last_seconds": 44.48080988007132,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 161,
+        "peak_sampled_rss_kib": 164224,
+        "samples": 29,
+        "starttime_ticks": 87942190
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 346.19118571898434,
+        "host_pid": 502,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 346.1922401470365,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 211,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87972537
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 346.3134817930404,
+        "host_pid": 515,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 346.3145276060095,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 224,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87972550
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 346.5575870380271,
+        "host_pid": 539,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 346.5591099690646,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 248,
+        "peak_sampled_rss_kib": 292,
+        "samples": 1,
+        "starttime_ticks": 87972574
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 346.68049484398216,
+        "host_pid": 552,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 346.6815519069787,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 261,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87972586
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 346.74183520302176,
+        "host_pid": 559,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 346.7428925590357,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 268,
+        "peak_sampled_rss_kib": 2072,
+        "samples": 1,
+        "starttime_ticks": 87972593
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 347.04700075404253,
+        "host_pid": 589,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 347.04810288897716,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 298,
+        "peak_sampled_rss_kib": 1812,
+        "samples": 1,
+        "starttime_ticks": 87972623
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 347.2305666010361,
+        "host_pid": 607,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 347.2316076940624,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 316,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87972642
+      },
+      {
+        "fd_identity_checks": 5,
+        "first_seconds": 347.29195363400504,
+        "host_pid": 614,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 347.29304456699174,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 323,
+        "peak_sampled_rss_kib": 664,
+        "samples": 1,
+        "starttime_ticks": 87972648
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 347.4753313000547,
+        "host_pid": 632,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 347.47639539302327,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 341,
+        "peak_sampled_rss_kib": 1392,
+        "samples": 1,
+        "starttime_ticks": 87972666
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 347.53672104899306,
+        "host_pid": 639,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 347.5378762780456,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 348,
+        "peak_sampled_rss_kib": 164,
+        "samples": 1,
+        "starttime_ticks": 87972672
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 347.6591709930217,
+        "host_pid": 651,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 347.66019204398617,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 360,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87972684
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 348.0263899869751,
+        "host_pid": 688,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 348.02752036298625,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 397,
+        "peak_sampled_rss_kib": 1244,
+        "samples": 1,
+        "starttime_ticks": 87972721
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 348.20980484597385,
+        "host_pid": 707,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 348.21087345597334,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 416,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87972740
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 348.3321853369707,
+        "host_pid": 719,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 348.33322100003716,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 428,
+        "peak_sampled_rss_kib": 2084,
+        "samples": 1,
+        "starttime_ticks": 87972752
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 348.3935459050117,
+        "host_pid": 726,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 348.39485985506326,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 435,
+        "peak_sampled_rss_kib": 200,
+        "samples": 1,
+        "starttime_ticks": 87972758
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 348.5163246119628,
+        "host_pid": 738,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 348.51792689203285,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 447,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87972770
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 348.57827176805586,
+        "host_pid": 743,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 348.5793224449735,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 452,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87972776
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.00533842202276,
+        "host_pid": 788,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.0063733679708,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 497,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87972819
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.18857907201163,
+        "host_pid": 807,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.1896658850601,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 516,
+        "peak_sampled_rss_kib": 2060,
+        "samples": 1,
+        "starttime_ticks": 87972837
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.3109683820512,
+        "host_pid": 819,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.3120244810125,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 528,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 87972849
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.37236723699607,
+        "host_pid": 826,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.3736506339628,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 535,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87972856
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.4949844570365,
+        "host_pid": 838,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.4960809330223,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 547,
+        "peak_sampled_rss_kib": 2084,
+        "samples": 1,
+        "starttime_ticks": 87972868
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.55645095498767,
+        "host_pid": 845,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.557514189044,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 554,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87972874
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.800615368993,
+        "host_pid": 871,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.8017196530709,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 580,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87972898
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 349.9851554130437,
+        "host_pid": 889,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 349.9862040630542,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 598,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87972917
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.0465267980471,
+        "host_pid": 896,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.0479790699901,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 605,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87972923
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.16929959505796,
+        "host_pid": 909,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.17035778902937,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 618,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87972935
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.2306694290601,
+        "host_pid": 914,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.2317118999781,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 623,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 87972941
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.2920608819695,
+        "host_pid": 921,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.29353740706574,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 630,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87972948
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.53690569405444,
+        "host_pid": 948,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.53792968706694,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 657,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87972972
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.59826192702167,
+        "host_pid": 955,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.60013190004975,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 664,
+        "peak_sampled_rss_kib": 312,
+        "samples": 1,
+        "starttime_ticks": 87972978
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.66048473806586,
+        "host_pid": 960,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.661590883974,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 669,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87972984
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 350.84390680806246,
+        "host_pid": 980,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 350.8451864849776,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 689,
+        "peak_sampled_rss_kib": 2080,
+        "samples": 1,
+        "starttime_ticks": 87973003
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.02748306200374,
+        "host_pid": 997,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.02852697100025,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 706,
+        "peak_sampled_rss_kib": 2088,
+        "samples": 1,
+        "starttime_ticks": 87973021
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.33333224605303,
+        "host_pid": 1029,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.3344017970376,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 738,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87973052
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.3947295410326,
+        "host_pid": 1036,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.39580807299353,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 745,
+        "peak_sampled_rss_kib": 1120,
+        "samples": 1,
+        "starttime_ticks": 87973058
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.5170908330474,
+        "host_pid": 1049,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.5182061060332,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 758,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87973070
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.57852059497964,
+        "host_pid": 1054,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.5795559530379,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 763,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87973076
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.63986087800004,
+        "host_pid": 1061,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.6409735829802,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 770,
+        "peak_sampled_rss_kib": 2060,
+        "samples": 1,
+        "starttime_ticks": 87973083
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.8842361100251,
+        "host_pid": 1088,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.8852878269972,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 797,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87973107
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 351.94560936198104,
+        "host_pid": 1095,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 351.9471728859935,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 804,
+        "peak_sampled_rss_kib": 2092,
+        "samples": 1,
+        "starttime_ticks": 87973113
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.06952673604246,
+        "host_pid": 1107,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.0705748150358,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 816,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87973125
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.19199060904793,
+        "host_pid": 1120,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.193053030991,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 829,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87973138
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.2533703680383,
+        "host_pid": 1127,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.25453553302214,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 836,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87973144
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.31484773696866,
+        "host_pid": 1134,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.3159440320451,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 843,
+        "peak_sampled_rss_kib": 584,
+        "samples": 1,
+        "starttime_ticks": 87973150
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.4373589140596,
+        "host_pid": 1145,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.43845144298393,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 854,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87973162
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.6208328290377,
+        "host_pid": 1165,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.62189234397374,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 874,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87973181
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.74321768805385,
+        "host_pid": 1177,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.74470902001485,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 886,
+        "peak_sampled_rss_kib": 272,
+        "samples": 1,
+        "starttime_ticks": 87973193
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 352.86609077407047,
+        "host_pid": 1190,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 352.8672736570006,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 899,
+        "peak_sampled_rss_kib": 2080,
+        "samples": 1,
+        "starttime_ticks": 87973205
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 353.0497115229955,
+        "host_pid": 1210,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 353.0508125240449,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 919,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87973224
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 353.1722158739576,
+        "host_pid": 1222,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 353.17327023507096,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 931,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87973235
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 353.2335978540359,
+        "host_pid": 1228,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 353.2346420540707,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 937,
+        "peak_sampled_rss_kib": 2080,
+        "samples": 1,
+        "starttime_ticks": 87973242
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 353.41757077898365,
+        "host_pid": 1248,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 353.41862569306977,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 957,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87973260
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 353.6009317310527,
+        "host_pid": 1266,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 353.6020325770369,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 975,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87973279
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 355.1865658169845,
+        "host_pid": 1281,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 355.18830470799,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 989,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87973437
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 355.24866671604104,
+        "host_pid": 1288,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 355.24971938703675,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 996,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87973443
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 355.31006984901614,
+        "host_pid": 1295,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 355.31116538797505,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1003,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87973450
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 355.7385659599677,
+        "host_pid": 1335,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 355.7396195749752,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1043,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87973492
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 355.86088127898984,
+        "host_pid": 1348,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 355.8619630240137,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1056,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87973505
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 355.9223056230694,
+        "host_pid": 1354,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 355.92348606302403,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1062,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 87973511
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 356.04573987598997,
+        "host_pid": 1366,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 356.0470564600546,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1074,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87973523
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 356.22947530902456,
+        "host_pid": 1385,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 356.2308123999974,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1093,
+        "peak_sampled_rss_kib": 308,
+        "samples": 1,
+        "starttime_ticks": 87973542
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 356.47422015306074,
+        "host_pid": 1409,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 356.4755004149629,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1117,
+        "peak_sampled_rss_kib": 2108,
+        "samples": 1,
+        "starttime_ticks": 87973566
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 356.6576974079944,
+        "host_pid": 1428,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 356.65877990296576,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1136,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87973584
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 356.7801021609921,
+        "host_pid": 1441,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 356.7814034440089,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1149,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87973597
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 357.02588210301474,
+        "host_pid": 1465,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 357.026985840057,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1173,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87973621
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 357.3313241499709,
+        "host_pid": 1495,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 357.33235236105975,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1203,
+        "peak_sampled_rss_kib": 2108,
+        "samples": 1,
+        "starttime_ticks": 87973652
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 357.45355806907173,
+        "host_pid": 1508,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 357.4555719170021,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1216,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87973664
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 357.63797637005337,
+        "host_pid": 1527,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 357.6390203679912,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1235,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87973682
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 357.6993365440285,
+        "host_pid": 1532,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 357.70037915499415,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1240,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87973688
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 359.46159442304634,
+        "host_pid": 1566,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 359.46264337503817,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1273,
+        "peak_sampled_rss_kib": 2088,
+        "samples": 1,
+        "starttime_ticks": 87973865
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 359.58395095402375,
+        "host_pid": 1579,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 359.5850329430541,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1286,
+        "peak_sampled_rss_kib": 2060,
+        "samples": 1,
+        "starttime_ticks": 87973877
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 359.70632583100814,
+        "host_pid": 1592,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 359.70750627096277,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1299,
+        "peak_sampled_rss_kib": 164,
+        "samples": 1,
+        "starttime_ticks": 87973889
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 359.8287097599823,
+        "host_pid": 1603,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 359.82980444899295,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1310,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87973901
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 360.074186985963,
+        "host_pid": 1627,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 360.0752215939574,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1334,
+        "peak_sampled_rss_kib": 2080,
+        "samples": 1,
+        "starttime_ticks": 87973926
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 360.25767515797634,
+        "host_pid": 1646,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 360.2587273940444,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1353,
+        "peak_sampled_rss_kib": 2140,
+        "samples": 1,
+        "starttime_ticks": 87973944
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 360.37999753502663,
+        "host_pid": 1659,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 360.3810214600526,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1366,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87973956
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 360.50230711197946,
+        "host_pid": 1670,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 360.503372000996,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1377,
+        "peak_sampled_rss_kib": 2108,
+        "samples": 1,
+        "starttime_ticks": 87973968
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 360.68555113999173,
+        "host_pid": 1689,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 360.68659301497974,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1396,
+        "peak_sampled_rss_kib": 2092,
+        "samples": 1,
+        "starttime_ticks": 87973987
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 360.8688380890526,
+        "host_pid": 1708,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 360.8703691069968,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1415,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87974006
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.1136008150643,
+        "host_pid": 1731,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.1160349340644,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1438,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87974030
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.1763620650163,
+        "host_pid": 1737,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.17805813997984,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1444,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87974036
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.2384214180056,
+        "host_pid": 1743,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.2396571940044,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1450,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87974042
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.3000139669748,
+        "host_pid": 1749,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.3010816150345,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1456,
+        "peak_sampled_rss_kib": 1952,
+        "samples": 1,
+        "starttime_ticks": 87974049
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.36142924102023,
+        "host_pid": 1755,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.3625249649631,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1462,
+        "peak_sampled_rss_kib": 2044,
+        "samples": 1,
+        "starttime_ticks": 87974054
+      },
+      {
+        "fd_identity_checks": 5,
+        "first_seconds": 361.48384152306244,
+        "host_pid": 1766,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.4849813620094,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1473,
+        "peak_sampled_rss_kib": 724,
+        "samples": 1,
+        "starttime_ticks": 87974067
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.54533916304354,
+        "host_pid": 1772,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.5463854370173,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1479,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87974073
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 361.60671376402024,
+        "host_pid": 1778,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 361.60775580001064,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1485,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87974079
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 363.57196914206725,
+        "host_pid": 1827,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 363.5730227789609,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1533,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87974275
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 363.6943981499644,
+        "host_pid": 1839,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 363.6954769369913,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1545,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87974288
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 363.7558206790127,
+        "host_pid": 1845,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 363.7568684819853,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1551,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87974294
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 363.81720611604396,
+        "host_pid": 1851,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 363.8185458399821,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1557,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87974300
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 363.87890312599484,
+        "host_pid": 1857,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 363.88000585499685,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1563,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87974306
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 363.94035853701644,
+        "host_pid": 1862,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 363.94148870697245,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1568,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87974312
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 364.61383529601153,
+        "host_pid": 1924,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 364.61489229206927,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1630,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87974380
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 364.79773799702525,
+        "host_pid": 1941,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 364.80053997796495,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1647,
+        "peak_sampled_rss_kib": 204,
+        "samples": 1,
+        "starttime_ticks": 87974398
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 365.16595519904513,
+        "host_pid": 1973,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 365.16700272099115,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1679,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87974435
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 365.22736219805665,
+        "host_pid": 1979,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 365.22890501096845,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1685,
+        "peak_sampled_rss_kib": 316,
+        "samples": 1,
+        "starttime_ticks": 87974441
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 365.59413247497287,
+        "host_pid": 2012,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 365.5952160829911,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1718,
+        "peak_sampled_rss_kib": 2140,
+        "samples": 1,
+        "starttime_ticks": 87974478
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 365.6555314110592,
+        "host_pid": 2018,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 365.65657273400575,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1724,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87974484
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 365.7169129330432,
+        "host_pid": 2024,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 365.7185980740469,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1730,
+        "peak_sampled_rss_kib": 316,
+        "samples": 1,
+        "starttime_ticks": 87974490
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 365.96199110196903,
+        "host_pid": 2047,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 365.9630345570622,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1753,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87974515
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 366.20736195798963,
+        "host_pid": 2069,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 366.208479071036,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1775,
+        "peak_sampled_rss_kib": 464,
+        "samples": 1,
+        "starttime_ticks": 87974539
+      },
+      {
+        "fd_identity_checks": 5,
+        "first_seconds": 366.2687918599695,
+        "host_pid": 2075,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 366.2699387880275,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1781,
+        "peak_sampled_rss_kib": 600,
+        "samples": 1,
+        "starttime_ticks": 87974545
+      },
+      {
+        "fd_identity_checks": 355,
+        "first_seconds": 367.664027897059,
+        "host_pid": 2092,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 180,
+          "self_system": 59,
+          "self_user": 275
+        },
+        "last_seconds": 372.89359120000154,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1797,
+        "peak_sampled_rss_kib": 160392,
+        "samples": 86,
+        "starttime_ticks": 87974683
+      },
+      {
+        "fd_identity_checks": 90,
+        "first_seconds": 370.0574164580321,
+        "host_pid": 2093,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 6,
+          "self_user": 175
+        },
+        "last_seconds": 371.848676551017,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1798,
+        "peak_sampled_rss_kib": 164156,
+        "samples": 30,
+        "starttime_ticks": 87974921
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.19439801597036,
+        "host_pid": 2140,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.19551219407003,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1842,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87975638
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.2558223520173,
+        "host_pid": 2146,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.2569091890473,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1848,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87975644
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.56127719196957,
+        "host_pid": 2175,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.5623309960356,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1877,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87975674
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.6226157610072,
+        "host_pid": 2181,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.6236806740053,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1883,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87975681
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.683993440005,
+        "host_pid": 2187,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.6853736200137,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1889,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87975687
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.92856232402846,
+        "host_pid": 2210,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.92975416895933,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1912,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87975711
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 377.9901073779911,
+        "host_pid": 2216,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 377.9913108740002,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1918,
+        "peak_sampled_rss_kib": 2068,
+        "samples": 1,
+        "starttime_ticks": 87975718
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.23595694696996,
+        "host_pid": 2239,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.23701145802625,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1941,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87975742
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.29735661007,
+        "host_pid": 2245,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.2988016579766,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1947,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87975748
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.5420208889991,
+        "host_pid": 2268,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.5430999969831,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1970,
+        "peak_sampled_rss_kib": 2140,
+        "samples": 1,
+        "starttime_ticks": 87975772
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.60343942407053,
+        "host_pid": 2274,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.6044908929616,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1976,
+        "peak_sampled_rss_kib": 2084,
+        "samples": 1,
+        "starttime_ticks": 87975779
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.66480320796836,
+        "host_pid": 2280,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.66625190898776,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1982,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87975785
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.84846899902914,
+        "host_pid": 2295,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.8495424480643,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 1997,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 87975803
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 378.90984800399747,
+        "host_pid": 2301,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 378.91187549196184,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2003,
+        "peak_sampled_rss_kib": 308,
+        "samples": 1,
+        "starttime_ticks": 87975810
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 379.1552643199684,
+        "host_pid": 2322,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 379.1563223520061,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2024,
+        "peak_sampled_rss_kib": 2084,
+        "samples": 1,
+        "starttime_ticks": 87975834
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 379.4605127760442,
+        "host_pid": 2349,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 379.46162910200655,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2051,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87975864
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 379.765691481065,
+        "host_pid": 2374,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 379.76675155502744,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2076,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 87975895
+      },
+      {
+        "fd_identity_checks": 353,
+        "first_seconds": 380.0731550330529,
+        "host_pid": 2397,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 178,
+          "self_system": 57,
+          "self_user": 284
+        },
+        "last_seconds": 385.30029436398763,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2099,
+        "peak_sampled_rss_kib": 160396,
+        "samples": 86,
+        "starttime_ticks": 87975920
+      },
+      {
+        "fd_identity_checks": 90,
+        "first_seconds": 382.4668982770527,
+        "host_pid": 2398,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 173
+        },
+        "last_seconds": 384.2578888250282,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2100,
+        "peak_sampled_rss_kib": 164200,
+        "samples": 30,
+        "starttime_ticks": 87976165
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 390.6221161930589,
+        "host_pid": 2430,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 390.6232266280567,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2128,
+        "peak_sampled_rss_kib": 2048,
+        "samples": 1,
+        "starttime_ticks": 87976981
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 390.68353918299545,
+        "host_pid": 2436,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 390.68459832295775,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2134,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87976987
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.04968627204653,
+        "host_pid": 2471,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.0507733820705,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2169,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87977023
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.29437226697337,
+        "host_pid": 2494,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.29544525803067,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2192,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87977048
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.53862572205253,
+        "host_pid": 2517,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.5396826410433,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2215,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87977072
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.6000329309609,
+        "host_pid": 2522,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.60149516398087,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2220,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87977079
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.6618064370705,
+        "host_pid": 2528,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.6628626639722,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2226,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87977085
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.78425461496226,
+        "host_pid": 2539,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.7855864269659,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2237,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87977097
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 391.9068784340052,
+        "host_pid": 2549,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 391.90793833101634,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2247,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87977109
+      },
+      {
+        "fd_identity_checks": 36,
+        "first_seconds": 392.1515809400007,
+        "host_pid": 2570,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.15296741202474,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2268,
+        "peak_sampled_rss_kib": 111300,
+        "samples": 1,
+        "starttime_ticks": 87977134
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 392.39764971495606,
+        "host_pid": 2591,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.3988666969817,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2289,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87977158
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 392.52026239200495,
+        "host_pid": 2602,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.52183541702107,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2300,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87977171
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 392.5821823810693,
+        "host_pid": 2608,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.5832552650245,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2306,
+        "peak_sampled_rss_kib": 2084,
+        "samples": 1,
+        "starttime_ticks": 87977177
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 392.70452990196645,
+        "host_pid": 2619,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.70562219806015,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2317,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87977189
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 392.76597010099795,
+        "host_pid": 2625,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.76700256206095,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2323,
+        "peak_sampled_rss_kib": 2140,
+        "samples": 1,
+        "starttime_ticks": 87977195
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 392.8273513299646,
+        "host_pid": 2631,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 392.8283941859845,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2329,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87977201
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 393.0106384080136,
+        "host_pid": 2647,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 393.0117401740281,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2345,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87977219
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 393.19403552706353,
+        "host_pid": 2664,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 393.19514689804055,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2362,
+        "peak_sampled_rss_kib": 1212,
+        "samples": 1,
+        "starttime_ticks": 87977238
+      },
+      {
+        "fd_identity_checks": 357,
+        "first_seconds": 393.37737345602363,
+        "host_pid": 2680,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 180,
+          "self_system": 61,
+          "self_user": 274
+        },
+        "last_seconds": 398.61100748495664,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2378,
+        "peak_sampled_rss_kib": 160380,
+        "samples": 86,
+        "starttime_ticks": 87977255
+      },
+      {
+        "fd_identity_checks": 90,
+        "first_seconds": 395.8330925910268,
+        "host_pid": 2681,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 176
+        },
+        "last_seconds": 397.62824485101737,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2379,
+        "peak_sampled_rss_kib": 164220,
+        "samples": 30,
+        "starttime_ticks": 87977498
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 399.9744705950143,
+        "host_pid": 2688,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 399.97682749002706,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2385,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87977916
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.0781834250083,
+        "host_pid": 2729,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.079880831996,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2424,
+        "peak_sampled_rss_kib": 2080,
+        "samples": 1,
+        "starttime_ticks": 87978226
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.38531667902134,
+        "host_pid": 2758,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.38687531196047,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2453,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87978257
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.4471479699714,
+        "host_pid": 2764,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.4486430370016,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2459,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87978263
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.5089151969878,
+        "host_pid": 2770,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.51052166800946,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2465,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87978269
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.5708138899645,
+        "host_pid": 2776,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.57258140295744,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2471,
+        "peak_sampled_rss_kib": 2148,
+        "samples": 1,
+        "starttime_ticks": 87978276
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.63285677996464,
+        "host_pid": 2782,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.6347489620093,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2477,
+        "peak_sampled_rss_kib": 312,
+        "samples": 1,
+        "starttime_ticks": 87978282
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.818444718956,
+        "host_pid": 2797,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.8201855439693,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2492,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87978300
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 403.88046531705186,
+        "host_pid": 2803,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 403.8823346729623,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2498,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87978307
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 404.0655843260465,
+        "host_pid": 2819,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 404.06708239600994,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2514,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87978325
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 404.1884962939657,
+        "host_pid": 2829,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 404.1899843000574,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2524,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87978337
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 404.4366292679915,
+        "host_pid": 2850,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 404.4394781739684,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2545,
+        "peak_sampled_rss_kib": 164,
+        "samples": 1,
+        "starttime_ticks": 87978362
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 404.4997659829678,
+        "host_pid": 2856,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 404.5016213969793,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2551,
+        "peak_sampled_rss_kib": 928,
+        "samples": 1,
+        "starttime_ticks": 87978369
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 404.74598125496414,
+        "host_pid": 2878,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 404.7474771760171,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2573,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87978393
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 404.80780608498026,
+        "host_pid": 2882,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 404.80890264804475,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2577,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87978399
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 405.11339030298404,
+        "host_pid": 2908,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 405.11444401100744,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2603,
+        "peak_sampled_rss_kib": 2120,
+        "samples": 1,
+        "starttime_ticks": 87978430
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 405.41857586603146,
+        "host_pid": 2935,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 405.419629047974,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2630,
+        "peak_sampled_rss_kib": 2076,
+        "samples": 1,
+        "starttime_ticks": 87978460
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 405.78539749002084,
+        "host_pid": 2965,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 405.7865268259775,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2660,
+        "peak_sampled_rss_kib": 1920,
+        "samples": 1,
+        "starttime_ticks": 87978497
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 408.8088241519872,
+        "host_pid": 3001,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 408.81037731899414,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2694,
+        "peak_sampled_rss_kib": 2084,
+        "samples": 1,
+        "starttime_ticks": 87978799
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 408.99319682305213,
+        "host_pid": 3020,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 408.9947088799672,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2713,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87978818
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 409.2384376330301,
+        "host_pid": 3043,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 409.23949585005175,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2736,
+        "peak_sampled_rss_kib": 2140,
+        "samples": 1,
+        "starttime_ticks": 87978842
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 409.3609121349873,
+        "host_pid": 3054,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 409.3626992490608,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2747,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87978855
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 409.4842106719734,
+        "host_pid": 3065,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 409.4861246040091,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2758,
+        "peak_sampled_rss_kib": 596,
+        "samples": 1,
+        "starttime_ticks": 87978867
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 409.73016111098696,
+        "host_pid": 3089,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 409.73205049696844,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2782,
+        "peak_sampled_rss_kib": 552,
+        "samples": 1,
+        "starttime_ticks": 87978892
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 410.03759916499257,
+        "host_pid": 3119,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 410.03910630603787,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2812,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87978922
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 410.28602383995894,
+        "host_pid": 3144,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 410.2875261720037,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2837,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87978947
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 410.34779761498794,
+        "host_pid": 3150,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 410.3492882880382,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2843,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87978953
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 410.4707527019782,
+        "host_pid": 3161,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 410.4726957579842,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2854,
+        "peak_sampled_rss_kib": 200,
+        "samples": 1,
+        "starttime_ticks": 87978966
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 410.53297908301465,
+        "host_pid": 3167,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 410.53446937003173,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2860,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87978972
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 410.6558466780698,
+        "host_pid": 3180,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 410.6575036380673,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2873,
+        "peak_sampled_rss_kib": 2152,
+        "samples": 1,
+        "starttime_ticks": 87978984
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 411.20778768206947,
+        "host_pid": 3232,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 411.2092941349838,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2925,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87979039
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 411.2695320500061,
+        "host_pid": 3238,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 411.2710328900721,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2931,
+        "peak_sampled_rss_kib": 2088,
+        "samples": 1,
+        "starttime_ticks": 87979045
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.20610235701315,
+        "host_pid": 3284,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.2077379269758,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2976,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979239
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.2680852400372,
+        "host_pid": 3290,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.2692636239808,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2982,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979245
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.3296340809902,
+        "host_pid": 3296,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.33074294705875,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2988,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87979252
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.39110934804194,
+        "host_pid": 3302,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.39221508195624,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2994,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87979258
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.45258115499746,
+        "host_pid": 3308,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.45387126505375,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3000,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87979264
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.51422566501424,
+        "host_pid": 3314,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.5165795129724,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3006,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979270
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.5769097460434,
+        "host_pid": 3320,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.57854273705743,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3012,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979276
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.6388955080183,
+        "host_pid": 3326,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.6408799450146,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3018,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979283
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.70123701298144,
+        "host_pid": 3332,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.7028838780243,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3024,
+        "peak_sampled_rss_kib": 316,
+        "samples": 1,
+        "starttime_ticks": 87979289
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.8241927609779,
+        "host_pid": 3342,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.8252391470596,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3034,
+        "peak_sampled_rss_kib": 2048,
+        "samples": 1,
+        "starttime_ticks": 87979301
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 413.885595555068,
+        "host_pid": 3348,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 413.8866288170684,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3040,
+        "peak_sampled_rss_kib": 2136,
+        "samples": 1,
+        "starttime_ticks": 87979307
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.00791296502575,
+        "host_pid": 3358,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.01029865804594,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3050,
+        "peak_sampled_rss_kib": 296,
+        "samples": 1,
+        "starttime_ticks": 87979319
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.1928814840503,
+        "host_pid": 3375,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.19438331003767,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3067,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87979338
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.2546358440304,
+        "host_pid": 3381,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.25727850198746,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3073,
+        "peak_sampled_rss_kib": 160,
+        "samples": 1,
+        "starttime_ticks": 87979344
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.32060793600976,
+        "host_pid": 3387,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.3223327830201,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3079,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87979351
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.38262438203674,
+        "host_pid": 3393,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.38520626106765,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3085,
+        "peak_sampled_rss_kib": 100,
+        "samples": 1,
+        "starttime_ticks": 87979357
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.50695433898363,
+        "host_pid": 3403,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.50846379599534,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3095,
+        "peak_sampled_rss_kib": 2112,
+        "samples": 1,
+        "starttime_ticks": 87979369
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.6298310509883,
+        "host_pid": 3414,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.6313655260019,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3106,
+        "peak_sampled_rss_kib": 2128,
+        "samples": 1,
+        "starttime_ticks": 87979381
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.69162498705555,
+        "host_pid": 3420,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.69311405706685,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3112,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87979388
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.8145543370629,
+        "host_pid": 3428,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.81687472504564,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3120,
+        "peak_sampled_rss_kib": 188,
+        "samples": 1,
+        "starttime_ticks": 87979400
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.9382704360178,
+        "host_pid": 3439,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 414.9393235880416,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3131,
+        "peak_sampled_rss_kib": 2124,
+        "samples": 1,
+        "starttime_ticks": 87979412
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 414.9996136720292,
+        "host_pid": 3445,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.0007433560677,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3137,
+        "peak_sampled_rss_kib": 1820,
+        "samples": 1,
+        "starttime_ticks": 87979418
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.06109462701716,
+        "host_pid": 3451,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.0632304010214,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3143,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979425
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.2458533870522,
+        "host_pid": 3468,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.24690133100376,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3160,
+        "peak_sampled_rss_kib": 2088,
+        "samples": 1,
+        "starttime_ticks": 87979443
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.4292664550012,
+        "host_pid": 3484,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.43031308602076,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3176,
+        "peak_sampled_rss_kib": 2132,
+        "samples": 1,
+        "starttime_ticks": 87979461
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.4906131880125,
+        "host_pid": 3490,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.49170083901845,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3182,
+        "peak_sampled_rss_kib": 2116,
+        "samples": 1,
+        "starttime_ticks": 87979468
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.55205274396576,
+        "host_pid": 3496,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.5542920039734,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3188,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87979474
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.6145570969675,
+        "host_pid": 3502,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.6171199029777,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3194,
+        "peak_sampled_rss_kib": 320,
+        "samples": 1,
+        "starttime_ticks": 87979480
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.6774694210617,
+        "host_pid": 3508,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.67952363204677,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3200,
+        "peak_sampled_rss_kib": 316,
+        "samples": 1,
+        "starttime_ticks": 87979486
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.739829757018,
+        "host_pid": 3514,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.74168483598623,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3206,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 87979493
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 415.8020331390435,
+        "host_pid": 3518,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 415.80306409602053,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 3210,
+        "peak_sampled_rss_kib": 2144,
+        "samples": 1,
+        "starttime_ticks": 87979498
+      }
+    ],
+    "permission_exit_evidence_first64": [
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87973027,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87973027,
+          "host_pid": 1002,
+          "observed_starttime_ticks": 87973027,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1002,
+        "observed_starttime_ticks": 87973027,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003839990822598338,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "same_identity_exited",
+        "confirmed_exit": true,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87973217,
+        "final_evidence": {
+          "classification": "same_identity_exited",
+          "confirmed_exit": true,
+          "observed_starttime_ticks": 87973217,
+          "observed_state": "Z"
+        },
+        "first_failure": {
+          "classification": "same_identity_exited",
+          "confirmed_exit": true,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87973217,
+          "host_pid": 1203,
+          "observed_starttime_ticks": 87973217,
+          "observed_state": "Z",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1203,
+        "observed_starttime_ticks": 87973217,
+        "observed_state": "Z",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 1,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 4.389591049402952e-05,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87973254,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87973254,
+          "host_pid": 1241,
+          "observed_starttime_ticks": 87973254,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1241,
+        "observed_starttime_ticks": 87973254,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003713490441441536,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87973602,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87973602,
+          "host_pid": 1447,
+          "observed_starttime_ticks": 87973602,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1447,
+        "observed_starttime_ticks": 87973602,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0004104599356651306,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87973609,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87973609,
+          "host_pid": 1452,
+          "observed_starttime_ticks": 87973609,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1452,
+        "observed_starttime_ticks": 87973609,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003150799311697483,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87974085,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87974085,
+          "host_pid": 1784,
+          "observed_starttime_ticks": 87974085,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1784,
+        "observed_starttime_ticks": 87974085,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003964159404858947,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87974331,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87974331,
+          "host_pid": 1879,
+          "observed_starttime_ticks": 87974331,
+          "observed_state": "R",
+          "operation": "fd_identity"
+        },
+        "host_pid": 1879,
+        "observed_starttime_ticks": 87974331,
+        "observed_state": "R",
+        "operation": "fd_identity",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003841909347102046,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87974386,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87974386,
+          "host_pid": 1930,
+          "observed_starttime_ticks": 87974386,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 1930,
+        "observed_starttime_ticks": 87974386,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003980069886893034,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87978288,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87978288,
+          "host_pid": 2787,
+          "observed_starttime_ticks": 87978288,
+          "observed_state": "R",
+          "operation": "fd_identity"
+        },
+        "host_pid": 2787,
+        "observed_starttime_ticks": 87978288,
+        "observed_state": "R",
+        "operation": "fd_identity",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.00042645703069865704,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87978466,
+        "final_evidence": {
+          "classification": "gone",
+          "confirmed_exit": true
+        },
+        "first_failure": {
+          "classification": "live",
+          "confirmed_exit": false,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87978466,
+          "host_pid": 2941,
+          "observed_starttime_ticks": 87978466,
+          "observed_state": "R",
+          "operation": "fd_directory"
+        },
+        "host_pid": 2941,
+        "observed_starttime_ticks": 87978466,
+        "observed_state": "R",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 2,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 0.0003860200522467494,
+          "final_disposition": "confirmed_exit"
+        }
+      },
+      {
+        "classification": "same_identity_exited",
+        "confirmed_exit": true,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 87978824,
+        "final_evidence": {
+          "classification": "same_identity_exited",
+          "confirmed_exit": true,
+          "observed_starttime_ticks": 87978824,
+          "observed_state": "Z"
+        },
+        "first_failure": {
+          "classification": "same_identity_exited",
+          "confirmed_exit": true,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "expected_starttime_ticks": 87978824,
+          "host_pid": 3024,
+          "observed_starttime_ticks": 87978824,
+          "observed_state": "Z",
+          "operation": "fd_directory"
+        },
+        "host_pid": 3024,
+        "observed_starttime_ticks": 87978824,
+        "observed_state": "Z",
+        "operation": "fd_directory",
+        "retry": {
+          "attempt_cap": 16,
+          "attempts": 1,
+          "backoff_seconds": 0.0002,
+          "deadline_seconds": 0.02,
+          "elapsed_seconds": 5.01429894939065e-05,
+          "final_disposition": "confirmed_exit"
+        }
+      }
+    ],
+    "permission_retry_wall_seconds": 0.0035660178400576115,
+    "raced_exits": 57,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  },
+  "terminal_cpu": {
+    "actual_node_host_pid": 5,
+    "clock_ticks_per_second": 100,
+    "node_self_seconds": 18.34,
+    "node_waited_descendant_seconds": 56.91,
+    "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+    "starttime_ticks": 87937934,
+    "ticks": {
+      "reaped_child_system": 1103,
+      "reaped_child_user": 4588,
+      "self_system": 627,
+      "self_user": 1207
+    }
+  },
+  "terminal_metrics": {
+    "counts": {
+      "atomic_failure_controls": 44,
+      "history_bytes": 310260,
+      "history_reads": 11,
+      "history_wall_seconds": 8.276691207999946,
+      "ownership_independent_equal_ranges": 1,
+      "proofs": 8,
+      "reference_equivalence_checks": 12,
+      "same_head_noops": 12,
+      "staged_window_failure_controls": 1,
+      "synchronization": [
+        {
+          "authenticated_blocks": "0",
+          "authenticated_records": "0",
+          "elapsed_seconds": 0.016472642999999607,
+          "height": "0",
+          "mode": "full-prefix-reference",
+          "node_self_system_microseconds": 2096,
+          "node_self_user_microseconds": 10334,
+          "peak_window_blocks": 0,
+          "peak_window_records": 0,
+          "read_bytes": "0",
+          "retained": {
+            "currentBufferBytes": 320,
+            "journalBufferBytes": 320,
+            "journalCheckpoints": 1,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "2",
+          "elapsed_seconds": 0.04210509400000228,
+          "height": "1",
+          "mode": "full-prefix-reference",
+          "node_self_system_microseconds": 7452,
+          "node_self_user_microseconds": 24382,
+          "peak_window_blocks": 1,
+          "peak_window_records": 2,
+          "read_bytes": "19366",
+          "retained": {
+            "currentBufferBytes": 528,
+            "journalBufferBytes": 848,
+            "journalCheckpoints": 2,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "2",
+          "elapsed_seconds": 0.05642321400000219,
+          "height": "1",
+          "mode": "full-prefix-reference",
+          "node_self_system_microseconds": 10200,
+          "node_self_user_microseconds": 30609,
+          "peak_window_blocks": 1,
+          "peak_window_records": 2,
+          "read_bytes": "19366",
+          "retained": {
+            "currentBufferBytes": 6992,
+            "journalBufferBytes": 7312,
+            "journalCheckpoints": 2,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "1",
+          "elapsed_seconds": 0.022970148999997036,
+          "height": "2",
+          "mode": "append",
+          "node_self_system_microseconds": 2082,
+          "node_self_user_microseconds": 13314,
+          "peak_window_blocks": 1,
+          "peak_window_records": 1,
+          "read_bytes": "5688",
+          "retained": {
+            "currentBufferBytes": 736,
+            "journalBufferBytes": 8048,
+            "journalCheckpoints": 3,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "1",
+          "elapsed_seconds": 0.05047285499999998,
+          "height": "2",
+          "mode": "append",
+          "node_self_system_microseconds": 10225,
+          "node_self_user_microseconds": 25647,
+          "peak_window_blocks": 1,
+          "peak_window_records": 1,
+          "read_bytes": "5688",
+          "retained": {
+            "currentBufferBytes": 7200,
+            "journalBufferBytes": 8048,
+            "journalCheckpoints": 3,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "1",
+          "elapsed_seconds": 0.0482949460000018,
+          "height": "3",
+          "mode": "append",
+          "node_self_system_microseconds": 8509,
+          "node_self_user_microseconds": 27575,
+          "peak_window_blocks": 1,
+          "peak_window_records": 1,
+          "read_bytes": "5624",
+          "retained": {
+            "currentBufferBytes": 7376,
+            "journalBufferBytes": 15424,
+            "journalCheckpoints": 4,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "258",
+          "authenticated_records": "4",
+          "elapsed_seconds": 2.5172797199999914,
+          "height": "258",
+          "mode": "append",
+          "node_self_system_microseconds": 436882,
+          "node_self_user_microseconds": 850909,
+          "peak_window_blocks": 256,
+          "peak_window_records": 4,
+          "read_bytes": "89402",
+          "retained": {
+            "currentBufferBytes": 39632,
+            "journalBufferBytes": 354768,
+            "journalCheckpoints": 9,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "255",
+          "authenticated_records": "0",
+          "elapsed_seconds": 2.616006389999995,
+          "height": "258",
+          "mode": "append",
+          "node_self_system_microseconds": 485305,
+          "node_self_user_microseconds": 845032,
+          "peak_window_blocks": 255,
+          "peak_window_records": 0,
+          "read_bytes": "59596",
+          "retained": {
+            "currentBufferBytes": 39632,
+            "journalBufferBytes": 354768,
+            "journalCheckpoints": 9,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "1",
+          "elapsed_seconds": 0.05102872000000207,
+          "height": "259",
+          "mode": "append",
+          "node_self_system_microseconds": 12297,
+          "node_self_user_microseconds": 21613,
+          "peak_window_blocks": 1,
+          "peak_window_records": 1,
+          "read_bytes": "5624",
+          "retained": {
+            "currentBufferBytes": 39648,
+            "journalBufferBytes": 355424,
+            "journalCheckpoints": 9,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "0",
+          "authenticated_records": "0",
+          "elapsed_seconds": 0.007640130999963731,
+          "height": "258",
+          "mode": "unchanged",
+          "node_self_system_microseconds": 0,
+          "node_self_user_microseconds": 7631,
+          "peak_window_blocks": 0,
+          "peak_window_records": 0,
+          "read_bytes": "0",
+          "retained": {
+            "currentBufferBytes": 39632,
+            "journalBufferBytes": 354768,
+            "journalCheckpoints": 9,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "1",
+          "authenticated_records": "1",
+          "elapsed_seconds": 0.038386220999993385,
+          "height": "259",
+          "mode": "selected-replay",
+          "node_self_system_microseconds": 10015,
+          "node_self_user_microseconds": 16020,
+          "peak_window_blocks": 1,
+          "peak_window_records": 1,
+          "read_bytes": "5688",
+          "retained": {
+            "currentBufferBytes": 39712,
+            "journalBufferBytes": 355488,
+            "journalCheckpoints": 9,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        },
+        {
+          "authenticated_blocks": "259",
+          "authenticated_records": "5",
+          "elapsed_seconds": 2.809611124999996,
+          "height": "259",
+          "mode": "full-prefix-reference",
+          "node_self_system_microseconds": 533430,
+          "node_self_user_microseconds": 946033,
+          "peak_window_blocks": 256,
+          "peak_window_records": 4,
+          "read_bytes": "94218",
+          "retained": {
+            "currentBufferBytes": 39712,
+            "journalBufferBytes": 355488,
+            "journalCheckpoints": 9,
+            "scope": "Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS."
+          }
+        }
+      ]
+    },
+    "format": "CP04-ISOLATED-WALLET-DONE01",
+    "private_material_persisted_or_hashed": false,
+    "process_self": {
+      "fsRead": 0,
+      "fsWrite": 30040,
+      "involuntaryContextSwitches": 8299,
+      "maxRSS": 246052,
+      "systemCPUTime": 6272931,
+      "userCPUTime": 12074665,
+      "voluntaryContextSwitches": 29050
+    },
+    "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+    "restore": false
+  }
+}

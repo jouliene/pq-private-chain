@@ -1,0 +1,218 @@
+{
+  "format": "CP04-CLEAN-SAFE-EVIDENCE-ALLOWLIST01",
+  "source_revision": "17dd4e73f4fbde9fee2129d0fd761b864eefe42f",
+  "files": [
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-private01/RESULT.json",
+      "suggested_relative_destination": "private/RESULT.json",
+      "bytes": 373137,
+      "sha256": "b9aeb7a80377b5b0d8859f4c6f3c7da6cfa5ce368c09f717fb71d0e97ca49ef3"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-private01/original-process.json",
+      "suggested_relative_destination": "private/original-process.json",
+      "bytes": 142138,
+      "sha256": "acdf0f84f9d7b2a55f7cc137e969bfd7827e77238f2d1a7dc9e0befe67f800a0"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-private01/restore-process.json",
+      "suggested_relative_destination": "private/restore-process.json",
+      "bytes": 25817,
+      "sha256": "8bd68f7fa9f17815dcd3321245329493b752c81f5a53f493b97d84444e03d23f"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-private01/anchor-reject-01.json",
+      "suggested_relative_destination": "private/anchor-reject-01.json",
+      "bytes": 3782,
+      "sha256": "d068534323e43761ffcb222a760048dd4fb1dce2506244913b0dc4b9120efaec"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-private01/anchor-reject-02.json",
+      "suggested_relative_destination": "private/anchor-reject-02.json",
+      "bytes": 3786,
+      "sha256": "06b9c6cf00dc872251c0ef8ab5c7193ed0ecfccabe0e52795f6d136079cbf191"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/RESULT.json",
+      "suggested_relative_destination": "public-replay/RESULT.json",
+      "bytes": 334129,
+      "sha256": "91a1b0020fc0b130d27e0160047139424aa41ee46bf7c8b65299ad262dcdda5b"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/check-scan-invoke.json",
+      "suggested_relative_destination": "public-replay/check-scan-invoke.json",
+      "bytes": 957,
+      "sha256": "f6a4ae395fb8e07099d0b5f447940dcf74e06e145c79204e4561fed862a43c4b"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/check-scan-invoke.stdout",
+      "suggested_relative_destination": "public-replay/check-scan-invoke.stdout",
+      "bytes": 470,
+      "sha256": "e26b5a9f53167a5dbe23076f2446a16346125d73692090fb438d0a8b5255f0c3"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/old-anchor-draft-rejection.json",
+      "suggested_relative_destination": "public-replay/old-anchor-draft-rejection.json",
+      "bytes": 3776,
+      "sha256": "9cc6ddefddee0d818526b55c3ab294b56658469e09ff2c0cdae47a8a7c074a8f"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/orphan-child-draft-rejection.json",
+      "suggested_relative_destination": "public-replay/orphan-child-draft-rejection.json",
+      "bytes": 3778,
+      "sha256": "b7ada9fa36f54767c36e9ea81dbe6d55c53e0cbf7b284b55a5eca9d2a27c8b34"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/incremental-sync/.work/reviewer-trace01/RESULT.json",
+      "suggested_relative_destination": "trace/RESULT.json",
+      "bytes": 1388040,
+      "sha256": "66b986d62009a2db90607c88a64e299631772b4de000c00d7624287eb0db3568"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/experiments/incremental-sync/.work/reviewer-trace01/wallet-process.json",
+      "suggested_relative_destination": "trace/wallet-process.json",
+      "bytes": 14378,
+      "sha256": "fb3e7dc1383d0cdba7222644379e4f8c1b6779ccf977c341cf12ec0339dcb5fa"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/reviewer-serving01/RESULT.json",
+      "suggested_relative_destination": "serving/RESULT.json",
+      "bytes": 1088,
+      "sha256": "23005534975f6fb9cd8b9674b28ad2fad14c4a25a4600d2130afebc09b5751ef"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/reviewer-serving01/public-test.json",
+      "suggested_relative_destination": "serving/public-test.json",
+      "bytes": 647,
+      "sha256": "f573f2d715c4bb1013f18cac9e9930c214cdc5b628d43e364df1e8c642ad4e46"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/reviewer-serving01/public-test.stdout",
+      "suggested_relative_destination": "serving/public-test.stdout",
+      "bytes": 735,
+      "sha256": "8f5ec06856f48f2ecc351075941f33ca2bcad0e3e373754d87b4646d0261812d"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/BOUNDARY.json",
+      "suggested_relative_destination": "supervision/BOUNDARY.json",
+      "bytes": 625,
+      "sha256": "c269d450beec34b08c2ecfc4b9b27b0522c383cc29d0d99a983d53f5896d0dac"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/RUNTIME_APPROVAL.json",
+      "suggested_relative_destination": "supervision/RUNTIME_APPROVAL.json",
+      "bytes": 948,
+      "sha256": "510623bf275ecb02e815ad49dd703fb56399d18d670b2cd3ce767f11b220c8d5"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/prepare-discover.json",
+      "suggested_relative_destination": "supervision/prepare-discover.json",
+      "bytes": 149,
+      "sha256": "462dc93281d191298cd76ed7f406959f0fdb9806dd9d28a98bc40b1da6a77d2e"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/prepare.json",
+      "suggested_relative_destination": "supervision/prepare.json",
+      "bytes": 179,
+      "sha256": "416ae602aafc11d60e588b5468e70fc6a9ca1ae5d6783ae46d2546ff2e253a56"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/discover.json",
+      "suggested_relative_destination": "supervision/discover.json",
+      "bytes": 339,
+      "sha256": "44df7cc86504bfc91e28795520575e9f6d72a7c070d047ae12031cf7c179b8b5"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/install.json",
+      "suggested_relative_destination": "supervision/install.json",
+      "bytes": 153,
+      "sha256": "6b6675e5d1c2b3a21b809a6125f1087dfaa9409fb847310bb53667010f21672b"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/build.json",
+      "suggested_relative_destination": "supervision/build.json",
+      "bytes": 147,
+      "sha256": "095e67a9f3e55c7faba4b32c6aa3dbbb4d88c4388c1f97c51952022c79133ce5"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/build.stdout",
+      "suggested_relative_destination": "supervision/build.stdout",
+      "bytes": 288,
+      "sha256": "b9385da665910af3dff76dcbc31c9ad47d5ec61b0d48d3b8510ee3cd5d86b341"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/parser.json",
+      "suggested_relative_destination": "supervision/parser.json",
+      "bytes": 55,
+      "sha256": "e0151118104bf3a0548a73b4945bb6b2fbc59196a19493e318bd3b76498a3ae9"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/parser.stderr",
+      "suggested_relative_destination": "supervision/parser.stderr",
+      "bytes": 604,
+      "sha256": "87d697db43d7a020cd75185cc00eac59a6f4cad87f31af9f07f0a0a7feb202fd"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/parser02.json",
+      "suggested_relative_destination": "supervision/parser02.json",
+      "bytes": 54,
+      "sha256": "7c0522b22be6e5bf7f92bd14acca254bcd2e36e7d71563279ff7cb16aef66447"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/parser02.stdout",
+      "suggested_relative_destination": "supervision/parser02.stdout",
+      "bytes": 933,
+      "sha256": "89bc69c8d42785770efbec90feb40140d437907187721c5d08f590f8ef5b3a99"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/serving.json",
+      "suggested_relative_destination": "supervision/serving.json",
+      "bytes": 52,
+      "sha256": "ede78430595fa903212625d81a133faffc44a55157ea2f291b3dc82350d29bc9"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/private.json",
+      "suggested_relative_destination": "supervision/private.json",
+      "bytes": 54,
+      "sha256": "cf230f87d3bbc979c98bddb580dba8c8e3f70bd87828faff033d1e70a95a796f"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/public-replay.json",
+      "suggested_relative_destination": "supervision/public-replay.json",
+      "bytes": 53,
+      "sha256": "90b2f50fb69b61241dc3e4ab4d5800d30ee5f2771a93d9367cc0fe3002134c3e"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer-supervision/trace.json",
+      "suggested_relative_destination": "supervision/trace.json",
+      "bytes": 54,
+      "sha256": "34839ac3afb0d100d98152e7f662405cb84b0cf97a26fc5aa569ef58fe8c99b4"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/fresh/results/private-installation-probe.json",
+      "suggested_relative_destination": "build/private-installation-probe.json",
+      "bytes": 738,
+      "sha256": "d65c6e2e8e43784d92f775e19c6cddaa19d799f7231bbe5d17fe08e3267f30b3"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/fresh/results/private-installation-probe.stdout",
+      "suggested_relative_destination": "build/private-installation-probe.stdout",
+      "bytes": 35,
+      "sha256": "63cd65a73e6c9791bc7a1d7e5b0e1c6922a39264c47379d5a2accb0fd1d22127"
+    },
+    {
+      "source": "/tmp/pq-sync-review-20261118-01/.work/reviewer01/source/fresh/provider-controls.json",
+      "suggested_relative_destination": "build/provider-controls.json",
+      "bytes": 5426,
+      "sha256": "1ef9053c5414ae42a5ed399ea773076dc03e61a2c4a98198b9cb498bced40f34"
+    }
+  ],
+  "total_bytes": 2307544,
+  "exclusions": [
+    "private configs or raw wallet IPC",
+    "private keys/backups/openings/witnesses or hashes thereof",
+    "large Parent dependency maps",
+    "databases/proof payloads/build targets"
+  ],
+  "note": "All listed content is fixed public result/component/supervision evidence. First parser EROFS is deliberately retained. Root owns copy and publication."
+}
