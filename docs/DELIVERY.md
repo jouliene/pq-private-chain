@@ -42,6 +42,28 @@ must never be staged. Inspect the complete history before an initial publication
 
 ## Current delivery record
 
-Initial publication is in preparation. STATUS.md will name the exact public
-revision and actual clean-local/public-clone evidence after those operations
-succeed. No remote publication or CI success is claimed by this draft.
+This is the first public milestone; no earlier public milestone SHA/compare URL
+exists. The prior research source revision is provenance, not an invented public
+ancestor. The initial code commit is
+`b3121208b47484917a887041c376f4a5840a81b4`; subsequent release-preparation commits
+change only delivery documentation/evidence. Exact public verification and any
+CI outcome are retained in `delivery-result.json` on the immutable
+[publication-2026-11-17 release](https://github.com/jouliene/pq-private-chain/releases/tag/publication-2026-11-17).
+The handoff must use that record's tested public revision, not assume the branch
+name still denotes the tested bytes. CI is manual and its run URL/conclusion
+must be checked; the presence of `.github/workflows/smoke.yml` is not a PASS.
+
+## Source manifests after a deliberate source change
+
+`CORE_MANIFEST.json` is the explicit selected build/test-source inventory; each
+entry has bytes and SHA256. `SOURCE.json` files separately bind the experiment
+entry points. They are developer review inputs, not transaction-selected programs.
+After an authorized change, review the exact diff and consciously add/remove
+required inputs in these lists, recompute their hashes from the public checkout,
+then commit the code and manifests together and use a new clean installation.
+The existing Python standard-library hashing functions in scripts/common.py are
+sufficient; no original research export script or archive is a maintenance
+prerequisite. Never sweep `.work`, secrets, generated databases or binaries into
+a new manifest. The historical IMPORT_MAP remains the initial-import record;
+do not rewrite it to conceal later development. Preserve algorithm/profile IDs
+unless the protocol change itself explicitly requires a coherent version change.

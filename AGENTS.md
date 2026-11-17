@@ -2,7 +2,7 @@
 
 This is the selected public development checkout for the independent PQ-private
 chain research implementation. Read README.md, BUILD.md, STATUS.md and
- docs/DELIVERY.md before changing the published path. Technical artifacts and
+docs/DELIVERY.md before changing the published path. Technical artifacts and
 code are English; communicate with the project owner in Russian.
 
 One orchestrator owns shared contracts, Git, release identity and integration.

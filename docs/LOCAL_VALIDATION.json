@@ -1,0 +1,39 @@
+{
+  "format": "CP03-PUBLICATION-LOCAL-VALIDATION01",
+  "source_baseline_commit": "b3121208b47484917a887041c376f4a5840a81b4",
+  "core_manifest_sha256": "2a18fba052901bd2f9259520ba39c06432337d17fb489b56325a98e186251a34",
+  "clean_local_clone": {
+    "passed": true,
+    "research_staging_and_registry_caches_unavailable": true,
+    "fresh_build_artifacts": 113,
+    "compiled_depfile_inputs": 291,
+    "fresh_executables": 4,
+    "native_provider_controls": 8,
+    "public_cli_calls": 53,
+    "public_native_controls": 4,
+    "fresh_private_proofs": 3,
+    "backup_only_new_process_then_new_spend": true,
+    "public_only_body_receipt_and_SQL_readback": true,
+    "witness_checkpoints": 3,
+    "witness_negative_controls": 4,
+    "final_private_scenario_public_state": {
+      "height": 3,
+      "leaves": 6,
+      "fees": 6341197,
+      "liabilities": 0
+    }
+  },
+  "preserved_first_attempt": {
+    "passed": false,
+    "stage": "Cargo compiler version subprocess before compilation",
+    "cause": "Root isolation recipe did not expose a usable /dev/null",
+    "discriminator": "rustc with pipe succeeded; rustc with DEVNULL and /dev/null open failed EACCES13",
+    "repair": "standard minimal /dev, same source and research/cache masks, new clean clone and immutable label"
+  },
+  "not_repeated": [
+    "full 32-proof distinct-role campaign",
+    "99 historical verifier-campaign controls"
+  ],
+  "scope": "Functional publication reproduction. No whole-role, annual network capacity, production or composed PQ/privacy security claim.",
+  "public_revision_results": "See immutable publication-2026-11-17 release delivery-result.json; this local evidence alone is not public-clone verification."
+}
