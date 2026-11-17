@@ -41,8 +41,9 @@ Source/runtime unchanged. Source03fc065433ebe8cdfb4150dcee76056c00683633b01d70c6
 runnerbbb7a4c56498f9e507728e2e505f8f133cdd7e96d519ba5febe2a296992d2902.
 Installationgate3a c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b.
 Safe exact4receipts in wallet-integration/evidence/wallet-small03/.
-No heavy job live. Full264proof/5400s expiry/reorg/recovery remains gated on
-independent small03 actual readback (in progress), then is the next useful run.
+Allocation25 full264proof/5400s expiry/reorg/recovery is now authorized and
+launching after independent small03 actual readback01ebcd30641a9f506d18924c6a650e32f49800e61e775d3fb76e1fa8974f09d4.
+Root read that complete review. No other heavy job allowed; frozen SOURCE03.
 arch_consensus_roles (Sol/high): fixedhelper/component controls done; publicproc
 allocation23 finished with useful discriminator and explicit10s budget failure.
 No more publicproc/native component reruns or modifications allocated.
@@ -357,3 +358,61 @@ peaks315788/336980KiB. Fourcommonhistoryreads total103596bytes, readprocessing
 RSS933504KiB includingpreflight. Publicdisk36327424allocatedbytes atsample.
 All5positiveadmissions, no secret/log/hashsink, actualfreshrestore afteroriginal
 exit0. Fullprofile and independent cleancheckout remain unfulfilled.
+
+## Allocation25: full genuine expiry/reorg/recovery campaign
+
+Reviewed local commit c7ed23b4f621a0c26b36c79f96ca579207f16ba8 records passing
+small03 and exact SOURCE03. Not pushed; not full Gate3completion.
+Exclusive label wallet-full01, full264proofs/5400s/4GiBAS/8GiBpublicdisk,
+walletCPU0/nativeCLI CPU1. Predeclaration GATE3_PROFILE.json unchanged.
+No new parameter/relation/fee/codec change. Samegate3a approvedinstallation.
+Expected selectedfinalstate (analytic, NOT yet observed): height260,261bodies,
+522leaves,516NFs,fees551305634,total1.1B,liab0. All264generatedproofs must each
+have >=1genuinepositiveadmission, including3eventuallynoncanonicaldrafts.
+TwoactualAnchorrejections must leave all14tablesunchanged. Oldcommonprefix
+draftpositivecontrol,>256changingroots,refresh+oldnotespending,jointbranch
+rewind,orphan-discovery/spentnessundo,deepreplay,originalterminalexit0 and
+backup-onlynewprocessspend mandatory. Preservefailure; no sourceedits or
+parallelheavyjobs. Readonly public progress may countpublicbodies/receipts;
+never inspect/hashprivatepipes/backups/witnesses.
+
+```sh
+python3 -I experiments/network-feasibility/wallet-integration/run.py \
+  --label wallet-full01 --profile full \
+  --installation .work/gate3a/fresh/installation.json \
+  --approve-installation c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b \
+  --approve-source fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e
+```
+
+Allocation25 LIVE session94376 started2026-11-17 11:34UTC. Do not duplicate.
+Reviewer independently scopes clean-checkout reproduction under review/ only;
+no build/proof/replay allocated concurrently. Root remains sole Git writer.
+Native Goal ACTIVE; next regular owner update approximately11:58UTC.
+
+Owner steering: optional secondserver for heavytests authorized. Root confirmed
+read-only SSH keyauthentication (strict existinghostkey), no passwordfile read
+or sudo. Secondarymachine7950X/32logical/~184GiBRAM/~273GiBfree, x86_64;
+Python3.14.4/OpenSSL3.5.5/bwrap0.11.1, Rust/Node/rgabsent. Endpoints/credential
+locations intentionally excluded from repositorydocuments. Native specialist
+read-only setup/runtime compatibility investigation in review/ only; no remote
+mutation/heavytest, and no live local migration. Canonical project unchanged.
+
+Allocation25 progress11:46UTC:87publicbodies/87Parentreceipts; no terminalRESULT.
+This is progress count, not fullacceptance. Session94376 remainsLIVE.
+Publicreplaydriver assigned to arch_private_repro; source work only. Reviewer
+scoped Gate5 minimalcleanbuild+newsmall5+fullpublicchronology conditionalfullPASS;
+no264private regeneration absentnewfinding. CurrentCI diff adds existing Gate3
+smallprofile and safeartifactpaths, no isolationbypass; actualCI stillpending.
+
+Gate5 publicreplayer source GO: Root+reviewer read ca27d58994db90607d757ed6ae1c2fb3473997594456c271c93a5cf97b6f810f.
+PUBLIC_REPLAY_SOURCE e76fc79639f4b5475f437849c56ff650af956fbfff556012158f111181215b32
+pins exactdriver/run.py/oracle3files. Actualreplay unexecuted; closure may be
+exported ONLY from independentlyaccepted full01. Allocate external1200s wrapper
+around900s internalreplay tocover startup/installhash/copy/posthash. No secret
+or sourceDB/verdict authority. Existinghelper/privateSource03 remainsunchanged.
+
+Remoteprerequisite read-onlytask complete. bwrap basicnamespaceprobe actualexit0;
+existinghost nativeOpenSSL3.5.5 cannot satisfy fixed3.0.13 sourcegates. Exact
+user-ownedNoble-compatible rootfs is an UNPREPARED candidate, nestedwallet not
+tested. No remoteinstall/filemutation/sudo/privateproof. Optionalserver is not
+a prerequisite for localcompletion; do not stallfull or cleanlocalreproduction.

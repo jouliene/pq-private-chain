@@ -21,7 +21,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends build-essential libssl-dev python3 curl xz-utils ripgrep
+          sudo apt-get install -y --no-install-recommends build-essential libssl-dev python3 curl xz-utils ripgrep bubblewrap
           rustup toolchain install 1.99.1 --profile minimal
           mkdir -p .tools
           curl --fail --location --silent --show-error --output .tools/node-v24.22.1-linux-x64.tar.xz https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz
@@ -51,7 +51,18 @@ jobs:
           task_workload_sha=$(sha256sum "$task_workload" | cut -d ' ' -f1)
           task_witness_sha=$(sha256sum experiments/architecture-feasibility/witness-stream/SOURCE.json | cut -d ' ' -f1)
           python3 -I experiments/architecture-feasibility/witness-stream/probe.py --installation "$task_installation" --approve-installation "$task_installation_sha" --approve-source "$task_witness_sha" --workload "$task_workload" --approve-workload "$task_workload_sha" --output "$PWD/.work/ci01/witness-result.json"
+      - name: Isolated local witnesses and backup-only fresh-process spend
+        shell: bash
+        run: |
+          set -euo pipefail
+          task_installation=.work/ci01/fresh/installation.json
+          task_installation_sha=$(sha256sum "$task_installation" | cut -d ' ' -f1)
+          task_wallet_source_sha=$(sha256sum experiments/network-feasibility/wallet-integration/SOURCE.json | cut -d ' ' -f1)
+          mkdir -p .work/ci01/source/experiments/compact-all-payments-v3/public
+          mkdir -p .work/ci01/source/experiments/compact-all-payments-v3/evidence
+          python3 -I experiments/network-feasibility/wallet-integration/run.py --label ci-wallet01 --profile small --installation "$task_installation" --approve-installation "$task_installation_sha" --approve-source "$task_wallet_source_sha"
       - name: Retain only fixed public result records
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: public-smoke-results
@@ -62,4 +73,8 @@ jobs:
             .work/ci01/public01-result.json
             .work/ci01/private-private01.json
             .work/ci01/witness-result.json
+            experiments/network-feasibility/wallet-integration/.work/ci-wallet01/RESULT.json
+            experiments/network-feasibility/wallet-integration/.work/ci-wallet01/claim.json
+            experiments/network-feasibility/wallet-integration/.work/ci-wallet01/original-process.json
+            experiments/network-feasibility/wallet-integration/.work/ci-wallet01/restore-process.json
           include-hidden-files: true
