@@ -188,3 +188,10 @@ full01-public-closure.tar,462551040B/SHA29541085933138adb13e11fb1f91b247b03f8c20
 Contains exactmanifest+genesis+264complete bodies only. Publicmetadata tracked in
 evidence/FULL_PUBLIC_ARTIFACT01.json. Release/actualCI must still succeed.
 Owner progress reports delivered around12:28 and12:37UTC; next regular12:58UTC.
+
+Pre-update pin intersection caught Root's newly added BUILD.md cross-reference:
+BUILD.md is a CORE/install-pinned input. Clone update stopped before mutation.
+Root removed only that seven-line documentation addition, restoring the exact
+approved build-guide bytes; current wallet commands remain in the experiment
+README. Commit220aa4b is an intermediate checkpoint, not an approved installed
+revision. No runtime approval was rewritten and no rebuild was repeated.

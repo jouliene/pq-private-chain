@@ -100,13 +100,6 @@ The source fixtures contain public keys/messages/signatures and proofs, with no
 secret signing/receiving keys or witnesses. The99historical proof-campaign controls
 are not rerun by this short publication check.
 
-For the current isolated wallet's locally constructed membership paths, use the
-[network wallet reproduction commands](experiments/network-feasibility/wallet-integration/README.md).
-They require bubblewrap and actual Linux namespace/procfs support in addition to
-the toolchain above, and include the new small5/full264 profiles and optional
-public-only full chronology replay. The older smoke below retains its explicitly
-different local-ledger membership dependency.
-
 ## Fresh private smoke
 
 ```sh
