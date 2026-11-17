@@ -1,0 +1,150 @@
+{
+  "files": [
+    {
+      "bytes": 32356,
+      "file": "small02/RESULT.json",
+      "sha256": "5253c2e8c998ae3aef3377dd775b1d2b12e60fb1e9c20d6c42167494d4d4225b",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small02/RESULT.json"
+    },
+    {
+      "bytes": 374,
+      "file": "small02/claim.json",
+      "sha256": "c2a90d327c04d0ad05b30caea0bbf9cb0137d224fd3f47b995367985f0c36afe",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small02/claim.json"
+    },
+    {
+      "bytes": 8515,
+      "file": "small02/original-process.json",
+      "sha256": "142605273b746ad5609ef0a60586c0ced6e9dee8aa5d62cb6482f9d187c2a8c8",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small02/original-process.json"
+    },
+    {
+      "bytes": 5209,
+      "file": "small02/restore-process.json",
+      "sha256": "7039c30d48abd2dc4090d070b0bdafab395242fd9862e361b2c0d1cf3a564df3",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small02/restore-process.json"
+    },
+    {
+      "bytes": 507,
+      "file": "failed-small01/RESULT.json",
+      "sha256": "cf769c1ad78a5f6f7f4f0f3aa4abea4f510188413d7b25e5ec37dc2885095dbf",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small01/RESULT.json"
+    },
+    {
+      "bytes": 374,
+      "file": "failed-small01/claim.json",
+      "sha256": "e3deb1079bcad44552cfc76b4eca66f040b98af0519094b111289843673ee7ad",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small01/claim.json"
+    },
+    {
+      "bytes": 952,
+      "file": "failed-small01/original-process.json",
+      "sha256": "c09b6c2aa94d6970b6e9184ad5167bd331d67dd017df935a2170f940839a6be4",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small01/original-process.json"
+    },
+    {
+      "bytes": 635,
+      "file": "supervision/BOUNDARY.json",
+      "sha256": "4845afbef65b038256639c0bc2b0e4c5dd725e6a475682a4c93fb5851db8e3ae",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/BOUNDARY.json"
+    },
+    {
+      "bytes": 383,
+      "file": "supervision/RUNTIME_APPROVAL.json",
+      "sha256": "6cb6af772ff299c5f2c5775c74fe93b97e29afbbd060349a980df3541646b4c1",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/RUNTIME_APPROVAL.json"
+    },
+    {
+      "bytes": 9687,
+      "file": "supervision/BUILD_ACTUAL_REVIEW01.json",
+      "sha256": "2c837934465b3dc41d5e06d1608801a91e6aaa0a001b6ed4f11aa26e6d6b3c5e",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/BUILD_ACTUAL_REVIEW01.json"
+    },
+    {
+      "bytes": 2818,
+      "file": "supervision/prepare-discover-command.json",
+      "sha256": "847d6788ea4ffc5e347738b1b47822fbc98390a255fa2ae5c784c0e5f5c9af18",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/prepare-discover-command.json"
+    },
+    {
+      "bytes": 53,
+      "file": "supervision/prepare-discover.json",
+      "sha256": "ea030d7416460d022b2220799969f55c507119a1762fb6b7f384bc13a47ec94a",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/prepare-discover.json"
+    },
+    {
+      "bytes": 174,
+      "file": "supervision/prepare.json",
+      "sha256": "98d5ac8c49255303a83d00d5c479908f5201bd7bf95c2efd15ab2917915b8f3b",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/prepare.json"
+    },
+    {
+      "bytes": 329,
+      "file": "supervision/discover.json",
+      "sha256": "34ea98ecae9e23afa579e5ac23bcc6e9193caefdeb162b7c3a56214847b94e0e",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/discover.json"
+    },
+    {
+      "bytes": 2137,
+      "file": "supervision/install-build-command.json",
+      "sha256": "6dca00387b5250d358d3e402ca27572b815ab5afbc8c107811cba0b1a7610fbb",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/install-build-command.json"
+    },
+    {
+      "bytes": 80,
+      "file": "supervision/install-build.json",
+      "sha256": "e117ffbdd2aac10554be19774a10f9c445f7244c6c895f7d04802aa4ef472022",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/install-build.json"
+    },
+    {
+      "bytes": 270,
+      "file": "supervision/install.json",
+      "sha256": "d18af422be503a11a85310d8cdb08216bdd7597eccf2ef034617216b3bf19577",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/install.json"
+    },
+    {
+      "bytes": 249,
+      "file": "supervision/build.json",
+      "sha256": "565442217a2674d0a2a68c5a9f76102f686b9696e10991b2c38c7cca634264d7",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/build.json"
+    },
+    {
+      "bytes": 2437,
+      "file": "supervision/small01-command.json",
+      "sha256": "9683ddc35507b18c752f799443e2d601ae2fcdf69320131272f22391a0a5a312",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/small01-command.json"
+    },
+    {
+      "bytes": 79,
+      "file": "supervision/small01-outer.json",
+      "sha256": "0a194bac604e307e2d01f43fd7b80cc4b92ba207131a10b2c078de6fd1b7f185",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/small01-outer.json"
+    },
+    {
+      "bytes": 2495,
+      "file": "supervision/small02-command.json",
+      "sha256": "a56465716906181d8befcdbd6b81051486bba2949bc51e6968bbb8522792ebad",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/small02-command.json"
+    },
+    {
+      "bytes": 80,
+      "file": "supervision/small02-outer.json",
+      "sha256": "e8aa8e0e0e7a03b04ab4b1b125a890015b629ce9749bb62e171bed0e36f8da7a",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/small02-outer.json"
+    },
+    {
+      "bytes": 11702,
+      "file": "supervision/SMALL02_ACTUAL_REVIEW01.json",
+      "sha256": "fb88c43c4775061414aea738c4e17da45e79330d3b554b59958e817515e72523",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/SMALL02_ACTUAL_REVIEW01.json"
+    },
+    {
+      "bytes": 2224,
+      "file": "supervision/public01-command.json",
+      "sha256": "535e7c61a21e3ec418f0dfdb3ce45fd5699f6171b63598feb62d8ae88049a288",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/public01-command.json"
+    }
+  ],
+  "format": "CP04-GATE5-SAFE-PUBLIC-EVIDENCE-ALLOWLIST01",
+  "scope": "Exact fixed public JSON receipts and commands only. No DB/body/private stream/backup/large Parent runtime map copied. Public replay is currently live; only its command is included now."
+}

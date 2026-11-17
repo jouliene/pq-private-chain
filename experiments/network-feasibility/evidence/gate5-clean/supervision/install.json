@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "scripts/setup.py",
+    "install",
+    "--label",
+    "gate5",
+    "--approve-runtime",
+    "62e4beb975f1a2e163b476b2b3f5b778f5100ad5e8887b33a416cf253771408f"
+  ],
+  "exit": 0,
+  "wall_seconds": 1.188283344032243
+}

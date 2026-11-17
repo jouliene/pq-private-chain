@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 334109,
+      "file": "public01/RESULT.json",
+      "sha256": "973cd516e921a7d71223ec4d62d037f5c9784098de7170cf6cbd56d22061074b",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/RESULT.json"
+    },
+    {
+      "bytes": 437,
+      "file": "public01/claim.json",
+      "sha256": "541eb68d1d663095885b4f9126c9ded21637008b000dbe2dcfa137cafcebf874",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/claim.json"
+    },
+    {
+      "bytes": 3776,
+      "file": "public01/old-anchor-draft-rejection.json",
+      "sha256": "6a4c5ae525511cb45c2a5b94a7dbb8dd610b674572aedcc3c49329611adb2ae6",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/old-anchor-draft-rejection.json"
+    },
+    {
+      "bytes": 3778,
+      "file": "public01/orphan-child-draft-rejection.json",
+      "sha256": "14c4c11348b6f9cd0e4ffdbf1b5d7aca8f0b9ef317dbde92e7497ad44907c794",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/orphan-child-draft-rejection.json"
+    },
+    {
+      "bytes": 951,
+      "file": "public01/check-scan-invoke.json",
+      "sha256": "f1dd5ed376ae2411cf1ec3751076a0f674be8f823bc762a97809f017b76cae86",
+      "source": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-public01/check-scan-invoke.json"
+    },
+    {
+      "bytes": 718,
+      "file": "supervision/public01.json",
+      "sha256": "275005acb82d1cdeaa9983971504af02c00d1ed90df07d864ea6174b1ddbbfcc",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/public01.json"
+    },
+    {
+      "bytes": 79,
+      "file": "supervision/public01-outer.json",
+      "sha256": "504f19b58fa06f0b86ff7daaaa58fa54ede93e0b94bb4a6efbfe7e5c97e7f9d3",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/public01-outer.json"
+    },
+    {
+      "bytes": 7599,
+      "file": "supervision/PUBLIC01_ACTUAL_REVIEW01.json",
+      "sha256": "3218e857b24929a8821bacbc498b41f0b98b7110d7b9c7af7e151ef92dede4b9",
+      "source": "/tmp/pq-gate5-20261117-01/.work/gate5-supervision/PUBLIC01_ACTUAL_REVIEW01.json"
+    }
+  ],
+  "format": "CP04-GATE5-SAFE-PUBLIC-EVIDENCE-ALLOWLIST02",
+  "previous_manifest_sha256": "60134881e98addadae325ce268c39a96fdcb2319d63badd268b0ed66110cda43",
+  "scope": "Appended terminal public replay JSON receipts and independent review only; no DB/body/scan/private/large Parent runtime maps. FILES01 and its copies unchanged."
+}

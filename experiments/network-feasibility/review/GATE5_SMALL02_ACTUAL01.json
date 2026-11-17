@@ -1,0 +1,399 @@
+{
+  "accounting": {
+    "fees": 10570146,
+    "liabilities": 0,
+    "remaining_note_supply_by_conservation": 1089429854,
+    "total": 1100000000
+  },
+  "all14_actual_sql_recomputed": {
+    "anchors": {
+      "rows": 5,
+      "sha256": "446c5e69501d2972874862384e3d377dcd7710f150096e0c907b5cda01611245"
+    },
+    "archive_objects": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_pending": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_segments": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "blocks": {
+      "rows": 4,
+      "sha256": "910771704f37779aa667326ab22c9915dfa2dee45166581e2e8b884ced410331"
+    },
+    "bodies": {
+      "rows": 5,
+      "sha256": "6c19c7dca275ef68cd2c1d109545aab7000df28d517cac75e1bc95f5eb365623"
+    },
+    "body_cache": {
+      "rows": 1,
+      "sha256": "b565acf31de65c5161440bd4c8c1c38cee8b816612a466e22accacde2107813f"
+    },
+    "cores": {
+      "rows": 5,
+      "sha256": "b271fd26423bbe00a7b0c0874efec05b54eaeba6060e25d47b07bc874d8bde22"
+    },
+    "leaves": {
+      "rows": 10,
+      "sha256": "3645143b68cf3ee23f366b0df1cf8bda260cac1ba4fad8101974bbd9eefec131"
+    },
+    "meta": {
+      "rows": 1,
+      "sha256": "d54906d01ae9f0ff3e8780dce7924fd8dc80d7df7efcb045bbd292e84beb2b76"
+    },
+    "node_undo": {
+      "rows": 171,
+      "sha256": "d9759d107ede5286f2b3b9f38ab20149353d35a04f319f711f902b29aafda3b5"
+    },
+    "nodes": {
+      "rows": 57,
+      "sha256": "ce3d1cdc19ed8be73f05191e61cd40148d3d34d18e1a8ce234134a0a77e1dbfa"
+    },
+    "nullifiers": {
+      "rows": 4,
+      "sha256": "79ba13e0653a08a5d9d1d55e2cba6299b7eeaffaf9a2eec11d102c57ffaa967b"
+    },
+    "sources": {
+      "rows": 2,
+      "sha256": "56eb59a7a397cfb6236dc9d692a024a4467cbdb2bb2f048ff53f490462ef8a58"
+    }
+  },
+  "build_reuse": "Only experiment namespace probe/consumer source changed; Root verified zero overlap with10867 installation pins; actual installation rechecked by run. No native rebuild required.",
+  "build_revision": "b6c6e5938c4ba67a874826f85257e43dfff2f500",
+  "clean_revision": "a9357c27d7458277b80b78ac887696a9ea9a99a8",
+  "corrected_namespace_reports_validated": true,
+  "events": [
+    {
+      "op": "boundary",
+      "restore": false,
+      "seconds": 0.25053289998322725
+    },
+    {
+      "actual_new_ledger_exists_and_wallet_denied": true,
+      "op": "init",
+      "restore": false,
+      "seconds": 0.31459750898648053
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 6.8163276420673355
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 12.16908422706183
+    },
+    {
+      "height": "1",
+      "op": "admit",
+      "proof_bodies": 2,
+      "restore": false,
+      "seconds": 12.192660914035514
+    },
+    {
+      "bytes": 19366,
+      "height": "1",
+      "op": "scan",
+      "restore": false,
+      "seconds": 13.534080054028891
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 20.075452791992575
+    },
+    {
+      "height": "2",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 20.098831366049126
+    },
+    {
+      "bytes": 24618,
+      "height": "2",
+      "op": "scan",
+      "restore": false,
+      "seconds": 21.28370565699879
+    },
+    {
+      "name": "joint-lease-and-packet-controls",
+      "op": "mark",
+      "restore": false,
+      "seconds": 22.53820984601043
+    },
+    {
+      "name": "genuine-private-receipt-and-local-witnesses",
+      "op": "mark",
+      "restore": false,
+      "seconds": 22.538397288997658
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 27.81479748908896
+    },
+    {
+      "height": "3",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 27.83830837800633
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": false,
+      "seconds": 29.046334306010976
+    },
+    {
+      "name": "recipient-fresh-local-witness-spend",
+      "op": "mark",
+      "restore": false,
+      "seconds": 30.2462031400064
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": false,
+      "seconds": 30.2472099569859
+    },
+    {
+      "op": "boundary",
+      "restore": true,
+      "seconds": 30.47869250108488
+    },
+    {
+      "op": "context",
+      "restore": true,
+      "seconds": 30.51298937899992
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": true,
+      "seconds": 30.537372571066953
+    },
+    {
+      "op": "proof",
+      "restore": true,
+      "seconds": 37.17920191399753
+    },
+    {
+      "height": "4",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": true,
+      "seconds": 37.20297273201868
+    },
+    {
+      "name": "backup-only-new-process-spend",
+      "op": "mark",
+      "restore": true,
+      "seconds": 38.399849727982655
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": true,
+      "seconds": 38.400636486010626
+    }
+  ],
+  "executed_by": "Independent nonauthor reviewer",
+  "format": "CP04-INDEPENDENT-GATE5-FRESH-SMALL02-ACTUAL01",
+  "input_receipt_sha256": {
+    "RESULT.json": "5253c2e8c998ae3aef3377dd775b1d2b12e60fb1e9c20d6c42167494d4d4225b",
+    "claim.json": "c2a90d327c04d0ad05b30caea0bbf9cb0137d224fd3f47b995367985f0c36afe",
+    "original-process.json": "142605273b746ad5609ef0a60586c0ced6e9dee8aa5d62cb6482f9d187c2a8c8",
+    "restore-process.json": "7039c30d48abd2dc4090d070b0bdafab395242fd9862e361b2c0d1cf3a564df3"
+  },
+  "installation_sha256": "6c0aeae40546a2744c20e10c5cf3f23c316ef4a93e2f2144f07d71bdc4d41b77",
+  "limitations": "Genuine fresh isolated small5 independently reproduced, including backup-only new-process spend. Full private expiry/rewind remains independently reviewed Root full01, not regenerated. Conditional next step is independently executed full public chronology replay.",
+  "namespace_boundaries": [
+    {
+      "actual_node_host_pid": 6,
+      "approved_node_executable_inode_matched": true,
+      "denied_database_fds_passed_to_wallet": 0,
+      "descendant": {
+        "controller_number_classification": "child_namespace",
+        "controller_number_pid_namespace": "pid:[4026532897]",
+        "controller_pid": 3,
+        "controller_pid_namespace": "pid:[4026532891]",
+        "controller_proc_namespace_excluded": true,
+        "denied_paths": 2,
+        "denied_socket_families": [
+          2,
+          10,
+          1
+        ],
+        "inherited_fd_identity_checks": 3,
+        "pid": 8,
+        "procfs_pid_namespace": "pid:[4026532897]",
+        "seccomp": "2"
+      },
+      "inheritable_denied_fds_in_controller": 1,
+      "namespaces": {
+        "mnt": "mnt:[4026532894]",
+        "net": "net:[4026532898]",
+        "pid": "pid:[4026532897]"
+      },
+      "reported_namespace_pid": 2
+    },
+    {
+      "actual_node_host_pid": 116,
+      "approved_node_executable_inode_matched": true,
+      "denied_database_fds_passed_to_wallet": 0,
+      "descendant": {
+        "controller_number_classification": "child_namespace",
+        "controller_number_pid_namespace": "pid:[4026532896]",
+        "controller_pid": 3,
+        "controller_pid_namespace": "pid:[4026532891]",
+        "controller_proc_namespace_excluded": true,
+        "denied_paths": 2,
+        "denied_socket_families": [
+          2,
+          10,
+          1
+        ],
+        "inherited_fd_identity_checks": 3,
+        "pid": 8,
+        "procfs_pid_namespace": "pid:[4026532896]",
+        "seccomp": "2"
+      },
+      "inheritable_denied_fds_in_controller": 2,
+      "namespaces": {
+        "mnt": "mnt:[4026532893]",
+        "net": "net:[4026532897]",
+        "pid": "pid:[4026532896]"
+      },
+      "reported_namespace_pid": 2
+    }
+  ],
+  "outer_execution": {
+    "exit": 0,
+    "outer_timeout": false,
+    "wall_seconds": 42.986836093943566
+  },
+  "passed": true,
+  "proof_associations": [
+    {
+      "arity": 0,
+      "body_sha256": "19c877abc0fa39015df989f9fc8078663a64a971ba6eb27038b7d948f45b3c9a",
+      "label": "credit-0",
+      "live_samples": 30,
+      "parent_receipt_sha256": "0e93e4f94d019345194ce5f21be81d6cbefdc9b3fe6f8e91009a1f0929d549dc",
+      "positive_admissions": 1,
+      "proof_sha256": "2a736f3aedbdc4860ed3846f4fe8b00f4f6e5731143a3f7a2bc0bdde83f9c418",
+      "selected_height_ordinal": [
+        1,
+        0
+      ],
+      "worker_namespace_pid": 21
+    },
+    {
+      "arity": 0,
+      "body_sha256": "3e12917712b0bd2e164779543b67e1cf7c0d7359234540cf1732bdf7d9019777",
+      "label": "credit-1",
+      "live_samples": 30,
+      "parent_receipt_sha256": "b17756691b7523bd1293de331238794799fe01e2b887f54b7643733c8e19ede0",
+      "positive_admissions": 1,
+      "proof_sha256": "78df7c5958b7c715d68669f3cd59d09dd1e32a68207bd25bd37cd7fb7d7892bd",
+      "selected_height_ordinal": [
+        1,
+        1
+      ],
+      "worker_namespace_pid": 30
+    },
+    {
+      "arity": 2,
+      "body_sha256": "a4c4e3c45dfd2e944e4e531e1715eae694fed149e76771ab602492fd0e65dfa6",
+      "label": "ordinary-receipt",
+      "live_samples": 30,
+      "parent_receipt_sha256": "52b5fc6f8029a85a7151255af25834d1a5edc26f3a281695e212c7d6ab7da1da",
+      "positive_admissions": 1,
+      "proof_sha256": "33d848cc66666aedf9267d382aac938545079ef94b1e67fe87b3d222607e8381",
+      "selected_height_ordinal": [
+        2,
+        0
+      ],
+      "worker_namespace_pid": 52
+    },
+    {
+      "arity": 1,
+      "body_sha256": "c9882645b6abb7c429d1a9b15477369d89f87cd7df7bc714cb87927c1fb6a9fa",
+      "label": "recipient-spend",
+      "live_samples": 29,
+      "parent_receipt_sha256": "c015c1ee9c31afb35bfb5a76dbe1adaf9695c0faca4d6716be21cb1bbc0d2c9e",
+      "positive_admissions": 1,
+      "proof_sha256": "ca39b133538129b430722645e1fe74ee78cb9c4c44e69d88fc119de8a09718eb",
+      "selected_height_ordinal": [
+        3,
+        0
+      ],
+      "worker_namespace_pid": 84
+    },
+    {
+      "arity": 1,
+      "body_sha256": "764138416423fb59b83daf52f1e5c92360b7a08e6878126bcfe1551abcccae6d",
+      "label": "restored-spend",
+      "live_samples": 30,
+      "parent_receipt_sha256": "acd04adde2c90011b2ce3bdec5b06de9dbe7864e874829c9dc966ce5c61e1af9",
+      "positive_admissions": 1,
+      "proof_sha256": "a44e4e20d5c123d701f6a73b04827ad5e4224046df895a9eb25fdf22cb605be9",
+      "selected_height_ordinal": [
+        4,
+        0
+      ],
+      "worker_namespace_pid": 36
+    }
+  ],
+  "resource_summary": {
+    "actor_wall_seconds": [
+      30.245115706929937,
+      8.151212429977022
+    ],
+    "controller_self": {
+      "maxrss_kib": 38624,
+      "scope": "Controller Python SELF only; excludes native CLI and isolated wallet descendants",
+      "system_seconds": 0.567684,
+      "user_seconds": 3.087159
+    },
+    "history_bytes": [
+      73790,
+      29806
+    ],
+    "node_self_seconds": [
+      0.76,
+      0.3
+    ],
+    "node_waited_descendant_seconds": [
+      20.87,
+      5.29
+    ],
+    "sampled_concurrent_tree_peak_kib": [
+      314284,
+      336884
+    ],
+    "scope": "Parent/prover workers nested within Node waited-child totals; wrapper separate; controller peak cumulative; process IDs are visible in reviewer outer PID namespace, not global host IDs."
+  },
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 5,
+    "cached_bytes": 8764084,
+    "full_bytes": 8764084,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "source_runtime_unchanged": true,
+  "source_sha256": "be2910ea2ef974bb87778b0b8e605f299bdc44b9987afecddcc86df4b63eaaa8"
+}

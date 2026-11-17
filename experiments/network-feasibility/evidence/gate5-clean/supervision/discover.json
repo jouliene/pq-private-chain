@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "scripts/setup.py",
+    "discover",
+    "--label",
+    "gate5",
+    "--node",
+    "/tmp/pq-gate5-20261117-01/.tools/node-v24.22.1-linux-x64/bin/node",
+    "--libcrypto",
+    "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+  ],
+  "exit": 0,
+  "wall_seconds": 1.7880627459380776
+}

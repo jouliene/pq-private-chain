@@ -72,7 +72,9 @@ and exercised changing-root expiry, refreshed old-note spending, joint branch
 rewind, orphan rejection, deep replay and another backup-only new-process spend.
 Independent public-evidence review confirmed all264 proof associations and all14
 final SQL tables. Both typed Anchor rejections left all14 tables unchanged.
-Independent clean-build execution and final publication remain pending in STATUS.md.
+An independent clean build, new isolated five-proof cycle and fresh public replay
+of every full01 proof also passed. Publication/CI status is recorded in STATUS.md
+and the milestone delivery record.
 Two earlier observer failures and the bounded same-process observation repair
 are retained as evidence.
 Refresh currently rereads history from genesis before applying its suffix, so
@@ -154,7 +156,7 @@ bounded transport and finite burst/restart queues have now been tested. Actual
 private local-witness refresh, recent-anchor expiry, recovery and selected-branch
 rewind have passed the full finite campaign and independent evidence review.
 The complete proof relation and security parameters are preserved. Clean-checkout
-reproduction and publication are the remaining acceptance steps in STATUS.md.
+reproduction passed; publication and actual CI are the remaining delivery steps.
 
 Permissionless launch needs zero-source genesis and empty work blocks. Proposed
 reward entitlement is derived from the fully known non-genesis parent's identity

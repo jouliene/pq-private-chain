@@ -1,0 +1,14 @@
+{
+  "events": [],
+  "failure_type": "ValueError",
+  "fixed_failure_reason": "wallet_terminal_success",
+  "format": "CP04-WALLET-INTEGRATION-RESULT01",
+  "installation_sha256": "6c0aeae40546a2744c20e10c5cf3f23c316ef4a93e2f2144f07d71bdc4d41b77",
+  "native_cli": [],
+  "passed": false,
+  "private_raw_streams_or_backup_persisted_or_hashed": false,
+  "profile": "small",
+  "proofs": [],
+  "source_runtime_unchanged": true,
+  "source_sha256": "fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e"
+}

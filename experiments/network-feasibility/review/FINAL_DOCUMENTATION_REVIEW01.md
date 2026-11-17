@@ -63,3 +63,62 @@ then stop; cold/deep replay charged; no ownership-selective requests or untruste
 checkpoints; no new gate for closing this milestone; first-copy storage remains;
 no automatic permission for full consensus. No implementation was authorized or
 performed by this review.
+
+
+## Final prepublication disposition — 2026-11-17
+
+**GO for the reviewed documentation/evidence publication candidate. No remaining
+material finding in this bounded review.** This is not criterion6 completion or
+an actual hosted-CI/publication verdict.
+
+Compared the current documentation, GOAL and STATUS with the clean-checkout
+baseline at `a9357c27d7458277b80b78ac887696a9ea9a99a8`, using filesystem diffs;
+no Git operation, execution-source change, payload rehash or cryptographic run
+was performed. Read the current affected passages as well as their changes.
+
+All three earlier findings are resolved:
+
+1. ARCHITECTURE's preferred path now identifies one authenticated common-history
+   suffix follow-up before full consensus integration. OBLIGATIONS no longer
+   prescribes an immediate competing transport/container experiment. RESOURCE_DECISION
+   retains one reviewed outcome, then stop, with cold/deep replay charged and no
+   reduction of first-copy storage. This is a recommendation for a separate bounded
+   follow-up, not a newly activated Goal or a new condition on this milestone.
+2. OBLIGATIONS explicitly links the agreed criterion5 scope: fresh clean build,
+   new isolated small5 and fresh full public chronology, combined with independent
+   review of the original full private expiry/rewind/deep-replay evidence.
+   Unchanged Gate2 evidence is reviewed, not claimed rerun. STATUS and
+   RESOURCE_DECISION explicitly deny a second independent full-private264 campaign.
+3. POST_GATE3_INVESTMENT_DECISION now records both original full-result review and
+   scoped clean reproduction as passed. GOAL preserves earlier dated checkpoints
+   and appends the actual Gate5 result rather than rewriting failures into success.
+
+The finite full-RETAIN validator plus separately provisioned opaque archive is
+still qualified as a research participation model. The one-copy175.126575TB/year
+and validator-plus-archive350.253TB/year projections, growing state/bootstrap and
+unimplemented remote-pruning boundary remain visible. No owner annual budget,
+ordinary-node affordability, production security, whole-protocol PQ theorem or
+network anonymity acceptance is inferred. Repeated-prefix wallet traffic is not
+replaced by the one-pass scan projection. Source03 full01 and Source04 clean-small
+identities and preserved failed attempts remain distinct.
+
+STATUS, GOAL and DELIVERY correctly leave criterion6, public revision readback
+and actual automatic CI pending. Publication presence or workflow source is not
+reported as successful execution. The global blockchain Goal remains ACTIVE.
+
+Checked only the two safe-evidence manifests and file metadata in this pass:
+
+- FILES01 SHA256 `60134881e98addadae325ce268c39a96fdcb2319d63badd268b0ed66110cda43`
+  remains unchanged:24 public JSON files/84119 bytes.
+- FILES02 SHA256 `4c94ac105dde31105019685bf01a60bf45df4ee087cd7dad4608ebb4bd52e9fc`
+  links that exact FILES01 digest and adds8 files/351447 bytes.
+- All32 relative paths are unique regular JSON files, declared sizes match, and
+  the evidence directory contains exactly these files plus the two manifests.
+  The recorded small02/public01/result-review digests match the previously
+  independently accepted records. No DB, proof payload, scan, private stream or
+  large Parent dependency map was added to this allowlist. Payload contents and
+  cryptography were not rechecked in this final documentation pass.
+
+The GO depends on publishing this reviewed candidate with the existing exact
+source/installation approvals, followed by actual CI and release/readback. It
+makes no claim about those still pending external outcomes.

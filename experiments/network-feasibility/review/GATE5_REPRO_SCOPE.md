@@ -1,8 +1,8 @@
 # Gate5 independent reproduction scope
 
-Status: source-directed scope, not executed. Allocation25 full01 remains live.
-Reviewer owns this note only. Root selects the immutable clean revision and
-allocates each job; no additional heavy work is authorized by this note.
+Status: the scope below was declared before full01 completed; independent execution
+is now complete as recorded at the end. Root selects revisions and allocations;
+this note authorizes no additional heavy work.
 
 ## Decision
 
@@ -175,3 +175,38 @@ failure must not be converted to a skipped isolation requirement. Source review
 found no blocker to executing this CI step. Recommend `if: always()` on the fixed
 public artifact upload so a failed Gate3 run's safe RESULT/claim/actor receipts are
 retained; retain the exact allowlist and never substitute a directory/raw-log glob.
+
+## Actual independent completion
+
+The non-implementing reviewer executed the clean build at revision
+`b6c6e5938c4ba67a874826f85257e43dfff2f500`, then the corrected isolated small5
+and full public replay at `a9357c27d7458277b80b78ac887696a9ea9a99a8`.
+The intervening experiment-only namespace repair had zero overlap with10867
+installation pins; the same newly built installation remained approved at
+`6c0aeae40546a2744c20e10c5cf3f23c316ef4a93e2f2144f07d71bdc4d41b77`.
+Canonical/research trees and Cargo registry/git caches were hidden behind readonly
+empty mounts. Host root was readonly, clone writable, with fresh PID/proc/dev.
+
+The first clean small attempt failed before keys/proofs due to the numeric PID
+probe assumption; its raw safe records and discriminator are preserved. After
+reviewed repair, reviewer-small02 actually passed with five new proofs, both
+namespace-aware boundaries, original exit0 before fresh restore and a new admitted
+backup-only spend. RESULT SHA256:
+`5253c2e8c998ae3aef3377dd775b1d2b12e60fb1e9c20d6c42167494d4d4225b`.
+Independent readback is GATE5_SMALL02_ACTUAL01.json.
+
+reviewer-public01 then actually passed in341.039873s outer wall, using264 public
+proof bodies and no private inputs/new proofs. It performed265 positive proof
+admissions,264 block admissions,four rollbacks,two typed atomic Anchor rejections,
+and an independently checked selected scan. Fresh all14 canonical state matches
+the approved full01 reference. RESULT SHA256:
+`973cd516e921a7d71223ec4d62d037f5c9784098de7170cf6cbd56d22061074b`.
+Independent readback is GATE5_PUBLIC01_ACTUAL01.json.
+
+Criterion5's agreed decisive slice is independently reproduced. Full01's private
+expiry/joint-rewind/deep-replay evidence was independently reviewed, not regenerated.
+The optional network2x3 rerun was not performed: unchanged Gate2 evidence remains
+reviewed original execution. Exact public commands, safe receipts and preserved
+failure are in evidence/gate5-clean/FILES01.json and its append-only FILES02.json.
+Publication, actual CI and final overall Goal disposition remain Root-owned work;
+this does not close the global blockchain objective.

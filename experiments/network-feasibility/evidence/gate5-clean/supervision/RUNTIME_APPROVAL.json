@@ -1,0 +1,10 @@
+{
+  "approved_sha256": "62e4beb975f1a2e163b476b2b3f5b778f5100ad5e8887b33a416cf253771408f",
+  "reviewer": "independent nonauthor",
+  "all14_runtime_hashes_rechecked": true,
+  "official_node_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+  "node": "24.22.1",
+  "embedded_openssl": "3.5.9",
+  "system_openssl": "3.0.13",
+  "live_maps_and_ldd_read": true
+}

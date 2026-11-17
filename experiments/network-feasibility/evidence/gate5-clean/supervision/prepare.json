@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "scripts/setup.py",
+    "prepare",
+    "--label",
+    "gate5"
+  ],
+  "exit": 0,
+  "wall_seconds": 0.8153848549118266
+}

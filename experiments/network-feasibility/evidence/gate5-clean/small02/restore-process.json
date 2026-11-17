@@ -1,0 +1,163 @@
+{
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 25404,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.002858,
+    "user_seconds": 0.0,
+    "wall_seconds": 8.151212429977022
+  },
+  "boundary": {
+    "actual_node_host_pid": 116,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "controller_number_classification": "child_namespace",
+      "controller_number_pid_namespace": "pid:[4026532896]",
+      "controller_pid": 3,
+      "controller_pid_namespace": "pid:[4026532891]",
+      "controller_proc_namespace_excluded": true,
+      "denied_paths": 2,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "procfs_pid_namespace": "pid:[4026532896]",
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 2,
+    "namespaces": {
+      "mnt": "mnt:[4026532893]",
+      "net": "net:[4026532897]",
+      "pid": "pid:[4026532896]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "fixed_failure_stage": null,
+  "passed": true,
+  "restore": true,
+  "sampling": {
+    "complete_same_pid_policy_after_permission": 0,
+    "confirmed_permission_exit_races": 0,
+    "epochs": 132,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 336884,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 3432,
+        "first_seconds": 0.22374623804353178,
+        "host_pid": 116,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 68,
+          "reaped_child_user": 461,
+          "self_system": 8,
+          "self_user": 22
+        },
+        "last_seconds": 8.144411145010963,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 136256,
+        "samples": 132,
+        "starttime_ticks": 86099548
+      },
+      {
+        "fd_identity_checks": 4,
+        "first_seconds": 1.5594685120740905,
+        "host_pid": 144,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 0,
+          "self_user": 0
+        },
+        "last_seconds": 1.560655920067802,
+        "name": "3",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 29,
+        "peak_sampled_rss_kib": 324,
+        "samples": 1,
+        "starttime_ticks": 86099690
+      },
+      {
+        "fd_identity_checks": 351,
+        "first_seconds": 1.6819493990624323,
+        "host_pid": 150,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 5,
+          "reaped_child_user": 178,
+          "self_system": 58,
+          "self_user": 277
+        },
+        "last_seconds": 6.847383712069131,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 35,
+        "peak_sampled_rss_kib": 160312,
+        "samples": 85,
+        "starttime_ticks": 86099696
+      },
+      {
+        "fd_identity_checks": 90,
+        "first_seconds": 4.011272376985289,
+        "host_pid": 151,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 174
+        },
+        "last_seconds": 5.803513281047344,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 36,
+        "peak_sampled_rss_kib": 164228,
+        "samples": 30,
+        "starttime_ticks": 86099934
+      }
+    ],
+    "permission_exit_evidence_first64": [],
+    "permission_retry_wall_seconds": 0.0,
+    "raced_exits": 2,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  },
+  "terminal_cpu": {
+    "actual_node_host_pid": 116,
+    "clock_ticks_per_second": 100,
+    "node_self_seconds": 0.3,
+    "node_waited_descendant_seconds": 5.29,
+    "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+    "starttime_ticks": 86099548,
+    "ticks": {
+      "reaped_child_system": 68,
+      "reaped_child_user": 461,
+      "self_system": 8,
+      "self_user": 22
+    }
+  },
+  "terminal_metrics": {
+    "counts": {
+      "history_bytes": 29806,
+      "history_reads": 1,
+      "history_wall_seconds": 0.09000690400000008,
+      "proofs": 1
+    },
+    "format": "CP04-ISOLATED-WALLET-DONE01",
+    "private_material_persisted_or_hashed": false,
+    "process_self": {
+      "fsRead": 0,
+      "fsWrite": 3416,
+      "involuntaryContextSwitches": 343,
+      "maxRSS": 136268,
+      "systemCPUTime": 82078,
+      "userCPUTime": 227217,
+      "voluntaryContextSwitches": 523
+    },
+    "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+    "restore": true
+  }
+}

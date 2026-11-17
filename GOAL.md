@@ -93,3 +93,11 @@ narrow namespace-identity repair passed independent source review and27 metadata
 controls. Source04 is frozen. Earlier failures remain failures; no new private
 acceptance is claimed. STATUS.md identifies the exact clean retry and public
 replay allocations. Native/global Goal stays ACTIVE.
+
+Checkpoint2026-11-17 12:55UTC: independent Gate5 reproduction PASS. New clean
+small02 completed five genuine proofs and backup-only new-process spending.
+Fresh public-only replay independently verified all264 full01 proofs,265positive
+admissions,fourrollbacks,twoatomicAnchor rejections and identical canonical14state.
+Root recomputed the final maps and read independentreview3218e857b24929a8821bacbc498b41f0b98b7110d7b9c7af7e151ef92dede4b9.
+Criteria1..5 have reviewed evidence; publication/actualautomaticCI criterion6
+remains required. Native/globalGoal stays ACTIVE. No further proving is allocated.

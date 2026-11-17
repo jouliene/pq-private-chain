@@ -1,0 +1,31 @@
+{
+  "format": "CP04-PUBLIC-REPRODUCTION-STORAGE01",
+  "paths": {
+    "clone_public_input": {
+      "allocated_bytes": 462983168,
+      "files": 266,
+      "logical_bytes": 462330146
+    },
+    "clone_public_replay": {
+      "allocated_bytes": 926965760,
+      "files": 275,
+      "logical_bytes": 926379939
+    },
+    "release_archive": {
+      "allocated_bytes": 462557184,
+      "files": 1,
+      "logical_bytes": 462551040
+    },
+    "root_exported_closure": {
+      "allocated_bytes": 462901248,
+      "files": 266,
+      "logical_bytes": 462330146
+    },
+    "root_full01": {
+      "allocated_bytes": 2084212736,
+      "files": 1864,
+      "logical_bytes": 2079102975
+    }
+  },
+  "scope": "Public run, export, independent replay and release packaging copies after completion; build/toolchain/source/Git storage separate. No physical deduplication assumed."
+}

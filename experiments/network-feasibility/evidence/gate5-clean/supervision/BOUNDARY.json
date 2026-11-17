@@ -1,0 +1,28 @@
+{
+  "hidden_empty_readonly": [
+    "/home/neo/jouliene/pq-private-chain",
+    "/home/neo/jouliene/pq-private-chain-research",
+    "/home/neo/.cargo/registry",
+    "/home/neo/.cargo/git"
+  ],
+  "root_readonly": true,
+  "clone_readwrite": "/tmp/pq-gate5-20261117-01",
+  "proc_namespace": "pid:[4026532890]",
+  "fresh_dev_null_readwrite": true,
+  "node_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+  "source_core_manifest_sha256": "1b9888399a91102b84f05970ce65100d77a0a8a56519c35b13cbb8deb915a1aa",
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

@@ -4,8 +4,8 @@
 suffix mechanism before permissionless PoW/issuance integration.** Preserve CP03
 as the finite full-RETAIN validator plus separately provisioned opaque archive
 research model. This is a specific history repair, not acceptance of its annual
-participation costs. Independent full-result review has passed; clean-checkout
-reproduction remains required. The global blockchain goal remains ACTIVE.
+participation costs. Independent full-result review and the scoped clean-checkout
+reproduction have passed. The global blockchain goal remains ACTIVE.
 
 This does **not** add a gate to the current network-feasibility Goal: finish its
 independent reproduction, decision and publication, then close that bounded Goal.

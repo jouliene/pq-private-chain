@@ -7,8 +7,8 @@ Baseline is public `d8f800037b5efbb76a5a1d6d4d3100e55f676a00`. The network
 adapter and declared finite Gate2 workload passed functional/resource review as
 recorded in [RESOURCE_DECISION.md](RESOURCE_DECISION.md). The joint local-witness
 wallet has passed the full264-proof finite campaign and independent evidence
-review. Clean-checkout reproduction and final publication remain pending; see
-STATUS.md for actual closure rather than interpreting these tests as a theorem.
+review. Clean-checkout reproduction also passed; final publication/CI status is
+in STATUS.md and the milestone delivery record. These tests are not a theorem.
 
 The existing evidence permits a labelled research experiment. It has not
 demonstrated a currently applicable soundness, authorization or ledger-privacy

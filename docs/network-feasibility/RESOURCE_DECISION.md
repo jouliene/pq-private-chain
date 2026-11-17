@@ -103,6 +103,27 @@ persisted or hashed. Full evidence is
 [wallet-full01](../../experiments/network-feasibility/wallet-integration/evidence/wallet-full01/RESULT.json)
 and the [independent readback](../../experiments/network-feasibility/review/GATE3_FULL01_ACTUAL01.json).
 
+Independent reproduction used a clean checkout with the original project,
+research tree and dependency caches hidden. The new build produced four ELFs and
+passed eight provider controls. A new isolated small5 wallet cycle then passed,
+including new-process backup recovery and a newly proved spend. Finally a fresh
+public-only ledger verified all264 full01 proofs,265 positive admissions, four
+rollbacks and two atomic Anchor rejections in341.039873s outer wall time. Final
+selected head and all14 canonical tables matched; only local catalog identity is
+excluded. This fresh-CLI replay cost is not persistent-validator throughput.
+No old database, private wallet or Parent verdict seeded its acceptance. The scope
+combines independently reviewed full private expiry/rewind evidence with new
+small5 and public replay; it does not claim a second full private264 campaign.
+Safe receipts and exact commands are in
+[gate5-clean](../../experiments/network-feasibility/evidence/gate5-clean/).
+The independent replay directory occupies926965760allocatedB, including its copied
+public inputs and fresh database. Later public export, clone-input and release
+archive copies are separately counted in
+[GATE5_PUBLIC_STORAGE01.json](../../experiments/network-feasibility/evidence/GATE5_PUBLIC_STORAGE01.json).
+Those delivery copies are additional to the original experiment's at-measurement
+disk figure; build/source/toolchain/Git storage is a separate infrastructure cost.
+
+
 ## Participation decision and next investment
 
 The selected finite research model is implemented and services the declared
@@ -120,8 +141,9 @@ forgetting nullifiers/undo on anchor expiry are invalid. The earlier
 [participation review](../../experiments/network-feasibility/review/GATE2_PROFILE_PARTICIPATION_REVIEW01.md)
 identifies these seams. Today's selected model pays for full copies instead.
 
-Independent clean-checkout reproduction and reviewed publication are the remaining
-acceptance steps. The next bounded development recommendation is an authenticated
+Independent clean-checkout reproduction passed. Reviewed publication and actual
+CI remain delivery steps in STATUS.md. The next bounded development recommendation
+is an authenticated
 common-history suffix mechanism: start only from the wallet's own authenticated
 joint cursor, validate every new link through an independently selected endpoint,
 and fetch the same public ranges regardless of ownership. Require linear

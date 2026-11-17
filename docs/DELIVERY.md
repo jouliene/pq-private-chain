@@ -40,10 +40,10 @@ review summary never replaces a required runnable source, fixture or test oracle
 Private material, credentials, wallet databases and old secret-bearing history
 must never be staged. Inspect the complete history before an initial publication.
 
-## Current delivery record
+## Initial delivery record (historical)
 
-This is the first public milestone; no earlier public milestone SHA/compare URL
-exists. The prior research source revision is provenance, not an invented public
+This was the first public milestone; no earlier public milestone SHA/compare URL
+existed. The prior research source revision is provenance, not an invented public
 ancestor. The initial code commit is
 `b3121208b47484917a887041c376f4a5840a81b4`; subsequent release-preparation commits
 change only delivery documentation/evidence. Exact public verification and any
@@ -54,6 +54,25 @@ name still denotes the tested bytes. That first milestone used manual CI. The
 network milestone adds automatic push/PR smoke coverage and the isolated wallet
 cycle. Its actual run URL/conclusion must be checked; the presence of
 `.github/workflows/smoke.yml` is not a PASS.
+
+## Network-feasibility delivery
+
+The next milestone retains the initial public revision
+`d8f800037b5efbb76a5a1d6d4d3100e55f676a00` as its comparison baseline. Its tested
+implementation/experiment source revision is
+`a9357c27d7458277b80b78ac887696a9ea9a99a8`; later delivery commits may add only
+reviewed documentation and safe evidence. Source and installation correspondence
+must be checked explicitly, not inferred from the branch name.
+
+The `network-feasibility-2026-11-17` release's `delivery-result.json` is the final
+publication readback: exact public revision, actual automatic push-CI run/result,
+source approvals, acceptance scopes and public replay archive identity. Until that
+record and successful CI exist, publication is pending even if local checks pass.
+The optional462551040-byte public archive contains genesis,264 full payment bodies
+and a comparison manifest only. Its source build and replay commands are in
+`experiments/network-feasibility/wallet-integration/README.md`. It is not a private
+fixture or database backup. No full-private264 independent rerun, production
+security or completion of the global blockchain follows from this release.
 
 ## Source manifests after a deliberate source change
 

@@ -1,0 +1,10 @@
+{
+  "canonical_and_clean_clone_head": "a9357c27d7458277b80b78ac887696a9ea9a99a8",
+  "changed_files": 41,
+  "changed_installation_pin_paths": [],
+  "clean_tracked_status": true,
+  "installation_unchanged_sha256": "6c0aeae40546a2744c20e10c5cf3f23c316ef4a93e2f2144f07d71bdc4d41b77",
+  "prior_clean_build_head": "b6c6e5938c4ba67a874826f85257e43dfff2f500",
+  "public_replay_source": "4c767420e675de473fbbc4006338d3ce070dc496372d8b9181e63ba4ba1d90c6",
+  "wallet_source": "be2910ea2ef974bb87778b0b8e605f299bdc44b9987afecddcc86df4b63eaaa8"
+}
