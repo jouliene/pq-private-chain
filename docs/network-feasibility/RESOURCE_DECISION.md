@@ -141,8 +141,9 @@ forgetting nullifiers/undo on anchor expiry are invalid. The earlier
 [participation review](../../experiments/network-feasibility/review/GATE2_PROFILE_PARTICIPATION_REVIEW01.md)
 identifies these seams. Today's selected model pays for full copies instead.
 
-Independent clean-checkout reproduction passed. Reviewed publication and actual
-CI remain delivery steps in STATUS.md. The next bounded development recommendation
+Independent clean-checkout reproduction and automatic push CI passed. The exact
+public revision/release and final readback are recorded in STATUS.md and the
+release's delivery-result.json. The next bounded development recommendation
 is an authenticated
 common-history suffix mechanism: start only from the wallet's own authenticated
 joint cursor, validate every new link through an independently selected endpoint,

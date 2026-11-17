@@ -1,12 +1,16 @@
-# Network feasibility: local acceptance passed; delivery incomplete
+# Network feasibility complete; global blockchain objective active
 
 Canonical project: `/home/neo/jouliene/pq-private-chain`.
-Native/global Goal read back ACTIVE on 2026-11-17 at14:26UTC.
-Execute NETWORK_FEASIBILITY_GOAL.md. No owner budget/resource limit was imposed.
-Criteria1..5 have reviewed evidence. Full automatic CI44104449760 passed at
-38dd77160f48344c81d7c3a6cc32014b1f8a60f7 (push,201seconds). Criterion6 now needs
-final independent receipt disposition and public release readback only.
-No milestone/global completion is claimed before that readback.
+Native Goal last read back ACTIVE on2026-11-17; global blockchain development
+remains ACTIVE as directed. All six NETWORK_FEASIBILITY_GOAL.md criteria are now
+substantiated. The bounded experiment is COMPLETE; no further CI/proving/tuning
+is allocated to it. Architecture retention is provisional for the stated finite
+research model. Formal PQ/privacy assurance and production readiness are separate.
+
+Actual automatic push CI44104449760 passed (201seconds) at
+38dd77160f48344c81d7c3a6cc32014b1f8a60f7. Public release/tag/asset readback completed
+2026-11-17 14:46UTC: experiments/network-feasibility/evidence/RELEASE_READBACK01.json.
+No owner annual traffic or hardware cost limit was imposed or adopted.
 
 ## Current ownership and allocation
 
@@ -32,7 +36,8 @@ fees10570146,total1.1B,liability0,8750132full-bodyB retained,no pending obligati
 Build/public inner runtime identity20c4c7b...e9e8d differs intentionally from outer
 fresh installation identity34c08fa5...e8337, which pins that inner artifact.
 One should not equate those hashes or claim absent full pin maps were replayed.
-No jobs remain active; Root owns final publication and acceptance readback.
+All jobs and reviews are terminal. Root verified final publication and acceptance.
+No successor implementation or remote proof campaign is running.
 
 ## Accepted execution and architecture
 
@@ -96,21 +101,27 @@ The exact reviewed wrapper7b332a5c875b861faa9606530a62463fb588d741f89f778a7c908f
 changes only outer UID/GID0 to the caller's actual nonzero UID/GID. Original host
 nonroot guard and all inner sandbox/provider checks remain.
 
-## Exact next actions
+## Exact handoff and restart
 
-1. Finish independent fixed-receipt review and commit the safe CI results plus
-   source-correspondence record and corrected delivery wording. Docs/evidence-only
-   publication uses [skip ci]; no repeated proof campaign is justified.
-2. Publish the research prerelease network-feasibility-2026-11-17 targeting exact
-   successfully tested revision38dd77160f48344c81d7c3a6cc32014b1f8a60f7. Include
-   delivery-result.json with actual run/source/evidence identities and the existing
-   full01-public-closure.tar (462551040B, SHA29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4).
-3. Verify public tag/revision, release asset size/digest and final JSON download.
-   Only then record bounded milestone completion. Global Goal stays ACTIVE.
-4. Preserve every failed attempt. No identical retry or further CI expansion is
-   allocated. Exact proof/wallet source manifests equal the independently executed
-   a9357c2 baseline; later executable changes are enumerated in
-   evidence/ci-success01/SOURCE_CORRESPONDENCE.json.
+- Tested code/release tag:38dd77160f48344c81d7c3a6cc32014b1f8a60f7.
+- CI: https://github.com/jouliene/pq-private-chain/actions/runs/44104449760
+- Release: https://github.com/jouliene/pq-private-chain/releases/tag/network-feasibility-2026-11-17
+- Independent final CI review/safe receipts were published in
+  7f4cc94ad4bb85e287b72e4fefa6edef4c237ed8. Later completion commits contain only
+  documentation and public release metadata; no executable source changes.
+- Final delivery-result.json was downloaded and compared byte-for-byte:
+  SHA7234dcf12d9f6e7ce989f5952005a097212dd412eca18273de65b6f9a8394430.
+  Public archive462551040B, SHA29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4;
+  GitHub's uploaded size/digest match the locally hashed file.
+- Reproduction: checkout the exact tested SHA, use BUILD.md for fresh source/runtime
+  approval and build, then wallet-integration/README.md for isolated small/full
+  or public264 replay. The exact automatic environment/commands are in smoke.yml.
+  Use new labels; run isolated wallet before legacy private_smoke on an installation.
+
+On continuation, inspect actual HEAD/status and the release record, preserve all
+accepted evidence, and do not rerun closed264/864 campaigns or repair completed CI.
+The bounded directive is complete. The next recommendation below is a separate
+stage with a named decision and stopping boundary, not unfinished acceptance work.
 
 The optional owner server has two disks and more than2TB available on the second.
 Its inspected runtime does not yet match BUILD.md; no remote install/heavy campaign

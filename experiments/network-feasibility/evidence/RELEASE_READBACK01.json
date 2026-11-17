@@ -1,0 +1,37 @@
+{
+  "format": "NETWORK-RELEASE-READBACK01",
+  "recorded_at_utc": "2026-11-17T14:46:11.105096+00:00",
+  "release_url": "https://github.com/jouliene/pq-private-chain/releases/tag/network-feasibility-2026-11-17",
+  "release_id": 448762102,
+  "draft": false,
+  "research_prerelease": true,
+  "tag_sha": "38dd77160f48344c81d7c3a6cc32014b1f8a60f7",
+  "actual_automatic_push_ci": {
+    "run_id": 44104449760,
+    "conclusion": "success",
+    "revision": "38dd77160f48344c81d7c3a6cc32014b1f8a60f7"
+  },
+  "public_assets": {
+    "delivery-result.json": {
+      "name": "delivery-result.json",
+      "size": 9424,
+      "digest": "sha256:7234dcf12d9f6e7ce989f5952005a097212dd412eca18273de65b6f9a8394430",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/jouliene/pq-private-chain/releases/download/network-feasibility-2026-11-17/delivery-result.json"
+    },
+    "full01-public-closure.tar": {
+      "name": "full01-public-closure.tar",
+      "size": 462551040,
+      "digest": "sha256:29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4",
+      "state": "uploaded",
+      "browser_download_url": "https://github.com/jouliene/pq-private-chain/releases/download/network-feasibility-2026-11-17/full01-public-closure.tar"
+    }
+  },
+  "delivery_result_download_matches_local_bytes": true,
+  "full_archive_readback": "Exact GitHub server digest and size match independently computed local upload; no redundant full462MB download.",
+  "evidence_revision": "7f4cc94ad4bb85e287b72e4fefa6edef4c237ed8",
+  "bounded_network_feasibility_milestone": "COMPLETE",
+  "architecture_status": "PROVISIONALLY_RETAINED_FOR_FINITE_RESEARCH_MODEL",
+  "global_blockchain_objective": "ACTIVE",
+  "production_security_claim": false
+}

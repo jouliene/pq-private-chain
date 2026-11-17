@@ -1,7 +1,9 @@
-# Network feasibility: active
+# Network feasibility complete; global blockchain objective active
 
-Execute NETWORK_FEASIBILITY_GOAL.md in full. Native Goal ACTIVE was read back on
-2026-11-17. The global independent permissionless, private-by-default,
+NETWORK_FEASIBILITY_GOAL.md is complete: all six acceptance criteria, including
+actual automatic CI and public release readback, are substantiated. Native Goal
+was read back ACTIVE on2026-11-17 and is kept active for the global objective;
+this does not allocate more work to the closed bounded experiment. The global independent permissionless, private-by-default,
 post-quantum blockchain objective remains ACTIVE. This bounded experiment's
 completion and provisional architecture/resource decision are separate statuses.
 
@@ -163,3 +165,17 @@ cycle, public rejection checks and three-proof legacy cycle all completed. Root
 read actual fixed results and reconciled distinct inner/outer installation IDs.
 Final independent receipt review/public release readback remain criterion6; all
 older failures preserved. Global native Goal remains ACTIVE.
+
+## 2026-11-17 14:46UTC — bounded milestone complete
+
+All six criteria passed the stated research acceptance scope. The independently
+reviewed exact source38dd77160f48344c81d7c3a6cc32014b1f8a60f7 passed automatic push
+CI44104449760 and is the verified public research release tag. Fixed safe results
+and review are committed at7f4cc94ad4bb85e287b72e4fefa6edef4c237ed8. Public archive
+size/digest and downloaded final delivery-result.json match. RELEASE_READBACK01
+records the actual observation. No full264/864 rerun, crypto weakening or private
+fixture publication was needed. The bounded experiment is COMPLETE, CP03 is
+PROVISIONALLY RETAINED for the finite full-RETAIN/archive model, and the global
+blockchain objective remains ACTIVE. No production/PQ theorem or annual owner
+cost acceptance follows. Stop this milestone's tuning; next-stage recommendation
+and precise evidence/reproduction handoff are in STATUS.md and RESOURCE_DECISION.
