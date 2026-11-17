@@ -35,3 +35,19 @@ impl Span {
 pub fn measure<T,E:std::fmt::Debug>(rows:&mut Vec<Value>,name:&str,f:impl FnOnce()->std::result::Result<T,E>)->Result<std::result::Result<T,E>>{
     let s=Span::start()?;let r=f();s.finish(rows,name,&r)?;Ok(r)
 }
+/// Absolute native-process counters sampled after run() returned and dropped
+/// Ledger/providers. Includes initialization, idle command loop and JSON output
+/// before this sample. Final receipt serialization/exit follows the sample.
+pub fn lifetime(start:Instant)->Result<Value>{
+    let own=usage(libc::RUSAGE_SELF)?;let child=usage(libc::RUSAGE_CHILDREN)?;
+    let status=fs::read_to_string("/proc/self/status")?;
+    let affinity=status.lines().find_map(|line|line.strip_prefix("Cpus_allowed_list:\t")).ok_or("native affinity status")?;
+    Ok(json!({"native_main_wall_seconds":start.elapsed().as_secs_f64(),
+        "self_user_seconds":own.user,"self_system_seconds":own.system,
+        "waited_child_user_seconds":child.user,"waited_child_system_seconds":child.system,
+        "self_peak_rss_kib_cumulative":own.peak,"waited_child_peak_rss_kib_cumulative":child.peak,
+        "self_inblock":own.input,"self_oublock":own.output,
+        "waited_child_inblock":child.input,"waited_child_oublock":child.output,
+        "linux_self_io_cumulative":io()?,"actual_cpu_allowed_list":affinity,
+        "scope":"Absolute native self and already-waited-child usage, sampled after Ledger/provider drop. CPU includes process startup and all completed commands; final terminal JSON serialization/exit follows sample. Main wall includes launcher/oracle idle. Linux IO is self only, excludes helper IO. Peak RSS fields are cumulative separate maxima, never a simultaneous sum; sampled external role-tree peak is separate."}))
+}

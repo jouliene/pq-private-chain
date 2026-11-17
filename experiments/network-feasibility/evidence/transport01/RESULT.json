@@ -1,0 +1,2441 @@
+{
+  "build_sha256": "b7ac77f4812b776127ee264cc3838ed3be08facbac9d280a79563d310a479685",
+  "format": "CP04-TRANSPORT-GATE1-RESULT01",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "launcher_oracles_outside_measured_role_spans": true,
+  "ordinary_count": 2,
+  "results": {
+    "filesystem_boundary": {
+      "actual_namespace_hidden_file_checks": 5,
+      "actual_validator_host_pid": 2318528,
+      "destination_argv_has_no_fixture_paths": true,
+      "private_pid_namespace": true,
+      "producer_fixtures_database_and_archive_subtrees_masked": true,
+      "validator_namespace_pid": 2
+    },
+    "funding": {
+      "accepted": true,
+      "retry_current_canonical": false,
+      "state": {
+        "archive_committed_bytes": 0,
+        "block_id": "ce9e27b2624e12f5395453ee7e33c7d5bd4a1083ccd97ec5148997bdc527740285737b8d2fd23c7f82baf0e8e28e11c24b2e60b214efd15ebde9ecba6b66ddf3",
+        "block_version": 4,
+        "cached_bytes": 3502834,
+        "fee_escrow": 4233550,
+        "height": 1,
+        "leaf_count": 4,
+        "proof_attempts": 2,
+        "retention": "Retain",
+        "root_le": "c58d448017ba1256bbf6e9668325bee23e7cbec2ef79928ee1e894fc4008b394ec0bc19b863cdb5014ffd2ccb99161f2175b8bab0b0800b069b96990b90c5927",
+        "source_signature_attempts": 2,
+        "unconsumed_liabilities": 0,
+        "unexported_bytes": 0
+      },
+      "transport": {
+        "application_received": 3503250,
+        "application_sent": 52,
+        "frame_bytes": 3503198,
+        "ingress_frames_peak": 1,
+        "rate_bits_per_second": 100000000,
+        "server_request_latency_milliseconds": 40,
+        "socket_buffers": {
+          "receive": 131072,
+          "requested_each": 65536,
+          "send": 131072
+        },
+        "userspace_chunk": 65536
+      }
+    },
+    "init": {
+      "accepted": true,
+      "state": {
+        "archive_committed_bytes": 0,
+        "block_id": "866fe619271b89d5c4b2f4ec59152862823ff892b72140a9b82e2dc61b79e1db8d58a6aab7fa0ce6038d94783fccf84e5c349d523efbaa7f3edb2168f67bebb7",
+        "block_version": 4,
+        "cached_bytes": 0,
+        "fee_escrow": 0,
+        "height": 0,
+        "leaf_count": 0,
+        "proof_attempts": 0,
+        "retention": "Retain",
+        "root_le": "35911e483f3f05007aaa7c08f5a74efd34a0c3f84c73424aafa977d75dd6cd9e4cdfe6f99fa7c271d5519a71b40b8f026569f19b52bc239cbaa8c4236bd5f121",
+        "source_signature_attempts": 0,
+        "unconsumed_liabilities": 200000000,
+        "unexported_bytes": 0
+      },
+      "transport": {
+        "application_received": 5724,
+        "application_sent": 52,
+        "frame_bytes": 5672,
+        "ingress_frames_peak": 1,
+        "rate_bits_per_second": 100000000,
+        "server_request_latency_milliseconds": 40,
+        "socket_buffers": {
+          "receive": 131072,
+          "requested_each": 65536,
+          "send": 131072
+        },
+        "userspace_chunk": 65536
+      }
+    },
+    "interrupted_sender": {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/ordinary.frame",
+        "--sha256",
+        "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+        "--bytes",
+        "3478552",
+        "--kind",
+        "2",
+        "--port",
+        "33291",
+        "--mode",
+        "interrupt"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-ordinary-interrupt",
+      "pid": 2318512,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 0,
+          "application_sent": 65588,
+          "complete": true,
+          "durable_archive_ack": false,
+          "inflight_frames_peak": 1,
+          "mode": "interrupt",
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 4738011,
+              "read_bytes": 0,
+              "syscr": 196,
+              "syscw": 1,
+              "wchar": 19510,
+              "write_bytes": 20480
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.006999,
+            "user_seconds": 0.035996
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.05362445197533816
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 19040,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.008045,
+      "user_seconds": 0.042237,
+      "wait4_peak_rss_kib": 18944,
+      "wall_seconds": 0.10714767198078334
+    },
+    "invalid_all_table_snapshot_unchanged": true,
+    "invalid_last": {
+      "accepted": false,
+      "ledger_error": "Proof",
+      "state": {
+        "archive_committed_bytes": 0,
+        "block_id": "ce9e27b2624e12f5395453ee7e33c7d5bd4a1083ccd97ec5148997bdc527740285737b8d2fd23c7f82baf0e8e28e11c24b2e60b214efd15ebde9ecba6b66ddf3",
+        "block_version": 4,
+        "cached_bytes": 3502834,
+        "fee_escrow": 4233550,
+        "height": 1,
+        "leaf_count": 4,
+        "proof_attempts": 4,
+        "retention": "Retain",
+        "root_le": "c58d448017ba1256bbf6e9668325bee23e7cbec2ef79928ee1e894fc4008b394ec0bc19b863cdb5014ffd2ccb99161f2175b8bab0b0800b069b96990b90c5927",
+        "source_signature_attempts": 2,
+        "unconsumed_liabilities": 0,
+        "unexported_bytes": 0
+      },
+      "transport": {
+        "application_received": 3478604,
+        "application_sent": 52,
+        "frame_bytes": 3478552,
+        "ingress_frames_peak": 1,
+        "rate_bits_per_second": 100000000,
+        "server_request_latency_milliseconds": 40,
+        "socket_buffers": {
+          "receive": 131072,
+          "requested_each": 65536,
+          "send": 131072
+        },
+        "userspace_chunk": 65536
+      }
+    },
+    "ordinary": {
+      "accepted": true,
+      "retry_current_canonical": false,
+      "state": {
+        "archive_committed_bytes": 0,
+        "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+        "block_version": 4,
+        "cached_bytes": 6981022,
+        "fee_escrow": 8458046,
+        "height": 2,
+        "leaf_count": 8,
+        "proof_attempts": 6,
+        "retention": "Retain",
+        "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+        "source_signature_attempts": 2,
+        "unconsumed_liabilities": 0,
+        "unexported_bytes": 0
+      },
+      "transport": {
+        "application_received": 3478604,
+        "application_sent": 52,
+        "frame_bytes": 3478552,
+        "ingress_frames_peak": 1,
+        "rate_bits_per_second": 100000000,
+        "server_request_latency_milliseconds": 40,
+        "socket_buffers": {
+          "receive": 131072,
+          "requested_each": 65536,
+          "send": 131072
+        },
+        "userspace_chunk": 65536
+      }
+    },
+    "passed": true,
+    "producer_destination_canonical_equal_except_local_catalog_id": true,
+    "publication_crash_sender": {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/funding.frame",
+        "--sha256",
+        "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+        "--bytes",
+        "3503198",
+        "--kind",
+        "2",
+        "--port",
+        "33291",
+        "--mode",
+        "crash"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-funding-crash",
+      "pid": 2318514,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 0,
+          "application_sent": 3503250,
+          "complete": true,
+          "durable_archive_ack": false,
+          "inflight_frames_peak": 1,
+          "mode": "crash",
+          "object_bytes": 3503198,
+          "object_sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 8212692,
+              "read_bytes": 0,
+              "syscr": 251,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18176,
+            "system_seconds": 0.019652,
+            "user_seconds": 0.037339
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.34371211589314044
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18240,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.022501999999999998,
+      "user_seconds": 0.061635999999999996,
+      "wait4_peak_rss_kib": 18208,
+      "wall_seconds": 0.44409839110448956
+    },
+    "reopen": {
+      "error": null,
+      "op": "open",
+      "result": {
+        "archive_committed_bytes": 0,
+        "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+        "block_version": 4,
+        "cached_bytes": 6981022,
+        "fee_escrow": 8458046,
+        "height": 2,
+        "leaf_count": 8,
+        "proof_attempts": 0,
+        "retention": "Retain",
+        "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+        "source_signature_attempts": 0,
+        "unconsumed_liabilities": 0,
+        "unexported_bytes": 0
+      },
+      "stages": [
+        {
+          "error": null,
+          "linux_self_io_delta": {
+            "cancelled_write_bytes": 0,
+            "rchar": 145458510,
+            "read_bytes": 0,
+            "syscr": 3467,
+            "syscw": 0,
+            "wchar": 0,
+            "write_bytes": 0
+          },
+          "name": "trusted-reopen",
+          "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+          "self_inblock_delta": 0,
+          "self_oublock_delta": 0,
+          "self_peak_rss_kib_cumulative": 65000,
+          "self_system_seconds": 0.030895,
+          "self_user_seconds": 1.096011,
+          "waited_child_inblock_delta": 0,
+          "waited_child_oublock_delta": 0,
+          "waited_child_peak_rss_kib_cumulative": 0,
+          "waited_child_system_seconds": 0.0,
+          "waited_child_user_seconds": 0.0,
+          "wall_seconds": 1.1270497449999999
+        },
+        {
+          "error": null,
+          "linux_self_io_delta": {
+            "cancelled_write_bytes": 0,
+            "rchar": 145458788,
+            "read_bytes": 0,
+            "syscr": 3480,
+            "syscw": 0,
+            "wchar": 0,
+            "write_bytes": 0
+          },
+          "name": "inclusive-command-receive-parse-verify-commit-head",
+          "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+          "self_inblock_delta": 0,
+          "self_oublock_delta": 0,
+          "self_peak_rss_kib_cumulative": 65000,
+          "self_system_seconds": 0.030997,
+          "self_user_seconds": 1.096176,
+          "waited_child_inblock_delta": 0,
+          "waited_child_oublock_delta": 0,
+          "waited_child_peak_rss_kib_cumulative": 0,
+          "waited_child_system_seconds": 0.0,
+          "waited_child_user_seconds": 0.0,
+          "wall_seconds": 1.127244717
+        }
+      ]
+    },
+    "retained": {
+      "archive_committed_bytes": 0,
+      "bodies": 4,
+      "cached_bytes": 6981022,
+      "full_bytes": 6981022,
+      "missing_full": 0,
+      "pending": 0,
+      "retention": 1,
+      "unexported_bytes": 0
+    },
+    "retry": {
+      "accepted": true,
+      "retry_current_canonical": true,
+      "state": {
+        "archive_committed_bytes": 0,
+        "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+        "block_version": 4,
+        "cached_bytes": 6981022,
+        "fee_escrow": 8458046,
+        "height": 2,
+        "leaf_count": 8,
+        "proof_attempts": 6,
+        "retention": "Retain",
+        "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+        "source_signature_attempts": 2,
+        "unconsumed_liabilities": 0,
+        "unexported_bytes": 0
+      },
+      "transport": {
+        "application_received": 3478604,
+        "application_sent": 52,
+        "frame_bytes": 3478552,
+        "ingress_frames_peak": 1,
+        "rate_bits_per_second": 100000000,
+        "server_request_latency_milliseconds": 40,
+        "socket_buffers": {
+          "receive": 131072,
+          "requested_each": 65536,
+          "send": 131072
+        },
+        "userspace_chunk": 65536
+      }
+    }
+  },
+  "role_receipts": [
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/ordinary.frame",
+        "--sha256",
+        "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+        "--bytes",
+        "3478552",
+        "--kind",
+        "2",
+        "--port",
+        "33291",
+        "--mode",
+        "interrupt"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-ordinary-interrupt",
+      "pid": 2318512,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 0,
+          "application_sent": 65588,
+          "complete": true,
+          "durable_archive_ack": false,
+          "inflight_frames_peak": 1,
+          "mode": "interrupt",
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 4738011,
+              "read_bytes": 0,
+              "syscr": 196,
+              "syscw": 1,
+              "wchar": 19510,
+              "write_bytes": 20480
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.006999,
+            "user_seconds": 0.035996
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.05362445197533816
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 19040,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.008045,
+      "user_seconds": 0.042237,
+      "wait4_peak_rss_kib": 18944,
+      "wall_seconds": 0.10714767198078334
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/funding.frame",
+        "--sha256",
+        "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+        "--bytes",
+        "3503198",
+        "--kind",
+        "2",
+        "--port",
+        "33291",
+        "--mode",
+        "crash"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-funding-crash",
+      "pid": 2318514,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 0,
+          "application_sent": 3503250,
+          "complete": true,
+          "durable_archive_ack": false,
+          "inflight_frames_peak": 1,
+          "mode": "crash",
+          "object_bytes": 3503198,
+          "object_sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 8212692,
+              "read_bytes": 0,
+              "syscr": 251,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18176,
+            "system_seconds": 0.019652,
+            "user_seconds": 0.037339
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.34371211589314044
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18240,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.022501999999999998,
+      "user_seconds": 0.061635999999999996,
+      "wait4_peak_rss_kib": 18208,
+      "wall_seconds": 0.44409839110448956
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "-I",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/archive.py",
+        "--root",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/archive",
+        "--allow-publication-crash"
+      ],
+      "cpu_affinity": [
+        1
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 3506176,
+        "files": 1,
+        "logical_bytes": 3503198
+      },
+      "exit": 79,
+      "final_disk": {
+        "allocated_bytes": 3506176,
+        "files": 1,
+        "logical_bytes": 3503198
+      },
+      "first_wait4": true,
+      "name": "archive",
+      "pid": 2318511,
+      "public_stderr": "",
+      "raw_wait_status": 20224,
+      "rows": [
+        {
+          "initial_resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 1163882,
+              "read_bytes": 0,
+              "syscr": 134,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18304,
+            "system_seconds": 0.0049949999999999994,
+            "user_seconds": 0.026973
+          },
+          "limits": {
+            "chunk": 65536,
+            "connections": 2,
+            "get": 1,
+            "put": 1,
+            "spool_max_each": 268435456
+          },
+          "pid": 2318511,
+          "port": 33291,
+          "ready": true,
+          "role": "archive"
+        },
+        {
+          "application_received": 65588,
+          "application_sent": 0,
+          "complete": false,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 0,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 65588,
+            "requests": 1,
+            "sent": 0,
+            "source_signature_attempts": 0
+          },
+          "error": "interrupted bounded transfer",
+          "error_type": "EOFError",
+          "kind": 2,
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "op": 1,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 65536,
+              "rchar": 1163980,
+              "read_bytes": 0,
+              "syscr": 136,
+              "syscw": 2,
+              "wchar": 65957,
+              "write_bytes": 65536
+            },
+            "maxrss_kib_cumulative": 18560,
+            "system_seconds": 0.00583,
+            "user_seconds": 0.026973
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.04581298609264195
+        },
+        {
+          "application_received": 3503250,
+          "application_sent": 0,
+          "counters_before_exit": {
+            "active": 1,
+            "connection_peak": 1,
+            "full_bytes_written": 3503198,
+            "incomplete_spools": 1,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 65588,
+            "requests": 1,
+            "sent": 0,
+            "source_signature_attempts": 0
+          },
+          "object_bytes": 3503198,
+          "object_sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+          "publication_crash_before_ack": true,
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 65536,
+              "rchar": 1164091,
+              "read_bytes": 0,
+              "syscr": 139,
+              "syscw": 57,
+              "wchar": 3570048,
+              "write_bytes": 3571712
+            },
+            "maxrss_kib_cumulative": 18560,
+            "system_seconds": 0.015986999999999998,
+            "user_seconds": 0.055956
+          }
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18672,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.019129,
+      "user_seconds": 0.056381,
+      "wait4_peak_rss_kib": 18560,
+      "wall_seconds": 0.5882239149650559
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/genesis.bin",
+        "--sha256",
+        "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5",
+        "--bytes",
+        "5672",
+        "--kind",
+        "1",
+        "--port",
+        "42195",
+        "--mode",
+        "put"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-genesis-put",
+      "pid": 2318517,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 52,
+          "application_sent": 5724,
+          "complete": true,
+          "durable_archive_ack": true,
+          "inflight_frames_peak": 1,
+          "mode": "put",
+          "object_bytes": 5672,
+          "object_sha256": "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 1217640,
+              "read_bytes": 0,
+              "syscr": 145,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18176,
+            "system_seconds": 0.010293,
+            "user_seconds": 0.022645
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.044403319945558906
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18236,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.011353,
+      "user_seconds": 0.027867,
+      "wait4_peak_rss_kib": 18208,
+      "wall_seconds": 0.08772602002136409
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/funding.frame",
+        "--sha256",
+        "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+        "--bytes",
+        "3503198",
+        "--kind",
+        "2",
+        "--port",
+        "42195",
+        "--mode",
+        "put"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-funding-put",
+      "pid": 2318519,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 52,
+          "application_sent": 3503250,
+          "complete": true,
+          "durable_archive_ack": true,
+          "inflight_frames_peak": 1,
+          "mode": "put",
+          "object_bytes": 3503198,
+          "object_sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 8212692,
+              "read_bytes": 0,
+              "syscr": 251,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18176,
+            "system_seconds": 0.013354,
+            "user_seconds": 0.043143
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.34677676495630294
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18260,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.015361999999999999,
+      "user_seconds": 0.064524,
+      "wait4_peak_rss_kib": 18208,
+      "wall_seconds": 0.4443526779068634
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/invalid_last.frame",
+        "--sha256",
+        "d371659c565d9e144a8555835df134db2df133a4fded6c06c0706852d9180f90",
+        "--bytes",
+        "3478552",
+        "--kind",
+        "2",
+        "--port",
+        "42195",
+        "--mode",
+        "put"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-invalid_last-put",
+      "pid": 2318521,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 52,
+          "application_sent": 3478604,
+          "complete": true,
+          "durable_archive_ack": true,
+          "inflight_frames_peak": 1,
+          "mode": "put",
+          "object_bytes": 3478552,
+          "object_sha256": "d371659c565d9e144a8555835df134db2df133a4fded6c06c0706852d9180f90",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 8163400,
+              "read_bytes": 0,
+              "syscr": 251,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18176,
+            "system_seconds": 0.024811,
+            "user_seconds": 0.062524
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.33825178700499237
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18260,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.027943,
+      "user_seconds": 0.082832,
+      "wait4_peak_rss_kib": 18176,
+      "wall_seconds": 0.465320402989164
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/sender.py",
+        "--object",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/ordinary.frame",
+        "--sha256",
+        "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+        "--bytes",
+        "3478552",
+        "--kind",
+        "2",
+        "--port",
+        "42195",
+        "--mode",
+        "put"
+      ],
+      "cpu_affinity": [
+        0
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "producer-transport-ordinary-put",
+      "pid": 2318523,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "application_received": 52,
+          "application_sent": 3478604,
+          "complete": true,
+          "durable_archive_ack": true,
+          "inflight_frames_peak": 1,
+          "mode": "put",
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 8163400,
+              "read_bytes": 0,
+              "syscr": 251,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18176,
+            "system_seconds": 0.025546,
+            "user_seconds": 0.057970999999999995
+          },
+          "role": "producer-transport",
+          "scope": "actual public frame read/hash/send and archive ACK; proving separately priced",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.3348362429533154
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18240,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.028606999999999997,
+      "user_seconds": 0.078917,
+      "wait4_peak_rss_kib": 18208,
+      "wall_seconds": 0.46149800694547594
+    },
+    {
+      "command": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--unshare-pid",
+        "--ro-bind",
+        "/",
+        "/",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--bind",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/validator",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/validator",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/archive",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/architecture-feasibility",
+        "--",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/build01/target/release/cp04-network-role01",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/validator/ledger.sqlite",
+        "d83b4151f50b612365631660cdb1a06b7eb53d1f0d510dd5df2bf9e72f3331a5",
+        "127.0.0.1:42195"
+      ],
+      "cpu_affinity": [
+        2
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 7159808,
+        "files": 2,
+        "logical_bytes": 7159808
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 7159808,
+        "files": 1,
+        "logical_bytes": 7159808
+      },
+      "first_wait4": true,
+      "name": "validator",
+      "pid": 2318526,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "direct_fixture_paths": false,
+          "pid": 2,
+          "ready": true,
+          "role": "validator"
+        },
+        {
+          "error": null,
+          "op": "init",
+          "result": {
+            "accepted": true,
+            "state": {
+              "archive_committed_bytes": 0,
+              "block_id": "866fe619271b89d5c4b2f4ec59152862823ff892b72140a9b82e2dc61b79e1db8d58a6aab7fa0ce6038d94783fccf84e5c349d523efbaa7f3edb2168f67bebb7",
+              "block_version": 4,
+              "cached_bytes": 0,
+              "fee_escrow": 0,
+              "height": 0,
+              "leaf_count": 0,
+              "proof_attempts": 0,
+              "retention": "Retain",
+              "root_le": "35911e483f3f05007aaa7c08f5a74efd34a0c3f84c73424aafa977d75dd6cd9e4cdfe6f99fa7c271d5519a71b40b8f026569f19b52bc239cbaa8c4236bd5f121",
+              "source_signature_attempts": 0,
+              "unconsumed_liabilities": 200000000,
+              "unexported_bytes": 0
+            },
+            "transport": {
+              "application_received": 5724,
+              "application_sent": 52,
+              "frame_bytes": 5672,
+              "ingress_frames_peak": 1,
+              "rate_bits_per_second": 100000000,
+              "server_request_latency_milliseconds": 40,
+              "socket_buffers": {
+                "receive": 131072,
+                "requested_each": 65536,
+                "send": 131072
+              },
+              "userspace_chunk": 65536
+            }
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 96,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "receive-identity",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 4224,
+              "self_system_seconds": 0.00043900000000000015,
+              "self_user_seconds": 0.0,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.041560912
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 140147787,
+                "read_bytes": 0,
+                "syscr": 2169,
+                "syscw": 35,
+                "wchar": 135692,
+                "write_bytes": 143360
+              },
+              "name": "trusted-init-durable",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 280,
+              "self_peak_rss_kib_cumulative": 63056,
+              "self_system_seconds": 0.033041,
+              "self_user_seconds": 1.095671,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 1.138403117
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 140148267,
+                "read_bytes": 0,
+                "syscr": 2190,
+                "syscw": 35,
+                "wchar": 135692,
+                "write_bytes": 143360
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 280,
+              "self_peak_rss_kib_cumulative": 63056,
+              "self_system_seconds": 0.033678999999999994,
+              "self_user_seconds": 1.095779,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 1.180311639
+            }
+          ]
+        },
+        {
+          "error": null,
+          "op": "apply",
+          "result": {
+            "accepted": true,
+            "retry_current_canonical": false,
+            "state": {
+              "archive_committed_bytes": 0,
+              "block_id": "ce9e27b2624e12f5395453ee7e33c7d5bd4a1083ccd97ec5148997bdc527740285737b8d2fd23c7f82baf0e8e28e11c24b2e60b214efd15ebde9ecba6b66ddf3",
+              "block_version": 4,
+              "cached_bytes": 3502834,
+              "fee_escrow": 4233550,
+              "height": 1,
+              "leaf_count": 4,
+              "proof_attempts": 2,
+              "retention": "Retain",
+              "root_le": "c58d448017ba1256bbf6e9668325bee23e7cbec2ef79928ee1e894fc4008b394ec0bc19b863cdb5014ffd2ccb99161f2175b8bab0b0800b069b96990b90c5927",
+              "source_signature_attempts": 2,
+              "unconsumed_liabilities": 0,
+              "unexported_bytes": 0
+            },
+            "transport": {
+              "application_received": 3503250,
+              "application_sent": 52,
+              "frame_bytes": 3503198,
+              "ingress_frames_peak": 1,
+              "rate_bits_per_second": 100000000,
+              "server_request_latency_milliseconds": 40,
+              "socket_buffers": {
+                "receive": 131072,
+                "requested_each": 65536,
+                "send": 131072
+              },
+              "userspace_chunk": 65536
+            }
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 112,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "receive-identity",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 66512,
+              "self_system_seconds": 0.009912999999999998,
+              "self_user_seconds": 0.04743599999999981,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.375802856
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 12436,
+                "read_bytes": 0,
+                "syscr": 9,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "bounded-frame-parse-copy",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 72272,
+              "self_system_seconds": 0.002006000000000001,
+              "self_user_seconds": 0.020154999999999923,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.02213817
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 80165,
+                "read_bytes": 0,
+                "syscr": 211,
+                "syscw": 953,
+                "wchar": 3706326,
+                "write_bytes": 3698688
+              },
+              "name": "genuine-admit-atomic-durable-retain",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 7224,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.007060999999999998,
+              "self_user_seconds": 0.09918100000000019,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.023548,
+              "waited_child_user_seconds": 0.047023,
+              "wall_seconds": 0.188899763
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 93276,
+                "read_bytes": 0,
+                "syscr": 247,
+                "syscw": 953,
+                "wchar": 3706326,
+                "write_bytes": 3698688
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 7224,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.019306999999999998,
+              "self_user_seconds": 0.1670980000000002,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.023548,
+              "waited_child_user_seconds": 0.047023,
+              "wall_seconds": 0.587527753
+            }
+          ]
+        },
+        {
+          "error": null,
+          "op": "apply",
+          "result": {
+            "accepted": false,
+            "ledger_error": "Proof",
+            "state": {
+              "archive_committed_bytes": 0,
+              "block_id": "ce9e27b2624e12f5395453ee7e33c7d5bd4a1083ccd97ec5148997bdc527740285737b8d2fd23c7f82baf0e8e28e11c24b2e60b214efd15ebde9ecba6b66ddf3",
+              "block_version": 4,
+              "cached_bytes": 3502834,
+              "fee_escrow": 4233550,
+              "height": 1,
+              "leaf_count": 4,
+              "proof_attempts": 4,
+              "retention": "Retain",
+              "root_le": "c58d448017ba1256bbf6e9668325bee23e7cbec2ef79928ee1e894fc4008b394ec0bc19b863cdb5014ffd2ccb99161f2175b8bab0b0800b069b96990b90c5927",
+              "source_signature_attempts": 2,
+              "unconsumed_liabilities": 0,
+              "unexported_bytes": 0
+            },
+            "transport": {
+              "application_received": 3478604,
+              "application_sent": 52,
+              "frame_bytes": 3478552,
+              "ingress_frames_peak": 1,
+              "rate_bits_per_second": 100000000,
+              "server_request_latency_milliseconds": 40,
+              "socket_buffers": {
+                "receive": 131072,
+                "requested_each": 65536,
+                "send": 131072
+              },
+              "userspace_chunk": 65536
+            }
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 115,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "receive-identity",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.004566000000000001,
+              "self_user_seconds": 0.046022999999999925,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.371833468
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 115,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "bounded-frame-parse-copy",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.0009419999999999984,
+              "self_user_seconds": 0.019984000000000002,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.020904192
+            },
+            {
+              "error": "Proof",
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 45056,
+                "rchar": 41199,
+                "read_bytes": 0,
+                "syscr": 42,
+                "syscw": 31,
+                "wchar": 41552,
+                "write_bytes": 45056
+              },
+              "name": "genuine-admit-atomic-durable-retain",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 88,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.0,
+              "self_user_seconds": 0.07214799999999988,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.077777572
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 45056,
+                "rchar": 42006,
+                "read_bytes": 0,
+                "syscr": 73,
+                "syscw": 31,
+                "wchar": 41552,
+                "write_bytes": 45056
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 88,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.005590999999999999,
+              "self_user_seconds": 0.13848399999999983,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.470950688
+            }
+          ]
+        },
+        {
+          "error": null,
+          "op": "apply",
+          "result": {
+            "accepted": true,
+            "retry_current_canonical": false,
+            "state": {
+              "archive_committed_bytes": 0,
+              "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+              "block_version": 4,
+              "cached_bytes": 6981022,
+              "fee_escrow": 8458046,
+              "height": 2,
+              "leaf_count": 8,
+              "proof_attempts": 6,
+              "retention": "Retain",
+              "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+              "source_signature_attempts": 2,
+              "unconsumed_liabilities": 0,
+              "unexported_bytes": 0
+            },
+            "transport": {
+              "application_received": 3478604,
+              "application_sent": 52,
+              "frame_bytes": 3478552,
+              "ingress_frames_peak": 1,
+              "rate_bits_per_second": 100000000,
+              "server_request_latency_milliseconds": 40,
+              "socket_buffers": {
+                "receive": 131072,
+                "requested_each": 65536,
+                "send": 131072
+              },
+              "userspace_chunk": 65536
+            }
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 120,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "receive-identity",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 76068,
+              "self_system_seconds": 0.003957000000000002,
+              "self_user_seconds": 0.05245299999999986,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.376955506
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 120,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "bounded-frame-parse-copy",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 78316,
+              "self_system_seconds": 0.001009999999999997,
+              "self_user_seconds": 0.021226999999999885,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.022216054
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 136,
+                "read_bytes": 0,
+                "syscr": 6,
+                "syscw": 940,
+                "wchar": 3670708,
+                "write_bytes": 3678208
+              },
+              "name": "genuine-admit-atomic-durable-retain",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 7184,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 0.002003999999999992,
+              "self_user_seconds": 0.09710099999999988,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.109247545
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 968,
+                "read_bytes": 0,
+                "syscr": 37,
+                "syscw": 940,
+                "wchar": 3670708,
+                "write_bytes": 3678208
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 7184,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 0.006995000000000001,
+              "self_user_seconds": 0.17136600000000013,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.509054222
+            }
+          ]
+        },
+        {
+          "error": null,
+          "op": "apply",
+          "result": {
+            "accepted": true,
+            "retry_current_canonical": true,
+            "state": {
+              "archive_committed_bytes": 0,
+              "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+              "block_version": 4,
+              "cached_bytes": 6981022,
+              "fee_escrow": 8458046,
+              "height": 2,
+              "leaf_count": 8,
+              "proof_attempts": 6,
+              "retention": "Retain",
+              "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+              "source_signature_attempts": 2,
+              "unconsumed_liabilities": 0,
+              "unexported_bytes": 0
+            },
+            "transport": {
+              "application_received": 3478604,
+              "application_sent": 52,
+              "frame_bytes": 3478552,
+              "ingress_frames_peak": 1,
+              "rate_bits_per_second": 100000000,
+              "server_request_latency_milliseconds": 40,
+              "socket_buffers": {
+                "receive": 131072,
+                "requested_each": 65536,
+                "send": 131072
+              },
+              "userspace_chunk": 65536
+            }
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 120,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "receive-identity",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 0.008058999999999997,
+              "self_user_seconds": 0.05118099999999992,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.375198559
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 120,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "bounded-frame-parse-copy",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 6.999999999993123e-06,
+              "self_user_seconds": 0.02117799999999992,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.021163441
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 5258651,
+                "read_bytes": 0,
+                "syscr": 1291,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "current-canonical-retry-read",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 0.0009890000000000038,
+              "self_user_seconds": 0.0007299999999998974,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.001703864
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 5259483,
+                "read_bytes": 0,
+                "syscr": 1322,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 0.009068999999999994,
+              "self_user_seconds": 0.0734220000000001,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 0.39843492
+            }
+          ]
+        },
+        {
+          "error": null,
+          "op": "stop",
+          "result": {
+            "stopped": true
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 120,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 81772,
+              "self_system_seconds": 1.000000000001e-06,
+              "self_user_seconds": 2.9000000000056758e-05,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 63524,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 3.93e-07
+            }
+          ]
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 111568,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.002498,
+      "user_seconds": 0.0,
+      "wait4_peak_rss_kib": 17376,
+      "wall_seconds": 3.2735182440374047
+    },
+    {
+      "command": [
+        "/usr/bin/python3.12",
+        "-I",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/archive.py",
+        "--root",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/archive",
+        "--allow-publication-crash"
+      ],
+      "cpu_affinity": [
+        1
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 10477568,
+        "files": 4,
+        "logical_bytes": 10465974
+      },
+      "first_wait4": true,
+      "name": "archive",
+      "pid": 2318516,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "initial_resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 1163882,
+              "read_bytes": 0,
+              "syscr": 134,
+              "syscw": 0,
+              "wchar": 0,
+              "write_bytes": 0
+            },
+            "maxrss_kib_cumulative": 18432,
+            "system_seconds": 0.019074999999999998,
+            "user_seconds": 0.056221999999999994
+          },
+          "limits": {
+            "chunk": 65536,
+            "connections": 2,
+            "get": 1,
+            "put": 1,
+            "spool_max_each": 268435456
+          },
+          "pid": 2318516,
+          "port": 42195,
+          "ready": true,
+          "role": "archive"
+        },
+        {
+          "application_received": 5724,
+          "application_sent": 52,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 5672,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 5724,
+            "requests": 1,
+            "sent": 52,
+            "source_signature_attempts": 0
+          },
+          "kind": 1,
+          "object_bytes": 5672,
+          "object_sha256": "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5",
+          "op": 1,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 1163980,
+              "read_bytes": 0,
+              "syscr": 136,
+              "syscw": 2,
+              "wchar": 6104,
+              "write_bytes": 8192
+            },
+            "maxrss_kib_cumulative": 18432,
+            "system_seconds": 0.019799,
+            "user_seconds": 0.056221999999999994
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.043128491030074656
+        },
+        {
+          "application_received": 3503250,
+          "application_sent": 52,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 3508870,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 3508974,
+            "requests": 2,
+            "sent": 104,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3503198,
+          "object_sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+          "op": 1,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 4667283,
+              "read_bytes": 0,
+              "syscr": 195,
+              "syscw": 57,
+              "wchar": 3510135,
+              "write_bytes": 3514368
+            },
+            "maxrss_kib_cumulative": 18688,
+            "system_seconds": 0.030011,
+            "user_seconds": 0.088033
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.3391558980802074
+        },
+        {
+          "application_received": 3478604,
+          "application_sent": 52,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 6987422,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 6987578,
+            "requests": 3,
+            "sent": 156,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3478552,
+          "object_sha256": "d371659c565d9e144a8555835df134db2df133a4fded6c06c0706852d9180f90",
+          "op": 1,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 4667394,
+              "read_bytes": 0,
+              "syscr": 197,
+              "syscw": 112,
+              "wchar": 6989526,
+              "write_bytes": 6995968
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.042893,
+            "user_seconds": 0.121697
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.3305888109607622
+        },
+        {
+          "application_received": 3478604,
+          "application_sent": 52,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466182,
+            "requests": 4,
+            "sent": 208,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "op": 1,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 4667506,
+              "read_bytes": 0,
+              "syscr": 199,
+              "syscw": 167,
+              "wchar": 10468918,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.053849999999999995,
+            "user_seconds": 0.14224699999999998
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.32707322598434985
+        },
+        {
+          "application_received": 52,
+          "application_sent": 5724,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466234,
+            "requests": 5,
+            "sent": 5932,
+            "source_signature_attempts": 0
+          },
+          "kind": 1,
+          "object_bytes": 5672,
+          "object_sha256": "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5",
+          "op": 2,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 4678964,
+              "read_bytes": 0,
+              "syscr": 207,
+              "syscw": 168,
+              "wchar": 10469786,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.055054,
+            "user_seconds": 0.142735
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.0411227090517059
+        },
+        {
+          "application_received": 52,
+          "application_sent": 3503250,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466286,
+            "requests": 6,
+            "sent": 3509182,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3503198,
+          "object_sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276",
+          "op": 2,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 11685474,
+              "read_bytes": 0,
+              "syscr": 321,
+              "syscw": 169,
+              "wchar": 10470625,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.063439,
+            "user_seconds": 0.15348299999999998
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.32757743704132736
+        },
+        {
+          "application_received": 52,
+          "application_sent": 3478604,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466338,
+            "requests": 7,
+            "sent": 6987786,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3478552,
+          "object_sha256": "d371659c565d9e144a8555835df134db2df133a4fded6c06c0706852d9180f90",
+          "op": 2,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 18642693,
+              "read_bytes": 0,
+              "syscr": 435,
+              "syscw": 170,
+              "wchar": 10471486,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.07185799999999999,
+            "user_seconds": 0.162194
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.32538072601892054
+        },
+        {
+          "application_received": 52,
+          "application_sent": 3478604,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466390,
+            "requests": 8,
+            "sent": 10466390,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "op": 2,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 25599912,
+              "read_bytes": 0,
+              "syscr": 549,
+              "syscw": 171,
+              "wchar": 10472347,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.07767099999999999,
+            "user_seconds": 0.176335
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.32558945193886757
+        },
+        {
+          "application_received": 52,
+          "application_sent": 3478604,
+          "complete": true,
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466442,
+            "requests": 9,
+            "sent": 13944994,
+            "source_signature_attempts": 0
+          },
+          "kind": 2,
+          "object_bytes": 3478552,
+          "object_sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28",
+          "op": 2,
+          "resources_cumulative": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 32557131,
+              "read_bytes": 0,
+              "syscr": 663,
+              "syscw": 172,
+              "wchar": 10473209,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.089711,
+            "user_seconds": 0.18568099999999998
+          },
+          "role": "archive",
+          "socket_buffers": {
+            "receive": 131072,
+            "requested_each": 65536,
+            "send": 131072
+          },
+          "wall_seconds": 0.3260379040148109
+        },
+        {
+          "counters": {
+            "active": 0,
+            "connection_peak": 1,
+            "full_bytes_written": 10465974,
+            "incomplete_spools": 0,
+            "incomplete_spools_peak": 1,
+            "proof_attempts": 0,
+            "received": 10466442,
+            "requests": 9,
+            "sent": 13944994,
+            "source_signature_attempts": 0
+          },
+          "resources": {
+            "linux_self_io": {
+              "cancelled_write_bytes": 0,
+              "rchar": 32557246,
+              "read_bytes": 0,
+              "syscr": 665,
+              "syscw": 173,
+              "wchar": 10474070,
+              "write_bytes": 10477568
+            },
+            "maxrss_kib_cumulative": 18816,
+            "system_seconds": 0.090485,
+            "user_seconds": 0.18617
+          },
+          "stopped": true
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 18860,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.095105,
+      "user_seconds": 0.20571699999999998,
+      "wait4_peak_rss_kib": 18816,
+      "wall_seconds": 5.029451830079779
+    },
+    {
+      "command": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--unshare-pid",
+        "--ro-bind",
+        "/",
+        "/",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--bind",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/validator",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/validator",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/archive",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-all-payments-v3/public",
+        "--tmpfs",
+        "/home/neo/jouliene/pq-private-chain/experiments/architecture-feasibility",
+        "--",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/build01/target/release/cp04-network-role01",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/validator/ledger.sqlite",
+        "d83b4151f50b612365631660cdb1a06b7eb53d1f0d510dd5df2bf9e72f3331a5",
+        "127.0.0.1:42195"
+      ],
+      "cpu_affinity": [
+        2
+      ],
+      "disk_peak_sampled": {
+        "allocated_bytes": 7159808,
+        "files": 1,
+        "logical_bytes": 7159808
+      },
+      "exit": 0,
+      "final_disk": {
+        "allocated_bytes": 7159808,
+        "files": 1,
+        "logical_bytes": 7159808
+      },
+      "first_wait4": true,
+      "name": "validator-reopen",
+      "pid": 2318548,
+      "public_stderr": "",
+      "raw_wait_status": 0,
+      "rows": [
+        {
+          "direct_fixture_paths": false,
+          "pid": 2,
+          "ready": true,
+          "role": "validator"
+        },
+        {
+          "error": null,
+          "op": "open",
+          "result": {
+            "archive_committed_bytes": 0,
+            "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+            "block_version": 4,
+            "cached_bytes": 6981022,
+            "fee_escrow": 8458046,
+            "height": 2,
+            "leaf_count": 8,
+            "proof_attempts": 0,
+            "retention": "Retain",
+            "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+            "source_signature_attempts": 0,
+            "unconsumed_liabilities": 0,
+            "unexported_bytes": 0
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 145458510,
+                "read_bytes": 0,
+                "syscr": 3467,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "trusted-reopen",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 65000,
+              "self_system_seconds": 0.030895,
+              "self_user_seconds": 1.096011,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 1.1270497449999999
+            },
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 145458788,
+                "read_bytes": 0,
+                "syscr": 3480,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 65000,
+              "self_system_seconds": 0.030997,
+              "self_user_seconds": 1.096176,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 1.127244717
+            }
+          ]
+        },
+        {
+          "error": null,
+          "op": "stop",
+          "result": {
+            "stopped": true
+          },
+          "stages": [
+            {
+              "error": null,
+              "linux_self_io_delta": {
+                "cancelled_write_bytes": 0,
+                "rchar": 104,
+                "read_bytes": 0,
+                "syscr": 4,
+                "syscw": 0,
+                "wchar": 0,
+                "write_bytes": 0
+              },
+              "name": "inclusive-command-receive-parse-verify-commit-head",
+              "scope": "complete synchronous call; self IO includes sampling overhead, excludes helper IO; waited children separate; cumulative peaks not summed; cold page cache uncontrolled",
+              "self_inblock_delta": 0,
+              "self_oublock_delta": 0,
+              "self_peak_rss_kib_cumulative": 65000,
+              "self_system_seconds": 0.0,
+              "self_user_seconds": 1.1999999999900979e-05,
+              "waited_child_inblock_delta": 0,
+              "waited_child_oublock_delta": 0,
+              "waited_child_peak_rss_kib_cumulative": 0,
+              "waited_child_system_seconds": 0.0,
+              "waited_child_user_seconds": 0.0,
+              "wall_seconds": 2e-07
+            }
+          ]
+        }
+      ],
+      "sampled_role_tree_peak_rss_kib": 66964,
+      "scope": "wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed",
+      "system_seconds": 0.007894,
+      "user_seconds": 0.000986,
+      "wait4_peak_rss_kib": 19340,
+      "wall_seconds": 1.1881150109693408
+    }
+  ],
+  "scope": "finite loopback actual paced application-byte transport; no WAN/yearscale/PQ theorem; diagnostic2 does not satisfy96 gate",
+  "source_producer_public_disk_outside_role": {
+    "allocated_bytes": 14278656,
+    "files": 14,
+    "logical_bytes": 14249426
+  },
+  "source_sha256": "a7f6efd64077d54d5adda35d77da50fae20420301c17f9c8a361bd79be35c24e",
+  "workload_sha256": "f10e50f5776ff2c48d8afbb58287192dee0a28aeb194a73e4111d5710d128b1d"
+}

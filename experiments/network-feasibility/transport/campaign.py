@@ -60,7 +60,7 @@ class Role:
   except ProcessLookupError:pass
   pid,status,u=os.wait4(self.p.pid,0);self.done=True;self.p.returncode=os.waitstatus_to_exitcode(status)
   self.selector.close()
-  self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'raw_wait_status':status,'exit':self.p.returncode,'first_wait4':True,'wall_seconds':time.monotonic()-self.start,'user_seconds':u.ru_utime,'system_seconds':u.ru_stime,'wait4_peak_rss_kib':u.ru_maxrss,'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'rows':self.rows,'scope':'wait4 leader includes waited children CPU; sampled simultaneous tree RSS may miss short peaks; archive thread resources overlap and are not summed','public_stderr':self.buffers[self.p.stderr].decode('utf8','replace')}
+  self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'raw_wait_status':status,'exit':self.p.returncode,'first_wait4':True,'wall_seconds':time.monotonic()-self.start,'user_seconds':u.ru_utime,'system_seconds':u.ru_stime,'wait4_peak_rss_kib':u.ru_maxrss,'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'rows':self.rows,'wait4_scope':('bwrap wrapper only; native lifetime receipt is authoritative for native CPU/RSS/IO'if self.name.startswith('validator')else'direct Python role process; archive threads share process counters'),'scope':'Never substitute bwrap wrapper CPU/RSS for the native validator. Sampled simultaneous tree RSS may miss short peaks; archive thread cumulative resources overlap and are not summed','public_stderr':self.buffers[self.p.stderr].decode('utf8','replace')}
   need(self.p.returncode==expected,'role terminal exit '+self.name)
   need(not self.buffers[self.p.stderr],'role unexpected stderr '+self.name)
   return self.receipt
@@ -82,6 +82,15 @@ class Role:
   public_out=self.buffers[self.p.stdout].decode('utf8','replace');public_err=self.buffers[self.p.stderr].decode('utf8','replace')
   self.selector.close();self.receipt={'name':self.name,'pid':self.p.pid,'command':self.command,'cleanup':'group SIGKILL before first reap','wall_seconds':time.monotonic()-self.start,'cpu_affinity':[self.cpu],'disk_peak_sampled':self.disk_peak,'final_disk':oracle.disk(self.work),'sampled_role_tree_peak_rss_kib':self.process_tree_peak_rss_kib,'rows':self.rows,'remaining_public_stdout':public_out,'public_stderr':public_err,**terminal}
   return self.receipt
+
+def native_lifetime(receipt):
+ terminals=[row for row in receipt['rows']if row.get('native_terminal')is True]
+ need(len(terminals)==1 and terminals[0]['completed']is True,'actual successful native terminal')
+ life=terminals[0]['native_lifetime'];need(life['actual_cpu_allowed_list']=='2','actual native affinity')
+ inclusive=[span for row in receipt['rows']for span in row.get('stages',[])if span['name']=='inclusive-command-receive-parse-verify-commit-head']
+ sums={k:sum(span[k]for span in inclusive)for k in ['self_user_seconds','self_system_seconds','waited_child_user_seconds','waited_child_system_seconds']}
+ need(all(life[k]+0.000002>=v for k,v in sums.items()),'absolute native CPU below nonoverlapping command sum')
+ return {**life,'checked_nonoverlapping_inclusive_command_cpu_sums':sums,'nested_stage_cpu_not_added':True}
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--label',required=True);p.add_argument('--installation',type=Path,required=True);p.add_argument('--approve-installation',required=True);p.add_argument('--approve-source',required=True);p.add_argument('--build-label',required=True);p.add_argument('--approve-build',required=True);p.add_argument('--workload',type=Path,required=True);p.add_argument('--approve-workload',required=True);p.add_argument('--seconds',type=int,default=180);a=p.parse_args()
@@ -153,9 +162,9 @@ def main():
   need(all(str(state[k])==str(endpoint[k])for k in endpoint),'equal producer/destination endpoint')
   retained=oracle.retained(db);need(retained['bodies']==2*n and retained['missing_full']==retained['pending']==retained['unexported_bytes']==retained['archive_committed_bytes']==0 and retained['retention']==1 and retained['cached_bytes']==retained['full_bytes'],'complete charged retain obligation')
   results['retained']=retained;results['invalid_all_table_snapshot_unchanged']=True
-  v.request({'op':'stop'});receipts.append(v.finish());receipts.append(ar.finish(terminate=True))
+  v.request({'op':'stop'});vr=v.finish();receipts.append(vr);results['native_lifetime']=native_lifetime(vr);receipts.append(ar.finish(terminate=True))
   # Reopen in a fresh isolated process; no producer fixtures or cached verdicts supplied.
-  v=Role('validator-reopen',argv,2,env,validator,deadline,watch);roles.append(v);v.drain(lambda row:row.get('ready')is True);results['reopen']=v.request({'op':'open'});need(results['reopen']['error']is None and results['reopen']['result']['block_id']==state['block_id'],'fresh durable reopen');v.request({'op':'stop'});receipts.append(v.finish())
+  v=Role('validator-reopen',argv,2,env,validator,deadline,watch);roles.append(v);v.drain(lambda row:row.get('ready')is True);results['reopen']=v.request({'op':'open'});need(results['reopen']['error']is None and results['reopen']['result']['block_id']==state['block_id'],'fresh durable reopen');v.request({'op':'stop'});rr=v.finish();receipts.append(rr);results['native_reopen_lifetime']=native_lifetime(rr)
   pins();buildpins();common.load_installation(a.installation.resolve(),a.approve_installation);need(all(prepare.sha(p)==h for p,h in prepared['source_pins'].items()),'public source postcheck')
   results['passed']=True
  except BaseException as exc:

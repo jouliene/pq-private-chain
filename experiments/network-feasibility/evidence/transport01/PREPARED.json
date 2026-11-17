@@ -1,0 +1,50 @@
+{
+  "chain": "d83b4151f50b612365631660cdb1a06b7eb53d1f0d510dd5df2bf9e72f3331a5",
+  "endpoint": {
+    "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+    "fee_escrow": "8458046",
+    "height": "2",
+    "leaf_count": "8",
+    "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+    "unconsumed_liabilities": "0"
+  },
+  "format": "CP04-TRANSPORT-PREPARED01",
+  "objects": {
+    "funding": {
+      "bytes": 3503198,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/funding.frame",
+      "sha256": "5e03453665e3463a23d057b350c3d2099474c55c109a5f88d382db8102842276"
+    },
+    "genesis": {
+      "bytes": 5672,
+      "kind": 1,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/genesis.bin",
+      "sha256": "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5"
+    },
+    "invalid_last": {
+      "bytes": 3478552,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/invalid_last.frame",
+      "sha256": "d371659c565d9e144a8555835df134db2df133a4fded6c06c0706852d9180f90"
+    },
+    "ordinary": {
+      "bytes": 3478552,
+      "kind": 2,
+      "path": "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/transport/.work/diagnostic01/producer/ordinary.frame",
+      "sha256": "2c5e00b3ae1ca018df3b0150f92fe0435d68c1bfbdb977092cfdd901f8cd5a28"
+    }
+  },
+  "ordinary_count": 2,
+  "scope": "launcher-side construction/oracle outside measured roles; no cryptographic acceptance",
+  "source_pins": {
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/block001.header": "e449ca149f905ad2cc163c0edb39395a2eee5dfd2410d0e271c3c69c853a4b93",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/block002.header": "8ea7bc2cec6fec879ec9f01195551d696f5f2cbf5f42f71091ef566a19e3c0ec",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/credit000.body": "f50b734bde4a176e7ec36ac7c5c121fa9845f631af0a08d6dda46d995496336e",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/credit001.body": "a60c72a2262cb12931a0d8472c99f84d405c810ba41bedbda0ea662f6ec6789b",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/genesis.bin": "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/ordinary000.body": "be575600d6c88f351368be83b4e5fb55870ef66010dc766c420b3b7bdcfe9dcd",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/ordinary001.body": "c3cb1a4cb2c0189730b62cc56da3359a88adaa3a6ec3ef576831b684da486454",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/.work/diagnostic01.public/workload.json": "f10e50f5776ff2c48d8afbb58287192dee0a28aeb194a73e4111d5710d128b1d"
+  }
+}

@@ -136,3 +136,28 @@ ACK promises use ordinary file/directory fsync semantics on that provisioned
 local filesystem. Crash79 is a process-crash control, not a power-loss or faulty
 hardware experiment. Prepared source-frame durability is a separate producer
 obligation and is not inferred from an archive's ACK.
+
+
+## SOURCE02 measurement correction
+
+The real SOURCE01 diagnostic is retained in DIAGNOSTIC01.json and its exact
+source under freezes/source01/. It passed the functional controls with2 ordinary
+payments. Its observed bwrap leader wait4 CPU/RSS excluded the native validator;
+those wrapper totals must never be used as complete native resource costs.
+
+SOURCE02 adds a native terminal cumulative receipt after the command function
+returns and drops Ledger/providers. It reports absolute getrusage SELF and
+CHILDREN CPU, separate cumulative RSS peaks, self Linux I/O, block-I/O counters
+and actual CPU affinity. It includes startup and completed command-loop work up
+to sampling; final terminal JSON serialization/exit follows that sample. Its
+main-lifetime wall includes external-oracle idle and is not a service-time sum.
+The launcher still records bwrap's actual first wait4 but explicitly labels it
+wrapper-only, and requires a successful native terminal receipt/CPU2 from both
+the original validator and fresh reopen. Absolute native self/child CPU counters
+must each cover the sum of corresponding nonoverlapping inclusive command
+spans, allowing2microseconds for floating rounding. Nested stages are not added.
+Never sum cumulative RSS maxima.
+
+No protocol, canonical source, proof, acceptance or transport framing changed.
+Corrected SOURCE02 must be reviewed/built and pass diagnostic2 before a96-payment
+network campaign. Root's independent proof-generation allocation is separate.

@@ -1,0 +1,58 @@
+{
+  "anchors": {
+    "rows": 3,
+    "sha256": "9641805c5ffa784bcbae2a62283a974a348fa833bd8c5487f12b319cf9fdd587"
+  },
+  "archive_objects": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "archive_pending": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "archive_segments": {
+    "rows": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "blocks": {
+    "rows": 2,
+    "sha256": "bf50753ebf6009ea60d405a98fad47b46f39976715607908e2f90ded185f7e49"
+  },
+  "bodies": {
+    "rows": 4,
+    "sha256": "14ccad694f29282813cce9bf4ae23842c036738e49eb7b77b23ed91ccbd8a871"
+  },
+  "body_cache": {
+    "rows": 1,
+    "sha256": "5f96a477079c5d29f32d3c91c9789ce121538ab786ac2b16c218c3ed93139662"
+  },
+  "cores": {
+    "rows": 4,
+    "sha256": "06c21b048e3cf1900f5acfd902791aa02798c494df7b470744da33272a2e3b3d"
+  },
+  "leaves": {
+    "rows": 8,
+    "sha256": "df23e5a5204dced29a21d5a5502bfea1113b16d4fa4c59b7df5b7b2433821cc4"
+  },
+  "meta": {
+    "rows": 1,
+    "sha256": "9a083c10e851dbdecb98f7f9f3ed966a288aacb8870b32a85e445b6c21d19430"
+  },
+  "node_undo": {
+    "rows": 90,
+    "sha256": "176b103d82a9f8d1697eaeaa4fe00c5f45e5a985a05c59c01cd9a8597064b90b"
+  },
+  "nodes": {
+    "rows": 52,
+    "sha256": "f42f1e8665f9dd4d5648322b0b784c3af07c06c4576023ee8059c49401535460"
+  },
+  "nullifiers": {
+    "rows": 4,
+    "sha256": "6a939d46c0654d51ec019b3349c647e683d9f9baa1876203d65dfae18c175ea1"
+  },
+  "sources": {
+    "rows": 2,
+    "sha256": "489529fefa095aeabc54d3e5291deaad51f3053d6c0c9b908458272895d42486"
+  }
+}

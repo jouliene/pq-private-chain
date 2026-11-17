@@ -17,7 +17,7 @@ pub fn need(ok:bool,message:&str)->Result<()>{if !ok{return Err(message.to_strin
 fn unhex<const N:usize>(s:&str)->Result<[u8;N]>{need(s.len()==N*2&&s.bytes().all(|b|b.is_ascii_digit()||(b'a'..=b'f').contains(&b)),"canonical hex")?;let mut out=[0u8;N];for(i,b)in out.iter_mut().enumerate(){*b=u8::from_str_radix(&s[2*i..2*i+2],16)?;}Ok(out)}
 fn hex(b:&[u8])->String{b.iter().map(|x|format!("{x:02x}")).collect()}
 fn head(l:&Ledger)->Result<Value>{let h=l.head()?;let c=l.cache_usage()?;let a=l.verification_attempts();Ok(json!({"height":h.height,"block_id":hex(&h.id),"leaf_count":h.leaf_count,"root_le":hex(&h.root.iter().flat_map(|x|x.to_le_bytes()).collect::<Vec<_>>()),"fee_escrow":h.fees,"unconsumed_liabilities":h.liabilities,"cached_bytes":c.cached_bytes,"unexported_bytes":c.unexported_bytes,"archive_committed_bytes":c.archive_committed_bytes,"proof_attempts":a.proofs,"source_signature_attempts":a.source_signatures,"block_version":l.block_version(),"retention":format!("{:?}",c.policy.retention())}))}
-fn main()->Result<()>{
+fn run()->Result<()>{
     let args=std::env::args().collect::<Vec<_>>();need(args.len()==4,"validator DB CHAIN ARCHIVE_ADDRESS")?;
     let db=PathBuf::from(&args[1]);let chain=unhex::<32>(&args[2])?;let address=&args[3];let mut ledger:Option<Ledger>=None;
     println!("{}",json!({"ready":true,"pid":std::process::id(),"role":"validator","direct_fixture_paths":false}));std::io::stdout().flush()?;
@@ -60,4 +60,13 @@ fn main()->Result<()>{
         println!("{}",json!({"op":op,"result":result.as_ref().ok(),"error":result.as_ref().err().map(|e|e.to_string()),"stages":rows}));std::io::stdout().flush()?;
         if op=="stop"{break}
     }Ok(())
+}
+
+fn main()->Result<()>{
+    let start=std::time::Instant::now();
+    let result=run(); // All run-local Ledger/provider values are dropped first.
+    let terminal=metrics::lifetime(start)?;
+    println!("{}",json!({"native_terminal":true,"completed":result.is_ok(),"error":result.as_ref().err().map(|e|e.to_string()),"native_lifetime":terminal}));
+    std::io::stdout().flush()?;
+    result
 }

@@ -1,0 +1,42 @@
+{
+  "format": "NETWORK04-DIAGNOSTIC01-INDEPENDENT-READBACK",
+  "actual_result_sha256": "bf817793e9fac17adcf4128081fd35fb0661ad3a5d205395bfe96efe50520db9",
+  "decision": "Functional diagnostic2 PASS; full native process resource totals incomplete in source1; no96/Gate1 acceptance",
+  "reviewer_actual_readonly_checks": [
+    "All14 current producer/destination SQL tables equal except catalog_id using independent direct SQL",
+    "Four durable archive blobs exact size/SHA256; no partials",
+    "Exact proof counter2/4/6/6 and source-signature2 progression",
+    "All10 retained role terminal statuses and public stderr",
+    "Both link application-byte conservation including interruption/crash/retry"
+  ],
+  "private_inputs": false,
+  "independent_native_or_network_execution": false,
+  "application_bytes": {
+    "producer_sent": 14035020,
+    "producer_received": 208,
+    "archive_sent": 13944994,
+    "archive_received": 14035280,
+    "validator_sent": 260,
+    "validator_received": 13944786
+  },
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 4,
+    "cached_bytes": 6981022,
+    "full_bytes": 6981022,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "archive_final_bytes": 10465974,
+  "destination_database_bytes": 7159808,
+  "measurement_findings": [
+    "bwrap leader wait4 CPU0.002498s/RSS17376KiB excludes actual native total; do not use as full validator cost",
+    "Inclusive native spans meaningful but exclude startup/loop/final-drop overhead; source2 final self/children counters required",
+    "Native cumulative and waited-child RSS are maxima not simultaneous aggregate; keep sampled tree RSS separate",
+    "Archive crash counters_before_exit exclude in-progress request aggregate; explicit crash application bytes must be added exactly once"
+  ],
+  "namespace_evidence": "Read actual recorded5 forbidden-path checks/private PID namespace; did not repeat live probe after process termination",
+  "negative_atomicity_evidence": "Read reviewed actual all14 before/after equality assertion and actual Proof response; no duplicate rejection run"
+}

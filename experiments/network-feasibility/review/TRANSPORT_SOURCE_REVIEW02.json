@@ -1,0 +1,37 @@
+{
+  "format": "NETWORK04-TRANSPORT-SOURCE-REVIEW02",
+  "decision": "GO for Root-allocated corrected role build and diagnostic2; no heavy execution in this review",
+  "source_sha256": "813b0492ec01f2cb130e1cbd746b61eff5dd32bcc4608782be80cf823d06bace",
+  "previous_source_sha256": "a7f6efd64077d54d5adda35d77da50fae20420301c17f9c8a361bd79be35c24e",
+  "changed_files": [
+    "README.md",
+    "campaign.py",
+    "src/main.rs",
+    "src/metrics.rs"
+  ],
+  "exact_frozen_files_checked": 15,
+  "finding_resolved_in_source": "Native cumulative usage replaces bwrap leader metrics as native resource authority",
+  "checks": [
+    "run() returns and drops Ledger/provider before lifetime sample",
+    "Absolute native SELF and waited CHILDREN CPU and separate RSS/block IO recorded",
+    "Existing source-verifier children are waited before verify returns",
+    "Native self Linux IO excludes helper IO explicitly",
+    "Main lifetime wall includes oracle idle and is not service time",
+    "Final receipt serialization/exit after sample explicitly excluded",
+    "Actual native CPU affinity2 and single successful terminal required for original/reopen processes",
+    "Each cumulative CPU field dominates sum nonoverlapping inclusive command fields within2microseconds; no nested-stage addition",
+    "Wrapper wait4 retained separately; cumulative RSS never summed",
+    "No canonical/proof/transport-framing change; all other source1 file hashes unchanged"
+  ],
+  "independent_execution": [
+    "Frozen source hashing",
+    "Python AST and complete4-file source delta review"
+  ],
+  "native_execution": false,
+  "remaining": [
+    "Actual build closure/default features/runtime pins",
+    "Corrected diagnostic2 native terminal self/children and consistency gates",
+    "Full96 network result before Gate1/resource decision"
+  ],
+  "material_unresolved_findings": []
+}

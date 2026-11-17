@@ -1,0 +1,94 @@
+{
+  "actual_controls": {
+    "all14_equal_excluding_local_catalog_id": true,
+    "late_invalid_actual_Proof_all14_unchanged": true,
+    "passed": true,
+    "physical_proof_attempts": 6,
+    "pid_namespace_and_five_hidden_files": {
+      "actual_namespace_hidden_file_checks": 5,
+      "actual_validator_host_pid": 2318528,
+      "destination_argv_has_no_fixture_paths": true,
+      "private_pid_namespace": true,
+      "producer_fixtures_database_and_archive_subtrees_masked": true,
+      "validator_namespace_pid": 2
+    },
+    "retention": {
+      "archive_committed_bytes": 0,
+      "bodies": 4,
+      "cached_bytes": 6981022,
+      "full_bytes": 6981022,
+      "missing_full": 0,
+      "pending": 0,
+      "retention": 1,
+      "unexported_bytes": 0
+    },
+    "source_signature_attempts": 2
+  },
+  "build_sha256": "b7ac77f4812b776127ee264cc3838ed3be08facbac9d280a79563d310a479685",
+  "classification": "Actual two-ordinary/four-genuine-proof diagnostic; not96-payment Gate1 acceptance, WAN or yearly capacity",
+  "finite_storage": {
+    "archive:2318511": {
+      "allocated_bytes": 3506176,
+      "files": 1,
+      "logical_bytes": 3503198
+    },
+    "archive:2318516": {
+      "allocated_bytes": 10477568,
+      "files": 4,
+      "logical_bytes": 10465974
+    },
+    "validator:2318526": {
+      "allocated_bytes": 7159808,
+      "files": 1,
+      "logical_bytes": 7159808
+    }
+  },
+  "format": "CP04-TRANSPORT-DIAGNOSTIC01-SUMMARY",
+  "measurement_limitation": "bwrap leader wait4 CPU/RSS are wrapper-only in this actual PID namespace execution. Native spans measure real self/waited helper work and cumulative peaks; external sampled tree RSS may miss short peaks. Full native terminal cumulative CPU/IO/RSS must be added before complete-role resource claims. Inclusive command spans overlap their nested calls; process wall includes external-oracle idle waits.",
+  "native_apply_stages": [
+    {
+      "admit_durable_retain_wall_seconds": 0.188899763,
+      "application_received": 3503250,
+      "application_sent": 52,
+      "candidate": "funding",
+      "error": null,
+      "inclusive_command_wall_seconds": 0.587527753,
+      "parse_copy_wall_seconds": 0.02213817,
+      "receive_identity_wall_seconds": 0.375802856
+    },
+    {
+      "admit_durable_retain_wall_seconds": 0.077777572,
+      "application_received": 3478604,
+      "application_sent": 52,
+      "candidate": "invalid",
+      "error": "Proof",
+      "inclusive_command_wall_seconds": 0.470950688,
+      "parse_copy_wall_seconds": 0.020904192,
+      "receive_identity_wall_seconds": 0.371833468
+    },
+    {
+      "admit_durable_retain_wall_seconds": 0.109247545,
+      "application_received": 3478604,
+      "application_sent": 52,
+      "candidate": "ordinary",
+      "error": null,
+      "inclusive_command_wall_seconds": 0.509054222,
+      "parse_copy_wall_seconds": 0.022216054,
+      "receive_identity_wall_seconds": 0.376955506
+    },
+    {
+      "admit_durable_retain_wall_seconds": null,
+      "application_received": 3478604,
+      "application_sent": 52,
+      "candidate": "retry",
+      "error": null,
+      "inclusive_command_wall_seconds": 0.39843492,
+      "parse_copy_wall_seconds": 0.021163441,
+      "receive_identity_wall_seconds": 0.375198559
+    }
+  ],
+  "next_gate": "Root independent result readback; reviewed minimal measurement correction; then96-proof workload only on separate allocation.",
+  "raw_result_sha256": "bf817793e9fac17adcf4128081fd35fb0661ad3a5d205395bfe96efe50520db9",
+  "source_sha256": "a7f6efd64077d54d5adda35d77da50fae20420301c17f9c8a361bd79be35c24e",
+  "workload_sha256": "f10e50f5776ff2c48d8afbb58287192dee0a28aeb194a73e4111d5710d128b1d"
+}

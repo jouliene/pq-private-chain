@@ -1,0 +1,13 @@
+[package]
+name = "cp04-network-role01"
+version = "0.1.0"
+edition = "2024"
+publish = false
+[workspace]
+resolver = "2"
+[dependencies]
+ledger-cp03 = { path = "../../../source/crates/ledger-cp03" }
+cp03-history = { package = "cp03-bounded-history-codec", path = "../../../source/crates/ledger-cp03/adapters/history" }
+serde_json = "=1.0.154"
+sha2 = "=0.11.1"
+libc = "=0.2.191"

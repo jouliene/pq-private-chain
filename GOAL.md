@@ -24,3 +24,9 @@ All six final directive criteria are mandatory. Full consensus/issuance, tokens,
 swaps, VM/UI, mnemonic design and compulsory cell-format migration are outside
 this milestone. No component or finite test establishes the missing joint
 PQ/privacy theorem or production readiness. No owner annual traffic cap exists.
+
+Checkpoint2026-11-17: new Network04 core/compatibility and actual four-proof
+diagnostic plus separate-process count2functional path passed. Native lifetime
+resource correction is source-reviewed;96ordinary+96credit generation is active.
+None of the six final acceptance criteria is yet closed. Resume from STATUS.md
+and the live job receipt; preserve these intermediate outcomes and limitations.
