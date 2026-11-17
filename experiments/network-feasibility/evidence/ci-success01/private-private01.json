@@ -1,0 +1,39 @@
+{
+  "actual_process": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+      "--disable-sigusr1",
+      "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/wallet/cp03/cycle.mjs",
+      "fresh/operator.json",
+      "9c24076cf5634902d42d701d4803aa3ca85bff13620b72c41bfa2332d0b9afed",
+      "private01"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 168304,
+    "process_exit": 0,
+    "system_seconds": 1.215748,
+    "timeout": false,
+    "user_seconds": 12.37884,
+    "wall_seconds": 13.679360146000022,
+    "wrapper_exit": 0
+  },
+  "endpoint_dependency": "independently supplied local validating endpoint; no consensus implementation",
+  "fixed_source_failure_stage": null,
+  "format": "CP03-PUBLIC-PRIVATE-SMOKE01",
+  "membership_dependency": "local public Ledger; owned-note indices are queried locally",
+  "passed": true,
+  "private_input_or_raw_output_persisted_or_hashed": false,
+  "public_workload": "/home/runner/work/pq-private-chain/pq-private-chain/.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/workload.json",
+  "result": {
+    "format": "CP03-FRESH-PRIVATE-REPRO01",
+    "fresh_backup_only_restore_and_admitted_spend": true,
+    "genuine_proofs_created": 3,
+    "private_credit_payment_receipt": true,
+    "production_ready": false,
+    "resource_profile_pass": false,
+    "whole_protocol_pq_privacy_theorem": false
+  },
+  "source_runtime_unchanged": true
+}

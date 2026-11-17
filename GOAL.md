@@ -156,3 +156,10 @@ Checkpoint2026-11-17 14:34UTC: actual hosted environment44103979712 PASS, ordina
 UID1001 and exact runtime with unchanged inner true/Node. Full automatic smoke is
 now allocated on the reviewed workflow. This is still criterion6 in progress;
 no complete payment CI result or release completion is claimed yet.
+
+Checkpoint2026-11-17 14:40UTC: full automatic push CI44104449760 PASS at exact
+38dd77160f48344c81d7c3a6cc32014b1f8a60f7. Fresh build, five-proof isolated recovery
+cycle, public rejection checks and three-proof legacy cycle all completed. Root
+read actual fixed results and reconciled distinct inner/outer installation IDs.
+Final independent receipt review/public release readback remain criterion6; all
+older failures preserved. Global native Goal remains ACTIVE.

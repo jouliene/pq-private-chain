@@ -1,0 +1,145 @@
+{
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 22828,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.00198,
+    "user_seconds": 0.0,
+    "wall_seconds": 3.518043626000008
+  },
+  "boundary": {
+    "actual_node_host_pid": 124,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "controller_number_classification": "absent",
+      "controller_number_pid_namespace": null,
+      "controller_pid": 11,
+      "controller_pid_namespace": "pid:[4026532328]",
+      "controller_proc_namespace_excluded": true,
+      "denied_paths": 2,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "procfs_pid_namespace": "pid:[4026532310]",
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 2,
+    "namespaces": {
+      "mnt": "mnt:[4026532306]",
+      "net": "net:[4026532312]",
+      "pid": "pid:[4026532310]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "fixed_failure_stage": null,
+  "passed": true,
+  "restore": true,
+  "sampling": {
+    "complete_same_pid_policy_after_permission": 0,
+    "confirmed_permission_exit_races": 0,
+    "epochs": 58,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 292616,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 1476,
+        "first_seconds": 0.10453293700004451,
+        "host_pid": 124,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 28,
+          "reaped_child_user": 190,
+          "self_system": 4,
+          "self_user": 10
+        },
+        "last_seconds": 3.5086013200000252,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 117380,
+        "samples": 58,
+        "starttime_ticks": 91230
+      },
+      {
+        "fd_identity_checks": 170,
+        "first_seconds": 0.7808277180000687,
+        "host_pid": 158,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 3,
+          "reaped_child_user": 119,
+          "self_system": 22,
+          "self_user": 65
+        },
+        "last_seconds": 2.8616463859999612,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 35,
+        "peak_sampled_rss_kib": 158000,
+        "samples": 35,
+        "starttime_ticks": 91299
+      },
+      {
+        "fd_identity_checks": 63,
+        "first_seconds": 1.3919831660000455,
+        "host_pid": 159,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 3,
+          "self_user": 118
+        },
+        "last_seconds": 2.6176004960000228,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 36,
+        "peak_sampled_rss_kib": 164348,
+        "samples": 21,
+        "starttime_ticks": 91365
+      }
+    ],
+    "permission_exit_evidence_first64": [],
+    "permission_retry_wall_seconds": 0.0,
+    "raced_exits": 0,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  },
+  "terminal_cpu": {
+    "actual_node_host_pid": 124,
+    "clock_ticks_per_second": 100,
+    "node_self_seconds": 0.14,
+    "node_waited_descendant_seconds": 2.18,
+    "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+    "starttime_ticks": 91230,
+    "ticks": {
+      "reaped_child_system": 28,
+      "reaped_child_user": 190,
+      "self_system": 4,
+      "self_user": 10
+    }
+  },
+  "terminal_metrics": {
+    "counts": {
+      "history_bytes": 29806,
+      "history_reads": 1,
+      "history_wall_seconds": 0.04742513500000007,
+      "proofs": 1
+    },
+    "format": "CP04-ISOLATED-WALLET-DONE01",
+    "private_material_persisted_or_hashed": false,
+    "process_self": {
+      "fsRead": 0,
+      "fsWrite": 3408,
+      "involuntaryContextSwitches": 279,
+      "maxRSS": 117280,
+      "systemCPUTime": 47689,
+      "userCPUTime": 107300,
+      "voluntaryContextSwitches": 442
+    },
+    "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+    "restore": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "accepted_payment_wallet_execution_revision": "a9357c27d7458277b80b78ac887696a9ea9a99a8",
+  "automatic_ci_revision": "38dd77160f48344c81d7c3a6cc32014b1f8a60f7",
+  "scope": "Git path correspondence plus exact source manifest identity; no claim that distinct CI installation binaries equal earlier local binaries",
+  "manifests": {
+    "CORE_MANIFEST.json": {
+      "sha256": "1b9888399a91102b84f05970ce65100d77a0a8a56519c35b13cbb8deb915a1aa",
+      "files": 5793,
+      "changed_paths": []
+    },
+    "experiments/network-feasibility/wallet-integration/SOURCE.json": {
+      "sha256": "be2910ea2ef974bb87778b0b8e605f299bdc44b9987afecddcc86df4b63eaaa8",
+      "files": 7,
+      "changed_paths": []
+    },
+    "experiments/network-feasibility/wallet-integration/PUBLIC_REPLAY_SOURCE.json": {
+      "sha256": "4c767420e675de473fbbc4006338d3ce070dc496372d8b9181e63ba4ba1d90c6",
+      "files": 3,
+      "changed_paths": []
+    }
+  },
+  "later_executable_changes": [
+    ".github/workflows/environment-probe.yml",
+    ".github/workflows/smoke.yml",
+    "experiments/network-feasibility/wallet-integration/ci_preflight.py",
+    "scripts/ci_noble.sh"
+  ]
+}

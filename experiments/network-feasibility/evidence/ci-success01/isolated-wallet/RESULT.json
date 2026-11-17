@@ -1,0 +1,941 @@
+{
+  "accounting": {
+    "fees": 10570146,
+    "liabilities": 0,
+    "remaining_note_supply_by_conservation": 1089429854,
+    "total": 1100000000
+  },
+  "actors": [
+    {
+      "actual_wrapper": {
+        "exit": 0,
+        "first_wait4": true,
+        "maxrss_kib": 22716,
+        "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+        "system_seconds": 0.002006,
+        "user_seconds": 0.0,
+        "wall_seconds": 12.683814220000045
+      },
+      "boundary": {
+        "actual_node_host_pid": 14,
+        "approved_node_executable_inode_matched": true,
+        "denied_database_fds_passed_to_wallet": 0,
+        "descendant": {
+          "controller_number_classification": "absent",
+          "controller_number_pid_namespace": null,
+          "controller_pid": 11,
+          "controller_pid_namespace": "pid:[4026532328]",
+          "controller_proc_namespace_excluded": true,
+          "denied_paths": 2,
+          "denied_socket_families": [
+            2,
+            10,
+            1
+          ],
+          "inherited_fd_identity_checks": 3,
+          "pid": 8,
+          "procfs_pid_namespace": "pid:[4026532311]",
+          "seccomp": "2"
+        },
+        "inheritable_denied_fds_in_controller": 1,
+        "namespaces": {
+          "mnt": "mnt:[4026532308]",
+          "net": "net:[4026532312]",
+          "pid": "pid:[4026532311]"
+        },
+        "reported_namespace_pid": 2
+      },
+      "fixed_failure_stage": null,
+      "passed": true,
+      "restore": false,
+      "sampling": {
+        "complete_same_pid_policy_after_permission": 0,
+        "confirmed_permission_exit_races": 0,
+        "epochs": 210,
+        "interval_seconds": 0.05,
+        "maximum_sampled_tree_rss_kib": 325832,
+        "observed_processes": [
+          {
+            "fd_identity_checks": 5446,
+            "first_seconds": 0.11347254200006773,
+            "host_pid": 14,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 106,
+              "reaped_child_user": 733,
+              "self_system": 10,
+              "self_user": 31
+            },
+            "last_seconds": 12.677085232000081,
+            "name": "MainThread",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 2,
+            "peak_sampled_rss_kib": 128008,
+            "samples": 210,
+            "starttime_ticks": 89962
+          },
+          {
+            "fd_identity_checks": 163,
+            "first_seconds": 0.6902561880000349,
+            "host_pid": 33,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 4,
+              "reaped_child_user": 116,
+              "self_system": 19,
+              "self_user": 62
+            },
+            "last_seconds": 2.7178733920000013,
+            "name": "python3.12",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 20,
+            "peak_sampled_rss_kib": 158084,
+            "samples": 34,
+            "starttime_ticks": 90024
+          },
+          {
+            "fd_identity_checks": 60,
+            "first_seconds": 1.3010513400000718,
+            "host_pid": 34,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 0,
+              "reaped_child_user": 0,
+              "self_system": 3,
+              "self_user": 114
+            },
+            "last_seconds": 2.472577225000009,
+            "name": "compact-all-pay",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 21,
+            "peak_sampled_rss_kib": 164328,
+            "samples": 20,
+            "starttime_ticks": 90086
+          },
+          {
+            "fd_identity_checks": 163,
+            "first_seconds": 2.835827272000074,
+            "host_pid": 42,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 3,
+              "reaped_child_user": 117,
+              "self_system": 20,
+              "self_user": 61
+            },
+            "last_seconds": 4.866853384000024,
+            "name": "python3.12",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 29,
+            "peak_sampled_rss_kib": 158000,
+            "samples": 34,
+            "starttime_ticks": 90239
+          },
+          {
+            "fd_identity_checks": 60,
+            "first_seconds": 3.4489006450000943,
+            "host_pid": 43,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 0,
+              "reaped_child_user": 0,
+              "self_system": 3,
+              "self_user": 115
+            },
+            "last_seconds": 4.6216743109999925,
+            "name": "compact-all-pay",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 30,
+            "peak_sampled_rss_kib": 164292,
+            "samples": 20,
+            "starttime_ticks": 90301
+          },
+          {
+            "fd_identity_checks": 4,
+            "first_seconds": 6.134054262000063,
+            "host_pid": 66,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 0,
+              "reaped_child_user": 0,
+              "self_system": 0,
+              "self_user": 0
+            },
+            "last_seconds": 6.134788178999997,
+            "name": "3",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 39,
+            "peak_sampled_rss_kib": 2248,
+            "samples": 1,
+            "starttime_ticks": 90571
+          },
+          {
+            "fd_identity_checks": 164,
+            "first_seconds": 6.195002045000024,
+            "host_pid": 78,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 3,
+              "reaped_child_user": 117,
+              "self_system": 20,
+              "self_user": 59
+            },
+            "last_seconds": 8.22035821899999,
+            "name": "python3.12",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 51,
+            "peak_sampled_rss_kib": 157984,
+            "samples": 34,
+            "starttime_ticks": 90577
+          },
+          {
+            "fd_identity_checks": 57,
+            "first_seconds": 6.866203771000073,
+            "host_pid": 79,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 0,
+              "reaped_child_user": 0,
+              "self_system": 2,
+              "self_user": 113
+            },
+            "last_seconds": 7.975873026000045,
+            "name": "compact-all-pay",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 52,
+            "peak_sampled_rss_kib": 165792,
+            "samples": 19,
+            "starttime_ticks": 90639
+          },
+          {
+            "fd_identity_checks": 167,
+            "first_seconds": 9.487748871999997,
+            "host_pid": 112,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 5,
+              "reaped_child_user": 117,
+              "self_system": 22,
+              "self_user": 66
+            },
+            "last_seconds": 11.577231383000026,
+            "name": "python3.12",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 83,
+            "peak_sampled_rss_kib": 157992,
+            "samples": 35,
+            "starttime_ticks": 90902
+          },
+          {
+            "fd_identity_checks": 60,
+            "first_seconds": 10.101970294000012,
+            "host_pid": 113,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 0,
+              "reaped_child_user": 0,
+              "self_system": 4,
+              "self_user": 114
+            },
+            "last_seconds": 11.270640546000095,
+            "name": "compact-all-pay",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 84,
+            "peak_sampled_rss_kib": 164324,
+            "samples": 20,
+            "starttime_ticks": 90966
+          }
+        ],
+        "permission_exit_evidence_first64": [],
+        "permission_retry_wall_seconds": 0.0,
+        "raced_exits": 1,
+        "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+      },
+      "terminal_cpu": {
+        "actual_node_host_pid": 14,
+        "clock_ticks_per_second": 100,
+        "node_self_seconds": 0.41,
+        "node_waited_descendant_seconds": 8.39,
+        "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+        "starttime_ticks": 89962,
+        "ticks": {
+          "reaped_child_system": 106,
+          "reaped_child_user": 733,
+          "self_system": 10,
+          "self_user": 31
+        }
+      },
+      "terminal_metrics": {
+        "counts": {
+          "history_bytes": 73790,
+          "history_reads": 3,
+          "history_wall_seconds": 0.10201735800000006,
+          "proofs": 4
+        },
+        "format": "CP04-ISOLATED-WALLET-DONE01",
+        "private_material_persisted_or_hashed": false,
+        "process_self": {
+          "fsRead": 0,
+          "fsWrite": 13736,
+          "involuntaryContextSwitches": 780,
+          "maxRSS": 127960,
+          "systemCPUTime": 105238,
+          "userCPUTime": 313711,
+          "voluntaryContextSwitches": 1238
+        },
+        "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+        "restore": false
+      }
+    },
+    {
+      "actual_wrapper": {
+        "exit": 0,
+        "first_wait4": true,
+        "maxrss_kib": 22828,
+        "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+        "system_seconds": 0.00198,
+        "user_seconds": 0.0,
+        "wall_seconds": 3.518043626000008
+      },
+      "boundary": {
+        "actual_node_host_pid": 124,
+        "approved_node_executable_inode_matched": true,
+        "denied_database_fds_passed_to_wallet": 0,
+        "descendant": {
+          "controller_number_classification": "absent",
+          "controller_number_pid_namespace": null,
+          "controller_pid": 11,
+          "controller_pid_namespace": "pid:[4026532328]",
+          "controller_proc_namespace_excluded": true,
+          "denied_paths": 2,
+          "denied_socket_families": [
+            2,
+            10,
+            1
+          ],
+          "inherited_fd_identity_checks": 3,
+          "pid": 8,
+          "procfs_pid_namespace": "pid:[4026532310]",
+          "seccomp": "2"
+        },
+        "inheritable_denied_fds_in_controller": 2,
+        "namespaces": {
+          "mnt": "mnt:[4026532306]",
+          "net": "net:[4026532312]",
+          "pid": "pid:[4026532310]"
+        },
+        "reported_namespace_pid": 2
+      },
+      "fixed_failure_stage": null,
+      "passed": true,
+      "restore": true,
+      "sampling": {
+        "complete_same_pid_policy_after_permission": 0,
+        "confirmed_permission_exit_races": 0,
+        "epochs": 58,
+        "interval_seconds": 0.05,
+        "maximum_sampled_tree_rss_kib": 292616,
+        "observed_processes": [
+          {
+            "fd_identity_checks": 1476,
+            "first_seconds": 0.10453293700004451,
+            "host_pid": 124,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 28,
+              "reaped_child_user": 190,
+              "self_system": 4,
+              "self_user": 10
+            },
+            "last_seconds": 3.5086013200000252,
+            "name": "MainThread",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 2,
+            "peak_sampled_rss_kib": 117380,
+            "samples": 58,
+            "starttime_ticks": 91230
+          },
+          {
+            "fd_identity_checks": 170,
+            "first_seconds": 0.7808277180000687,
+            "host_pid": 158,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 3,
+              "reaped_child_user": 119,
+              "self_system": 22,
+              "self_user": 65
+            },
+            "last_seconds": 2.8616463859999612,
+            "name": "python3.12",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 35,
+            "peak_sampled_rss_kib": 158000,
+            "samples": 35,
+            "starttime_ticks": 91299
+          },
+          {
+            "fd_identity_checks": 63,
+            "first_seconds": 1.3919831660000455,
+            "host_pid": 159,
+            "last_observed_cpu_ticks": {
+              "reaped_child_system": 0,
+              "reaped_child_user": 0,
+              "self_system": 3,
+              "self_user": 118
+            },
+            "last_seconds": 2.6176004960000228,
+            "name": "compact-all-pay",
+            "namespace_fd_mount_seccomp_pass": true,
+            "namespace_pid": 36,
+            "peak_sampled_rss_kib": 164348,
+            "samples": 21,
+            "starttime_ticks": 91365
+          }
+        ],
+        "permission_exit_evidence_first64": [],
+        "permission_retry_wall_seconds": 0.0,
+        "raced_exits": 0,
+        "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+      },
+      "terminal_cpu": {
+        "actual_node_host_pid": 124,
+        "clock_ticks_per_second": 100,
+        "node_self_seconds": 0.14,
+        "node_waited_descendant_seconds": 2.18,
+        "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+        "starttime_ticks": 91230,
+        "ticks": {
+          "reaped_child_system": 28,
+          "reaped_child_user": 190,
+          "self_system": 4,
+          "self_user": 10
+        }
+      },
+      "terminal_metrics": {
+        "counts": {
+          "history_bytes": 29806,
+          "history_reads": 1,
+          "history_wall_seconds": 0.04742513500000007,
+          "proofs": 1
+        },
+        "format": "CP04-ISOLATED-WALLET-DONE01",
+        "private_material_persisted_or_hashed": false,
+        "process_self": {
+          "fsRead": 0,
+          "fsWrite": 3408,
+          "involuntaryContextSwitches": 279,
+          "maxRSS": 117280,
+          "systemCPUTime": 47689,
+          "userCPUTime": 107300,
+          "voluntaryContextSwitches": 442
+        },
+        "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+        "restore": true
+      }
+    }
+  ],
+  "all_generated_proofs_positive_native_admission": true,
+  "controller_process_self": {
+    "maxrss_kib": 34144,
+    "scope": "Controller Python SELF only; excludes native CLI and isolated wallet descendants",
+    "system_seconds": 0.256594,
+    "user_seconds": 0.9011089999999999
+  },
+  "events": [
+    {
+      "op": "boundary",
+      "restore": false,
+      "seconds": 0.11430168699996557
+    },
+    {
+      "actual_new_ledger_exists_and_wallet_denied": true,
+      "op": "init",
+      "restore": false,
+      "seconds": 0.1489026770000237
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 2.773040501999958
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 4.927611576000004
+    },
+    {
+      "height": "1",
+      "op": "admit",
+      "proof_bodies": 2,
+      "restore": false,
+      "seconds": 4.93491359799998
+    },
+    {
+      "bytes": 19366,
+      "height": "1",
+      "op": "scan",
+      "restore": false,
+      "seconds": 5.613781085000028
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 8.290470306999964
+    },
+    {
+      "height": "2",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 8.297153805999983
+    },
+    {
+      "bytes": 24618,
+      "height": "2",
+      "op": "scan",
+      "restore": false,
+      "seconds": 8.838768232000007
+    },
+    {
+      "name": "joint-lease-and-packet-controls",
+      "op": "mark",
+      "restore": false,
+      "seconds": 9.410861842000031
+    },
+    {
+      "name": "genuine-private-receipt-and-local-witnesses",
+      "op": "mark",
+      "restore": false,
+      "seconds": 9.41096310499995
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 11.619059816999993
+    },
+    {
+      "height": "3",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 11.62942207399999
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": false,
+      "seconds": 12.16852803200004
+    },
+    {
+      "name": "recipient-fresh-local-witness-spend",
+      "op": "mark",
+      "restore": false,
+      "seconds": 12.680372515000045
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": false,
+      "seconds": 12.680634138999949
+    },
+    {
+      "op": "boundary",
+      "restore": true,
+      "seconds": 12.791335459000038
+    },
+    {
+      "op": "context",
+      "restore": true,
+      "seconds": 12.804645286999971
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": true,
+      "seconds": 12.818291592000037
+    },
+    {
+      "op": "proof",
+      "restore": true,
+      "seconds": 15.59064885500004
+    },
+    {
+      "height": "4",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": true,
+      "seconds": 15.598073159000023
+    },
+    {
+      "name": "backup-only-new-process-spend",
+      "op": "mark",
+      "restore": true,
+      "seconds": 16.196119180999972
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": true,
+      "seconds": 16.19659501800004
+    }
+  ],
+  "final_all14_snapshot": {
+    "anchors": {
+      "rows": 5,
+      "sha256": "af3a07193d8bcc24b1e801bdfcb2759a894e625aaf991f91702c9be8707d4080"
+    },
+    "archive_objects": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_pending": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_segments": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "blocks": {
+      "rows": 4,
+      "sha256": "ee970be690838012804bd9ad1955ef5f5e53817783b2af4d15b3d982476cfe67"
+    },
+    "bodies": {
+      "rows": 5,
+      "sha256": "1cbe5d7ae4f6589c1a1911a4ea190035530c89d1927e012f74addf1d0ad39c4a"
+    },
+    "body_cache": {
+      "rows": 1,
+      "sha256": "1488dc686c476bcd2fef4feef353186646b514cd2d2a03cd88cfbc88b97671ee"
+    },
+    "cores": {
+      "rows": 5,
+      "sha256": "da43bf097e2bbbffaf421463a609998b3184010d790e08bb7d3bd8541eaa0727"
+    },
+    "leaves": {
+      "rows": 10,
+      "sha256": "f598dc33514d3805ea4e400dad0875cb344360f351382eacc4c02d7fd0edc7fe"
+    },
+    "meta": {
+      "rows": 1,
+      "sha256": "d67cde060da268f8454cac2e4fae4e5b8f779e7d8950fd9383a921a4a7837785"
+    },
+    "node_undo": {
+      "rows": 171,
+      "sha256": "ab71283af30cd88374f48ae040089cffa6c1a9451b9f46254d8a01718249cf13"
+    },
+    "nodes": {
+      "rows": 57,
+      "sha256": "006514de62d0ba1632fbcd6e07c1fef9276a8b113f74b16890d995f06e6df475"
+    },
+    "nullifiers": {
+      "rows": 4,
+      "sha256": "fef5a32bc30a697e947ea9a56a7184f8c1fd86142904f9954408e39680df4a9e"
+    },
+    "sources": {
+      "rows": 2,
+      "sha256": "8d2ab38863c4d420139b57aeec5873664ac4aa71764aa5e6f07b07868ddaad6c"
+    }
+  },
+  "format": "CP04-WALLET-INTEGRATION-RESULT01",
+  "head": {
+    "block_id": "6fb363a66fdf895389d1448ba4c18250be8566ebc16f2dd1ef2cdeb52329e0bbed2bd9b6d1ae1e154d67c23c10623c121bc38e771b02ce52b568167aea270c7d",
+    "block_version": "4",
+    "chain": "c39ad7d20944f152522ca1538df610fe354e285000f2747659d458c342f34561",
+    "fee_escrow": "10570146",
+    "genesis_id": "3907964da276a4a544aa93c38bfd5b1c2282ab426a876e078ddba70451c69a9482fb8ae7e4008de1129e6f15bf39a31bd25aac5f58a134ff37b0902a758f16d8",
+    "height": "4",
+    "leaf_count": "10",
+    "root_le": "ba371f46ecc2253050bed9a2907ed28cda666e72205ca6668af542a40b5ac859877201fe59c753eba94fabcd1fc2140626a82f6d418748ae6decfbe29cad646d",
+    "schema": "CP03-LEDGER-CLI-01",
+    "unconsumed_liabilities": "0"
+  },
+  "installation_sha256": "34c08fa5fc82470f70e80537b08ae4922e654bc697b4ac94df6b3272976e8337",
+  "native_cli": [
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 63008,
+      "operation": "init-retain",
+      "public_result_validated": true,
+      "system_seconds": 0.018992,
+      "user_seconds": 0.45780899999999997,
+      "wall_seconds": 0.48149075999992874
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 75880,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.031876,
+      "user_seconds": 0.581021,
+      "wall_seconds": 0.6689861450000762
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 65340,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.013016,
+      "user_seconds": 0.46458099999999997,
+      "wall_seconds": 0.4813608499999873
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 74808,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.028036,
+      "user_seconds": 0.49665,
+      "wall_seconds": 0.5372131579999859
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 65336,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.024,
+      "user_seconds": 0.45901699999999995,
+      "wall_seconds": 0.4869145660001095
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 74940,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.021976,
+      "user_seconds": 0.500458,
+      "wall_seconds": 0.5345833579999635
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 67256,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.023016,
+      "user_seconds": 0.454316,
+      "wall_seconds": 0.48240152999994734
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 67260,
+      "operation": "scan",
+      "public_result_validated": true,
+      "system_seconds": 0.02002,
+      "user_seconds": 0.482498,
+      "wall_seconds": 0.5064609450000717
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 76736,
+      "operation": "admit",
+      "public_result_validated": true,
+      "system_seconds": 0.031024,
+      "user_seconds": 0.513411,
+      "wall_seconds": 0.5934535679999726
+    },
+    {
+      "binary_after_checked": true,
+      "binary_before_checked": true,
+      "cpu": 1,
+      "exit": 0,
+      "first_wait4": true,
+      "maxrss_kib": 64840,
+      "operation": "head",
+      "public_result_validated": true,
+      "system_seconds": 0.025005,
+      "user_seconds": 0.483103,
+      "wall_seconds": 0.511291486999994
+    }
+  ],
+  "no_private_backup_or_stream_written_or_hashed": true,
+  "passed": true,
+  "private_raw_streams_or_backup_persisted_or_hashed": false,
+  "profile": "small",
+  "proofs": [
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.2326359410000123,
+        "wait4_maxrss_kib": 168296,
+        "wait4_system_seconds": 0.044013,
+        "wait4_user_seconds": 1.165353
+      },
+      "actual_worker_namespace_pid": 21,
+      "approved_identities": {
+        "approved_runtime_digest": "35e173ea07e3b62b5edec0347b7d2d3c936c759e46910227853c81fcfb43cb79",
+        "approved_runtime_receipt_sha256": "38a1fb2b6cd257029d6c39660d19c13ef89d0ee83f1213c1c23861a08d45a48f",
+        "binary_sha256": "af9aab7a10b117c0ac7661059803394a5c348f4a8a6379ec25d766c9964ccaad",
+        "manifest_sha256": "48fe22d58123fd9052fb05770a4a07cbe22b656cb8bc4bbd22b6978619075751"
+      },
+      "arity": 0,
+      "body": "public-output/credit-0.body",
+      "body_bytes": 1758809,
+      "body_sha256": "12c294051704e300aa42ddbf56e17d0929865840cc4eb684a72827dd2ec06b9a",
+      "label": "credit-0",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/ci-wallet01-credit-0.json",
+      "parent_receipt_sha256": "9fb05b4726154c5574303a9b546aa680afe7235e2fc58a6c9fa339d21a7d81ce",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1749386,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.233341436000046,
+        "wait4_maxrss_kib": 168172,
+        "wait4_system_seconds": 0.033752,
+        "wait4_user_seconds": 1.176211
+      },
+      "actual_worker_namespace_pid": 30,
+      "approved_identities": {
+        "approved_runtime_digest": "35e173ea07e3b62b5edec0347b7d2d3c936c759e46910227853c81fcfb43cb79",
+        "approved_runtime_receipt_sha256": "38a1fb2b6cd257029d6c39660d19c13ef89d0ee83f1213c1c23861a08d45a48f",
+        "binary_sha256": "af9aab7a10b117c0ac7661059803394a5c348f4a8a6379ec25d766c9964ccaad",
+        "manifest_sha256": "48fe22d58123fd9052fb05770a4a07cbe22b656cb8bc4bbd22b6978619075751"
+      },
+      "arity": 0,
+      "body": "public-output/credit-1.body",
+      "body_bytes": 1747353,
+      "body_sha256": "264ffb85982fe88b5ed195b2b4580358e3ad7a77b162b3950f368c050d0c7d2b",
+      "label": "credit-1",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/ci-wallet01-credit-1.json",
+      "parent_receipt_sha256": "2c2d491e75047e8445d17e8ddc6b78a7b1ff01d3561411b2ba13593d66525f23",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1737930,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.230217519000007,
+        "wait4_maxrss_kib": 168304,
+        "wait4_system_seconds": 0.036375,
+        "wait4_user_seconds": 1.170693
+      },
+      "actual_worker_namespace_pid": 52,
+      "approved_identities": {
+        "approved_runtime_digest": "35e173ea07e3b62b5edec0347b7d2d3c936c759e46910227853c81fcfb43cb79",
+        "approved_runtime_receipt_sha256": "38a1fb2b6cd257029d6c39660d19c13ef89d0ee83f1213c1c23861a08d45a48f",
+        "binary_sha256": "af9aab7a10b117c0ac7661059803394a5c348f4a8a6379ec25d766c9964ccaad",
+        "manifest_sha256": "48fe22d58123fd9052fb05770a4a07cbe22b656cb8bc4bbd22b6978619075751"
+      },
+      "arity": 2,
+      "body": "public-output/ordinary-receipt.body",
+      "body_bytes": 1753686,
+      "body_sha256": "9df21f14666fee6af1fa68ce939b6e410ec9b3f745a9a8cee061b9cec70bb7dc",
+      "label": "ordinary-receipt",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/ci-wallet01-ordinary-receipt.json",
+      "parent_receipt_sha256": "ff5bcb034ff4031b824b82512792544ff3a2af813e503f222a478248160627e6",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1748810,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.2458823030000303,
+        "wait4_maxrss_kib": 168300,
+        "wait4_system_seconds": 0.050967,
+        "wait4_user_seconds": 1.172256
+      },
+      "actual_worker_namespace_pid": 84,
+      "approved_identities": {
+        "approved_runtime_digest": "35e173ea07e3b62b5edec0347b7d2d3c936c759e46910227853c81fcfb43cb79",
+        "approved_runtime_receipt_sha256": "38a1fb2b6cd257029d6c39660d19c13ef89d0ee83f1213c1c23861a08d45a48f",
+        "binary_sha256": "af9aab7a10b117c0ac7661059803394a5c348f4a8a6379ec25d766c9964ccaad",
+        "manifest_sha256": "48fe22d58123fd9052fb05770a4a07cbe22b656cb8bc4bbd22b6978619075751"
+      },
+      "arity": 1,
+      "body": "public-output/recipient-spend.body",
+      "body_bytes": 1748886,
+      "body_sha256": "f814d9fb41639faeafa92bbe2aa8ddfd3ac8d3906f6aacc8b00b22dc1aaf51a5",
+      "label": "recipient-spend",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/ci-wallet01-recipient-spend.json",
+      "parent_receipt_sha256": "efc661dae81942ffb5b0dcefc5d610f03019dcccafa2901198136cae60fe57b8",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1744074,
+      "restore": false,
+      "source_runtime_pins_unchanged": true
+    },
+    {
+      "actual_worker": {
+        "child_wall_seconds": 1.2564049900000782,
+        "wait4_maxrss_kib": 168172,
+        "wait4_system_seconds": 0.037816999999999996,
+        "wait4_user_seconds": 1.195377
+      },
+      "actual_worker_namespace_pid": 36,
+      "approved_identities": {
+        "approved_runtime_digest": "35e173ea07e3b62b5edec0347b7d2d3c936c759e46910227853c81fcfb43cb79",
+        "approved_runtime_receipt_sha256": "38a1fb2b6cd257029d6c39660d19c13ef89d0ee83f1213c1c23861a08d45a48f",
+        "binary_sha256": "af9aab7a10b117c0ac7661059803394a5c348f4a8a6379ec25d766c9964ccaad",
+        "manifest_sha256": "48fe22d58123fd9052fb05770a4a07cbe22b656cb8bc4bbd22b6978619075751"
+      },
+      "arity": 1,
+      "body": "public-output/restored-spend.body",
+      "body_bytes": 1741398,
+      "body_sha256": "958cef5f420ee72c77b8fe2fb593770d1050f79c5eb89d08104745d4d1212e57",
+      "label": "restored-spend",
+      "live_descendant_sampled": true,
+      "parent_receipt": "parent-evidence/ci-wallet01-restored-spend.json",
+      "parent_receipt_sha256": "337c9b5c0f63d2d80a2e2a53f425dfb2ebb0a241912da2a53968c54b699ff836",
+      "positive_admissions": 1,
+      "private_input_or_unchecked_output_persisted": false,
+      "proof_bytes": 1736586,
+      "restore": true,
+      "source_runtime_pins_unchanged": true
+    }
+  ],
+  "public_disk": {
+    "allocated_bytes": 29835264,
+    "files": 46,
+    "logical_bytes": 29699227
+  },
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 5,
+    "cached_bytes": 8750132,
+    "full_bytes": 8750132,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "scope": "Finite actual wallet/controller experiment; source/runtime/delegated history and namespace assumptions remain explicit. No production or joint PQ/privacy theorem.",
+  "source_runtime_unchanged": true,
+  "source_sha256": "be2910ea2ef974bb87778b0b8e605f299bdc44b9987afecddcc86df4b63eaaa8"
+}

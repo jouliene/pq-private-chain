@@ -528,3 +528,63 @@ new native build/provider checks, genuine isolated small5 and every retained
 legacy public/private/witness check still must execute and pass. This is not
 criterion6 completion, a whole-protocol theorem, or permission to skip a later
 failure. No reviewer execution or extra campaign was performed.
+
+
+## Terminal full automatic CI disposition
+
+**PASS for the reviewed automatic smoke scope.** Independently read the downloaded
+RUN.json and fixed public receipts for push run
+[44104449760](https://github.com/jouliene/pq-private-chain/actions/runs/44104449760)
+at `38dd77160f48344c81d7c3a6cc32014b1f8a60f7`. The job completed successfully in
+3m21s; provisioning, build, isolated wallet and legacy checks all executed.
+Final public release/readback remains pending; this is not global blockchain or
+production/PQ/privacy completion.
+
+The actual isolated RESULT SHA256
+`9d30d5cfc398434ac98379a55c73ed2a4055022a1074fabb0dd6a2d7d417a282`
+reports five new distinct body/proof rows, arities0/0/2/1/1, each positively
+admitted and associated with a sampled genuine prover descendant. Mechanically
+checked all five row/sample associations, shared approved prover/runtime identities,
+four admission events covering five bodies, ten actual first-wait4 native CLI
+successes with pre/post ELF checks, and exact equality of the two actor records
+with their standalone receipts. Original and fresh restore are distinct actual
+processes, each exit0; reviewed unchanged Controller.run requires original exit0
+and the RAM backup before constructing restore. The final restored-spend row is
+fresh and positively admitted. Real boundary records retain two denied paths,
+three inherited-FD identity checks, all three denied socket families, seccomp2,
+controller namespace exclusion and matching approved Node inode.
+
+The reported14-table map, height4/leaves10/nullifiers4/bodies5,8750132 retained body
+bytes, fees10570146, remaining1089429854 and total1100000000 agree internally;
+liabilities/pending/missing/unexported are0. The body-byte total equals all five
+rows. No secret stream or backup is present in these fixed artifacts. Observer
+sampling is finite; nested worker/Node/waited-descendant costs must not be summed
+as independent work. This hosted smoke does not repeat264 private expiry/rewind.
+
+Build and public replay identify ledger ELF938a0aaa...9a31cf. Public replay reports
+actual53CLI calls, native valid/invalid/wrong-key controls and atomic negative
+checks, exit0. The reviewed build source writes success only after four fresh
+binaries, eight provider controls and the actual Parent probe pass. Their detailed
+build/provider maps are not part of this compact upload; this review does not
+pretend to have independently rehashed all hosted build inputs. Legacy private3
+passes actual first-wait4 exit0 in13.679360s with source/runtime unchanged; it
+explicitly retains its local-ledger membership premise. The separate public
+witness check succeeds with three heights/four negatives and no private input.
+
+Two installation digests intentionally identify different artifacts:
+`20c4c7b06ec57a30149baa5f8964fda662180b9be2ebe2bb04ce1442cbde9e8d`
+in build/public replay is workspace installation.json; source build.py:225 and
+replay_checks.py:40/85 establish that meaning.
+`34c08fa5fc82470f70e80537b08ae4922e654bc697b4ac94df6b3272976e8337`
+in wallet/witness is the complete workspace fresh/installation.json. Build.py
+includes the former file's digest inside the latter's pinned closure. They must
+not be reported as identical or as earlier local installation identities.
+
+Read Root's source-correspondence record and independently checked current CORE,
+wallet SOURCE04 and public-replay manifest digests against it. Their accepted
+5793/7/3-file closures are recorded unchanged from a9357c2; later executable
+changes are the reviewed CI environment/probe wrappers. This is fixed-summary
+and source-producer correspondence review, not a second hosted database/proof
+payload or complete dependency-map audit. Earlier clean-checkout independent
+reproduction remains the stronger retained full readback. No new job, private
+material read, crypto rerun or Git operation was performed here.

@@ -60,9 +60,14 @@ cycle. Its actual run URL/conclusion must be checked; the presence of
 The next milestone retains the initial public revision
 `d8f800037b5efbb76a5a1d6d4d3100e55f676a00` as its comparison baseline. Its tested
 implementation/experiment source revision is
-`a9357c27d7458277b80b78ac887696a9ea9a99a8`; later delivery commits may add only
-reviewed documentation and safe evidence. Source and installation correspondence
-must be checked explicitly, not inferred from the branch name.
+`a9357c27d7458277b80b78ac887696a9ea9a99a8`. Later reviewed CI changes add public
+startup diagnostics, correct smoke ordering, and run the unchanged payment tests
+in a verified Noble userland on an Ubuntu22 host. Those are executable environment
+changes, not merely documentation. Core payment/wallet source manifests remain
+unchanged. The final record identifies the exact automatically tested checkout,
+its CI wrapper/workflow identities, and any subsequent documentation/evidence-only
+revision. Source correspondence is checked explicitly; it is not inferred from
+the branch name or from an earlier installation's binary hashes.
 
 The `network-feasibility-2026-11-17` release's `delivery-result.json` is the final
 publication readback: exact public revision, actual automatic push-CI run/result,

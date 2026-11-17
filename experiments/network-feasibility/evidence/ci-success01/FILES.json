@@ -1,0 +1,101 @@
+{
+  "format": "CI-FIXED-PUBLIC-RECEIPTS01",
+  "scope": "Exact fixed public workflow uploads; no bodies, private streams, backups or databases. Full installation pin maps were not uploaded; this record is not an independent replay of those absent maps.",
+  "files": {
+    "RUN.json": {
+      "downloaded_path": "RUN.json",
+      "bytes": 1649,
+      "sha256": "12e9bbf1b0050d6061d88d50b1d5fd43c130956270de3f154869781a55c8be69"
+    },
+    "host-preflight.json": {
+      "downloaded_path": ".work/ci-isolation-preflight.json",
+      "bytes": 5766,
+      "sha256": "09de801d0c5a6031c2880b9d8b9e55af02a2ce65ab3671008541532bbcc5707c"
+    },
+    "noble/base.json": {
+      "downloaded_path": ".work/ci-noble/base.json",
+      "bytes": 683,
+      "sha256": "af2ae7713733ff3af54e84588f8e43e185086b20c143d70231ce5c23b1f715bf"
+    },
+    "noble/image-temp-permissions.json": {
+      "downloaded_path": ".work/ci-noble/image-temp-permissions.json",
+      "bytes": 151,
+      "sha256": "18cddc03231d66157a74076e8e77f8e64de254c1dbc8caca821b16a9694b6f31"
+    },
+    "noble/provision-public.log": {
+      "downloaded_path": ".work/ci-noble/provision-public.log",
+      "bytes": 42033,
+      "sha256": "e784f79632e81628b541cf792856cb43b7694812e6c519d2bacb8c9efc066678"
+    },
+    "noble/provision-status.json": {
+      "downloaded_path": ".work/ci-noble/provision-status.json",
+      "bytes": 50,
+      "sha256": "1d2956d2052969f5f2a667c1b8beee8d1e0e5a1f62077e0518690ea8e34bffae"
+    },
+    "noble/unprivileged-caller.json": {
+      "downloaded_path": ".work/ci-noble/unprivileged-caller.json",
+      "bytes": 51,
+      "sha256": "0c80ba69aef625e8e89d5450edb52cbafe07c6a980c93ee4452a22f5f758674d"
+    },
+    "noble/dpkg-inventory.tsv": {
+      "downloaded_path": ".work/ci-noble/dpkg-inventory.tsv",
+      "bytes": 7017,
+      "sha256": "e894e76f4c6843fb2b0215d0b00bc8ded1ec92ab5ad43b57fe266a3ed891a22c"
+    },
+    "noble/dpkg-inventory.sha256": {
+      "downloaded_path": ".work/ci-noble/dpkg-inventory.sha256",
+      "bytes": 152,
+      "sha256": "187e77bf3294aed27e132ad5432f54682726e68d4960b667a4b3cb9a7ca86ce3"
+    },
+    "noble/userland-identity.json": {
+      "downloaded_path": ".work/ci-noble/userland-identity.json",
+      "bytes": 176,
+      "sha256": "9208dca2ab2a302d3f00dcd7584d3647df3236d5708d77d8d086d363aec03360"
+    },
+    "noble/public-preflight.json": {
+      "downloaded_path": ".work/ci-noble/public-preflight.json",
+      "bytes": 5753,
+      "sha256": "2cfe87744ba82719ce3a1faea42e272e4999f6df6deef81e72f28515027cbbc4"
+    },
+    "build-result.json": {
+      "downloaded_path": ".work/ci01/build-result.json",
+      "bytes": 279,
+      "sha256": "558307beac87b022176dfab633cb175b38e9882d16b61fd898c1013a3d5c1d52"
+    },
+    "public01-result.json": {
+      "downloaded_path": ".work/ci01/public01-result.json",
+      "bytes": 1834,
+      "sha256": "6aad6326ade185b35b3e16f7a9aad0d0c105412fd14ab008c5be4c99cd0d01e3"
+    },
+    "private-private01.json": {
+      "downloaded_path": ".work/ci01/private-private01.json",
+      "bytes": 1564,
+      "sha256": "fecc6bfb3168aa5bf25ddaf0943b48412286752b6e3ccfce403b1fb4eab5e88d"
+    },
+    "witness-result.json": {
+      "downloaded_path": ".work/ci01/witness-result.json",
+      "bytes": 3460,
+      "sha256": "75f6f38308ca083adaefdc7ba3f6e5eab44a038b70e8f7e4546dba6fea48c785"
+    },
+    "isolated-wallet/RESULT.json": {
+      "downloaded_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/RESULT.json",
+      "bytes": 31612,
+      "sha256": "9d30d5cfc398434ac98379a55c73ed2a4055022a1074fabb0dd6a2d7d417a282"
+    },
+    "isolated-wallet/claim.json": {
+      "downloaded_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/claim.json",
+      "bytes": 374,
+      "sha256": "af67da9936b5dafe81ae025325f8d4fff34ae99cdd1bc49b1c489ea2e6aee27d"
+    },
+    "isolated-wallet/original-process.json": {
+      "downloaded_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/original-process.json",
+      "bytes": 8443,
+      "sha256": "a59d6709d0a2aaeebe1752668495a7ff43e5900af987a20234e979cb184fae60"
+    },
+    "isolated-wallet/restore-process.json": {
+      "downloaded_path": "experiments/network-feasibility/wallet-integration/.work/ci-wallet01/restore-process.json",
+      "bytes": 4648,
+      "sha256": "83cb25629ec74233c264490339cf971c22382fba03121423140fe391fb08e4e7"
+    }
+  }
+}

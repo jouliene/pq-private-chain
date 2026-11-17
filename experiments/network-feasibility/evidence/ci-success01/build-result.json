@@ -1,0 +1,7 @@
+{
+  "actual_exit": 0,
+  "binary": "target/release/ledger-cp03",
+  "binary_sha256": "938a0aaa69af2d2801e7b518b681386bcb1a5c5eac133c790b5e773eb29a31cf",
+  "format": "CP03-AUDIT-BUILD01",
+  "installation_sha256": "20c4c7b06ec57a30149baa5f8964fda662180b9be2ebe2bb04ce1442cbde9e8d"
+}

@@ -1,0 +1,1 @@
+{"expected_mode": "01777", "observed": {"tmp": {"directory": true, "mode": "01777"}, "var/tmp": {"directory": true, "mode": "01777"}}, "passed": true}

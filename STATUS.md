@@ -3,12 +3,14 @@
 Canonical project: `/home/neo/jouliene/pq-private-chain`.
 Native/global Goal read back ACTIVE on 2026-11-17 at14:26UTC.
 Execute NETWORK_FEASIBILITY_GOAL.md. No owner budget/resource limit was imposed.
-Criteria1..5 have reviewed evidence. Criterion6 still needs successful automatic
-full smoke and release readback. No milestone/global completion is claimed.
+Criteria1..5 have reviewed evidence. Full automatic CI44104449760 passed at
+38dd77160f48344c81d7c3a6cc32014b1f8a60f7 (push,201seconds). Criterion6 now needs
+final independent receipt disposition and public release readback only.
+No milestone/global completion is claimed before that readback.
 
 ## Current ownership and allocation
 
-Latest published checkpoint before this change:29e7e0e63c084314b06e49ee25e8d0044941fe00.
+Latest automatically tested public revision:38dd77160f48344c81d7c3a6cc32014b1f8a60f7.
 Baseline:d8f800037b5efbb76a5a1d6d4d3100e55f676a00.
 Independent clean private/public execution:a9357c27d7458277b80b78ac887696a9ea9a99a8.
 Later changes concern CI wrappers/workflow, documentation and safe evidence;
@@ -19,10 +21,18 @@ CI_ORDER_REPAIR_REVIEW01.md; arch_consensus_roles produced the public UID contro
 All previous heavy/local jobs are terminal. Allocation39 completed: actual hosted
 pilot44103979712 PASS at29e7e0e, ordinary host/guestUID1001, exact libcrypto3.0.13,
 Python3.12.3, unchanged nested true and Node. Raw evidence:ci-noble-hosted03.
-Allocation40: ONE fresh automatic full smoke under reviewed workflow14a01f3d...:
-Ubuntu22 host, pinned Noble userland, same inner source/discovery/build/runtime,
-five newly proved isolated payments/recovery, then public/legacy private checks.
-One heavy job;20min limit. No large264/864 rerun or proof parameter change.
+Allocation40 completed PASS. Fresh automatic Ubuntu22/Noble build and isolated
+five-proof cycle (two credits, receipt payment, recipient spend, restored spend),
+53 public CLI checks, fresh legacy three-proof cycle and four witness negative
+controls all passed. No large264/864 rerun or proof parameter change.
+Raw fixed public uploads: evidence/ci-success01 (19files/115695B); full private
+inputs, backups, databases and installation pin maps are not in those uploads.
+Original actor12.683814s then restored actor3.518044s; five native admissions,
+fees10570146,total1.1B,liability0,8750132full-bodyB retained,no pending obligation.
+Build/public inner runtime identity20c4c7b...e9e8d differs intentionally from outer
+fresh installation identity34c08fa5...e8337, which pins that inner artifact.
+One should not equate those hashes or claim absent full pin maps were replayed.
+No jobs remain active; Root owns final publication and acceptance readback.
 
 ## Accepted execution and architecture
 
@@ -88,18 +98,19 @@ nonroot guard and all inner sandbox/provider checks remain.
 
 ## Exact next actions
 
-1. Commit reviewed full workflow and actual environment receipt; ordinary push
-   triggers the automatic smoke. Observe its exact revision and terminal result.
-   A successful environment pilot alone is not full payment CI acceptance.
-2. Read the fixed public results and obtain independent final source/evidence
-   review. Discovery/approval/build/verifiers all use the same Noble view.
-3. If actual full CI passes, preserve fixed public records, independently review,
-   reconcile delivery identity, publish network-feasibility-2026-11-17 and verify
-   exact revision/run/assets. Prepared full01-public-closure.tar is462551040B,
-   SHA29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4.
-   It contains only genesis/264 public complete bodies/manifest, no DB or secrets.
-4. Do not repeat closed264/864 campaigns. A new failure needs a named discriminating
-   question before another run. No final delivery-result.json exists until success.
+1. Finish independent fixed-receipt review and commit the safe CI results plus
+   source-correspondence record and corrected delivery wording. Docs/evidence-only
+   publication uses [skip ci]; no repeated proof campaign is justified.
+2. Publish the research prerelease network-feasibility-2026-11-17 targeting exact
+   successfully tested revision38dd77160f48344c81d7c3a6cc32014b1f8a60f7. Include
+   delivery-result.json with actual run/source/evidence identities and the existing
+   full01-public-closure.tar (462551040B, SHA29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4).
+3. Verify public tag/revision, release asset size/digest and final JSON download.
+   Only then record bounded milestone completion. Global Goal stays ACTIVE.
+4. Preserve every failed attempt. No identical retry or further CI expansion is
+   allocated. Exact proof/wallet source manifests equal the independently executed
+   a9357c2 baseline; later executable changes are enumerated in
+   evidence/ci-success01/SOURCE_CORRESPONDENCE.json.
 
 The optional owner server has two disks and more than2TB available on the second.
 Its inspected runtime does not yet match BUILD.md; no remote install/heavy campaign
