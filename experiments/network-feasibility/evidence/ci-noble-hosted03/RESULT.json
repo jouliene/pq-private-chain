@@ -1,0 +1,19 @@
+{
+  "format": "CI-NOBLE-HOSTED03",
+  "passed": true,
+  "scope": "Public image preparation and nested true/Node startup only; no build/private proof",
+  "wrapper_sha256": "7b332a5c875b861faa9606530a62463fb588d741f89f778a7c908fc9ff2fc2b9",
+  "host_and_guest_uid": 1001,
+  "files": {
+    "ubuntu22-public-preflight01.json": "3171efe07977b7cb8bfe6dd50fe818765549f0f968e4088b64bd9976b20a690c",
+    "ci-noble/base.json": "af2ae7713733ff3af54e84588f8e43e185086b20c143d70231ce5c23b1f715bf",
+    "ci-noble/image-temp-permissions.json": "18cddc03231d66157a74076e8e77f8e64de254c1dbc8caca821b16a9694b6f31",
+    "ci-noble/provision-public.log": "f21ce77b8adb9ba2f480b32e5f4d94e5e5fdba2e66ada2985f0bd7f4b268e91e",
+    "ci-noble/provision-status.json": "1d2956d2052969f5f2a667c1b8beee8d1e0e5a1f62077e0518690ea8e34bffae",
+    "ci-noble/unprivileged-caller.json": "0c80ba69aef625e8e89d5450edb52cbafe07c6a980c93ee4452a22f5f758674d",
+    "ci-noble/dpkg-inventory.tsv": "e894e76f4c6843fb2b0215d0b00bc8ded1ec92ab5ad43b57fe266a3ed891a22c",
+    "ci-noble/dpkg-inventory.sha256": "187e77bf3294aed27e132ad5432f54682726e68d4960b667a4b3cb9a7ca86ce3",
+    "ci-noble/userland-identity.json": "9208dca2ab2a302d3f00dcd7584d3647df3236d5708d77d8d086d363aec03360",
+    "ci-noble/public-preflight.json": "7231b2d29d22eb40727a236d181281a509c679002a111b27f5cef2be45b8c93d"
+  }
+}

@@ -491,3 +491,40 @@ native automatic CI allocation. No private job, provider shortcut, policy
 exception or new review framework is authorized by this finding. Prior failed
 hosted and rootless attempts remain unchanged. Reviewer ran only read/hash/source
 comparison, not the public matrix or any namespace/crypto campaign.
+
+
+Conditional full-automatic source disposition reaffirmed for the unchanged
+candidate14a01f3d...1978e6 with ordinary-UID wrapper7b332a5c...fc2b9. Rechecked
+both exact current identities. The earlier complete inner-block comparison and
+workflow review remain applicable; the wrapper successor changes only the
+reviewed outer UID/GID selection. **Conditional GO for one full automatic run
+only after actual hosted environment pilot44103979712 passes and its public
+receipts are read back.** A running pilot is not that result. No new source
+finding, additional maintenance scope or reviewer execution was introduced.
+
+
+## Actual hosted ordinary-UID Noble pilot — full automatic run GO
+
+Independently read downloaded pilot44103979712 at29e7e0e's fixed public records.
+Base receipt binds exact official archive and wrapper7b332a5c...fc2b9. Both image
+temporary modes are01777; provision exits0, post-provision caller UID/EUID1001
+and sudo_used_for_run=false. Actual Python3.12.3, OpenSSL CLI3.0.13 and loaded
+libcrypto(3,0,13) pass. Saved package inventory agrees with its recorded SHA256
+`e894e76f4c6843fb2b0215d0b00bc8ded1ec92ab5ad43b57fe266a3ed891a22c`.
+This validates inventory metadata consistency, not a full rootfs content attestation.
+
+Nested public-preflight receipt SHA256
+`7231b2d29d22eb40727a236d181281a509c679002a111b27f5cef2be45b8c93d`
+observes UID/GID1001 and passes true0.006835119s plus official Node0.010680202s.
+Both retain first-wait4 exit0, exact stdout/empty stderr, no timeout/overflow,
+stable source/Node identities and the actual inner cap-drop ALL, user/network
+namespaces and seccomp arguments. The separate outer host preflight also passed.
+No Node version result is mistaken for a private wallet or native provider result.
+
+**GO for ONE full automatic CI using the previously reviewed unchanged candidate
+14a01f3d...1978e6 and wrapper7b332a5c...fc2b9.** The candidate's public preparation
+condition is now supported by actual hosted evidence. Fresh runtime approval,
+new native build/provider checks, genuine isolated small5 and every retained
+legacy public/private/witness check still must execute and pass. This is not
+criterion6 completion, a whole-protocol theorem, or permission to skip a later
+failure. No reviewer execution or extra campaign was performed.

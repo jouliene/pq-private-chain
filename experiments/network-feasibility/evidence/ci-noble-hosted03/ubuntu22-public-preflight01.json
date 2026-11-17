@@ -1,0 +1,190 @@
+{
+  "environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "PATH": "/usr/bin:/bin",
+    "RAYON_NUM_THREADS": "1",
+    "RUST_BACKTRACE": "0",
+    "TZ": "UTC"
+  },
+  "format": "CP04-CI-PUBLIC-SANDBOX-PREFLIGHT01",
+  "host": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "gid": 1001,
+    "kernel": "6.8.0-1070-azure",
+    "machine": "x86_64",
+    "namespaces": {
+      "mnt": "mnt:[4026531841]",
+      "net": "net:[4026531840]",
+      "pid": "pid:[4026531836]",
+      "user": "user:[4026531837]"
+    },
+    "uid": 1001
+  },
+  "last_stage": "sandbox_node_version",
+  "node": {
+    "expected_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+    "path": "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+    "sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+    "sha256_after": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb"
+  },
+  "passed": true,
+  "per_probe_seconds": 10,
+  "per_stream_cap_bytes": 8192,
+  "probes": [
+    {
+      "argv": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--new-session",
+        "--unshare-user",
+        "--unshare-pid",
+        "--unshare-net",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--cap-drop",
+        "ALL",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--symlink",
+        "usr/bin",
+        "/bin",
+        "--symlink",
+        "usr/lib",
+        "/lib",
+        "--symlink",
+        "usr/lib64",
+        "/lib64",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--tmpfs",
+        "/tmp",
+        "--chdir",
+        "/usr",
+        "--seccomp",
+        "5",
+        "--",
+        "/usr/bin/true"
+      ],
+      "first_wait4": true,
+      "maxrss_kib": 11580,
+      "output_overflow": false,
+      "passed": true,
+      "public_fixed_command": [
+        "/usr/bin/true"
+      ],
+      "readonly_files": [],
+      "readonly_trees": [],
+      "resource_scope": "bubblewrap leader first-wait4, not whole descendant tree CPU",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "system_seconds": 0.003333,
+      "timeout": false,
+      "user_seconds": 0.0,
+      "wall_seconds": 0.006946999000035703,
+      "writable_trees": []
+    },
+    {
+      "argv": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--new-session",
+        "--unshare-user",
+        "--unshare-pid",
+        "--unshare-net",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--cap-drop",
+        "ALL",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--symlink",
+        "usr/bin",
+        "/bin",
+        "--symlink",
+        "usr/lib",
+        "/lib",
+        "--symlink",
+        "usr/lib64",
+        "/lib64",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--tmpfs",
+        "/tmp",
+        "--ro-bind",
+        "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "--chdir",
+        "/usr",
+        "--seccomp",
+        "5",
+        "--",
+        "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "--version"
+      ],
+      "first_wait4": true,
+      "maxrss_kib": 11712,
+      "output_overflow": false,
+      "passed": true,
+      "public_fixed_command": [
+        "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "--version"
+      ],
+      "readonly_files": [
+        "/home/runner/work/pq-private-chain/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node"
+      ],
+      "readonly_trees": [],
+      "resource_scope": "bubblewrap leader first-wait4, not whole descendant tree CPU",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "v24.22.1\n",
+      "system_seconds": 0.0022789999999999998,
+      "timeout": false,
+      "user_seconds": 0.001139,
+      "wall_seconds": 0.011098699000001488,
+      "writable_trees": []
+    }
+  ],
+  "readonly_sysctls": {
+    "/proc/sys/kernel/apparmor_restrict_unprivileged_userns": {
+      "value": "0"
+    },
+    "/proc/sys/kernel/unprivileged_userns_clone": {
+      "value": "1"
+    },
+    "/proc/sys/user/max_user_namespaces": {
+      "value": "63848"
+    }
+  },
+  "runtime": {
+    "/usr/bin/bwrap": {
+      "mode": "0o100755",
+      "sha256": "bf6cf3d4456665f5d80c14eb79a76e0ce87b39a0883e614a161658b4ec33492c"
+    },
+    "/usr/bin/true": {
+      "mode": "0o100755",
+      "sha256": "94f5d1c6ad51bbd532bf2e702b3d28cb57ba8887435b4514a06e4ba0cd7fedba"
+    }
+  },
+  "scope": "Fixed /usr/bin/true then pinned Node --version only; no wallet, private data, installation, native verifier or proof. Public stderr retained. Tests sandbox/runtime startup, not the complete wallet mount closure.",
+  "source_after": {
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+  },
+  "source_before": {
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+    "/home/runner/work/pq-private-chain/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+  }
+}

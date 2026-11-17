@@ -8,7 +8,7 @@ full smoke and release readback. No milestone/global completion is claimed.
 
 ## Current ownership and allocation
 
-Latest published checkpoint before this change:3d4e31b8ea12f06a993599e3aa27eac5434fa0cd.
+Latest published checkpoint before this change:29e7e0e63c084314b06e49ee25e8d0044941fe00.
 Baseline:d8f800037b5efbb76a5a1d6d4d3100e55f676a00.
 Independent clean private/public execution:a9357c27d7458277b80b78ac887696a9ea9a99a8.
 Later changes concern CI wrappers/workflow, documentation and safe evidence;
@@ -16,9 +16,13 @@ payment/wallet/inner isolation/proof parameters are unchanged.
 Root owns integration, acceptance, workflow, status and all Git operations.
 arch_private_repro owns ci_noble.sh; arch_proof_alternatives owns independent
 CI_ORDER_REPAIR_REVIEW01.md; arch_consensus_roles produced the public UID control.
-All previous heavy/local jobs are terminal. Allocation39 authorizes ONE fresh
-manual public environment pilot after source GO:360s preparation +10s kill,
-8min hosted job. No native build/private proof until actual environment PASS.
+All previous heavy/local jobs are terminal. Allocation39 completed: actual hosted
+pilot44103979712 PASS at29e7e0e, ordinary host/guestUID1001, exact libcrypto3.0.13,
+Python3.12.3, unchanged nested true and Node. Raw evidence:ci-noble-hosted03.
+Allocation40: ONE fresh automatic full smoke under reviewed workflow14a01f3d...:
+Ubuntu22 host, pinned Noble userland, same inner source/discovery/build/runtime,
+five newly proved isolated payments/recovery, then public/legacy private checks.
+One heavy job;20min limit. No large264/864 rerun or proof parameter change.
 
 ## Accepted execution and architecture
 
@@ -84,14 +88,11 @@ nonroot guard and all inner sandbox/provider checks remain.
 
 ## Exact next actions
 
-1. Commit reviewed UID repair, prior failure and control. Ordinary push with
-   [skip ci] avoids repeating the unchanged known-failing Ubuntu24 automatic job;
-   skipped CI is never acceptance. Dispatch environment-probe.yml once at HEAD.
-2. Read actual fixed public artifacts and review. If unchanged inner true+Node
-   pass inside exact Noble userland, install the already reviewed full workflow
-   candidate .work/network-delivery01/smoke-noble-candidate.yml and run ONE fresh
-   automatic full smoke (build, isolated five new proofs/recovery, legacy checks).
-   Discovery/approval/build/verifiers must all use the same Noble filesystem view.
+1. Commit reviewed full workflow and actual environment receipt; ordinary push
+   triggers the automatic smoke. Observe its exact revision and terminal result.
+   A successful environment pilot alone is not full payment CI acceptance.
+2. Read the fixed public results and obtain independent final source/evidence
+   review. Discovery/approval/build/verifiers all use the same Noble view.
 3. If actual full CI passes, preserve fixed public records, independently review,
    reconcile delivery identity, publish network-feasibility-2026-11-17 and verify
    exact revision/run/assets. Prepared full01-public-closure.tar is462551040B,

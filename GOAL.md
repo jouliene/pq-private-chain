@@ -151,3 +151,8 @@ UID wrapper repair is allocated to one fresh hosted environment pilot, then full
 automatic smoke if it passes. No crypto/proof/wallet policy changed. Criteria1..5
 remain substantiated; criterion6 pending; native/global Goal ACTIVE. STATUS.md
 now replaces stale external-only restart instructions with the concrete next run.
+
+Checkpoint2026-11-17 14:34UTC: actual hosted environment44103979712 PASS, ordinary
+UID1001 and exact runtime with unchanged inner true/Node. Full automatic smoke is
+now allocated on the reviewed workflow. This is still criterion6 in progress;
+no complete payment CI result or release completion is claimed yet.
