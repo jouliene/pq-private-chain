@@ -12,12 +12,12 @@ mod tree;
 mod trusted;
 pub use admission::minimum_fee;
 pub use archive_io::LocalArchive;
-pub use cache::{CachePolicy, CacheUsage, EvictionProgress};
+pub use cache::{CachePolicy, CacheUsage, EvictionProgress, Retention};
 pub use cp03_history as history_codec;
 pub use error::{Error, Result};
 pub use store::{
     AbortProgress, AdmittedBlock, Anchor, ArchiveSession, ExportProgress, Head, Ledger, Membership,
-    PendingPublication, ReconcileProgress, StoredBlock,
+    PendingPublication, ReconcileProgress, StoredBlock, VerificationAttempts,
 };
 
 pub use scan::{CheckedScan, check_scan};

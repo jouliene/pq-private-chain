@@ -3,7 +3,7 @@
 import * as fs from 'node:fs';
 import * as crypto from 'node:crypto';
 import {withWallet, WalletOperationalError} from './keys.mjs';
-import {parseStatement, P, MAX, WalletInputError} from './codec.mjs';
+import {parseStatement, P, MAX, FEES, WalletInputError} from './codec.mjs';
 import {wipeOpening} from '../../experiments/compact-receiving-v1/cp03/receipt.mjs';
 
 const recovered = new WeakMap();
@@ -46,15 +46,17 @@ function reducedRecord(raw, chain) {
   for (const envelope of envelopes) need(envelope.subarray(0, 8).equals(Buffer.from('4350523303010000', 'hex')));
   p.take(authorizationSize); p.end();
   need(prefix.length === [9423, 4812, 4876][parsed.arity] && raw.length === [9499, 4888, 4952][parsed.arity]);
-  return {statement, parsed, envelopes, id: h64('BODY', prefix, proofDigest)};
+  return {statement, parsed, envelopes, fullBytes: prefix.length + proofSize, id: h64('BODY', prefix, proofDigest)};
 }
 function block(raw, endpoint, prior) {
-  const r = cursor(raw); need(r.take(8).equals(Buffer.from('CPSBLK03')));
-  const header = r.blob(1232), h = cursor(header);
-  need(h.take(8).equals(Buffer.from('CPBLOCK3')) && h.take(2).readUInt16LE() === 3 && h.take(2).readUInt16LE() === 0);
+  const network = endpoint.blockVersion === 4;
+  const r = cursor(raw); need(r.take(8).equals(Buffer.from(network ? 'CPSBLK04' : 'CPSBLK03')));
+  const header = r.blob(network ? 8408 : 1232), h = cursor(header);
+  need(h.take(8).equals(Buffer.from(network ? 'CPBLOCK4' : 'CPBLOCK3')) &&
+    h.take(2).readUInt16LE() === endpoint.blockVersion && h.take(2).readUInt16LE() === 0);
   need(h.take(32).equals(endpoint.chain) && h.take(64).equals(prior.id));
   const height = h.take(8).readBigUInt64LE(), count = h.take(2).readUInt16LE();
-  need(height === prior.height + 1n && height <= endpoint.height && count >= 1 && count <= 16 &&
+  need(height === prior.height + 1n && height <= endpoint.height && count >= (network ? 0 : 1) && count <= (network ? 128 : 16) &&
     h.take(2).readUInt16LE() === 0);
   const leafCount = h.take(8).readBigUInt64LE();
   need(leafCount === prior.leafCount + 2n * BigInt(count) && leafCount <= (1n << 40n));
@@ -62,13 +64,47 @@ function block(raw, endpoint, prior) {
   for (let i = 0; i < 8; i++) need(root.readBigUInt64LE(i * 8) < P);
   const fees = h.take(8).readBigUInt64LE(), liabilities = h.take(8).readBigUInt64LE();
   need(fees <= MAX && liabilities <= MAX);
+  const encodedFullBytes = network ? h.take(8).readBigUInt64LE() : null;
   const ids = Array.from({length: count}, () => h.take(64)); h.end();
   const records = ids.map(id => {
     const record = reducedRecord(r.blob(9499), endpoint.chain); need(record.id.equals(id)); return record;
   });
-  r.end(); const id = h64('BLOCK', header);
+  r.end();
+  if (network) {
+    const reconstructed = records.reduce((sum, record) => sum + BigInt(record.fullBytes), 228n + 68n * BigInt(count));
+    need(encodedFullBytes === reconstructed && encodedFullBytes <= 256n * 1024n * 1024n);
+    if (count === 0) need(prior.root !== null && root.equals(prior.root) &&
+      fees === prior.fees && liabilities === prior.liabilities);
+  }
+  const id = h64('BLOCK', header);
   if (height === endpoint.height) need(id.equals(endpoint.blockId));
-  return {height, leafCount, root, id, records};
+  return {height, leafCount, root, id, fees, liabilities, records};
+}
+
+function genesisContext(context, endpoint) {
+  if (context === undefined) {
+    need(endpoint.blockVersion === 3);
+    return {root: null, liabilities: null};
+  }
+  need(context !== null && typeof context === 'object' &&
+    Object.keys(context).sort().join(',') === 'genesis,genesisRoot');
+  const raw = context.genesis, root = Buffer.from(bytes(context.genesisRoot, 64));
+  need(Buffer.isBuffer(raw) && raw.length >= 376 && raw.length <= (endpoint.blockVersion === 4 ? 339320 : 42744));
+  need(raw.subarray(0, 8).equals(Buffer.from(endpoint.blockVersion === 4 ? 'CPGEN004' : 'CPGEN003')) &&
+    raw.readUInt16LE(8) === endpoint.blockVersion && raw.readUInt16LE(10) === 0);
+  need(raw.subarray(12, 44).equals(endpoint.chain) && h64('GENESIS', raw).equals(endpoint.genesisId));
+  const total = raw.readBigUInt64LE(44), count = raw.readUInt16LE(52);
+  need(total <= MAX && count >= 1 && count <= (endpoint.blockVersion === 4 ? 128 : 16) &&
+    raw.readUInt16LE(54) === 1 && raw.length === 376 + 2648 * count);
+  let sum = 0n, previous = null;
+  for (let index = 0; index < count; index++) {
+    const at = 376 + 2648 * index, id = raw.subarray(at, at + 48), credit = raw.readBigUInt64LE(at + 48);
+    need((previous === null || Buffer.compare(previous, id) < 0) && credit >= FEES[0] && credit <= MAX);
+    sum += credit; need(sum <= MAX); previous = id;
+  }
+  need(sum === total);
+  for (let at = 0; at < 64; at += 8) need(root.readBigUInt64LE(at) < P);
+  return {root, liabilities: total};
 }
 function disposeCandidate(candidate) { wipeOpening(candidate.opening); candidate.nf.fill(0); }
 function disposeAllCandidates(candidates) {
@@ -83,13 +119,16 @@ function stable(a, b) {
 // No old wallet database, witness or spent-state snapshot is accepted.
 // The endpoint and inventory basis must come from the operator's documented trust path.
 // This function cannot authenticate that external provenance or network consensus.
-export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis = 'unknown') {
+export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis = 'unknown', context = undefined) {
   need(['unknown', 'conditional-on-independent-current-inventory'].includes(inventoryBasis));
   const endpoint = {chain: Buffer.from(bytes(trustedEndpoint.chain, 32)),
     genesisId: Buffer.from(bytes(trustedEndpoint.genesisId, 64)),
-    blockId: Buffer.from(bytes(trustedEndpoint.blockId, 64)), height: trustedEndpoint.height};
+    blockId: Buffer.from(bytes(trustedEndpoint.blockId, 64)), height: trustedEndpoint.height,
+    blockVersion: trustedEndpoint.blockVersion === undefined ? 3 : trustedEndpoint.blockVersion};
+  need(endpoint.blockVersion === 3 || endpoint.blockVersion === 4);
   need(typeof endpoint.height === 'bigint' && endpoint.height >= 0n && endpoint.height < (1n << 64n));
   if (endpoint.height === 0n) need(endpoint.blockId.equals(endpoint.genesisId));
+  const genesis = genesisContext(context, endpoint);
   return withWallet(wallet, value => {
     need(value.chain.equals(endpoint.chain));
     let fd, published = false;
@@ -110,20 +149,31 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
     try {
       fd = fs.openSync(scanFile, fs.constants.O_RDONLY | fs.constants.O_NONBLOCK | fs.constants.O_NOFOLLOW);
       const before = fs.fstatSync(fd, {bigint: true}); need(before.isFile());
-      for (const key of value.keys) recipients.push(value.adapter.prepareRecipient(key.descriptor, key.key, value.spending));
-      let prior = {height: 0n, id: endpoint.genesisId, leafCount: 0n, root: null};
+      let recipientsPrepared = false;
+      function prepareRecipients() {
+        if (recipientsPrepared) return;
+        for (const key of value.keys) recipients.push(value.adapter.prepareRecipient(key.descriptor, key.key, value.spending));
+        recipientsPrepared = true;
+      }
+      if (endpoint.blockVersion === 3) prepareRecipients();
+      let prior = {height: 0n, id: endpoint.genesisId, leafCount: 0n, root: genesis.root,
+        fees: 0n, liabilities: genesis.liabilities};
       // Retain only public cursor fields, never an old block's record buffers.
       function position(next) {
-        return {height: next.height, id: next.id, leafCount: next.leafCount, root: next.root};
+        return {height: next.height, id: next.id, leafCount: next.leafCount, root: next.root,
+          fees: next.fees, liabilities: next.liabilities};
       }
       let parsedPrior = prior, readBytes = 0n, windowPayments = 0;
       const window = [];
       function applyWindow() {
-        if (windowPayments === 0) return;
-        need(window.length > 0 && windowPayments <= 256);
+        if (window.length === 0) return;
+        need(window.length <= 256 && windowPayments <= 256);
         // One complete checked helper response before any effects in this window.
-        const contexts = value.adapter.contextsBatch(window.flatMap(next =>
-          next.records.map(record => record.statement)));
+        let contexts = [];
+        if (windowPayments > 0) {
+          prepareRecipients();
+          contexts = value.adapter.contextsBatch(window.flatMap(next => next.records.map(record => record.statement)));
+        }
         need(contexts.length === windowPayments);
         let at = 0;
         for (const next of window) {
@@ -142,7 +192,7 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
             need(!occurrences.has(id)); occurrences.set(id, prior.leafCount + BigInt(2 * index + ordinal));
             entries.push({context, envelope});
           }
-          const collected = value.adapter.collectLocalCandidates(recipients, entries);
+          const collected = entries.length === 0 ? {candidates: []} : value.adapter.collectLocalCandidates(recipients, entries);
           const pending = collected.candidates;
           try {
             for (const candidate of pending) {
@@ -165,13 +215,15 @@ export function recoverHistory(wallet, scanFile, trustedEndpoint, inventoryBasis
       }
       for (;;) {
         const prefix = exact(fd, 4, true); if (prefix === null) break;
-        const size = prefix.readUInt32LE(); need(size > 0 && size <= 153292 && parsedPrior.height < endpoint.height);
+        const size = prefix.readUInt32LE(); need(size > 0 && size <= (endpoint.blockVersion === 4 ? 1224804 : 153292) &&
+          parsedPrior.height < endpoint.height);
         const raw = exact(fd, size); readBytes += 4n + BigInt(size);
         // Validate this whole block against the separate parsing cursor first.
         const next = block(raw, endpoint, parsedPrior);
         parsedPrior = position(next);
-        // Whole blocks are never split: nonfinal windows contain 241..256 payments.
-        if (windowPayments + next.records.length > 256) applyWindow();
+        // Whole blocks are never split. Empty Network04 frames also consume a
+        // bounded window slot and must advance the applied endpoint cursor.
+        if (windowPayments + next.records.length > 256 || window.length >= 256) applyWindow();
         window.push(next); windowPayments += next.records.length;
       }
       applyWindow();

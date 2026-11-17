@@ -142,6 +142,7 @@ fn verify_ordinary_source(body: &UnverifiedFullBody<'_>) -> Result<()> {
 }
 
 fn verify_complete_proof(installed: &Installed, body: &UnverifiedFullBody<'_>) -> Result<()> {
+    let _=installed.proof_attempts.fetch_update(std::sync::atomic::Ordering::Relaxed,std::sync::atomic::Ordering::Relaxed,|n|Some(n.saturating_add(1)));
     engine::verify_bytes(&installed.registry, body.prefix().statement_bytes(), body.proof())
         .map(|_| ())
         .map_err(|_| Error::Proof)

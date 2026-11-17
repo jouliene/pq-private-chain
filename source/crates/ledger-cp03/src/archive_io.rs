@@ -497,7 +497,7 @@ impl LocalArchive {
         for input in inputs {
             if input.height == 0
                 || input.height > i64::MAX as u64
-                || input.ordinal >= 16
+                || input.ordinal >= 128
                 || previous.is_some_and(|p| p >= (input.height, input.ordinal))
                 || !ids.insert(input.id)
             {

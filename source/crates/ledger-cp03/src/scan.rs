@@ -36,9 +36,10 @@ pub fn check_scan<R: Read, W: Write>(
     expected_id: Id,
     writer: &mut W,
 ) -> Result<CheckedScan> {
-    let syntax = Installed::syntax(chain)?;
-    let genesis = genesis::parse_genesis(genesis_bytes, &syntax)?;
-    let mut session = ScanSession::new(
+    let version = genesis::version(genesis_bytes)?;
+    let syntax = Installed::syntax_for_version(chain, version)?;
+    let genesis = genesis::parse_genesis_for_version(genesis_bytes, &syntax, version)?;
+    let mut session = ScanSession::new_for_version(
         reader,
         TrustedScanEndpoint {
             chain,
@@ -46,7 +47,8 @@ pub fn check_scan<R: Read, W: Write>(
             expected_height,
             expected_id,
         },
-    )?;
+        version,
+    )?.with_genesis_state(crate::tree::empty(&chain)[40],genesis.total())?;
     while let Some(block) = session.next_block()? {
         // Exact original checked inner bytes; fixed outer length is uniquely encoded.
         let length = u32::try_from(block.raw().len()).map_err(|_| crate::Error::Capacity)?;

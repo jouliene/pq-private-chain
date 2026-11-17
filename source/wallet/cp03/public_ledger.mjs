@@ -13,6 +13,8 @@ const PUBLICATIONS = new Set(['scan', 'check-scan']);
 const REJECTIONS = new Set(['Codec', 'Identity', 'Chain', 'Fee', 'Accounting', 'Capacity',
   'Anchor', 'Replay', 'Source', 'Receipt', 'Block']);
 const OPERATIONAL = new Set(['Storage', 'Io', 'State', 'Missing', 'Proof', 'HistoryHashProvider',
+  'StorageSchemaUnsupported', 'ArchiveBacklog', 'RetentionPolicy', 'HistoryUnavailable',
+  'ArchiveCorrupt', 'ArchiveIo', 'ArchiveBusy',
   'ProtocolManifestUnavailable', 'SourceSignatureProviderUnavailable',
   'TransactionOutcomeUnknown', 'RollbackFailed']);
 const CLI_ERRORS = new Set([...REJECTIONS, ...OPERATIONAL]);
@@ -106,7 +108,13 @@ function openBinary(binary, expected) {
 // from a transaction, RPC request, server scan record or wallet-private packet.
 export function preparePublicLedger(config) {
   input(config !== null && typeof config === 'object' && !Array.isArray(config));
-  input(Object.keys(config).sort().join(',') === 'binaryPath,binarySha256,chain,dbPath');
+  const keys = Object.keys(config);
+  input(['binaryPath', 'binarySha256', 'chain', 'dbPath'].every(key => keys.includes(key)) &&
+    keys.every(key => ['binaryPath', 'binarySha256', 'chain', 'dbPath', 'blockVersion', 'retention'].includes(key)));
+  const blockVersion = config.blockVersion === undefined ? 3 : config.blockVersion;
+  const retention = config.retention === undefined ? 'archive' : config.retention;
+  input((blockVersion === 3 || blockVersion === 4) && ['archive', 'retain'].includes(retention));
+  input(retention !== 'retain' || blockVersion === 4);
   const binary = publicPath(config.binaryPath), db = publicPath(config.dbPath);
   input(typeof config.binarySha256 === 'string' && /^[0-9a-f]{64}$/.test(config.binarySha256));
   const expected = config.binarySha256, chain = inputBytes(config.chain, 32);
@@ -119,13 +127,16 @@ export function preparePublicLedger(config) {
     }
   }
   function head(value) {
-    object(value, ['schema', 'chain', 'genesis_id', 'height', 'block_id', 'leaf_count', 'root_le', 'fee_escrow', 'unconsumed_liabilities']);
+    object(value, ['schema', 'chain', 'genesis_id', 'height', 'block_id', 'leaf_count', 'root_le', 'fee_escrow', 'unconsumed_liabilities',
+      ...(blockVersion === 4 ? ['block_version'] : [])]);
     output(value.schema === 'CP03-LEDGER-CLI-01' && value.chain === chain);
+    if (blockVersion === 4) output(value.block_version === '4');
     const fees = decimal(value.fee_escrow, MAX), liabilities = decimal(value.unconsumed_liabilities, MAX);
     output(fees + liabilities <= MAX);
     return Object.freeze({chain: hex(value.chain, 32), genesisId: hex(value.genesis_id, 64),
       height: decimal(value.height), blockId: hex(value.block_id, 64), leafCount: decimal(value.leaf_count, LEAVES),
-      root: hex(value.root_le, 64, true), feeEscrow: fees, unconsumedLiabilities: liabilities});
+      root: hex(value.root_le, 64, true), feeEscrow: fees, unconsumedLiabilities: liabilities,
+      ...(blockVersion === 4 ? {blockVersion: 4} : {})});
   }
   function run(operation, arguments_, decode) {
     let fd, child, attempted = false, result, failure;
@@ -169,11 +180,12 @@ export function preparePublicLedger(config) {
     return result;
   }
   function bodies(files) {
-    input(Array.isArray(files) && files.length >= 1 && files.length <= 16);
+    input(Array.isArray(files) && files.length >= (blockVersion === 4 ? 0 : 1) &&
+      files.length <= (blockVersion === 4 ? 128 : 16));
     return files.map(publicPath);
   }
   return Object.freeze({
-    init: genesisFile => run('init', ['init', db, chain, publicPath(genesisFile)], head),
+    init: genesisFile => run('init', [retention === 'retain' ? 'init-retain' : 'init', db, chain, publicPath(genesisFile)], head),
     head: () => run('head', ['head', db, chain], head),
     admit: files => run('admit', ['admit', db, chain, ...bodies(files)], head),
     replay: (headerFile, files) => run('replay', ['replay', db, chain, publicPath(headerFile), ...bodies(files)], head),

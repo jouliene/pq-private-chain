@@ -54,6 +54,10 @@ pub struct AdmittedBlock {
     pub header: Vec<u8>,
     pub body_ids: Vec<Id>,
 }
+/// Physical verification work, including rejected attempts; never a verdict.
+/// RAM-only and intentionally not rolled back with consensus state.
+#[derive(Debug,Clone,Copy,PartialEq,Eq)]
+pub struct VerificationAttempts {pub proofs:u64,pub source_signatures:u64}
 pub struct Ledger {
     db: Connection,
     db_path: PathBuf,
@@ -233,13 +237,21 @@ fn head(db: &Connection) -> Result<Head> {
         liabilities: natural(row.5)?,
     };
     if h.leaf_count > tree::CAPACITY
-        || h.height > h.leaf_count / 2
+        || (database_version(db)?==3 && h.height > h.leaf_count / 2)
         || h.fees > MAX
         || h.liabilities > MAX
     {
         return Err(Error::State);
     }
     Ok(h)
+}
+fn database_version(db:&Connection)->Result<u16>{
+    match db.pragma_query_value(None,"user_version",|r|r.get::<_,i64>(0))?{2=>Ok(3),3=>Ok(4),_=>Err(Error::StorageSchemaUnsupported)}
+}
+fn lengths_at(db:&Connection,height:u64)->Result<Vec<usize>>{
+    let mut q=db.prepare("SELECT full_length FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 129")?;
+    let values=q.query_map([integer(height)?],|r|r.get::<_,i64>(0))?.collect::<rusqlite::Result<Vec<_>>>()?;
+    values.into_iter().map(|x|usize::try_from(x).map_err(|_|Error::State)).collect()
 }
 fn accounting(h: &Head, total: u64) -> Result<()> {
     if h.fees.checked_add(h.liabilities).ok_or(Error::Accounting)? > total {
@@ -261,8 +273,9 @@ fn history_rows(db: &Connection, height: u64) -> Result<StoredBlock> {
         .optional()?
         .ok_or(Error::Missing)?;
     let h = history::parse_header(&header)?;
+    if h.version()!=database_version(db)?{return Err(Error::Identity)}
     let mut stmt =
-        db.prepare("SELECT ordinal,id,full FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 17")?;
+        db.prepare("SELECT ordinal,id,full FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 129")?;
     let rows = stmt
         .query_map([integer(height)?], |r| {
             Ok((
@@ -286,6 +299,7 @@ fn history_rows(db: &Connection, height: u64) -> Result<StoredBlock> {
         }
         bodies.push(b);
     }
+    if h.version()==4&&h.encoded_full_bytes()!=Some(history::network_encoded_size(&bodies.iter().map(Vec::len).collect::<Vec<_>>())?){return Err(Error::State)}
     Ok(StoredBlock { header, bodies })
 }
 impl Ledger {
@@ -301,8 +315,10 @@ impl Ledger {
         policy: CachePolicy,
     ) -> Result<Self> {
         let catalog_id = new_catalog_id()?;
-        let installed = Installed::load(chain)?;
-        let parsed = genesis::parse_genesis(bytes, &installed.syntax)?;
+        let version=genesis::version(bytes)?;
+        let policy=policy.for_version(version)?;
+        let installed = Installed::load_for_version(chain,version)?;
+        let parsed = genesis::parse_genesis_for_version(bytes, &installed.syntax,version)?;
         let empty = tree::empty(&chain);
         let initial = Head {
             height: 0,
@@ -329,9 +345,10 @@ impl Ledger {
             &mut last_error,
             TransactionBehavior::Immediate,
             |tx| {
-                tx.execute_batch(include_str!("schema.sql"))?;
-                tx.pragma_update(None, "user_version", 2)?;
-                tx.execute("INSERT INTO meta(singleton,schema_version,genesis,genesis_id,chain,total,height,head,leaf_count,root,fees,liabilities) VALUES(1,2,?1,?2,?3,?4,0,?2,0,?5,0,?4)",params![bytes,initial.id.as_slice(),chain.as_slice(),integer(parsed.total())?,field_bytes(&initial.root)])?;
+                tx.execute_batch(if version==3{include_str!("schema.sql")}else{include_str!("schema-network04.sql")})?;
+                let schema=if version==3{2}else{3};
+                tx.pragma_update(None, "user_version", schema)?;
+                tx.execute("INSERT INTO meta(singleton,schema_version,genesis,genesis_id,chain,total,height,head,leaf_count,root,fees,liabilities) VALUES(1,?6,?1,?2,?3,?4,0,?2,0,?5,0,?4)",params![bytes,initial.id.as_slice(),chain.as_slice(),integer(parsed.total())?,field_bytes(&initial.root),schema])?;
                 cache::install(tx, policy, &catalog_id)?;
                 // Projection only AFTER the shared exact canonical genesis parser accepted every byte.
                 for i in 0..usize::from(parsed.source_count()) {
@@ -370,17 +387,17 @@ impl Ledger {
     }
     /// Opens trusted local durable storage, never a producer-supplied snapshot/acceptance cache.
     pub fn open(path: &Path, chain: [u8; 32]) -> Result<Self> {
-        let installed = Installed::load(chain)?;
         let mut db = open_connection(path)?;
+        let prefix:Vec<u8>=db.query_row("SELECT substr(genesis,1,12) FROM meta WHERE singleton=1",[],|r|r.get(0))?;
+        let chain_version=genesis::version(&prefix)?;
+        let installed=Installed::load_for_version(chain,chain_version)?;
         let (db_path, db_device, db_inode) = local_db_identity(path)?;
         let empty = tree::empty(&chain);
         let (genesis_id, total, catalog_id) = {
             let tx = db.transaction_with_behavior(TransactionBehavior::Deferred)?;
             let version: i64 = tx.pragma_query_value(None, "user_version", |r| r.get(0))?;
-            if version != 2 {
-                return Err(Error::StorageSchemaUnsupported);
-            }
-            let (bytes,stored_id,stored_chain,total):(Vec<u8>,Vec<u8>,Vec<u8>,i64)=tx.query_row("SELECT genesis,genesis_id,chain,total FROM meta WHERE singleton=1 AND schema_version=2",[],|r|Ok((r.get(0)?,r.get(1)?,r.get(2)?,r.get(3)?)))?;
+            if version != if chain_version==3{2}else{3} { return Err(Error::StorageSchemaUnsupported); }
+            let (bytes,stored_id,stored_chain,total):(Vec<u8>,Vec<u8>,Vec<u8>,i64)=tx.query_row("SELECT genesis,genesis_id,chain,total FROM meta WHERE singleton=1 AND schema_version=?1 AND length(genesis)<=?2",params![version,genesis::GENESIS_MAX as i64],|r|Ok((r.get(0)?,r.get(1)?,r.get(2)?,r.get(3)?)))?;
             let catalog_bytes: Vec<u8> = tx.query_row(
                 "SELECT catalog_id FROM body_cache WHERE singleton=1",
                 [],
@@ -388,7 +405,7 @@ impl Ledger {
             )?;
             let catalog_id: [u8; 32] = catalog_bytes.try_into().map_err(|_| Error::State)?;
             cache::usage(&tx)?;
-            let parsed = genesis::parse_genesis(&bytes, &installed.syntax)?;
+            let parsed = genesis::parse_genesis_for_version(&bytes, &installed.syntax,chain_version)?;
             if stored_id != parsed.genesis_id()
                 || stored_chain != chain
                 || natural(total)? != parsed.total()
@@ -399,7 +416,7 @@ impl Ledger {
             accounting(&h, parsed.total())?;
             // Bounded registry readback against the already parsed immutable genesis.
             let mut registry = tx.prepare(
-                "SELECT id,credit,public_key,consumed_height FROM sources ORDER BY id LIMIT 17",
+                "SELECT id,credit,public_key,consumed_height FROM sources ORDER BY id LIMIT 129",
             )?;
             let records = registry
                 .query_map([], |r| {
@@ -454,7 +471,8 @@ impl Ledger {
                     |r| r.get(0),
                 )?;
                 let parsed = history::parse_header(&header)?;
-                let rebuilt = history::encode_unverified_header(&history::UnverifiedBlockFields {
+                if parsed.version()!=chain_version{return Err(Error::Identity)}
+                let fields=history::UnverifiedBlockFields {
                     chain,
                     parent: header[44..108].try_into().map_err(|_| Error::State)?,
                     height: h.height,
@@ -463,7 +481,12 @@ impl Ledger {
                     fee_escrow: h.fees,
                     unconsumed_liabilities: h.liabilities,
                     body_ids: parsed.body_ids().to_vec(),
-                })?;
+                };
+                let rebuilt=if chain_version==3{history::encode_unverified_header(&fields)?}else{
+                    let lengths=lengths_at(&tx,h.height)?;
+                    if lengths.len()!=parsed.body_ids().len(){return Err(Error::State)}
+                    history::encode_network_header(&fields,history::network_encoded_size(&lengths)?)?
+                };
                 if parsed.block_id() != h.id || rebuilt != header {
                     return Err(Error::State);
                 }
@@ -514,11 +537,14 @@ impl Ledger {
         self.apply(bodies, Some(header))
     }
     fn apply(&mut self, bodies: &[Vec<u8>], expected: Option<&[u8]>) -> Result<AdmittedBlock> {
-        if !(1..=16).contains(&bodies.len())
+        let version=self.installed.version;
+        if (version==3&&!(1..=16).contains(&bodies.len()))
+            || (version==4&&bodies.len()>128)
             || bodies.iter().any(|b| b.len() > cp03_history::BODY_MAX)
         {
             return Err(Error::Capacity);
         }
+        if version==4{history::network_encoded_size(&bodies.iter().map(Vec::len).collect::<Vec<_>>())?;}
         let parsed = {
             #[cfg(feature = "admission-cost-trace")]
             let _cost = crate::cost_trace::span("body-parse-and-hashes");
@@ -533,7 +559,7 @@ impl Ledger {
         let body_ids = parsed.iter().map(|b| b.body_id()).collect::<Vec<_>>();
         if let Some(bytes) = expected {
             let header = history::parse_header(bytes)?;
-            if header.body_ids() != body_ids.as_slice() {
+            if header.version()!=version||header.body_ids() != body_ids.as_slice() {
                 return Err(Error::Block);
             }
         }
@@ -621,7 +647,7 @@ impl Ledger {
                 if state.leaf_count != next_count {
                     return Err(Error::State);
                 }
-                let header = history::encode_unverified_header(&history::UnverifiedBlockFields {
+                let fields = history::UnverifiedBlockFields {
                     chain: installed.syntax.chain,
                     parent: parent.id,
                     height,
@@ -630,7 +656,10 @@ impl Ledger {
                     fee_escrow: state.fees,
                     unconsumed_liabilities: state.liabilities,
                     body_ids: body_ids.clone(),
-                })?;
+                };
+                let header=if version==3{history::encode_unverified_header(&fields)?}else{
+                    history::encode_network_header(&fields,history::network_encoded_size(&bodies.iter().map(Vec::len).collect::<Vec<_>>())?)?
+                };
                 if expected.is_some_and(|bytes| bytes != header) {
                     return Err(Error::Block);
                 }
@@ -736,7 +765,7 @@ impl Ledger {
                         return Err(Error::State);
                     }
                 }
-                tree::restore(tx, tip.height)?;
+                tree::restore(tx, tip.height,removed.bodies.len()*2)?;
                 if tree::get(tx, empty, 40, 0)? != parent.root {
                     return Err(Error::State);
                 }
@@ -867,6 +896,11 @@ impl Ledger {
             },
         )
     }
+    pub fn block_version(&self)->u16{self.installed.version}
+    pub fn verification_attempts(&self)->VerificationAttempts{
+        VerificationAttempts{proofs:self.installed.proof_attempts.load(std::sync::atomic::Ordering::Relaxed),
+            source_signatures:self.installed.source_signature_attempts.load(std::sync::atomic::Ordering::Relaxed)}
+    }
     pub fn genesis_id(&self) -> Id {
         self.genesis_id
     }
@@ -986,15 +1020,17 @@ fn scan_frame(tx: &Connection, height: u64) -> Result<Vec<u8>> {
         .optional()?
         .ok_or(Error::Missing)?;
     let mut statement =
-        tx.prepare("SELECT ordinal,reduced FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 17")?;
+        tx.prepare("SELECT ordinal,reduced FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 129")?;
     let rows = statement
         .query_map([integer(height)?], |r| {
             Ok((r.get::<_, i64>(0)?, r.get::<_, Vec<u8>>(1)?))
         })?
         .collect::<rusqlite::Result<Vec<_>>>()?;
     drop(statement);
-    if rows.is_empty()
-        || rows.len() > 16
+    let parsed_header=history::parse_header(&header)?;
+    if parsed_header.version()!=database_version(tx)?{return Err(Error::Identity)}
+    if (rows.is_empty()&&parsed_header.version()==3)
+        || rows.len() > if parsed_header.version()==3{16}else{128}
         || rows
             .iter()
             .enumerate()

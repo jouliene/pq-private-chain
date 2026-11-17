@@ -1,8 +1,8 @@
 {
   "files": {
     ".gitignore": {
-      "bytes": 148,
-      "sha256": "4407926f28446a1c92ca5f7e930e34bfc726e002bb1c883624b7c37dc6d49f00"
+      "bytes": 158,
+      "sha256": "a97f805061c6b83291eb789021d0e80905d2c1ba8893cd96d81c3631ae378213"
     },
     "BUILD.md": {
       "bytes": 8109,
@@ -121,16 +121,16 @@
       "sha256": "3e06e1774465318928f17291388c06f18c2f9d8c86cc9553cc788c29084cca3f"
     },
     "source/crates/ledger-cp03/src/admission.rs": {
-      "bytes": 6460,
-      "sha256": "3f7990c0f3566b49d2f787e2a387903c7a85e3bb4b144c53b4f71c034fc7b3f6"
+      "bytes": 6613,
+      "sha256": "1530cd71e2635a592bc37cb6cdbba36f268f3877c7a13d8bd25e38a241527ece"
     },
     "source/crates/ledger-cp03/src/archive_io.rs": {
-      "bytes": 38440,
-      "sha256": "c8e3c36a5b7500f4a62f6d9ebdbfc04fa21dac5618d1f509cd104440f6508e70"
+      "bytes": 38441,
+      "sha256": "1fe4abe2a806aef50c77af9a3cb863140a6d89e1f4602fbd93cfb2ea8659f548"
     },
     "source/crates/ledger-cp03/src/cache.rs": {
-      "bytes": 6745,
-      "sha256": "6edc5e19bf7c7a1c6cccbd413626a0c9403231c1ae58ecec121398194ed2065d"
+      "bytes": 9000,
+      "sha256": "f733dbb74858a497127ed3fbaa28c2a4e2e0b3aba663d449fdc424a3068a2024"
     },
     "source/crates/ledger-cp03/src/cost_trace.rs": {
       "bytes": 3318,
@@ -141,20 +141,24 @@
       "sha256": "14664375e931bed44cd218bd3a53b307e53373851f71fee67f6d7e728fa3bd6b"
     },
     "source/crates/ledger-cp03/src/error.rs": {
-      "bytes": 1179,
-      "sha256": "11d8a4b12565e3061bf70e1a5732974659e49ae5db36939700ed77424ef65f2b"
+      "bytes": 1200,
+      "sha256": "11e96f5eec35ca239f12a84174e70ff1aab6ae88485cbc4ac1f9776510a4ef6b"
     },
     "source/crates/ledger-cp03/src/lib.rs": {
-      "bytes": 1118,
-      "sha256": "6e0e82b4e9c44937e5d5abe8deb3debd909068f37775ac5179da776e30a3862c"
+      "bytes": 1151,
+      "sha256": "fe3881e7d950b3826086dcb2a14cac658b46e7c3c161e455eb670d396425e00d"
     },
     "source/crates/ledger-cp03/src/main.rs": {
-      "bytes": 10984,
-      "sha256": "b0062643c43b7e33657b4e873af8a7d039fcc31603662dfda946e3d607aa809f"
+      "bytes": 11668,
+      "sha256": "6fb1ceed686528f6a270b1c14751ce839e8b3df6a94e59cfc9ae94fb4cb512c0"
     },
     "source/crates/ledger-cp03/src/scan.rs": {
-      "bytes": 2154,
-      "sha256": "0ad170e911df69d56093449666fa0c3b9b81f28cf646d367a3e5493e7c3413bf"
+      "bytes": 2345,
+      "sha256": "ce4eef7fef5633bff4558c7802f5e7a3862de61780ad845f6f280f2e753941e4"
+    },
+    "source/crates/ledger-cp03/src/schema-network04.sql": {
+      "bytes": 9812,
+      "sha256": "83cab4bab10e465cca1ede4556fb3d0eb0278aae16333dec1d4539b66056aa9a"
     },
     "source/crates/ledger-cp03/src/schema.sql": {
       "bytes": 8882,
@@ -165,20 +169,44 @@
       "sha256": "29f77c9df78afb29b485ed4942d5977fbcf1453ba3e02c18673b76fb4ccf23e5"
     },
     "source/crates/ledger-cp03/src/store.rs": {
-      "bytes": 40710,
-      "sha256": "63fab4d576ca6c91d594f22614073bd5aa577e48de4a82b20610b80ee612324f"
+      "bytes": 43772,
+      "sha256": "473ba8e0d326beaddf446f247da542ff65d4f1f9c639ff1f1507c31bb365b0ea"
     },
     "source/crates/ledger-cp03/src/store_archive.rs": {
-      "bytes": 29256,
-      "sha256": "dbe5cb93187b9a277223ade091a8fb40eeb7878b4e9ddb62744b7a451752e0cf"
+      "bytes": 29961,
+      "sha256": "20e9181c965bc2300de95463f206a62d230d98adb570e87af6520a9231066b77"
     },
     "source/crates/ledger-cp03/src/tree.rs": {
-      "bytes": 4492,
-      "sha256": "e2246f3ea7907db3037884c6d6a54a0001063baa520b4680df2bd568b02de00d"
+      "bytes": 4665,
+      "sha256": "4a94350969b1b060fdc2cf005a1adede25ac8a9cdafeea2c8b9d3d6249737bf3"
     },
     "source/crates/ledger-cp03/src/trusted.rs": {
-      "bytes": 3680,
-      "sha256": "bd0e4861f99848b54a30887e1b9331f7ec4a35ff110ca3c4426c82b3a2ee71f5"
+      "bytes": 5293,
+      "sha256": "2c9aa588fc5169f56003813e194d29e70ef92bf7b8d3ea7670772daeebd01b91"
+    },
+    "source/docs/architecture/CP_ALL_ARITY_PROOFS_03.md": {
+      "bytes": 9313,
+      "sha256": "c3ce28968211257c0824e7a4d865e284411b277d39880a9031b14826f255adcb"
+    },
+    "source/docs/architecture/CP_ARITIES_03.md": {
+      "bytes": 7493,
+      "sha256": "03b06586a8aa4fedf36aef73fb4648d6aa0aeb6b8a457d7557d94843ae3ba451"
+    },
+    "source/docs/architecture/CP_HISTORY_03.md": {
+      "bytes": 7803,
+      "sha256": "2068a3631484b3cdef188a439c5546abdc32a74122cb8cd7e9efe280d2d97fab"
+    },
+    "source/docs/architecture/CP_INTEGRATION_03.md": {
+      "bytes": 16862,
+      "sha256": "9c38caaa573b7ae9fbede3bbbec9cb81d1ce592ae543811811cc541fc4881ce0"
+    },
+    "source/docs/architecture/CP_NETWORK_04.json": {
+      "bytes": 5293,
+      "sha256": "663bf4e49424f8259997cd71950391dc0f9f297e4ae4a87366329041d7d20831"
+    },
+    "source/docs/architecture/CP_NETWORK_04.md": {
+      "bytes": 8145,
+      "sha256": "8775f761f692003a6a4345ea68fc32827b1d061006938bd8258dd95dc2f9aa23"
     },
     "source/docs/architecture/CP_PROTOCOL_03.json": {
       "bytes": 3885,
@@ -5853,16 +5881,16 @@
       "sha256": "227974ae7e594b1b4185f843aea3e7cf7175f0eee70779ea768974f5d34dd365"
     },
     "source/experiments/compact-history-v3/src/genesis.rs": {
-      "bytes": 1850,
-      "sha256": "0cd60117ee5027d44e0ec3714b45603ba59534773a1765a439346e050d4e67cc"
+      "bytes": 3573,
+      "sha256": "1e2e6ac45b9c6727bd48233d9b7065d324e96eb8e7fd293783ac9544189ae25f"
     },
     "source/experiments/compact-history-v3/src/history.rs": {
-      "bytes": 8413,
-      "sha256": "7c72fd751a4551d3d0fee51c901a433919c7fe7888e5ff85388cb9c96bc7f256"
+      "bytes": 14403,
+      "sha256": "fc58f04561935a6a25e201997ea59d428587783f7d9ab8e3315d3f9900eacdfb"
     },
     "source/experiments/compact-history-v3/src/lib.rs": {
-      "bytes": 583,
-      "sha256": "2c1c9fe05e2873a3fab3d559960bc725e6ce1be932996c36eabe9e9bb524bfa5"
+      "bytes": 909,
+      "sha256": "a0fa57665a128f2f173dee81a12e66eed0dca9c29bacc09f2ca062c09b91ffed"
     },
     "source/experiments/compact-history-v3/src/main.rs": {
       "bytes": 14051,
@@ -6009,8 +6037,8 @@
       "sha256": "ca67e66659a82661386e5a08471c913cb8b3f7c7ce37592207d3f513589a41c2"
     },
     "source/wallet/cp03/codec.mjs": {
-      "bytes": 6583,
-      "sha256": "2477a174f29e47af7beaea12b7247e70ce49b06c94b99ba8df0edd82c90ab886"
+      "bytes": 6695,
+      "sha256": "d34bdf00c7b685487e6c39da0c9f2a50ba06650f1a5dd224b5fffcc0c33c8750"
     },
     "source/wallet/cp03/cycle.mjs": {
       "bytes": 20253,
@@ -6029,12 +6057,12 @@
       "sha256": "2c4a57538e3070ee3be484407eb06dc9021f1ff568670fb01c76189187240490"
     },
     "source/wallet/cp03/public_ledger.mjs": {
-      "bytes": 12568,
-      "sha256": "f4d778efa49e9fe4d3721b80940312cc919053ec7e86ad65207b096b8e023c72"
+      "bytes": 13463,
+      "sha256": "8e0ef239b3f9c4e128946f0f4c92701748d5af868b4c0134045e52206b676464"
     },
     "source/wallet/cp03/recovery.mjs": {
-      "bytes": 11749,
-      "sha256": "985aaf171112cb2237d3f0c969e8cc3e5e2a9fe8f94c9e6357df9da1b92212d2"
+      "bytes": 14775,
+      "sha256": "b827ebfcac3f3bb46fa94559955f6048fca46278a8bcbb2415c8ecbf2188215a"
     },
     "vendor/ahash-0.8.12/.cargo-checksum.json": {
       "bytes": 2280,
@@ -23146,6 +23174,6 @@
     "AGENTS.md",
     "docs/"
   ],
-  "source_or_fixture_files": 1496,
+  "source_or_fixture_files": 1503,
   "vendor_files": 4275
 }

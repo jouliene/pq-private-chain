@@ -45,7 +45,7 @@ arch_proof_alternatives (Astra/high): docs/network-feasibility/OBLIGATIONS.md,
 experiments/network-feasibility/review/, exact crypto/cross-layer review and later
 independent clean-checkout reproduction; does not author implementation.
 No nested agents; four active including Root. One heavy campaign at a time.
-No heavy slot is currently allocated. Witness correspondence allocation01 is
+Allocation02 terminal PASS: SOURCE02 has25 diagnostic structural controls, 1.381s/21,376KiB; no new proof or Gate3 result. Allocation03: Root fresh core build `.work/network01`, CPU0/4GiB, 900s watchdog. No other native/proof jobs may overlap. Witness correspondence allocation01 is
 terminal PASS: actual four-block CP03 hash/body/header/root/path correspondence,
 1.354s/29,812KiB, no new proof or actual wallet acceptance. Evidence under
 wallet-witness/evidence/cp03-correspondence01.json and cp03-fixture01.json. The
@@ -96,3 +96,10 @@ explicit RETAIN pending/eviction semantics and distinct durable/admission ACKs.
 Root's producer supports an explicit2-payment diagnostic before the192-proof
 Gate1 allocation; neither mode has run yet. Source syntax checks passed; actual
 ABI and adapter compile remain pending. No Gate1/2/3 or architecture PASS claimed.
+
+The frozen Network04 core and wallet passed independent source review01; Root
+reviewed the contract and critical paths and refreshed5791explicit CORE entries
+(25changed/added; unchanged proof parameters and legacy protocol manifest).
+Source GO permits a fresh build and bounded compatibility/diagnostic tests only.
+Next: prepare/discover/review/install/build network01, execute new adapter controls
+and legacy replay, then diagnostic2 (four fresh proofs) before full96 allocation.

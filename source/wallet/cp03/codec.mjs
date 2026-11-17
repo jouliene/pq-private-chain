@@ -76,9 +76,10 @@ export function encodeBody(statement, envelopes, authorization, proof) {
   ]);
 }
 
-export function encodeGenesis({chain, protocolId, proofProfileId, programIds, sources}) {
+export function encodeGenesis({chain, protocolId, proofProfileId, programIds, sources, version = 3}) {
+  need(version === 3 || version === 4);
   need(Array.isArray(programIds) && programIds.length === 3 && Array.isArray(sources) &&
-    sources.length >= 1 && sources.length <= 16);
+    sources.length >= 1 && sources.length <= (version === 4 ? 128 : 16));
   let total = 0n, previous = null;
   const entries = sources.map(source => {
     fixed(source.id, 48); fixed(source.publicKey, 2592); unsigned(source.credit, MAX);
@@ -87,7 +88,7 @@ export function encodeGenesis({chain, protocolId, proofProfileId, programIds, so
     return Buffer.concat([source.id, u64(source.credit), source.publicKey]);
   });
   const result = Buffer.concat([
-    Buffer.from('CPGEN003'), u16(3), u16(0), fixed(chain, 32), u64(total), u16(sources.length), u16(1),
+    Buffer.from(version === 4 ? 'CPGEN004' : 'CPGEN003'), u16(version), u16(0), fixed(chain, 32), u64(total), u16(sources.length), u16(1),
     fixed(protocolId, 64), fixed(proofProfileId, 64), ...programIds.map(x => fixed(x, 64)), ...entries,
   ]);
   need(result.length === 376 + 2648 * sources.length); return result;

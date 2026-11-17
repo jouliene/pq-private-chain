@@ -4,6 +4,7 @@ pub enum Error {
     Storage,
     StorageSchemaUnsupported,
     ArchiveBacklog,
+    RetentionPolicy,
     HistoryUnavailable,
     ArchiveCorrupt,
     ArchiveIo,

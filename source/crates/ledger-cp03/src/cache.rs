@@ -7,12 +7,18 @@ use crate::{
 use rusqlite::{Connection, Transaction, params};
 
 pub(crate) const MAX_BATCH: usize = 16;
-pub(crate) const MAX_BLOCK_BYTES: u64 = 16 * cp03_history::BODY_MAX as u64;
+pub(crate) const MAX_BLOCK_BYTES: u64 = cp03_history::NETWORK_BLOCK_MAX as u64;
+const LEGACY_MAX_BLOCK_BYTES: u64 = 16 * cp03_history::BODY_MAX as u64;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Retention { Archive, Retain }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct CachePolicy {
     hard_bytes: u64,
     archive_limit_bytes: u64,
+    retention: Retention,
+    block_bytes: u64,
 }
 
 impl CachePolicy {
@@ -26,6 +32,8 @@ impl CachePolicy {
         Ok(Self {
             hard_bytes,
             archive_limit_bytes,
+            retention: Retention::Archive,
+            block_bytes: LEGACY_MAX_BLOCK_BYTES,
         })
     }
 
@@ -35,10 +43,17 @@ impl CachePolicy {
     pub fn archive_limit_bytes(self) -> u64 {
         self.archive_limit_bytes
     }
+    pub fn retaining(hard_bytes:u64) -> Result<Self> {
+        let mut p=Self::new(hard_bytes,1)?;p.retention=Retention::Retain;p.block_bytes=MAX_BLOCK_BYTES;Ok(p)
+    }
+    pub fn retention(self)->Retention { self.retention }
+    pub(crate) fn for_version(mut self,version:u16)->Result<Self>{
+        self.block_bytes=match version{3 if self.retention==Retention::Archive=>LEGACY_MAX_BLOCK_BYTES,4=>MAX_BLOCK_BYTES,_=>return Err(Error::RetentionPolicy)};Ok(self)
+    }
 
     /// A small test/operator quota may be smaller than one maximum-sized block.
     pub fn watermark(self) -> u64 {
-        self.hard_bytes.saturating_sub(MAX_BLOCK_BYTES)
+        self.hard_bytes.saturating_sub(self.block_bytes)
     }
 }
 
@@ -49,6 +64,8 @@ impl Default for CachePolicy {
         Self {
             hard_bytes: 4_000_000_000_000,
             archive_limit_bytes: i64::MAX as u64,
+            retention: Retention::Archive,
+            block_bytes: LEGACY_MAX_BLOCK_BYTES,
         }
     }
 }
@@ -74,6 +91,13 @@ pub(crate) fn install(
     policy: CachePolicy,
     catalog_id: &[u8; 32],
 ) -> Result<()> {
+    let version:i64=tx.pragma_query_value(None,"user_version",|r|r.get(0))?;
+    if version==3 {
+        tx.execute("INSERT INTO body_cache(singleton,catalog_id,hard_bytes,cached_bytes,unexported_bytes,archive_limit_bytes,archive_committed_bytes,next_segment,retention) VALUES(1,?3,?1,0,0,?2,0,0,?4)",
+            params![integer(policy.hard_bytes)?,integer(policy.archive_limit_bytes)?,catalog_id.as_slice(),if policy.retention==Retention::Retain{1}else{0}])?;
+        return Ok(());
+    }
+    if version!=2||policy.retention!=Retention::Archive{return Err(Error::RetentionPolicy)}
     tx.execute(
         "INSERT INTO body_cache(singleton,catalog_id,hard_bytes,cached_bytes,unexported_bytes,archive_limit_bytes,archive_committed_bytes,next_segment) VALUES(1,?3,?1,0,0,?2,0,0)",
         params![integer(policy.hard_bytes)?, integer(policy.archive_limit_bytes)?, catalog_id.as_slice()],
@@ -82,14 +106,17 @@ pub(crate) fn install(
 }
 
 pub(crate) fn usage(db: &Connection) -> Result<CacheUsage> {
+    let schema:i64=db.pragma_query_value(None,"user_version",|r|r.get(0))?;
+    let retention=match schema {2=>Retention::Archive,3=>match db.query_row("SELECT retention FROM body_cache WHERE singleton=1",[],|r|r.get::<_,i64>(0))?{0=>Retention::Archive,1=>Retention::Retain,_=>return Err(Error::State)},_=>return Err(Error::StorageSchemaUnsupported)};
     let row = db.query_row(
         "SELECT hard_bytes,cached_bytes,unexported_bytes,archive_limit_bytes,archive_committed_bytes,next_segment FROM body_cache WHERE singleton=1",
         [],
         |r| Ok((r.get::<_, i64>(0)?, r.get::<_, i64>(1)?, r.get::<_, i64>(2)?,
                  r.get::<_, i64>(3)?, r.get::<_, i64>(4)?, r.get::<_, i64>(5)?)),
     )?;
+    let mut policy=CachePolicy::new(natural(row.0)?, natural(row.3)?)?;policy.retention=retention;policy.block_bytes=if schema==2{LEGACY_MAX_BLOCK_BYTES}else{MAX_BLOCK_BYTES};
     let value = CacheUsage {
-        policy: CachePolicy::new(natural(row.0)?, natural(row.3)?)?,
+        policy,
         cached_bytes: natural(row.1)?,
         unexported_bytes: natural(row.2)?,
         archive_committed_bytes: natural(row.4)?,
@@ -98,6 +125,7 @@ pub(crate) fn usage(db: &Connection) -> Result<CacheUsage> {
     if value.cached_bytes > value.policy.hard_bytes
         || value.unexported_bytes > value.cached_bytes
         || value.archive_committed_bytes > value.policy.archive_limit_bytes
+        || (retention==Retention::Retain&&(value.unexported_bytes!=0||value.archive_committed_bytes!=0||value.next_segment!=0))
     {
         return Err(Error::State);
     }
@@ -108,7 +136,8 @@ pub(crate) fn usage(db: &Connection) -> Result<CacheUsage> {
 /// INSERT triggers perform the actual reservation/counter updates atomically.
 pub(crate) fn reserve(tx: &Transaction<'_>, incoming_bytes: u64) -> Result<()> {
     let current = usage(tx)?;
-    if incoming_bytes > MAX_BLOCK_BYTES {
+    let schema:i64=tx.pragma_query_value(None,"user_version",|r|r.get(0))?;
+    if incoming_bytes > if schema==2{LEGACY_MAX_BLOCK_BYTES}else{MAX_BLOCK_BYTES} {
         return Err(Error::Capacity);
     }
     if current
@@ -127,6 +156,7 @@ pub(crate) fn reserve(tx: &Transaction<'_>, incoming_bytes: u64) -> Result<()> {
 /// This helper has no file I/O and cannot manufacture an archive catalog entry.
 pub(crate) fn evict(tx: &Transaction<'_>) -> Result<EvictionProgress> {
     let before = usage(tx)?;
+    if before.policy.retention==Retention::Retain{return Err(Error::RetentionPolicy)}
     let watermark = before.policy.watermark();
     if before.cached_bytes <= watermark {
         return Ok(EvictionProgress::AtWatermark);
@@ -158,7 +188,7 @@ pub(crate) fn evict(tx: &Transaction<'_>) -> Result<EvictionProgress> {
         if !exported {
             break;
         }
-        if height <= 0 || !(0..16).contains(&ordinal) {
+        if height <= 0 || !(0..128).contains(&ordinal) {
             return Err(Error::State);
         }
         let body_id = id(stored_id)?;

@@ -1,5 +1,5 @@
 //! Local public-artifact CLI. No private witness/key/receipt plaintext intake.
-use ledger_cp03::{Anchor, Error, Head, Ledger, Result, history_codec};
+use ledger_cp03::{Anchor, CachePolicy, Error, Head, Ledger, Result, history_codec};
 use serde_json::{Value, json};
 use std::{
     env, fs,
@@ -75,6 +75,10 @@ fn describe(h: Head, genesis: [u8; 64], chain: [u8; 32]) -> Value {
         "height":h.height.to_string(),"block_id":hex(&h.id),"leaf_count":h.leaf_count.to_string(),
         "root_le":field_hex(&h.root),"fee_escrow":h.fees.to_string(),"unconsumed_liabilities":h.liabilities.to_string()})
 }
+fn describe_version(h:Head,genesis:[u8;64],chain:[u8;32],version:u16)->Value{
+    let mut value=describe(h,genesis,chain);
+    if version==4{value["block_version"]=json!("4");}value
+}
 /// Create-only publication in the same directory. No complete marker or stdout on failure.
 /// An I/O failure after link/sync may leave the public file; its presence is not a success verdict.
 fn publish<T>(path: &Path, write: impl FnOnce(&mut fs::File) -> Result<T>) -> Result<T> {
@@ -106,8 +110,8 @@ fn publish<T>(path: &Path, write: impl FnOnce(&mut fs::File) -> Result<T>) -> Re
 }
 fn run() -> Result<Value> {
     // Paths/chain/index/root are public. Never accept a private fixture argument.
-    let args = env::args_os().skip(1).take(22).collect::<Vec<_>>();
-    if args.len() < 3 || args.len() > 20 {
+    let args = env::args_os().skip(1).take(134).collect::<Vec<_>>();
+    if args.len() < 3 || args.len() > 132 {
         return Err(Error::Codec);
     }
     if args[0] == "check-scan" {
@@ -130,20 +134,24 @@ fn run() -> Result<Value> {
     let op = args[0].to_str().ok_or(Error::Codec)?;
     let path = Path::new(&args[1]);
     let chain = bytes::<32>(args[2].to_str().ok_or(Error::Codec)?)?;
-    if op == "init" {
-        if args.len() != 4 {
+    if op == "init"||op=="init-retain" {
+        if (op=="init"&&args.len()!=4)||(op=="init-retain"&&![4,5].contains(&args.len())) {
             return Err(Error::Codec);
         }
         let genesis = read(Path::new(&args[3]), history_codec::genesis::GENESIS_MAX)?;
-        let ledger = Ledger::create(path, chain, &genesis)?;
-        return Ok(describe(ledger.head()?, ledger.genesis_id(), chain));
+        let ledger = if op=="init"{Ledger::create(path, chain, &genesis)?}else{
+            let bytes=if args.len()==5{number(args[4].to_str().ok_or(Error::Codec)?)?}else{512*1024*1024};
+            Ledger::create_with_archive_policy(path,chain,&genesis,CachePolicy::retaining(bytes)?)?
+        };
+        return Ok(describe_version(ledger.head()?, ledger.genesis_id(), chain,ledger.block_version()));
     }
     let mut ledger = Ledger::open(path, chain)?;
     let h = match op {
         "head" if args.len() == 3 => ledger.head()?,
         "admit" | "replay" => {
             let start = if op == "replay" { 4 } else { 3 };
-            if args.len() <= start || args.len() - start > 16 {
+            if args.len() < start || (args.len()==start&&ledger.block_version()==3)
+                || args.len() - start > if ledger.block_version()==3{16}else{128} {
                 return Err(Error::Codec);
             }
             let mut bodies = Vec::new();
@@ -186,7 +194,7 @@ fn run() -> Result<Value> {
         "scan" if args.len() == 4 => publish(Path::new(&args[3]), |file| ledger.export_scan(file))?,
         _ => return Err(Error::Codec),
     };
-    Ok(describe(h, ledger.genesis_id(), chain))
+    Ok(describe_version(h, ledger.genesis_id(), chain,ledger.block_version()))
 }
 fn main() {
     match run() {

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "source/wallet/cp03/codec.mjs": {
+      "after": "d34bdf00c7b685487e6c39da0c9f2a50ba06650f1a5dd224b5fffcc0c33c8750",
+      "before": "2477a174f29e47af7beaea12b7247e70ce49b06c94b99ba8df0edd82c90ab886"
+    },
+    "source/wallet/cp03/public_ledger.mjs": {
+      "after": "8e0ef239b3f9c4e128946f0f4c92701748d5af868b4c0134045e52206b676464",
+      "before": "f4d778efa49e9fe4d3721b80940312cc919053ec7e86ad65207b096b8e023c72"
+    },
+    "source/wallet/cp03/recovery.mjs": {
+      "after": "b827ebfcac3f3bb46fa94559955f6048fca46278a8bcbb2415c8ecbf2188215a",
+      "before": "985aaf171112cb2237d3f0c969e8cc3e5e2a9fe8f94c9e6357df9da1b92212d2"
+    }
+  },
+  "format": "NETWORK04-WALLET-COMPAT-SOURCE01",
+  "legacy_default_version": 3,
+  "network_version": 4,
+  "new_proofs_or_gate3_acceptance": false
+}

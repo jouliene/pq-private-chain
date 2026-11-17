@@ -153,13 +153,13 @@ fn prepare_inputs(ledger: &mut Ledger) -> Result<Vec<ExportInput>> {
                 let full = full.ok_or(Error::State)?;
                 let length = natural(full_length)?;
                 if height <= 0
-                    || !(0..16).contains(&ordinal)
+                    || !(0..128).contains(&ordinal)
                     || pending_id != stored_id
                     || length != full.len() as u64
                     || length == 0
                     || length > cp03_history::BODY_MAX as u64
                     || reduced.len() > 9499
-                    || header.len() > 1232
+                    || header.len() > cp03_history::HEADER_MAX
                 {
                     return Err(Error::State);
                 }
@@ -181,6 +181,7 @@ fn prepare_inputs(ledger: &mut Ledger) -> Result<Vec<ExportInput>> {
     for (input, raw_header) in captured {
         let header = history::parse_header(&raw_header)?;
         if header.height() != input.height
+            || header.version()!=ledger.installed.version
             || raw_header[12..44] != ledger.installed.syntax.chain
             || header.body_ids().get(input.ordinal as usize) != Some(&input.id)
         {
@@ -328,7 +329,7 @@ impl VerifiedHistorical {
             return Err(Error::State);
         }
         let mut query = db.prepare(
-            "SELECT ordinal,id,full_length,reduced FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 17",
+            "SELECT ordinal,id,full_length,reduced FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 129",
         )?;
         let rows = query
             .query_map([integer(height)?], |r| {
@@ -372,11 +373,11 @@ fn capture_history(db: &Connection, height: u64, chain: &[u8; 32]) -> Result<Cap
     let (block_id, raw_header) = row.ok_or(Error::Missing)?;
     let block_id = id(block_id)?;
     let header = history::parse_header(&raw_header)?;
-    if header.height() != height || header.block_id() != block_id || &raw_header[12..44] != chain {
+    if header.version()!=database_version(db)?||header.height() != height || header.block_id() != block_id || &raw_header[12..44] != chain {
         return Err(Error::State);
     }
     let mut query = db.prepare(
-        "SELECT b.ordinal,b.id,b.full_length,b.reduced,b.full,a.full_length,a.segment,a.record_offset,s.committed_end FROM bodies b LEFT JOIN archive_objects a ON a.id=b.id LEFT JOIN archive_segments s ON s.segment=a.segment WHERE b.height=?1 ORDER BY b.ordinal LIMIT 17",
+        "SELECT b.ordinal,b.id,b.full_length,b.reduced,b.full,a.full_length,a.segment,a.record_offset,s.committed_end FROM bodies b LEFT JOIN archive_objects a ON a.id=b.id LEFT JOIN archive_segments s ON s.segment=a.segment WHERE b.height=?1 ORDER BY b.ordinal LIMIT 129",
     )?;
     let rows = query
         .query_map([integer(height)?], |r| {
@@ -441,6 +442,14 @@ fn capture_history(db: &Connection, height: u64, chain: &[u8; 32]) -> Result<Cap
             cached,
             locator,
         });
+    }
+    if header.version()==4{
+        let lengths=bodies.iter().map(|b|b.identity.full_length as usize).collect::<Vec<_>>();
+        if header.encoded_full_bytes()!=Some(history::network_encoded_size(&lengths)?){return Err(Error::State)}
+        for b in &bodies{
+            let r=body::parse_reduced(&b.identity.reduced)?;
+            if r.prefix().raw().len()+r.prefix().declared_proof_length()!=b.identity.full_length as usize{return Err(Error::State)}
+        }
     }
     drop(header);
     Ok(CapturedHistory {
@@ -600,6 +609,7 @@ impl Ledger {
         archive: &'a mut LocalArchive,
     ) -> Result<ArchiveSession<'a>> {
         self.ready()?;
+        if self.cache_usage()?.policy.retention()==crate::Retention::Retain{return Err(Error::RetentionPolicy)}
         archive.check_binding(&catalog_binding(self)?)?;
         Ok(ArchiveSession {
             ledger: self,

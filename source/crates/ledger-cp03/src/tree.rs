@@ -82,10 +82,12 @@ pub fn append(
     }
     get(db, empty, 40, 0)
 }
-pub fn restore(db: &Connection, height: u64) -> Result<()> {
-    // At most 32 outputs * 41 touched nodes; first preimage per block is retained.
+pub fn restore(db: &Connection, height: u64, outputs:usize) -> Result<()> {
+    if outputs>256{return Err(Error::Capacity)}
+    let max=outputs.checked_mul(41).ok_or(Error::Capacity)?;
+    // First preimage per touched node; an empty block must have exactly zero undo rows.
     let mut stmt = db.prepare(
-        "SELECT level,idx,old_value FROM node_undo WHERE height=?1 ORDER BY level,idx LIMIT 1313",
+        "SELECT level,idx,old_value FROM node_undo WHERE height=?1 ORDER BY level,idx LIMIT 10497",
     )?;
     let records = stmt
         .query_map([integer(height)?], |r| {
@@ -96,7 +98,7 @@ pub fn restore(db: &Connection, height: u64) -> Result<()> {
             ))
         })?
         .collect::<rusqlite::Result<Vec<_>>>()?;
-    if records.is_empty() || records.len() > 1312 {
+    if (outputs==0&&!records.is_empty())||(outputs>0&&records.is_empty())||records.len()>max {
         return Err(Error::State);
     }
     drop(stmt);
