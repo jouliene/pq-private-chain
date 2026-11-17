@@ -1,0 +1,378 @@
+{
+  "accounting": {
+    "fees": 10570146,
+    "liabilities": 0,
+    "remaining_note_supply_by_conservation": 1089429854,
+    "total": 1100000000
+  },
+  "checks": {
+    "all14_actual_sql_hashes_match": true,
+    "all_five_positive_admissions": true,
+    "all_five_proof_associations_match": true,
+    "all_prover_namespace_pids_actually_sampled": true,
+    "backup_only_new_process_spend_actual_positive": true,
+    "distinct_original_restore_host_pids": true,
+    "final_accounting_recomputed": true,
+    "live_denial_pid_namespace_mount_seccomp_fd_controls": true,
+    "original_actual_exit0_before_fresh_restore_enforced_by_reviewed_driver": true
+  },
+  "disposition": "GO for Root allocation of predeclared full264 profile; small5 actual PASS, full expiry/reorg/deep-replay acceptance pending.",
+  "events": [
+    {
+      "op": "boundary",
+      "restore": false,
+      "seconds": 0.2574200819944963
+    },
+    {
+      "actual_new_ledger_exists_and_wallet_denied": true,
+      "op": "init",
+      "restore": false,
+      "seconds": 0.3200432900339365
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 6.7454617590410635
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 12.007910371990874
+    },
+    {
+      "height": "1",
+      "op": "admit",
+      "proof_bodies": 2,
+      "restore": false,
+      "seconds": 12.030535228084773
+    },
+    {
+      "bytes": 19366,
+      "height": "1",
+      "op": "scan",
+      "restore": false,
+      "seconds": 13.366805945057422
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 19.8738382300362
+    },
+    {
+      "height": "2",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 19.897129571065307
+    },
+    {
+      "bytes": 24618,
+      "height": "2",
+      "op": "scan",
+      "restore": false,
+      "seconds": 21.1187119850656
+    },
+    {
+      "name": "joint-lease-and-packet-controls",
+      "op": "mark",
+      "restore": false,
+      "seconds": 22.403578918077983
+    },
+    {
+      "name": "genuine-private-receipt-and-local-witnesses",
+      "op": "mark",
+      "restore": false,
+      "seconds": 22.40376727108378
+    },
+    {
+      "op": "proof",
+      "restore": false,
+      "seconds": 27.65048219403252
+    },
+    {
+      "height": "3",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": false,
+      "seconds": 27.674086176091805
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": false,
+      "seconds": 28.88644089899026
+    },
+    {
+      "name": "recipient-fresh-local-witness-spend",
+      "op": "mark",
+      "restore": false,
+      "seconds": 30.09900856798049
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": false,
+      "seconds": 30.09945196902845
+    },
+    {
+      "op": "boundary",
+      "restore": true,
+      "seconds": 30.34792232105974
+    },
+    {
+      "op": "context",
+      "restore": true,
+      "seconds": 30.38077972503379
+    },
+    {
+      "bytes": 29806,
+      "height": "3",
+      "op": "scan",
+      "restore": true,
+      "seconds": 30.404027141979896
+    },
+    {
+      "op": "proof",
+      "restore": true,
+      "seconds": 36.91720199701376
+    },
+    {
+      "height": "4",
+      "op": "admit",
+      "proof_bodies": 1,
+      "restore": true,
+      "seconds": 36.94040521804709
+    },
+    {
+      "name": "backup-only-new-process-spend",
+      "op": "mark",
+      "restore": true,
+      "seconds": 38.14648635301273
+    },
+    {
+      "name": "native-work-complete",
+      "op": "mark",
+      "restore": true,
+      "seconds": 38.15187825204339
+    }
+  ],
+  "final_all14_snapshot": {
+    "anchors": {
+      "rows": 5,
+      "sha256": "1db8edf55dfb1db4eeb18a5e32ce3fc273a1129b008d5d436672e31bb6cdc99b"
+    },
+    "archive_objects": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_pending": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archive_segments": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "blocks": {
+      "rows": 4,
+      "sha256": "3133b5cf209f4e57ddeb35f53d418f6132160c3178c5fed9fb5994f3451d1ede"
+    },
+    "bodies": {
+      "rows": 5,
+      "sha256": "2a20df2fc0754467e403f0c2d93736239876bd29760f84aced4fdbc9573ab6d7"
+    },
+    "body_cache": {
+      "rows": 1,
+      "sha256": "7fa661acb375f44969646560a48a9d59f230c97edb5bc66b712e9444751f24a8"
+    },
+    "cores": {
+      "rows": 5,
+      "sha256": "637ebede53155adea1f6740978d1065eea6bce073222fc93ed6a4fab59357e63"
+    },
+    "leaves": {
+      "rows": 10,
+      "sha256": "9111814b6f432736982543e95ccd2f7ff223f679c175b292554615c51c75ac0e"
+    },
+    "meta": {
+      "rows": 1,
+      "sha256": "12ffac1aedb87c3bdb0fdd9770e4ce83039223c89186a0f83864874d2958b5b5"
+    },
+    "node_undo": {
+      "rows": 171,
+      "sha256": "8ab0513b9d74c142ed0300ff03f4b1cadd46db78f90316befd4f2a2320fe03d1"
+    },
+    "nodes": {
+      "rows": 57,
+      "sha256": "b81122d6565f20c798562ba1b526ff0fede3919a9d306d150f67c14dba291f03"
+    },
+    "nullifiers": {
+      "rows": 4,
+      "sha256": "38fb5cb9f7ef104e4926852e5c2c196f3bb7d8160a4b52d849316ab119df17ee"
+    },
+    "sources": {
+      "rows": 2,
+      "sha256": "bb3ee56f9e8b548357e9a700d38b9eeecc0b8bad3d2516293c594866a372c09c"
+    }
+  },
+  "format": "CP04-INDEPENDENT-SMALL03-ACTUAL-REVIEW01",
+  "inputs": {
+    "RESULT.json": "0f8b75248bec491a210618ebe98e5c5e5ce8237a306f0e402d26f74e55d1eb42",
+    "claim.json": "4124b852750bec40f51d781619d8de34e4d570762654d363a8195c7378d42fb1",
+    "original-process.json": "0967d1ff82a5161c1645723de5c801b4f50680ef9efec1d7f4921cc2895f4b4d",
+    "restore-process.json": "2adf383c66330c42b0fe794580cde53e45478f0ac5773cb3ae6b8effabef2be2"
+  },
+  "installation_sha256": "c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b",
+  "limitations": [
+    "Small run does not execute expiry, rollback/replacement or deep replay: full264 remains required.",
+    "Public receipts plus reviewed RAM-only driver establish experiment boundary; no private backup bytes were inspected or hashed.",
+    "Finite process sampling can miss short-lived helpers; all five prover workers were observed.",
+    "No annual ordinary-node affordability, production readiness or PQ composition theorem conclusion."
+  ],
+  "procfs_recovery": [
+    {
+      "classification": "live",
+      "confirmed_exit": false,
+      "errno": 13,
+      "error_type": "PermissionError",
+      "expected_starttime_ticks": 85657292,
+      "final_evidence": {
+        "classification": "same_identity_exited",
+        "confirmed_exit": true,
+        "observed_starttime_ticks": 85657292,
+        "observed_state": "Z"
+      },
+      "first_failure": {
+        "classification": "live",
+        "confirmed_exit": false,
+        "errno": 13,
+        "error_type": "PermissionError",
+        "expected_starttime_ticks": 85657292,
+        "host_pid": 2484024,
+        "observed_starttime_ticks": 85657292,
+        "observed_state": "R",
+        "operation": "fd_directory"
+      },
+      "host_pid": 2484024,
+      "observed_starttime_ticks": 85657292,
+      "observed_state": "R",
+      "operation": "fd_directory",
+      "retry": {
+        "attempt_cap": 16,
+        "attempts": 2,
+        "backoff_seconds": 0.0002,
+        "deadline_seconds": 0.02,
+        "elapsed_seconds": 0.0003989060642197728,
+        "final_disposition": "confirmed_exit"
+      }
+    }
+  ],
+  "proofs": [
+    {
+      "actual_worker_namespace_pid": 21,
+      "arity": 0,
+      "body_bytes": 1765081,
+      "body_sha256": "a16dd52318398b01c3d226d6f8abc79037d3814842c8469cfdac716cfabeb371",
+      "height": 1,
+      "label": "credit-0",
+      "ordinal": 0,
+      "parent_receipt_sha256": "655fba9bf895fba6ab8f02a7cbb7bcbeb9f34451076c0cd1a710438a90b697a7",
+      "positive_admissions": 1,
+      "proof_bytes": 1755658,
+      "sample_count": 28
+    },
+    {
+      "actual_worker_namespace_pid": 30,
+      "arity": 0,
+      "body_bytes": 1762137,
+      "body_sha256": "df50fddb1a2d7b1cf4808ec4286330355109cb81c13e93bab42fe81ace4b5172",
+      "height": 1,
+      "label": "credit-1",
+      "ordinal": 1,
+      "parent_receipt_sha256": "7c98cd9256bae6361a6ab3559935ad81dbe859fe2eb6790ec66df5730bb7c772",
+      "positive_admissions": 1,
+      "proof_bytes": 1752714,
+      "sample_count": 29
+    },
+    {
+      "actual_worker_namespace_pid": 52,
+      "arity": 2,
+      "body_bytes": 1733270,
+      "body_sha256": "d93d5ce7a7691739499afd5c63ee2a1814f1c065141c577d15d590a4251b8f3a",
+      "height": 2,
+      "label": "ordinary-receipt",
+      "ordinal": 0,
+      "parent_receipt_sha256": "e41d87e780d63a28f567c358c51dcd7c3478068f02da57b264a3b68006418887",
+      "positive_admissions": 1,
+      "proof_bytes": 1728394,
+      "sample_count": 29
+    },
+    {
+      "actual_worker_namespace_pid": 84,
+      "arity": 1,
+      "body_bytes": 1762326,
+      "body_sha256": "2aded17a1a21b368c5dc0ff7fbd495c5a195c24ea8e633bdd6579f7c401f9404",
+      "height": 3,
+      "label": "recipient-spend",
+      "ordinal": 0,
+      "parent_receipt_sha256": "0e99d119e76888b32a6ccb469434344909622de7fcd3ba55691488d7ac912769",
+      "positive_admissions": 1,
+      "proof_bytes": 1757514,
+      "sample_count": 29
+    },
+    {
+      "actual_worker_namespace_pid": 36,
+      "arity": 1,
+      "body_bytes": 1746070,
+      "body_sha256": "937e6ff43b737a092867077748b5370570ac2bf36e3b12bea358809fda0f0964",
+      "height": 4,
+      "label": "restored-spend",
+      "ordinal": 0,
+      "parent_receipt_sha256": "5e44296605ea6b8dc9274901a1e1f96f02a682cb7dd5e8557697cb3b92db5562",
+      "positive_admissions": 1,
+      "proof_bytes": 1741258,
+      "sample_count": 29
+    }
+  ],
+  "resource_scopes": {
+    "actor_wrapper_wall_seconds": [
+      30.096762565895915,
+      8.050669824006036
+    ],
+    "controller_rss_note": "Cumulative process peak includes preflight; not isolated wallet stage peak.",
+    "controller_self": {
+      "maxrss_kib": 933504,
+      "scope": "Controller Python SELF only; excludes native CLI and isolated wallet descendants",
+      "system_seconds": 0.586048,
+      "user_seconds": 3.157259
+    },
+    "native_cli_self_cpu_seconds": 11.555297,
+    "node_self_seconds": [
+      0.78,
+      0.31
+    ],
+    "node_waited_descendant_seconds": [
+      20.57,
+      5.18
+    ],
+    "note": "Parent worker metrics are nested inside Node waited descendants; do not add them. Bwrap leader is separate, not total native cost. Node terminal handshake excludes public serialization/exit tail.",
+    "sampled_concurrent_tree_peak_kib": [
+      315788,
+      336980
+    ],
+    "worker_wall_seconds_sum": 8.991188813117333
+  },
+  "retained": {
+    "archive_committed_bytes": 0,
+    "bodies": 5,
+    "cached_bytes": 8768884,
+    "full_bytes": 8768884,
+    "missing_full": 0,
+    "pending": 0,
+    "retention": 1,
+    "unexported_bytes": 0
+  },
+  "review_scope": "Read actual public RESULT and both actor receipts; independently recomputed exact14 SQL table hashes, every full-body/public-proof/statement/Parent-artifact association and all five Parent statuses. No native verification/build/proof rerun; no private material read. Did not rehash repeated runtime/dependency closures.",
+  "source_runtime_unchanged": true,
+  "source_sha256": "fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e"
+}

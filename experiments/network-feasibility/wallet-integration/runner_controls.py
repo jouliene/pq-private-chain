@@ -147,5 +147,95 @@ class PermissionRaceControls(unittest.TestCase):
         finally:actor.selector.close()
 
 
+class RetryBoundControls(unittest.TestCase):
+    def setUp(self):
+        self.actor=runner.Actor(PublicFrameOwner(),False)
+        self.now=0.0
+        self.clock=patch.object(runner.time,'monotonic',side_effect=lambda:self.now)
+        self.sleep=patch.object(runner.time,'sleep',side_effect=self.advance)
+        self.clock.start();self.sleep.start()
+
+    def tearDown(self):
+        self.sleep.stop();self.clock.stop();self.actor.selector.close()
+
+    def advance(self,seconds):
+        self.now+=seconds
+
+    def permission(self,start=100):
+        error=PermissionError(13,'DO_NOT_RECORD_THIS')
+        error.policy_operation='fd_directory';error.policy_starttime=start
+        return error
+
+    def live(self):
+        return {'classification':'live','confirmed_exit':False,'observed_state':'R','observed_starttime_ticks':100}
+
+    def complete(self):
+        return {'exited':False,'start':100,'fields':{'State':'S (sleeping)'},'children':[],'fd_checks':3}
+
+    def test_complete_retry_is_same_identity_and_full_policy(self):
+        observed=self.complete()
+        with patch.object(self.actor,'policy_sample',side_effect=[self.permission(),observed]) as sample, \
+             patch.object(runner,'permission_exit_evidence',return_value=self.live()):
+            self.assertIs(self.actor.observe_same_pid(123),observed)
+        self.assertEqual(sample.call_args_list[1].args,(123,100))
+        self.assertEqual(self.actor.permission_full_count,1)
+        evidence=self.actor.permission_exit_races[0]
+        self.assertEqual(evidence['first_failure']['observed_state'],'R')
+        self.assertEqual(evidence['final_evidence']['classification'],'same_identity_policy_verified')
+        self.assertEqual(evidence['retry']['attempts'],2)
+
+    def test_later_double_absence_is_exit_not_a_successful_policy_sample(self):
+        gone={'classification':'gone','confirmed_exit':True}
+        with patch.object(self.actor,'policy_sample',side_effect=[self.permission(),FileNotFoundError()]), \
+             patch.object(runner,'permission_exit_evidence',side_effect=[self.live(),gone]):
+            self.assertTrue(self.actor.observe_same_pid(123)['exited'])
+        self.assertEqual(self.actor.permission_full_count,0)
+        self.assertEqual(self.actor.permission_exit_count,1)
+
+    def test_persistent_live_error_exhausts_exact_attempt_cap(self):
+        with patch.object(self.actor,'policy_sample',side_effect=lambda *args:(_ for _ in ()).throw(self.permission())) as sample, \
+             patch.object(runner,'permission_exit_evidence',return_value=self.live()):
+            with self.assertRaises(PermissionError):self.actor.observe_same_pid(123)
+        self.assertEqual(sample.call_count,16)
+        self.assertTrue(all(call.args==(123,100) for call in sample.call_args_list[1:]))
+        self.assertEqual(self.actor.public_result['proc_observation_failure']['retry']['final_disposition'],'budget_exhausted')
+        self.assertGreater(self.actor.permission_retry_wall,0)
+        self.assertNotIn('DO_NOT_RECORD_THIS',repr(self.actor.public_result))
+
+    def test_full_policy_after_deadline_is_not_accepted(self):
+        def attempt(*args):
+            if len(args)==1:raise self.permission()
+            self.now+=.021
+            return self.complete()
+        with patch.object(self.actor,'policy_sample',side_effect=attempt), \
+             patch.object(runner,'permission_exit_evidence',return_value=self.live()):
+            with self.assertRaises(PermissionError):self.actor.observe_same_pid(123)
+        self.assertEqual(self.actor.permission_full_count,0)
+        self.assertEqual(self.actor.public_result['proc_observation_failure']['retry']['final_disposition'],'deadline_after_observation')
+
+    def test_exit_evidence_after_deadline_is_not_accepted(self):
+        def evidence(*args):
+            self.now+=.021
+            return {'classification':'gone','confirmed_exit':True}
+        with patch.object(self.actor,'policy_sample',side_effect=self.permission()), \
+             patch.object(runner,'permission_exit_evidence',side_effect=evidence):
+            with self.assertRaises(PermissionError):self.actor.observe_same_pid(123)
+        self.assertEqual(self.actor.permission_exit_count,0)
+        self.assertEqual(self.actor.public_result['proc_observation_failure']['retry']['final_disposition'],'deadline_after_observation')
+
+    def test_identity_or_other_policy_violation_is_immediately_fatal(self):
+        with patch.object(self.actor,'policy_sample',side_effect=[self.permission(),ValueError('proc_identity_changed_during_sample')]) as sample, \
+             patch.object(runner,'permission_exit_evidence',return_value=self.live()):
+            with self.assertRaisesRegex(ValueError,'proc_identity_changed'):self.actor.observe_same_pid(123)
+        self.assertEqual(sample.call_count,2)
+        self.assertEqual(self.actor.public_result['proc_observation_failure']['retry']['final_disposition'],'policy_failure')
+
+    def test_unbound_identity_cannot_bind_on_retry(self):
+        with patch.object(self.actor,'policy_sample',side_effect=self.permission(None)) as sample, \
+             patch.object(runner,'permission_exit_evidence',return_value=self.live()):
+            with self.assertRaises(PermissionError):self.actor.observe_same_pid(123)
+        self.assertEqual(sample.call_count,1)
+
+
 if __name__ == '__main__':
     unittest.main()

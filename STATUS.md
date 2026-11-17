@@ -31,30 +31,29 @@ preflight; not a whole-experiment three-CPU claim. Annual bodies175.126575TB/cop
 Safe raw metadata in evidence/gate2-96x8-01-{producer,network}/. Full producer
 readbacks and SOURCE03/build03/profile remain closed evidence, not rerun targets.
 
-Root owns contracts, status, Git, manifests, integration/acceptance and the isolated
-Gate3 wallet actor/policy. ALLOCATION19 fresh gate3a build TERMINAL PASS, and
-ALLOCATION20 native helper13JS+5Rustcontrols TERMINAL PASS. ALLOCATION21
-small5 integrated wallet diagnostic TERMINAL FAILED on controller PermissionError;
-full264 remains gated. ALLOCATION22 small02 TERMINAL FAILED in restore process observation. Original
-receipt/local-witness spend4positiveadmissions PASSED; backup-spend unconfirmed.
-No heavy job live. Allocation23 is a <=10s public-only process diagnostic.
-Do not poll/restart sessions72725,14274,5063,58517 or rebuild these exact inputs.
-Fresh source CORE_MANIFEST1b9888399a91102b84f05970ce65100d77a0a8a56519c35b13cbb8deb915a1aa;
-new helper/tree/jointwallet reviewed; W1 packet callback lifetime fixed in source.
-All3 proof program/profile prepared identities unchanged; all10867installationpins
-rechecked after component controls. Safe build receipts in evidence/gate3a-build/.
-arch_consensus_roles (Sol/high): owns native helper and controls; frozen source,
-actual component-result readback only now, no additional run. Native13JS checks
-0.196963s/72544KiB;5Rust tests1.245351s/172968KiB including compile; raw
-wallet-witness/native-controls/.work/native01. No private-wallet PASS inferred.
-arch_private_repro (Sol/high): core wallet files frozen/reviewed. Now owns ONLY
-wallet-integration/run.py, the public controller and isolated process launcher.
-It must retain actual positive native admission coverage for every generated
-body, exact14-table rejection invariance, safe backup-only process restart and
-all resource costs. No membership API or raw private stream logging/hash.
-arch_proof_alternatives (Astra/high): core wallet/native source GO complete; now
-reviews Root actor/isolation and runner acceptance. Actual5/264proof runs pending.
-Four agents total, no nested agents; one writer per owned area, Root sole Git writer.
+Root owns contracts/status/Git/manifests/integration and final acceptance.
+ALLOCATION24 small03 TERMINAL PASS, session63387 exit0. Do not poll/restart it.
+Actual RESULT0f8b75248bec491a210618ebe98e5c5e5ce8237a306f0e402d26f74e55d1eb42:
+5new genuineproofs, each positive native admission; receipt/localwitness spend,
+originalexit0 then backup-only newprocess genuine spend. Height4/leaves10/NF4,
+fees10570146,total1100000000,liabilities0;8768884fullbodybytes retained, no pending.
+Source/runtime unchanged. Source03fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e;
+runnerbbb7a4c56498f9e507728e2e505f8f133cdd7e96d519ba5febe2a296992d2902.
+Installationgate3a c025a573103f652004cfe7400ef7fff3db0ef32c1458b0103fa753b477a2546b.
+Safe exact4receipts in wallet-integration/evidence/wallet-small03/.
+No heavy job live. Full264proof/5400s expiry/reorg/recovery remains gated on
+independent small03 actual readback (in progress), then is the next useful run.
+arch_consensus_roles (Sol/high): fixedhelper/component controls done; publicproc
+allocation23 finished with useful discriminator and explicit10s budget failure.
+No more publicproc/native component reruns or modifications allocated.
+arch_private_repro (Sol/high): native/joint-wallet and runner source frozen;
+19light IPC/race/retry controls passed. Await actualfinding; no live writes/jobs.
+arch_proof_alternatives (Astra/high): source03 GO complete; now independently
+reads actual small03 records/publicDB/proofassociations for fullprofile GO.
+Earlier small01/02 observer failures remain preserved, not retroactively passed.
+Source03 retry checked whole samePIDpolicy or provenexit only; no permissions
+changed. One actual small03 R-to-sameidentity-Z event resolved in0.399ms.
+Fouragents includingRoot, no nestedagents, one writer perarea, oneheavyjob.
 
 Root chosen logical API: fixedHashCore(helperSha).treeAdvance(chain,
 {state:null|Buffer,maxOwned:1..64,forget:Buffer16[],leaves:[{origin,cm,token}]<=256})
@@ -68,7 +67,8 @@ and component controls. Genuine wallet same-witness execution remains pending.
 Gate3 acceptance still requires actual isolated receive/spend/backup restore,
 >256 changing-root expiry, selected-branch rewind and invalid/valid followups.
 
-Native Goal readback ACTIVE10:58UTC. Owner updates during10:58-11:00UTC.
+Native Goal readback ACTIVE10:58UTC. Owner regular30minute report delivered11:28UTC; material updates throughout.
+Next regular report approximately11:58UTC while active.
 Continue short reports at least every30minutes of active work; material results
 sooner. Report measured criterion closures, not invented completion percentages.
 No percentage claim. Latest progress: actual Gate2 accepted, resource decision
@@ -160,10 +160,10 @@ closed prerequisites. Pipeline SOURCE03 has18frozen files and unchanged profile.
 ## Exact restart / next useful actions
 
 1. Read current ownership and actual agent/job state. All producer/network campaigns
-   above are closed; do not repeat them. Local HEADfd2fa98d54d83ca58227cfd9bbce23a7e771ff01 records reviewed Gate3
-   native/joint-wallet core, clean build and13+5component controls (actual commit
-   success; not pushed). Prior ad8a76b records Gate2. Actor/controller integration
-   remains uncommitted; raw Rust stdout EOF blank line was preserved unchanged.
+   above are closed; do not repeat them. Local HEAD921c67cea20ee520f0d44ad7bd34e9403e3fe0d6 records reviewed isolated
+   actor/runner and exact failedsmall01/02 evidence (actual commit, not pushed).
+   Prior fd2fa98 records reviewed core/build/helpercontrols; ad8a76b recordsGate2.
+   These are incomplete integration checkpoints, not acceptance/publication.
 2. Native/helper/wallet source review, new gate3a build and13+5component controls
    are closed. Review run.py and actor/isolation final wiring. Freeze an exact
    experiment SOURCE.json (including fixed joint_controls/oracle dependencies).
@@ -321,3 +321,39 @@ procfs EACCES can resolve to full samePID policy observation or proven exit.
 Runner author awaits evidence for a tinybounded full-resample retry; reviewer
 requires unchangedidentity and fatal persistentlive/unreadable/ambiguous/reused.
 No subsequent genuine run allocated. Do not repeat crypto while probing OS issue.
+
+Allocation23 public01 TERMINAL at10.001930s includingcleanup;10s budget stopped
+loop before96launchcompletion. This campaign remains FAILED, not a crypto/test
+PASS. Raw RESULT fc3c8a85f07bc31ec3ae3f3608dc0503009f4723e09817066699f9165584bdaf
+under wallet-integration/proc-observation/public01/. Root personally read source
+and rawrecords:76sampledPIDs,25EACCES (23fd_directory/2fd_identity),25beforeR;
+19afterR/4Z/2absent. All25 later identity+PIDdirectory absent within0.578ms,
+max2attempts. Exactkernelcause unknown; this is decisive evidence for bounded
+observation retry, not an access-permission bypass or all-launchPASS.
+Runner author now permitted <=20ms/16attempt/.2msbackoff whole-policy retry
+under SAMEstarttime; completepolicy or confirmedexit only, elsefatal. No IPC,
+crypto, namespace or proof requirement change. SOURCE03/review pending.
+No subsequent genuine run allocated; small03 is next only after review.
+
+Allocation24: small03 approved after Root+independent full diff/control review.
+SOURCE03 fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e,
+runner bbb7a4c56498f9e507728e2e505f8f133cdd7e96d519ba5febe2a296992d2902.
+Same gate3a installation and5proof/900s/4GiBAS/8GiBdisk/CPU0+1 bounds.
+Only observer changes: fullsamePID retry <=20ms/16totalattempts/.2msbackoff;
+post-observation deadline and fatal persistent/ambiguous/changedidentity. No
+crypto/IPC/namespace/positive-prover-observation changes. Earlierfailures retained.
+Run newlabel wallet-small03; no other heavy work or source edits while live.
+
+Allocation24 actual LIVE exec session63387, started2026-11-17 11:30UTC.
+Do not duplicate/modify SOURCE03. Next poll this session and review actual
+wallet-small03/RESULT plus both process receipts before full264allocation.
+
+Allocation24 actual SMALL PROFILE PASS: Root read complete RESULT and bothactor
+receipts. Originalwall30.096763s, restore8.050670s; originalNodeSELF0.78s/
+waiteddescendants20.57s, restore0.31s/5.18s (tickgranularity). Nested5Rustproof
+worker measurements reported separately, not added twice. Sampledconcurrenttree
+peaks315788/336980KiB. Fourcommonhistoryreads total103596bytes, readprocessing
+0.272959s.10nativeCLIoperations CPU11.555297s; controllerSELF3.743307s, cumulative
+RSS933504KiB includingpreflight. Publicdisk36327424allocatedbytes atsample.
+All5positiveadmissions, no secret/log/hashsink, actualfreshrestore afteroriginal
+exit0. Fullprofile and independent cleancheckout remain unfulfilled.

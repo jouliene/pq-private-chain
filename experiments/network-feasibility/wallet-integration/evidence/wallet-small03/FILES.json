@@ -1,0 +1,24 @@
+{
+  "files": {
+    "RESULT.json": {
+      "bytes": 32620,
+      "sha256": "0f8b75248bec491a210618ebe98e5c5e5ce8237a306f0e402d26f74e55d1eb42"
+    },
+    "claim.json": {
+      "bytes": 374,
+      "sha256": "4124b852750bec40f51d781619d8de34e4d570762654d363a8195c7378d42fb1"
+    },
+    "original-process.json": {
+      "bytes": 9519,
+      "sha256": "0967d1ff82a5161c1645723de5c801b4f50680ef9efec1d7f4921cc2895f4b4d"
+    },
+    "restore-process.json": {
+      "bytes": 4436,
+      "sha256": "2adf383c66330c42b0fe794580cde53e45478f0ac5773cb3ae6b8effabef2be2"
+    }
+  },
+  "format": "CP04-SAFE-WALLET-EVIDENCE01",
+  "scope": "Exact public receipts: five genuine positive admissions, receipt and local witnesses, original actual exit0, backup-only new-process spend. Full expiry/reorg profile remains unexecuted; no production/PQ/privacy theorem.",
+  "source_label": "wallet-small03",
+  "status": "SMALL_PROFILE_PASS"
+}

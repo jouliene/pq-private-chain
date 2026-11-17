@@ -150,3 +150,49 @@ sampler success/failure paths and absence of raw error-message persistence.
 Their reported twelve-control PASS is author evidence, not a reviewer rerun or
 real-kernel race reproduction. Actual retry receipts remain required; the earlier
 failure and absence of a complete wallet result are unchanged.
+
+
+## Public procfs discriminator readback
+
+Independent source/receipt inspection of proc-observation/public01/RESULT.json
+`fc3c8a85f07bc31ec3ae3f3608dc0503009f4723e09817066699f9165584bdaf`
+confirms 76 observed child PIDs and 25 EACCES records (23 fd_directory, two
+fd_identity). All initial states were R; immediate after-state was R19/Z4/error2.
+All25 were subsequently stat-and-directory absent, within two retry attempts
+and 0.578ms. The overall public diagnostic FAILED its10s cap, so this is not a
+96-launch campaign PASS. No keys/proofs/native build were involved. This supports
+a bounded exit-adjacent observation retry; it neither establishes a particular
+kernel cause nor demonstrates eventual full live-policy access after EACCES.
+Root's proposed20ms/16-attempt/0.2ms-backoff retry still requires complete
+same-identity policy validation or confirmed exit, otherwise fatal. The deadline
+must bound acceptance of the completed retry as well as its start. The concrete
+successor implementation remains subject to source review.
+
+## Source03 bounded retry disposition
+
+**GO for Root's fresh-label small03 five-proof run**, at SOURCE
+`fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e`,
+runner `bbb7a4c56498f9e507728e2e505f8f133cdd7e96d519ba5febe2a296992d2902`.
+Reviewer read the complete Source02-to-successor diff and the new retry controls;
+all seven manifest entries independently hash-match and only runner changed.
+Controls source is `8f8d236ccc8d161d98dbf390cdfbf77b82ad2a1ec0a7b3dc536bbc023a409cf6`.
+The nineteen-control PASS is author evidence; reviewer performed no new execution.
+
+policy_sample contains the entire identity/status/children/namespace/seccomp/
+denied-mount/FD/mount-options/final-identity observation. observe_same_pid binds
+the initial captured starttime once and passes it into every repeat. Permission
+errors alone enter the bounded retry; a later identity mismatch or policy violation
+is fatal immediately. The limit is16 total sample attempts with0.2ms backoff and
+20ms measured retry time. Successful complete observation or confirmed exit is
+checked against the deadline again after observation; delayed success is rejected.
+Unbound identity cannot acquire a replacement identity on retry. Missing files
+during a retry require the independent exit classifier rather than being treated
+as a successful full sample. Persistent inability to inspect remains fatal.
+
+First failure and final classification are kept distinct. Confirmed exits and
+complete same-PID policy recoveries have separate counters; retry time is charged,
+with bounded first64 detailed records. Samples and descendant traversal use only
+complete results. This does not strengthen finite sampling into continuous process
+attestation, nor change the mandatory actual prover-observation requirement.
+Original small01/small02 failures remain preserved. Full Gate3 and backup-only
+spend still require an actual successful run; this is source approval only.

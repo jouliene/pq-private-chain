@@ -194,8 +194,9 @@ class Actor:
         self.backup_seen = False
         self.samples = {}
         self.sample_count = self.sample_races = 0
-        self.proc_identities, self.permission_exit_races = {}, []
-        self.permission_exit_count = 0
+        self.permission_exit_races = []
+        self.permission_exit_count = self.permission_full_count = 0
+        self.permission_retry_wall = 0.0
         self.sampled_tree_peak = 0
         self.last_sample = 0
         self.start = time.monotonic()
@@ -280,89 +281,154 @@ class Actor:
             'approved_node_executable_inode_matched': True,
             'denied_database_fds_passed_to_wallet': 0}
 
+    def policy_sample(self, pid, expected_start=None):
+        """One complete observation. No partial result is a successful sample."""
+        location, captured = 'identity', expected_start
+        try:
+            identity = proc_identity(pid); captured = identity['starttime_ticks']
+            need(expected_start is None or captured == expected_start, 'proc_identity_changed_during_sample')
+            if identity['state'] in ('Z','X'):
+                return {'exited':True,'evidence':{'classification':'same_identity_exited','confirmed_exit':True,
+                    'observed_state':identity['state'],'observed_starttime_ticks':captured},'start':captured}
+            location = 'status'
+            fields = proc_status(pid); fields['_cpu_ticks'] = identity['cpu_ticks']
+            location = 'children'
+            children = [int(child) for child in Path(f'/proc/{pid}/task/{pid}/children').read_text().split()]
+            location = 'namespace'
+            actual_ns = {name:os.readlink(f'/proc/{pid}/ns/{name}') for name in ('pid','mnt','net')}
+            need(actual_ns == self.namespaces and fields.get('Seccomp') == '2', 'descendant_boundary_changed')
+            location = 'denied_mount'
+            for denied in self.owner.denied_files:
+                try:
+                    Path(f'/proc/{pid}/root{denied}').stat()
+                except FileNotFoundError:
+                    pass
+                else:
+                    raise ValueError('descendant_database_mount_visible')
+            checked = 0
+            location = 'fd_directory'
+            for fd in Path(f'/proc/{pid}/fd').iterdir():
+                try:
+                    location = 'fd_identity'; info = fd.stat()
+                except FileNotFoundError:
+                    continue
+                need((info.st_dev,info.st_ino) not in self.owner.denied_inodes, 'descendant_database_fd_visible')
+                checked += 1
+            # Read public mount destinations/options, never FD link targets or
+            # private stdin/stdout contents.
+            location = 'mountinfo'
+            mounts = {}
+            for line in Path(f'/proc/{pid}/mountinfo').read_text().splitlines():
+                pieces = line.split()
+                if len(pieces) >= 6:
+                    mounts[pieces[4]] = pieces[5].split(',')
+            need('ro' in mounts.get('/usr',[]) and 'ro' in mounts.get(str(self.owner.source_root),[])
+                 and 'ro' in mounts.get(str(self.owner.common),[]), 'readonly_mount_policy')
+            for destination in (self.owner.output,self.owner.sandbox_public,self.owner.sandbox_evidence):
+                need('rw' in mounts.get(str(destination),[]), 'public_output_mount_policy')
+            location = 'identity_recheck'
+            need(proc_identity(pid)['starttime_ticks'] == captured, 'proc_identity_changed_during_sample')
+            return {'exited':False,'start':captured,'fields':fields,'children':children,'fd_checks':checked}
+        except PermissionError as error:
+            error.policy_operation, error.policy_starttime = location, captured
+            raise
+
+    def permission_record(self, pid, error, expected, evidence):
+        return {'operation':getattr(error,'policy_operation','identity'),'error_type':'PermissionError',
+                'errno':error.errno,'host_pid':pid,'expected_starttime_ticks':expected,**evidence}
+
+    def observe_same_pid(self, pid):
+        try:
+            return self.policy_sample(pid)
+        except PermissionError as first_error:
+            started = time.monotonic(); deadline = started + .020
+            expected = getattr(first_error,'policy_starttime',None)
+            evidence = permission_exit_evidence(pid,expected)
+            first = self.permission_record(pid,first_error,expected,evidence)
+            attempts, last = 1, evidence
+            def finish(disposition, observed=None):
+                elapsed = time.monotonic()-started
+                accepted = disposition in ('complete_policy','confirmed_exit') and elapsed <= .020
+                if disposition in ('complete_policy','confirmed_exit') and not accepted:
+                    disposition = 'deadline_after_observation'
+                record = {**first,'first_failure':first.copy(),'final_evidence':last,
+                    'retry':{'attempts':attempts,'elapsed_seconds':elapsed,'deadline_seconds':.020,
+                             'attempt_cap':16,'backoff_seconds':.0002,'final_disposition':disposition}}
+                # Enforce budget AFTER success/exit observation too, not only
+                # before a potentially slow full policy attempt.
+                self.permission_retry_wall += elapsed
+                if not accepted:
+                    self.public_result['proc_observation_failure'] = record
+                    raise first_error
+                if disposition == 'confirmed_exit':
+                    self.permission_exit_count += 1
+                else:
+                    self.permission_full_count += 1
+                if len(self.permission_exit_races)<64:
+                    self.permission_exit_races.append(record)
+                return observed if observed is not None else {'exited':True,'evidence':last,'start':expected}
+            while True:
+                if last.get('confirmed_exit'):
+                    return finish('confirmed_exit')
+                if expected is None or last.get('classification') == 'identity_unbound_or_changed':
+                    return finish('unbound_or_changed')
+                if attempts>=16 or time.monotonic()>=deadline:
+                    return finish('budget_exhausted')
+                time.sleep(min(.0002,max(0,deadline-time.monotonic())))
+                if time.monotonic()>=deadline:
+                    return finish('budget_exhausted')
+                attempts += 1
+                try:
+                    observed = self.policy_sample(pid,expected)
+                except PermissionError as error:
+                    # The original starttime remains bound on every retry.
+                    need(getattr(error,'policy_starttime',expected)==expected,'proc_identity_changed_during_sample')
+                    last = permission_exit_evidence(pid,expected)
+                except (FileNotFoundError,ProcessLookupError):
+                    last = permission_exit_evidence(pid,expected)
+                except BaseException as error:
+                    elapsed = time.monotonic()-started; self.permission_retry_wall += elapsed
+                    self.public_result['proc_observation_failure'] = {**first,'first_failure':first.copy(),
+                        'final_error_type':type(error).__name__,'retry':{'attempts':attempts,
+                            'elapsed_seconds':elapsed,'final_disposition':'policy_failure'}}
+                    raise
+                else:
+                    if observed['exited']:
+                        last = observed['evidence']; return finish('confirmed_exit')
+                    last = {'classification':'same_identity_policy_verified','confirmed_exit':False,
+                        'observed_starttime_ticks':observed['start'],
+                        'observed_state':observed['fields'].get('State','').split()[0],
+                        'full_policy_checked':True}
+                    return finish('complete_policy',observed)
+
     def sample(self, force=False):
         now = time.monotonic()
-        if not self.node_pid or (not force and now - self.last_sample < .05):
+        if not self.node_pid or (not force and now-self.last_sample<.05):
             return []
         self.last_sample = now
-        tree_rss = 0
-        observed = []
+        tree_rss, observed = 0, []
         pending = [self.node_pid]
         while pending:
             pid = pending.pop()
-            location = 'identity'
-            captured_start = self.proc_identities.get(pid)
             try:
-                identity = proc_identity(pid); start = identity['starttime_ticks']
-                captured_start = start; self.proc_identities[pid] = start
-                location = 'status'
-                fields = proc_status(pid); fields['_cpu_ticks'] = identity['cpu_ticks']
-                if fields.get('State', '').startswith('Z'):
-                    continue
-                location = 'children'
-                pending.extend(int(child) for child in Path(f'/proc/{pid}/task/{pid}/children').read_text().split())
-                location = 'namespace'
-                actual_ns = {name: os.readlink(f'/proc/{pid}/ns/{name}') for name in ('pid', 'mnt', 'net')}
-                need(actual_ns == self.namespaces and fields.get('Seccomp') == '2', 'descendant_boundary_changed')
-                location = 'denied_mount'
-                for denied in self.owner.denied_files:
-                    try:
-                        Path(f'/proc/{pid}/root{denied}').stat()
-                    except FileNotFoundError:
-                        pass
-                    else:
-                        raise ValueError('descendant_database_mount_visible')
-                checked = 0
-                location = 'fd_directory'
-                for fd in Path(f'/proc/{pid}/fd').iterdir():
-                    try:
-                        location = 'fd_identity'
-                        info = fd.stat()
-                    except FileNotFoundError:
-                        continue
-                    need((info.st_dev, info.st_ino) not in self.owner.denied_inodes, 'descendant_database_fd_visible')
-                    checked += 1
-                # Only mount destinations/options are read, never FD symlink targets
-                # or private stdin/stdout contents.
-                mounts = {}
-                location = 'mountinfo'
-                for line in Path(f'/proc/{pid}/mountinfo').read_text().splitlines():
-                    pieces = line.split()
-                    if len(pieces) >= 6:
-                        mounts[pieces[4]] = pieces[5].split(',')
-                need('ro' in mounts.get('/usr', []) and 'ro' in mounts.get(str(self.owner.source_root), [])
-                     and 'ro' in mounts.get(str(self.owner.common), []), 'readonly_mount_policy')
-                for destination in (self.owner.output, self.owner.sandbox_public, self.owner.sandbox_evidence):
-                    need('rw' in mounts.get(str(destination), []), 'public_output_mount_policy')
-                location = 'identity_recheck'
-                need(proc_identity(pid)['starttime_ticks'] == captured_start, 'proc_identity_changed_during_sample')
-                rss = int(fields.get('VmRSS', '0 kB').split()[0])
-                tree_rss += rss
-                key = (pid, start)
-                item = self.samples.setdefault(key, {'host_pid': pid, 'starttime_ticks': start,
-                    'namespace_pid': int(fields.get('NSpid', '0').split()[-1]), 'name': fields.get('Name', ''),
-                    'samples': 0, 'peak_sampled_rss_kib': 0, 'fd_identity_checks': 0,
-                    'first_seconds': now - self.start, 'namespace_fd_mount_seccomp_pass': True})
-                item['samples'] += 1
-                item['last_seconds'] = now - self.start
-                item['peak_sampled_rss_kib'] = max(item['peak_sampled_rss_kib'], rss)
-                item['fd_identity_checks'] += checked
-                item['last_observed_cpu_ticks'] = fields['_cpu_ticks']
+                result = self.observe_same_pid(pid)
+                if result['exited']:
+                    self.sample_races += 1; continue
+                fields,start = result['fields'],result['start']
+                pending.extend(result['children'])
+                rss = int(fields.get('VmRSS','0 kB').split()[0]); tree_rss += rss
+                key = (pid,start)
+                item = self.samples.setdefault(key,{'host_pid':pid,'starttime_ticks':start,
+                    'namespace_pid':int(fields.get('NSpid','0').split()[-1]),'name':fields.get('Name',''),
+                    'samples':0,'peak_sampled_rss_kib':0,'fd_identity_checks':0,
+                    'first_seconds':now-self.start,'namespace_fd_mount_seccomp_pass':True})
+                item['samples'] += 1; item['last_seconds'] = time.monotonic()-self.start
+                item['peak_sampled_rss_kib'] = max(item['peak_sampled_rss_kib'],rss)
+                item['fd_identity_checks'] += result['fd_checks']; item['last_observed_cpu_ticks'] = fields['_cpu_ticks']
                 observed.append(pid)
-            except (FileNotFoundError, ProcessLookupError):
+            except (FileNotFoundError,ProcessLookupError):
                 self.sample_races += 1
-            except PermissionError as error:
-                evidence = permission_exit_evidence(pid, captured_start)
-                record = {'operation':location,'error_type':'PermissionError','errno':error.errno,
-                          'host_pid':pid,'expected_starttime_ticks':captured_start,**evidence}
-                if not evidence['confirmed_exit']:
-                    self.public_result['proc_observation_failure'] = record
-                    raise
-                self.sample_races += 1; self.permission_exit_count += 1
-                if len(self.permission_exit_races) < 64:
-                    self.permission_exit_races.append(record)
-        self.sample_count += 1
-        self.sampled_tree_peak = max(self.sampled_tree_peak, tree_rss)
+        self.sample_count += 1; self.sampled_tree_peak = max(self.sampled_tree_peak,tree_rss)
         return observed
 
     def parse_frames(self):
@@ -485,6 +551,8 @@ class Actor:
             self.public_result['sampling'] = {'interval_seconds': .05, 'epochs': self.sample_count,
                 'observed_processes': list(self.samples.values()), 'raced_exits': self.sample_races,
                 'confirmed_permission_exit_races':self.permission_exit_count,
+                'complete_same_pid_policy_after_permission':self.permission_full_count,
+                'permission_retry_wall_seconds':self.permission_retry_wall,
                 'permission_exit_evidence_first64':self.permission_exit_races,
                 'maximum_sampled_tree_rss_kib': self.sampled_tree_peak,
                 'scope': 'Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU.'}

@@ -1,0 +1,140 @@
+{
+  "actual_wrapper": {
+    "exit": 0,
+    "first_wait4": true,
+    "maxrss_kib": 25372,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.003348,
+    "user_seconds": 0.0,
+    "wall_seconds": 8.050669824006036
+  },
+  "boundary": {
+    "actual_node_host_pid": 2484202,
+    "approved_node_executable_inode_matched": true,
+    "denied_database_fds_passed_to_wallet": 0,
+    "descendant": {
+      "denied_paths": 4,
+      "denied_socket_families": [
+        2,
+        10,
+        1
+      ],
+      "host_proc_root_denied": true,
+      "inherited_fd_identity_checks": 3,
+      "pid": 8,
+      "seccomp": "2"
+    },
+    "inheritable_denied_fds_in_controller": 4,
+    "namespaces": {
+      "mnt": "mnt:[4026532887]",
+      "net": "net:[4026532893]",
+      "pid": "pid:[4026532892]"
+    },
+    "reported_namespace_pid": 2
+  },
+  "fixed_failure_stage": null,
+  "passed": true,
+  "restore": true,
+  "sampling": {
+    "complete_same_pid_policy_after_permission": 0,
+    "confirmed_permission_exit_races": 0,
+    "epochs": 130,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 336980,
+    "observed_processes": [
+      {
+        "fd_identity_checks": 3359,
+        "first_seconds": 0.24005158501677215,
+        "host_pid": 2484202,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 69,
+          "reaped_child_user": 449,
+          "self_system": 8,
+          "self_user": 23
+        },
+        "last_seconds": 8.044142606086098,
+        "name": "MainThread",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 2,
+        "peak_sampled_rss_kib": 136300,
+        "samples": 130,
+        "starttime_ticks": 85659924
+      },
+      {
+        "fd_identity_checks": 344,
+        "first_seconds": 1.6378666780656204,
+        "host_pid": 2484237,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 6,
+          "reaped_child_user": 171,
+          "self_system": 60,
+          "self_user": 272
+        },
+        "last_seconds": 6.746100954012945,
+        "name": "python3.12",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 35,
+        "peak_sampled_rss_kib": 160368,
+        "samples": 84,
+        "starttime_ticks": 85660072
+      },
+      {
+        "fd_identity_checks": 87,
+        "first_seconds": 4.032528532086872,
+        "host_pid": 2484239,
+        "last_observed_cpu_ticks": {
+          "reaped_child_system": 0,
+          "reaped_child_user": 0,
+          "self_system": 5,
+          "self_user": 169
+        },
+        "last_seconds": 5.764169195084833,
+        "name": "compact-all-pay",
+        "namespace_fd_mount_seccomp_pass": true,
+        "namespace_pid": 36,
+        "peak_sampled_rss_kib": 164224,
+        "samples": 29,
+        "starttime_ticks": 85660311
+      }
+    ],
+    "permission_exit_evidence_first64": [],
+    "permission_retry_wall_seconds": 0.0,
+    "raced_exits": 0,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  },
+  "terminal_cpu": {
+    "actual_node_host_pid": 2484202,
+    "clock_ticks_per_second": 100,
+    "node_self_seconds": 0.31,
+    "node_waited_descendant_seconds": 5.18,
+    "scope": "External live Node procfs SELF and reaped-child-chain CPU at public terminal handshake. Tick granularity; excludes unawaited/orphan processes. Waited child CPU contains Parent/helper descendants and must not be added to their nested metrics; excludes controller/native admission CLI.",
+    "starttime_ticks": 85659924,
+    "ticks": {
+      "reaped_child_system": 69,
+      "reaped_child_user": 449,
+      "self_system": 8,
+      "self_user": 23
+    }
+  },
+  "terminal_metrics": {
+    "counts": {
+      "history_bytes": 29806,
+      "history_reads": 1,
+      "history_wall_seconds": 0.09067799800000012,
+      "proofs": 1
+    },
+    "format": "CP04-ISOLATED-WALLET-DONE01",
+    "private_material_persisted_or_hashed": false,
+    "process_self": {
+      "fsRead": 0,
+      "fsWrite": 3416,
+      "involuntaryContextSwitches": 362,
+      "maxRSS": 136352,
+      "systemCPUTime": 80920,
+      "userCPUTime": 239763,
+      "voluntaryContextSwitches": 531
+    },
+    "resource_scope": "Node process_self only; CPU microseconds, RSS KiB; not descendant tree CPU",
+    "restore": true
+  }
+}

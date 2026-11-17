@@ -1,0 +1,1669 @@
+{
+  "EACCES_records": 25,
+  "actual_node_pid": 2482670,
+  "baseline_full_policy": {
+    "FD_identity_checks": 21,
+    "after": {
+      "comm": "MainThread",
+      "starttime_ticks": 85606628,
+      "state": "S"
+    },
+    "before": {
+      "comm": "MainThread",
+      "starttime_ticks": 85606628,
+      "state": "R"
+    },
+    "full_namespace_seccomp_mount_FD_identity_pass": true,
+    "ok": true
+  },
+  "child_launch_budget": 96,
+  "cleanup_exit": -9,
+  "dispositions": {
+    "identity_and_directory_absent": 25
+  },
+  "failure": {
+    "message": "10second_budget",
+    "type": "ValueError"
+  },
+  "format": "CP04-PUBLIC-PROC-OBSERVATION01",
+  "namespace_ids": {
+    "mnt": "mnt:[4026532889]",
+    "net": "net:[4026532893]",
+    "pid": "pid:[4026532892]"
+  },
+  "no_private_data_or_proof_or_key_or_build": true,
+  "normal_processes": {
+    "2482677": {
+      "first_comm": "MainThread",
+      "full_samples": 1,
+      "last_comm": "3",
+      "starttime_ticks": 85606632
+    },
+    "2482682": {
+      "first_comm": "3",
+      "full_samples": 0,
+      "starttime_ticks": 85606632
+    },
+    "2482688": {
+      "first_comm": "MainThread",
+      "full_samples": 1,
+      "last_comm": "3",
+      "starttime_ticks": 85606632
+    },
+    "2482693": {
+      "first_comm": "MainThread",
+      "full_samples": 1,
+      "last_comm": "3",
+      "starttime_ticks": 85606633
+    },
+    "2482697": {
+      "first_comm": "3",
+      "full_samples": 0,
+      "starttime_ticks": 85606633
+    },
+    "2482701": {
+      "first_comm": "MainThread",
+      "full_samples": 1,
+      "last_comm": "3",
+      "starttime_ticks": 85606633
+    },
+    "2482703": {
+      "first_comm": "3",
+      "full_samples": 0,
+      "starttime_ticks": 85606633
+    },
+    "2482707": {
+      "first_comm": "3",
+      "full_samples": 0,
+      "starttime_ticks": 85606634
+    },
+    "2482709": {
+      "first_comm": "MainThread",
+      "full_samples": 1,
+      "last_comm": "3",
+      "starttime_ticks": 85606634
+    },
+    "2482712": {
+      "first_comm": "MainThread",
+      "full_samples": 1,
+      "last_comm": "3",
+      "starttime_ticks": 85606634
+    },
+    "2482718": {
+      "first_comm": "3",
+      "full_samples": 0,
+      "starttime_ticks": 85606634
+    },
+    "2482722": {
+      "first_comm": "MainThread",
+      "full_samples": 0,
+      "starttime_ticks": 85606634
+    },
+    "2482725": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606635
+    },
+    "2482726": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606637
+    },
+    "2482727": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606639
+    },
+    "2482728": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606641
+    },
+    "2482729": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606643
+    },
+    "2482730": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606645
+    },
+    "2482731": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606647
+    },
+    "2482732": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606649
+    },
+    "2482733": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606651
+    },
+    "2482734": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606653
+    },
+    "2482735": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606655
+    },
+    "2482736": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606657
+    },
+    "2482737": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606660
+    },
+    "2482738": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606662
+    },
+    "2482739": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606664
+    },
+    "2482740": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606666
+    },
+    "2482741": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606668
+    },
+    "2482742": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606670
+    },
+    "2482743": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606672
+    },
+    "2482744": {
+      "first_comm": "MainThread",
+      "full_samples": 14,
+      "last_comm": "3",
+      "starttime_ticks": 85606674
+    },
+    "2482745": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606676
+    },
+    "2482746": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606678
+    },
+    "2482747": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606680
+    },
+    "2482748": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606682
+    },
+    "2482749": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606684
+    },
+    "2482750": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606686
+    },
+    "2482751": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606688
+    },
+    "2482752": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606691
+    },
+    "2482753": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606693
+    },
+    "2482754": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606695
+    },
+    "2482755": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606697
+    },
+    "2482756": {
+      "first_comm": "3",
+      "full_samples": 13,
+      "last_comm": "3",
+      "starttime_ticks": 85606699
+    },
+    "2482757": {
+      "first_comm": "3",
+      "full_samples": 24,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606701
+    },
+    "2482758": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606705
+    },
+    "2482759": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606709
+    },
+    "2482760": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606712
+    },
+    "2482761": {
+      "first_comm": "3",
+      "full_samples": 24,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606716
+    },
+    "2482762": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606720
+    },
+    "2482763": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606724
+    },
+    "2482764": {
+      "first_comm": "MainThread",
+      "full_samples": 26,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606728
+    },
+    "2482765": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606732
+    },
+    "2482766": {
+      "first_comm": "MainThread",
+      "full_samples": 27,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606735
+    },
+    "2482767": {
+      "first_comm": "MainThread",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606740
+    },
+    "2482768": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606743
+    },
+    "2482769": {
+      "first_comm": "3",
+      "full_samples": 24,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606747
+    },
+    "2482770": {
+      "first_comm": "3",
+      "full_samples": 24,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606751
+    },
+    "2482771": {
+      "first_comm": "3",
+      "full_samples": 24,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606755
+    },
+    "2482772": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606759
+    },
+    "2482773": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606763
+    },
+    "2482774": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606766
+    },
+    "2482775": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606770
+    },
+    "2482776": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606774
+    },
+    "2482777": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606778
+    },
+    "2482778": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606782
+    },
+    "2482779": {
+      "first_comm": "3",
+      "full_samples": 24,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606786
+    },
+    "2482780": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606789
+    },
+    "2482781": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606793
+    },
+    "2482782": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606797
+    },
+    "2482783": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606801
+    },
+    "2482784": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606805
+    },
+    "2482785": {
+      "first_comm": "MainThread",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606809
+    },
+    "2482786": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606812
+    },
+    "2482787": {
+      "first_comm": "3",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606816
+    },
+    "2482788": {
+      "first_comm": "MainThread",
+      "full_samples": 25,
+      "last_comm": "python3.12",
+      "starttime_ticks": 85606820
+    }
+  },
+  "passed": false,
+  "read_no_FD_targets_or_contents": true,
+  "records": [
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.03316602669656277,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.06269710138440132,
+      "expected_starttime_ticks": 85606632,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "errno": 3,
+          "error_type": "ProcessLookupError"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606632,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.043172628968022764,
+      "pid": 2482682
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.032066949643194675,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.057262019254267216,
+      "expected_starttime_ticks": 85606633,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606633,
+          "state": "Z"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606633,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.05122348398435861,
+      "pid": 2482697
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.031283008866012096,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.054949079640209675,
+      "expected_starttime_ticks": 85606634,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606634,
+          "state": "Z"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606634,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.05814386496786028,
+      "pid": 2482707
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.02919696271419525,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.05293299909681082,
+      "expected_starttime_ticks": 85606634,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "errno": 3,
+          "error_type": "ProcessLookupError"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606634,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.06403005798347294,
+      "pid": 2482718
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.03175798337906599,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.0689580338075757,
+      "expected_starttime_ticks": 85606634,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606634,
+          "state": "Z"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606634,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_identity"
+      },
+      "observed_seconds": 0.06568645790684968,
+      "pid": 2482722
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.031522009521722794,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.0671090092509985,
+      "expected_starttime_ticks": 85606635,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606635,
+          "state": "Z"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606635,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.08760696195531636,
+      "pid": 2482725
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606637,
+            "state": "R"
+          },
+          "elapsed_ms": 0.12772600166499615,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "namespace"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.15930295921862125,
+      "expected_starttime_ticks": 85606637,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606637,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606637,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.10859233897645026,
+      "pid": 2482726
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "3",
+            "starttime_ticks": 85606639,
+            "state": "R"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606639,
+            "state": "R"
+          },
+          "elapsed_ms": 0.16818905714899302,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        },
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.5374520551413298,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.5634949775412679,
+      "expected_starttime_ticks": 85606639,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606639,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606639,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.12952241790480912,
+      "pid": 2482727
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606647,
+            "state": "R"
+          },
+          "elapsed_ms": 0.1113169128075242,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "namespace"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.13459392357617617,
+      "expected_starttime_ticks": 85606647,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606647,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606647,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.2120432339143008,
+      "pid": 2482731
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606649,
+            "state": "Z"
+          },
+          "elapsed_ms": 0.07651105988770723,
+          "errno": 3,
+          "error_type": "ProcessLookupError",
+          "ok": false,
+          "operation": "status"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.10079005733132362,
+      "expected_starttime_ticks": 85606649,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606649,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606649,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.23301994893699884,
+      "pid": 2482732
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606651,
+            "state": "Z"
+          },
+          "elapsed_ms": 0.06871693767607212,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "status"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.09214493911713362,
+      "expected_starttime_ticks": 85606651,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606651,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606651,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.2536851039621979,
+      "pid": 2482733
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606657,
+            "state": "Z"
+          },
+          "elapsed_ms": 0.062444014474749565,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "status"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.08740404155105352,
+      "expected_starttime_ticks": 85606657,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606657,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606657,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.3155897449469194,
+      "pid": 2482736
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606662,
+            "state": "Z"
+          },
+          "elapsed_ms": 0.06039103027433157,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "status"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.08426897693425417,
+      "expected_starttime_ticks": 85606662,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606662,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606662,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.3570546619594097,
+      "pid": 2482738
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606670,
+            "state": "R"
+          },
+          "elapsed_ms": 0.12580794282257557,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "namespace"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.15043397434055805,
+      "expected_starttime_ticks": 85606670,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606670,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606670,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.4395675859414041,
+      "pid": 2482742
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "3",
+            "starttime_ticks": 85606676,
+            "state": "Z"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606676,
+            "state": "R"
+          },
+          "elapsed_ms": 0.1684919698163867,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.20905991550534964,
+      "expected_starttime_ticks": 85606676,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606676,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606676,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.5019007509108633,
+      "pid": 2482745
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606686,
+            "state": "R"
+          },
+          "elapsed_ms": 0.12507697101682425,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "namespace"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.1490580616518855,
+      "expected_starttime_ticks": 85606686,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606686,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606686,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.6051020099548623,
+      "pid": 2482750
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 3,
+            "error_type": "ProcessLookupError"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606691,
+            "state": "R"
+          },
+          "elapsed_ms": 0.14422601088881493,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "namespace"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.17418491188436747,
+      "expected_starttime_ticks": 85606691,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606691,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606691,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.6466095229843631,
+      "pid": 2482752
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "3",
+            "starttime_ticks": 85606699,
+            "state": "R"
+          },
+          "before": {
+            "comm": "3",
+            "starttime_ticks": 85606699,
+            "state": "R"
+          },
+          "elapsed_ms": 0.16869301907718182,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        },
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.5338919581845403,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.5608819192275405,
+      "expected_starttime_ticks": 85606699,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "3",
+          "starttime_ticks": 85606699,
+          "state": "R"
+        },
+        "before": {
+          "comm": "3",
+          "starttime_ticks": 85606699,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.7290485869161785,
+      "pid": 2482756
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606716,
+            "state": "Z"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606716,
+            "state": "R"
+          },
+          "elapsed_ms": 0.16759103164076805,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.21366204600781202,
+      "expected_starttime_ticks": 85606716,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606716,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606716,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 0.9205420030048117,
+      "pid": 2482761
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606740,
+            "state": "Z"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606740,
+            "state": "R"
+          },
+          "elapsed_ms": 0.17175497487187386,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.20259397570043802,
+      "expected_starttime_ticks": 85606740,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606740,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606740,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 1.1550577429588884,
+      "pid": 2482767
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606747,
+            "state": "R"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606747,
+            "state": "R"
+          },
+          "elapsed_ms": 0.1851679990068078,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        },
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.551172997802496,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.5771869327872992,
+      "expected_starttime_ticks": 85606747,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606747,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606747,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_identity"
+      },
+      "observed_seconds": 1.2316573559073731,
+      "pid": 2482769
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606751,
+            "state": "R"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606751,
+            "state": "R"
+          },
+          "elapsed_ms": 0.17019500955939293,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        },
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.5362749798223376,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.5609819199889898,
+      "expected_starttime_ticks": 85606751,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606751,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606751,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 1.2700249599292874,
+      "pid": 2482770
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "errno": 3,
+            "error_type": "ProcessLookupError"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606786,
+            "state": "R"
+          },
+          "elapsed_ms": 0.142296077683568,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "namespace"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.17192400991916656,
+      "expected_starttime_ticks": 85606786,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606786,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606786,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 1.6137804319150746,
+      "pid": 2482779
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606801,
+            "state": "Z"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606801,
+            "state": "R"
+          },
+          "elapsed_ms": 0.1672710059210658,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.19708299078047276,
+      "expected_starttime_ticks": 85606801,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606801,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606801,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 1.7680493639782071,
+      "pid": 2482783
+    },
+    {
+      "attempts": [
+        {
+          "after": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606809,
+            "state": "R"
+          },
+          "before": {
+            "comm": "python3.12",
+            "starttime_ticks": 85606809,
+            "state": "R"
+          },
+          "elapsed_ms": 0.18250104039907455,
+          "errno": 13,
+          "error_type": "PermissionError",
+          "ok": false,
+          "operation": "fd_directory"
+        },
+        {
+          "after": {
+            "errno": 2,
+            "error_type": "FileNotFoundError"
+          },
+          "before": null,
+          "elapsed_ms": 0.5495790392160416,
+          "errno": 2,
+          "error_type": "FileNotFoundError",
+          "ok": false,
+          "operation": "identity"
+        }
+      ],
+      "disposition": "identity_and_directory_absent",
+      "elapsed_ms": 0.5748779512941837,
+      "expected_starttime_ticks": 85606809,
+      "final_identity": {
+        "errno": 2,
+        "error_type": "FileNotFoundError"
+      },
+      "first": {
+        "after": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606809,
+          "state": "R"
+        },
+        "before": {
+          "comm": "python3.12",
+          "starttime_ticks": 85606809,
+          "state": "R"
+        },
+        "errno": 13,
+        "error_type": "PermissionError",
+        "ok": false,
+        "operation": "fd_directory"
+      },
+      "observed_seconds": 1.8446121759479865,
+      "pid": 2482785
+    }
+  ],
+  "retry_attempt_cap": 16,
+  "same_identity_retry_budget_milliseconds": 20,
+  "sampled_child_pid_count": 76,
+  "source_sha256": {
+    "experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "experiments/network-feasibility/wallet-integration/proc-observation/inner.mjs": "a44b3451ca04acd9d4c20984a12f29895fc7f19de25010a7e7abebf3e1d892d1",
+    "experiments/network-feasibility/wallet-integration/proc-observation/probe.py": "68ce6f56d345160de5def126578fa61c695570d5cab206f6be4c06fe300e0264"
+  },
+  "wall_budget_seconds": 10,
+  "wall_seconds": 10.001930068945512
+}

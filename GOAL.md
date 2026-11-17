@@ -63,3 +63,15 @@ whether a bounded same-PID full-observation retry resolves a transient condition
 Do not repeat cryptographic work before that discriminator and source review.
 Full changing-root expiry/reorganisation, independent final reproduction and
 publication remain pending; native/global Goal ACTIVE.
+
+Checkpoint 2026-11-17 11:33 UTC: small03 completed all five genuine proofs and
+positive public admissions, including backup-only restoration in a new process
+and its new spend. Original process exit0 preceded restored-process launch.
+Independent reviewer recomputed all14 SQL hashes and all five body/proof/Parent
+associations, confirmed exact value accounting and actual isolation observations.
+This closes the short-cycle prerequisite only. Full264-proof changing-root
+expiry/rewind/deep-replay campaign is now authorized under the existing declared
+profile. Independent clean-checkout reproduction and publication still remain.
+No crypto parameters, permissions or namespace controls were weakened to repair
+the observer; source03 uses bounded same-process full reobservation or confirmed
+exit and retains fatal persistent/ambiguous errors. Earlier failures are preserved.

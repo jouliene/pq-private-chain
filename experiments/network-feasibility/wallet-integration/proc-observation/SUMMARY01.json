@@ -1,0 +1,44 @@
+{
+  "EACCES_records": 25,
+  "actual_completed_launch_count": "unknown; actor did not emit terminal completion record",
+  "actual_unique_sampled_child_PIDs": 76,
+  "all_error_records_final_identity_errno_ENOENT": true,
+  "all_first_identity_states_R": true,
+  "allowed_correction": "Runner/reviewer may use a tiny fixed samePID/starttime deadline+attemptcap to restart the ENTIRE unchanged policy sample, accepting only a complete same-identity validation or independently confirmed same-identity Z/X/doubleabsence. Pending/unreadable/live/reused/ambiguous cases stay fatal.",
+  "configured_child_launch_ceiling": 96,
+  "eventual_dispositions": {
+    "identity_and_directory_absent": 25
+  },
+  "first_after_same_identity_R_count": 19,
+  "first_operations": {
+    "fd_directory": 23,
+    "fd_identity": 2
+  },
+  "format": "CP04-PROC-OBSERVATION-SUMMARY01",
+  "host_kernel_release": "6.8.0-149-generic",
+  "not_allowed": [
+    "Treat PermissionError as absence or successful policy validation.",
+    "Skip only FD checks, reuse partial preerror checks, bind a new starttime identity or permit persistentlive/unreadable samples.",
+    "Change permissions, dumpability, capabilities, namespaces, seccomp, ptrace policy or denied mounts to hide the issue.",
+    "Retroactively call small02 or the96launch campaign aPASS; reschedule/rerun outside allocation."
+  ],
+  "not_established": [
+    "No exact kernel root cause is established: this probe does not distinguish exec transition from exit teardown.",
+    "No observed same-PID EACCES-to-full-policy-success case; all25 reproduced cases resolved by independently confirmed disappearance.",
+    "No claim96launches completed or budgetPASS. Short-lived children could be missed.",
+    "Original small02 failing wallet/helper was killed by its safe abort; its historical later fate was not observed and cannot be recovered by this probe.",
+    "Upstream kernel code is explanatory context, not a trace of this patched Ubuntu6.8.0-149kernel."
+  ],
+  "observation": "EACCES with a contemporaneousR/starttime snapshot occurred in harmless children, including19first-posterror same-starttimeR snapshots, then each was independently absent via both identity lookup and PID-directory stat. No persistent/unreadable case survived this tiny retry window.",
+  "postcleanup_read_only_same_identity_children_remaining": [],
+  "probe_completion": "BUDGET_FAILURE_PRESERVED:10second deadline reached before96launch actor completed; group killed/reaped; no extension or rerun",
+  "raw_result_sha256": "fc3c8a85f07bc31ec3ae3f3608dc0503009f4723e09817066699f9165584bdaf",
+  "resolution_elapsed_ms": {
+    "max": 0.5771869327872992,
+    "min": 0.05293299909681082
+  },
+  "same_identity_full_policy_later_count": 0,
+  "scope": "Harmless public OSmetadata only; no wallet keys, backups, private state, proofs, builds,FD contents or FD symlink targets. Namespace/seccomp policy reused unchanged.",
+  "successful_full_public_policy_samples": 1220,
+  "wall_seconds_including_cleanup": 10.001930068945512
+}

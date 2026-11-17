@@ -5,7 +5,7 @@
     "GATE3_PROFILE.json": "07e296d391e47f96f6d60fe6cad99bccc03ff16315af871e5b7a901ea1f96f5e",
     "isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
     "isolation_probe.py": "a2b0507309cfed1620708dbd4cb1aae7ceeb54b906cb618e311d77ed39dfcc52",
-    "run.py": "b6fc63dda50d034072b51106fbe1e5f9e238ea179c74f9024bd75a8d18ce4158",
+    "run.py": "bbb7a4c56498f9e507728e2e505f8f133cdd7e96d519ba5febe2a296992d2902",
     "wallet.mjs": "0edab447223b3424e4db9c7342f9f4e887eb4344685cdfc4bf57460c13a0722f"
   },
   "format": "CP04-WALLET-INTEGRATION-SOURCE01"

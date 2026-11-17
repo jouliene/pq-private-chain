@@ -63,9 +63,12 @@ leak selected indices. The current fixed native selective frontier and joint
 wallet coordinator construct paths locally while discovering receipts from common
 history. The coordinator leases key inventory and jointly journals openings,
 spentness, paths and full cursors for bounded selected-branch rewind. Source
-review, clean build and13JS/5Rust component controls passed. Real integrated
-receipt, expiry, rewind and backup-spend acceptance is still pending Gate3;
-the first isolated diagnostic failed in controller process observation.
+review, clean build and13JS/5Rust component controls passed. The isolated small03
+scenario also passed actual receipt, local-witness spending and a backup-only
+new-process spend, with five positive genuine proof admissions and independent
+public-evidence review. Full changing-root expiry and joint selected-branch
+rewind acceptance remain pending Gate3. Two earlier observer failures and the
+bounded same-process observation repair are retained as evidence.
 Refresh currently rereads history from genesis before applying its suffix, so
 bounded live wallet state does not mean constant history traffic. See STATUS.md
 for exact source identities and the next actual run.

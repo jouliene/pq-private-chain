@@ -1,0 +1,26 @@
+{
+  "files": {
+    "REPORT01.md": {
+      "bytes": 4002,
+      "sha256": "a13a6bcef90c0b637ef96253203f8775b10c6892e04946b7a44529092a1e66d4"
+    },
+    "SUMMARY01.json": {
+      "bytes": 3027,
+      "sha256": "8b065b8516157aab5ef492adf34ceffcfcc7fd42abacec2f0db487e013b5f7b5"
+    },
+    "inner.mjs": {
+      "bytes": 1150,
+      "sha256": "a44b3451ca04acd9d4c20984a12f29895fc7f19de25010a7e7abebf3e1d892d1"
+    },
+    "probe.py": {
+      "bytes": 9601,
+      "sha256": "68ce6f56d345160de5def126578fa61c695570d5cab206f6be4c06fe300e0264"
+    },
+    "public01/RESULT.json": {
+      "bytes": 41842,
+      "sha256": "fc3c8a85f07bc31ec3ae3f3608dc0503009f4723e09817066699f9165584bdaf"
+    }
+  },
+  "format": "CP04-PROC-OBSERVATION-FILES01",
+  "reused_isolation_sha256": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+}
