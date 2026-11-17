@@ -156,7 +156,9 @@ def main():
     epoch.apply(good, lambda *_: None)
     rejection(epoch.finish)
     assert fork.witness('common-A') == current
-    rejection(lambda: fork.rewind(Head(0, b'not common genesis', 0, g.root)), ReplayRequired)
+    unknown_fork = WalletWitnesses(g, node, ZERO, max_owned=4, rewind_blocks=8)
+    accept(unknown_fork, prefix_block, prefix, [(0, 'common-A')])
+    rejection(lambda: unknown_fork.rewind(Head(0, b'not common genesis', 0, g.root)), ReplayRequired)
     # The long chain dropped its ancient private snapshot: no silent full-tree
     # lookup is available as a fallback, even though the test oracle still has it.
     rejection(lambda: wallet.rewind(old_anchor), ReplayRequired)
@@ -195,8 +197,9 @@ def main():
     epoch = empty_wallet.epoch(Head(valid_empty.height, valid_empty.identity, valid_empty.count, valid_empty.root))
     rejection(lambda: epoch.apply(valid_empty, lambda *_: None, ['retained-note']))
     assert empty_wallet.state.head == unchanged and empty_wallet.witness('retained-note').siblings == path_before_empty
-    legacy_empty = wallet.epoch(Head(head.height + 1, b'legacy-empty', head.count, head.root))
-    rejection(lambda: legacy_empty.apply(Block(head.height + 1, head.identity, b'legacy-empty', head.count, head.root, ()), lambda *_: None))
+    legacy_wallet = WalletWitnesses(g, node, ZERO, max_owned=4)
+    legacy_empty = legacy_wallet.epoch(Head(1, b'legacy-empty', 0, g.root))
+    rejection(lambda: legacy_empty.apply(Block(1, g.identity, b'legacy-empty', 0, g.root, ()), lambda *_: None))
     # No second active epoch allocation is allowed, even by direct construction.
     one = fork.epoch(good_head)
     rejection(lambda: fork.epoch(good_head))
@@ -210,7 +213,7 @@ def main():
                'empty-head-anchor-and-journal-advance', 'repeated-empty-root-is-not-expiry-evidence',
                'legacy-empty-policy-still-rejects', 'one-active-epoch-enforced',
                'aborted-and-finished-epochs-release-private-state']
-    result = {'format': 'WALLET-WITNESS-STRUCTURAL-CONTROLS02', 'passed': True, 'checks': checks,
+    result = {'format': 'WALLET-WITNESS-STRUCTURAL-CONTROLS03', 'passed': True, 'checks': checks,
         'changing_roots': 260, 'maximum_algorithm_payload_counts': peak,
         'rewind_checkpoint_cap': 9, 'recent_anchor_cap': 256,
         'active_epoch_cap': 1, 'network_empty_policy_diagnostic_controls': True,

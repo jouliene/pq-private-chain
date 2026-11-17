@@ -1,0 +1,14 @@
+{
+  "diagnostic_hash_not_cp03": true,
+  "finding_confirmed": true,
+  "format": "WALLET-DEEP-REWIND-COUNTEREXAMPLE01",
+  "genuine_payment_or_gate3_claim": false,
+  "old_epoch_finished_after_branch_change": true,
+  "old_epoch_still_active": true,
+  "old_witness_still_accessible": true,
+  "private_material_read_or_recorded": false,
+  "replay_required_raised": true,
+  "revision_after_stale_finish": 2,
+  "revision_before_rewind": 1,
+  "source_sha256": "c878ef92ad834eaaa521af3be7d40355f11e20b5adaa5e863c99a313ec172a8e"
+}

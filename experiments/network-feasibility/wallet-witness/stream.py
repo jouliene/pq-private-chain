@@ -164,40 +164,55 @@ class WalletWitnesses:
         self.history = deque([self.state.clone()], maxlen=rewind_blocks + 1)
         self.rewind_blocks, self.anchor_window, self.block_leaf_cap = rewind_blocks, anchor_window, block_leaf_cap
         self.revision = 0
+        self.replay_required = False
         self.allow_empty_blocks, self.active_epoch = allow_empty_blocks, None
+
+    def require_live(self):
+        if self.replay_required:
+            raise ReplayRequired('selected branch requires a new authenticated replay')
 
     def epoch(self, trusted_endpoint):
         return Epoch(self, trusted_endpoint)
 
     def witness(self, token):
+        self.require_live()
         root, paths = self.state.frontier.view()
         need(root == self.state.head.root and token in paths, 'unspent selected occurrence required')
         return Witness(self.state.frontier.indices[token], paths[token], self.state.head)
 
     def anchor_eligible(self, root, count):
+        self.require_live()
         # The wire binds root/count, not an alleged origin branch or block ID.
         return any(head.root == root and head.count == count for head in self.state.anchors)
 
     def draft_eligible(self, token, root, count):
+        self.require_live()
         return (token in self.state.frontier.indices and self.state.frontier.indices[token] < count and
                 self.anchor_eligible(root, count))
 
     def rewind(self, common_prefix):
-        candidates = [state for state in self.history if state.head == common_prefix]
-        if not candidates:
-            raise ReplayRequired('common prefix outside private journal; authenticated replay required')
-        selected = candidates[0]
+        # This call denotes an independently selected branch change. Revoke the
+        # old branch before looking up its prefix, including the deep-replay case.
+        self.require_live()
         if self.active_epoch is not None:
             self.active_epoch.abort()
+        self.revision += 1
+        candidates = [state for state in self.history if state.head == common_prefix]
+        if not candidates:
+            self.replay_required = True
+            self.state = None
+            self.history.clear()
+            raise ReplayRequired('common prefix outside private journal; authenticated replay required')
+        selected = candidates[0]
         self.state = selected.clone()
         self.history = deque([state for state in self.history if state.head.height <= common_prefix.height],
                              maxlen=self.rewind_blocks + 1)
-        self.revision += 1
 
 
 class Epoch:
     """All changes tentative until the independently selected endpoint matches."""
     def __init__(self, owner, trusted_endpoint):
+        owner.require_live()
         need(owner.active_epoch is None, 'one active epoch only')
         self.owner, self.endpoint = owner, trusted_endpoint
         self.state = owner.state.clone()

@@ -1,0 +1,15 @@
+{
+  "canonical_wallet_changed_by_this_prototype": false,
+  "change": "Revoke old epoch and spend capabilities before selected-branch lookup, fail closed until new authenticated replay if outside journal",
+  "files": {
+    "README.md": "d6ea248091133f3609e674d185e4162c43253a990a29589690c578c4d59f9002",
+    "controls.py": "01ca63aed87b0cd02cfbd130ad2abe1208b7b545cd4a9050471998661c36ea54",
+    "cp03_fixture.py": "179414248ab824c74b55ed32f51c33359c3306e07a4155f35d09018322c2645d",
+    "deep_rewind_control.py": "6eb4fc6366ae0e3e8f5defed041a6a62c25113c91acce20f36c906cfa7358346",
+    "stream.py": "42d072ee2e375c6a1d3ed54f2c3acf9a84f57298a2db18db239c2999eb0c84a4"
+  },
+  "format": "WALLET-WITNESS-EARLY-SOURCE03",
+  "gate3_acceptance": false,
+  "source02_preserved_at": "evidence/structural02.sources/",
+  "supersedes_source02_for_future_runs": true
+}

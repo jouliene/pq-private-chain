@@ -29,7 +29,7 @@ is O(D+KD); no O(N) public tree is hidden in it. Non-consuming views temporarily
 copy O(D+KD) state. The simple private checkpoint journal costs conservatively
 O((R+2)(D+KD+A)) state/references, plus shared empty subtrees and fixed block intake.
 Only one active epoch is permitted. Finished/aborted epoch handles release their
-working state/journal; valid rewind aborts the in-flight epoch. Caller-held view
+working state/journal; every selected-branch rewind aborts the in-flight epoch. Caller-held view
 copies and proof buffers must also be bounded by the eventual integration; this
 is not a claim against arbitrary caller allocation or Python memory erasure.
 This deliberately pays for rollback rather than assuming it is free. Digest
@@ -39,10 +39,12 @@ overflow aborts the entire epoch; no received note is silently dropped.
 
 The recent public anchor ring and private rewind journal are separate. Rewind to
 an exact known common-prefix head restores discoveries, unspentness and paths;
-orphan-only targets disappear. Rewind outside R raises `ReplayRequired` without
-changing state. The supported fallback is authenticated common-history replay
-from genesis (or an explicitly trusted retained wallet checkpoint), not a node
-membership request. The initial key-only backup has no frontier/checkpoint and
+orphan-only targets disappear. Rewind outside R immediately revokes the revision,
+aborts active work and releases the old state/journal before `ReplayRequired`.
+The invalidated object refuses witness, anchor, draft and epoch operations; it
+cannot be reactivated through an old journal head. Create a new object and replay
+authenticated common history from genesis. This is not a node membership request
+or an implemented trusted-checkpoint restore. The initial key-only backup has no frontier/checkpoint and
 cannot skip historical reconstruction merely because old anchors expired.
 
 With in-stream receipt discovery, one pass suffices and no funded-leaf spool is
@@ -86,6 +88,24 @@ SOURCE01 and its exact bytes/results are preserved in the Root checkpoint and
 `evidence/cp03-correspondence01.sources/`. SOURCE02 adds explicit empty-block,
 single-active-epoch and released-state controls; it must use a new result label.
 The old result does not claim execution of those successor controls.
+
+SOURCE03 closes a later independent-review finding: SOURCE02 left its old epoch
+and spend APIs live when a selected common prefix was outside the private journal.
+Root reproduced an old epoch actually finishing after `ReplayRequired`; the
+public result is `evidence/deep-rewind-counterexample01.json`, with the exact old
+source preserved in `evidence/structural02.sources/`. The narrow regression is:
+
+```sh
+python3 -I experiments/network-feasibility/wallet-witness/deep_rewind_control.py \
+  --output /absolute/new/deep-rewind-result.json
+```
+
+It checks revocation, released references, failed stale finish/append, all spend
+entry points, direct epoch construction and fresh selected-history reconstruction.
+Previously returned diagnostic bytes cannot be retroactively erased; actual
+wallet integration must require a live revision/capability to authorize a draft
+and separately manage private opening/inventory lifetimes. These are cheap
+prototype controls, not complete-payment, resource or Gate3 acceptance evidence.
 
 The separate short fixture bridge uses actual CP03 hashes and the existing
 published genuine public bodies:

@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "active_epoch_aborted_and_released": true,
+    "branch_revision_revoked_before_replay": true,
+    "deep_prefix_requires_replay": true,
+    "direct_epoch_constructor_revoked": true,
+    "epoch_method_revoked": true,
+    "fresh_selected_history_replay_works": true,
+    "old_anchor_api_revoked": true,
+    "old_committed_state_and_journal_released": true,
+    "old_epoch_cannot_append": true,
+    "old_epoch_cannot_finish": true,
+    "old_journal_cannot_reactivate": true,
+    "old_owned_token_not_resurrected": true,
+    "old_witness_api_revoked": true,
+    "saved_draft_cannot_be_authorized": true
+  },
+  "diagnostic_hash_not_cp03": true,
+  "format": "WALLET-DEEP-REWIND-REGRESSION01",
+  "genuine_payment_or_gate3_claim": false,
+  "passed": true,
+  "private_material_read_or_recorded": false,
+  "scope": "Prototype lifecycle only; real receipt/opening-map composition is not implemented",
+  "source_sha256": "42d072ee2e375c6a1d3ed54f2c3acf9a84f57298a2db18db239c2999eb0c84a4"
+}

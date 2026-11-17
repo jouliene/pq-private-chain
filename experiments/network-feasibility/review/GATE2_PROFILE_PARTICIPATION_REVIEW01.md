@@ -186,3 +186,77 @@ policy, authenticated state accumulator or checkpoint would be a separate
 protocol/state mechanism, not a cache optimization. Until such a mechanism is
 implemented, the proposed model must retain and price growing public state and
 undo, and make historical availability failures explicit.
+
+## Conditional decision: full RETAIN as the Gate3 research model
+
+Added while the full864-proof producer allocation17 is running; no full96x8
+network result is presumed. Earlier review identity notes and dispositions above
+are preserved. This note narrows the architecture decision, not its security
+requirements or the owner's budget.
+
+If the declared full96x8 pipeline passes independent actual review, it is
+technically defensible to provisionally retain CP03 for a **finite research model
+with fully retaining validators and a separately provisioned opaque archive
+serving role**, then implement Gate3 against that explicit validating source and
+common-history context. These are concrete implemented roles. Each new block
+gets genuine proof/state validation and atomic durable local retention; there is
+no eviction, unfinished export obligation or missing remote publication receipt
+needed to justify that retained state. RETAIN pending0 is not pretending an
+archive acknowledged eviction. The local ledger also retains historical bodies
+and authoritative undo, so local history access/rollback does not depend on an
+unimplemented remote-pruning path.
+
+This is a costly research participation model, not a claim that ordinary users
+can operate it indefinitely or that its concentration is compatible with
+decentralized private money. The current runner admits only the declared2GiB
+quota and stops at capacity; its8GiB experiment disk watchdog is not annual
+provisioning. The native CLI supports explicit fresh-store quota selection, but
+changing a number neither supplies storage nor establishes performance at that
+scale. No quota increase, owner consent or annual PASS follows from this note.
+
+The principal counterarguments remain concrete:
+
+- The opaque archive does not replace the validator's full-body copy. One of
+  each costs approximately350TB/year of bodies combined at the100M comparison
+  rate, before additional replicas, producer artifacts or growing public state.
+  Per-validator initial ingress remains approximately175TB/year; each added
+  archive/client copy costs real egress and storage. The current archive has one
+  GET slot and the measured configuration has one destination, so arbitrary
+  fan-out is neither demonstrated nor free.
+- Full RETAIN preserves reduced history, nullifiers, cores, leaves/tree and undo
+  as well as bodies. The current-schema selected-field and reduced-history
+  projections remain extra costs, not a complete SQLite/index/storage estimate.
+  Long-state admission, rewind and disk latency are unmeasured.
+- A fresh validator starts from configured genesis and genuinely replays all
+  required full blocks; the archive's opaque hash/ACK supplies bytes, not a
+  validity certificate. There is no succinct authenticated checkpoint or free
+  bootstrap. The earlier transfer-only estimates exclude validation and
+  simultaneous live traffic. Trusted local reopen is a separate demonstrated
+  restart operation.
+- The archive is a distinct process on the measured host, not an independent
+  failure domain or an economically incentivized availability network. Missing
+  data can stall new delivery/bootstrap; byte hashes cannot cure withholding.
+  Full RETAIN protects already held history from that particular dependency,
+  but does not implement node replication, peer discovery or remote recovery.
+- Ordered offers and endpoint selection come from the declared trusted lab
+  controller. They are not distributed consensus, permissionless issuance or
+  Internet peer authentication. Those omissions are explicit in this Goal's
+  research boundary, not hidden mechanisms credited as implemented.
+
+No additional archival mechanism is missing for the **bounded full-RETAIN path
+itself**. The still-required Gate3 mechanism is actual wallet discovery and
+local witness maintenance/recovery/expiry/rewind from common authenticated
+history, with a declared endpoint/validating-source trust boundary and without
+owned-index queries. Existing scan export and prototype evidence do not already
+satisfy that integration. A full validating source may supply the common stream
+and an oracle for comparison; it must not supply the wallet's attributed paths.
+
+Remote-backed bounded-body retention is therefore a specific justified storage
+investment after this finite model, not a prerequisite invented for proving the
+wallet algorithm on fully retained history. It remains mandatory before claiming
+that remote-pruned ordinary validators are implemented. Successful Gate3 would
+not settle archive concentration, long-history bootstrap or owner acceptance of
+the cost model. The eventual handoff may recommend the concrete storage pivot
+above instead of permissionless PoW integration. Full Gate2 acceptance still
+requires the actual96x8 run, and final Goal closure still requires all other
+specified integration/reproduction/publication conditions.
