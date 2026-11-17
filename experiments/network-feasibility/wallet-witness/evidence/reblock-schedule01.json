@@ -1,0 +1,55 @@
+{
+  "changing_root_steps_after_reserve_funding": 288,
+  "counterexamples": {
+    "duplicate_body_is_not_distinct_traffic": {
+      "kind": "ReplayOrUnavailableInput",
+      "public_toy_body": "b1-0"
+    },
+    "merge_away_required_anchor_boundary": {
+      "kind": "AnchorCountExceedsBlockParent",
+      "public_toy_body": "b2-0"
+    },
+    "move_next_batch_before_boundary": {
+      "kind": "AnchorCountExceedsBlockParent",
+      "public_toy_body": "b2-0"
+    },
+    "swap_within_batch_changes_later_anchor": {
+      "kind": "RequiredOrderedPrefixAnchorAbsent",
+      "public_toy_body": "b2-0"
+    }
+  },
+  "format": "WALLET-WITNESS-REBLOCK-SCHEDULE01",
+  "gate3_acceptance": false,
+  "genuine_bodies_or_private_material_consumed": 0,
+  "native_hashes_or_proofs_executed": false,
+  "original_block_groups": 4,
+  "passed": true,
+  "planned_three_batch_schedule": {
+    "body_count": 385,
+    "funded_occurrences": 770,
+    "funding_anchor_eligible_at_final_tip": false,
+    "funding_anchor_eligible_at_tips": {
+      "256": true,
+      "257": false
+    },
+    "funding_anchor_publication_height": 1,
+    "ordered_leaf_prefix_equal_to_original": true,
+    "ordinary_anchors_latest_inclusion_age": 96,
+    "reserve_outputs_unspent": 2,
+    "tip_height": 289
+  },
+  "real_private_backup_custody_not_demonstrated": true,
+  "real_reblocking_or_expiry_admission_executed": false,
+  "reblocked_groups": 289,
+  "reserve_requires_successor_workload_design_before_proof_generation": true,
+  "scope": "Source-correspondence and PUBLIC symbolic schedule only; actual unchanged-body replay and private reserve recovery remain mandatory",
+  "source_pins": {
+    "source/crates/ledger-cp03/src/admission.rs": "1530cd71e2635a592bc37cb6cdbba36f268f3877c7a13d8bd25e38a241527ece",
+    "source/crates/ledger-cp03/src/store.rs": "473ba8e0d326beaddf446f247da542ff65d4f1f9c639ff1f1507c31bb365b0ea",
+    "source/crates/ledger-cp03/src/tree.rs": "4a94350969b1b060fdc2cf005a1adede25ac8a9cdafeea2c8b9d3d6249737bf3",
+    "source/experiments/compact-all-payments-v3/src/frame.rs": "a02642e4c120db349bde47bb744cac36b6e7ba63562f82f4518b80c4ee92044a",
+    "source/experiments/compact-arities-v3/src/statement.rs": "a421ef9a459fa39f64911b7576357c003acea35bbf79d1cd0ff453695bca36e1",
+    "source/experiments/compact-history-v3/src/body.rs": "227974ae7e594b1b4185f843aea3e7cf7175f0eee70779ea768974f5d34dd365",
+    "source/runtime/cp03/source-signature.mjs": "560d795353d3a6282da3c71b0af3baf5df75ffb702e7c3793a3c944c7565de2f"
+  }
+}

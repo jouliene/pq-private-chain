@@ -1,0 +1,156 @@
+{
+  "format": "CP04-INDEPENDENT-PRODUCER-DIAGNOSTIC03-ACTUAL01",
+  "disposition": "Changed generator diagnostic PASS; GO for Root allocation of full96x8 generation, separate from transport source/run gate",
+  "scope": "Independent public receipt/source/state correspondence; no native verifier or fresh proof execution by reviewer",
+  "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2",
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "terminal_receipt_sha256": "8c688f7c49fab7fb1f6a6ace0328af88ec158ce12a70361eff32f209aa626f8b",
+  "workload_sha256": "617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a",
+  "actual_process": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+      "--disable-sigusr1",
+      "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/driver.mjs",
+      "gate2-diagnostic01",
+      "/home/neo/jouliene/pq-private-chain/.work/network01/fresh/installation.json",
+      "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+      "2"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 168304,
+    "process_exit": 0,
+    "system_seconds": 6.471459,
+    "timeout": false,
+    "user_seconds": 59.991432,
+    "wall_seconds": 66.69895034201909,
+    "wrapper_exit": 0
+  },
+  "public_init_receipt_sha256": "5e20d057624418b3a37bb94544b82bf1039164364cf0100cfb99c737f5e99ce4",
+  "counts": {
+    "blocks": 4,
+    "bodies": 8,
+    "nullifiers": 12,
+    "leaves": 16,
+    "cores": 8,
+    "sources": 2,
+    "archive_pending": 0
+  },
+  "state": {
+    "total": 200000000,
+    "height": 4,
+    "leaves": 16,
+    "fees": 16907038,
+    "liabilities": 0
+  },
+  "cache": {
+    "hard_bytes": 2147483648,
+    "cached_bytes": 14025974,
+    "unexported_bytes": 0,
+    "archive_committed_bytes": 0,
+    "retention": 1
+  },
+  "blocks": [
+    {
+      "height": 1,
+      "leaves": 4,
+      "fees": 4233550,
+      "header_matches_sql_manifest": true
+    },
+    {
+      "height": 2,
+      "leaves": 8,
+      "fees": 8458046,
+      "header_matches_sql_manifest": true
+    },
+    {
+      "height": 3,
+      "leaves": 12,
+      "fees": 12682542,
+      "header_matches_sql_manifest": true
+    },
+    {
+      "height": 4,
+      "leaves": 16,
+      "fees": 16907038,
+      "header_matches_sql_manifest": true
+    }
+  ],
+  "all8_parent_receipts": [
+    {
+      "body": "credit000.body",
+      "sha256": "e064f37bee89f21503825830a9f4054705bc7ba1852640b611bd26c50d542ef5",
+      "arity": 0,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "credit001.body",
+      "sha256": "4e35f0f1d36f40ff52ea0c0109cb8bcfe9be7c24ab5d511f70b98934cc44721a",
+      "arity": 0,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "batch01-000.body",
+      "sha256": "f0f34c4687c7c1e947a475149fcd32966df82abf9db2e79d1f71174abb60fc09",
+      "arity": 2,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "batch01-001.body",
+      "sha256": "0f572325d40d2f313c55a7e3b7c9fab0f3a24146b384dc03f2fad26a71be8e37",
+      "arity": 2,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "batch02-000.body",
+      "sha256": "5f1336aa1264aa0557ce79b5f5a00dd76d04221df704c4fc117bb56f4fcc7b3f",
+      "arity": 2,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "batch02-001.body",
+      "sha256": "a3c5316dd2f84d1105461cc90cba8b72ce62321b2d78e054dccfc189512ba5fe",
+      "arity": 2,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "batch03-000.body",
+      "sha256": "0dab8fc510bc11657374b600d1c2efb4143896fa1cb150943e32babbdc55d590",
+      "arity": 2,
+      "terminal0_pins_private_boundary": true
+    },
+    {
+      "body": "batch03-001.body",
+      "sha256": "817acdb0da4420d4ea4bdcb7f29b3c117fd005a02c90ba916ccd81458730c915",
+      "arity": 2,
+      "terminal0_pins_private_boundary": true
+    }
+  ],
+  "sampled_body_proof_correspondence": [
+    {
+      "body": "credit000.body",
+      "body_sha256": "81d4cc28ca05e7a3afeb842da2717ebc826fd7c3ce5df50e6cf17cb50f73266e",
+      "statement_matches_parent": true,
+      "proof_matches_parent": true
+    },
+    {
+      "body": "batch03-001.body",
+      "body_sha256": "78b2a6a1d8b5a986ed9d296acc49e76f0950abbbf0caac45c6416d4d223e6d1f",
+      "statement_matches_parent": true,
+      "proof_matches_parent": true
+    }
+  ],
+  "costs": {
+    "worker_wall_seconds": 15.093312609009445,
+    "caller_wall_seconds": 42.989761975,
+    "worker_peaks_not_summed": true
+  },
+  "limits": [
+    "Eight proofs and four blocks do not establish full96x8 runtime or service capacity",
+    "Receiving-path execution follows reviewed source and successful genuine spends; no general recovery/selective-witness claim",
+    "Parent own verification and producer ledger admission are actual producer receipts, not an independently executed new public-verifier campaign",
+    "Source/runtime stability is producer pre/post evidence plus previously independently approved source; full installation not rehashed here"
+  ]
+}

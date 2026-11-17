@@ -1,0 +1,8 @@
+{
+  "actual_checker_exit": 1,
+  "actual_error": "AssertionError at inline script line25",
+  "cause": "Checker consumed16bytes instead of complete20byte CPBODY03 prefix; omitted authorization length and reserved u16 before statement. Producer source and actual PASS unaffected.",
+  "corrective_scope": "Read complete20byte public prefix; no native/proof/CP field hash execution or private access",
+  "format": "CP04-PUBLIC-READBACK-CHECKER-FAILURE01",
+  "producer_rerun": false
+}

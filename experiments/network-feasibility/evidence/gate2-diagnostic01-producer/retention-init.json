@@ -1,0 +1,24 @@
+{
+  "format": "CP04-PRODUCER-RETAIN-INIT01",
+  "hard_bytes": "2147483648",
+  "process_exit": 0,
+  "signal": null,
+  "transport_error": false,
+  "binary_prechecked": true,
+  "binary_postchecked": true,
+  "head_reopened_and_matched": true,
+  "passed": true,
+  "head": {
+    "schema": "CP03-LEDGER-CLI-01",
+    "chain": "dbc6485aa23414bbf6cef655f7ad425aa7fa9c04a183cab8af5622ff5d524aab",
+    "genesis_id": "efd51656bf642e155a543a8cfe82f86c92482eaf9a3e9b8fe4c532255711dac3485245297f77b1c07130160f4cf05c1f63349250d33e556be1db72bdce7698fe",
+    "height": "0",
+    "block_id": "efd51656bf642e155a543a8cfe82f86c92482eaf9a3e9b8fe4c532255711dac3485245297f77b1c07130160f4cf05c1f63349250d33e556be1db72bdce7698fe",
+    "leaf_count": "0",
+    "root_le": "8c0d3d7f677da032448d3d2d1c41d72651a15931c810b0440db22837183138e04509385e946b0c2a7c715211a5e8d3a6dd32e28045baf7083590c247b45de37e",
+    "fee_escrow": "0",
+    "unconsumed_liabilities": "200000000",
+    "block_version": "4"
+  },
+  "wall_seconds": 2.312876537
+}

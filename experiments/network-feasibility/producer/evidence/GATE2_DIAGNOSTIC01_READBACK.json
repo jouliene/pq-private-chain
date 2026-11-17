@@ -1,0 +1,444 @@
+{
+  "actual_generation": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+      "--disable-sigusr1",
+      "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/producer/driver.mjs",
+      "gate2-diagnostic01",
+      "/home/neo/jouliene/pq-private-chain/.work/network01/fresh/installation.json",
+      "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+      "2"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 168304,
+    "process_exit": 0,
+    "system_seconds": 6.471459,
+    "timeout": false,
+    "user_seconds": 59.991432,
+    "wall_seconds": 66.69895034201909,
+    "wrapper_exit": 0
+  },
+  "body_statement_anchors": [
+    {
+      "anchor_count": 0,
+      "anchor_root_le": "8c0d3d7f677da032448d3d2d1c41d72651a15931c810b0440db22837183138e04509385e946b0c2a7c715211a5e8d3a6dd32e28045baf7083590c247b45de37e",
+      "arity": 0,
+      "batch": 0,
+      "body": "credit000.body"
+    },
+    {
+      "anchor_count": 0,
+      "anchor_root_le": "8c0d3d7f677da032448d3d2d1c41d72651a15931c810b0440db22837183138e04509385e946b0c2a7c715211a5e8d3a6dd32e28045baf7083590c247b45de37e",
+      "arity": 0,
+      "batch": 0,
+      "body": "credit001.body"
+    },
+    {
+      "anchor_count": 4,
+      "anchor_root_le": "bcc699f7d728421555549253420e93b5e067f1b654f998568452b932f3cb904b04c1f76444d54681a9b815ae04224fb71148e2da1061397c3f1ec3a56b33fa04",
+      "arity": 2,
+      "batch": 1,
+      "body": "batch01-000.body"
+    },
+    {
+      "anchor_count": 4,
+      "anchor_root_le": "bcc699f7d728421555549253420e93b5e067f1b654f998568452b932f3cb904b04c1f76444d54681a9b815ae04224fb71148e2da1061397c3f1ec3a56b33fa04",
+      "arity": 2,
+      "batch": 1,
+      "body": "batch01-001.body"
+    },
+    {
+      "anchor_count": 8,
+      "anchor_root_le": "2b6a766a8e7f645a03d848cad5bd10f25e3dd863fdc87885cfa436d24420ede8173620dc6e936ce3fbe82b14ff6d8340035caf3024de496b9d3efd2af7b0bd46",
+      "arity": 2,
+      "batch": 2,
+      "body": "batch02-000.body"
+    },
+    {
+      "anchor_count": 8,
+      "anchor_root_le": "2b6a766a8e7f645a03d848cad5bd10f25e3dd863fdc87885cfa436d24420ede8173620dc6e936ce3fbe82b14ff6d8340035caf3024de496b9d3efd2af7b0bd46",
+      "arity": 2,
+      "batch": 2,
+      "body": "batch02-001.body"
+    },
+    {
+      "anchor_count": 12,
+      "anchor_root_le": "abb38445141faa470368185b055c23a2e3e8e87868e49709b6360998f770886b0858cc41c2182df70eb47c1d49afdfe6510994e4b4f38a2768ba22663bac75cb",
+      "arity": 2,
+      "batch": 3,
+      "body": "batch03-000.body"
+    },
+    {
+      "anchor_count": 12,
+      "anchor_root_le": "abb38445141faa470368185b055c23a2e3e8e87868e49709b6360998f770886b0858cc41c2182df70eb47c1d49afdfe6510994e4b4f38a2768ba22663bac75cb",
+      "arity": 2,
+      "batch": 3,
+      "body": "batch03-001.body"
+    }
+  ],
+  "checks": {
+    "all_14_public_tables_read": true,
+    "all_batch_counts_fees_endpoints_match_actual_SQL": true,
+    "all_eight_cost_rows_match_original_parent_resource_receipts": true,
+    "all_five_genesis_and_postblock_roots_distinct": true,
+    "all_four_headers_equal_accepted_SQL_bytes": true,
+    "all_original_parent_status_and_source_runtime_flags_pass": true,
+    "all_statement_anchors_match_immediately_previous_batch": true
+  },
+  "format": "CP04-PRODUCER-GATE2-DIAGNOSTIC-READBACK01",
+  "gate2_service_acceptance": false,
+  "gate3_acceptance": false,
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "original_parent_receipts": [
+    {
+      "arity": 0,
+      "label": "net2-gate2-diagnostic01-credit-000",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "e064f37bee89f21503825830a9f4054705bc7ba1852640b611bd26c50d542ef5",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 0,
+      "label": "net2-gate2-diagnostic01-credit-001",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "4e35f0f1d36f40ff52ea0c0109cb8bcfe9be7c24ab5d511f70b98934cc44721a",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 2,
+      "label": "net2-gate2-diagnostic01-b01-ordinary-000",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "f0f34c4687c7c1e947a475149fcd32966df82abf9db2e79d1f71174abb60fc09",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 2,
+      "label": "net2-gate2-diagnostic01-b01-ordinary-001",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "0f572325d40d2f313c55a7e3b7c9fab0f3a24146b384dc03f2fad26a71be8e37",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 2,
+      "label": "net2-gate2-diagnostic01-b02-ordinary-000",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "5f1336aa1264aa0557ce79b5f5a00dd76d04221df704c4fc117bb56f4fcc7b3f",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 2,
+      "label": "net2-gate2-diagnostic01-b02-ordinary-001",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "a3c5316dd2f84d1105461cc90cba8b72ce62321b2d78e054dccfc189512ba5fe",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 2,
+      "label": "net2-gate2-diagnostic01-b03-ordinary-000",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "0dab8fc510bc11657374b600d1c2efb4143896fa1cb150943e32babbdc55d590",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    },
+    {
+      "arity": 2,
+      "label": "net2-gate2-diagnostic01-b03-ordinary-001",
+      "private_input_written_or_hashed": false,
+      "process_exit": 0,
+      "sha256": "817acdb0da4420d4ea4bdcb7f29b3c117fd005a02c90ba916ccd81458730c915",
+      "source_runtime_pins_unchanged": true,
+      "unchecked_child_output_persisted": false,
+      "wrapper_exit": 0
+    }
+  ],
+  "passed": true,
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "proof_costs": {
+    "batches": [
+      {
+        "admission_wall_seconds": 1.3463554860000004,
+        "batch": 0,
+        "body_count": 2,
+        "endpoint": {
+          "block_id": "bd2ca26bfa8fa24c53337870d473a2a4f47b16b47370ebc72f75a5915eef776a1763e5dedd01dcb48175cb8a0c89888f7e7b51431b37ee08f8e93ccca5a02c27",
+          "fee_escrow": "4233550",
+          "height": "1",
+          "leaf_count": "4",
+          "root_le": "bcc699f7d728421555549253420e93b5e067f1b654f998568452b932f3cb904b04c1f76444d54681a9b815ae04224fb71148e2da1061397c3f1ec3a56b33fa04",
+          "unconsumed_liabilities": "0"
+        },
+        "inclusive_wall_seconds": 12.263947121000001,
+        "kind": "funding"
+      },
+      {
+        "admission_wall_seconds": 1.3211074379999992,
+        "anchor": {
+          "block_id": "bd2ca26bfa8fa24c53337870d473a2a4f47b16b47370ebc72f75a5915eef776a1763e5dedd01dcb48175cb8a0c89888f7e7b51431b37ee08f8e93ccca5a02c27",
+          "fee_escrow": "4233550",
+          "height": "1",
+          "leaf_count": "4",
+          "root_le": "bcc699f7d728421555549253420e93b5e067f1b654f998568452b932f3cb904b04c1f76444d54681a9b815ae04224fb71148e2da1061397c3f1ec3a56b33fa04",
+          "unconsumed_liabilities": "0"
+        },
+        "batch": 1,
+        "body_count": 2,
+        "endpoint": {
+          "block_id": "b0c980e600435bea551ee690d6fca5c5b1630c8cff654a14962083092831526a4c3799d361112be3922e39a2117f11f8d5f8ce4a73fb1888676a80750b2aa721",
+          "fee_escrow": "8458046",
+          "height": "2",
+          "leaf_count": "8",
+          "root_le": "2b6a766a8e7f645a03d848cad5bd10f25e3dd863fdc87885cfa436d24420ede8173620dc6e936ce3fbe82b14ff6d8340035caf3024de496b9d3efd2af7b0bd46",
+          "unconsumed_liabilities": "0"
+        },
+        "inclusive_wall_seconds": 17.022830871,
+        "kind": "ordinary"
+      },
+      {
+        "admission_wall_seconds": 1.265717448000003,
+        "anchor": {
+          "block_id": "b0c980e600435bea551ee690d6fca5c5b1630c8cff654a14962083092831526a4c3799d361112be3922e39a2117f11f8d5f8ce4a73fb1888676a80750b2aa721",
+          "fee_escrow": "8458046",
+          "height": "2",
+          "leaf_count": "8",
+          "root_le": "2b6a766a8e7f645a03d848cad5bd10f25e3dd863fdc87885cfa436d24420ede8173620dc6e936ce3fbe82b14ff6d8340035caf3024de496b9d3efd2af7b0bd46",
+          "unconsumed_liabilities": "0"
+        },
+        "batch": 2,
+        "body_count": 2,
+        "endpoint": {
+          "block_id": "66fbe5b556543c0cccb723fe47a7f176ab6e2895c6f0b2a5245bfb465143bf33b9319b5068093f11cf6288dbd0558d118cd7ab63144299ec9f41c4e17803af96",
+          "fee_escrow": "12682542",
+          "height": "3",
+          "leaf_count": "12",
+          "root_le": "abb38445141faa470368185b055c23a2e3e8e87868e49709b6360998f770886b0858cc41c2182df70eb47c1d49afdfe6510994e4b4f38a2768ba22663bac75cb",
+          "unconsumed_liabilities": "0"
+        },
+        "inclusive_wall_seconds": 17.097754224999996,
+        "kind": "ordinary"
+      },
+      {
+        "admission_wall_seconds": 1.2931718190000028,
+        "anchor": {
+          "block_id": "66fbe5b556543c0cccb723fe47a7f176ab6e2895c6f0b2a5245bfb465143bf33b9319b5068093f11cf6288dbd0558d118cd7ab63144299ec9f41c4e17803af96",
+          "fee_escrow": "12682542",
+          "height": "3",
+          "leaf_count": "12",
+          "root_le": "abb38445141faa470368185b055c23a2e3e8e87868e49709b6360998f770886b0858cc41c2182df70eb47c1d49afdfe6510994e4b4f38a2768ba22663bac75cb",
+          "unconsumed_liabilities": "0"
+        },
+        "batch": 3,
+        "body_count": 2,
+        "endpoint": {
+          "block_id": "bb87fb28db62675f312c39c0e6782a68dcfc8025d1798ae25339ff9decbea0942821a4342264d5c20028c300075b37d5f67bce46366fc594944f899933c3e8c8",
+          "fee_escrow": "16907038",
+          "height": "4",
+          "leaf_count": "16",
+          "root_le": "1a8b6d098ed2a8c0ce9cf737a92134ba9d583302497a1a3cc8f884a8fa034c9c8d521c367a924f577c69b40c89ad088790167832056b2a56968d1ef04d54294e",
+          "unconsumed_liabilities": "0"
+        },
+        "inclusive_wall_seconds": 16.672493570000007,
+        "kind": "ordinary"
+      }
+    ],
+    "credit_proofs": 2,
+    "format": "CP04-PRODUCER-PROOF-COSTS02",
+    "ordinary_proofs": 6,
+    "rows": [
+      {
+        "arity": 0,
+        "batch": 0,
+        "body": "credit000.body",
+        "body_bytes": 1755737,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-000.json",
+        "parent_receipt_sha256": "e064f37bee89f21503825830a9f4054705bc7ba1852640b611bd26c50d542ef5",
+        "private_proving_call_wall_seconds": 5.478181294,
+        "proof_bytes": 1746314,
+        "worker_peak_rss_kib": 168300,
+        "worker_system_seconds": 0.058025,
+        "worker_user_seconds": 1.81879,
+        "worker_wall_seconds": 1.901471997029148
+      },
+      {
+        "arity": 0,
+        "batch": 0,
+        "body": "credit001.body",
+        "body_bytes": 1763289,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-001.json",
+        "parent_receipt_sha256": "4e35f0f1d36f40ff52ea0c0109cb8bcfe9be7c24ab5d511f70b98934cc44721a",
+        "private_proving_call_wall_seconds": 5.335637706000001,
+        "proof_bytes": 1753866,
+        "worker_peak_rss_kib": 168300,
+        "worker_system_seconds": 0.05597,
+        "worker_user_seconds": 1.7650839999999999,
+        "worker_wall_seconds": 1.8447919809259474
+      },
+      {
+        "arity": 2,
+        "batch": 1,
+        "body": "batch01-000.body",
+        "body_bytes": 1754326,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-000.json",
+        "parent_receipt_sha256": "f0f34c4687c7c1e947a475149fcd32966df82abf9db2e79d1f71174abb60fc09",
+        "private_proving_call_wall_seconds": 5.349362664,
+        "proof_bytes": 1749450,
+        "worker_peak_rss_kib": 168304,
+        "worker_system_seconds": 0.059948999999999995,
+        "worker_user_seconds": 1.798497,
+        "worker_wall_seconds": 1.8828905610134825
+      },
+      {
+        "arity": 2,
+        "batch": 1,
+        "body": "batch01-001.body",
+        "body_bytes": 1748118,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-001.json",
+        "parent_receipt_sha256": "0f572325d40d2f313c55a7e3b7c9fab0f3a24146b384dc03f2fad26a71be8e37",
+        "private_proving_call_wall_seconds": 5.406311938000003,
+        "proof_bytes": 1743242,
+        "worker_peak_rss_kib": 168176,
+        "worker_system_seconds": 0.05892,
+        "worker_user_seconds": 1.8265319999999998,
+        "worker_wall_seconds": 1.9099218259798363
+      },
+      {
+        "arity": 2,
+        "batch": 2,
+        "body": "batch02-000.body",
+        "body_bytes": 1760470,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-000.json",
+        "parent_receipt_sha256": "5f1336aa1264aa0557ce79b5f5a00dd76d04221df704c4fc117bb56f4fcc7b3f",
+        "private_proving_call_wall_seconds": 5.515867186000003,
+        "proof_bytes": 1755594,
+        "worker_peak_rss_kib": 168176,
+        "worker_system_seconds": 0.061008999999999994,
+        "worker_user_seconds": 1.876304,
+        "worker_wall_seconds": 1.962358538992703
+      },
+      {
+        "arity": 2,
+        "batch": 2,
+        "body": "batch02-001.body",
+        "body_bytes": 1743830,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-001.json",
+        "parent_receipt_sha256": "a3c5316dd2f84d1105461cc90cba8b72ce62321b2d78e054dccfc189512ba5fe",
+        "private_proving_call_wall_seconds": 5.353301603,
+        "proof_bytes": 1738954,
+        "worker_peak_rss_kib": 168176,
+        "worker_system_seconds": 0.060946,
+        "worker_user_seconds": 1.788361,
+        "worker_wall_seconds": 1.873619658057578
+      },
+      {
+        "arity": 2,
+        "batch": 3,
+        "body": "batch03-000.body",
+        "body_bytes": 1758678,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-000.json",
+        "parent_receipt_sha256": "0dab8fc510bc11657374b600d1c2efb4143896fa1cb150943e32babbdc55d590",
+        "private_proving_call_wall_seconds": 5.2836464199999975,
+        "proof_bytes": 1753802,
+        "worker_peak_rss_kib": 168176,
+        "worker_system_seconds": 0.062438,
+        "worker_user_seconds": 1.770147,
+        "worker_wall_seconds": 1.8565898609813303
+      },
+      {
+        "arity": 2,
+        "batch": 3,
+        "body": "batch03-001.body",
+        "body_bytes": 1741526,
+        "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-001.json",
+        "parent_receipt_sha256": "817acdb0da4420d4ea4bdcb7f29b3c117fd005a02c90ba916ccd81458730c915",
+        "private_proving_call_wall_seconds": 5.267453163999999,
+        "proof_bytes": 1736650,
+        "worker_peak_rss_kib": 168176,
+        "worker_system_seconds": 0.06298,
+        "worker_user_seconds": 1.774441,
+        "worker_wall_seconds": 1.8616681860294193
+      }
+    ],
+    "scope": "Fresh complete proof generation and repeated producer admission; fixture-local receipt extraction/membership, not Gate3 discovery, live wallet throughput or receiving-node service. Worker CPU/RSS from actual first wait4; peaks are not summed."
+  },
+  "public_accounting": {
+    "fees": 16907038,
+    "height": 4,
+    "leaf_count": 16,
+    "liabilities": 0,
+    "remaining_note_supply_implied_by_conservation": 183092962,
+    "total": 200000000
+  },
+  "public_table_counts": {
+    "anchors": 5,
+    "archive_objects": 0,
+    "archive_pending": 0,
+    "archive_segments": 0,
+    "blocks": 4,
+    "bodies": 8,
+    "body_cache": 1,
+    "cores": 8,
+    "leaves": 16,
+    "meta": 1,
+    "node_undo": 180,
+    "nodes": 67,
+    "nullifiers": 12,
+    "sources": 2
+  },
+  "retention": {
+    "archive_committed_bytes": 0,
+    "cached_bytes": 14025974,
+    "full_bodies": 8,
+    "hard_bytes": 2147483648,
+    "next_segment": 0,
+    "retain": true,
+    "unexported_bytes": 0
+  },
+  "retention_init": {
+    "binary_postchecked": true,
+    "binary_prechecked": true,
+    "format": "CP04-PRODUCER-RETAIN-INIT01",
+    "hard_bytes": "2147483648",
+    "head": {
+      "block_id": "efd51656bf642e155a543a8cfe82f86c92482eaf9a3e9b8fe4c532255711dac3485245297f77b1c07130160f4cf05c1f63349250d33e556be1db72bdce7698fe",
+      "block_version": "4",
+      "chain": "dbc6485aa23414bbf6cef655f7ad425aa7fa9c04a183cab8af5622ff5d524aab",
+      "fee_escrow": "0",
+      "genesis_id": "efd51656bf642e155a543a8cfe82f86c92482eaf9a3e9b8fe4c532255711dac3485245297f77b1c07130160f4cf05c1f63349250d33e556be1db72bdce7698fe",
+      "height": "0",
+      "leaf_count": "0",
+      "root_le": "8c0d3d7f677da032448d3d2d1c41d72651a15931c810b0440db22837183138e04509385e946b0c2a7c715211a5e8d3a6dd32e28045baf7083590c247b45de37e",
+      "schema": "CP03-LEDGER-CLI-01",
+      "unconsumed_liabilities": "200000000"
+    },
+    "head_reopened_and_matched": true,
+    "passed": true,
+    "process_exit": 0,
+    "signal": null,
+    "transport_error": false,
+    "wall_seconds": 2.312876537
+  },
+  "scope": "Public-only metadata, statement-prefix, original Parent receipts and readonly SQL; no native/proof/CP field-hash rerun, no private access. Diagnostic only, not Gate2 service or Gate3.",
+  "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2",
+  "workload_sha256": "617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a"
+}

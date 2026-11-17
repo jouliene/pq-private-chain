@@ -1,0 +1,206 @@
+{
+  "format": "CP04-PRODUCER-PROOF-COSTS02",
+  "credit_proofs": 2,
+  "ordinary_proofs": 6,
+  "rows": [
+    {
+      "body": "credit000.body",
+      "batch": 0,
+      "arity": 0,
+      "private_proving_call_wall_seconds": 5.478181294,
+      "worker_wall_seconds": 1.901471997029148,
+      "worker_user_seconds": 1.81879,
+      "worker_system_seconds": 0.058025,
+      "worker_peak_rss_kib": 168300,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-000.json",
+      "parent_receipt_sha256": "e064f37bee89f21503825830a9f4054705bc7ba1852640b611bd26c50d542ef5",
+      "proof_bytes": 1746314,
+      "body_bytes": 1755737
+    },
+    {
+      "body": "credit001.body",
+      "batch": 0,
+      "arity": 0,
+      "private_proving_call_wall_seconds": 5.335637706000001,
+      "worker_wall_seconds": 1.8447919809259474,
+      "worker_user_seconds": 1.7650839999999999,
+      "worker_system_seconds": 0.05597,
+      "worker_peak_rss_kib": 168300,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-credit-001.json",
+      "parent_receipt_sha256": "4e35f0f1d36f40ff52ea0c0109cb8bcfe9be7c24ab5d511f70b98934cc44721a",
+      "proof_bytes": 1753866,
+      "body_bytes": 1763289
+    },
+    {
+      "body": "batch01-000.body",
+      "batch": 1,
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.349362664,
+      "worker_wall_seconds": 1.8828905610134825,
+      "worker_user_seconds": 1.798497,
+      "worker_system_seconds": 0.059948999999999995,
+      "worker_peak_rss_kib": 168304,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-000.json",
+      "parent_receipt_sha256": "f0f34c4687c7c1e947a475149fcd32966df82abf9db2e79d1f71174abb60fc09",
+      "proof_bytes": 1749450,
+      "body_bytes": 1754326
+    },
+    {
+      "body": "batch01-001.body",
+      "batch": 1,
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.406311938000003,
+      "worker_wall_seconds": 1.9099218259798363,
+      "worker_user_seconds": 1.8265319999999998,
+      "worker_system_seconds": 0.05892,
+      "worker_peak_rss_kib": 168176,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b01-ordinary-001.json",
+      "parent_receipt_sha256": "0f572325d40d2f313c55a7e3b7c9fab0f3a24146b384dc03f2fad26a71be8e37",
+      "proof_bytes": 1743242,
+      "body_bytes": 1748118
+    },
+    {
+      "body": "batch02-000.body",
+      "batch": 2,
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.515867186000003,
+      "worker_wall_seconds": 1.962358538992703,
+      "worker_user_seconds": 1.876304,
+      "worker_system_seconds": 0.061008999999999994,
+      "worker_peak_rss_kib": 168176,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-000.json",
+      "parent_receipt_sha256": "5f1336aa1264aa0557ce79b5f5a00dd76d04221df704c4fc117bb56f4fcc7b3f",
+      "proof_bytes": 1755594,
+      "body_bytes": 1760470
+    },
+    {
+      "body": "batch02-001.body",
+      "batch": 2,
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.353301603,
+      "worker_wall_seconds": 1.873619658057578,
+      "worker_user_seconds": 1.788361,
+      "worker_system_seconds": 0.060946,
+      "worker_peak_rss_kib": 168176,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b02-ordinary-001.json",
+      "parent_receipt_sha256": "a3c5316dd2f84d1105461cc90cba8b72ce62321b2d78e054dccfc189512ba5fe",
+      "proof_bytes": 1738954,
+      "body_bytes": 1743830
+    },
+    {
+      "body": "batch03-000.body",
+      "batch": 3,
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.2836464199999975,
+      "worker_wall_seconds": 1.8565898609813303,
+      "worker_user_seconds": 1.770147,
+      "worker_system_seconds": 0.062438,
+      "worker_peak_rss_kib": 168176,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-000.json",
+      "parent_receipt_sha256": "0dab8fc510bc11657374b600d1c2efb4143896fa1cb150943e32babbdc55d590",
+      "proof_bytes": 1753802,
+      "body_bytes": 1758678
+    },
+    {
+      "body": "batch03-001.body",
+      "batch": 3,
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.267453163999999,
+      "worker_wall_seconds": 1.8616681860294193,
+      "worker_user_seconds": 1.774441,
+      "worker_system_seconds": 0.06298,
+      "worker_peak_rss_kib": 168176,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net2-gate2-diagnostic01-b03-ordinary-001.json",
+      "parent_receipt_sha256": "817acdb0da4420d4ea4bdcb7f29b3c117fd005a02c90ba916ccd81458730c915",
+      "proof_bytes": 1736650,
+      "body_bytes": 1741526
+    }
+  ],
+  "batches": [
+    {
+      "batch": 0,
+      "kind": "funding",
+      "body_count": 2,
+      "endpoint": {
+        "height": "1",
+        "block_id": "bd2ca26bfa8fa24c53337870d473a2a4f47b16b47370ebc72f75a5915eef776a1763e5dedd01dcb48175cb8a0c89888f7e7b51431b37ee08f8e93ccca5a02c27",
+        "leaf_count": "4",
+        "root_le": "bcc699f7d728421555549253420e93b5e067f1b654f998568452b932f3cb904b04c1f76444d54681a9b815ae04224fb71148e2da1061397c3f1ec3a56b33fa04",
+        "fee_escrow": "4233550",
+        "unconsumed_liabilities": "0"
+      },
+      "inclusive_wall_seconds": 12.263947121000001,
+      "admission_wall_seconds": 1.3463554860000004
+    },
+    {
+      "batch": 1,
+      "kind": "ordinary",
+      "body_count": 2,
+      "anchor": {
+        "height": "1",
+        "block_id": "bd2ca26bfa8fa24c53337870d473a2a4f47b16b47370ebc72f75a5915eef776a1763e5dedd01dcb48175cb8a0c89888f7e7b51431b37ee08f8e93ccca5a02c27",
+        "leaf_count": "4",
+        "root_le": "bcc699f7d728421555549253420e93b5e067f1b654f998568452b932f3cb904b04c1f76444d54681a9b815ae04224fb71148e2da1061397c3f1ec3a56b33fa04",
+        "fee_escrow": "4233550",
+        "unconsumed_liabilities": "0"
+      },
+      "endpoint": {
+        "height": "2",
+        "block_id": "b0c980e600435bea551ee690d6fca5c5b1630c8cff654a14962083092831526a4c3799d361112be3922e39a2117f11f8d5f8ce4a73fb1888676a80750b2aa721",
+        "leaf_count": "8",
+        "root_le": "2b6a766a8e7f645a03d848cad5bd10f25e3dd863fdc87885cfa436d24420ede8173620dc6e936ce3fbe82b14ff6d8340035caf3024de496b9d3efd2af7b0bd46",
+        "fee_escrow": "8458046",
+        "unconsumed_liabilities": "0"
+      },
+      "inclusive_wall_seconds": 17.022830871,
+      "admission_wall_seconds": 1.3211074379999992
+    },
+    {
+      "batch": 2,
+      "kind": "ordinary",
+      "body_count": 2,
+      "anchor": {
+        "height": "2",
+        "block_id": "b0c980e600435bea551ee690d6fca5c5b1630c8cff654a14962083092831526a4c3799d361112be3922e39a2117f11f8d5f8ce4a73fb1888676a80750b2aa721",
+        "leaf_count": "8",
+        "root_le": "2b6a766a8e7f645a03d848cad5bd10f25e3dd863fdc87885cfa436d24420ede8173620dc6e936ce3fbe82b14ff6d8340035caf3024de496b9d3efd2af7b0bd46",
+        "fee_escrow": "8458046",
+        "unconsumed_liabilities": "0"
+      },
+      "endpoint": {
+        "height": "3",
+        "block_id": "66fbe5b556543c0cccb723fe47a7f176ab6e2895c6f0b2a5245bfb465143bf33b9319b5068093f11cf6288dbd0558d118cd7ab63144299ec9f41c4e17803af96",
+        "leaf_count": "12",
+        "root_le": "abb38445141faa470368185b055c23a2e3e8e87868e49709b6360998f770886b0858cc41c2182df70eb47c1d49afdfe6510994e4b4f38a2768ba22663bac75cb",
+        "fee_escrow": "12682542",
+        "unconsumed_liabilities": "0"
+      },
+      "inclusive_wall_seconds": 17.097754224999996,
+      "admission_wall_seconds": 1.265717448000003
+    },
+    {
+      "batch": 3,
+      "kind": "ordinary",
+      "body_count": 2,
+      "anchor": {
+        "height": "3",
+        "block_id": "66fbe5b556543c0cccb723fe47a7f176ab6e2895c6f0b2a5245bfb465143bf33b9319b5068093f11cf6288dbd0558d118cd7ab63144299ec9f41c4e17803af96",
+        "leaf_count": "12",
+        "root_le": "abb38445141faa470368185b055c23a2e3e8e87868e49709b6360998f770886b0858cc41c2182df70eb47c1d49afdfe6510994e4b4f38a2768ba22663bac75cb",
+        "fee_escrow": "12682542",
+        "unconsumed_liabilities": "0"
+      },
+      "endpoint": {
+        "height": "4",
+        "block_id": "bb87fb28db62675f312c39c0e6782a68dcfc8025d1798ae25339ff9decbea0942821a4342264d5c20028c300075b37d5f67bce46366fc594944f899933c3e8c8",
+        "leaf_count": "16",
+        "root_le": "1a8b6d098ed2a8c0ce9cf737a92134ba9d583302497a1a3cc8f884a8fa034c9c8d521c367a924f577c69b40c89ad088790167832056b2a56968d1ef04d54294e",
+        "fee_escrow": "16907038",
+        "unconsumed_liabilities": "0"
+      },
+      "inclusive_wall_seconds": 16.672493570000007,
+      "admission_wall_seconds": 1.2931718190000028
+    }
+  ],
+  "scope": "Fresh complete proof generation and repeated producer admission; fixture-local receipt extraction/membership, not Gate3 discovery, live wallet throughput or receiving-node service. Worker CPU/RSS from actual first wait4; peaks are not summed."
+}

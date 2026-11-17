@@ -1,0 +1,86 @@
+{
+  "format": "CP04-NETWORK-PIPELINE-WORKLOAD01",
+  "block_version": 4,
+  "ordinary_count": 6,
+  "batch_size": 2,
+  "ordinary_batch_count": 3,
+  "chain": "dbc6485aa23414bbf6cef655f7ad425aa7fa9c04a183cab8af5622ff5d524aab",
+  "genesis": {
+    "path": "genesis.bin",
+    "sha256": "caea67d17900bda09293eda1de958b1486a04d3c296fd3c668c6e76efec879cd"
+  },
+  "blocks": [
+    {
+      "bodies": [
+        {
+          "path": "credit000.body",
+          "sha256": "81d4cc28ca05e7a3afeb842da2717ebc826fd7c3ce5df50e6cf17cb50f73266e"
+        },
+        {
+          "path": "credit001.body",
+          "sha256": "c563e1c9e64d5702c2cb756aeb94f2d18f18ee8c37366094b0eca97c9fc597a1"
+        }
+      ],
+      "header": {
+        "path": "block001.header",
+        "sha256": "216c81bebf51533ad7027027794f14c1b6f5ceaa7fffea0b29d5a0e8614dbea8"
+      }
+    },
+    {
+      "bodies": [
+        {
+          "path": "batch01-000.body",
+          "sha256": "a387cab372610972d44ec4bb4288bd49ad6cbe48314905838af2fb3dc78fd29e"
+        },
+        {
+          "path": "batch01-001.body",
+          "sha256": "4ffb6aaee1cd54a259aec25a7a629e869789599761ec7f4b0100baaf8a7cdaae"
+        }
+      ],
+      "header": {
+        "path": "block002.header",
+        "sha256": "354c990154b584f4657fbb2cb0f6018b313ed49bd9913da71af780f03f2e256e"
+      }
+    },
+    {
+      "bodies": [
+        {
+          "path": "batch02-000.body",
+          "sha256": "583d7026c108e6332b91d43a6699a2fa76ecc3d22d73430a554a18a191be931a"
+        },
+        {
+          "path": "batch02-001.body",
+          "sha256": "aca7b909bc0e2f198418bec7e94533a9fe3dfe69a278b466538e5ac0bedf508e"
+        }
+      ],
+      "header": {
+        "path": "block003.header",
+        "sha256": "71ceffff945b1670cb0856b915801acae8457d0bd64cfb3846fa480428f3deb8"
+      }
+    },
+    {
+      "bodies": [
+        {
+          "path": "batch03-000.body",
+          "sha256": "8a2e66a23c1b3756ba98568ff342eee286286194a935beb56739dbfe42ea483c"
+        },
+        {
+          "path": "batch03-001.body",
+          "sha256": "78b2a6a1d8b5a986ed9d296acc49e76f0950abbbf0caac45c6416d4d223e6d1f"
+        }
+      ],
+      "header": {
+        "path": "block004.header",
+        "sha256": "6adc26ebf1a59c650000d5e1e4d13356540196d1ce24289c8b39dee9ca59fe1f"
+      }
+    }
+  ],
+  "endpoint": {
+    "height": "4",
+    "block_id": "bb87fb28db62675f312c39c0e6782a68dcfc8025d1798ae25339ff9decbea0942821a4342264d5c20028c300075b37d5f67bce46366fc594944f899933c3e8c8",
+    "leaf_count": "16",
+    "root_le": "1a8b6d098ed2a8c0ce9cf737a92134ba9d583302497a1a3cc8f884a8fa034c9c8d521c367a924f577c69b40c89ad088790167832056b2a56968d1ef04d54294e",
+    "fee_escrow": "16907038",
+    "unconsumed_liabilities": "0"
+  }
+}

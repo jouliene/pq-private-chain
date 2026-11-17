@@ -10,9 +10,10 @@ published. No external blocker. Preserve exclusive labels, failed runs and pins.
 
 Gate1 FUNCTIONAL PASS, independently reviewed. GO for the declared finite Gate2
 pipeline experiment; no annual capacity, ordinary-node participation or production
-PASS. All Gate1 jobs terminal. SOLE HEAVY ALLOCATION14: producer gate2-diagnostic01,
-2lanes x3ordinarybatches,8genuineproofs,360s/CPU0/4GiB; Root launches below.
-No other native/build/proof campaign may overlap. Never duplicate Gate1.
+PASS. All Gate1 jobs terminal. Allocation14 gate2-diagnostic01 TERMINAL PASS,
+66.698950s/168304KiB,8genuineproofs/fourblocks. HEAVY SLOT FREE; do not duplicate.
+Producer source committed83df035. Full96x8 generation is independently qualified,
+but pipeline source/diagnostic remains separate; Root will allocate the next job.
 
 Root owns contracts, profiles, status, Git, integration and acceptance.
 arch_consensus_roles (Sol/high) owns transport/, Gate1 cost table and Gate2 source.
@@ -21,7 +22,7 @@ is paused. No canonical wallet/core edits or cross-gate secret keeper are planne
 arch_proof_alternatives (Astra/high) owns independent review/ and participation
 mechanism inspection. Four agents total, no nested agents, one heavy job.
 
-Owner regular update06:58UTC; next regular update by approximately07:28UTC, meaningful
+Owner regular update07:28UTC; next regular update by approximately07:58UTC, meaningful
 material updates sooner. Russian user communication; English code/documents.
 
 ## Closed evidence to reuse
@@ -62,6 +63,8 @@ Paths below are relative to experiments/network-feasibility/.
 - Wallet witness prototype:25structural controls and earlier real CP03 fourblock
   hash/root/path correspondence passed. No Gate3 integration. REBLOCKING.md and
   symbolic receipt establish conditions only; no actual expiry/recovery claim.
+  Proposed cross-gate reserve/keeper was NOT selected: Gate2 has96credits and
+  destroyskeys; Gate3 needs a separately allocated fresh private fixture.
 
 ## Declared next experiment
 
@@ -77,11 +80,13 @@ charged, no loss/doubleapply. Fresh2GiBraw RETAINquota,8GiBperrole diskwatchdog,
 40ms once/RPC. Research allocation, not ownerbudget or annualmodel acceptance.
 Generator ceiling864proofs/10800s/CPU0/4GiB; source-review and small2lanes x3batches
 (8proofs,360s) precede expensive allocation. SOURCE03 source review GO; allocation14 authorizes only8proof diagnostic.
-Full864proof generation remains gated on actual diagnostic readback.
+Actual diagnostic readback and independent review PASS; full generation needs
+Root allocation. Pipeline source is still being completed/reviewed.
 
 ## Exact restart / next useful actions
 
-1. Inspect allocation14 actual session/processes/receipt before restarting. Preserve closed Gate1 sources,
+1. Allocation14 is terminal; do not poll/restart session98784. Read its receipt
+   and review/PRODUCER_DIAGNOSTIC03_ACTUAL01.json. Preserve closed Gate1 sources,
    evidence and datasets. Do not overwrite labels or generated installations.
 2. Finish/review Gate2 producer and transport source against declared profile.
    Producer owner and transport owner coordinate exact multibatch workload ABI.
@@ -90,8 +95,11 @@ Full864proof generation remains gated on actual diagnostic readback.
 3. Gate1 checkpoint committed2ab99fb. ProducerSOURCE03 frozen/reviewed:
    380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2.
    Profile9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8.
-   Run allocated diagnostic, inspect actual8proof/fourblock/receipt/readback;
-   then full864proof generation only if changed path passes.
+   Actual diagnostic PASS:66.698950s/168304KiB,16leaves/12NFs/8cores,fees16907038,
+   total200M/liabilities0,RETAIN14025974B/pending0; independent review agrees.
+   Diagnostic workload617f01cc6378f2f2b587bb4b899512d0abdfa6df093cc45d4dfc5b416caaeb6a.
+   Prefer changed pipeline diagnostic before the expensive full864proof campaign
+   if source is ready; never overlap two heavy jobs.
 4. Build/review transport successor and run diagnostic/full finite network series
    after required datasets exist. No inference of overlap replaces actual run.
 5. Review service and participation separately. An annual175TBfullcopy remains

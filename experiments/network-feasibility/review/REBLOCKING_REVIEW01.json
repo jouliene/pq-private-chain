@@ -1,0 +1,75 @@
+{
+  "format": "WALLET-REBLOCKING-INDEPENDENT-SYMBOLIC-REVIEW01",
+  "proposal_sha256": "df61dd87adc5028fa10a083ab9dc5eb248e04b4298b0710b3fd0c87b2a798ca6",
+  "author_script_sha256": "bd98b082502bc2621156b57b709177eed802c0a27f32a74379071f526c924867",
+  "author_receipt_sha256": "386a627c27b5014d35091cb2c7184379e4bbc71d5dcb82af35cdf80869303827",
+  "exact_source_pins_checked": 7,
+  "reviewer_symbolic8batch": {
+    "boundaries": [
+      [
+        1,
+        194
+      ],
+      [
+        97,
+        386
+      ],
+      [
+        193,
+        578
+      ],
+      [
+        289,
+        770
+      ],
+      [
+        385,
+        962
+      ],
+      [
+        481,
+        1154
+      ],
+      [
+        577,
+        1346
+      ],
+      [
+        673,
+        1538
+      ],
+      [
+        769,
+        1730
+      ]
+    ],
+    "tip": 769,
+    "leaves": 1730,
+    "observed_anchor_inclusion_age_min": 1,
+    "observed_anchor_inclusion_age_max": 96,
+    "reserve_anchor_eligible_at_tip": {
+      "256": true,
+      "257": false
+    },
+    "reserve_toy_outputs_unspent": true
+  },
+  "costs": {
+    "base_gate2_history_proofs": 864,
+    "reserve_reuse_history_proofs": 865,
+    "separate257ordinary_plus2credits": 259,
+    "combined_gate2_plus_separate": 1123,
+    "net_generation_saving_if_reuse_conditions_hold": 258,
+    "rolling_credit_fee_consumption_for257": 544964511,
+    "eight_round_lane_remaining_from100M": 80985241
+  },
+  "decision": "Schedule/custody direction conditionally coherent; request explicit marginal258-proof comparison and scenario-specific minimality wording",
+  "limits": [
+    "No native hash/proof/admission or private input",
+    "Real sequential replay must preserve every required original boundary and changing roots",
+    "Reused bodies retain exact root/count; no anchor retargeting",
+    "Reserve keys unavailable from existing public Gate1 fixtures; new proposed custody required",
+    "64KiB/two-key serialization and two-consumer private holder remain unimplemented/ungated",
+    "Holder loss forbids retrospective recovery; separate fresh fixture remains fallback",
+    "Resource review gates integration; no Gate3 acceptance"
+  ]
+}
