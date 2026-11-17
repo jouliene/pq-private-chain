@@ -1,0 +1,17 @@
+{
+  "conclusion": "success",
+  "files": {
+    "RESULT.json": {
+      "bytes": 5741,
+      "sha256": "3bcbc6bf593fa40bb93f57060defff1f2c25f57fd31b61a2be86c650b635353d"
+    },
+    "RUN.json": {
+      "bytes": 1174,
+      "sha256": "2717bdfa7024bb0684f59aea8a099da13eaf2e03025125dcf617c03e97524936"
+    }
+  },
+  "format": "NETWORK-ALTERNATE-HOST-PREFLIGHT01",
+  "head_sha": "65422943020694c725f23f49e8676f36039eb6dd",
+  "run_id": 44094941105,
+  "scope": "Same isolation policy and pinned Node; public startup only, not full CI or cryptographic acceptance."
+}

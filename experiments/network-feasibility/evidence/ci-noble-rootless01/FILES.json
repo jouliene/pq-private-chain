@@ -1,0 +1,33 @@
+{
+  "conclusion": "failed default apt single-UID provisioning",
+  "files": {
+    "RESULT.json": {
+      "bytes": 729,
+      "sha256": "ca69126c6f6081c075f56ae149ed75aceecc0e39d84ddf740a1bef5b68acd38c"
+    },
+    "base.json": {
+      "bytes": 465,
+      "sha256": "1adf4bf62bae9bf20e60aa3d09776dd0b19268506e68e70d50780ae5e4454958"
+    },
+    "ci_noble.sh": {
+      "bytes": 5346,
+      "sha256": "bc47bc40a889106301ddb2495a666aec3ed96d2488f48baf10a7038a86828a2b"
+    },
+    "provision-public.log": {
+      "bytes": 1051,
+      "sha256": "e4fd0ea45168196fe4193942111351927006b6b13bd5cd920b78364345ce8a8b"
+    },
+    "stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.log": {
+      "bytes": 85,
+      "sha256": "54e038ee039e8e7b5499ffabfee5b3d7565604ca481454cac22cd75221e2203f"
+    }
+  },
+  "format": "NETWORK-NOBLE-ROOTLESS-FAILURE01",
+  "host_policy_changed": false,
+  "no_ready_no_build_no_private_proofs": true,
+  "rootfs_allocated_storage_scope": "87MiB rootfs and29MiB archive reported separately; not wallet protocol storage"
+}

@@ -1,0 +1,23 @@
+{
+  "actual_exit": 100,
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=10s",
+    "300s",
+    "bash",
+    "scripts/ci_noble.sh",
+    "prepare"
+  ],
+  "first_wait4": true,
+  "format": "CP04-NOBLE-PREPARE-PILOT01",
+  "private_actor_or_proofs": false,
+  "ready": false,
+  "resource_scope": "timeout leader first-wait4; public environment provisioning only, not payment resource profile",
+  "wait4_maxrss_kib": 16512,
+  "wait4_system_seconds": 0.294995,
+  "wait4_user_seconds": 0.7615449999999999,
+  "wall_seconds": 5.8315995240118355,
+  "wrapper_after": "bc47bc40a889106301ddb2495a666aec3ed96d2488f48baf10a7038a86828a2b",
+  "wrapper_before": "bc47bc40a889106301ddb2495a666aec3ed96d2488f48baf10a7038a86828a2b"
+}

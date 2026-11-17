@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86",
+  "format": "CP04-CI-NOBLE-BASE01",
+  "host_policy_changed": false,
+  "rootfs": "/home/neo/jouliene/pq-private-chain/.tools/noble",
+  "single_uid_default_apt_sandbox": true,
+  "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz",
+  "wrapper_sha256": "bc47bc40a889106301ddb2495a666aec3ed96d2488f48baf10a7038a86828a2b"
+}

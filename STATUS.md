@@ -156,3 +156,40 @@ analysis found that merely changing --libcrypto cannot make the full build work.
 If host startup passes, evaluate a bounded exact Noble userland environment or a
 coherent reviewed installation adaptation before any full build. No accepted
 proof/wallet/runtime check is weakened, and no full264 campaign is repeated.
+
+Allocation34 actual terminalPASS: manual public probeCI44094941105 on6542294.
+Ubuntu22 kernel6.8.0-1070-azure, unchangedtrue/officialNode both exit0 in
+0.007580535s/0.014726646s, exactstdout/no stderr, source pins stable. Root and
+independent reviewer read actualreceipt3bcbc6bf593fa40bb93f57060defff1f2c25f57fd31b61a2be86c650b635353d.
+Safe fullreceipt/CI metadata are in evidence/ci-ubuntu22-preflight01. This resolves
+the claim that an external newservice is necessarily required; it does not pass
+fullCI or the exactNoble runtime gate.
+
+Allocation35: one projectlocal officialNoble24.04.5 rootfs provisioning and nested
+publicpreflight, beforeanynativebuild. Root owns execution/workflow/Git;
+arch_private_repro owns scripts/ci_noble.sh only; arch_proof_alternatives reviews.
+Rootfs checksum from officialUbuntu metadata:
+e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86.
+No hostpolicychange, newservice, loaderinjection or acceptedcorechange. Trydefault
+apt behavior; stoponrequiredprivilege/workaround. Sameguest/userlandmustcontain
+allruntime discovery/build/private/publicverification; no oldapproval reuse.
+Firstgate: guestOpenSSL3.0.13/Python/Nodeidentity and unchangednestedpublicpreflight.
+No264regeneration; fullfreshsmallCI onlyafterreviewedactualenvironmentgate.
+
+Allocation35 terminalFAIL: rootlessdefaultapt exits100 in5.831600s because it
+cannot setgroups65534/seteuid42 in a singleUID namespace. NoREADY, nativebuild or
+privateproof. Frozenwrapperbc47bc40 and exactpubliclogs/receipt are preserved in
+evidence/ci-noble-rootless01; rootfs/archive remain87MiB/29MiB, no cleanup/reuse.
+Do not retrythatmode or disableAPTsignature/_apt checks.
+
+New bounded decision: the rootless-only provisioning premise was researcher-set,
+not an owner/private-wallet requirement. GitHub explicitly provides passwordless
+sudo for software installation. Independent review conditionally permits normal
+signed/defaultapt in a fresh projectlocal chroot on the disposableUbuntu22 VM,
+BEFORE anysecret exists, followed by originalnon-root hostUID execution of ALL
+discovery/build/wallet checks viaunchangedbwrap. Chroot is not a privilege sandbox;
+trusted signed maintainer scripts execute administratively, like existinghostapt.
+No hostproc/sys/run/socket or repository/toolchain bind insideprivilegedchroot,
+no hostpolicychange, no privilegedwallet, no APT sandboxoverride/DPKGforce.
+Concretewrapperdiff requires independentreview, then ONEpublichostedpreparepilot
+before fullCI. Newruntimeapproval/providercontrols remainmandatory.
