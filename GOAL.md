@@ -143,3 +143,11 @@ UID mapping, preserved without override. A separately reviewed standard signed
 package provisioning step on disposableCI is now allocated, followed by strictly
 unprivileged exactuserland/publicnested checks. Nativeproof/code/parameters and
 acceptance criteria are unchanged. Criterion6 remains pending; Goal ACTIVE.
+
+Checkpoint2026-11-17 14:31UTC: exact Noble package/runtime provisioning now passed;
+outer UID0 caused the remaining nested startup failure. Local public UID control
+reproduced0FAIL/nonzeroPASS with zero capabilities. A reviewed one-line ordinary-
+UID wrapper repair is allocated to one fresh hosted environment pilot, then full
+automatic smoke if it passes. No crypto/proof/wallet policy changed. Criteria1..5
+remain substantiated; criterion6 pending; native/global Goal ACTIVE. STATUS.md
+now replaces stale external-only restart instructions with the concrete next run.

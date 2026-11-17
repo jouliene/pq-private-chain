@@ -27,7 +27,7 @@ done
 [[ -x $cargo_bin/cargo && -x $cargo_bin/rustup && -x $node ]]
 
 guest() {
-    local args=(--die-with-parent --new-session --unshare-user --uid 0 --gid 0
+    local args=(--die-with-parent --new-session --unshare-user --uid "$UID" --gid "$(/usr/bin/id -g)"
                 --unshare-pid --unshare-ipc --unshare-uts --ro-bind "$rootfs" / --unshare-net)
     args+=(--bind "$repo" "$repo"
            --ro-bind "$rustup_home" "$rustup_home" --ro-bind "$cargo_bin" "$cargo_bin"

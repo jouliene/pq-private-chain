@@ -399,3 +399,95 @@ are unchanged. It uses a synthetic directory archive, not a new hosted apt run;
 that scope is explicit. The old failed image is not rewritten. Preserve the new
 image-temp-permissions.json in the workflow's fixed public upload list so the next
 hosted result has actual mode evidence. Reviewer performed no control rerun.
+
+
+## Conditional full automatic Noble-userland workflow candidate
+
+Reviewed .work/network-delivery01/smoke-noble-candidate.yml SHA256
+`14a01f3d834e54a691f243feef6351916d878af32dde10b7cc556d31781978e6`.
+**Conditional source GO**, effective only after the corrected public hosted
+prepare/nested-preflight actually passes and Root allocates the fresh automatic
+CI run. This file is a candidate, not an executed workflow or successful delivery.
+
+A mechanical comparison confirms all three inner command blocks are unchanged:
+prepare/discover/approve/install/build; isolated small5; legacy public53CLI,
+private3proof and witness checks. The only wrappers around them are quoted
+heredocs through ci_noble.sh run, so HOME/PWD and runtime approvals are evaluated
+inside Noble rather than expanded by the host shell. Each inner shell retains
+set -euo pipefail and failure propagates through bwrap; no test is skipped or
+converted to optional. Required order remains fresh build, isolated wallet, then
+legacy source-mutating private smoke.
+
+The host changes to Ubuntu22, retains exact Rust1.99.1 provisioning and verified
+Node archive, and runs the unchanged host public preflight before the bounded
+Noble preparation. Compiler/system SSL development packages move to the declared
+Noble apt preparation rather than becoming host library fallbacks. The wrapper
+preserves the host HOME and explicit Rustup/cargo-bin paths at the same guest
+locations read-only. The build still selects $HOME/.cargo/bin/cargo under that
+guest; fresh build/runtime checks must detect any real toolchain incompatibility.
+All installation, runtime mapping, provider, private and public checks remain in
+the same rootfs namespace. Interpret /usr hashes in that namespace, not on the
+outer host merely because a path has the same spelling.
+
+Automatic push/PR and manual triggers, contents:read, pinned actions, no persisted
+checkout credentials and the20-minute job bound remain. The fixed always-upload
+list adds only base/provision/package/identity/public-preflight records, including
+image-temp-permissions.json. No rootfs, DB, private stream or arbitrary directory
+is uploaded. Actual nested process observation and complete genuine checks are
+still mandatory; a provisioning pass does not establish them. No reviewer build,
+proof or workflow execution occurred.
+
+
+## Provisioning success, nested UID-map failure
+
+Read actual hosted run44101616123 records: package provision exit0, both image
+temporary directories01777, post-provision host UID/EUID1001, Python3.12.3,
+OpenSSL CLI and loaded library3.0.13. Its nested public preflight observes outer
+namespace UID/GID0 and fails the first true probe with
+`bwrap: setting up uid map: Operation not permitted`, exit1/0.004467813s.
+No Node probe, native build or private wallet passed at this stage. Earlier apt
+failure is resolved in this attempt; do not conflate it with the new failure.
+
+Mapping the outer runtime to the actual ordinary nonzero caller UID/GID is a
+legitimate narrow candidate: administrative package preparation no longer needs
+that runtime namespace to be root. It does not add a capability or change the
+inner wallet's namespace, cap-drop, seccomp, mount, FD or process-observation
+checks. The [Linux user_namespaces manual](https://man7.org/linux/man-pages/man7/user_namespaces.7.html)
+describes extra CAP_SETFCAP conditions for mappings of parent-namespace UID0
+since Linux5.12. This supports testing the identity distinction, but is not proof
+that this precise hosted denial arose from that rule. No CAP_SETFCAP exception,
+privileged runtime or host policy change is warranted.
+
+Conditional design GO for the already allocated public0-versus-ordinary-UID
+matrix and subsequent exact-source review. Preserve actual identities/maps and
+all failure receipts. Passing that control would support one corrected public
+hosted nested-preflight attempt; it would not establish complete wallet/runtime
+acceptance. No reviewer execution or new privilege request occurred.
+
+
+## Actual UID matrix and exact ordinary-UID successor
+
+Personally read NESTED_UID_CONTROL01.json SHA256
+`e2d2899ddcf2b4dea9ae90af15ef80a045ce69783c87241cfbc546648c513e5e`:
+the two actual public cases total0.629859452s. Explicit outer UID/GID0 reproduces
+nested uid-map EPERM; explicit ordinary UID/GID1000 passes both unchanged true
+and official Node-version probes. Both outer observations report zero effective,
+permitted and bounding capability masks. Actual namespace identities/UID and GID
+maps, exact inner commands, terminal statuses and stable source hashes are
+retained. This is a local host-/usr control, not a Noble hosted result or uniquely
+instrumented attribution to a specific kernel permission rule.
+
+Read the successor ci_noble.sh SHA256
+`7b332a5c875b861faa9606530a62463fb588d741f89f778a7c908fc9ff2fc2b9`.
+Mechanically replacing its sole `--uid "$UID" --gid "$(/usr/bin/id -g)"` occurrence
+back with `--uid 0 --gid 0` reconstructs the exact prior approved wrapper digest
+3b295316...33e. Thus no other provisioning/run/runtime/inner-policy change is
+hidden in this successor. The ordinary caller is selected explicitly rather than
+assuming untested defaults; the host-nonroot guard remains. No capability is added.
+
+**Source GO for ONE fresh bounded public hosted environment pilot.** That pilot
+must still demonstrate actual Noble ordinary-UID nested startup before a full
+native automatic CI allocation. No private job, provider shortcut, policy
+exception or new review framework is authorized by this finding. Prior failed
+hosted and rootless attempts remain unchanged. Reviewer ran only read/hash/source
+comparison, not the public matrix or any namespace/crypto campaign.

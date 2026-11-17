@@ -1,0 +1,500 @@
+{
+  "budget_seconds": 30,
+  "cases": [
+    {
+      "command": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--new-session",
+        "--unshare-user",
+        "--uid",
+        "0",
+        "--gid",
+        "0",
+        "--unshare-pid",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--unshare-net",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--symlink",
+        "usr/bin",
+        "/bin",
+        "--symlink",
+        "usr/lib",
+        "/lib",
+        "--symlink",
+        "usr/lib64",
+        "/lib64",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--tmpfs",
+        "/tmp",
+        "--bind",
+        "/tmp/pq-nested-uid-control01",
+        "/tmp/pq-nested-uid-control01",
+        "--ro-bind",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py",
+        "--ro-bind",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py",
+        "--ro-bind",
+        "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "--chdir",
+        "/usr",
+        "--clearenv",
+        "--setenv",
+        "PATH",
+        "/usr/bin:/bin",
+        "--setenv",
+        "LANG",
+        "C.UTF-8",
+        "--setenv",
+        "LC_ALL",
+        "C.UTF-8",
+        "--setenv",
+        "TZ",
+        "UTC",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-c",
+        "import json,os,sys\nfrom pathlib import Path\ns=dict(line.split(\":\",1) for line in Path(\"/proc/self/status\").read_text().splitlines() if \":\" in line)\nprint(json.dumps({\"outer_uid\":os.getuid(),\"outer_gid\":os.getgid(),\"outer_namespaces\":{k:os.readlink(\"/proc/self/ns/\"+k) for k in (\"user\",\"pid\",\"mnt\",\"net\")},\"uid_map\":Path(\"/proc/self/uid_map\").read_text(),\"gid_map\":Path(\"/proc/self/gid_map\").read_text(),\"capabilities\":{k:s[k].strip() for k in (\"CapEff\",\"CapPrm\",\"CapBnd\")}},sort_keys=True),flush=True)\nos.execv(\"/usr/bin/python3\",[\"/usr/bin/python3\",\"-I\",\"-B\",sys.argv[1],\"--node\",sys.argv[2],\"--output\",sys.argv[3]])\n",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py",
+        "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "/tmp/pq-nested-uid-control01/outer_uid0.json"
+      ],
+      "exit": 1,
+      "label": "outer_uid0",
+      "preflight": {
+        "environment": {
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "PATH": "/usr/bin:/bin",
+          "RAYON_NUM_THREADS": "1",
+          "RUST_BACKTRACE": "0",
+          "TZ": "UTC"
+        },
+        "format": "CP04-CI-PUBLIC-SANDBOX-PREFLIGHT01",
+        "host": {
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "gid": 0,
+          "kernel": "6.8.0-149-generic",
+          "machine": "x86_64",
+          "namespaces": {
+            "mnt": "mnt:[4026532890]",
+            "net": "net:[4026532894]",
+            "pid": "pid:[4026532893]",
+            "user": "user:[4026532889]"
+          },
+          "uid": 0
+        },
+        "last_stage": "sandbox_true",
+        "passed": false,
+        "per_probe_seconds": 10,
+        "per_stream_cap_bytes": 8192,
+        "probes": [
+          {
+            "argv": [
+              "/usr/bin/bwrap",
+              "--die-with-parent",
+              "--new-session",
+              "--unshare-user",
+              "--unshare-pid",
+              "--unshare-net",
+              "--unshare-ipc",
+              "--unshare-uts",
+              "--cap-drop",
+              "ALL",
+              "--ro-bind",
+              "/usr",
+              "/usr",
+              "--symlink",
+              "usr/bin",
+              "/bin",
+              "--symlink",
+              "usr/lib",
+              "/lib",
+              "--symlink",
+              "usr/lib64",
+              "/lib64",
+              "--proc",
+              "/proc",
+              "--dev",
+              "/dev",
+              "--tmpfs",
+              "/tmp",
+              "--chdir",
+              "/usr",
+              "--seccomp",
+              "5",
+              "--",
+              "/usr/bin/true"
+            ],
+            "first_wait4": true,
+            "maxrss_kib": 12640,
+            "output_overflow": false,
+            "passed": false,
+            "public_fixed_command": [
+              "/usr/bin/true"
+            ],
+            "readonly_files": [],
+            "readonly_trees": [],
+            "resource_scope": "bubblewrap leader first-wait4, not whole descendant tree CPU",
+            "returncode": 1,
+            "stderr": "bwrap: setting up uid map: Operation not permitted\n",
+            "stdout": "",
+            "system_seconds": 0.0024619999999999998,
+            "timeout": false,
+            "user_seconds": 0.000306,
+            "wall_seconds": 0.0033453310607001185,
+            "writable_trees": []
+          }
+        ],
+        "readonly_sysctls": {
+          "/proc/sys/kernel/apparmor_restrict_unprivileged_userns": {
+            "value": "0"
+          },
+          "/proc/sys/kernel/unprivileged_userns_clone": {
+            "value": "1"
+          },
+          "/proc/sys/user/max_user_namespaces": {
+            "value": "2147483647"
+          }
+        },
+        "runtime": {
+          "/usr/bin/bwrap": {
+            "mode": "0o100755",
+            "sha256": "e318903862396f96de3df57264e0158682b952fd3fb53ac23d876413e7b30f71"
+          },
+          "/usr/bin/true": {
+            "mode": "0o100755",
+            "sha256": "8a63c98320173f79e263115e10cefc170155e47d1fd4b5a70e4429d2699cae28"
+          }
+        },
+        "scope": "Fixed /usr/bin/true then pinned Node --version only; no wallet, private data, installation, native verifier or proof. Public stderr retained. Tests sandbox/runtime startup, not the complete wallet mount closure.",
+        "source_after": {
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+        },
+        "source_before": {
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+        }
+      },
+      "public_stderr": "",
+      "public_stdout": "{\"capabilities\": {\"CapBnd\": \"0000000000000000\", \"CapEff\": \"0000000000000000\", \"CapPrm\": \"0000000000000000\"}, \"gid_map\": \"         0       1000          1\\n\", \"outer_gid\": 0, \"outer_namespaces\": {\"mnt\": \"mnt:[4026532890]\", \"net\": \"net:[4026532894]\", \"pid\": \"pid:[4026532893]\", \"user\": \"user:[4026532889]\"}, \"outer_uid\": 0, \"uid_map\": \"         0       1000          1\\n\"}\n{\"passed\": false, \"receipt\": \"/tmp/pq-nested-uid-control01/outer_uid0.json\"}\n",
+      "wall_seconds": 0.07873128401115537
+    },
+    {
+      "command": [
+        "/usr/bin/bwrap",
+        "--die-with-parent",
+        "--new-session",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--unshare-pid",
+        "--unshare-ipc",
+        "--unshare-uts",
+        "--unshare-net",
+        "--ro-bind",
+        "/usr",
+        "/usr",
+        "--symlink",
+        "usr/bin",
+        "/bin",
+        "--symlink",
+        "usr/lib",
+        "/lib",
+        "--symlink",
+        "usr/lib64",
+        "/lib64",
+        "--proc",
+        "/proc",
+        "--dev",
+        "/dev",
+        "--tmpfs",
+        "/tmp",
+        "--bind",
+        "/tmp/pq-nested-uid-control01",
+        "/tmp/pq-nested-uid-control01",
+        "--ro-bind",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py",
+        "--ro-bind",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py",
+        "--ro-bind",
+        "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "--chdir",
+        "/usr",
+        "--clearenv",
+        "--setenv",
+        "PATH",
+        "/usr/bin:/bin",
+        "--setenv",
+        "LANG",
+        "C.UTF-8",
+        "--setenv",
+        "LC_ALL",
+        "C.UTF-8",
+        "--setenv",
+        "TZ",
+        "UTC",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-c",
+        "import json,os,sys\nfrom pathlib import Path\ns=dict(line.split(\":\",1) for line in Path(\"/proc/self/status\").read_text().splitlines() if \":\" in line)\nprint(json.dumps({\"outer_uid\":os.getuid(),\"outer_gid\":os.getgid(),\"outer_namespaces\":{k:os.readlink(\"/proc/self/ns/\"+k) for k in (\"user\",\"pid\",\"mnt\",\"net\")},\"uid_map\":Path(\"/proc/self/uid_map\").read_text(),\"gid_map\":Path(\"/proc/self/gid_map\").read_text(),\"capabilities\":{k:s[k].strip() for k in (\"CapEff\",\"CapPrm\",\"CapBnd\")}},sort_keys=True),flush=True)\nos.execv(\"/usr/bin/python3\",[\"/usr/bin/python3\",\"-I\",\"-B\",sys.argv[1],\"--node\",sys.argv[2],\"--output\",sys.argv[3]])\n",
+        "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py",
+        "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+        "/tmp/pq-nested-uid-control01/outer_original_uid.json"
+      ],
+      "exit": 0,
+      "label": "outer_original_uid",
+      "preflight": {
+        "environment": {
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "PATH": "/usr/bin:/bin",
+          "RAYON_NUM_THREADS": "1",
+          "RUST_BACKTRACE": "0",
+          "TZ": "UTC"
+        },
+        "format": "CP04-CI-PUBLIC-SANDBOX-PREFLIGHT01",
+        "host": {
+          "affinity": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "gid": 1000,
+          "kernel": "6.8.0-149-generic",
+          "machine": "x86_64",
+          "namespaces": {
+            "mnt": "mnt:[4026532891]",
+            "net": "net:[4026533013]",
+            "pid": "pid:[4026533012]",
+            "user": "user:[4026533068]"
+          },
+          "uid": 1000
+        },
+        "last_stage": "sandbox_node_version",
+        "node": {
+          "expected_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+          "path": "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+          "sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+          "sha256_after": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb"
+        },
+        "passed": true,
+        "per_probe_seconds": 10,
+        "per_stream_cap_bytes": 8192,
+        "probes": [
+          {
+            "argv": [
+              "/usr/bin/bwrap",
+              "--die-with-parent",
+              "--new-session",
+              "--unshare-user",
+              "--unshare-pid",
+              "--unshare-net",
+              "--unshare-ipc",
+              "--unshare-uts",
+              "--cap-drop",
+              "ALL",
+              "--ro-bind",
+              "/usr",
+              "/usr",
+              "--symlink",
+              "usr/bin",
+              "/bin",
+              "--symlink",
+              "usr/lib",
+              "/lib",
+              "--symlink",
+              "usr/lib64",
+              "/lib64",
+              "--proc",
+              "/proc",
+              "--dev",
+              "/dev",
+              "--tmpfs",
+              "/tmp",
+              "--chdir",
+              "/usr",
+              "--seccomp",
+              "5",
+              "--",
+              "/usr/bin/true"
+            ],
+            "first_wait4": true,
+            "maxrss_kib": 12640,
+            "output_overflow": false,
+            "passed": true,
+            "public_fixed_command": [
+              "/usr/bin/true"
+            ],
+            "readonly_files": [],
+            "readonly_trees": [],
+            "resource_scope": "bubblewrap leader first-wait4, not whole descendant tree CPU",
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "",
+            "system_seconds": 0.0,
+            "timeout": false,
+            "user_seconds": 0.002271,
+            "wall_seconds": 0.005232161958701909,
+            "writable_trees": []
+          },
+          {
+            "argv": [
+              "/usr/bin/bwrap",
+              "--die-with-parent",
+              "--new-session",
+              "--unshare-user",
+              "--unshare-pid",
+              "--unshare-net",
+              "--unshare-ipc",
+              "--unshare-uts",
+              "--cap-drop",
+              "ALL",
+              "--ro-bind",
+              "/usr",
+              "/usr",
+              "--symlink",
+              "usr/bin",
+              "/bin",
+              "--symlink",
+              "usr/lib",
+              "/lib",
+              "--symlink",
+              "usr/lib64",
+              "/lib64",
+              "--proc",
+              "/proc",
+              "--dev",
+              "/dev",
+              "--tmpfs",
+              "/tmp",
+              "--ro-bind",
+              "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+              "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+              "--chdir",
+              "/usr",
+              "--seccomp",
+              "5",
+              "--",
+              "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+              "--version"
+            ],
+            "first_wait4": true,
+            "maxrss_kib": 12624,
+            "output_overflow": false,
+            "passed": true,
+            "public_fixed_command": [
+              "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node",
+              "--version"
+            ],
+            "readonly_files": [
+              "/home/neo/jouliene/pq-private-chain/.tools/node-v24.22.1-linux-x64/bin/node"
+            ],
+            "readonly_trees": [],
+            "resource_scope": "bubblewrap leader first-wait4, not whole descendant tree CPU",
+            "returncode": 0,
+            "stderr": "",
+            "stdout": "v24.22.1\n",
+            "system_seconds": 0.0023669999999999997,
+            "timeout": false,
+            "user_seconds": 0.0,
+            "wall_seconds": 0.00828118110075593,
+            "writable_trees": []
+          }
+        ],
+        "readonly_sysctls": {
+          "/proc/sys/kernel/apparmor_restrict_unprivileged_userns": {
+            "value": "0"
+          },
+          "/proc/sys/kernel/unprivileged_userns_clone": {
+            "value": "1"
+          },
+          "/proc/sys/user/max_user_namespaces": {
+            "value": "2147483647"
+          }
+        },
+        "runtime": {
+          "/usr/bin/bwrap": {
+            "mode": "0o100755",
+            "sha256": "e318903862396f96de3df57264e0158682b952fd3fb53ac23d876413e7b30f71"
+          },
+          "/usr/bin/true": {
+            "mode": "0o100755",
+            "sha256": "8a63c98320173f79e263115e10cefc170155e47d1fd4b5a70e4429d2699cae28"
+          }
+        },
+        "scope": "Fixed /usr/bin/true then pinned Node --version only; no wallet, private data, installation, native verifier or proof. Public stderr retained. Tests sandbox/runtime startup, not the complete wallet mount closure.",
+        "source_after": {
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+        },
+        "source_before": {
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28"
+        }
+      },
+      "public_stderr": "",
+      "public_stdout": "{\"capabilities\": {\"CapBnd\": \"0000000000000000\", \"CapEff\": \"0000000000000000\", \"CapPrm\": \"0000000000000000\"}, \"gid_map\": \"      1000          0          1\\n\", \"outer_gid\": 1000, \"outer_namespaces\": {\"mnt\": \"mnt:[4026532891]\", \"net\": \"net:[4026533013]\", \"pid\": \"pid:[4026533012]\", \"user\": \"user:[4026533068]\"}, \"outer_uid\": 1000, \"uid_map\": \"      1000          0          1\\n\"}\n{\"passed\": true, \"receipt\": \"/tmp/pq-nested-uid-control01/outer_original_uid.json\"}\n",
+      "wall_seconds": 0.5508135219570249
+    }
+  ],
+  "format": "NESTED-UID-CONTROL01",
+  "host_gid": 1000,
+  "host_uid": 1000,
+  "outer_capability_options": "default (no explicit cap add/drop); unchanged inner isolation.module drops ALL and applies fixed seccomp",
+  "public_output_directory": "/tmp/pq-nested-uid-control01",
+  "rootfs": "Host /usr readonly only; no wholesale host root/private workspace bind; local Noble not provisioned",
+  "scope": "Public local UID0 versus original nonzero UID matrix using unchanged ci_preflight.py/isolation.py and official pinned Node; no private actor/native build/proofs; not hosted causal attribution.",
+  "source_after": {
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "/home/neo/jouliene/pq-private-chain/scripts/ci_noble.sh": "3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e"
+  },
+  "source_before": {
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/ci_preflight.py": "e4a245ed6f31a314e10ab50a12f0e498cf5741718ae33d321b6b6d911f0619ee",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-integration/isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "/home/neo/jouliene/pq-private-chain/scripts/ci_noble.sh": "3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e"
+  },
+  "wall_seconds": 0.6298594520194456
+}

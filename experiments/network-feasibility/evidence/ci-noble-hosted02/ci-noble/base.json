@@ -1,0 +1,12 @@
+{
+  "apt_sandbox": "default _apt; no override",
+  "archive_sha256": "e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86",
+  "format": "CP04-CI-NOBLE-BASE01",
+  "host_policy_changed": false,
+  "image_service_start_policy": "policy-rc.d exit101; no host service control",
+  "provisioning": "sudo-n chroot, fresh project-local image only",
+  "rootfs": "/home/runner/work/pq-private-chain/pq-private-chain/.tools/noble",
+  "runtime_requires_unprivileged_host_euid": true,
+  "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.5-base-amd64.tar.gz",
+  "wrapper_sha256": "3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e"
+}

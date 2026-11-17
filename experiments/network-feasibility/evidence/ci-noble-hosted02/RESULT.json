@@ -1,0 +1,28 @@
+{
+  "format": "CI-NOBLE-HOSTED02",
+  "passed": false,
+  "scope": "Public image preparation and nested startup only; no native build or private proof",
+  "provision_exit": 0,
+  "python": "3.12.3",
+  "libcrypto_version": [
+    3,
+    0,
+    13
+  ],
+  "host_uid": 1001,
+  "outer_guest_uid": 0,
+  "error": "bwrap: setting up uid map: Operation not permitted",
+  "next_question": "Does retaining ordinary caller UID/GID make unchanged inner startup pass?",
+  "files": {
+    "ubuntu22-public-preflight01.json": "9fcb6064a7366523bf5177906182bfa7ad9c564a7c950c3f1acda2349aeee1be",
+    "ci-noble/base.json": "08a504c5cc04a69c3c8019fb172c1da89951b8a65b9ec8e0c00fe910aa06116b",
+    "ci-noble/image-temp-permissions.json": "18cddc03231d66157a74076e8e77f8e64de254c1dbc8caca821b16a9694b6f31",
+    "ci-noble/provision-public.log": "f44151642f47cf163ca241f620e6fd99c66254663a16a616ef6144bb0e3daf51",
+    "ci-noble/provision-status.json": "1d2956d2052969f5f2a667c1b8beee8d1e0e5a1f62077e0518690ea8e34bffae",
+    "ci-noble/unprivileged-caller.json": "0c80ba69aef625e8e89d5450edb52cbafe07c6a980c93ee4452a22f5f758674d",
+    "ci-noble/dpkg-inventory.tsv": "e894e76f4c6843fb2b0215d0b00bc8ded1ec92ab5ad43b57fe266a3ed891a22c",
+    "ci-noble/dpkg-inventory.sha256": "187e77bf3294aed27e132ad5432f54682726e68d4960b667a4b3cb9a7ca86ce3",
+    "ci-noble/userland-identity.json": "9208dca2ab2a302d3f00dcd7584d3647df3236d5708d77d8d086d363aec03360",
+    "ci-noble/public-preflight.json": "1dc2b387d5a40570453966198145347ad491564d2fc1ec2943410ef057f88714"
+  }
+}

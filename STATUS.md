@@ -1,25 +1,24 @@
 # Network feasibility: local acceptance passed; delivery incomplete
 
 Canonical project: `/home/neo/jouliene/pq-private-chain`.
-Native and global Goal read back ACTIVE on 2026-11-17 at13:29UTC.
-Execute NETWORK_FEASIBILITY_GOAL.md. No budget/resource limit was imposed.
-Criteria1..5 have reviewed evidence. Criterion6 remains incomplete. The original
-hosted runner failed namespace startup; the alternate Ubuntu22 public probe
-passed. Exact Noble userland provisioning and full automatic CI remain pending.
-Do not call this milestone or the global blockchain complete.
+Native/global Goal read back ACTIVE on 2026-11-17 at14:26UTC.
+Execute NETWORK_FEASIBILITY_GOAL.md. No owner budget/resource limit was imposed.
+Criteria1..5 have reviewed evidence. Criterion6 still needs successful automatic
+full smoke and release readback. No milestone/global completion is claimed.
 
-## Exact current revision and jobs
+## Current ownership and allocation
 
-Public implementation/diagnostic revision:
-`ef9262a3277e9d4f1aa412237630038ad78bdca7` (ordinary push and GitHub main readback).
-Public baseline: `d8f800037b5efbb76a5a1d6d4d3100e55f676a00`.
-Reviewed clean private/public execution revision: `a9357c27d7458277b80b78ac887696a9ea9a99a8`.
-Subsequent changes are workflow diagnostics, documentation and safe evidence;
-the accepted payment, wallet, isolation policy and proof parameters are unchanged.
-All local/heavy jobs and specialist tasks are terminal. Root owns acceptance,
-Git and restart. No unallocated experiment is running. Do not restart closed jobs.
-The later documentation-only checkpoint preserves this failure; its skipped CI
-is not a PASS or a replacement for the actual failed ef9262a run.
+Latest published checkpoint before this change:3d4e31b8ea12f06a993599e3aa27eac5434fa0cd.
+Baseline:d8f800037b5efbb76a5a1d6d4d3100e55f676a00.
+Independent clean private/public execution:a9357c27d7458277b80b78ac887696a9ea9a99a8.
+Later changes concern CI wrappers/workflow, documentation and safe evidence;
+payment/wallet/inner isolation/proof parameters are unchanged.
+Root owns integration, acceptance, workflow, status and all Git operations.
+arch_private_repro owns ci_noble.sh; arch_proof_alternatives owns independent
+CI_ORDER_REPAIR_REVIEW01.md; arch_consensus_roles produced the public UID control.
+All previous heavy/local jobs are terminal. Allocation39 authorizes ONE fresh
+manual public environment pilot after source GO:360s preparation +10s kill,
+8min hosted job. No native build/private proof until actual environment PASS.
 
 ## Accepted execution and architecture
 
@@ -59,167 +58,55 @@ annual traffic of this implementation. Complete role/resource scopes are in
 in OBLIGATIONS.md and docs/SECURITY.md. No whole-protocol PQ/privacy theorem,
 network anonymity, permissionless issuance, full consensus or production claim.
 
-## Actual CI failures and independent disposition
+## Preserved CI findings
 
-1. CI44088764296 on c5e2f36 failed before Popen. Prior legacy private smoke passed
-   and retained ledger.sqlite inside installed source_root, which the isolated
-   wallet deliberately rejects. A public tree discriminator proved the ordering
-   incompatibility; the sanitized historical first exception remains unknown.
-   Reviewed fix246ab53 moves the unchanged isolated test before legacy smoke.
-2. CI44090899086 on246ab53 passed build and got beyond that pre-Popen obstruction.
-   The isolated wrapper exited1 after0.065790911s with no actor stage/events/proofs.
-   No private stderr was persisted. This is a distinct startup failure.
-3. CI44092592703 on ef9262a executed the reviewed PUBLIC-ONLY preflight before build.
-   The unchanged sandbox around `/usr/bin/true` failed in0.004740970s, exit1:
-   `bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`.
-   Node, build, wallet and proofs did not run. Source pins remained unchanged.
-   Local same-source true/officialNode probes passed. Hosted AppArmor userns
-   restriction reads1 versus local0; no kernel audit proves unique causation.
+| Run/control | Actual outcome and implication |
+|---|---|
+|44088764296/c5e2f36|Build/legacy checks passed; isolated prelaunch failed. Public control reproduced source-tree DB rejection after legacy smoke. Reviewed reordering preserved isolation.|
+|44090899086/246ab53|Build passed; isolated child exited1 before any private stage. Different startup failure.|
+|44092592703/ef9262a|Ubuntu24 unchanged public true failed loopback RTM_NEWADDR EPERM. No build/private proof. Exact AppArmor causation unproved.|
+|44094941105/6542294|Same unchanged public true+Node passed on ordinary Ubuntu22. This refuted the earlier external-only conclusion.|
+|Local rootless Noble, allocation35|Default apt exited100 due single-UID setgroups/seteuid; preserved image/attempt. No authentication or apt sandbox bypass.|
+|44100085183/afe1619|Admin image apt could not create tempfiles for authentication. Not evidence repositories unsigned. Verified archive mode01777 versus incorrect extracted0775 motivated exact tar-mode repair.|
+|GNU tar permission control|Old flag0775 rejected; preserved modes01777 passed. No privileged operation.|
+|44101616123/3d4e31b|Signed package provisioning PASS, host caller1001, Python3.12.3 and actual libcrypto3.0.13. Nested public true failed uid-map EPERM with outer UID0. No build/private work.|
+|NESTED_UID_CONTROL01|Local identical inner true/Node: outerUID0 fails same uid-map error; actual nonzero1000 passes. Both capabilities zero;0.629859s. Not uniquely proved hosted kernel causation.|
 
-Actual failed run: https://github.com/jouliene/pq-private-chain/actions/runs/44092592703
-Exact public receipt9ce0c4cfaab5f97b249b4a7a8aeca297cf91f05049c4fecadc8a0e44c5ece6bf.
-Safe receipts/run metadata are committed in evidence/ci-failed01,ci-failed02 and
-ci-hosted-preflight01 under experiments/network-feasibility. Independent source,
-control and final hosted disposition: review/CI_ORDER_REPAIR_REVIEW01.md.
-No isolation prohibition, host security setting or cryptographic parameter was
-relaxed. No identical retry is justified; the remaining prerequisite is external
-runner capability, not a payment-construction impossibility.
+Safe failed evidence is under experiments/network-feasibility/evidence/ci-*;
+UID control/review are under review/. No historical failure is relabelled PASS.
+Only the fixed fresh-image signed package provisioning uses normal administrative
+access on disposable hosted CI, before secrets exist. Chroot is not a privilege
+sandbox. No privileged host mounts, host security change, apt authentication
+bypass, loader injection, root wallet or extra capabilities are used.
+The exact reviewed wrapper7b332a5c875b861faa9606530a62463fb588d741f89f778a7c908fc9ff2fc2b9
+changes only outer UID/GID0 to the caller's actual nonzero UID/GID. Original host
+nonroot guard and all inner sandbox/provider checks remain.
 
-## Exact restart and remaining delivery
+## Exact next actions
 
-Required prerequisite: an approved CI execution environment already supporting
-Linux x86-64 unprivileged user/PID/mount/network namespaces, isolated loopback
-setup, seccomp, own-child procfs observation and the exact BUILD.md runtime.
-Provisioning/changing host security policy or registering a new CI service was
-not performed or silently authorized as a workaround. The optional owner server
-is not yet a compatible CI installation; its storage alone does not establish one.
+1. Commit reviewed UID repair, prior failure and control. Ordinary push with
+   [skip ci] avoids repeating the unchanged known-failing Ubuntu24 automatic job;
+   skipped CI is never acceptance. Dispatch environment-probe.yml once at HEAD.
+2. Read actual fixed public artifacts and review. If unchanged inner true+Node
+   pass inside exact Noble userland, install the already reviewed full workflow
+   candidate .work/network-delivery01/smoke-noble-candidate.yml and run ONE fresh
+   automatic full smoke (build, isolated five new proofs/recovery, legacy checks).
+   Discovery/approval/build/verifiers must all use the same Noble filesystem view.
+3. If actual full CI passes, preserve fixed public records, independently review,
+   reconcile delivery identity, publish network-feasibility-2026-11-17 and verify
+   exact revision/run/assets. Prepared full01-public-closure.tar is462551040B,
+   SHA29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4.
+   It contains only genesis/264 public complete bodies/manifest, no DB or secrets.
+4. Do not repeat closed264/864 campaigns. A new failure needs a named discriminating
+   question before another run. No final delivery-result.json exists until success.
 
-1. Inspect this checkpoint, actual HEAD/status/agents/jobs and the preserved failed
-   records. Reuse completed proof/network evidence; do not repeat large campaigns.
-2. On the properly provisioned supported runner, checkout the current reviewed
-   source, provision official checksum-pinned Node as in BUILD.md, then execute:
+The optional owner server has two disks and more than2TB available on the second.
+Its inspected runtime does not yet match BUILD.md; no remote install/heavy campaign
+has run. Storage is an optional experiment resource, not an annual protocol budget.
+See review/REMOTE_REPRO_REQUIREMENTS.md for nonsensitive actual observations.
 
-```sh
-mkdir -p .work
-python3 -I experiments/network-feasibility/wallet-integration/ci_preflight.py \
-  --node "$PWD/.tools/node-v24.22.1-linux-x64/bin/node" \
-  --output "$PWD/.work/resume-isolation-preflight01.json"
-```
-
-   The output label must be new. Both public probes must actually pass; true-only
-   success is not Node or wallet acceptance. No security-policy disabling or
-   skip-on-failure. A new denial requires its own evidence, not more proving.
-3. After the actual prerequisite passes, review the supported runner selection and
-   execute the unchanged full automatic smoke: fresh build/runtime approval,
-   isolated five-proof wallet/backup spend FIRST, then public/private/witness checks.
-   Read back actual head SHA, run URL/conclusion and fixed public artifact receipts.
-4. Only after successful CI publish `network-feasibility-2026-11-17` with the
-   prepared archive and actual delivery-result.json; verify tag/SHA/asset digest.
-   No release or successful delivery record currently exists. Update GOAL/STATUS,
-   hand off immutable commit/compare/commands, keep the global Goal ACTIVE.
-
-Prepared archive `.work/network-delivery01/full01-public-closure.tar`:
-462551040B, SHA29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4.
-It contains only manifest/genesis/264publicbodies, no DB/inventory/privatebackup.
-Closure SHA6ee13309b7c0d5fafb6363787076a86be0334799c850e670147571903cbae094.
-Reproduction commands are in wallet-integration/README.md; all packaging/replay
-copies are charged separately in evidence/GATE5_PUBLIC_STORAGE01.json.
-
-After completing this milestone, the recommended next bounded implementation is
-common authenticated-history suffix continuation, one reviewed outcome then stop.
-It cannot fix the initial175TB/year full-copy cost; global payment/storage design
-remains ahead of full PoW/issuance. Standalone valid-work PoW remains preferred.
-No next-stage implementation is allocated here.
-
-Optional server: second disk `/mnt/data` measured2739028307968B free (~2.74TB).
-Key-authenticated read-only/basic namespace inspection passed; no password read,
-sudo, installation or remote heavy job. See review/REMOTE_REPRO_REQUIREMENTS.md.
-This is available experiment space, not an owner annual budget. Canonical root
-remains this repository. Prior detailed allocation journals remain in Git history.
-
-## Allocation34: supported alternate-host discriminator
-
-Previous goal turn is PROGRESS: it corrected a real test-order defect and produced
-an exact hosted startup-denial receipt. On continuation, readback confirms the
-blocker unchanged, but ordinary supported runner selection is an independent
-authorized route; treating all further work as external-only was premature.
-The reviewer explicitly reassessed that conclusion.
-
-One manual public-only Ubuntu22.04 preflight is allocated: unchanged namespace/
-seccomp/probe and official Node SHA; no build, private actor, hostpolicy change or
-new CI service. Root owns workflow/Git/execution. Independent review is in the
-existing CI_ORDER_REPAIR_REVIEW01.md. Ubuntu22 remains a listed GitHub runner
-(its deprecation is noted in the official runner-images documentation).
-A pass proves only startup. Existing installation requires /usr/bin/openssl and
-clean runtime linkage to exact3.0.13; project-local LD_LIBRARY_PATH is not an
-accepted adaptation and is explicitly prohibited in private children. Source
-analysis found that merely changing --libcrypto cannot make the full build work.
-If host startup passes, evaluate a bounded exact Noble userland environment or a
-coherent reviewed installation adaptation before any full build. No accepted
-proof/wallet/runtime check is weakened, and no full264 campaign is repeated.
-
-Allocation34 actual terminalPASS: manual public probeCI44094941105 on6542294.
-Ubuntu22 kernel6.8.0-1070-azure, unchangedtrue/officialNode both exit0 in
-0.007580535s/0.014726646s, exactstdout/no stderr, source pins stable. Root and
-independent reviewer read actualreceipt3bcbc6bf593fa40bb93f57060defff1f2c25f57fd31b61a2be86c650b635353d.
-Safe fullreceipt/CI metadata are in evidence/ci-ubuntu22-preflight01. This resolves
-the claim that an external newservice is necessarily required; it does not pass
-fullCI or the exactNoble runtime gate.
-
-Allocation35: one projectlocal officialNoble24.04.5 rootfs provisioning and nested
-publicpreflight, beforeanynativebuild. Root owns execution/workflow/Git;
-arch_private_repro owns scripts/ci_noble.sh only; arch_proof_alternatives reviews.
-Rootfs checksum from officialUbuntu metadata:
-e77b6f10c2590cef872b33ee9f635a0e3fd1f57fb074c0e52b5c7f56147a0c86.
-No hostpolicychange, newservice, loaderinjection or acceptedcorechange. Trydefault
-apt behavior; stoponrequiredprivilege/workaround. Sameguest/userlandmustcontain
-allruntime discovery/build/private/publicverification; no oldapproval reuse.
-Firstgate: guestOpenSSL3.0.13/Python/Nodeidentity and unchangednestedpublicpreflight.
-No264regeneration; fullfreshsmallCI onlyafterreviewedactualenvironmentgate.
-
-Allocation35 terminalFAIL: rootlessdefaultapt exits100 in5.831600s because it
-cannot setgroups65534/seteuid42 in a singleUID namespace. NoREADY, nativebuild or
-privateproof. Frozenwrapperbc47bc40 and exactpubliclogs/receipt are preserved in
-evidence/ci-noble-rootless01; rootfs/archive remain87MiB/29MiB, no cleanup/reuse.
-Do not retrythatmode or disableAPTsignature/_apt checks.
-
-New bounded decision: the rootless-only provisioning premise was researcher-set,
-not an owner/private-wallet requirement. GitHub explicitly provides passwordless
-sudo for software installation. Independent review conditionally permits normal
-signed/defaultapt in a fresh projectlocal chroot on the disposableUbuntu22 VM,
-BEFORE anysecret exists, followed by originalnon-root hostUID execution of ALL
-discovery/build/wallet checks viaunchangedbwrap. Chroot is not a privilege sandbox;
-trusted signed maintainer scripts execute administratively, like existinghostapt.
-No hostproc/sys/run/socket or repository/toolchain bind insideprivilegedchroot,
-no hostpolicychange, no privilegedwallet, no APT sandboxoverride/DPKGforce.
-Concretewrapperdiff requires independentreview, then ONEpublichostedpreparepilot
-before fullCI. Newruntimeapproval/providercontrols remainmandatory.
-
-Allocation36 sourceGO: scripts/ci_noble.shd4099b43d9d2e612c54d344e8acb703992aeed85854b1651365a984cc3e8c82e
-and manualworkflow23a4460aed2772b97ea60539c0c94cfdc0652392a176612a3096d1bdfb22bbce.
-ONEfreshhostedprepare-only run,360s+10skill and8minjob. HostEUIDnonzero bothmodes;
-onlyfixedfreshimage sudo-n/env-i/mknod/chroot signeddefaultapt provisioning is
-administrative. No privilegedmounts/hostservices/hostpolicychange. Actualcaller
-UID, packageinventory, exactOpenSSL/Pythonidentity and unchangednestedpublic
-preflight gateREADY. Allfuturebuild/privatechecksremainunprivileged onhost via
-readonlyguestuserland. No fullbuild/proof allocated untilactualPASS andreview.
-
-Allocation36 terminalFAIL: actualmanualCI44100085183 onafe1619. Hostpublicstartup
-passed; administrativeapt exited100 because /tmp/apt.conf.* couldnotbecreated
-for apt-key. No successfulsignaturecheck, READY, nativebuild orprivateproof.
-Exactpublicreceipts/log/runmetadata: evidence/ci-noble-hosted01. This is not
-evidence upstreamrepositories are unsigned; authentication remainsmandatory.
-Root observed verifiedarchive tmp,var/tmp modes01777 but localfailedextraction
-0775, explainedby --no-same-permissions andumask. Hostedmodes were notlogged.
-Minimalpackagingrepair preservesmodes fromchecksum-approvedarchive, stilldoesnot
-restorearchiveowners, and records/asserts bothdirectories01777 beforeanysudo.
-Independentreview required thenONEfreshhostedprepare retry; no auth/sandbox
-override. Oldlabels/images/source/failures stayunchanged.
-
-Permissionfix sourceGO: wrapper3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e.
-TinyactualGNUtar control underumask0002: oldflag0775/rejected byexactguard;
-correctflag01777/accepted,0.011675s; immutablefailedrootfs stays0775. Rawcontrol
-andreceipt576ecdb77338fd59ef059c5275c1910b8816571f288bbc38666b19eec60b32e2
-in evidence/ci-noble-permissions01. Hostedworkflow nowuploads actualimage-temp-
-permissions.json. Onefreshprepareretry (allocation37), same360s/8min bounds,
-no native/privatework before actualuserland/nestedpublicPASS.
+Next investment after this bounded milestone: authenticated common-history suffix
+sync from wallet-owned joint cursors, preserving ownership-independent fetches and
+atomic rewind checks. It does not solve the175TB/year first-copy payment obligation.
+Full PoW/permissionless issuance follows the explicit payment/storage participation
+decision. Formal PQ/privacy assurance and production readiness remain separate.

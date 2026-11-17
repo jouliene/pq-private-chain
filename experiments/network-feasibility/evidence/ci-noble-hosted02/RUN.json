@@ -1,0 +1,68 @@
+{
+  "conclusion": "failure",
+  "event": "workflow_dispatch",
+  "headSha": "3d4e31b8ea12f06a993599e3aa27eac5434fa0cd",
+  "jobs": [
+    {
+      "completedAt": "2026-11-17T14:18:55Z",
+      "conclusion": "failure",
+      "databaseId": 134102829211,
+      "name": "public-startup",
+      "startedAt": "2026-11-17T14:18:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Checkout the selected public revision",
+          "number": 2,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Provision only the public startup prerequisites",
+          "number": 3,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run unchanged public startup probes",
+          "number": 4,
+          "status": "completed"
+        },
+        {
+          "conclusion": "failure",
+          "name": "Prepare pinned Noble userland and check nested public startup",
+          "number": 5,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Preserve the fixed public receipt",
+          "number": 6,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Checkout the selected public revision",
+          "number": 12,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44101616123/job/134102829211"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44101616123"
+}
