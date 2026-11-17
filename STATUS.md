@@ -3,8 +3,9 @@
 Canonical project: `/home/neo/jouliene/pq-private-chain`.
 Native and global Goal read back ACTIVE on 2026-11-17 at13:29UTC.
 Execute NETWORK_FEASIBILITY_GOAL.md. No budget/resource limit was imposed.
-Criteria1..5 have reviewed evidence. Criterion6 remains incomplete because the
-selected hosted CI runner cannot start the required isolated network namespace.
+Criteria1..5 have reviewed evidence. Criterion6 remains incomplete. The original
+hosted runner failed namespace startup; the alternate Ubuntu22 public probe
+passed. Exact Noble userland provisioning and full automatic CI remain pending.
 Do not call this milestone or the global blockchain complete.
 
 ## Exact current revision and jobs
@@ -193,3 +194,12 @@ No hostproc/sys/run/socket or repository/toolchain bind insideprivilegedchroot,
 no hostpolicychange, no privilegedwallet, no APT sandboxoverride/DPKGforce.
 Concretewrapperdiff requires independentreview, then ONEpublichostedpreparepilot
 before fullCI. Newruntimeapproval/providercontrols remainmandatory.
+
+Allocation36 sourceGO: scripts/ci_noble.shd4099b43d9d2e612c54d344e8acb703992aeed85854b1651365a984cc3e8c82e
+and manualworkflow23a4460aed2772b97ea60539c0c94cfdc0652392a176612a3096d1bdfb22bbce.
+ONEfreshhostedprepare-only run,360s+10skill and8minjob. HostEUIDnonzero bothmodes;
+onlyfixedfreshimage sudo-n/env-i/mknod/chroot signeddefaultapt provisioning is
+administrative. No privilegedmounts/hostservices/hostpolicychange. Actualcaller
+UID, packageinventory, exactOpenSSL/Pythonidentity and unchangednestedpublic
+preflight gateREADY. Allfuturebuild/privatechecksremainunprivileged onhost via
+readonlyguestuserland. No fullbuild/proof allocated untilactualPASS andreview.

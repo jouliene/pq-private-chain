@@ -136,3 +136,10 @@ external-only conclusion was too broad. One ordinary supported alternate-host
 public startup test remains available without modifying host restrictions.
 Allocation34 in STATUS.md names its exact limited question; all six criteria
 remain mandatory and the native/global Goal stays ACTIVE.
+
+Continuation progress: unchanged public sandbox actually passed on ordinary
+Ubuntu22 runner44094941105. Rootless Noble provisioning then failed defaultapt
+UID mapping, preserved without override. A separately reviewed standard signed
+package provisioning step on disposableCI is now allocated, followed by strictly
+unprivileged exactuserland/publicnested checks. Nativeproof/code/parameters and
+acceptance criteria are unchanged. Criterion6 remains pending; Goal ACTIVE.

@@ -6,7 +6,7 @@ permissions:
 jobs:
   public-startup:
     runs-on: ubuntu-22.04
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - name: Checkout the selected public revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -27,6 +27,11 @@ jobs:
         run: |
           set -euo pipefail
           python3 -I experiments/network-feasibility/wallet-integration/ci_preflight.py --node "$PWD/.tools/node-v24.22.1-linux-x64/bin/node" --output "$PWD/.work/ubuntu22-public-preflight01.json"
+      - name: Prepare pinned Noble userland and check nested public startup
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM --kill-after=10s 360s bash scripts/ci_noble.sh prepare
       - name: Preserve the fixed public receipt
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -34,5 +39,14 @@ jobs:
           name: ubuntu22-public-preflight
           if-no-files-found: error
           retention-days: 14
-          path: .work/ubuntu22-public-preflight01.json
+          path: |
+            .work/ubuntu22-public-preflight01.json
+            .work/ci-noble/base.json
+            .work/ci-noble/provision-public.log
+            .work/ci-noble/provision-status.json
+            .work/ci-noble/unprivileged-caller.json
+            .work/ci-noble/dpkg-inventory.tsv
+            .work/ci-noble/dpkg-inventory.sha256
+            .work/ci-noble/userland-identity.json
+            .work/ci-noble/public-preflight.json
           include-hidden-files: true

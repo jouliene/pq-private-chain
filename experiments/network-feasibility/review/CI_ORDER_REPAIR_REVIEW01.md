@@ -203,3 +203,160 @@ A diagnostic-only commit using [skip ci] avoids an identical known-unsupported
 Noble automatic attempt; it is not an automatic acceptance result. Dispatch this
 probe once and inspect its actual receipt. A manual diagnostic pass cannot replace
 successful automatic push/PR smoke or complete the milestone.
+
+
+## Conditional Noble userland on a supported alternate host
+
+Source/design assessment only; no rootfs experiment was run. A pinned official
+Noble userland inside project-local storage, entered through unprivileged bwrap on
+a host that passes the unchanged public namespace probe, is a potentially coherent
+environment repair. It leaves the payment relation and inner wallet isolation
+policy unchanged. The host still supplies the kernel; an image label alone proves
+neither kernel compatibility nor security equivalence.
+
+Conditional GO requires one namespace-consistent installation: explicit official
+archive digest/provenance; setup/discover/install/build and all public/private/
+wallet checks run inside that same outer rootfs; fresh approval of actual loaded
+runtime files and new ELFs; genuine provider checks; and actual Source04 nested
+process/mount/FD/namespace readback. The inner wallet /usr must be the selected
+Noble /usr. A host-side hash of identically spelled /usr paths is not a hash of
+those installed files. No old installation approval or host library/tool fallback
+may fill a missing rootfs dependency. Bind only explicit needed project/tool
+surfaces; no broadened inner host-root mount is warranted.
+
+The next discriminator, if the alternate-host public probe passes, is public-only
+nested startup and exact Node/OpenSSL identity in the proposed environment before
+compilation. This is not permission to repeat264 private proofs. Provisioning must
+remain one bounded environment recipe/workflow with declared dependencies and
+failure receipts. If package ownership/setup requires host privilege, weakened
+loader/source checks, privileged containers, policy changes, a package-manager
+emulation layer or ongoing service machinery, stop and report the specific
+obstruction rather than expanding this milestone into CI infrastructure work.
+The practical single-UID provisioning and exact rootfs source still need author
+verification; this is conditional design acceptance, not an implemented-source or
+runtime PASS.
+
+
+Read actual Ubuntu22 public diagnostic run44094941105 at6542294, receipt SHA256
+`3bcbc6bf593fa40bb93f57060defff1f2c25f57fd31b61a2be86c650b635353d`.
+Both unchanged probes pass: true0.007580535s and Node0.014726646s, first-wait4 exit0,
+exact stdout, empty stderr, no timeout/overflow, stable source and official Node
+identity. This supports the proposed one bounded provisioning/nested-public-probe
+step. It is not a Noble rootfs result, fresh native installation or full automatic
+payment smoke PASS; those boundaries remain outstanding.
+
+
+## ci_noble.sh preparation-source review
+
+Read the proposed two-mode wrapper, including candidate2199c556. It selects a
+fixed official Ubuntu base archive digest, leaves apt signature verification and
+its default sandbox/dpkg behavior unchanged, clears the guest environment and
+imports only the repository, explicit read-only Rust directories and prepare-only
+DNS configuration. The guest run mode uses a read-only rootfs and new network
+namespace, with the repository's writable rootfs alias masked empty/read-only.
+No host /usr or host library tree supplies the guest runtime. Root UID inside the
+new user namespace is not host-root permission.
+
+The corrected candidate requires Python>=3.11, OpenSSL CLI3.0.13 and actual loaded
+libcrypto version(3,0,13), then runs the unchanged public nested preflight before
+READY. It invokes no compiler or private actor in prepare. Its quoted dpkg-query
+format is literal. The saved inventory hash authenticates that metadata file,
+not the current contents of every rootfs file; fresh runtime discovery and provider
+checks remain mandatory before installation acceptance.
+
+Requested one final small guard: canonical nonsymlink .tools/.work parents and
+nonsymlink run inputs, since fresh leaf checks alone permit redirected parents.
+No such redirection was observed; this closes the stated project-local path
+contract. Otherwise the design supports one externally time-bounded public prepare
+pilot. Actual default single-UID apt feasibility remains unproved; preserve any
+failure rather than forcing ownership/signature/sandbox exceptions. No wrapper
+execution or dependency installation was performed by this reviewer.
+
+
+Final wrapper SHA256
+`bc47bc40a889106301ddb2495a666aec3ed96d2488f48baf10a7038a86828a2b`
+resolves the path finding: both modes reject redirected/noncanonical existing
+.tools/.work/rootfs/record directories and symlink READY/base/inventory metadata.
+The inventory-integrity qualification is explicit. **Source GO for one externally
+bounded prepare-only public pilot**, not a native build or wallet result. The
+source has not established that default apt works in this single-UID mapping;
+that is the pilot's discriminating question and a failure must remain fail-closed.
+
+
+## Rootless provisioning failure and distinct administrative preparation option
+
+Read the actual allocation35 provision-public.log: default apt fails changing
+supplementary groups/GID65534 and UID42 (_apt), including setgroups EPERM and
+setegid/seteuid EINVAL. Root reports terminal100/5.8316s and no READY; this is a
+failed single-UID provisioning attempt, not a proof/runtime acceptance. Preserve
+that label/log and do not silently rerun it with altered apt sandbox semantics.
+
+**Conditional design GO for one fresh public hosted administrative preparation
+pilot.** The prior rootless-only restriction was an experiment guard. It is not
+an owner requirement that all dependency installation be unprivileged. GitHub's
+[hosted-runner documentation](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)
+explicitly supports passwordless sudo for installing tools. Normal signed apt in
+a freshly pinned project-local chroot on the disposable Ubuntu22 VM can be a
+separate trusted provisioning role, while all subsequent runtime discovery,
+approval, build, nested probes and real wallet checks retain the original
+unprivileged host caller and unchanged bwrap boundary. This is not an exemption
+from the denied Ubuntu24 namespace policy.
+
+Minimum source controls for that narrow successor: canonical nonsymlink fresh
+rootfs and exact archive; privileged execution limited to a fixed package-prepare
+command, never the entire wrapper/run mode or a private actor; cleared environment
+and no keys/credentials; no repository/Rust/host-root/proc/sys/run or service-socket
+bind into the privileged chroot; default signed apt and _apt sandbox behavior;
+public exit/log and actual package inventory; completed provisioning followed by
+an explicit non-root host-identity check and unchanged nested public preflight.
+Keep version/provider/loaded-runtime gates exact and obtain a new installation
+approval. A native build or private campaign is not approved by this design note.
+
+A chroot is not a security sandbox against root. Signed package maintainer scripts
+are trusted administrative provisioning code in this disposable VM, comparable
+to the already used hosted apt step. Do not describe the operation as unprivileged
+or permission-confined merely because files are under .tools. No host restriction
+is disabled, no privileged wallet is permitted, and no broad host/service access
+or runtime fallback should be introduced to rescue a failed pilot. The prior
+single-UID failure remains preserved; this explicitly reviewed successor changes
+the provisioning role only. No administrative operation was performed by reviewer.
+
+
+## Administrative preparation successor — exact source GO
+
+Read all127 lines of ci_noble.sh SHA256 `d4099b43d9d2e612c54d344e8acb703992aeed85854b1651365a984cc3e8c82e`. **Source GO for one externally
+bounded hosted prepare-only pilot**, not for native compilation/private execution.
+Both modes reject a root host caller. Only the fixed prepare heredoc uses sudo-n
+with a cleared environment: it creates four standard device nodes in the fresh
+image, installs image-only policy-rc.d exit101, and invokes fixed chroot/default
+signed apt commands. No privileged mounts, host proc/sys/run sockets, repository
+or Rust bindings are present in that administrative block. mknod failure, apt
+failure or nonzero status stops before READY; public provision status/log are
+retained. The rootless failure is not overwritten by this successor.
+
+After provisioning returns, non-root host UID/EUID are explicitly recorded.
+All inventory, actual Python/OpenSSL CLI/CDLL version checks and nested public
+preflight use the original unprivileged-host bwrap path: read-only guest root,
+network namespace, explicit read-only Rust directories, cleared environment and
+masked writable rootfs alias. Only successful exact gates produce READY. The
+run mode cannot invoke sudo, accepts no privileged fallback, and remains subject
+to fresh actual runtime discovery/approval. Namespace UID0 is distinct from a
+root host caller. No inner wallet/proof/provider/security parameter changes occur.
+
+The image-only service-start denial is an explicit standard provisioning setting,
+not a host policy change. The privileged chroot is trusted package preparation,
+not claimed to confine malicious root code. Official archive identity and apt
+verification remain essential trust premises. Actual package/rootfs compatibility
+and all later CI results remain unverified until their allocated executions.
+Reviewer executed no sudo, chroot, package installation, native job or proof.
+
+
+Reviewed companion environment-probe.yml SHA256 `23a4460aed2772b97ea60539c0c94cfdc0652392a176612a3096d1bdfb22bbce`: **source GO with that
+wrapper for the same single public hosted pilot**. It remains manual-only,
+contents:read, pinned checkout/upload actions, no persisted checkout credentials,
+Ubuntu22 and no build/proof/private commands. The unchanged host public preflight
+must pass before preparation. Preparation has GNU timeout360s with10s kill-after,
+inside an8-minute job bound. The always-upload list contains only the fixed host
+and nested preflight records plus public base/package/provisioning/identity logs.
+No rootfs, database, credentials or arbitrary tree is uploaded. This adds no
+host-policy relaxation and is not final automatic acceptance.
