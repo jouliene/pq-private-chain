@@ -1,0 +1,19 @@
+{
+  "format": "CP04-INDEPENDENT-RESOURCE-MODEL-REVIEW01",
+  "scope": "Substantive source/formula/result review only; no repeat SQL, proof or full artifact hash campaign",
+  "pins": {
+    "experiments/network-feasibility/resource_model.py": "b7acc47636964e276a2242fde7c057e557b8dcc30650963a22d585d31d1f3a8e",
+    "experiments/network-feasibility/evidence/RESOURCE_MODEL01.json": "82a20bf659b2ea1db4b55804a8c2bab88b293f04050a283f8ecd9f2765d96af9",
+    "source/crates/ledger-cp03/src/tree.rs": "4a94350969b1b060fdc2cf005a1adede25ac8a9cdafeea2c8b9d3d6249737bf3"
+  },
+  "disposition": "No material arithmetic or classification defect found",
+  "assumptions": [
+    "100M two-input/two-output ordinary payments per365day year is owner sizing scenario; actual sample96 is extrapolated",
+    "Selected current-schema state payload counts2nullifierIDs,1coreID,2leaves with3digests and occupied depth40 tree node values; no minimal-protocol lower bound or total SQLite claim",
+    "Occupied-node count=sum ceil(2N/2^level),level0..40 follows append storing every touched node including leaves; does not price undo/indexes",
+    "Reduced4952B/payment and common-scan482152B/96 include measured framing at96batch; other batch mixes/funding differ",
+    "Transfer-only bootstrap days omit validation, concurrently arriving live traffic, framing/fanout, contention and archive availability",
+    "No simulated pruned DB, annual throughput, remote archive integration, mining or integrated wallet measurement implied"
+  ],
+  "remaining_decision": "A provisioned finite research model may support later Gate3 under explicit trusted-source/history assumptions; ordinary remote-pruned-node participation remains unimplemented and unaccepted."
+}

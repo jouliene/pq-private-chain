@@ -1,0 +1,8 @@
+{
+  "files": {
+    "README.md": "91a1bd6e741f6fd4919e9055de4163ed6194965887983b082a7f2e178e8c2759",
+    "driver.mjs": "a097ef101aa9d31e0b204ddf1f7fb2d2ed9005caec6deb28fe5ec02c6e7b2116",
+    "run.py": "a6b1190b864d2a3cd98aa2322f7d2961c628a9872eb286cb13001da3e85eb101"
+  },
+  "format": "CP04-NETWORK-PRODUCER-SOURCE01"
+}

@@ -1,0 +1,250 @@
+{
+  "analytically_derived": {
+    "annual_offered_payments": 100000000,
+    "bootstrap_transfer_only_days_at_100_mbit_per_second": 162.18530864197527,
+    "bootstrap_transfer_only_days_at_1_gbit_per_second": 16.21853086419753,
+    "common_scan_bytes_per_year_at_measured_96_batch_mean": 502241666666.6667,
+    "current_schema_selected_state_fields_bytes": {
+      "one_core_id": 6400000000,
+      "tree_node_values": 25600001216,
+      "two_leaves_origin_commitment_body_id": 38400000000,
+      "two_nullifier_ids": 12800000000
+    },
+    "current_schema_selected_state_fields_sum_bytes": 83200001216,
+    "full_bodies_bytes_per_year_one_copy": 175160133333333.3,
+    "full_body_ingress_average_bits_per_second": 44434331.13478775,
+    "payments_per_second": 3.170979198376459,
+    "reduced_records_bytes_per_year": 495200000000,
+    "seconds_per_year": 31536000,
+    "six_outgoing_full_copies_average_bits_per_second": 266605986.8087265,
+    "state_scope": "Two-input/two-output ordinary scenario. Field payload only: excludes reduced history, headers, row keys/overhead, indexes, undo, archive catalogs, funding, journals and replicas. Not total disk or a minimal protocol lower bound.",
+    "wallet_common_scan_transfer_only_hours_at_100_mbit_per_second": 11.160925925925927
+  },
+  "decision": "Full-body pruning could move the dominant storage duty to explicit archives, but cannot erase retained state/common-history costs. Current TCP frame ACK is not an implemented LocalArchive eviction acknowledgement. No resource/participation PASS follows.",
+  "format": "CP04-RESOURCE-MODEL01",
+  "measured": {
+    "dbstat_columns": [
+      "name",
+      "pages",
+      "allocated_page_bytes",
+      "payload_bytes",
+      "unused_bytes"
+    ],
+    "dbstat_rows": [
+      [
+        "anchor_pair",
+        1,
+        4096,
+        212,
+        3867
+      ],
+      [
+        "anchors",
+        1,
+        4096,
+        211,
+        3865
+      ],
+      [
+        "archive_objects",
+        1,
+        4096,
+        0,
+        4088
+      ],
+      [
+        "archive_one_open",
+        1,
+        4096,
+        0,
+        4088
+      ],
+      [
+        "archive_pending",
+        1,
+        4096,
+        0,
+        4088
+      ],
+      [
+        "archive_segments",
+        1,
+        4096,
+        0,
+        4088
+      ],
+      [
+        "blocks",
+        5,
+        20480,
+        13292,
+        7127
+      ],
+      [
+        "bodies",
+        82726,
+        338845696,
+        338157564,
+        355288
+      ],
+      [
+        "body_cache",
+        1,
+        4096,
+        50,
+        4034
+      ],
+      [
+        "cached_body_order",
+        1,
+        4096,
+        860,
+        2652
+      ],
+      [
+        "cores",
+        5,
+        20480,
+        13152,
+        6696
+      ],
+      [
+        "cores_height",
+        5,
+        20480,
+        13152,
+        6696
+      ],
+      [
+        "leaves",
+        22,
+        90112,
+        77760,
+        9842
+      ],
+      [
+        "leaves_height",
+        1,
+        4096,
+        1982,
+        954
+      ],
+      [
+        "meta",
+        63,
+        258048,
+        254840,
+        2942
+      ],
+      [
+        "node_undo",
+        4,
+        16384,
+        8118,
+        5723
+      ],
+      [
+        "node_undo_lookup",
+        3,
+        12288,
+        5075,
+        4682
+      ],
+      [
+        "nodes",
+        17,
+        69632,
+        56423,
+        10612
+      ],
+      [
+        "nullifiers",
+        5,
+        20480,
+        13248,
+        6600
+      ],
+      [
+        "nullifiers_height",
+        5,
+        20480,
+        13248,
+        6600
+      ],
+      [
+        "sources",
+        111,
+        454656,
+        254400,
+        198928
+      ],
+      [
+        "sqlite_autoindex_archive_objects_2",
+        1,
+        4096,
+        0,
+        4088
+      ],
+      [
+        "sqlite_autoindex_archive_pending_1",
+        1,
+        4096,
+        0,
+        4088
+      ],
+      [
+        "sqlite_autoindex_blocks_1",
+        1,
+        4096,
+        137,
+        3945
+      ],
+      [
+        "sqlite_autoindex_bodies_1",
+        5,
+        20480,
+        13532,
+        6316
+      ],
+      [
+        "sqlite_autoindex_leaves_1",
+        16,
+        65536,
+        52094,
+        11718
+      ],
+      [
+        "sqlite_schema",
+        4,
+        16384,
+        10561,
+        5470
+      ]
+    ],
+    "ordinary_bodies": 96,
+    "ordinary_full_bytes": 168153728,
+    "ordinary_reduced_bytes": 475392,
+    "public_scan_frame_bytes_funding_ordinary": [
+      918664,
+      482152
+    ],
+    "public_sql_counts": {
+      "cores": 192,
+      "leaves": 384,
+      "node_undo": 833,
+      "nodes": 799,
+      "nullifiers": 192
+    },
+    "reduced_bytes_each": 4952,
+    "scope": "Read-only closed producer database, already compared with receiving ledger; no new verification or pruned database result"
+  },
+  "unmeasured": [
+    "Year-scale indexed state and disk latency",
+    "Long-history proof replay and bootstrap service",
+    "Integrated streaming wallet decryption/witness cost",
+    "Pruned ordinary-node remote archive publication/retrieval",
+    "PoW work and consensus",
+    "WAN availability, TCP loss and fan-out"
+  ],
+  "workload_sha256": "338ddf2f36ea74d7e193dd7f14b4d779588bb0fffa5c3c36f2f820aa4bfcfc42"
+}

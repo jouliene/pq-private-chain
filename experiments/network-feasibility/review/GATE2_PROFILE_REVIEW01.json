@@ -1,0 +1,19 @@
+{
+  "format": "CP04-INDEPENDENT-GATE2-PROFILE-REVIEW01",
+  "scope": "Source/profile review only; no build/native/proof execution",
+  "disposition": "GO for successor implementation, pending exact source review and actual diagnostics; no participation acceptance",
+  "pins": {
+    "experiments/network-feasibility/GATE2_PROFILE.json": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+    "experiments/network-feasibility/transport/GATE2_PROPOSAL.md": "8c2af974e8b8610c0b575e31e8a6addb9a46b3b89d57ed645e72a596feebf0bc",
+    "source/crates/ledger-cp03/src/cache.rs": "f733dbb74858a497127ed3fbaa28c2a4e2e0b3aba663d449fdc424a3068a2024",
+    "source/crates/ledger-cp03/src/store_archive.rs": "20e9181c965bc2300de95463f206a62d230d98adb570e87af6520a9231066b77",
+    "source/crates/ledger-cp03/src/archive_io.rs": "1fe4abe2a806aef50c77af9a3cb863140a6d89e1f4602fbd93cfb2ea8659f548",
+    "source/crates/ledger-cp03/src/store.rs": "473ba8e0d326beaddf446f247da542ff65d4f1f9c639ff1f1507c31bb365b0ea",
+    "source/crates/ledger-cp03/src/schema-network04.sql": "83cab4bab10e465cca1ede4556fb3d0eb0278aae16333dec1d4539b66056aa9a",
+    "experiments/network-feasibility/review/GATE2_PROFILE_PARTICIPATION_REVIEW01.md": "4bbfda4432f100b012c719d76b0d16247e083ac6d5411d297a2485e599d08106"
+  },
+  "supplied_earlier_profile_sha256": "0a1edf72c03f518c51296742a54d97ed1508691cfb5b64dc75fcd1409111f42c",
+  "pin_discrepancy": "Direct equality assertion rejected supplied earlier digest; current complete profile reviewed and Root notified before execution. No receipt was written from failed assertion.",
+  "reused_actual_evidence": "GATE1_96_READBACK01.json",
+  "remaining_mechanism": "Remote-backed canonical publication/eviction/retrieval is unimplemented; current LocalArchive API is filesystem-bound and Gate1/2 use RETAIN."
+}

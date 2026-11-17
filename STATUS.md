@@ -3,14 +3,16 @@
 Native Goal read back ACTIVE on 2026-11-17 06:58 UTC. Global blockchain ACTIVE.
 Canonical project: /home/neo/jouliene/pq-private-chain. Read the complete
 NETWORK_FEASIBILITY_GOAL.md. Historical public baseline d8f800037b5efbb76a5a1d6d4d3100e55f676a00.
-Local HEAD 9258323; subsequent Gate1 evidence and Gate2 source work are not yet
+Local Gate1 checkpoint2ab99fb2f5e76452eb49b1eb9c6e3f0d66816e99; Gate2 source work is not yet
 published. No external blocker. Preserve exclusive labels, failed runs and pins.
 
 ## Current decision and ownership
 
 Gate1 FUNCTIONAL PASS, independently reviewed. GO for the declared finite Gate2
 pipeline experiment; no annual capacity, ordinary-node participation or production
-PASS. All Gate1 jobs terminal; HEAVY SLOT FREE. Never duplicate them.
+PASS. All Gate1 jobs terminal. SOLE HEAVY ALLOCATION14: producer gate2-diagnostic01,
+2lanes x3ordinarybatches,8genuineproofs,360s/CPU0/4GiB; Root launches below.
+No other native/build/proof campaign may overlap. Never duplicate Gate1.
 
 Root owns contracts, profiles, status, Git, integration and acceptance.
 arch_consensus_roles (Sol/high) owns transport/, Gate1 cost table and Gate2 source.
@@ -19,7 +21,7 @@ is paused. No canonical wallet/core edits or cross-gate secret keeper are planne
 arch_proof_alternatives (Astra/high) owns independent review/ and participation
 mechanism inspection. Four agents total, no nested agents, one heavy job.
 
-Owner update 06:58 UTC; next regular update by approximately07:28 UTC, meaningful
+Owner regular update06:58UTC; next regular update by approximately07:28UTC, meaningful
 material updates sooner. Russian user communication; English code/documents.
 
 ## Closed evidence to reuse
@@ -74,19 +76,22 @@ charged, no loss/doubleapply. Fresh2GiBraw RETAINquota,8GiBperrole diskwatchdog,
 4GiBAS/role,CPUs0/1/2,100Mbit/s per direction/full-duplex applicationpacing,
 40ms once/RPC. Research allocation, not ownerbudget or annualmodel acceptance.
 Generator ceiling864proofs/10800s/CPU0/4GiB; source-review and small2lanes x3batches
-(8proofs,360s) precede expensive allocation. No generation authorized yet.
+(8proofs,360s) precede expensive allocation. SOURCE03 source review GO; allocation14 authorizes only8proof diagnostic.
+Full864proof generation remains gated on actual diagnostic readback.
 
 ## Exact restart / next useful actions
 
-1. Inspect actual agents/jobs before allocation. Preserve closed Gate1 sources,
+1. Inspect allocation14 actual session/processes/receipt before restarting. Preserve closed Gate1 sources,
    evidence and datasets. Do not overwrite labels or generated installations.
 2. Finish/review Gate2 producer and transport source against declared profile.
    Producer owner and transport owner coordinate exact multibatch workload ABI.
    Resolve512MiB legacy wrapper versus new2GiBfresh quota without silent change
    to canonical installed source. Reviewer inspects profile and pruning model.
-3. Commit verified Gate1 checkpoint; then freeze/review new source. Root assigns
-   sole heavy allocation for genuine8proof diagnostic, reviews actual output,
-   then full864proof generation only if the changed path passes.
+3. Gate1 checkpoint committed2ab99fb. ProducerSOURCE03 frozen/reviewed:
+   380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2.
+   Profile9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8.
+   Run allocated diagnostic, inspect actual8proof/fourblock/receipt/readback;
+   then full864proof generation only if changed path passes.
 4. Build/review transport successor and run diagnostic/full finite network series
    after required datasets exist. No inference of overlap replaces actual run.
 5. Review service and participation separately. An annual175TBfullcopy remains

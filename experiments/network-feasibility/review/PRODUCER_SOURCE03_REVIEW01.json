@@ -1,0 +1,42 @@
+{
+  "format": "CP04-INDEPENDENT-PRODUCER-SOURCE03-REVIEW01",
+  "source_sha256": "380d4c4305eeb326604b28f77bba75c9107fea5010dabe0f407ccfbe6c0a82c2",
+  "profile_sha256": "9b86ab766d8d30e7948d2566f5b1eff4b8ba2b9b6f9bbe57a9d1c90f91c4aee8",
+  "checked_source_files": {
+    "experiments/network-feasibility/producer/README.md": "00c1a007eeba56795a763f9935f94daec86f05916c1214de0014ee0079cf6051",
+    "experiments/network-feasibility/producer/driver.mjs": "308ef061a2aaf88f5dc349f31f4c6e71236eee24f3df444374c3b9de74e6d50e",
+    "experiments/network-feasibility/producer/retain-init.mjs": "a4841ed0ad15d1d6c8c968acee6df85e923a6fad27110e07d75dd14f389ced9e",
+    "experiments/network-feasibility/producer/run.py": "91413514034dde2c5e58bbb375685aa46379aeaab4ba4a26da94402cafe0d92a"
+  },
+  "source_go": "GO for Root-allocated diagnostic2x3, then actual readback before full96x8 allocation",
+  "executed_by_reviewer": [
+    "Python AST parse only",
+    "Exact four-file source/profile and preserved Gate1 source-pin checks",
+    "Public integer accounting for both fixed shapes"
+  ],
+  "not_executed": [
+    "Node execution",
+    "native ledger/hash/helper",
+    "private key generation",
+    "proof generation",
+    "full receiving runtime"
+  ],
+  "reviewed_mechanisms": {
+    "runtime": "Explicit approved installation and fixed operator/private approval; outer common.load_installation before/after; unchanged receiving/prover modules; source and current profile pinned",
+    "quota_init": "Existing fixed init-retain CLI via approved held ELF FD; regular ELF/metadata/inode/SHA pre/post; typed successful output matched against unchanged client.head; no SQL quota mutation",
+    "receiving": "Actual contextsBatch and receipt digests; one-key fresh wallets try all2N latest envelopes using existing prepareRecipient/collectLocalCandidates; full ML-KEM/KDF/KC/GCM/canonical-note/owner/commitment checks; exactly2 candidates and fee-derived balance",
+    "occurrences": "Indices derived from public output order; local canonical membership origin/CM/index checked; all2N latest indices consumed exactly once; same-owner note pairs privately shuffled",
+    "proof": "Unchanged preparePayment copies private witness into one-use packet before candidate wipe; unchanged Parent provePayment; genuine producer admission after each batch; no cached new-payment verdict",
+    "privacy": "No private packet inspection, key/pair/opening/index-map output or hash; public fixed costs and failure-stage only; wallets/payments disposed; no JS/native KeyObject erasure theorem",
+    "accounting": "Funding plus3or8 ordinary batches, fixed balance/fees/leaf roots; perproof firstwait4 worker costs and nested caller wall, perbatch inclusive/admission wall; final native checked scan and all header/body manifest entries"
+  },
+  "limitations": [
+    "Latest-block scan valid only because every receiving wallet is new and has no older receipts; no general recovery/Gate3 claim",
+    "Paths come from trusted local producer ledger; no selective witness claim",
+    "Whole generator limit is oneCPU/4GiB via approved lifecycle helper and Root outer allocation; no walltime performance claim before run",
+    "Source raw body maximum1820080800B below2GiB does not bound all physical copies; network role watchdog must charge public artifacts outside transport subtree",
+    "Key disposal and process exit are lifecycle controls, not forensic memory erasure"
+  ],
+  "findings": [],
+  "message_pin_correction": "Author message mentioned old0a1e profile; actual SOURCE03 already pins current9b86ab. No source mutation was necessary."
+}
