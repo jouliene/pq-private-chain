@@ -6,7 +6,9 @@ actual destination and archive costs? This map authorizes no parameter change.
 Baseline is public `d8f800037b5efbb76a5a1d6d4d3100e55f676a00`. The network
 adapter and declared finite Gate2 workload passed functional/resource review as
 recorded in [RESOURCE_DECISION.md](RESOURCE_DECISION.md). The joint local-witness
-wallet is under implementation/acceptance; no integrated Gate3 PASS follows yet.
+wallet has passed the full264-proof finite campaign and independent evidence
+review. Clean-checkout reproduction and final publication remain pending; see
+STATUS.md for actual closure rather than interpreting these tests as a theorem.
 
 The existing evidence permits a labelled research experiment. It has not
 demonstrated a currently applicable soundness, authorization or ledger-privacy
@@ -141,14 +143,17 @@ and universal error propagation are not established. No practical exploit was
 demonstrated. The current research scope assumes a functioning pinned provider,
 retains real signature verification and does not claim fault/side-channel safety.
 
-No new backend experiment is justified before the complete path identifies its
-dominant barrier. If repeated preparation/verification dominates CPU, first test
-the exact avoidable work while keeping every required verification. If initial
-body bytes dominate, a reversible bounded transport/archive container is the
-smallest discriminator: compare ordinary compression with typed shared chunks on
-distinct data, require byte-exact decode into the unchanged verifier, and include
-dictionary/reference/decoder/missing-object costs. Existing multiproof path
-sharing cannot be counted twice. Modest past gains do not justify a codec rewrite.
+The complete path now identifies two separate obligations: repeated common-history
+prefix work in the wallet and the large first-copy payment bodies. The selected
+next bounded development recommendation is authenticated common-history suffix
+synchronization, as specified in RESOURCE_DECISION.md. It changes no proof
+parameters or annual first-copy size and stops after one reviewed outcome.
+A later payment-size route must address the complete relation and retained data;
+neither repeated compression surveys nor a cell rewrite is automatically allocated.
+Any representation experiment must decode byte-exactly into the unchanged verifier,
+charge dictionaries/references/decoder/missing-object costs and show a material
+decision benefit. Existing path sharing cannot be counted twice. Modest past
+gains do not justify a codec rewrite.
 
 A materially different complete native-lattice backend remains a conditional
 initial-data challenger, not an available qualified substitute: its prior run
@@ -173,11 +178,18 @@ evidence; no private research file is a runtime or public reproduction dependenc
 The public [security map](../SECURITY.md) and [architecture](../ARCHITECTURE.md)
 remain the compact statement of assurance limits.
 
-Before final acceptance, a reviewer who did not implement the path must use a
-Root-allocated clean checkout to reproduce the decisive separate-role path and
-failure controls, declared finite queue/retention result, and actual wallet
-receive/witness/spend/expiry/rewind/backup-new-spend sequence. Reuse valid evidence
-for unchanged components; do not rerun the whole historical campaign. Check
+Before final acceptance, a reviewer who did not implement the path must execute
+the decisive final slice from a Root-allocated clean checkout. The reviewed
+[Gate5 scope](../../experiments/network-feasibility/review/GATE5_REPRO_SCOPE.md)
+requires a fresh build, new isolated small5 private receive/witness/spend/recovery
+cycle and fresh public-only replay of every full01 proof and its branch/expiry
+chronology. Independent review of full01's actual private expiry/rewind/deep-replay
+evidence supplies the source-to-public-outcome correspondence; public replay alone
+cannot establish those private actions. This is explicitly not a second full264
+private campaign. Retain independent review of unchanged separate-role transport,
+failure controls and finite queue/retention evidence. A new material private-state
+finding invalidates the reduced scope and requires the shortest affected genuine
+private reproduction. Check
 source/manifests/build/runtime correspondence, real terminal statuses, data-access
 boundaries and safe public evidence. Publish the exact tested revision, commands
 and actual CI result. Keep experiment completion, provisional backend acceptance

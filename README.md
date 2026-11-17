@@ -42,6 +42,8 @@ how each later milestone is handed to an independent reviewer by immutable SHA.
 - `scripts/`: setup, trusted runtime installation, build and focused smoke checks.
 - `fixtures/cp03-reference/`: genuine public synthetic payments and independent
   public verification inputs; no wallet database or private backup.
+- `experiments/network-feasibility/`: version4 larger-block transport, finite
+  offered-load/restart tests, isolated local-witness wallet and public replay.
 - `experiments/architecture-feasibility/`: the real distinct-payment generator,
   public ledger/archive role experiment and local witness reconstruction entry
   points. The short publication smoke does not repeat the32-proof campaign.
@@ -57,15 +59,20 @@ for third-party code.
 
 ## Current practical boundary
 
-A newly generated16-ordinary-payment historical sample averaged1,750,350bytes per
-body. At the owner's100M-payment annual sizing input, one body copy alone is
-175.035decimalTB/year, before replicas, relay, indexes and other roles. This is
+The768-ordinary-payment network sample averaged1,751,265.75bytes per body.
+At the owner's100M-payment annual sizing input, one body copy alone is
+175.126575decimalTB/year, before replicas, relay, indexes and other roles. This is
 arithmetic, not measured annual network throughput or an owner traffic budget.
 The local full-block experiment includes real admission/archive work and exposes
 substantial catch-up costs. Those limits are retained in the architecture decision.
 
-Preferred next research integration is standalone valid-work PoW with this
-payment backend. Puzzle qualification, permissionless reward issuance, actual
-network transport, long-history service and live private witness recovery remain
-separate work. Custom shared cells are a deferred comparison idea, not a protocol
-migration included in this publication.
+The finite network workload drained its queues with complete retention, and the
+264-proof wallet campaign passed local witness recovery, expiry refresh and
+controlled rewind. Independent reproduction/publication status is in STATUS.md.
+These results retain CP03 for the explicit research model in
+[the resource decision](docs/network-feasibility/RESOURCE_DECISION.md).
+The current wallet still rereads common history on refresh. The next bounded
+development recommendation is authenticated suffix synchronization; full PoW/
+issuance integration remains behind the payment/history participation decision.
+Standalone valid-work PoW remains the preferred consensus direction. No full
+consensus engine, permissionless reward issuance or production security is claimed.

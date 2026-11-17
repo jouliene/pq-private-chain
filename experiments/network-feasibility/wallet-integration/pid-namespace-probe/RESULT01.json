@@ -1,0 +1,164 @@
+{
+  "actual_outer_argv_preserved": true,
+  "budget": "10 seconds / at most 4 explicit subprocess launches; bubblewrap internal namespace/reaper processes inherent",
+  "explicit_subprocess_launches": 3,
+  "format": "PUBLIC-NESTED-PID-DISCRIMINATOR01",
+  "original_wallet_controller_or_private_config_executed": false,
+  "outer_exit": 0,
+  "outer_stderr": "",
+  "result": {
+    "controller": {
+      "actual_isolation_command": true,
+      "controller_identity": {
+        "mnt_namespace": "mnt:[4026532890]",
+        "pid": 3,
+        "pid_namespace": "pid:[4026532891]",
+        "starttime_ticks": 86032965
+      },
+      "inner_exit": 0,
+      "inner_stderr": "",
+      "inner_stdout": {
+        "checks": [
+          {
+            "check": "denied_file",
+            "errno": 2,
+            "passed": true,
+            "path": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small01/controller/ledger.sqlite"
+          },
+          {
+            "check": "denied_file",
+            "errno": 2,
+            "passed": true,
+            "path": "/tmp/pq-gate5-20261117-01/experiments/network-feasibility/wallet-integration/.work/reviewer-small01/controller/denied-control-sentinel.db"
+          },
+          {
+            "check": "inherited_fd",
+            "fd": 0,
+            "identity": [
+              5,
+              5
+            ],
+            "passed": true
+          },
+          {
+            "check": "inherited_fd",
+            "fd": 1,
+            "identity": [
+              14,
+              28361829
+            ],
+            "passed": true
+          },
+          {
+            "check": "inherited_fd",
+            "fd": 2,
+            "identity": [
+              14,
+              28361830
+            ],
+            "passed": true
+          },
+          {
+            "check": "fd_stat",
+            "errno": 9,
+            "fd": 3,
+            "passed": true
+          },
+          {
+            "check": "socket_family",
+            "errno": 1,
+            "family": 2,
+            "passed": true
+          },
+          {
+            "check": "socket_family",
+            "errno": 1,
+            "family": 10,
+            "passed": true
+          },
+          {
+            "check": "socket_family",
+            "errno": 1,
+            "family": 1,
+            "passed": true
+          },
+          {
+            "check": "original_forbidden_root_assertion",
+            "exists": true,
+            "numeric_pid": 3,
+            "passed": false
+          }
+        ],
+        "controller_identity": {
+          "mnt_namespace": "mnt:[4026532890]",
+          "pid": 3,
+          "pid_namespace": "pid:[4026532891]",
+          "starttime_ticks": 86032965
+        },
+        "frozen_inspect": {
+          "passed": false,
+          "reason": "host process root inaccessible",
+          "type": "ValueError"
+        },
+        "inner_pid1": {
+          "mnt_namespace": "mnt:[4026532894]",
+          "pid": 1,
+          "pid_namespace": "pid:[4026532897]",
+          "reported_pid": 1,
+          "root_stat": [
+            84,
+            2
+          ],
+          "starttime_ticks": 86032967,
+          "tgid": 1
+        },
+        "inner_self": {
+          "mnt_namespace": "mnt:[4026532894]",
+          "pid": 2,
+          "pid_namespace": "pid:[4026532897]",
+          "reported_pid": 2,
+          "root_stat": [
+            84,
+            2
+          ],
+          "starttime_ticks": 86032968,
+          "tgid": 2
+        },
+        "inner_thread": {
+          "mnt_namespace": "mnt:[4026532894]",
+          "pid": 3,
+          "pid_namespace": "pid:[4026532897]",
+          "reported_pid": 3,
+          "root_stat": [
+            84,
+            2
+          ],
+          "starttime_ticks": 86032970,
+          "tgid": 2
+        },
+        "numeric_controller_candidate": {
+          "mnt_namespace": "mnt:[4026532894]",
+          "pid": 3,
+          "pid_namespace": "pid:[4026532897]",
+          "reported_pid": 3,
+          "root_stat": [
+            84,
+            2
+          ],
+          "starttime_ticks": 86032970,
+          "tgid": 2
+        },
+        "seccomp": "2"
+      },
+      "inner_wall_seconds": 0.03577634098473936
+    },
+    "controller_exit": 0,
+    "controller_stderr": ""
+  },
+  "source_sha256": {
+    "isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
+    "isolation_probe.py": "a2b0507309cfed1620708dbd4cb1aae7ceeb54b906cb618e311d77ed39dfcc52"
+  },
+  "thread_launches": 1,
+  "wall_seconds": 0.09449788392521441
+}

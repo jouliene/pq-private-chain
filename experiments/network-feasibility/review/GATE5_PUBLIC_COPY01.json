@@ -1,0 +1,12 @@
+{
+  "all_body_entries_match_reviewed_result": true,
+  "artifacts": 265,
+  "copied_only_manifest_allowlist": true,
+  "format": "CP04-GATE5-PUBLIC-COPY01",
+  "fresh_destination": "/tmp/pq-gate5-20261117-01/.work/gate5-public-full01",
+  "manifest_bytes": 49348,
+  "manifest_sha256": "6ee13309b7c0d5fafb6363787076a86be0334799c850e670147571903cbae094",
+  "payload_bytes": 462280798,
+  "private_or_database_inputs": false,
+  "wall_seconds": 1.1109981149202213
+}

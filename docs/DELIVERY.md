@@ -50,8 +50,10 @@ change only delivery documentation/evidence. Exact public verification and any
 CI outcome are retained in `delivery-result.json` on the immutable
 [publication-2026-11-17 release](https://github.com/jouliene/pq-private-chain/releases/tag/publication-2026-11-17).
 The handoff must use that record's tested public revision, not assume the branch
-name still denotes the tested bytes. CI is manual and its run URL/conclusion
-must be checked; the presence of `.github/workflows/smoke.yml` is not a PASS.
+name still denotes the tested bytes. That first milestone used manual CI. The
+network milestone adds automatic push/PR smoke coverage and the isolated wallet
+cycle. Its actual run URL/conclusion must be checked; the presence of
+`.github/workflows/smoke.yml` is not a PASS.
 
 ## Source manifests after a deliberate source change
 

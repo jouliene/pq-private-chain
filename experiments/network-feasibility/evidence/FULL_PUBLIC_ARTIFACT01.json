@@ -1,0 +1,11 @@
+{
+  "bytes": 462551040,
+  "closure_sha256": "6ee13309b7c0d5fafb6363787076a86be0334799c850e670147571903cbae094",
+  "contents": "Exact closure manifest, public genesis and264 complete public bodies; no source DB, Parent raw streams or wallet inventory.",
+  "file": "full01-public-closure.tar",
+  "files": 266,
+  "format": "CP04-FULL-PUBLIC-RELEASE-ARTIFACT01",
+  "private_material_or_database": false,
+  "sha256": "29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4",
+  "wall_seconds": 1.1707583600655198
+}

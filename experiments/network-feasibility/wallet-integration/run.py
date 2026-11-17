@@ -208,7 +208,9 @@ class Actor:
         c = self.owner
         probe_config = c.common / ('restore-probe.json' if self.restore else 'original-probe.json')
         save(probe_config, {'denied_files': [str(p) for p in c.denied_files],
-                            'denied_inodes': [list(x) for x in c.denied_inodes], 'host_pid': os.getpid()})
+                            'denied_inodes': [list(x) for x in c.denied_inodes],
+                            'controller_pid': os.getpid(),
+                            'controller_pid_namespace': os.readlink('/proc/self/ns/pid')})
         config = c.common / ('restore-config.json' if self.restore else 'original-config.json')
         controls = HERE.parent / 'wallet-witness/joint_controls.mjs'
         save(config, {'format': 'CP04-ISOLATED-WALLET-CONFIG01', 'profile': c.args.profile,
@@ -266,17 +268,20 @@ class Actor:
             need(os.readlink(f'/proc/{self.node_pid}/ns/{name}') == ns[name]
                  and ns[name] != os.readlink('/proc/self/ns/' + name), 'actual_distinct_namespace')
         descendant = message['descendant']
+        probe = module('wallet_namespace_probe', HERE / 'isolation_probe.py')
+        probe.validate_namespace_result(descendant, ns, os.getpid(), os.readlink('/proc/self/ns/pid'))
         need(descendant['namespaces'] == ns and descendant['seccomp'] == '2'
              and descendant['denied_paths'] == len(self.owner.denied_files)
-             and set(descendant['denied_socket_families']) == {1, 2, 10}
-             and descendant['host_proc_root_denied'] is True, 'actual_descendant_probe')
+             and set(descendant['denied_socket_families']) == {1, 2, 10}, 'actual_descendant_probe')
         self.namespaces = ns
         self.boundary_seen = True
         need(self.node_pid in self.sample(force=True), 'live_node_boundary_sample')
         self.public_result['boundary'] = {'actual_node_host_pid': self.node_pid,
             'reported_namespace_pid': message['pid'], 'namespaces': ns, 'descendant': {
                 key: descendant[key] for key in ('pid', 'denied_paths', 'inherited_fd_identity_checks',
-                    'denied_socket_families', 'host_proc_root_denied', 'seccomp')},
+                    'denied_socket_families', 'controller_pid', 'controller_pid_namespace',
+                    'procfs_pid_namespace', 'controller_proc_namespace_excluded',
+                    'controller_number_classification', 'controller_number_pid_namespace', 'seccomp')},
             'inheritable_denied_fds_in_controller': len(self.owner.denied_handles),
             'approved_node_executable_inode_matched': True,
             'denied_database_fds_passed_to_wallet': 0}

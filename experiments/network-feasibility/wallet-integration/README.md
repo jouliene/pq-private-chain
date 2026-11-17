@@ -77,3 +77,46 @@ See `STATUS.md` for actual outcomes and next allocation. Source review, componen
 tests and the historical isolation pilot are not complete Gate3 acceptance.
 The formal composition qualifications in `docs/network-feasibility/OBLIGATIONS.md`
 remain unchanged by a successful finite run.
+
+## Independent public replay of the complete chronology
+
+The full campaign is reproducible from source with fresh private keys using the
+`full` profile above. To independently verify its public consequences without
+regenerating264 proofs, use `public_replay.py` with a newly built installation.
+The optional milestone release contains only the exact public genesis,264 full
+bodies and a comparison manifest (462551040-byte tar). It contains no original
+database, receiving inventory, private backup or cached-verdict authority.
+Release availability and actual verification status are recorded in STATUS.md
+and the release's delivery-result.json; the commands alone are not evidence of
+publication or success.
+
+```sh
+mkdir -p .work/full01-input
+curl --fail --location --output .work/full01-input/full01-public-closure.tar \
+  https://github.com/jouliene/pq-private-chain/releases/download/network-feasibility-2026-11-17/full01-public-closure.tar
+echo '29541085933138adb13e11fb1f91b247b03f8c20e10d68c978d6d7034ecfccc4  .work/full01-input/full01-public-closure.tar' | sha256sum -c -
+tar -xf .work/full01-input/full01-public-closure.tar -C .work/full01-input
+sha256sum experiments/network-feasibility/wallet-integration/PUBLIC_REPLAY_SOURCE.json
+timeout --signal=TERM --kill-after=10s 1200s \
+  python3 -I experiments/network-feasibility/wallet-integration/public_replay.py \
+  --label public-full01 \
+  --installation .work/wallet01/fresh/installation.json \
+  --approve-installation APPROVED_INSTALLATION_SHA256 \
+  --approve-source REVIEWED_PUBLIC_REPLAY_SOURCE_SHA256 \
+  --public .work/full01-input/full01-public-closure/closure.json \
+  --approve-public 6ee13309b7c0d5fafb6363787076a86be0334799c850e670147571903cbae094
+```
+
+Review the actual local installation and source identities before supplying the
+two approval arguments. The outer1200s guard covers startup/copy/postflight as
+well as the driver's900s replay guard. Each label is exclusive. All264 proofs
+receive genuine native verification into a new database, including previously
+orphaned bodies. The sequence checks old-anchor eligibility/expiry, four rollbacks,
+replacement-branch eligibility, two atomic Anchor rejections, final selected head
+and all14 canonical tables; only the local catalog identity is excluded.
+
+Public replay cannot establish private discovery, journal restoration or backup
+handling. The independent acceptance scope additionally requires a new isolated
+small5 private cycle and review of the actual full private campaign's pinned
+source/evidence. See `../review/GATE5_REPRO_SCOPE.md`; a material private-state
+finding requires the shortest affected genuine private reproduction.

@@ -1,0 +1,26 @@
+{
+  "actual_wrapper": {
+    "exit": 1,
+    "first_wait4": true,
+    "maxrss_kib": 25160,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.0018139999999999999,
+    "user_seconds": 0.0009069999999999999,
+    "wall_seconds": 0.2578354349825531
+  },
+  "fixed_failure_stage": "capability-boundary",
+  "passed": false,
+  "restore": false,
+  "sampling": {
+    "complete_same_pid_policy_after_permission": 0,
+    "confirmed_permission_exit_races": 0,
+    "epochs": 0,
+    "interval_seconds": 0.05,
+    "maximum_sampled_tree_rss_kib": 0,
+    "observed_processes": [],
+    "permission_exit_evidence_first64": [],
+    "permission_retry_wall_seconds": 0.0,
+    "raced_exits": 0,
+    "scope": "Finite external live PID/namespace/mount/FD metadata samples; short-lived processes can be missed. No private pipe bytes or FD link targets read; RSS sum is sampled concurrent tree RSS, not CPU."
+  }
+}

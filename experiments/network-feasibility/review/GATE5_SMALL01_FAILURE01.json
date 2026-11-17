@@ -1,0 +1,31 @@
+{
+  "actual_source_runtime_unchanged": true,
+  "actual_wrapper": {
+    "exit": 1,
+    "first_wait4": true,
+    "maxrss_kib": 25160,
+    "scope": "bubblewrap leader first-wait4; not whole native wallet/prover tree CPU or RSS",
+    "system_seconds": 0.0018139999999999999,
+    "user_seconds": 0.0009069999999999999,
+    "wall_seconds": 0.2578354349825531
+  },
+  "clean_revision": "b6c6e5938c4ba67a874826f85257e43dfff2f500",
+  "controller_visible_pid_in_probe_config": 3,
+  "fixed_failure_reason": "wallet_terminal_success",
+  "fixed_failure_stage": "capability-boundary",
+  "format": "CP04-INDEPENDENT-GATE5-SMALL01-FAILURE01",
+  "inputs": {
+    "RESULT.json": "cf769c1ad78a5f6f7f4f0f3aa4abea4f510188413d7b25e5ec37dc2885095dbf",
+    "common/original-probe.json": "8a433f479086173a53fe342efb92e05cac19a8b5a8e204538c07efcb4a5a6cc6",
+    "original-process.json": "c09b6c2aa94d6970b6e9184ad5167bd331d67dd017df935a2170f940839a6be4"
+  },
+  "installation_sha256": "6c0aeae40546a2744c20e10c5cf3f23c316ef4a93e2f2144f07d71bdc4d41b77",
+  "native_cli_operations": 0,
+  "next": "Preserve attempt. Run only an allocated harmless namespace identity discriminator, then review a narrow identity-aware assertion. Do not remove DB/FD/socket/mount/ns checks. No private rerun or public replay until Root allocation.",
+  "observation": "No boundary RPC, keys, proofs or ledger creation reached. The actor failed its public descendant capability probe.",
+  "passed": false,
+  "proofs_created_registered": 0,
+  "public_events": [],
+  "source_finding": "Probe uses an outer controller PID number as a /proc path in a different child PID namespace. Numeric PID collision can refer to an unrelated process/thread; mere existence of that path does not prove host-process access. Actual failing probe clause is not retained, so specific collision attribution awaits a public discriminator.",
+  "source_sha256": "fc065433ebe8cdfb4150dcee76056c00683633b01d70c6416837c16b6185f50e"
+}

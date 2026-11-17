@@ -51,7 +51,8 @@ def main():
     identities = [[os.fstat(fd).st_dev, os.fstat(fd).st_ino] for fd in handles]
     config = work / 'public-config.json'
     config.write_text(json.dumps({'denied_files': [str(p) for p in denied],
-                                 'denied_inodes': identities, 'host_pid': os.getpid()}))
+                                 'denied_inodes': identities, 'controller_pid': os.getpid(),
+                                 'controller_pid_namespace': os.readlink('/proc/self/ns/pid')}))
     result = {'format': 'CP04-WALLET-ISOLATION-CONTROL01', 'passed': False,
               'scope': 'Public policy/descendant probe only; no private wallet or proof executed',
               'source_sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
@@ -113,6 +114,12 @@ def main():
         need(all(not Path(f'/proc/{host_pid}/root{p}').exists() for p in denied),
              'outside actual mount denial readback')
         need(received['seccomp'] == received['descendant']['seccomp'] == '2', 'filter active for both')
+        probe_spec = importlib.util.spec_from_file_location('wallet_namespace_probe', HERE / 'isolation_probe.py')
+        probe = importlib.util.module_from_spec(probe_spec)
+        probe_spec.loader.exec_module(probe)
+        for observed in (received, received['descendant']):
+            probe.validate_namespace_result(observed, received['namespaces'], os.getpid(),
+                                            os.readlink('/proc/self/ns/pid'))
         result.update(probe=received, actual_host_pid=host_pid, external_namespace_readback=readback,
                       inherited_public_database_fds_open_in_parent=len(handles),
                       inherited_public_database_fds_passed_to_child=0,

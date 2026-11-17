@@ -75,3 +75,21 @@ profile. Independent clean-checkout reproduction and publication still remain.
 No crypto parameters, permissions or namespace controls were weakened to repair
 the observer; source03 uses bounded same-process full reobservation or confirmed
 exit and retains fatal persistent/ambiguous errors. Earlier failures are preserved.
+
+## 2026-11-17 12:19 UTC — full Gate3 terminal, acceptance continues
+
+Native Goal read back ACTIVE12:15UTC. Actual full01 RESULT2835c26138b20e75716b6ce048e55731b41001b38f2a2dfdf7768a2b55068637
+reports PASS:264 genuine proofs, expiry/refresh, joint rewind/deep replay, original
+termination then backup-only fresh-process spending. Root checked public counts,
+all14 rejection maps, resources and typed marks. Independent readback, clean
+build/new small5/public chronology, final review and publication/actual CI remain
+required. Goal is NOT complete. STATUS.md records allocation26 and exact restart.
+The optional second server disk is confirmed; it is not an annual protocol budget.
+
+Checkpoint: independent clean build passed (same complete programs, four new ELFs,
+eight provider controls). Fresh small01 failed before any key/proof at namespace
+probe. Controlled public reproduction found a false numeric-PID assumption; a
+narrow namespace-identity repair passed independent source review and27 metadata
+controls. Source04 is frozen. Earlier failures remain failures; no new private
+acceptance is claimed. STATUS.md identifies the exact clean retry and public
+replay allocations. Native/global Goal stays ACTIVE.

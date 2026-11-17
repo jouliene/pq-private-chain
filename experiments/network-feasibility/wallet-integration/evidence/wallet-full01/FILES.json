@@ -1,0 +1,31 @@
+{
+  "files": {
+    "RESULT.json": {
+      "bytes": 1095641,
+      "sha256": "2835c26138b20e75716b6ce048e55731b41001b38f2a2dfdf7768a2b55068637"
+    },
+    "anchor-reject-01.json": {
+      "bytes": 3806,
+      "sha256": "12ca7d61b6cfe9e43b1d924f09d8004ee9d75f7a93ddf808d5672fd9364e1892"
+    },
+    "anchor-reject-02.json": {
+      "bytes": 3808,
+      "sha256": "ac88fc4fe2a366186fddc4c92c17c9385c487734fb7b952c3d88692850e92934"
+    },
+    "claim.json": {
+      "bytes": 376,
+      "sha256": "422523115cb4a87f748915c4ccd3cfc95c95578821e1a7654bf0ee87ceef7a9c"
+    },
+    "original-process.json": {
+      "bytes": 387685,
+      "sha256": "47f8b873f0c47d0ee543c80589e0eb1998b295756904961a04066c94a6bd3071"
+    },
+    "restore-process.json": {
+      "bytes": 13526,
+      "sha256": "6d3fbe0f37f37d28b0ab9a700e098ad0b841d4b7e368993a7dbeb6ab3f1d45c5"
+    }
+  },
+  "format": "CP04-WALLET-SAFE-EVIDENCE01",
+  "private_streams_or_backup_included": false,
+  "source": "wallet-integration/.work/wallet-full01"
+}

@@ -2,9 +2,11 @@
 
 ## Preferred research path
 
-Advance individual complete CP03 private-payment proofs with standalone
-accumulated-valid-work PoW for the next integration stage. This is the strongest
-supported research path among the examined alternatives, not global optimality
+Retain individual complete CP03 private-payment proofs for the measured finite
+research participation model. The next bounded development recommendation is
+authenticated common-history suffix synchronization; the payment/history cost
+decision precedes a full consensus build. Standalone accumulated-valid-work PoW
+remains the preferred eventual consensus direction, not global optimality
 or a deployed permissionless network. The owner prefers CPU-friendly public work
 entry. RandomX is a leading puzzle candidate requiring qualification; no PQ
 security, economic advantage or portable/optimized agreement is inferred here.
@@ -64,11 +66,15 @@ wallet coordinator construct paths locally while discovering receipts from commo
 history. The coordinator leases key inventory and jointly journals openings,
 spentness, paths and full cursors for bounded selected-branch rewind. Source
 review, clean build and13JS/5Rust component controls passed. The isolated small03
-scenario also passed actual receipt, local-witness spending and a backup-only
-new-process spend, with five positive genuine proof admissions and independent
-public-evidence review. Full changing-root expiry and joint selected-branch
-rewind acceptance remain pending Gate3. Two earlier observer failures and the
-bounded same-process observation repair are retained as evidence.
+scenario passed actual receipt, local-witness spending and a backup-only
+new-process spend. The full01 campaign then generated264 distinct genuine proofs
+and exercised changing-root expiry, refreshed old-note spending, joint branch
+rewind, orphan rejection, deep replay and another backup-only new-process spend.
+Independent public-evidence review confirmed all264 proof associations and all14
+final SQL tables. Both typed Anchor rejections left all14 tables unchanged.
+Independent clean-build execution and final publication remain pending in STATUS.md.
+Two earlier observer failures and the bounded same-process observation repair
+are retained as evidence.
 Refresh currently rereads history from genesis before applying its suffix, so
 bounded live wallet state does not mean constant history traffic. See STATUS.md
 for exact source identities and the next actual run.
@@ -146,8 +152,9 @@ only16.8192Mslots/year;128/30s offers134.5536M, which is still not measured serv
 capacity. Genuine96-payment batches, separate archive/destination processes,
 bounded transport and finite burst/restart queues have now been tested. Actual
 private local-witness refresh, recent-anchor expiry, recovery and selected-branch
-rewind remain the current integration gate. The complete proof relation and
-security parameters are preserved.
+rewind have passed the full finite campaign and independent evidence review.
+The complete proof relation and security parameters are preserved. Clean-checkout
+reproduction and publication are the remaining acceptance steps in STATUS.md.
 
 Permissionless launch needs zero-source genesis and empty work blocks. Proposed
 reward entitlement is derived from the fully known non-genesis parent's identity

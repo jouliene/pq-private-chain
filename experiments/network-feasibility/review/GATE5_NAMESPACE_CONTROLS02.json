@@ -1,0 +1,160 @@
+{
+  "control_count": 27,
+  "controls": [
+    {
+      "name": "verified-local-process-or-thread-collision",
+      "passed": true
+    },
+    {
+      "name": "confirmed-numeric-absence",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "same-controller-namespace-even-with-absence",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "procfs-pid1-is-not-own-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "present-numeric-controller-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "present-unrelated-numeric-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "PermissionError",
+      "name": "numeric-namespace-permission-denied",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "missing-link-live-numeric-directory",
+      "passed": true
+    },
+    {
+      "error_type": "PermissionError",
+      "name": "missing-link-directory-permission-denied",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "invalid-controller-pid-bool",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "invalid-controller-pid-zero",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "invalid-controller-pid-negative",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "invalid-controller-pid-string",
+      "passed": true
+    },
+    {
+      "error_type": "KeyError",
+      "name": "missing-controller-identity",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "malformed-controller-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-controller-pid",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-controller-pid-bool",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-controller-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-procfs-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-exclusion-false",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-numeric-classification",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-numeric-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-absence-with-present-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-child-namespace-null",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "consumer-rejects-reported-child-namespace",
+      "passed": true
+    },
+    {
+      "error_type": "KeyError",
+      "name": "consumer-rejects-missing-field",
+      "passed": true
+    },
+    {
+      "error_type": "ValueError",
+      "name": "actual-same-namespace-rejected",
+      "passed": true
+    }
+  ],
+  "direct_child_launches": 0,
+  "format": "CP04-NAMESPACE-PROBE-CONTROLS01",
+  "passed": true,
+  "process_self": {
+    "maxrss_kib": 18304,
+    "system_seconds": 0.005005,
+    "user_seconds": 0.030033999999999998
+  },
+  "scope": "Public typed namespace metadata controls and one real same-namespace rejection; no isolated wallet, cryptography or additional subprocess. Actual collision evidence is pid-namespace-probe/RESULT01.json, not these simulated observations.",
+  "source_after": {
+    "isolation_control.py": "64199d4f41f9925df4565f8ea14f5859fca4cdeef12e87fe9c54a39b9b53c1b7",
+    "isolation_probe.py": "f9352dcfb3dd62353fee7e212cdaa567c98ad9fd5f7aecffae8e6847da4c0c63",
+    "namespace_controls.py": "6d6c40aeca36876c30b3d0aaeb2e6148a687bc3ff744459dd8260f17ff3a74b9",
+    "run.py": "3e99ecde6534fa1dceee15f02c0f6eb636659aacd13bf118cab5faf827477a75"
+  },
+  "source_before": {
+    "isolation_control.py": "64199d4f41f9925df4565f8ea14f5859fca4cdeef12e87fe9c54a39b9b53c1b7",
+    "isolation_probe.py": "f9352dcfb3dd62353fee7e212cdaa567c98ad9fd5f7aecffae8e6847da4c0c63",
+    "namespace_controls.py": "6d6c40aeca36876c30b3d0aaeb2e6148a687bc3ff744459dd8260f17ff3a74b9",
+    "run.py": "3e99ecde6534fa1dceee15f02c0f6eb636659aacd13bf118cab5faf827477a75"
+  },
+  "wall_seconds": 0.000497783999890089
+}

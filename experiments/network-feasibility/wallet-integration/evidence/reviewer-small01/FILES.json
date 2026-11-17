@@ -1,0 +1,18 @@
+{
+  "files": {
+    "RESULT.json": {
+      "bytes": 507,
+      "sha256": "cf769c1ad78a5f6f7f4f0f3aa4abea4f510188413d7b25e5ec37dc2885095dbf"
+    },
+    "claim.json": {
+      "bytes": 374,
+      "sha256": "e3deb1079bcad44552cfc76b4eca66f040b98af0519094b111289843673ee7ad"
+    },
+    "original-process.json": {
+      "bytes": 952,
+      "sha256": "c09b6c2aa94d6970b6e9184ad5167bd331d67dd017df935a2170f940839a6be4"
+    }
+  },
+  "format": "CP04-WALLET-SAFE-EVIDENCE01",
+  "private_streams_or_backup_included": false
+}
