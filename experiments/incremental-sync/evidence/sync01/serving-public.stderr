@@ -1,0 +1,141 @@
+warning: structure field `RF` should have a snake case name
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/compact-bounded-payment-v3/adapters/base/../../../compact-payment-v1/src/permutation.rs:19:5
+   |
+19 |     RF: usize,
+   |     ^^ help: convert the identifier to snake case: `rf`
+   |
+   = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: structure field `RP` should have a snake case name
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/compact-bounded-payment-v3/adapters/base/../../../compact-payment-v1/src/permutation.rs:20:5
+   |
+20 |     RP: usize,
+   |     ^^ help: convert the identifier to snake case: `rp`
+
+warning: `compact-bounded-base-v3` (lib) generated 2 warnings
+warning: constant `CHUNKS` is never used
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/compact-all-payments-v3/src/../../compact-payment-proof-v1/src/config.rs:19:11
+   |
+19 | pub const CHUNKS: usize = 8;
+   |           ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `fresh_proof` is never used
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/compact-all-payments-v3/src/../../compact-payment-proof-v1/src/config.rs:78:15
+   |
+78 | pub(crate) fn fresh_proof(frame: &Frame) -> Result<Config, Error> {
+   |               ^^^^^^^^^^^
+
+warning: function `fresh_verifier` is never used
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/experiments/compact-all-payments-v3/src/../../compact-payment-proof-v1/src/config.rs:83:15
+   |
+83 | pub(crate) fn fresh_verifier(frame: &Frame, profile: &[u8; 64], program: &[u8; 64]) -> Config {
+   |               ^^^^^^^^^^^^^^
+
+warning: `compact-all-payments-v3` (lib) generated 3 warnings
+warning: function `body` is never used
+   --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/adapters/history/../../../../experiments/compact-history-v3/src/native_sha3.rs:103:8
+    |
+103 | pub fn body(public_prefix:&[u8],proof_digest:&[u8;64])->Result<[u8;64],Error>{framed(b"PQPC/CP3/BODY",public_prefix,proof_digest)}
+    |        ^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `diagnostic_raw` is never used
+   --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/adapters/history/../../../../experiments/compact-history-v3/src/native_sha3.rs:105:15
+    |
+105 | pub(crate) fn diagnostic_raw(public:&[u8],chunk:usize)->Result<[u8;64],Error>{
+    |               ^^^^^^^^^^^^^^
+
+warning: `cp03-bounded-history-codec` (lib) generated 2 warnings
+   Compiling ledger-cp03 v0.1.0 (/home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03)
+warning: use of deprecated method `std::sync::atomic::Atomic::<u64>::fetch_update`: renamed to `try_update` for consistency
+   --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/src/admission.rs:145:36
+    |
+145 |     let _=installed.proof_attempts.fetch_update(std::sync::atomic::Ordering::Relaxed,std::sync::atomic::Ordering::Relaxed,|n|Some(n...
+    |                                    ^^^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+help: replace the use of the deprecated method
+    |
+145 -     let _=installed.proof_attempts.fetch_update(std::sync::atomic::Ordering::Relaxed,std::sync::atomic::Ordering::Relaxed,|n|Some(n.saturating_add(1)));
+145 +     let _=installed.proof_attempts.try_update(std::sync::atomic::Ordering::Relaxed,std::sync::atomic::Ordering::Relaxed,|n|Some(n.saturating_add(1)));
+    |
+
+warning: use of deprecated method `std::sync::atomic::Atomic::<u64>::fetch_update`: renamed to `try_update` for consistency
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/src/trusted.rs:99:47
+   |
+99 |     let _=installed.source_signature_attempts.fetch_update(Ordering::Relaxed,Ordering::Relaxed,|n|Some(n.saturating_add(1)));
+   |                                               ^^^^^^^^^^^^
+   |
+help: replace the use of the deprecated method
+   |
+99 -     let _=installed.source_signature_attempts.fetch_update(Ordering::Relaxed,Ordering::Relaxed,|n|Some(n.saturating_add(1)));
+99 +     let _=installed.source_signature_attempts.try_update(Ordering::Relaxed,Ordering::Relaxed,|n|Some(n.saturating_add(1)));
+   |
+
+warning: methods `chain`, `genesis`, `db_path`, `db_device`, and `db_inode` are never used
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/src/archive_io.rs:76:19
+   |
+42 | impl CatalogBinding {
+   | ------------------- methods in this implementation
+...
+76 |     pub(crate) fn chain(&self) -> [u8; 32] {
+   |                   ^^^^^
+...
+79 |     pub(crate) fn genesis(&self) -> [u8; 64] {
+   |                   ^^^^^^^
+...
+85 |     pub(crate) fn db_path(&self) -> &Path {
+   |                   ^^^^^^^
+...
+88 |     pub(crate) fn db_device(&self) -> u64 {
+   |                   ^^^^^^^^^
+...
+91 |     pub(crate) fn db_inode(&self) -> u64 {
+   |                   ^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: methods `binding` and `ready_segment` are never used
+   --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/src/archive_io.rs:237:19
+    |
+181 | impl LocalArchive {
+    | ----------------- methods in this implementation
+...
+237 |     pub(crate) fn binding(&self) -> &CatalogBinding {
+    |                   ^^^^^^^
+...
+256 |     pub(crate) fn ready_segment(&self) -> Result<Option<SegmentState>> {
+    |                   ^^^^^^^^^^^^^
+
+warning: methods `segment`, `old_end`, and `entries` are never used
+   --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/src/archive_io.rs:652:19
+    |
+648 | impl DurableBatch<'_> {
+    | --------------------- methods in this implementation
+...
+652 |     pub(crate) fn segment(&self) -> u64 {
+    |                   ^^^^^^^
+...
+655 |     pub(crate) fn old_end(&self) -> u64 {
+    |                   ^^^^^^^
+...
+661 |     pub(crate) fn entries(&self) -> &[ObjectLocator] {
+    |                   ^^^^^^^
+
+warning: associated functions `syntax` and `load` are never used
+  --> /home/neo/jouliene/pq-private-chain/.work/sync01/source/crates/ledger-cp03/src/trusted.rs:59:12
+   |
+58 | impl Installed {
+   | -------------- associated functions in this implementation
+59 |     pub fn syntax(chain: [u8; 32]) -> Result<TrustedGenesisSyntaxConfig> {
+   |            ^^^^^^
+...
+71 |     pub fn load(chain: [u8; 32]) -> Result<Self> {
+   |            ^^^^
+
+warning: `ledger-cp03` (lib test) generated 6 warnings (run `cargo fix --lib -p ledger-cp03 --tests` to apply 2 suggestions)
+    Finished `release` profile [optimized] target(s) in 1.43s
+     Running unittests src/lib.rs (target/release/deps/ledger_cp03-faf3b570603a7a42)

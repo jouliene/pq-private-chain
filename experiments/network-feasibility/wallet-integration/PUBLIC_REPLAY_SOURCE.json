@@ -2,7 +2,7 @@
   "files": {
     "../transport/oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
     "public_replay.py": "ca27d58994db90607d757ed6ae1c2fb3473997594456c271c93a5cf97b6f810f",
-    "run.py": "3e99ecde6534fa1dceee15f02c0f6eb636659aacd13bf118cab5faf827477a75"
+    "run.py": "1f280a0abbf6af9eb1a2ae705f52cf0534a1d42e8abb47b9d018c5afc0419616"
   },
   "format": "CP04-WALLET-PUBLIC-REPLAY-SOURCE01"
 }

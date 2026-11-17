@@ -1,0 +1,35 @@
+{
+  "actual_process": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+      "test",
+      "--offline",
+      "--locked",
+      "--release",
+      "-j1",
+      "--manifest-path",
+      "/home/neo/jouliene/pq-private-chain/.work/sync01/fresh/Cargo.toml",
+      "-p",
+      "ledger-cp03",
+      "--lib",
+      "sync_serving_controls",
+      "--",
+      "--test-threads=1"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 254332,
+    "process_exit": 0,
+    "system_seconds": 0.10685299999999999,
+    "timeout": false,
+    "user_seconds": 1.341714,
+    "wall_seconds": 1.4950650109676644,
+    "wrapper_exit": 0
+  },
+  "format": "CP04-SYNC-SERVING-CONTROLS01",
+  "installation_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "passed": true,
+  "runner_sha256": "c3b0239b065057c3bb089a463a59aee72c883a2d6e4fd00af341b81a0730e77d",
+  "scope": "Six structural public SQLite/framing/writer/snapshot tests. No genuine proofs or private wallet execution."
+}

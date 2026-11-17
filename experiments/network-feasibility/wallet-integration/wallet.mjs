@@ -52,7 +52,7 @@ function fullHead(row) {
 async function main() {
   const configRaw = publicFile(process.argv[2], 65536); need(hash(configRaw) === process.argv[3]);
   const config = JSON.parse(configRaw);
-  need(config.format === 'CP04-ISOLATED-WALLET-CONFIG01' && ['small', 'full'].includes(config.profile));
+  need(config.format === 'CP04-ISOLATED-WALLET-CONFIG01' && ['small', 'full', 'incremental'].includes(config.profile));
   const instRaw = publicFile(config.installation, 8 * 1024 * 1024); need(hash(instRaw) === config.installation_sha256);
   const inst = JSON.parse(instRaw), source = inst.source_root, helper = inst.helper_sha256;
   need(fs.realpathSync(process.execPath) === fs.realpathSync(inst.node));
@@ -62,6 +62,8 @@ async function main() {
   const [keys, codec, pay, proof, local, signature] = await Promise.all(names.map(name => import(pathToFileURL(path.join(source, name)))));
   need(hash(publicFile(config.controls_script, 65536)) === config.controls_sha256);
   const controls = await import(pathToFileURL(config.controls_script));
+  need(hash(publicFile(config.sync_controls_script,65536)) === config.sync_controls_sha256);
+  const syncControls = await import(pathToFileURL(config.sync_controls_script));
   const cleanup = async () => {
     for (const s of sessions) await local.disposeLocalWitnessSession(s); sessions.clear();
     for (const w of wallets) keys.disposeWallet(w); wallets.clear(); backup?.fill(0); backup = undefined;
@@ -82,23 +84,118 @@ async function main() {
     const out = config.public_output;
     const held = w => { wallets.add(w); return w; };
     let genesis, genesisHead, lastHead;
+    const incremental = config.profile === 'incremental', references = new Map(), liveViews = new Map(), referenceViews = new Map(), syncRows = [], requestedRanges = new Map();
     let counts = {proofs: 0, history_reads: 0, history_bytes: 0, history_wall_seconds: 0};
+    if (incremental) Object.assign(counts, {synchronization: syncRows, reference_equivalence_checks: 0, same_head_noops: 0, ownership_independent_equal_ranges: 0, atomic_failure_controls: 0, staged_window_failure_controls: 0});
     function sessionOptions() {
       return {trustedGenesis: {chain: genesisHead.chain,
         genesisId: genesisHead.genesisId, blockVersion: 4}, genesis, genesisRoot: genesisHead.root,
         maxOwned: 8, rewindBlocks: 8};
     }
     function newSession(wallet) {
-      const s = local.createLocalWitnessSession(wallet, helper, sessionOptions()); sessions.add(s); return s;
+      const s = local.createLocalWitnessSession(wallet, helper, sessionOptions()); sessions.add(s);
+      if (incremental) {
+        // Separate live wallet/lease, private backup only in RAM; never a public oracle.
+        const raw = keys.exportBackup(wallet);
+        try {
+          const r = keys.restoreBackup(raw, genesisHead.chain, helper, keys.publicInventory(wallet));
+          need(r.expected_inventory_matched); wallets.add(r.wallet);
+          const reference = local.createLocalWitnessSession(r.wallet, helper, sessionOptions());
+          sessions.add(reference); references.set(s, reference);
+        } finally { raw.fill(0); }
+      }
+      return s;
     }
-    function scan(session, basis = 'unknown') {
-      const reply = rpc({op: 'scan'}), head = fullHead(reply.head); lastHead = head;
-      const started = performance.now();
-      const recovered = local.recoverLocalWitnesses(session, reply.file, head, basis);
-      counts.history_wall_seconds += (performance.now() - started) / 1000;
-      counts.history_reads++; counts.history_bytes += fs.statSync(reply.file).size;
+    function selectBranch(session, selection) {
+      let first;
+      try { local.selectLocalWitnessBranch(session, selection); } catch (error) { first = error; }
+      if (incremental) {
+        let second;
+        try { local.selectLocalWitnessBranch(references.get(session), selection); } catch (error) { second = error; }
+        need(Boolean(first) === Boolean(second));
+        if (first) need(first instanceof local.LocalWitnessReplayRequired && second instanceof local.LocalWitnessReplayRequired);
+      }
+      if (first) throw first;
+    }
+    function scan(session, basis = 'unknown', selectedDraft = null) {
+      let reply, recovered, request;
+      const head = fullHead(rpc({op:'head'}).head); lastHead = head;
+      if (incremental) {
+        request = local.localWitnessSyncRequest(session,head);
+        if (request.mode === 'full-replay' || config.restore) reply = rpc({op:'scan'});
+        else if (request.request !== null) {
+          // Only common public cursors are sent. Compare equal ranges across
+          // live wallets with different note ownership, without exporting notes.
+          const key = request.base.height + ':' + request.target.height + ':' + request.target.blockId.toString('hex');
+          const prior = requestedRanges.get(key);
+          if (prior && prior.session !== session) {
+            need(prior.bytes.equals(request.request)); counts.ownership_independent_equal_ranges++;
+          } else requestedRanges.set(key,{session,bytes:Buffer.from(request.request)});
+          syncControls.checkDetachedPublicRequest({session,head,witnesses:local});
+          reply = rpc({op:'scan-range',request:request.request.toString('hex')});
+        }
+      } else reply = rpc({op:'scan'});
+      if (reply) need(JSON.stringify(reply.head) === JSON.stringify(rpc({op:'head'}).head));
+      if (incremental && reply && (request.mode === 'append' || request.mode === 'selected-replay')) {
+        // Public adversarial fixtures and private bool-only correctness oracle;
+        // explicitly outside the successful synchronization measurement span.
+        const raw = publicFile(reply.file, 4*1024*1024), chunks = [];
+        let at=436;
+        while (at<raw.length) { const end=at+4+raw.readUInt32LE(at); need(end<=raw.length); chunks.push(raw.subarray(at,end)); at=end; }
+        const variants = [];
+        for (const [name,offset] of [['wrong-base',116],['wrong-chain',12],['wrong-endpoint',284]]) {
+          const bad=Buffer.from(raw); bad[offset]^=1; variants.push([name,bad]);
+        }
+        variants.push(['truncated',raw.subarray(0,raw.length-1)]);
+        if (chunks.length) {
+          variants.push(['missing',Buffer.concat([raw.subarray(0,436),...chunks.slice(1)])]);
+          variants.push(['duplicated',Buffer.concat([raw,...chunks.slice(-1)])]);
+        }
+        if (chunks.length>=2) variants.push(['reordered',Buffer.concat([raw.subarray(0,436),chunks[1],chunks[0],...chunks.slice(2)])]);
+        for (const [name,data] of variants) {
+          const file=path.join(out,'control-'+String(counts.atomic_failure_controls).padStart(4,'0')+'-'+name+'.public');
+          writePublic(file,data);
+          if (request.mode === 'append') {
+            syncControls.checkAppendFailureAtomic({session,view:liveViews.get(session),referenceView:referenceViews.get(session),file,target:head,witnesses:local});
+          } else {
+            need(selectedDraft !== null);
+            syncControls.checkSelectedFailureStaysRevoked({session,oldView:liveViews.get(session),oldDraftStatement:selectedDraft,file,target:head,witnesses:local});
+          }
+          counts.atomic_failure_controls++;
+          if (name==='truncated' && chunks.length>257) counts.staged_window_failure_controls++;
+        }
+      }
+      const started = performance.now(), cpu = process.cpuUsage();
+      recovered = incremental && request.mode !== 'full-replay' && !config.restore
+        ? local.synchronizeLocalWitnesses(session,reply?.file ?? null,head,basis)
+        : local.recoverLocalWitnesses(session,reply.file,head,basis);
+      const used = process.cpuUsage(cpu), elapsed = (performance.now()-started)/1000;
+      counts.history_wall_seconds += elapsed;
+      if (reply) { counts.history_reads++; counts.history_bytes += fs.statSync(reply.file).size; }
       need(recovered.local_witnesses && recovered.history_linkage_complete &&
         recovered.payment_validity === 'delegated-to-independently-supplied-endpoint');
+      if (incremental) {
+        const m = recovered.synchronization;
+        syncRows.push({mode:m.mode,height:head.height.toString(),read_bytes:m.readBytes.toString(),
+          authenticated_blocks:m.authenticatedBlocks.toString(),authenticated_records:m.authenticatedRecords.toString(),
+          peak_window_blocks:m.peakWindowBlocks,peak_window_records:m.peakWindowRecords,retained:m.retained,
+          elapsed_seconds:elapsed,node_self_user_microseconds:used.user,node_self_system_microseconds:used.system});
+        const same = local.localWitnessSyncRequest(session,head); need(same.mode === 'unchanged' && same.request === null);
+        const noop = local.synchronizeLocalWitnesses(session,null,head,basis);
+        need(noop.state === recovered.state && noop.synchronization.readBytes === 0n && noop.synchronization.authenticatedBlocks === 0n);
+        counts.same_head_noops++;
+        // Full reference IO/proving-free reconstruction is OUTSIDE measured roles.
+        const referenceReply = rpc({op:'scan-reference'});
+        const referenceSession=references.get(session);
+        // Force true genesis reconstruction; persistent full-prefix authentication
+        // alone would share the same incremental transition state.
+        try { local.selectLocalWitnessBranch(referenceSession,{commonPrefix:genesisHead,endpoint:head}); }
+        catch (error) { need(error instanceof local.LocalWitnessReplayRequired); }
+        const reference = local.recoverLocalWitnesses(referenceSession,referenceReply.file,head,basis);
+        need(local.equivalentLocalWitnessViews(recovered.state,reference.state));
+        counts.reference_equivalence_checks++;
+        liveViews.set(session,recovered.state); referenceViews.set(session,reference.state);
+      }
       return recovered.state;
     }
     function amounts(view) {
@@ -156,6 +253,8 @@ async function main() {
       sources: [...sources].sort((a,b) => Buffer.compare(a.id,b.id))});
     const genesisFile = path.join(out, 'genesis.bin'); writePublic(genesisFile, genesis);
     genesisHead = lastHead = fullHead(rpc({op: 'init', chain: chain.toString('hex'), genesis: genesisFile}).head);
+    const payerSession = newSession(payer), receiverSession = newSession(receiver), rollingSession = newSession(rolling);
+    if (incremental) scan(rollingSession); // Authenticated empty genesis state; later suffix spans258blocks.
     stage = 'funding'; const funding = [];
     for (let i = 0; i < 2; i++) {
       const wallet = [rolling, payer][i], credit = credits[i], available = credit - codec.FEES[0];
@@ -169,12 +268,13 @@ async function main() {
       finally { pay.disposePayment(payment); }
     }
     admit(funding);
-    const payerSession = newSession(payer), receiverSession = newSession(receiver), rollingSession = newSession(rolling);
     const receiverDescriptor = keys.descriptor(receiver, 1), payerDescriptor = keys.descriptor(payer, 0), rollingDescriptor = keys.descriptor(rolling, 0);
     stage = 'ordinary-receipt';
+    if (incremental) scan(receiverSession);
     const send = await publish(outgoing(scan(payerSession), 2, receiverDescriptor, receiverDescriptor), 'ordinary-receipt'); admit([send.file]);
+    if (incremental) scan(payerSession);
     let receiverView = scan(receiverSession); need(amounts(receiverView).length === 2);
-    const reserveAmount = amounts(receiverView)[0];
+    const reserveAmount = amounts(receiverView)[0], receiptRoot = Buffer.from(lastHead.root);
     controls.checkInventoryLease({wallet: receiver, helperSha256: helper, sessionOptions: sessionOptions(), keys, witnesses: local});
     controls.checkSyncInspectionOnly({view: receiverView, witnesses: local});
     controls.checkNoOperationCallback({view: receiverView, witnesses: local});
@@ -184,25 +284,35 @@ async function main() {
     mark('joint-lease-and-packet-controls');
     mark('genuine-private-receipt-and-local-witnesses');
     let stale;
-    if (config.profile === 'full') {
+    if (config.profile !== 'small') {
       stage = 'stale-draft'; stale = await publish(outgoing(receiverView, 1, payerDescriptor, receiverDescriptor), 'old-anchor-draft');
       const h = admit([stale.file]); rolled(h); mark('old-draft-genuine-positive-before-expiry');
     }
     stage = 'recipient-spend';
     const recipient = await publish(outgoing(receiverView, {index: 1}, payerDescriptor, receiverDescriptor, 10000000n), 'recipient-spend');
-    admit([recipient.file]); receiverView = scan(receiverSession); mark('recipient-fresh-local-witness-spend');
-    if (config.profile === 'full') {
+    admit([recipient.file]); need(!lastHead.root.equals(receiptRoot)); receiverView = scan(receiverSession); mark('recipient-fresh-local-witness-spend');
+    if (config.profile !== 'small') {
       need(local.localDraftEligible(receiverSession, stale.statement));
       const h = admit([stale.file]); rolled(h); mark('old-origin-draft-valid-on-common-prefix');
-      stage = 'changing-root-history'; let priorRoot = lastHead.root;
-      for (let i = 0; i < 255; i++) {
-        const p = await publish(outgoing(scan(rollingSession), 2, rollingDescriptor, rollingDescriptor), 'rolling-' + String(i).padStart(3,'0'));
-        admit([p.file]); need(!lastHead.root.equals(priorRoot)); priorRoot = lastHead.root;
+      if (incremental) {
+        stage = 'empty-block-expiry-history';
+        const changedRoot = Buffer.from(lastHead.root); need(!changedRoot.equals(receiptRoot));
+        for (let i = 0; i < 255; i++) {
+          lastHead = fullHead(rpc({op:'empty'}).head); need(lastHead.root.equals(changedRoot));
+        }
+      } else {
+        stage = 'changing-root-history'; let priorRoot = lastHead.root;
+        for (let i = 0; i < 255; i++) {
+          const p = await publish(outgoing(scan(rollingSession), 2, rollingDescriptor, rollingDescriptor), 'rolling-' + String(i).padStart(3,'0'));
+          admit([p.file]); need(!lastHead.root.equals(priorRoot)); priorRoot = lastHead.root;
+        }
       }
       need(lastHead.height === 258n); scan(rollingSession);
       const prefix = lastHead;
       stage = 'expiry-refresh'; receiverView = scan(receiverSession);
-      need(!local.localDraftEligible(receiverSession, stale.statement)); reject(stale.file); mark('changing-root-anchor-expiry-atomic-rejection');
+      need(!local.localDraftEligible(receiverSession, stale.statement)); reject(stale.file);
+      if (incremental) mark('empty-block-anchor-expiry-atomic-rejection');
+      else mark('changing-root-anchor-expiry-atomic-rejection');
       const refreshed = await publish(outgoing(receiverView, 1, payerDescriptor, receiverDescriptor), 'refreshed-old-spend'); admit([refreshed.file]);
       const orphanHead = lastHead; receiverView = scan(receiverSession); mark('old-note-refreshed-and-spent');
       // Last received note exists only on this soon-orphaned branch.
@@ -214,17 +324,27 @@ async function main() {
       stage = 'selected-branch-change'; rolled(orphanHead);
       const replacement = await publish(outgoing(scan(rollingSession), 2, rollingDescriptor, rollingDescriptor), 'replacement'); admit([replacement.file]);
       need(lastHead.height === 259n && !lastHead.root.equals(orphanHead.root));
-      local.selectLocalWitnessBranch(receiverSession, {commonPrefix: prefix, endpoint: lastHead});
+      let revokedPacket;
+      if (incremental) {
+        revokedPacket=outgoing(receiverView,1,payerDescriptor,receiverDescriptor);
+        syncControls.checkNoopPreservesViewAndPacket({session:receiverSession,view:receiverView,head:orphanHead,payment:revokedPacket,witnesses:local,payments:pay});
+      }
+      selectBranch(receiverSession, {commonPrefix: prefix, endpoint: lastHead});
+      if (incremental) {
+        need(pay.paymentLifecycle(revokedPacket) === null);
+        let packetRejected=false; try { pay.publicPayment(revokedPacket); } catch { packetRejected=true; }
+        need(packetRejected);
+      }
       let staleViewRejected = false;
       try { local.inspectLocalWitnessView(receiverView, () => true); } catch { staleViewRejected = true; }
-      need(staleViewRejected); receiverView = scan(receiverSession);
+      need(staleViewRejected); receiverView = scan(receiverSession,'unknown',orphan.statement);
       need(!local.localDraftEligible(receiverSession, orphan.statement)); reject(orphan.file);
       need(amounts(receiverView).length === 2 && amounts(receiverView)[0] === reserveAmount);
       mark('joint-rewind-orphan-discovery-and-spentness-repaired');
       stage = 'deep-selected-replay';
       const selected = lastHead;
       let replayRequired = false;
-      try { local.selectLocalWitnessBranch(receiverSession, {commonPrefix: genesisHead, endpoint: selected}); }
+      try { selectBranch(receiverSession, {commonPrefix: genesisHead, endpoint: selected}); }
       catch (error) { replayRequired = error instanceof local.LocalWitnessReplayRequired; }
       need(replayRequired);
       controls.checkViewRevoked({view: receiverView, witnesses: local});
@@ -232,6 +352,10 @@ async function main() {
       receiverView = scan(receiverSession);
       need(amounts(receiverView).length === 2 && amounts(receiverView)[0] === reserveAmount);
       mark('joint-deep-replay-revocation-and-recovery');
+    }
+    if (incremental) {
+      need(counts.ownership_independent_equal_ranges > 0 && counts.reference_equivalence_checks > 0 && counts.same_head_noops > 0 && counts.atomic_failure_controls > 0 && counts.staged_window_failure_controls > 0);
+      mark('incremental-reference-equivalence-and-noop');
     }
     stage = 'backup-handoff';
     // Destroy every original wallet/session before the parent starts a fresh process.

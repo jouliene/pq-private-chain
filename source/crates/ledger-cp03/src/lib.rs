@@ -4,6 +4,7 @@
 mod admission;
 mod archive_io;
 mod cache;
+mod continuation;
 mod encoding;
 mod error;
 mod scan;
@@ -13,6 +14,7 @@ mod trusted;
 pub use admission::minimum_fee;
 pub use archive_io::LocalArchive;
 pub use cache::{CachePolicy, CacheUsage, EvictionProgress, Retention};
+pub use continuation::{CONTINUATION_HEADER_BYTES, ContinuationReads, ContinuationRequest, StartupHistoryReads};
 pub use cp03_history as history_codec;
 pub use error::{Error, Result};
 pub use store::{

@@ -1,0 +1,24 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+    "build",
+    "--offline",
+    "--locked",
+    "--release",
+    "-j1",
+    "--message-format=json",
+    "--manifest-path",
+    "/home/neo/jouliene/pq-private-chain/.work/sync01/fresh/Cargo.toml",
+    "--bins"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 424576,
+  "process_exit": 0,
+  "system_seconds": 5.003967,
+  "timeout": false,
+  "user_seconds": 103.635944,
+  "wall_seconds": 109.203328470001,
+  "wrapper_exit": 0
+}

@@ -3,7 +3,7 @@ import * as crypto from 'node:crypto';
 import {WalletInputError, P, MAX, parseStatement} from './codec.mjs';
 import {WalletOperationalError, leaseWallet, withWalletLease, releaseWalletLease} from './keys.mjs';
 import {preparePayment, publicPayment, disposePayment, paymentLifecycle, retirePayment} from './payments.mjs';
-import {prepareHistoryContext, visitAuthenticatedHistory} from './recovery.mjs';
+import {prepareHistoryContext, visitAuthenticatedHistory, visitAuthenticatedContinuation, encodeHistoryRequest} from './recovery.mjs';
 import {fixedHashCore} from '../../experiments/compact-receiving-v1/cp03/hash-core.mjs';
 import {wipeOpening} from '../../experiments/compact-receiving-v1/cp03/receipt.mjs';
 
@@ -93,7 +93,7 @@ function revoke(value) {
 function clearCommitted(value) {
   wipeState(value.current); value.current = null;
   for (const state of value.history) wipeState(state);
-  value.history.length = 0;
+  value.history.length = 0; value.selectedBase = null;
 }
 function lease(value) {
   try { return withWalletLease(value.lease, (wallet, inventory) => ({wallet, inventory})); }
@@ -115,6 +115,39 @@ function balance(state) {
   let result = 0n;
   for (const owned of state.owned.values()) result += owned.opening.note.readBigUInt64LE(8);
   need(result <= MAX); return result;
+}
+function stateBufferBytes(state) {
+  if (!state) return 0;
+  let result = state.native.length + state.cursor.id.length + state.cursor.root.length;
+  for (const anchor of state.anchors) result += anchor.id.length + anchor.root.length;
+  for (const item of state.owned.values()) for (const buffer of [item.token, item.nf, item.origin, item.cm,
+    item.opening.note, item.opening.cm, item.opening.memo]) result += buffer.length;
+  for (const item of state.witnesses.values()) {
+    result += item.token.length;
+    for (const sibling of item.siblings) result += sibling.length;
+  }
+  return result;
+}
+function retainedBuffers(value) {
+  return {currentBufferBytes: stateBufferBytes(value.current),
+    journalBufferBytes: value.history.reduce((sum, state) => sum + stateBufferBytes(state), 0),
+    journalCheckpoints: value.history.length,
+    scope: 'Committed state/journal Buffer payload bytes only; excludes JS objects, allocator, staging, packet, recipients and process RSS.'};
+}
+function recoveryBase(value) {
+  if (value.selectedTarget) return value.selectedBase;
+  return value.mode === 'replay-required' ? null : value.current;
+}
+function recoveryMode(value) {
+  return recoveryBase(value) === null ? 'full-replay' : value.selectedTarget ? 'selected-replay' : 'append';
+}
+function recoveryResult(value, view, inventoryBasis, mode, walked) {
+  return {state: view, history_linkage_complete: true, local_witnesses: true,
+    payment_validity: 'delegated-to-independently-supplied-endpoint',
+    canonicality: 'external-consensus-or-explicit-laboratory-checkpoint', inventory_completeness_basis: inventoryBasis,
+    synchronization: {mode, readBytes: walked.readBytes, authenticatedBlocks: walked.authenticatedBlocks,
+      authenticatedRecords: walked.authenticatedRecords, peakWindowBlocks: walked.peakWindowBlocks,
+      peakWindowRecords: walked.peakWindowRecords, retained: retainedBuffers(value)}};
 }
 function wipeNative(result) {
   result?.state?.fill(0);
@@ -245,27 +278,59 @@ export function createLocalWitnessSession(wallet, helperSha256,
         fees: 0n, liabilities: parsedGenesis.liabilities}, tokenPrefix: crypto.randomBytes(8), nextToken: 0n,
       current: null, history: [], active: null, view: null, borrow: false, revision: 0,
       prepared: null, helperSha256,
-      selectedTarget: null, mode: 'unrecovered', disposed: false});
+      selectedTarget: null, selectedBase: null, mode: 'unrecovered', disposed: false});
     return token;
   } catch (error) { releaseWalletLease(held); throw error; }
 }
 export function recoverLocalWitnesses(token, scanFile, trustedHead, inventoryBasis = 'unknown') {
+  return recoverLocal(token, scanFile, trustedHead, inventoryBasis, false);
+}
+// Detached PUBLIC request bytes only: no peer/caller cursor becomes a private base.
+export function localWitnessSyncRequest(token, trustedHead) {
+  const value = session(token); need(!value.active && !value.borrow && value.mode !== 'inventory-invalid');
+  const expected = target(value, trustedHead);
+  if (value.selectedTarget) need(sameCursor(expected, value.selectedTarget));
+  const base = recoveryBase(value), own = base?.cursor ?? value.genesisCursor;
+  need(expected.height >= own.height);
+  const baseHead = head(value, own), targetHead = head(value, expected);
+  const unchanged = value.mode === 'ready' && !!value.current && sameCursor(value.current.cursor, expected);
+  return {base: baseHead, target: targetHead, mode: unchanged ? 'unchanged' : recoveryMode(value),
+    request: unchanged ? null : encodeHistoryRequest(baseHead, targetHead, value.context)};
+}
+export function synchronizeLocalWitnesses(token, continuationFile, trustedHead, inventoryBasis = 'unknown') {
+  return recoverLocal(token, continuationFile, trustedHead, inventoryBasis, true);
+}
+function recoverLocal(token, scanFile, trustedHead, inventoryBasis, continuation) {
   const value = session(token);
   need(!value.active && !value.borrow && value.mode !== 'inventory-invalid');
   need(['unknown', 'conditional-on-independent-current-inventory'].includes(inventoryBasis));
   const expected = target(value, trustedHead);
   if (value.selectedTarget) need(sameCursor(expected, value.selectedTarget));
-  if (value.current) need(expected.height >= value.current.cursor.height);
+  const from = recoveryBase(value), mode = continuation ? recoveryMode(value) : 'full-prefix-reference';
+  if (from) need(expected.height >= from.cursor.height);
+  if (continuation && value.mode === 'ready' && value.current && sameCursor(value.current.cursor, expected)) {
+    need(scanFile === null || scanFile === undefined);
+    need(!!value.view && current(value.view) === value);
+    return recoveryResult(value, value.view, inventoryBasis, 'unchanged', {readBytes: 0n,
+      authenticatedBlocks: 0n, authenticatedRecords: 0n, peakWindowBlocks: 0, peakWindowRecords: 0});
+  }
   const revision = value.revision, priorMode = value.mode;
-  let candidate, published = false;
+  let candidate, published = false, cleanupFailed = false;
   const recipients = []; let adapter;
+  function cleanupRecipients() {
+    while (recipients.length) {
+      try { adapter.disposeRecipient(recipients.pop()); } catch { cleanupFailed = true; }
+    }
+    return !cleanupFailed;
+  }
   try {
-    candidate = value.current ? {state: cloneState(value.current), history: value.history.map(cloneState)} : initial(value);
+    candidate = from ? {state: cloneState(from),
+      history: value.history.filter(state => state.cursor.height <= from.cursor.height).map(cloneState)} : initial(value);
     value.active = candidate;
-    const base = copyCursor(candidate.state.cursor); let baseSeen = base.height === 0n;
+    const base = copyCursor(candidate.state.cursor); let baseSeen = continuation || base.height === 0n;
     const held = lease(value); adapter = held.wallet.adapter;
     for (const key of held.wallet.keys) recipients.push(adapter.prepareRecipient(key.descriptor, key.key, held.wallet.spending));
-    const walked = visitAuthenticatedHistory(scanFile, head(value, expected), value.context, window => {
+    const onWindow = window => {
       need(value.revision === revision && value.active === candidate); lease(value);
       for (const next of window) if (next.height === base.height) {
         need(sameCursor(recordCursor(next), base)); baseSeen = true;
@@ -281,9 +346,12 @@ export function recoverLocalWitnesses(token, scanFile, trustedHead, inventoryBas
         applyBlock(value, candidate, next, contexts.slice(at, at + next.records.length), adapter, recipients);
         at += next.records.length;
       }
-    });
+    };
+    const walked = continuation ? visitAuthenticatedContinuation(scanFile, head(value, base),
+      head(value, expected), value.context, onWindow) :
+      visitAuthenticatedHistory(scanFile, head(value, expected), value.context, onWindow);
     need(baseSeen && sameCursor(walked.cursor, expected) && sameCursor(candidate.state.cursor, expected));
-    while (recipients.length) adapter.disposeRecipient(recipients.pop());
+    if (!cleanupRecipients()) throw new WalletOperationalError();
     lease(value); need(value.revision === revision && value.active === candidate);
     // Publish one joint capability only after exact EOF, cursor and cleanup passed.
     if (value.prepared) retirePayment(value.prepared);
@@ -293,21 +361,22 @@ export function recoverLocalWitnesses(token, scanFile, trustedHead, inventoryBas
     value.revision++; value.mode = 'ready'; value.selectedTarget = null;
     const view = Object.freeze({type: 'CP03-private-local-witness-view'});
     views.set(view, {session: token, revision: value.revision}); value.view = view; published = true;
-    return {state: view, history_linkage_complete: true, local_witnesses: true,
-      payment_validity: 'delegated-to-independently-supplied-endpoint',
-      canonicality: 'external-consensus-or-explicit-laboratory-checkpoint', inventory_completeness_basis: inventoryBasis};
+    return recoveryResult(value, view, inventoryBasis, mode, walked);
   } catch (error) {
     if (error instanceof WalletInputError || error instanceof LocalWitnessReplayRequired) throw error;
     throw new WalletOperationalError();
   } finally {
-    let clean = true;
-    while (recipients.length) { try { adapter.disposeRecipient(recipients.pop()); } catch { clean = false; } }
+    const clean = cleanupRecipients();
     if (!published) {
       wipeCandidate(candidate);
       if (value.active === candidate) value.active = null;
       if (value.revision === revision && value.mode !== 'inventory-invalid') value.mode = priorMode;
     }
-    if (!clean) { revoke(value); clearCommitted(value); value.mode = 'replay-required'; throw new WalletOperationalError(); }
+    if (!clean) {
+      // Cleanup failure publishes nothing; keep the old image private but revoke
+      // its capabilities until authenticated full replay repairs the session.
+      revoke(value); value.selectedBase = null; value.mode = 'replay-required'; throw new WalletOperationalError();
+    }
   }
 }
 export function selectLocalWitnessBranch(token, {commonPrefix, endpoint}) {
@@ -316,9 +385,10 @@ export function selectLocalWitnessBranch(token, {commonPrefix, endpoint}) {
   // Authenticated caller selection revokes BEFORE any journal lookup, even outside R.
   revoke(value); value.mode = 'replay-required'; value.selectedTarget = selected;
   const found = value.history.find(state => sameCursor(state.cursor, prefix));
-  if (!found) { clearCommitted(value); throw new LocalWitnessReplayRequired(); }
-  const next = cloneState(found), history = value.history.filter(state => state.cursor.height <= prefix.height).map(cloneState);
-  clearCommitted(value); value.current = next; value.history = history;
+  value.selectedBase = found ?? null;
+  if (!found) throw new LocalWitnessReplayRequired();
+  // Retain the old committed image revoked until the complete replacement
+  // authenticates. This pointer refers only to our own immutable joint journal.
   // It is a private replay base, never a spendable view until selected EOF is applied.
   value.mode = 'selected-replay';
 }
@@ -335,6 +405,36 @@ export function inspectLocalWitnessView(view, operation) {
     for (const note of notes) { note.token.fill(0); note.origin.fill(0); note.cm.fill(0); }
     value.borrow = false;
   }
+}
+function equivalentState(a, b) {
+  if (!sameCursor(a.cursor, b.cursor) || a.anchors.length !== b.anchors.length ||
+      !a.anchors.every((anchor, index) => sameCursor(anchor, b.anchors[index])) ||
+      a.owned.size !== b.owned.size || a.witnesses.size !== a.owned.size ||
+      b.witnesses.size !== b.owned.size) return false;
+  for (const [nf, item] of a.owned) {
+    const other = b.owned.get(nf);
+    if (!other || item.index !== other.index || !item.nf.equals(other.nf) ||
+        !item.origin.equals(other.origin) || !item.cm.equals(other.cm) ||
+        !['note', 'cm', 'memo'].every(key => item.opening[key].equals(other.opening[key]))) return false;
+    const left = a.witnesses.get(item.token.toString('hex'));
+    const right = b.witnesses.get(other.token.toString('hex'));
+    if (!left || !right || !left.token.equals(item.token) || !right.token.equals(other.token) ||
+        left.index !== item.index || right.index !== other.index ||
+        left.siblings.length !== 40 || right.siblings.length !== 40 ||
+        !left.siblings.every((sibling, index) => sibling.equals(right.siblings[index]))) return false;
+  }
+  return true;
+}
+// Fixed local comparison oracle only. No callback, serialization, hashing or
+// private buffers leave this function. It compares semantic owned paths/journal,
+// not byte equality of the opaque unowned frontier (which embeds random tokens).
+export function equivalentLocalWitnessViews(left, right) {
+  const a = current(left), b = current(right);
+  need(a !== b && !a.borrow && !b.borrow);
+  return a.chain.equals(b.chain) && a.genesisId.equals(b.genesisId) && a.blockVersion === b.blockVersion &&
+    a.total === b.total && a.maxOwned === b.maxOwned && a.rewindBlocks === b.rewindBlocks &&
+    sameCursor(a.genesisCursor, b.genesisCursor) && equivalentState(a.current, b.current) &&
+    a.history.length === b.history.length && a.history.every((state, index) => equivalentState(state, b.history[index]));
 }
 export function withLocalWitnesses(view, selection, paymentOptions) {
   const value = current(view); need(!value.borrow);

@@ -23,12 +23,13 @@ sys.dont_write_bytecode = True
 HERE = Path(__file__).resolve().parent
 REPOSITORY = HERE.parents[2]
 SOURCE_KEYS = {'run.py', 'wallet.mjs', 'isolation.py', 'isolation_probe.py', 'GATE3_PROFILE.json',
-               '../wallet-witness/joint_controls.mjs', '../transport/oracle.py'}
+               '../wallet-witness/joint_controls.mjs', '../transport/oracle.py', '../../incremental-sync/PROFILE.json', '../../../tests/sync-wallet-controls.mjs'}
 HEAD_KEYS = {'schema', 'chain', 'genesis_id', 'height', 'block_id', 'leaf_count', 'root_le',
              'fee_escrow', 'unconsumed_liabilities', 'block_version'}
 OPS = {'boundary': {'op', 'pid', 'namespaces', 'descendant'}, 'init': {'op', 'chain', 'genesis'},
        'proof': {'op', 'label', 'body', 'receipt'}, 'admit': {'op', 'files'},
        'rollback': {'op', 'expected_tip'}, 'scan': {'op'}, 'context': {'op'},
+       'head': {'op'}, 'scan-reference': {'op'}, 'scan-range': {'op', 'request'}, 'empty': {'op'},
        'reject': {'op', 'file', 'expected'}, 'mark': {'op', 'name'}}
 PRIVATE_CAP = 16 * 1024**2
 PUBLIC_CAP = 65536
@@ -79,6 +80,31 @@ def module(name, path):
 
 def hex_bytes(value, size):
     need(isinstance(value, str) and re.fullmatch('[0-9a-f]{' + str(2 * size) + '}', value) is not None, 'public_hex')
+    return value
+
+
+def continuation_report(value):
+    need(isinstance(value,dict) and set(value) == {'schema','validity','endpoint','request_bytes','frame_count','startup','serving'}
+         and value['schema'] == 'CP04-CONTINUATION-SERVED01' and value['request_bytes'] == 436
+         and value['validity'] == 'trusted-local-ledger; caller selects validating endpoint', 'native_continuation_schema')
+    head(value['endpoint'])
+    need(isinstance(value['frame_count'],str) and re.fullmatch('0|[1-9][0-9]{0,19}',value['frame_count']) is not None,
+         'native_continuation_count')
+    groups = {'startup':{'wall_nanoseconds','tip_header_rows','tip_header_bytes','tip_body_length_rows','scope'},
+              'serving':{'wall_nanoseconds','snapshot_meta_rows','base_header_rows','base_header_bytes','target_header_rows',
+                         'target_header_bytes','history_header_rows','history_header_bytes','reduced_record_rows',
+                         'reduced_record_bytes','sqlite_fullscan_steps','history_frame_bytes','response_bytes_written','scope'}}
+    for key,fields in groups.items():
+        row=value[key]
+        need(isinstance(row,dict) and set(row)==fields and isinstance(row['scope'],str) and len(row['scope'])<512,
+             'native_continuation_counter_schema')
+        need(isinstance(row['wall_nanoseconds'],str) and re.fullmatch('0|[1-9][0-9]*',row['wall_nanoseconds']) is not None,
+             'native_continuation_duration')
+        need(all(type(row[k]) is int and 0 <= row[k] < 2**64 for k in fields-{'scope','wall_nanoseconds'}),
+             'native_continuation_counters')
+    need(value['serving']['history_header_rows'] == int(value['frame_count']) and
+         value['serving']['sqlite_fullscan_steps'] == 0 and value['serving']['response_bytes_written'] ==
+         436+value['serving']['history_frame_bytes'], 'native_exact_range_work')
     return value
 
 
@@ -213,13 +239,15 @@ class Actor:
                             'controller_pid_namespace': os.readlink('/proc/self/ns/pid')})
         config = c.common / ('restore-config.json' if self.restore else 'original-config.json')
         controls = HERE.parent / 'wallet-witness/joint_controls.mjs'
+        sync_controls = REPOSITORY / 'tests/sync-wallet-controls.mjs'
         save(config, {'format': 'CP04-ISOLATED-WALLET-CONFIG01', 'profile': c.args.profile,
             'restore': self.restore, 'label': c.args.label, 'installation': str(c.installation_path),
             'installation_sha256': c.args.approve_installation, 'public_output': str(c.output),
             'probe_script': str(HERE / 'isolation_probe.py'), 'probe_config': str(probe_config),
-            'controls_script': str(controls), 'controls_sha256': c.source['files']['../wallet-witness/joint_controls.mjs']})
+            'controls_script': str(controls), 'controls_sha256': c.source['files']['../wallet-witness/joint_controls.mjs'],
+            'sync_controls_script':str(sync_controls), 'sync_controls_sha256':c.source['files']['../../../tests/sync-wallet-controls.mjs']})
         files = c.runtime_files + [c.installation_path, config, probe_config, HERE / 'wallet.mjs',
-                                   HERE / 'isolation_probe.py', controls]
+                                   HERE / 'isolation_probe.py', controls, sync_controls]
         with c.isolation.network_filter() as filter_fd:
             command = c.isolation.command(readonly_trees=[c.source_root, c.common],
                 readonly_files=list(dict.fromkeys(files)), writable_public_trees=[c.output],
@@ -459,12 +487,36 @@ class Actor:
                          and value['format'] == 'CP04-ISOLATED-WALLET-DONE01'
                          and value['restore'] is self.restore and value['private_material_persisted_or_hashed'] is False,
                          'fixed_terminal_metrics')
-                    need(set(value['counts']) == {'proofs', 'history_reads', 'history_bytes', 'history_wall_seconds'}, 'terminal_count_keys')
-                    for key, number in value['counts'].items():
+                    base_counts = {'proofs','history_reads','history_bytes','history_wall_seconds'}
+                    sync_counts = {'synchronization','reference_equivalence_checks','same_head_noops','ownership_independent_equal_ranges','atomic_failure_controls','staged_window_failure_controls'} if self.owner.args.profile == 'incremental' else set()
+                    need(set(value['counts']) == base_counts | sync_counts, 'terminal_count_keys')
+                    for key in base_counts | (sync_counts-{'synchronization'}):
+                        number = value['counts'][key]
                         need(type(number) in (int, float) and math.isfinite(number) and number >= 0, 'finite_terminal_count')
                     need(value['counts']['proofs'] == len(self.owner.proofs) - self.proof_start
                          and value['counts']['history_reads'] == self.scans and value['counts']['history_bytes'] == self.scan_bytes,
                          'actual_terminal_count_match')
+                    if sync_counts:
+                        rows=value['counts']['synchronization']
+                        need(isinstance(rows,list) and 0 < len(rows) <= 32, 'bounded_sync_metrics')
+                        for row in rows:
+                            need(isinstance(row,dict) and set(row)=={'mode','height','read_bytes','authenticated_blocks',
+                                'authenticated_records','peak_window_blocks','peak_window_records','retained','elapsed_seconds',
+                                'node_self_user_microseconds','node_self_system_microseconds'}, 'sync_metrics_schema')
+                            need(row['mode'] in {'append','selected-replay','full-replay','full-prefix-reference','unchanged'}, 'sync_mode')
+                            for key in ('height','read_bytes','authenticated_blocks','authenticated_records'):
+                                need(isinstance(row[key],str) and re.fullmatch('0|[1-9][0-9]{0,19}',row[key]) is not None,'sync_unsigned_count')
+                            for key in ('peak_window_blocks','peak_window_records','node_self_user_microseconds','node_self_system_microseconds'):
+                                need(type(row[key]) is int and row[key]>=0,'sync_numeric_count')
+                            need(row['peak_window_blocks']<=256 and row['peak_window_records']<=256,'bounded_sync_windows')
+                            need(type(row['elapsed_seconds']) in (int,float) and math.isfinite(row['elapsed_seconds']) and row['elapsed_seconds']>=0,'sync_elapsed')
+                            retained=row['retained']
+                            need(isinstance(retained,dict) and set(retained)=={'currentBufferBytes','journalBufferBytes','journalCheckpoints','scope'}
+                                 and isinstance(retained['scope'],str) and len(retained['scope'])<512,'sync_retained_schema')
+                            need(all(type(retained[k]) is int and retained[k]>=0 for k in ('currentBufferBytes','journalBufferBytes','journalCheckpoints'))
+                                 and retained['journalCheckpoints']<=9,'sync_retained_bounds')
+                        need(sum(int(r['read_bytes']) for r in rows)==self.scan_bytes,'sync_exact_read_bytes')
+                        need(value['counts']['reference_equivalence_checks']==len(rows)==value['counts']['same_head_noops'],'sync_reference_and_noop_counts')
                     usage = value['process_self']
                     names = ('userCPUTime', 'systemCPUTime', 'maxRSS', 'fsRead', 'fsWrite',
                              'voluntaryContextSwitches', 'involuntaryContextSwitches')
@@ -636,8 +688,8 @@ class Controller:
         self.sandbox_public = self.source_root / 'experiments/compact-all-payments-v3/public'
         self.sandbox_evidence = self.source_root / 'experiments/compact-all-payments-v3/evidence'
         need(self.sandbox_public.is_dir() and self.sandbox_evidence.is_dir(), 'approved_source_output_mountpoints')
-        self.seconds = 900 if args.profile == 'small' else 5400
-        self.proof_limit = 5 if args.profile == 'small' else 264
+        self.seconds = {'small':900, 'full':5400, 'incremental':1800}[args.profile]
+        self.proof_limit = {'small':5, 'full':264, 'incremental':9}[args.profile]
         self.start = time.monotonic()
         self.deadline = self.start + self.seconds
         affinity = os.sched_getaffinity(0)
@@ -647,7 +699,7 @@ class Controller:
         self.chain = None
         self.backup = None
         self.events, self.proofs, self.cli_receipts = [], [], []
-        self.generated = {}; self.scan_count = self.reject_count = 0
+        self.generated = {}; self.scan_count = self.reject_count = self.empty_count = 0
         self.actor = None
         self.last_disk_check = 0
         text = (HERE / 'wallet.mjs').read_text()
@@ -735,7 +787,8 @@ class Controller:
             need(process.returncode == 0 and not stderr, 'native_success')
             value = decode(stdout)
             need(json.dumps(value, separators=(',', ':')).encode() + b'\n' == stdout, 'canonical_native_json')
-            value = head(value); actual['public_result_validated'] = True
+            value = continuation_report(value) if arguments[0] == 'scan-range' else head(value)
+            actual['public_result_validated'] = True
             return value
         finally:
             if process is not None and not waited:
@@ -847,13 +900,44 @@ class Controller:
             self.head = self.native(['rollback', self.database, self.chain, message['expected_tip']])
             self.events[-1]['height'] = self.head['height']
             return {'head': self.head}
-        if op == 'scan':
+        if op == 'head':
+            return {'head':self.head}
+        if op == 'empty':
+            need(self.args.profile == 'incremental' and self.empty_count < 255, 'bounded_incremental_empty_blocks')
+            before = self.head
+            self.head = self.native(['admit', self.database, self.chain])
+            need(int(self.head['height']) == int(before['height'])+1 and all(self.head[k] == before[k]
+                 for k in ('chain','genesis_id','leaf_count','root_le','fee_escrow','unconsumed_liabilities')), 'actual_unchanged_empty_block_state')
+            self.empty_count += 1
+            self.events[-1].update(height=self.head['height'], proof_bodies=0)
+            return {'head':self.head}
+        if op == 'scan-range':
+            need(self.args.profile == 'incremental', 'incremental_range_profile')
+            raw = bytes.fromhex(hex_bytes(message['request'],436))
+            need(raw[:8] == b'CPHREQ01', 'range_request_magic')
+            self.scan_count += 1
+            request = self.common / ('request-' + str(self.scan_count).zfill(4) + '.bin')
+            file = self.common / ('history-' + str(self.scan_count).zfill(4) + '.continuation')
+            with request.open('xb') as stream: stream.write(raw)
+            actual = self.native(['scan-range', self.database, self.chain, request, file])
+            need(actual['endpoint'] == self.head and actual['request_bytes'] == len(raw)
+                 and actual['serving']['response_bytes_written'] == file.stat().st_size, 'exact_served_range')
+            actor.scans += 1; actor.scan_bytes += file.stat().st_size
+            self.events[-1].update(bytes=file.stat().st_size,height=self.head['height'], request_bytes=len(raw),
+                request_rpc_payload_bytes=len(json.dumps(message,separators=(',',':')).encode()),
+                rpc_frame_bytes_each_direction=5, serving_report=actual)
+            return {'file':str(file),'head':self.head}
+        if op in ('scan', 'scan-reference'):
             self.scan_count += 1
             file = self.common / ('history-' + str(self.scan_count).zfill(4) + '.scan')
             actual = self.native(['scan', self.database, self.chain, file])
             need(actual == self.head, 'actual_scan_selected_head')
-            actor.scans += 1; actor.scan_bytes += file.stat().st_size
-            self.events[-1].update(bytes=file.stat().st_size,height=self.head['height'])
+            if op == 'scan':
+                actor.scans += 1; actor.scan_bytes += file.stat().st_size
+            else:
+                need(self.args.profile == 'incremental', 'reference_only_incremental_profile')
+            self.events[-1].update(bytes=file.stat().st_size,height=self.head['height'],
+                measurement_role='correctness-oracle-excluded' if op == 'scan-reference' else 'cold-full-scan')
             return {'file': str(file), 'head': self.head}
         if op == 'context':
             need(actor.restore, 'restore_public_context_only')
@@ -909,11 +993,16 @@ class Controller:
         need(self.reject_count == (0 if self.args.profile == 'small' else 2), 'declared_anchor_rejections')
         required = {'joint-lease-and-packet-controls', 'genuine-private-receipt-and-local-witnesses',
                     'recipient-fresh-local-witness-spend', 'backup-only-new-process-spend', 'native-work-complete'}
-        if self.args.profile == 'full':
+        if self.args.profile != 'small':
             required |= {'old-draft-genuine-positive-before-expiry', 'old-origin-draft-valid-on-common-prefix',
-                         'changing-root-anchor-expiry-atomic-rejection', 'old-note-refreshed-and-spent',
+                         'old-note-refreshed-and-spent',
                          'orphan-child-genuine-positive-before-reorg', 'joint-rewind-orphan-discovery-and-spentness-repaired',
                          'joint-deep-replay-revocation-and-recovery'}
+        if self.args.profile == 'full':
+            required.add('changing-root-anchor-expiry-atomic-rejection')
+        if self.args.profile == 'incremental':
+            required |= {'empty-block-anchor-expiry-atomic-rejection', 'incremental-reference-equivalence-and-noop'}
+            need(self.empty_count == 255, 'exact_empty_block_count')
         actual_marks = {event['name'] for event in self.events if event['op'] == 'mark'}
         need(actual_marks == required, 'exact_profile_public_marks')
         final_head = self.native(['head', self.database, self.chain])
@@ -923,7 +1012,7 @@ class Controller:
              and retained['retention'] == 1, 'final_full_retention')
         final_snapshot = self.oracle.snapshot(self.database)
         expected_bodies, expected_nullifiers, expected_fees = ((5,4,10570146) if self.args.profile == 'small'
-            else (261,516,551305634))
+            else (6,6,12682394) if self.args.profile == 'incremental' else (261,516,551305634))
         need(final_snapshot['blocks']['rows'] == expected_height and
              final_snapshot['bodies']['rows'] == final_snapshot['cores']['rows'] == expected_bodies and
              final_snapshot['leaves']['rows'] == 2*expected_bodies and
@@ -962,7 +1051,7 @@ def main():
     parser.add_argument('--installation', type=Path, required=True)
     parser.add_argument('--approve-installation', required=True)
     parser.add_argument('--approve-source', required=True)
-    parser.add_argument('--profile', choices=['small','full'], required=True)
+    parser.add_argument('--profile', choices=['small','full','incremental'], required=True)
     args = parser.parse_args()
     need(re.fullmatch('[a-z][a-z0-9-]{0,31}', args.label) is not None, 'exclusive_label')
     source_path = HERE/'SOURCE.json'
@@ -976,6 +1065,12 @@ def main():
          profile['bounds']['full_outer_watchdog_seconds'] == 5400 and profile['bounds']['small_outer_watchdog_seconds'] == 900 and
          profile['bounds']['wallet_address_space_bytes'] == 4*1024**3 and
          profile['bounds']['experiment_public_disk_bytes'] == 8*1024**3, 'fixed_declared_profile')
+    if args.profile == 'incremental':
+        sync_profile = decode((HERE/'../../incremental-sync/PROFILE.json').read_bytes())
+        need(sync_profile['format'] == 'CP04-INCREMENTAL-SYNC-PROFILE01' and
+             sync_profile['bounds']['proof_ceiling'] == 9 and
+             sync_profile['bounds']['outer_watchdog_seconds'] == 1800 and
+             sync_profile['bounds']['legal_empty_blocks'] == 255, 'fixed_incremental_profile')
     common = module('wallet_public_common', REPOSITORY/'scripts/common.py')
     isolation = module('wallet_isolation', HERE/'isolation.py')
     oracle = module('wallet_public_oracle', HERE.parent/'transport/oracle.py')

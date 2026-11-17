@@ -1,5 +1,6 @@
 //! Local public-artifact CLI. No private witness/key/receipt plaintext intake.
-use ledger_cp03::{Anchor, CachePolicy, Error, Head, Ledger, Result, history_codec};
+use ledger_cp03::{Anchor, CachePolicy, CONTINUATION_HEADER_BYTES, ContinuationReads,
+    ContinuationRequest, Error, Head, Ledger, Result, history_codec};
 use serde_json::{Value, json};
 use std::{
     env, fs,
@@ -134,6 +135,32 @@ fn run() -> Result<Value> {
     let op = args[0].to_str().ok_or(Error::Codec)?;
     let path = Path::new(&args[1]);
     let chain = bytes::<32>(args[2].to_str().ok_or(Error::Codec)?)?;
+    if op == "scan-range" {
+        if args.len() != 5 { return Err(Error::Codec); }
+        let request = ContinuationRequest::decode(&read(Path::new(&args[3]), CONTINUATION_HEADER_BYTES)?)?;
+        let opened = std::time::Instant::now();
+        let (mut ledger, startup) = Ledger::open_counted(path, chain)?;
+        let open_nanoseconds = opened.elapsed().as_nanos().to_string();
+        let started = std::time::Instant::now();
+        let mut reads = ContinuationReads::default();
+        let target = publish(Path::new(&args[4]), |file| ledger.export_continuation(&request, file, &mut reads))?;
+        return Ok(json!({"schema":"CP04-CONTINUATION-SERVED01",
+            "validity":"trusted-local-ledger; caller selects validating endpoint",
+            "endpoint":describe_version(target, ledger.genesis_id(), chain, ledger.block_version()),
+            "request_bytes":CONTINUATION_HEADER_BYTES,"frame_count":request.frame_count()?.to_string(),
+            "startup":{"wall_nanoseconds":open_nanoseconds,"tip_header_rows":startup.tip_header_rows,
+                "tip_header_bytes":startup.tip_header_bytes,"tip_body_length_rows":startup.tip_body_length_rows,
+                "scope":"Bounded trusted-local open also checks genesis/source registry/cache/tree metadata and installed runtime; not a history prefix scan"},
+            "serving":{"wall_nanoseconds":started.elapsed().as_nanos().to_string(),
+                "snapshot_meta_rows":reads.snapshot_meta_rows,
+                "base_header_rows":reads.base_header_rows,"base_header_bytes":reads.base_header_bytes,
+                "target_header_rows":reads.target_header_rows,"target_header_bytes":reads.target_header_bytes,
+                "history_header_rows":reads.history_header_rows,"history_header_bytes":reads.history_header_bytes,
+                "reduced_record_rows":reads.reduced_record_rows,"reduced_record_bytes":reads.reduced_record_bytes,
+                "sqlite_fullscan_steps":reads.sqlite_fullscan_steps,
+                "history_frame_bytes":reads.history_frame_bytes,"response_bytes_written":reads.response_bytes_written,
+                "scope":"Actual returned SQL history rows/blob bytes and successful writer bytes; metadata separated; not physical page/disk IO"}}));
+    }
     if op == "init"||op=="init-retain" {
         if (op=="init"&&args.len()!=4)||(op=="init-retain"&&![4,5].contains(&args.len())) {
             return Err(Error::Codec);

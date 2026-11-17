@@ -1,0 +1,17 @@
+{
+  "format": "CP04-SYNC-SOURCE-IDENTITIES01",
+  "stage": "Frozen component sources, independently source-reviewed; focused build/structural checks passed. Genuine integration pending.",
+  "core_manifest_sha256": "6737bffc428f5f1e795b35ba41455a92cc34f9779ff8b12b0d7678062a20af9f",
+  "installation_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "wallet_source_sha256": "94c5912d4892677caa82cf72eb65572362be05f826408bb7f8e6762f3b9c3232",
+  "files": {
+    "source/wallet/cp03/recovery.mjs": "89306534e504303690c9651e39faa3786a32edcef69e76dafe3083af9da56c66",
+    "source/wallet/cp03/local_witnesses.mjs": "8fc5306c9da5561eae0264c15214a514b8af84210e70aaef905219483690d472",
+    "source/crates/ledger-cp03/src/continuation.rs": "7d80639763c69cda71dbdea10e299f628da374f4ac794b5e903b301b0dfe7fec",
+    "source/crates/ledger-cp03/src/store.rs": "6c3c7000e55e06419fac95664d38868ff2bea279474d91cb11e62b5174ebf057",
+    "source/crates/ledger-cp03/src/main.rs": "8c211f08c8382663f75aa9ce766fbc9c32a4e8c033c4c3ba3aa337e5bedd29ae",
+    "tests/sync-wallet-parser.mjs": "528a4cf7e52a15c0b70a713bda535c1213907d253d3e3c479315c25139bdd58b",
+    "tests/sync-wallet-controls.mjs": "69043a331cb12eef98537a9c9f70a43e91bfbb1bcde7c8fb3c88beb2f459f47c",
+    "tests/run_sync_serving.py": "c3b0239b065057c3bb089a463a59aee72c883a2d6e4fd00af341b81a0730e77d"
+  }
+}

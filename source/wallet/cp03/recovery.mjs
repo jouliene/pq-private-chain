@@ -132,16 +132,64 @@ function position(next) {
   return {height: next.height, id: next.id, leafCount: next.leafCount, root: next.root,
     fees: next.fees, liabilities: next.liabilities};
 }
-export function visitAuthenticatedHistory(scanFile, trustedEndpoint, context, onWindow) {
+function samePosition(a, b) {
+  return a.height === b.height && a.id.equals(b.id) && a.leafCount === b.leafCount &&
+    a.root.equals(b.root) && a.fees === b.fees && a.liabilities === b.liabilities;
+}
+function fullPosition(supplied, endpoint, genesis) {
+  const result = {height: endpoint.height, id: endpoint.blockId,
+    leafCount: supplied.leafCount, root: Buffer.from(bytes(supplied.root, 64)),
+    fees: supplied.feeEscrow, liabilities: supplied.unconsumedLiabilities};
+  need(typeof result.leafCount === 'bigint' && result.leafCount >= 0n && result.leafCount <= (1n << 40n));
+  need(typeof result.fees === 'bigint' && result.fees >= 0n &&
+    typeof result.liabilities === 'bigint' && result.liabilities >= 0n && result.fees + result.liabilities <= MAX);
+  if (genesis.liabilities !== null) need(result.fees + result.liabilities <= genesis.liabilities);
+  for (let at = 0; at < 64; at += 8) need(result.root.readBigUInt64LE(at) < P);
+  if (result.height === 0n) {
+    need(result.leafCount === 0n && result.fees === 0n);
+    if (genesis.root !== null) need(result.root.equals(genesis.root));
+    if (genesis.liabilities !== null) need(result.liabilities === genesis.liabilities);
+  }
+  return result;
+}
+function rangeContext(baseHead, targetHead, context) {
+  const base = prepareHistoryContext(baseHead, context), target = prepareHistoryContext(targetHead, context);
+  need(base.endpoint.chain.equals(target.endpoint.chain) && base.endpoint.genesisId.equals(target.endpoint.genesisId) &&
+    base.endpoint.blockVersion === target.endpoint.blockVersion && base.endpoint.height <= target.endpoint.height);
+  return {endpoint: target.endpoint, base: fullPosition(baseHead, base.endpoint, base.genesis),
+    target: fullPosition(targetHead, target.endpoint, target.genesis)};
+}
+function writePosition(out, at, value) {
+  out.writeBigUInt64LE(value.height, at); value.id.copy(out, at + 8);
+  out.writeBigUInt64LE(value.leafCount, at + 72); value.root.copy(out, at + 80);
+  out.writeBigUInt64LE(value.fees, at + 144); out.writeBigUInt64LE(value.liabilities, at + 152);
+}
+function rangeHeader(magic, range) {
+  const out = Buffer.alloc(436);
+  out.write(magic, 0, 8, 'ascii'); out.writeUInt16LE(1, 8); out.writeUInt16LE(range.endpoint.blockVersion, 10);
+  range.endpoint.chain.copy(out, 12); range.endpoint.genesisId.copy(out, 44);
+  writePosition(out, 108, range.base); writePosition(out, 268, range.target);
+  out.writeBigUInt64LE(range.target.height - range.base.height, 428);
+  return out;
+}
+// PUBLIC serialization only. A returned request is not a wallet-state capability;
+// the joint coordinator always supplies/rechecks its own private committed base.
+export function encodeHistoryRequest(baseHead, targetHead, context) {
+  return rangeHeader('CPHREQ01', rangeContext(baseHead, targetHead, context));
+}
+function visitHistoryFile(scanFile, endpoint, initial, onWindow, range = null) {
   need(typeof onWindow === 'function');
-  const {endpoint, genesis} = prepareHistoryContext(trustedEndpoint, context);
   let fd;
   try {
     fd = fs.openSync(scanFile, fs.constants.O_RDONLY | fs.constants.O_NONBLOCK | fs.constants.O_NOFOLLOW);
     const before = fs.fstatSync(fd, {bigint: true}); need(before.isFile());
-    let prior = {height: 0n, id: endpoint.genesisId, leafCount: 0n, root: genesis.root,
-      fees: 0n, liabilities: genesis.liabilities};
-    let parsedPrior = prior, readBytes = 0n, windowPayments = 0;
+    let prior = initial, readBytes = 0n;
+    if (range !== null) {
+      need(exact(fd, 436).equals(rangeHeader('CPHCONT1', range)));
+      readBytes = 436n;
+    }
+    let parsedPrior = prior, windowPayments = 0, authenticatedBlocks = 0n, authenticatedRecords = 0n;
+    let peakWindowBlocks = 0, peakWindowRecords = 0;
     const window = [];
     function applyWindow() {
       if (window.length === 0) return;
@@ -158,16 +206,32 @@ export function visitAuthenticatedHistory(scanFile, trustedEndpoint, context, on
       const next = block(raw, endpoint, parsedPrior); parsedPrior = position(next);
       if (windowPayments + next.records.length > 256 || window.length >= 256) applyWindow();
       window.push(next); windowPayments += next.records.length;
+      authenticatedBlocks++; authenticatedRecords += BigInt(next.records.length);
+      peakWindowBlocks = Math.max(peakWindowBlocks, window.length);
+      peakWindowRecords = Math.max(peakWindowRecords, windowPayments);
     }
     applyWindow();
     need(prior.height === endpoint.height && prior.id.equals(endpoint.blockId) &&
       readBytes === before.size && stable(before, fs.fstatSync(fd, {bigint: true})));
-    return {endpoint, cursor: prior, readBytes};
+    if (range !== null) need(samePosition(prior, range.target) &&
+      authenticatedBlocks === range.target.height - range.base.height);
+    return {endpoint, cursor: prior, readBytes, authenticatedBlocks, authenticatedRecords,
+      peakWindowBlocks, peakWindowRecords};
   } finally {
     if (fd !== undefined) {
       try { fs.closeSync(fd); } catch { throw new WalletOperationalError(); }
     }
   }
+}
+export function visitAuthenticatedHistory(scanFile, trustedEndpoint, context, onWindow) {
+  const {endpoint, genesis} = prepareHistoryContext(trustedEndpoint, context);
+  return visitHistoryFile(scanFile, endpoint, {height: 0n, id: endpoint.genesisId,
+    leafCount: 0n, root: genesis.root, fees: 0n, liabilities: genesis.liabilities}, onWindow);
+}
+// Internal PUBLIC parsing boundary, not an authenticated state-import API.
+export function visitAuthenticatedContinuation(scanFile, ownBase, trustedEndpoint, context, onWindow) {
+  const range = rangeContext(ownBase, trustedEndpoint, context);
+  return visitHistoryFile(scanFile, range.endpoint, range.base, onWindow, range);
 }
 
 // No old wallet database, witness or spent-state snapshot is accepted.

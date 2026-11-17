@@ -4,11 +4,12 @@ use crate::{
     encoding::{self, Digest, Id, field_bytes, fields, id, integer, natural},
     tree,
     trusted::Installed,
+    continuation::{self, ContinuationReads, ContinuationRequest, CountedWriter, StartupHistoryReads},
 };
 use compact_arities_v3::statement::MAX;
 use cp03_history::{body, genesis, history};
 use rusqlite::{
-    Connection, OpenFlags, OptionalExtension, Transaction, TransactionBehavior, params,
+    Connection, OpenFlags, OptionalExtension, StatementStatus, Transaction, TransactionBehavior, params,
 };
 use std::{
     fs,
@@ -387,6 +388,13 @@ impl Ledger {
     }
     /// Opens trusted local durable storage, never a producer-supplied snapshot/acceptance cache.
     pub fn open(path: &Path, chain: [u8; 32]) -> Result<Self> {
+        Self::open_counted(path, chain).map(|(ledger, _)| ledger)
+    }
+    /// Same trusted-local open and provider gates, exposing its bounded history
+    /// reads separately from subsequent range-serving counters. Genesis/source
+    /// registry, cache/tree metadata and runtime setup remain startup work.
+    pub fn open_counted(path: &Path, chain: [u8; 32]) -> Result<(Self, StartupHistoryReads)> {
+        let mut startup = StartupHistoryReads::default();
         let mut db = open_connection(path)?;
         let prefix:Vec<u8>=db.query_row("SELECT substr(genesis,1,12) FROM meta WHERE singleton=1",[],|r|r.get(0))?;
         let chain_version=genesis::version(&prefix)?;
@@ -470,6 +478,8 @@ impl Ledger {
                     [integer(h.height)?],
                     |r| r.get(0),
                 )?;
+                continuation::add(&mut startup.tip_header_rows, 1)?;
+                continuation::add(&mut startup.tip_header_bytes, header.len())?;
                 let parsed = history::parse_header(&header)?;
                 if parsed.version()!=chain_version{return Err(Error::Identity)}
                 let fields=history::UnverifiedBlockFields {
@@ -484,6 +494,7 @@ impl Ledger {
                 };
                 let rebuilt=if chain_version==3{history::encode_unverified_header(&fields)?}else{
                     let lengths=lengths_at(&tx,h.height)?;
+                    continuation::add(&mut startup.tip_body_length_rows, lengths.len())?;
                     if lengths.len()!=parsed.body_ids().len(){return Err(Error::State)}
                     history::encode_network_header(&fields,history::network_encoded_size(&lengths)?)?
                 };
@@ -494,7 +505,7 @@ impl Ledger {
             tx.commit()?;
             (parsed.genesis_id(), parsed.total(), catalog_id)
         };
-        Ok(Self {
+        Ok((Self {
             db,
             db_path,
             db_device,
@@ -506,7 +517,7 @@ impl Ledger {
             empty,
             poisoned: false,
             last_error: None,
-        })
+        }, startup))
     }
     pub fn head(&self) -> Result<Head> {
         self.ready()?;
@@ -962,6 +973,32 @@ impl Ledger {
             |tx| history_rows(tx, height),
         )
     }
+    /// Stream only (base.height, target.height] from indexed reduced-history
+    /// rows in ONE read snapshot. The entire response remains tentative until
+    /// Ok. In DELETE journal mode this reader can block a concurrent writer;
+    /// the CLI owns the finite output stream and operator lifetime guards.
+    /// No proof verdict, arbitrary checkpoint or wallet ownership enters here.
+    pub fn export_continuation<W: Write>(
+        &mut self,
+        request: &ContinuationRequest,
+        writer: &mut W,
+        reads: &mut ContinuationReads,
+    ) -> Result<Head> {
+        self.ready()?;
+        *reads = ContinuationReads::default();
+        let chain = self.installed.syntax.chain;
+        let version = self.installed.version;
+        let genesis_id = self.genesis_id;
+        let total = self.total;
+        let initial = Head {height: 0, id: genesis_id, leaf_count: 0,
+            root: self.empty[40], fees: 0, liabilities: total};
+        let mut output = CountedWriter {inner: writer, written: 0};
+        let result = transaction(&mut self.db, &mut self.poisoned, &mut self.last_error,
+            TransactionBehavior::Deferred, |tx|
+                continuation_snapshot(tx, request, initial, version, chain, total, &mut output, reads));
+        reads.response_bytes_written = output.written;
+        result
+    }
     /// One framed scan block only. Consumers independently supply and verify their expected endpoint.
     pub fn scan_frame(&mut self, height: u64) -> Result<Vec<u8>> {
         transaction(
@@ -1011,14 +1048,21 @@ fn membership_path(
 }
 
 fn scan_frame(tx: &Connection, height: u64) -> Result<Vec<u8>> {
-    let header: Vec<u8> = tx
+    scan_frame_counted(tx, height, &mut ContinuationReads::default())
+}
+fn scan_frame_counted(tx: &Connection, height: u64, reads: &mut ContinuationReads) -> Result<Vec<u8>> {
+    let mut query = tx.prepare("SELECT header FROM blocks WHERE height=?1")?;
+    let header: Vec<u8> = query
         .query_row(
-            "SELECT header FROM blocks WHERE height=?1",
             [integer(height)?],
             |r| r.get(0),
         )
         .optional()?
         .ok_or(Error::Missing)?;
+    continuation::add(&mut reads.history_header_rows, 1)?;
+    continuation::add(&mut reads.history_header_bytes, header.len())?;
+    count_fullscan(&query, reads)?;
+    drop(query);
     let mut statement =
         tx.prepare("SELECT ordinal,reduced FROM bodies WHERE height=?1 ORDER BY ordinal LIMIT 129")?;
     let rows = statement
@@ -1026,6 +1070,9 @@ fn scan_frame(tx: &Connection, height: u64) -> Result<Vec<u8>> {
             Ok((r.get::<_, i64>(0)?, r.get::<_, Vec<u8>>(1)?))
         })?
         .collect::<rusqlite::Result<Vec<_>>>()?;
+    continuation::add(&mut reads.reduced_record_rows, rows.len())?;
+    for (_, raw) in &rows { continuation::add(&mut reads.reduced_record_bytes, raw.len())?; }
+    count_fullscan(&statement, reads)?;
     drop(statement);
     let parsed_header=history::parse_header(&header)?;
     if parsed_header.version()!=database_version(tx)?{return Err(Error::Identity)}
@@ -1043,6 +1090,89 @@ fn scan_frame(tx: &Connection, height: u64) -> Result<Vec<u8>> {
     let frame = history::frame_unverified_scan_block(&block)?;
     Ok(frame)
 }
+
+fn count_fullscan(statement: &rusqlite::Statement<'_>, reads: &mut ContinuationReads) -> Result<()> {
+    let steps = usize::try_from(statement.get_status(StatementStatus::FullscanStep)).map_err(|_| Error::Capacity)?;
+    continuation::add(&mut reads.sqlite_fullscan_steps, steps)
+}
+fn continuation_snapshot<W: Write>(tx: &Transaction<'_>, request: &ContinuationRequest, initial: Head,
+    version: u16, chain: [u8; 32], total: u64, output: &mut W, reads: &mut ContinuationReads) -> Result<Head> {
+    request.validate()?;
+    if request.chain != chain || request.genesis_id != initial.id
+        || request.block_version != version || database_version(tx)? != version {
+        return Err(Error::Identity);
+    }
+    let (stored_genesis, stored_chain, stored_total): (Vec<u8>, Vec<u8>, i64) = tx.query_row(
+        "SELECT genesis_id,chain,total FROM meta WHERE singleton=1", [],
+        |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)))?;
+    continuation::add(&mut reads.snapshot_meta_rows, 1)?;
+    if stored_genesis != initial.id || stored_chain != chain || natural(stored_total)? != total {
+        return Err(Error::Identity);
+    }
+    let captured_tip = head(tx)?;
+    continuation::add(&mut reads.snapshot_meta_rows, 1)?;
+    if request.target.height > captured_tip.height { return Err(Error::Missing); }
+    let base = continuation_cursor(tx, request.base.height, initial, version, chain, reads, true)?;
+    let target = continuation_cursor(tx, request.target.height, initial, version, chain, reads, false)?;
+    if base != request.base || target != request.target
+        || (target.height == captured_tip.height && target != captured_tip) {
+        return Err(Error::Identity);
+    }
+    output.write_all(&request.response_header()?)?;
+    let mut prior = base;
+    for previous_height in base.height..target.height {
+        let height = previous_height.checked_add(1).ok_or(Error::Capacity)?;
+        let frame = scan_frame_counted(tx, height, reads)?;
+        let block = history::parse_scan_block(&frame[4..])?;
+        let header = block.header();
+        let next = continuation_header_cursor(header, chain, version)?;
+        let added = u64::try_from(header.body_ids().len()).map_err(|_| Error::Capacity)?
+            .checked_mul(2).ok_or(Error::Capacity)?;
+        if next.height != height || header.raw()[44..108] != prior.id
+            || next.leaf_count != prior.leaf_count.checked_add(added).ok_or(Error::Capacity)?
+            || (added == 0 && (next.root != prior.root || next.fees != prior.fees
+                || next.liabilities != prior.liabilities)) {
+            return Err(Error::State);
+        }
+        accounting(&next, total)?;
+        continuation::add(&mut reads.history_frame_bytes, frame.len())?;
+        output.write_all(&frame)?;
+        prior = next;
+    }
+    if prior != target { return Err(Error::State); }
+    output.flush()?;
+    Ok(target)
+}
+fn continuation_header_cursor(header: &history::UnverifiedHeader<'_>, chain: [u8; 32], version: u16) -> Result<Head> {
+    let raw = header.raw();
+    if header.version() != version || raw[12..44] != chain { return Err(Error::Identity); }
+    Ok(Head {height: header.height(), id: header.block_id(), leaf_count: header.leaf_count(),
+        root: fields(&raw[128..192])?,
+        fees: u64::from_le_bytes(raw[192..200].try_into().map_err(|_| Error::Codec)?),
+        liabilities: u64::from_le_bytes(raw[200..208].try_into().map_err(|_| Error::Codec)?)})
+}
+fn continuation_cursor(tx: &Connection, height: u64, initial: Head, version: u16, chain: [u8; 32],
+    reads: &mut ContinuationReads, base: bool) -> Result<Head> {
+    if height == 0 { return Ok(initial); }
+    let mut statement = tx.prepare("SELECT header FROM blocks WHERE height=?1")?;
+    let raw: Vec<u8> = statement.query_row([integer(height)?],
+        |r| r.get(0)).optional()?.ok_or(Error::Missing)?;
+    if base {
+        continuation::add(&mut reads.base_header_rows, 1)?;
+        continuation::add(&mut reads.base_header_bytes, raw.len())?;
+    } else {
+        continuation::add(&mut reads.target_header_rows, 1)?;
+        continuation::add(&mut reads.target_header_bytes, raw.len())?;
+    }
+    count_fullscan(&statement, reads)?;
+    let value = continuation_header_cursor(&history::parse_header(&raw)?, chain, version)?;
+    if value.height != height { return Err(Error::State); }
+    Ok(value)
+}
+
+#[cfg(test)]
+#[path = "../tests/sync-serving/controls.rs"]
+mod sync_serving_controls;
 
 // Only the separately compiled PUBLIC diagnostic caller has this local-cache API.
 #[cfg(feature = "storage-cost-controls")]

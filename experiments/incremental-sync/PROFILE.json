@@ -1,0 +1,44 @@
+{
+  "format": "CP04-INCREMENTAL-SYNC-PROFILE01",
+  "declaration_status": "NOT_EXECUTED",
+  "decision_question": "Does actual incremental joint wallet synchronization preserve the complete genuine receipt/spend/recovery/branch path while eliminating repeated prefix work?",
+  "cryptography": "Unchanged complete CP03 relation, proof/security parameters and source authorization",
+  "bounds": {
+    "proof_ceiling": 9,
+    "outer_watchdog_seconds": 1800,
+    "legal_empty_blocks": 255,
+    "max_live_sessions_including_private_reference": 6,
+    "max_owned_notes_per_wallet": 8,
+    "rewind_blocks": 8,
+    "anchor_window": 256,
+    "max_receiving_keys_per_wallet": 2,
+    "wallet_address_space_bytes": 4294967296,
+    "public_disk_bytes": 8589934592,
+    "one_heavy_job": true
+  },
+  "sequence": [
+    "Two synthetic authorized credit proofs in block1",
+    "One genuine receipt proof in block2",
+    "Old note draft genuinely admitted and rolled back",
+    "Second note genuine spend changes root in block3",
+    "Old draft positively verified on common prefix and rolled back",
+    "255 legally admitted empty blocks retain block3 root; block2 root expires at258",
+    "Refreshed old note genuine spend at259",
+    "Orphan child draft positive verification then rollback",
+    "Rollback259, genuine replacement proof; retained joint rewind and orphan rejection",
+    "Deep selected replay; original private process exits",
+    "Backup-only fresh process full scan then newly proved accepted spend at260"
+  ],
+  "measurement_roles": {
+    "wallet": "Exact bytes/blocks/records and elapsed/Node SELF CPU around sync only; private semantic full-replay reference outside span",
+    "server": "Direct range SQL logical rows/blob bytes, FullscanStep, actual writes; startup and base/target framing separate",
+    "private_reference": "Separate RAM-restored wallet and lease. No witness/opening/hash serialization; bool-only exact semantic comparison. Excluded from synchronization resource claims.",
+    "long_trace": "Existing public genuine closure, public replay fixture preparation outside measured roles; no new large proof campaign"
+  },
+  "qualifications": [
+    "Research allocations, not owner service targets or annual budgets",
+    "Empty blocks test exact anchor-window semantics only after genuine different root. Long genuine changing-root history supplies scaling coverage separately.",
+    "Private reference increases whole actor resources; sync-role measurements and whole process resources reported separately.",
+    "Unchanged approximately1.75MB payment /175TB annual first-copy storage remains unresolved."
+  ]
+}

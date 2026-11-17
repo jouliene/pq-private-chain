@@ -1,12 +1,14 @@
 {
   "files": {
+    "../../../tests/sync-wallet-controls.mjs": "69043a331cb12eef98537a9c9f70a43e91bfbb1bcde7c8fb3c88beb2f459f47c",
+    "../../incremental-sync/PROFILE.json": "4986215372c6de93bf7ef400300771a70965303f0ab65ccd3788dfb323acceec",
     "../transport/oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
     "../wallet-witness/joint_controls.mjs": "a5fae49176f4f6cf74a2aefc0580292506cb696ef41e8600f457762d910d1793",
     "GATE3_PROFILE.json": "07e296d391e47f96f6d60fe6cad99bccc03ff16315af871e5b7a901ea1f96f5e",
     "isolation.py": "f5c3bef9b6ff6123d2f2d5cb7b2b2357eccb700e85f5fdf15ca3e316d70aff28",
     "isolation_probe.py": "f9352dcfb3dd62353fee7e212cdaa567c98ad9fd5f7aecffae8e6847da4c0c63",
-    "run.py": "3e99ecde6534fa1dceee15f02c0f6eb636659aacd13bf118cab5faf827477a75",
-    "wallet.mjs": "0edab447223b3424e4db9c7342f9f4e887eb4344685cdfc4bf57460c13a0722f"
+    "run.py": "1f280a0abbf6af9eb1a2ae705f52cf0534a1d42e8abb47b9d018c5afc0419616",
+    "wallet.mjs": "a09b0ba9510db87722db6634145a534c8ba81a44c1896fe9fcfea88328879b6e"
   },
   "format": "CP04-WALLET-INTEGRATION-SOURCE01"
 }

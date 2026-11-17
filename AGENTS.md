@@ -1,15 +1,14 @@
-# Completed network feasibility milestone
+# Active authenticated incremental synchronization milestone
 
-NETWORK_FEASIBILITY_GOAL.md is completed with independently reviewed execution,
-actual automatic CI and verified public release. Read STATUS.md and its final
-readback before continuing. Preserve the closed campaigns; do not repeat them or
-extend CI maintenance without a new decision question. Keep the global blockchain
-objective ACTIVE and separate from this completed bounded experiment. The next
-bounded recommendation is recorded in RESOURCE_DECISION.md, not silently added
-to the completed directive's acceptance criteria.
-Current ownership and sole-heavy-job allocations are in STATUS.md. Historical
-publication evidence is preserved at d8f8000; do not recreate it. Report briefly
-every30minutes of active work, with material event updates sooner.
+Read INCREMENTAL_WALLET_SYNC_GOAL.md completely. It is the current owner directive.
+Native Goal was installed and its user-edited substantive objective read back ACTIVE.
+Canonical baseline:2b87d1e5fcb9090390c476138bbd174d6034a6a9. Preserve historical
+NETWORK_FEASIBILITY_GOAL.md and all264/864 proof evidence; no closed campaign is
+reopened absent a specific new defect. STATUS.md is the live queue/ownership map.
+Implement actual direct-range serving and wallet-owned authenticated continuation,
+measure exact read/authentication scaling, genuine spending/recovery/branch tests,
+independent clean reproduction and existing automatic CI/publication. Stop after
+this bounded acceptance. Keep the global blockchain objective separate and active.
 
 # Public implementation working guidance
 

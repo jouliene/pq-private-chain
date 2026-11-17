@@ -132,6 +132,10 @@
       "bytes": 9000,
       "sha256": "f733dbb74858a497127ed3fbaa28c2a4e2e0b3aba663d449fdc424a3068a2024"
     },
+    "source/crates/ledger-cp03/src/continuation.rs": {
+      "bytes": 5668,
+      "sha256": "7d80639763c69cda71dbdea10e299f628da374f4ac794b5e903b301b0dfe7fec"
+    },
     "source/crates/ledger-cp03/src/cost_trace.rs": {
       "bytes": 3318,
       "sha256": "d3a86f54fe43dc092f9363c8cb4bf688815052be273ad55551fdc190f37e9275"
@@ -145,12 +149,12 @@
       "sha256": "11e96f5eec35ca239f12a84174e70ff1aab6ae88485cbc4ac1f9776510a4ef6b"
     },
     "source/crates/ledger-cp03/src/lib.rs": {
-      "bytes": 1151,
-      "sha256": "fe3881e7d950b3826086dcb2a14cac658b46e7c3c161e455eb670d396425e00d"
+      "bytes": 1281,
+      "sha256": "57ce7cd7b5a8992e914c9c49b7182f68f2330e19caa40888d669eb447aaa7911"
     },
     "source/crates/ledger-cp03/src/main.rs": {
-      "bytes": 11668,
-      "sha256": "6fb1ceed686528f6a270b1c14751ce839e8b3df6a94e59cfc9ae94fb4cb512c0"
+      "bytes": 14004,
+      "sha256": "8c211f08c8382663f75aa9ce766fbc9c32a4e8c033c4c3ba3aa337e5bedd29ae"
     },
     "source/crates/ledger-cp03/src/scan.rs": {
       "bytes": 2345,
@@ -169,8 +173,8 @@
       "sha256": "29f77c9df78afb29b485ed4942d5977fbcf1453ba3e02c18673b76fb4ccf23e5"
     },
     "source/crates/ledger-cp03/src/store.rs": {
-      "bytes": 43772,
-      "sha256": "473ba8e0d326beaddf446f247da542ff65d4f1f9c639ff1f1507c31bb365b0ea"
+      "bytes": 50974,
+      "sha256": "6c3c7000e55e06419fac95664d38868ff2bea279474d91cb11e62b5174ebf057"
     },
     "source/crates/ledger-cp03/src/store_archive.rs": {
       "bytes": 29961,
@@ -183,6 +187,10 @@
     "source/crates/ledger-cp03/src/trusted.rs": {
       "bytes": 5293,
       "sha256": "2c9aa588fc5169f56003813e194d29e70ef92bf7b8d3ea7670772daeebd01b91"
+    },
+    "source/crates/ledger-cp03/tests/sync-serving/controls.rs": {
+      "bytes": 9135,
+      "sha256": "3de2727ad96663a14b2d8d29a71a64e3d9bbe7f2eb1793a129329d9efb1cf7a9"
     },
     "source/docs/architecture/CP_ALL_ARITY_PROOFS_03.md": {
       "bytes": 9313,
@@ -6053,8 +6061,8 @@
       "sha256": "04e8447b92e1d3c9f544d455a54d10d3412d87f8ba6555c5c57a6fc7e09a7a7c"
     },
     "source/wallet/cp03/local_witnesses.mjs": {
-      "bytes": 23692,
-      "sha256": "91189647d71b80a1e2854cbb8997949af21788b5c53db76dc99c9e2a59cb9ad1"
+      "bytes": 29674,
+      "sha256": "8fc5306c9da5561eae0264c15214a514b8af84210e70aaef905219483690d472"
     },
     "source/wallet/cp03/payments.mjs": {
       "bytes": 6870,
@@ -6069,8 +6077,8 @@
       "sha256": "8e0ef239b3f9c4e128946f0f4c92701748d5af868b4c0134045e52206b676464"
     },
     "source/wallet/cp03/recovery.mjs": {
-      "bytes": 15041,
-      "sha256": "e31adf14869dfd411147da01f139a314a94bc0a252a69db93a22bf36662de013"
+      "bytes": 19003,
+      "sha256": "89306534e504303690c9651e39faa3786a32edcef69e76dafe3083af9da56c66"
     },
     "vendor/ahash-0.8.12/.cargo-checksum.json": {
       "bytes": 2280,
@@ -23182,6 +23190,6 @@
     "AGENTS.md",
     "docs/"
   ],
-  "source_or_fixture_files": 1505,
+  "source_or_fixture_files": 1507,
   "vendor_files": 4275
 }
