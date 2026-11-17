@@ -1,0 +1,17 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/home/neo/jouliene/pq-private-chain/.work/network01/target/release/provider-controls",
+    "/home/neo/jouliene/pq-private-chain/.work/network01/public/a.request",
+    "/home/neo/jouliene/pq-private-chain/.work/network01/public/b.request"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 50684,
+  "process_exit": 0,
+  "system_seconds": 0.08394599999999999,
+  "timeout": false,
+  "user_seconds": 1.00878,
+  "wall_seconds": 1.2206587629625574,
+  "wrapper_exit": 0
+}

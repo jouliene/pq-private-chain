@@ -1,0 +1,12 @@
+{
+  "canonical_wallet_changed_by_this_prototype": false,
+  "files": {
+    "README.md": "1b2792a3ac63f72a1f07e4c867478f3e55abcf217151490a149e31d370b7b4c7",
+    "controls.py": "bd22e3c413e903679c01f87acfa117e5c93132162b07744d981fa21e49b8aa4e",
+    "cp03_fixture.py": "179414248ab824c74b55ed32f51c33359c3306e07a4155f35d09018322c2645d",
+    "stream.py": "c878ef92ad834eaaa521af3be7d40355f11e20b5adaa5e863c99a313ec172a8e"
+  },
+  "format": "WALLET-WITNESS-EARLY-SOURCE02",
+  "gate3_acceptance": false,
+  "supersedes_source01_for_future_runs": true
+}

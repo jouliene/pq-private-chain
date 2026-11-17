@@ -152,17 +152,19 @@ class State:
 class WalletWitnesses:
     """Committed state plus bounded private undo; no untrusted state bootstrap."""
     def __init__(self, genesis, node, empty_leaf, *, depth=40, max_owned=64, rewind_blocks=8,
-                 anchor_window=256, block_leaf_cap=256):
+                 anchor_window=256, block_leaf_cap=256, allow_empty_blocks=False):
         need(genesis.height == 0 and genesis.count == 0, 'start from genesis')
         need(type(rewind_blocks) is int and rewind_blocks >= 0, 'rewind bound')
         need(type(anchor_window) is int and anchor_window > 0, 'anchor bound')
         need(type(block_leaf_cap) is int and block_leaf_cap > 0, 'block bound')
+        need(type(allow_empty_blocks) is bool, 'empty-block policy')
         frontier = SelectiveFrontier(depth, node, empty_leaf, max_owned)
         need(frontier.view()[0] == genesis.root, 'genesis empty root')
         self.state = State(genesis, frontier, deque([genesis]))
         self.history = deque([self.state.clone()], maxlen=rewind_blocks + 1)
         self.rewind_blocks, self.anchor_window, self.block_leaf_cap = rewind_blocks, anchor_window, block_leaf_cap
         self.revision = 0
+        self.allow_empty_blocks, self.active_epoch = allow_empty_blocks, None
 
     def epoch(self, trusted_endpoint):
         return Epoch(self, trusted_endpoint)
@@ -185,6 +187,8 @@ class WalletWitnesses:
         if not candidates:
             raise ReplayRequired('common prefix outside private journal; authenticated replay required')
         selected = candidates[0]
+        if self.active_epoch is not None:
+            self.active_epoch.abort()
         self.state = selected.clone()
         self.history = deque([state for state in self.history if state.head.height <= common_prefix.height],
                              maxlen=self.rewind_blocks + 1)
@@ -194,13 +198,17 @@ class WalletWitnesses:
 class Epoch:
     """All changes tentative until the independently selected endpoint matches."""
     def __init__(self, owner, trusted_endpoint):
+        need(owner.active_epoch is None, 'one active epoch only')
         self.owner, self.endpoint = owner, trusted_endpoint
         self.state = owner.state.clone()
         self.history = deque(owner.history, maxlen=owner.rewind_blocks + 1)
         self.phase = 'active'
         self.base_revision = owner.revision
+        owner.active_epoch = self
 
     def abort(self):
+        if self.owner.active_epoch is self:
+            self.owner.active_epoch = None
         self.phase = 'poisoned'
         self.state = None
         self.history.clear()
@@ -209,11 +217,15 @@ class Epoch:
         need(self.phase == 'active', 'inactive epoch')
         try:
             prior = self.state.head
-            need(self.owner.revision == self.base_revision, 'stale epoch after branch change')
+            need(self.owner.active_epoch is self and self.owner.revision == self.base_revision, 'stale epoch after branch change')
             need(block.height == prior.height + 1 and block.height <= self.endpoint.height, 'block ordering')
             need(block.parent == prior.identity, 'parent identity')
-            need(0 < len(block.leaves) <= self.owner.block_leaf_cap, 'bounded nonempty block')
+            need(len(block.leaves) <= self.owner.block_leaf_cap and
+                 (bool(block.leaves) or self.owner.allow_empty_blocks), 'bounded block and explicit empty policy')
             need(block.count == prior.count + len(block.leaves), 'leaf count')
+            if not block.leaves:
+                need(block.root == prior.root and block.count == prior.count and not spent_tokens,
+                     'empty block must preserve tree and spent state')
             need(len(set(spent_tokens)) == len(spent_tokens), 'duplicate spent token')
             for token in spent_tokens:
                 self.state.frontier.forget(token)
@@ -234,7 +246,7 @@ class Epoch:
 
     def finish(self):
         need(self.phase == 'active', 'inactive epoch')
-        if self.owner.revision != self.base_revision:
+        if self.owner.active_epoch is not self or self.owner.revision != self.base_revision:
             self.abort()
             raise WitnessError('stale epoch after branch change')
         if self.state.head != self.endpoint:
@@ -242,5 +254,8 @@ class Epoch:
             raise WitnessError('independently supplied endpoint mismatch')
         self.owner.state, self.owner.history = self.state, self.history
         self.owner.revision += 1
+        self.owner.active_epoch = None
+        # Finished epoch handles must not retain extra historical private copies.
+        self.state, self.history = None, deque()
         self.phase = 'finished'
         return self.owner

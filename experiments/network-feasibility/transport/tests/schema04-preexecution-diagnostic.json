@@ -1,0 +1,5 @@
+{
+  "scope": "operator Python syntax failure before SQL test; no ledger/proof/native build ran",
+  "old_source_sha256": "75ba51a50294c8596217b1143f657d5e859a2deda6030d2d27779e68bea34788",
+  "repair": "separate else keyword from numeric literals; correct dummy structural row column count"
+}

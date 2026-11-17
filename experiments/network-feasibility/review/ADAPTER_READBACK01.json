@@ -1,0 +1,28 @@
+{
+  "format": "NETWORK04-ADAPTER-READBACK01",
+  "actual_sha256": "e9830a40bbddfdf02acec8ed66e0cb254c001514a67346b6066199e49161cdf4",
+  "passed": true,
+  "actual_cli_calls": 29,
+  "cli_wall_seconds_sum": 54.97288708051201,
+  "cli_user_seconds_sum": 45.048142,
+  "cli_system_seconds_sum": 1.6574659999999999,
+  "max_individual_cli_rss_kib": 74044,
+  "source_sha256": "4d40e0ce157c0362c8c63ad6ccf1985114f229bf2adf5dfd76fc0e0d755111c4",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "negative_outcomes": {
+    "genesis-0": "Codec",
+    "genesis-129": "Codec",
+    "mixed-genesis-policy": "Codec",
+    "legacy-retain-forbidden": "RetentionPolicy",
+    "legacy-block-in-network-chain": "Block",
+    "network-block-in-legacy-chain": "Block",
+    "retention-capacity-before-mutation": "ArchiveBacklog",
+    "genuine-opaque-proof-rejection": "Proof",
+    "body-count129": "Codec",
+    "claimed-frame-over-cap": "Codec",
+    "empty-frame-length-mismatch": "Block",
+    "reject-truncated-scan": "Codec",
+    "reject-reduced-full-length": "Codec"
+  },
+  "scope": "Independent reviewer actual allocated run. Compatibility using retained genuine public proofs, not distinct throughput/new private generation/network/Gate1/Gate3. CPU/wall sums are29 independent CLI starts including repeated provider/registry preparation; not service capacity."
+}

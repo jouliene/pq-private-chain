@@ -1,0 +1,46 @@
+{
+  "format": "NETWORK04-TRANSPORT-PREFREEZE-REVIEW01",
+  "scope": "Source-directed review; no transport execution/build/source GO",
+  "findings": [
+    {
+      "id": "T1",
+      "finding": "PUT did not require EOF before durable publication/ACK",
+      "status": "Patched source inspected: PUT extra-byte EOF, GET request EOF and client half-close"
+    },
+    {
+      "id": "T2",
+      "finding": "Normal subtree masks bypassable through same-UID other-process /proc roots",
+      "status": "Patched source inspected: private PID namespace, host descendant ELF identification, namespace/root readback; additional parent proof-copy masking pending author/Root"
+    },
+    {
+      "id": "T3",
+      "finding": "Endpoint-only producer/destination comparison did not establish claimed canonical state equality",
+      "status": "Patched source inspected: external producer.sqlite versus destination all-table comparison excludes only local catalog_id; explicit14-table-set assertion requested"
+    },
+    {
+      "id": "T4",
+      "finding": "Publication crash lost request byte/queue accounting before finally",
+      "status": "Patched source inspected: crash funding object records actual counted socket bytes, counters and usage before exit79"
+    },
+    {
+      "id": "T5",
+      "finding": "Failure cleanup dropped active role terminal status/resources and public diagnostic buffers",
+      "status": "Open; author requested to retain bounded failure receipts/rows and typed campaign failure"
+    }
+  ],
+  "reviewed_invariants": [
+    "Archive ACK follows file fsync/link/unlink/directory fsync",
+    "Archive is opaque byte availability only; proof/signature attempts zero explicitly",
+    "Validator new admission always genuine apply_expected; exact current canonical retry only after full identity decode",
+    "Coherent final mutated proof reconstructs body/header IDs and must reach Proof with full table invariance",
+    "Actual physical verification attempts include rejected candidate;3*n proofs/n source checks expected",
+    "RETAIN charges body growth, no pending export; physical disk sampled separately",
+    "Inclusive command span contains receive/parse/proof/commit/head and overlaps nested spans; never sum both",
+    "Cold page cache uncontrolled, loopback paced bytes with declared response latency, not WAN capacity"
+  ],
+  "remaining": [
+    "Final frozen source exact pins and closure review",
+    "Fresh role build then bounded diagnostic2 transport run",
+    "Actual96 path and accounting; none accepted yet"
+  ]
+}

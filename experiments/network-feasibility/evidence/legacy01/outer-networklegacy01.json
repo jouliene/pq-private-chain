@@ -1,0 +1,19 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "/home/neo/jouliene/pq-private-chain/.work/network01/replay.py",
+    "--label",
+    "networklegacy01"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 82096,
+  "process_exit": 0,
+  "system_seconds": 3.249179,
+  "timeout": false,
+  "user_seconds": 71.020676,
+  "wall_seconds": 75.65776492399164,
+  "wrapper_exit": 0
+}

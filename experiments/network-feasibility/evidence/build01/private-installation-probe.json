@@ -1,0 +1,19 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/usr/bin/python3.12",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.util\nfrom pathlib import Path\np=Path('experiments/compact-all-payments-v3/private04-proposal/next07/private_parent.py').resolve()\ns=importlib.util.spec_from_file_location('installed_parent',p)\nm=importlib.util.module_from_spec(s);s.loader.exec_module(m)\nm.Parent(Path('fresh/private-approval.json'))\nprint('FRESH_PRIVATE_INSTALLATION_CHECKED')\n"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 156724,
+  "process_exit": 0,
+  "system_seconds": 0.291226,
+  "timeout": false,
+  "user_seconds": 1.817174,
+  "wall_seconds": 2.2164265430765226,
+  "wrapper_exit": 0
+}

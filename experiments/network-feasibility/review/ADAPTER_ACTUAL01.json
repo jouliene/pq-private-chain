@@ -1,0 +1,846 @@
+{
+  "actual_calls": [
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init-retain",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.genesis",
+          "16777216"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 62872,
+        "process_exit": 0,
+        "system_seconds": 0.075972,
+        "timeout": false,
+        "user_seconds": 1.796345,
+        "wall_seconds": 2.1410104639362544,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "init-network-retain"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init-retain",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/g0.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/genesis-0.bin"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 61340,
+        "process_exit": 1,
+        "system_seconds": 0.056811,
+        "timeout": false,
+        "user_seconds": 1.866812,
+        "wall_seconds": 2.1665274729020894,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "genesis-0"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init-retain",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/g128.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/genesis-128.bin"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 63336,
+        "process_exit": 0,
+        "system_seconds": 0.07135699999999999,
+        "timeout": false,
+        "user_seconds": 1.856278,
+        "wall_seconds": 2.1919630769407377,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "genesis-128"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init-retain",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/g129.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/genesis-129.bin"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 61792,
+        "process_exit": 1,
+        "system_seconds": 0.060762,
+        "timeout": false,
+        "user_seconds": 1.8198949999999998,
+        "wall_seconds": 1.995043124887161,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "genesis-129"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/mixed.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/mixed.genesis"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 61472,
+        "process_exit": 1,
+        "system_seconds": 0.072338,
+        "timeout": false,
+        "user_seconds": 1.7866499999999998,
+        "wall_seconds": 2.089524394948967,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "mixed-genesis-policy"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/legacy.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/legacy.genesis"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 63004,
+        "process_exit": 0,
+        "system_seconds": 0.072672,
+        "timeout": false,
+        "user_seconds": 1.8208039999999999,
+        "wall_seconds": 2.322785938042216,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "init-legacy-for-version-negative"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init-retain",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/legacy-retain.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/legacy.genesis"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 26956,
+        "process_exit": 1,
+        "system_seconds": 0.004572,
+        "timeout": false,
+        "user_seconds": 0.0,
+        "wall_seconds": 0.01172444992698729,
+        "wrapper_exit": 0
+      },
+      "expected_error": "RetentionPolicy",
+      "name": "legacy-retain-forbidden"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 63176,
+        "process_exit": 0,
+        "system_seconds": 0.060710999999999994,
+        "timeout": false,
+        "user_seconds": 1.817361,
+        "wall_seconds": 2.196066319011152,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "empty-prefix"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "scan",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/empty.scan"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 62920,
+        "process_exit": 0,
+        "system_seconds": 0.062318,
+        "timeout": false,
+        "user_seconds": 1.8537379999999999,
+        "wall_seconds": 2.090108789037913,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "scan-empty-only"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "check-scan",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.genesis",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/empty.scan",
+          "1",
+          "1662f91b24abc893eaa7e452b60dc8ce671c1897a9d657dfc2d00145cc1e51976a8d889f749e5c471afcdc1c17aaa4d64a571b79d1d56b8dd786e3e6683e11f4",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/empty.checked"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 26964,
+        "process_exit": 0,
+        "system_seconds": 0.002467,
+        "timeout": false,
+        "user_seconds": 0.003701,
+        "wall_seconds": 0.016893472988158464,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "check-empty-only"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "replay",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/legacy-on-network.header",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/credit.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 67148,
+        "process_exit": 1,
+        "system_seconds": 0.070603,
+        "timeout": false,
+        "user_seconds": 1.898327,
+        "wall_seconds": 2.626521931961179,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Block",
+      "name": "legacy-block-in-network-chain"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "replay",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/legacy.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network-on-legacy.header",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/credit.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 67136,
+        "process_exit": 1,
+        "system_seconds": 0.07199,
+        "timeout": false,
+        "user_seconds": 1.841751,
+        "wall_seconds": 2.1558604249730706,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Block",
+      "name": "network-block-in-legacy-chain"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/credit.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 72776,
+        "process_exit": 0,
+        "system_seconds": 0.09182699999999999,
+        "timeout": false,
+        "user_seconds": 2.027732,
+        "wall_seconds": 2.7601932709803805,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "genuine-credit"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "init-retain",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/small-retain.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.genesis",
+          "1754520"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 62872,
+        "process_exit": 0,
+        "system_seconds": 0.07183099999999999,
+        "timeout": false,
+        "user_seconds": 1.835703,
+        "wall_seconds": 2.4971029029693455,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "init-small-retain"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/small-retain.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/credit.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 67144,
+        "process_exit": 1,
+        "system_seconds": 0.057335,
+        "timeout": false,
+        "user_seconds": 1.940505,
+        "wall_seconds": 2.3031643049325794,
+        "wrapper_exit": 0
+      },
+      "expected_error": "ArchiveBacklog",
+      "name": "retention-capacity-before-mutation"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/bad-proof.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 68412,
+        "process_exit": 1,
+        "system_seconds": 0.06393,
+        "timeout": false,
+        "user_seconds": 1.9288889999999999,
+        "wall_seconds": 2.391013132990338,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Proof",
+      "name": "genuine-opaque-proof-rejection"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 64744,
+        "process_exit": 1,
+        "system_seconds": 0.072876,
+        "timeout": false,
+        "user_seconds": 1.90278,
+        "wall_seconds": 2.2065154029987752,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "body-count129"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "replay",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/over-cap.header"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 64844,
+        "process_exit": 1,
+        "system_seconds": 0.049676,
+        "timeout": false,
+        "user_seconds": 1.90362,
+        "wall_seconds": 2.2739145630039275,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "claimed-frame-over-cap"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "replay",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/wrong-empty-length.header"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 64844,
+        "process_exit": 1,
+        "system_seconds": 0.067816,
+        "timeout": false,
+        "user_seconds": 1.9248020000000001,
+        "wall_seconds": 2.2124415120342746,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Block",
+      "name": "empty-frame-length-mismatch"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/payer.body"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 74044,
+        "process_exit": 0,
+        "system_seconds": 0.082338,
+        "timeout": false,
+        "user_seconds": 1.942394,
+        "wall_seconds": 2.2571142440428957,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "genuine-ordinary-followup"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 64844,
+        "process_exit": 0,
+        "system_seconds": 0.05866,
+        "timeout": false,
+        "user_seconds": 1.862236,
+        "wall_seconds": 2.382434025988914,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "empty-suffix-one"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "admit",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 64824,
+        "process_exit": 0,
+        "system_seconds": 0.06669599999999999,
+        "timeout": false,
+        "user_seconds": 1.8834309999999999,
+        "wall_seconds": 2.283504109014757,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "empty-suffix-two"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "scan",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/full.scan"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 66876,
+        "process_exit": 0,
+        "system_seconds": 0.07259299999999999,
+        "timeout": false,
+        "user_seconds": 1.874504,
+        "wall_seconds": 2.2415017320308834,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "scan-five-blocks"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "check-scan",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.genesis",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/full.scan",
+          "5",
+          "f54432940a2fe52bd722eb10cf03cd13a52fad00077b047ebe0ccc8ee4c463fd603eb19661514a5fdc062e4d3252b36254e856057ac6c0ae9d43d2af4e2b4eae",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/full.checked"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 33992,
+        "process_exit": 0,
+        "system_seconds": 0.004317,
+        "timeout": false,
+        "user_seconds": 0.00259,
+        "wall_seconds": 0.01805775600951165,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "check-five-blocks"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "check-scan",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.genesis",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/truncated.scan",
+          "5",
+          "f54432940a2fe52bd722eb10cf03cd13a52fad00077b047ebe0ccc8ee4c463fd603eb19661514a5fdc062e4d3252b36254e856057ac6c0ae9d43d2af4e2b4eae",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/bad.checked"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 33992,
+        "process_exit": 1,
+        "system_seconds": 0.0037449999999999996,
+        "timeout": false,
+        "user_seconds": 0.0028079999999999997,
+        "wall_seconds": 0.015178345958702266,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "reject-truncated-scan"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "check-scan",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.genesis",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/wrong-size.scan",
+          "5",
+          "f54432940a2fe52bd722eb10cf03cd13a52fad00077b047ebe0ccc8ee4c463fd603eb19661514a5fdc062e4d3252b36254e856057ac6c0ae9d43d2af4e2b4eae",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/wrong-size.checked"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 33992,
+        "process_exit": 1,
+        "system_seconds": 0.003364,
+        "timeout": false,
+        "user_seconds": 0.003364,
+        "wall_seconds": 0.014400093932636082,
+        "wrapper_exit": 0
+      },
+      "expected_error": "Codec",
+      "name": "reject-reduced-full-length"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "rollback",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "f54432940a2fe52bd722eb10cf03cd13a52fad00077b047ebe0ccc8ee4c463fd603eb19661514a5fdc062e4d3252b36254e856057ac6c0ae9d43d2af4e2b4eae"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 67004,
+        "process_exit": 0,
+        "system_seconds": 0.07195,
+        "timeout": false,
+        "user_seconds": 1.889705,
+        "wall_seconds": 2.3776628540363163,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "rollback-empty-five"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "rollback",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+          "e7eb05de6d0724d5cc4533d9ab38ae238494cb8937bf9222f32340da34d96ad234a861637b4d52108cdd2dbc5c959ddf130d1545fa093aff8919f2a531de7828"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 67000,
+        "process_exit": 0,
+        "system_seconds": 0.066006,
+        "timeout": false,
+        "user_seconds": 1.900189,
+        "wall_seconds": 2.5854176460998133,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "rollback-empty-four"
+    },
+    {
+      "actual_process": {
+        "affinity_cpu": 0,
+        "command": [
+          "/home/neo/jouliene/pq-private-chain/.work/network01/source/fresh/bin/ledger-cp03",
+          "head",
+          "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/review/.work/ADAPTER_ACTUAL01/network.sqlite",
+          "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063"
+        ],
+        "first_wait4": true,
+        "group_cleanup": "SIGKILL sent before reap",
+        "maxrss_kib": 64712,
+        "process_exit": 0,
+        "system_seconds": 0.069933,
+        "timeout": false,
+        "user_seconds": 1.861228,
+        "wall_seconds": 2.149241323932074,
+        "wrapper_exit": 0
+      },
+      "expected_error": null,
+      "name": "reopened-head"
+    }
+  ],
+  "binary_sha256": "2cf9a2a7ba05c5dfbd669c170519eda525559e0997bdaf52ac35e400cc082ddb",
+  "checks": [
+    "genesis0-and129-rejected-128-accepted-without-payments",
+    "legacy-block-in-network-chain:all14-unchanged",
+    "network-block-in-legacy-chain:all14-unchanged",
+    "retention-capacity-before-mutation:all14-unchanged",
+    "genuine-opaque-proof-rejection:all14-unchanged",
+    "body-count129:all14-unchanged",
+    "claimed-frame-over-cap:all14-unchanged",
+    "empty-frame-length-mismatch:all14-unchanged",
+    "genuine-credit-and-ordinary-version4",
+    "empty-prefix-and-two-suffixes",
+    "empty-only-and-mixed-scan",
+    "empty-rollback-and-reopen",
+    "reduced-size-reconstruction",
+    "truncated-scan-no-publication",
+    "RETAIN-full-bytes-pending0-no-eviction-policy-immutable"
+  ],
+  "distinct96_or_gate1_acceptance": false,
+  "failure": null,
+  "format": "NETWORK04-PUBLIC-ADAPTER-CONTROLS01",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "new_proofs": 0,
+  "passed": true,
+  "private_material": false,
+  "public_input_pins": {
+    "/home/neo/jouliene/pq-private-chain/.work/network01/source/docs/architecture/CP_NETWORK_04.json": "663bf4e49424f8259997cd71950391dc0f9f297e4ae4a87366329041d7d20831",
+    "/home/neo/jouliene/pq-private-chain/fixtures/cp03-reference/block01.header": "01a2e21dae71398f602d9b113070a34e362d53ca2544ae23c2aed3e29cea6a81",
+    "/home/neo/jouliene/pq-private-chain/fixtures/cp03-reference/credit0.body": "31ccc3bfc86d200175a03393f406730cf083baa8c9715b6966cef114363a69e8",
+    "/home/neo/jouliene/pq-private-chain/fixtures/cp03-reference/expected.json": "9fb2b11d5da81e6135056732185e352a21a8285363b4c4e0e9d5676d2c62f03f",
+    "/home/neo/jouliene/pq-private-chain/fixtures/cp03-reference/genesis.bin": "c06a98fc0db466237c59c07bb9670806e6217f475773d8c6b56935eec3aff640",
+    "/home/neo/jouliene/pq-private-chain/fixtures/cp03-reference/payer2x2.body": "8907fff56f7b6418c0752c8160cdbae13e10a0ddb19de884d89e99f924a5abe9"
+  },
+  "scope": "New adapter compatibility using retained genuine public proofs; public-only CLI processes, external SQL oracle/guard controls. No network, WAN, full byte-cap positive, late96 or throughput claim.",
+  "source_sha256": "4d40e0ce157c0362c8c63ad6ccf1985114f229bf2adf5dfd76fc0e0d755111c4"
+}

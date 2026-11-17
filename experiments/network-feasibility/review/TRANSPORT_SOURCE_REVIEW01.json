@@ -1,0 +1,59 @@
+{
+  "format": "NETWORK04-TRANSPORT-SOURCE-REVIEW01",
+  "decision": "GO for separately allocated fresh transport build and diagnostic2 campaign; no96/Gate1 acceptance",
+  "source_sha256": "a7f6efd64077d54d5adda35d77da50fae20420301c17f9c8a361bd79be35c24e",
+  "files": {
+    "CORE_SOURCE01.json": "79971fe908629d6cb4a7eef7474680e416b9e11db4252cae51a89c6d2e5239bc",
+    "Cargo.lock": "34537a69abfb5a5d84f6148f1ce3f8ebf1cd33d8b58d48b6869ae6bcd72f9b85",
+    "Cargo.toml": "fb1af71691dba7f94c65e7bce2aa941bb147008fd227c9884754809f57e0d701",
+    "README.md": "8c475db075e982f0d73eeb67faacc3fe2e37adf7325cdf4ba13643505457d3da",
+    "archive.py": "ebcbccb52d713fa491fa71aa222677a1e38812f33b2ab0a973c8ee383393a0cb",
+    "build.py": "fee9eadf33653465703c42e632a13ab7a039db4bdae3f9c7e66fba88711ec9be",
+    "campaign.py": "74c3bc7c29977d4526907cfadc35fe64b8c9e56c0902e559a22c59028f767b11",
+    "oracle.py": "9c122418ba87f00be44ed518ef9c8c4d984166397f6a4408e0f10771ad4a439c",
+    "prepare.py": "bb6905378e869d23eaa95807c0e4c94836d5d1478e3ba3b53a1c13c2a8a872bf",
+    "sender.py": "460f2c114ded0ad91cde96e7b6e0ed753641e8e865ef0f948b6b287d3deae447",
+    "src/main.rs": "ef8efb10628bb1ab4caa9effe08b80279e4345a7eb39353549751d7173b53e7c",
+    "src/metrics.rs": "02a77f0956257004ffde12b27a887150ef19b1ca8eddcc3cd9288fd3b3185f71",
+    "src/wire.rs": "597bc4719dbce2c9c04ee4c2614cf45f2e6cd801fa061a6532ef254b30bd9665",
+    "tests/schema04.py": "16ab5d173768f450bc05427238a8cb244755ee16decac91925dd764cab92976d",
+    "tests/source_controls.py": "f705518e69c6f1ec19b4d4ad17365e4eef89ef5f825ad2094e40ef3241a96f50"
+  },
+  "resolved_findings": [
+    "T1 PUT and GET EOF/half-close enforce one bounded request before durable ACK",
+    "T2 private PID/proc namespace plus actual native hostPID/root probes; actual workload/DB/prepared/archive/generated-proof copies masked",
+    "T3 external exact14-table producer/destination comparison excluding only local catalog_id",
+    "T4 funding publication crash records actual socket bytes/counters/resources before exit79",
+    "T5 failed/unfinished roles retain actual first-wait4 status/resources and bounded public diagnostics",
+    "New directory ancestors fsynced before role publication; ACK filesystem assumptions and process-crash scope explicit",
+    "Deny-list isolation accurately described rather than false filesystem whitelist"
+  ],
+  "accepted_boundaries": [
+    "Reviewed pinned validator only; unrelated read-only host paths visible",
+    "Archive stores SHA256-bound opaque bytes, no validity verdict",
+    "New-block receiver verifies each complete proof and exact state under atomic durable admission",
+    "Current canonical retry is exact full object identity plus current header readback, no re-admission or old-branch cached verdict",
+    "Positive/invalid/funding work counts must prove3N proof attempts and N source signatures",
+    "Receipt role wall includes external oracle idle; inclusive command overlaps nested spans and must not be summed",
+    "Loopback application-byte100Mbit/s pacing and40ms response delay; not TCP/WAN/year capacity",
+    "4GiB RLIMIT_AS per process and sampled tree RSS/disk, not enforced cgroup aggregate",
+    "External SQL/file oracles and frame construction are separate costs, no hidden node path helper"
+  ],
+  "reviewer_executed": [
+    "Exact15 frozen hashes",
+    "Python AST and Cargo TOML/lock parse",
+    "Source/caller/failure/measurement review"
+  ],
+  "author_only_evidence": {
+    "tiny_python_source_controls": 3,
+    "result_sha256": "d94993acb794dbb5a25ed76a0d074e09b852d264705d17a87bf74dca1b6d3956",
+    "no_native_or_proof": true
+  },
+  "material_unresolved_findings": [],
+  "required_runtime": [
+    "Actual fresh compiled closure/default ledger features/linked runtime readback",
+    "Diagnostic2 transport lifecycle and actual bwrap PID/root observations",
+    "Full role terminal receipts, exact transfer/storage/reverification accounting",
+    "Root resource review before96 allocation or larger campaigns"
+  ]
+}

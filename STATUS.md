@@ -45,7 +45,7 @@ arch_proof_alternatives (Astra/high): docs/network-feasibility/OBLIGATIONS.md,
 experiments/network-feasibility/review/, exact crypto/cross-layer review and later
 independent clean-checkout reproduction; does not author implementation.
 No nested agents; four active including Root. One heavy campaign at a time.
-Allocation02 terminal PASS: SOURCE02 has25 diagnostic structural controls, 1.381s/21,376KiB; no new proof or Gate3 result. Allocation03: Root fresh core build `.work/network01`, CPU0/4GiB, 900s watchdog. No other native/proof jobs may overlap. Witness correspondence allocation01 is
+Allocation02 terminal PASS: SOURCE02 has25 diagnostic structural controls, 1.381s/21,376KiB; no new proof or Gate3 result. Allocation03 terminal PASS: fresh core build142.656s/424560KiB, eight native signature controls and private-parent installation probe passed. Allocation04 terminal PASS:29 actual independent adapter CLI calls, retained genuine public proofs, malformed proof/all-table invariance and version/storage/empty controls. Allocation05 codec tests terminal PASS4/4. Allocation06 terminal PASS:53 legacy CLI plus native provider controls. Allocation07 terminal PASS:4 genuine new proofs,2 accepted blocks,31.770s/168176KiB; private streams RAM only. Allocation08 transport author fresh build LIVE session71150,180s/CPU0/4GiB; source a7f6efd64077d54d5adda35d77da50fae20420301c17f9c8a361bd79be35c24e. No other native/proof jobs may overlap. Witness correspondence allocation01 is
 terminal PASS: actual four-block CP03 hash/body/header/root/path correspondence,
 1.354s/29,812KiB, no new proof or actual wallet acceptance. Evidence under
 wallet-witness/evidence/cp03-correspondence01.json and cp03-fixture01.json. The
@@ -103,3 +103,28 @@ reviewed the contract and critical paths and refreshed5791explicit CORE entries
 Source GO permits a fresh build and bounded compatibility/diagnostic tests only.
 Next: prepare/discover/review/install/build network01, execute new adapter controls
 and legacy replay, then diagnostic2 (four fresh proofs) before full96 allocation.
+
+Fresh installation network01 approved SHA
+`a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751`;
+source candidate commit f5875ce. Raw build evidence under evidence/build01 and
+BUILD01.json. Next after allocation04: focused compiled network parser tests,
+legacy replay, then four-new-proof diagnostic2. Transport source review found
+EOF-before-ACK, PID namespace isolation and failure-accounting issues; author
+is repairing before its source freeze, build and actual network run.
+
+Independent adapter actual receipt SHA
+`e9830a40bbddfdf02acec8ed66e0cb254c001514a67346b6066199e49161cdf4`.
+The native-call wall sum54.973s includes29 fresh preparations, not throughput.
+Focused compiled tests verify independent byte/count limits, empty framing and
+fixed version/genesis selection; exact raw output is evidence/codec-tests01.*.
+
+Next after diagnostic2: inspect actual proof/body/state receipts, then allocate
+transport build and small two-payment network lifecycle after final source GO.
+Run the192-proof Gate1 generator only once these interfaces/controls pass.
+
+Diagnostic producer raw records copied under evidence/diagnostic01; public bodies
+remain in producer/.work/diagnostic01.public. No Gate1 claim at count2. Source
+review resolved transport EOF/ACK, PID-isolated fixture denial including generated
+proof copies, actual canonical equality and failure-evidence preservation.
+A wrong-digest transport preflight was rejected before native launch and retained;
+correct digest build is the only live heavy job. Await its terminal before network.

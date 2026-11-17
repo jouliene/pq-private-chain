@@ -1,0 +1,12 @@
+{
+  "actual_gate3_acceptance": false,
+  "diagnostic_not_cp03": true,
+  "source_approval_sha256": "4a3a6498001099fa195e19a81102552d091246a025374ddc33d781b0dbfd8af0",
+  "source_hashes": {
+    "README.md": "1b2792a3ac63f72a1f07e4c867478f3e55abcf217151490a149e31d370b7b4c7",
+    "controls.py": "bd22e3c413e903679c01f87acfa117e5c93132162b07744d981fa21e49b8aa4e",
+    "cp03_fixture.py": "179414248ab824c74b55ed32f51c33359c3306e07a4155f35d09018322c2645d",
+    "stream.py": "c878ef92ad834eaaa521af3be7d40355f11e20b5adaa5e863c99a313ec172a8e"
+  },
+  "source_pre_and_post_unchanged": true
+}

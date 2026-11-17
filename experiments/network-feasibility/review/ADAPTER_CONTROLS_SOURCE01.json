@@ -1,0 +1,12 @@
+{
+  "format": "NETWORK04-CONTROLS-SOURCE-CHECK01",
+  "source_sha256": "4d40e0ce157c0362c8c63ad6ccf1985114f229bf2adf5dfd76fc0e0d755111c4",
+  "checks": [
+    "Python AST",
+    "Four retained body/header identities independently reconstructed",
+    "Retained genesis identity and100M source credit"
+  ],
+  "native_execution": false,
+  "private_inputs": false,
+  "allocation_pending": true
+}

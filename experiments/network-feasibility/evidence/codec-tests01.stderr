@@ -1,0 +1,33 @@
+warning: structure field `RF` should have a snake case name
+  --> /home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-bounded-payment-v3/adapters/base/../../../compact-payment-v1/src/permutation.rs:19:5
+   |
+19 |     RF: usize,
+   |     ^^ help: convert the identifier to snake case: `rf`
+   |
+   = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: structure field `RP` should have a snake case name
+  --> /home/neo/jouliene/pq-private-chain/.work/network01/source/experiments/compact-bounded-payment-v3/adapters/base/../../../compact-payment-v1/src/permutation.rs:20:5
+   |
+20 |     RP: usize,
+   |     ^^ help: convert the identifier to snake case: `rp`
+
+warning: `compact-bounded-base-v3` (lib) generated 2 warnings
+   Compiling cp03-bounded-history-codec v0.1.0 (/home/neo/jouliene/pq-private-chain/.work/network01/source/crates/ledger-cp03/adapters/history)
+warning: function `body` is never used
+   --> /home/neo/jouliene/pq-private-chain/.work/network01/source/crates/ledger-cp03/adapters/history/../../../../experiments/compact-history-v3/src/native_sha3.rs:103:8
+    |
+103 | pub fn body(public_prefix:&[u8],proof_digest:&[u8;64])->Result<[u8;64],Error>{framed(b"PQPC/CP3/BODY",public_prefix,proof_digest)}
+    |        ^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `diagnostic_raw` is never used
+   --> /home/neo/jouliene/pq-private-chain/.work/network01/source/crates/ledger-cp03/adapters/history/../../../../experiments/compact-history-v3/src/native_sha3.rs:105:15
+    |
+105 | pub(crate) fn diagnostic_raw(public:&[u8],chunk:usize)->Result<[u8;64],Error>{
+    |               ^^^^^^^^^^^^^^
+
+warning: `cp03-bounded-history-codec` (lib test) generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 1.14s
+     Running unittests ../../../../experiments/compact-history-v3/src/lib.rs (.work/network01/target/release/deps/cp03_bounded_history_codec-eb68ed4532f7ba2a)

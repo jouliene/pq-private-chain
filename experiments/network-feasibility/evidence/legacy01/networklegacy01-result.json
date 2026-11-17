@@ -1,0 +1,40 @@
+{
+  "actual_cli_calls": 53,
+  "binary_sha256": "2cf9a2a7ba05c5dfbd669c170519eda525559e0997bdaf52ac35e400cc082ddb",
+  "checks": [
+    "fresh-native-valid-invalid-wrong-key",
+    "genuine-credit-three-ordinary-accounting-endpoint",
+    "scan-endpoint-rollback-reinclusion-core-replay",
+    "source-solo-current-late-conflict",
+    "nf-solo-current-late-conflict",
+    "opaque-proof-all14-and-genuine-followup",
+    "source-signature-all14-and-genuine-followup",
+    "receipt-all14-and-genuine-followup",
+    "fee-all14-and-genuine-followup",
+    "debit-all14-and-genuine-followup",
+    "wrong-registered-key-original-proof",
+    "late-valid-plus-invalid-all14"
+  ],
+  "credit": 100000000,
+  "declared_g": 100000000,
+  "endpoint": {
+    "blockId": "e0989e94b323032f5cf803bc2df7ef3c356176f23f5d87ecece7ba35c78de9852767d848dda93d9dfd8be0a38df10f0166092745d00b0e223215ba89e55fe0ca",
+    "chain": "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+    "genesisId": "5239c971fa0b3f2784c869bb2581239c92be50337403f0f08e52235d357d324a27bca432fb5f880d57c50561ea8a3c55e4ebba05110cea768c25c6a4a03c6fe4",
+    "height": "4"
+  },
+  "fee_sum": 8453371,
+  "final_private_recovery_reproduced": false,
+  "format": "CP03-AUDIT-REPLAY01",
+  "implied_private_supply": 91546629,
+  "installation_sha256": "6c2effcc69bf0a21c32754c6318c35ea434e0d256177af53573b69bf5ad36112",
+  "label": "networklegacy01",
+  "new_proofs_created": false,
+  "opaque_proof_scope": "same canonical frame/statement with one opaque-root byte; exact Ledger Proof rejection, not direct inner Crypto error instrumentation",
+  "private_inputs": false,
+  "process_exit": 0,
+  "source_count": 1,
+  "supply_scope": "Public accounting identity only; not reconstruction of private witnesses",
+  "unconsumed_source_liabilities": 0,
+  "whole_protocol_security_or_resource_pass": false
+}

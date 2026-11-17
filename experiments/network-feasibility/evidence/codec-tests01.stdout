@@ -1,0 +1,9 @@
+
+running 4 tests
+test genesis::network04_tests::selected_genesis_profile_source_bounds ... ok
+test history::network04_tests::empty_shape_and_exact_reduced_full_length ... ok
+test history::network04_tests::independent_count_and_byte_caps ... ok
+test history::network04_tests::version_selected_before_empty_stream_acceptance ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

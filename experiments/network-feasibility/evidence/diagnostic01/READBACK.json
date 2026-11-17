@@ -1,0 +1,50 @@
+{
+  "costs_by_arity": {
+    "0": {
+      "body_bytes": 3502834,
+      "caller_wall_seconds": 10.440988264999998,
+      "count": 2,
+      "proof_bytes": 3483988,
+      "worker_wall_seconds": 3.690496906172484
+    },
+    "2": {
+      "body_bytes": 3478188,
+      "caller_wall_seconds": 10.357427398,
+      "count": 2,
+      "proof_bytes": 3468436,
+      "worker_wall_seconds": 3.667420574929565
+    }
+  },
+  "endpoint": {
+    "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+    "fee_escrow": "8458046",
+    "height": "2",
+    "leaf_count": "8",
+    "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+    "unconsumed_liabilities": "0"
+  },
+  "format": "NETWORK04-NEW-PROOF-DIAGNOSTIC01",
+  "full_network96_gate": false,
+  "new_genuine_proofs": 4,
+  "ordinary_count": 2,
+  "passed": true,
+  "public_records": {
+    "claim.json": {
+      "bytes": 337,
+      "sha256": "2a8897095c75f84dc1909626369e9cf40512a4bccd029a44da002f083a4d8ba5"
+    },
+    "proof-costs.json": {
+      "bytes": 2539,
+      "sha256": "d301455082cc0a149b82b897d49040391d2f87927d7f492eed76faab3c8447f0"
+    },
+    "receipt.json": {
+      "bytes": 1452,
+      "sha256": "b74e491098c76b45208402b87a487303c8475a36a907263cc1004f10e3bd6be9"
+    },
+    "workload.json": {
+      "bytes": 1689,
+      "sha256": "f10e50f5776ff2c48d8afbb58287192dee0a28aeb194a73e4111d5710d128b1d"
+    }
+  },
+  "scope": "Successful new proof generator, receipt recovery at funded history and producer admission only. No remote transport or Gate3 witness/recovery acceptance."
+}

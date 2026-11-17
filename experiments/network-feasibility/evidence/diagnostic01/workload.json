@@ -1,0 +1,52 @@
+{
+  "format": "CP04-NETWORK-BLOCK-WORKLOAD01",
+  "block_version": 4,
+  "ordinary_count": 2,
+  "chain": "d83b4151f50b612365631660cdb1a06b7eb53d1f0d510dd5df2bf9e72f3331a5",
+  "genesis": {
+    "path": "genesis.bin",
+    "sha256": "83aee5473e1c21beae627b36d60c9d5cf339dae30e84950f59decd36155c8fd5"
+  },
+  "blocks": [
+    {
+      "header": {
+        "path": "block001.header",
+        "sha256": "e449ca149f905ad2cc163c0edb39395a2eee5dfd2410d0e271c3c69c853a4b93"
+      },
+      "bodies": [
+        {
+          "path": "credit000.body",
+          "sha256": "f50b734bde4a176e7ec36ac7c5c121fa9845f631af0a08d6dda46d995496336e"
+        },
+        {
+          "path": "credit001.body",
+          "sha256": "a60c72a2262cb12931a0d8472c99f84d405c810ba41bedbda0ea662f6ec6789b"
+        }
+      ]
+    },
+    {
+      "header": {
+        "path": "block002.header",
+        "sha256": "8ea7bc2cec6fec879ec9f01195551d696f5f2cbf5f42f71091ef566a19e3c0ec"
+      },
+      "bodies": [
+        {
+          "path": "ordinary000.body",
+          "sha256": "be575600d6c88f351368be83b4e5fb55870ef66010dc766c420b3b7bdcfe9dcd"
+        },
+        {
+          "path": "ordinary001.body",
+          "sha256": "c3cb1a4cb2c0189730b62cc56da3359a88adaa3a6ec3ef576831b684da486454"
+        }
+      ]
+    }
+  ],
+  "endpoint": {
+    "height": "2",
+    "block_id": "786b4138105052dca4e6d901e00bdf9f1a4518c73076de2cae9c10005be4ac1cfb4d1561dc456f173790b1c8ca0ecd59c72c4f3e1517c292efc7a705b63dd89d",
+    "leaf_count": "8",
+    "root_le": "dcd82980f6087f842d5a4f3917ee7b214ef40dc065b2a93f6b95a3ecf823d75c5de97fcff7df4ef84385f6b970f0151bf944ec769c792a8f0937d3db1d5398fc",
+    "fee_escrow": "8458046",
+    "unconsumed_liabilities": "0"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "format": "CP04-PRODUCER-PROOF-COSTS01",
+  "credit_proofs": 2,
+  "ordinary_proofs": 2,
+  "rows": [
+    {
+      "body": "credit000.body",
+      "arity": 0,
+      "private_proving_call_wall_seconds": 5.280988826999999,
+      "worker_wall_seconds": 1.8631903050700203,
+      "worker_user_seconds": 1.7725879999999998,
+      "worker_system_seconds": 0.06209,
+      "worker_peak_rss_kib": 168168,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net-diagnostic01-credit-000.json",
+      "parent_receipt_sha256": "05811814f31e6fdb19c02b924ef52f3151201b8f7bdc8b39b40384cb89bd0f55",
+      "proof_bytes": 1741386,
+      "body_bytes": 1750809
+    },
+    {
+      "body": "credit001.body",
+      "arity": 0,
+      "private_proving_call_wall_seconds": 5.159999437999999,
+      "worker_wall_seconds": 1.827306601102464,
+      "worker_user_seconds": 1.747907,
+      "worker_system_seconds": 0.056061,
+      "worker_peak_rss_kib": 168172,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net-diagnostic01-credit-001.json",
+      "parent_receipt_sha256": "8af84a4d8f6b6be47b4d0175911614fb3cfe5e0ad81f61e82a94d8aac30b440f",
+      "proof_bytes": 1742602,
+      "body_bytes": 1752025
+    },
+    {
+      "body": "ordinary000.body",
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.164694756000001,
+      "worker_wall_seconds": 1.8223622109508142,
+      "worker_user_seconds": 1.728268,
+      "worker_system_seconds": 0.07076,
+      "worker_peak_rss_kib": 168044,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net-diagnostic01-ordinary-000.json",
+      "parent_receipt_sha256": "48668e28e1e83775feaf02b8d72a0c8d4286bcfc0c171bafe3eaf9dbfe2a3c1d",
+      "proof_bytes": 1728778,
+      "body_bytes": 1733654
+    },
+    {
+      "body": "ordinary001.body",
+      "arity": 2,
+      "private_proving_call_wall_seconds": 5.192732641999999,
+      "worker_wall_seconds": 1.845058363978751,
+      "worker_user_seconds": 1.769212,
+      "worker_system_seconds": 0.051975999999999994,
+      "worker_peak_rss_kib": 168176,
+      "parent_receipt": "experiments/compact-all-payments-v3/evidence/net-diagnostic01-ordinary-001.json",
+      "parent_receipt_sha256": "ef56afd5bdd88adf4bad6dd4de01696e0612547be47da4f1bfbdf5b72d8aae40",
+      "proof_bytes": 1739658,
+      "body_bytes": 1744534
+    }
+  ],
+  "scope": "New genuine proof generation only; caller wall includes pre/postflight. Worker CPU/RSS from actual first wait4. Not live wallet throughput or whole process-tree simultaneous RSS."
+}

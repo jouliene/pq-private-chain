@@ -1,0 +1,25 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/usr/bin/prlimit",
+    "--as=268435456",
+    "--cpu=30",
+    "--core=0",
+    "--nofile=64",
+    "--",
+    "/usr/bin/python3",
+    "-I",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-witness/controls.py",
+    "--output",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-witness/evidence/structural02.json"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 21376,
+  "process_exit": 0,
+  "system_seconds": 0.009,
+  "timeout": false,
+  "user_seconds": 1.371028,
+  "wall_seconds": 1.380536810029298,
+  "wrapper_exit": 0
+}

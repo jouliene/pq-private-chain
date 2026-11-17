@@ -1,0 +1,28 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+    "test",
+    "--offline",
+    "--locked",
+    "--release",
+    "-j1",
+    "--manifest-path",
+    "/home/neo/jouliene/pq-private-chain/.work/network01/fresh/Cargo.toml",
+    "-p",
+    "cp03-bounded-history-codec",
+    "--lib",
+    "network04_tests",
+    "--",
+    "--test-threads=1"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 172224,
+  "process_exit": 0,
+  "system_seconds": 0.131897,
+  "timeout": false,
+  "user_seconds": 0.942047,
+  "wall_seconds": 1.166527039022185,
+  "wrapper_exit": 0
+}

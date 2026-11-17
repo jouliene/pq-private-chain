@@ -1,0 +1,25 @@
+{
+  "format": "WALLET-WITNESS-INDEPENDENT-REVIEW02",
+  "source_sha256": "4a3a6498001099fa195e19a81102552d091246a025374ddc33d781b0dbfd8af0",
+  "actual_author_result_sha256": "b0cd6826d14c8cd795abcebc80d7ec544a7faedfc5c17f83af2324afd271bdd7",
+  "author_receipt_sha256": "7ac82c2cf487a812ec5be28665b27891f725626a9c2a52332bdf4326fc3c451a",
+  "decision": "Both prior source findings resolved; retain algorithm direction for later resource-gated integration",
+  "resolved": [
+    "Explicit opt-in empty blocks preserve tree/spentness and advance head/anchor/journal",
+    "Single active epoch; finish/abort release independent working state; valid rewind invalidates active epoch"
+  ],
+  "algorithm_unchanged": "SelectiveFrontier append/discovery/shared-right-subtree capture/non-consuming view are byte-identical to prior reviewed source",
+  "memory_qualification": "Big-O bound valid for bounded active epoch/journal/owned-note inventory; caller-held views and proof buffers remain integration obligations; no Python erasure claim",
+  "independently_executed_this_review": [
+    "Exact source/result/retained snapshot hashes and source diff inspection"
+  ],
+  "actual_author_controls": {
+    "count": 25,
+    "process_exit": 0,
+    "wall_seconds": 1.380536810029298,
+    "maxrss_kib": 21376,
+    "diagnostic_hash_not_cp03": true
+  },
+  "new_native_or_proof_execution": false,
+  "gate3_acceptance": false
+}

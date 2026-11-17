@@ -1,0 +1,246 @@
+{
+  "actual_build": {
+    "affinity_cpu": 0,
+    "command": [
+      "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/cargo",
+      "build",
+      "--offline",
+      "--locked",
+      "--release",
+      "-j1",
+      "--message-format=json",
+      "--manifest-path",
+      "/home/neo/jouliene/pq-private-chain/.work/network01/fresh/Cargo.toml",
+      "--bins"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 424560,
+    "process_exit": 0,
+    "system_seconds": 5.57661,
+    "timeout": false,
+    "user_seconds": 131.598276,
+    "wall_seconds": 142.65638268599287,
+    "wrapper_exit": 0
+  },
+  "binaries": {
+    "compact-all-payments-v3": {
+      "path": "/home/neo/jouliene/pq-private-chain/.work/network01/target/release/compact-all-payments-v3",
+      "sha256": "1b298ee6c9da502e9b0a15a187f9fd32e545ddeed45e2a1204667a7933b3421b"
+    },
+    "cp03-hash-core": {
+      "path": "/home/neo/jouliene/pq-private-chain/.work/network01/target/release/cp03-hash-core",
+      "sha256": "7c43744ccda8979a920152922522656b12a929347d9a197a3cd5554eed96fb36"
+    },
+    "ledger-cp03": {
+      "path": "/home/neo/jouliene/pq-private-chain/.work/network01/target/release/ledger-cp03",
+      "sha256": "2cf9a2a7ba05c5dfbd669c170519eda525559e0997bdaf52ac35e400cc082ddb"
+    },
+    "provider-controls": {
+      "path": "/home/neo/jouliene/pq-private-chain/.work/network01/target/release/provider-controls",
+      "sha256": "ea36b45ec1668778e4922687283651ce0651530d2a5928878b7c61dfc80a9577"
+    }
+  },
+  "core_sha256": "29f2478662051a44c0d4f9ee87a55a145e9c2a381911251c3eb375460f80501b",
+  "format": "NETWORK04-FRESH-BUILD01",
+  "installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "parent_probe": {
+    "affinity_cpu": 0,
+    "command": [
+      "/usr/bin/python3.12",
+      "-I",
+      "-B",
+      "-c",
+      "import importlib.util\nfrom pathlib import Path\np=Path('experiments/compact-all-payments-v3/private04-proposal/next07/private_parent.py').resolve()\ns=importlib.util.spec_from_file_location('installed_parent',p)\nm=importlib.util.module_from_spec(s);s.loader.exec_module(m)\nm.Parent(Path('fresh/private-approval.json'))\nprint('FRESH_PRIVATE_INSTALLATION_CHECKED')\n"
+    ],
+    "first_wait4": true,
+    "group_cleanup": "SIGKILL sent before reap",
+    "maxrss_kib": 156724,
+    "process_exit": 0,
+    "system_seconds": 0.291226,
+    "timeout": false,
+    "user_seconds": 1.817174,
+    "wall_seconds": 2.2164265430765226,
+    "wrapper_exit": 0
+  },
+  "passed": true,
+  "provider_controls": {
+    "controls": [
+      {
+        "expected_valid": true,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0.001021000000000001,
+          "self_user_seconds": 0.0010360000000000369,
+          "waited_child_system_seconds": 0.01193,
+          "waited_child_user_seconds": 0.047721,
+          "wall_seconds": 0.063266346
+        },
+        "name": "genuine_valid_a",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": true,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 5.7999999999999025e-05,
+          "self_user_seconds": 0.0020139999999999603,
+          "waited_child_system_seconds": 0.013497000000000002,
+          "waited_child_user_seconds": 0.046277,
+          "wall_seconds": 0.064171672
+        },
+        "name": "genuine_valid_b",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0.0025190000000000004,
+          "self_user_seconds": 0,
+          "waited_child_system_seconds": 0.014998999999999995,
+          "waited_child_user_seconds": 0.04599700000000001,
+          "wall_seconds": 0.083782112
+        },
+        "name": "different_registered_key",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0.001465000000000001,
+          "self_user_seconds": 0.0005929999999999547,
+          "waited_child_system_seconds": 0.015629000000000004,
+          "waited_child_user_seconds": 0.04200099999999998,
+          "wall_seconds": 0.062027318
+        },
+        "name": "corrupt_signature",
+        "native_worker_expected": true,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 1.000000000001e-06,
+          "self_user_seconds": 1.999999999946489e-06,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 3.358e-06
+        },
+        "name": "short_key",
+        "native_worker_expected": false,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0,
+          "self_user_seconds": 1.0000000000287557e-06,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 3.145e-06
+        },
+        "name": "short_message",
+        "native_worker_expected": false,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0,
+          "self_user_seconds": 1.0000000000287557e-06,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 2.754e-06
+        },
+        "name": "short_signature",
+        "native_worker_expected": false,
+        "passed": true
+      },
+      {
+        "expected_valid": false,
+        "measurement": {
+          "cumulative_self_maxrss_kib": 22672,
+          "cumulative_waited_child_maxrss_kib": 50684,
+          "self_system_seconds": 0,
+          "self_user_seconds": 2.0000000000575113e-06,
+          "waited_child_system_seconds": 0,
+          "waited_child_user_seconds": 0,
+          "wall_seconds": 2.978e-06
+        },
+        "name": "signature_suffix",
+        "native_worker_expected": false,
+        "passed": true
+      }
+    ],
+    "format": "CP03-ACTUAL-PROVIDER-CONTROLS02",
+    "operational_fault_injection": false,
+    "payment_or_issuance_admission": false,
+    "preparation": {
+      "cumulative_self_maxrss_kib": 22672,
+      "cumulative_waited_child_maxrss_kib": 0,
+      "self_system_seconds": 0.021056000000000002,
+      "self_user_seconds": 0.821072,
+      "waited_child_system_seconds": 0,
+      "waited_child_user_seconds": 0,
+      "wall_seconds": 0.917863557
+    },
+    "private_input": false,
+    "scope": "public files read before timing; CPU self plus separately waited workers; RSS counters cumulative, not per-call or simultaneous tree; provider destruction outside preparation/verification samples"
+  },
+  "raw_evidence": {
+    "experiments/network-feasibility/evidence/build01/build.json": {
+      "bytes": 590,
+      "sha256": "bb483aa0537d6523ddedf1de3de5c2fa7e8e1c02c860a6d6154bcc5582391921"
+    },
+    "experiments/network-feasibility/evidence/build01/build.stderr": {
+      "bytes": 5869,
+      "sha256": "74da0b83f1fe1921c22f1980c149608b18bfb994201cca341caf2dcd99ea0b83"
+    },
+    "experiments/network-feasibility/evidence/build01/build.stdout": {
+      "bytes": 130141,
+      "sha256": "ba59125871740df70df786e54c0ae9ed792666ad178c497024f0a74f9525926b"
+    },
+    "experiments/network-feasibility/evidence/build01/private-installation-probe.json": {
+      "bytes": 728,
+      "sha256": "34f338e98a7ea780f7b3b355fda08188f9b8f84daea6fdc188b18145b9d86faf"
+    },
+    "experiments/network-feasibility/evidence/build01/private-installation-probe.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "experiments/network-feasibility/evidence/build01/private-installation-probe.stdout": {
+      "bytes": 35,
+      "sha256": "63cd65a73e6c9791bc7a1d7e5b0e1c6922a39264c47379d5a2accb0fd1d22127"
+    },
+    "experiments/network-feasibility/evidence/build01/provider-controls.json": {
+      "bytes": 548,
+      "sha256": "a066fa2332761f25041e09b18f1c107e04d54909475dcf04f8ade77b913bbdde"
+    },
+    "experiments/network-feasibility/evidence/build01/provider-controls.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "experiments/network-feasibility/evidence/build01/provider-controls.stdout": {
+      "bytes": 3564,
+      "sha256": "a5408bd67efacd6f5ad839d5937ff6067c75a3e7cd7b1f0b352db5d7c9b604f6"
+    }
+  },
+  "runtime_approval_sha256": "57b54ee270b80ce12b168312e4155f8f94c7258f7333f70bd9b29dc7de080f2b",
+  "scope": "Fresh build and runtime/provider installation controls only. No new payment proof or network Gate1 acceptance.",
+  "source_commit": "f5875ce97d9f2154ad544cf8fb047f5ba9ccf17c"
+}

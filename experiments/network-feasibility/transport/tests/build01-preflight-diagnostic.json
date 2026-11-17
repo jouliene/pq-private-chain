@@ -1,0 +1,8 @@
+{
+  "scope": "launcher approval preflight only; no Cargo/heavy child or build directory created",
+  "error": "Incorrectly expanded abbreviated installation SHA; explicit digest validation rejected",
+  "incorrect_argument": "a39001d947cd7288ec28a730b9fef2b82f1bf26a2b0fbd9ebf6571886a1184c9",
+  "actual_measured_installation_sha256": "a39001d9a32e0129ea625370379025f79e41c3c1e37076ff9309be23d9d8b751",
+  "source_unchanged": true,
+  "exit_code": 1
+}

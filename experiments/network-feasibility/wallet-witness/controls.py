@@ -167,9 +167,53 @@ def main():
     checks += ['ordering-parent-count-root-failures-atomic', 'wrong-endpoint-no-published-view',
                'unknown-common-prefix-rejected', 'deep-rewind-explicit-replay-required',
                'owned-capacity-overflow-aborts-without-dropping-note']
-    result = {'format': 'WALLET-WITNESS-STRUCTURAL-CONTROLS01', 'passed': True, 'checks': checks,
+
+    # Network04's explicit empty policy advances branch context but cannot alter
+    # leaves, witnesses or spentness. Repeated roots renew the same wire anchor;
+    # they are deliberately NOT used as an expiry demonstration.
+    empty_wallet = WalletWitnesses(g, node, ZERO, max_owned=4, rewind_blocks=8, allow_empty_blocks=True)
+    first_empty = Block(1, g.identity, b'public first empty', 0, g.root, ())
+    first_empty_head = Head(1, first_empty.identity, 0, g.root)
+    accept(empty_wallet, first_empty, first_empty_head)
+    note_block, note_head, note_leaves = generated(first_empty_head, [], (leaf(9000), leaf(9001)), b'after-empty')
+    accept(empty_wallet, note_block, note_head, [(0, 'retained-note')])
+    path_before_empty = empty_wallet.witness('retained-note').siblings
+    tip = note_head
+    for height in range(3, 271):
+        identity = hashlib.sha3_512(tip.identity + height.to_bytes(8, 'little')).digest()
+        empty_block = Block(height, tip.identity, identity, tip.count, tip.root, ())
+        tip = Head(height, identity, tip.count, tip.root)
+        accept(empty_wallet, empty_block, tip)
+    assert empty_wallet.witness('retained-note').siblings == path_before_empty
+    assert empty_wallet.anchor_eligible(note_head.root, note_head.count)
+    assert empty_wallet.state.head == tip and len(empty_wallet.history) == 9
+    bad_empty = Block(tip.height + 1, tip.identity, b'bad-empty', tip.count, ZERO, ())
+    epoch = empty_wallet.epoch(Head(bad_empty.height, bad_empty.identity, bad_empty.count, bad_empty.root))
+    rejection(lambda: epoch.apply(bad_empty, lambda *_: None))
+    unchanged = empty_wallet.state.head
+    valid_empty = Block(tip.height + 1, tip.identity, b'valid-empty', tip.count, tip.root, ())
+    epoch = empty_wallet.epoch(Head(valid_empty.height, valid_empty.identity, valid_empty.count, valid_empty.root))
+    rejection(lambda: epoch.apply(valid_empty, lambda *_: None, ['retained-note']))
+    assert empty_wallet.state.head == unchanged and empty_wallet.witness('retained-note').siblings == path_before_empty
+    legacy_empty = wallet.epoch(Head(head.height + 1, b'legacy-empty', head.count, head.root))
+    rejection(lambda: legacy_empty.apply(Block(head.height + 1, head.identity, b'legacy-empty', head.count, head.root, ()), lambda *_: None))
+    # No second active epoch allocation is allowed, even by direct construction.
+    one = fork.epoch(good_head)
+    rejection(lambda: fork.epoch(good_head))
+    one.abort()
+    assert fork.active_epoch is None and one.state is None and not one.history
+    completed = fork.epoch(good_head)
+    completed.apply(good, lambda *_: None)
+    completed.finish()
+    assert fork.active_epoch is None and completed.state is None and not completed.history
+    checks += ['explicit-network-empty-policy-first-and-trailing', 'empty-root-or-spent-change-rejected',
+               'empty-head-anchor-and-journal-advance', 'repeated-empty-root-is-not-expiry-evidence',
+               'legacy-empty-policy-still-rejects', 'one-active-epoch-enforced',
+               'aborted-and-finished-epochs-release-private-state']
+    result = {'format': 'WALLET-WITNESS-STRUCTURAL-CONTROLS02', 'passed': True, 'checks': checks,
         'changing_roots': 260, 'maximum_algorithm_payload_counts': peak,
         'rewind_checkpoint_cap': 9, 'recent_anchor_cap': 256,
+        'active_epoch_cap': 1, 'network_empty_policy_diagnostic_controls': True,
         'full_oracle_retained_only_in_test': True, 'algorithm_has_file_or_network_api': False,
         'diagnostic_hash_not_cp03': True, 'actual_wallet_discovery': False,
         'genuine_new_proof_or_admission': False, 'actual_gate3_expiry_or_reorg_acceptance': False,

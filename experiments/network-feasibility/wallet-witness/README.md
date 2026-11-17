@@ -28,6 +28,10 @@ A=256 the retained anchor window. Current frontier/path/waiting-reference state
 is O(D+KD); no O(N) public tree is hidden in it. Non-consuming views temporarily
 copy O(D+KD) state. The simple private checkpoint journal costs conservatively
 O((R+2)(D+KD+A)) state/references, plus shared empty subtrees and fixed block intake.
+Only one active epoch is permitted. Finished/aborted epoch handles release their
+working state/journal; valid rewind aborts the in-flight epoch. Caller-held view
+copies and proof buffers must also be bounded by the eventual integration; this
+is not a claim against arbitrary caller allocation or Python memory erasure.
 This deliberately pays for rollback rather than assuming it is free. Digest
 payloads are64bytes for CP03; Python object/set/dict overhead is additional.
 The controls use K=4,R=8, not an owner-approved production wallet limit. Capacity
@@ -58,6 +62,10 @@ draft can remain eligible if its common-prefix funding/anchor remain selected
 and its nullifier is unspent. Orphan-only funding/anchors are rejected. Advancing
 unchanged roots could reintroduce the same wire anchor; the diagnostic expiry
 control appends leaves and changes roots at every height instead.
+The explicit `allow_empty_blocks` option supports Network04 head/anchor/journal
+advance while preserving root/count and owned spentness. It defaults false for
+the legacy diagnostic contract. Actual empty fee/liability and wire checks belong
+to the canonical authenticated history adapter, not this tree-only prototype.
 
 ## Executable cheap controls
 
@@ -68,12 +76,16 @@ python3 -I experiments/network-feasibility/wallet-witness/controls.py \
 
 The public generator and full sparse oracle are in `controls.py`, outside the
 algorithm. They intentionally use a **diagnostic hash, not CP03**, for260changing
-roots. The18named controls check dynamic late discovery, refreshed paths, spent
+roots. The original18named SOURCE01 controls check dynamic late discovery, refreshed paths, spent
 removal, policy eligibility at heights256/257, branch replacement, orphan-only
 versus common-prefix drafts, stale epochs, malformed ordering/count/roots,
 endpoint atomicity, capacity and explicit deep-replay requirements. Passing this
 control does not demonstrate actual ledger expiry/reorg rejection or new proofs.
-`evidence/structural01.json` is an actual successful cheap control result.
+`evidence/structural01.json` is an actual successful cheap SOURCE01 control result.
+SOURCE01 and its exact bytes/results are preserved in the Root checkpoint and
+`evidence/cp03-correspondence01.sources/`. SOURCE02 adds explicit empty-block,
+single-active-epoch and released-state controls; it must use a new result label.
+The old result does not claim execution of those successor controls.
 
 The separate short fixture bridge uses actual CP03 hashes and the existing
 published genuine public bodies:
