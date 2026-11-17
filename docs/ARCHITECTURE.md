@@ -5,8 +5,11 @@
 Retain individual complete CP03 private-payment proofs for the measured finite
 research participation model. Authenticated common-history continuation is now
 implemented; its independent acceptance/publication status is in STATUS.md.
-The next nominated experiment addresses materially smaller complete payment
-proofs; the payment/history cost decision precedes a full consensus build.
+The [complete-payment size experiment](../experiments/payment-size/RESULTS.md)
+reduced complete 2x2 payments to about 1.48 MB with verifier-reconstructed
+preprocessing and transcript-derived deduplication. Preserve CP03 and defer
+ledger integration of this encoding. The tenfold screen remains open. The
+payment/history cost decision precedes a full consensus build.
 Standalone accumulated-valid-work PoW
 remains the preferred eventual consensus direction, not global optimality
 or a deployed permissionless network. The owner prefers CPU-friendly public work

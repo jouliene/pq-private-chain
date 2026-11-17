@@ -1,0 +1,78 @@
+{
+  "binary_sha256": "60a76701f1de3cc5b5f8ceb1d425aa44a61483ce1c8479fe0b20a2ac78bd3f13",
+  "rows": [
+    {
+      "case": "psizerev01 against psizerev02",
+      "inputs": {
+        "body": "0af780e2ceb9dc897ffbe5d84b5c783848777fc151d5e4b963e2c20d99070c21",
+        "expected": "fb60674880fd861188da69b83e579063c72d3023dda0a55c2dbf9e869b305f58"
+      },
+      "outcome": "ExpectedStatement",
+      "exit": 1
+    },
+    {
+      "case": "psizerev02 against psizerev03",
+      "inputs": {
+        "body": "d32dde43277c5ead542d6d0aa05f5130fe1d86589ca0f640a75efcd1db5394b6",
+        "expected": "5a3c16a99aa57feb30766e5e3abb83505e1dba31823d825ce2c1a6db74a816bf"
+      },
+      "outcome": "ExpectedStatement",
+      "exit": 1
+    },
+    {
+      "case": "psizerev03 against psizerev01",
+      "inputs": {
+        "body": "7633b3e2f4e164ad0283aa7b5d83838ec315e8a733ed13a779135f7259686562",
+        "expected": "642ab09b4dcef2c06472818362fcc9ae4811d92154a2e2844c7109a63a709611"
+      },
+      "outcome": "ExpectedStatement",
+      "exit": 1
+    },
+    {
+      "case": "candidate and reference controls",
+      "inputs": {
+        "full": "c73c2c83d4243051d04d8ead979c617d0069facc51755b3a0e3acbe34fb567ab"
+      },
+      "outcome": {
+        "candidate_controls": {
+          "actual_ciphertext_mutation": "Receipt",
+          "canonical_main_query_row_mutation": "Crypto",
+          "fee_below_tariff": "Statement",
+          "noncanonical_main_query_field": "LegacyDecode",
+          "trailing_opening_bytes": "Trailing",
+          "truncation": "Shape"
+        },
+        "coherent_changes_after_expansion": [
+          {
+            "case": "fee_value",
+            "expanded_legacy_verifier": true,
+            "result": "Crypto"
+          },
+          {
+            "case": "commitment_owner_binding",
+            "expanded_legacy_verifier": true,
+            "result": "Crypto"
+          },
+          {
+            "case": "membership_root",
+            "expanded_legacy_verifier": true,
+            "result": "Crypto"
+          },
+          {
+            "case": "nullifier",
+            "expanded_legacy_verifier": true,
+            "result": "Crypto"
+          },
+          {
+            "case": "ciphertext_and_receipt_digest",
+            "expanded_legacy_verifier": true,
+            "result": "Crypto"
+          }
+        ],
+        "final_positive_reverified": true,
+        "validated_ledger_transition": false
+      },
+      "exit": 0
+    }
+  ]
+}

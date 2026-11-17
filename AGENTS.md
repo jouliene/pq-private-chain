@@ -1,7 +1,7 @@
-# Active complete-payment proof-size milestone
+# Complete-payment proof-size experiment
 
-Read GOAL.md and STATUS.md. The owner opened a new bounded milestone on top of
-the published synchronization release. CP03 is the preserved reference. Keep
+Read GOAL.md and STATUS.md. The bounded experiment following the published
+synchronization release is complete. See experiments/payment-size/RESULTS.md. CP03 is the preserved reference. Keep
 candidate source, construction analysis and non-author review in their assigned
 areas under experiments/payment-size. Execute one heavy job at a time.
 The tenfold size target is a screening objective. Count complete ordinary

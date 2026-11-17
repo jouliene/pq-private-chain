@@ -1,0 +1,1595 @@
+{
+  "baseline_binary_bytes": 2474856,
+  "bwrap_sha256": "e318903862396f96de3df57264e0158682b952fd3fb53ac23d876413e7b30f71",
+  "candidate_binary_bytes": 6200752,
+  "candidate_binary_sha256": "31d7c03724d0e62c8b95bfc3ca034f702ad18943df965170bed741e39304d560",
+  "dependency_bytes": {
+    "/lib/x86_64-linux-gnu/libc.so.6": 2129424,
+    "/lib/x86_64-linux-gnu/libcrypto.so.3": 5309400,
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1": 183024,
+    "/lib64/ld-linux-x86-64.so.2": 236616
+  },
+  "installation_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "passed": true,
+  "rows": [
+    {
+      "baseline_libraries": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+        "/lib64/ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f"
+      },
+      "baseline_preparation_seconds": 0.625274528,
+      "baseline_public_check": {
+        "accepted": true,
+        "arity": 2,
+        "complete_call_seconds": 0.042088243,
+        "crypto_seconds": 0.040789259,
+        "observations": {
+          "base_bytes": 8,
+          "digest_bytes": 64,
+          "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+          "extension_bytes": 40,
+          "folds": [
+            {
+              "extension_fields": 160,
+              "path_digests": 779,
+              "queries": 160,
+              "round": 0,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 625,
+              "queries": 160,
+              "round": 1,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 469,
+              "queries": 160,
+              "round": 2,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 327,
+              "queries": 160,
+              "round": 3,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 202,
+              "queries": 160,
+              "round": 4,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 95,
+              "queries": 160,
+              "round": 5,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 29,
+              "queries": 160,
+              "round": 6,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 5,
+              "queries": 160,
+              "round": 7,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 0,
+              "queries": 160,
+              "round": 8,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 0,
+              "queries": 160,
+              "round": 9,
+              "salt_base_fields": 1280
+            }
+          ],
+          "helper_ood_extension_fields": 55,
+          "input_batches": [
+            {
+              "base_fields": 1600,
+              "batch": 0,
+              "matrix_widths": [
+                10
+              ],
+              "path_digests": 936,
+              "queries": 160,
+              "salt_base_fields": 1280
+            },
+            {
+              "base_fields": 93440,
+              "batch": 1,
+              "matrix_widths": [
+                584
+              ],
+              "path_digests": 936,
+              "queries": 160,
+              "salt_base_fields": 1280
+            },
+            {
+              "base_fields": 12800,
+              "batch": 2,
+              "matrix_widths": [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "path_digests": 936,
+              "queries": 160,
+              "salt_base_fields": 10240
+            },
+            {
+              "base_fields": 18240,
+              "batch": 3,
+              "matrix_widths": [
+                114
+              ],
+              "path_digests": 936,
+              "queries": 160,
+              "salt_base_fields": 1280
+            }
+          ],
+          "main_mask_budget": 512,
+          "ordinary_ood_extension_fields": 1431,
+          "requested_queries": 160,
+          "required_main_mask_budget": 340,
+          "terminal_extension_fields": 1
+        },
+        "parse_bind_decode_seconds": 0.0009316
+      },
+      "baseline_public_verify_process": {
+        "clock_resolution_seconds": 0.01,
+        "maxrss_kib": 63360,
+        "meter_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+        "scope": "GNU time inside namespace waits on the verifier process",
+        "system_seconds": 0.02,
+        "user_seconds": 0.65,
+        "wall_seconds_including_namespace": 0.6792323149275035
+      },
+      "body_sha256": "edc4a1f240e674f05292c8114da2af258fb7c40724deb24e9d441356245bff7a",
+      "candidate_body_bytes": 1484274,
+      "candidate_proof_bytes": 1479398,
+      "candidate_sha256": "52a3af4c5e705ec7086707513a657d4bfe65b907c66d234842d33e4f5e5dc884",
+      "chain": "58950be022aa753736ed4f0c61275cb3fb25d45bf4f743dccde5197b1f146b7f",
+      "expected_instance_bytes": 528,
+      "label": "psizesample01",
+      "pack": {
+        "accepted": true,
+        "arity": 2,
+        "candidate_body_bytes": 1484274,
+        "candidate_proof_bytes": 1479398,
+        "distinct_input_coordinates": 159,
+        "distinct_main_trace_row_bytes": 736488,
+        "expected_statement_checked": false,
+        "fixed_batch_omitted_bytes": 216068,
+        "ledger_admission": false,
+        "legacy_body_bytes": 1754838,
+        "legacy_body_roundtrip_checked": true,
+        "legacy_body_sha256": "edc4a1f240e674f05292c8114da2af258fb7c40724deb24e9d441356245bff7a",
+        "legacy_call_seconds": 0.046909598,
+        "legacy_proof_bytes": 1749962,
+        "legacy_registry_prepare_and_root_check_seconds": 0.592401336,
+        "legacy_verifier": {
+          "accepted": true,
+          "arity": 2,
+          "complete_call_seconds": 0.039080037,
+          "crypto_seconds": 0.038009537,
+          "observations": {
+            "base_bytes": 8,
+            "digest_bytes": 64,
+            "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+            "extension_bytes": 40,
+            "folds": [
+              {
+                "extension_fields": 160,
+                "path_digests": 779,
+                "queries": 160,
+                "round": 0,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 625,
+                "queries": 160,
+                "round": 1,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 469,
+                "queries": 160,
+                "round": 2,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 327,
+                "queries": 160,
+                "round": 3,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 202,
+                "queries": 160,
+                "round": 4,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 95,
+                "queries": 160,
+                "round": 5,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 29,
+                "queries": 160,
+                "round": 6,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 5,
+                "queries": 160,
+                "round": 7,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 8,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 9,
+                "salt_base_fields": 1280
+              }
+            ],
+            "helper_ood_extension_fields": 55,
+            "input_batches": [
+              {
+                "base_fields": 1600,
+                "batch": 0,
+                "matrix_widths": [
+                  10
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 93440,
+                "batch": 1,
+                "matrix_widths": [
+                  584
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 12800,
+                "batch": 2,
+                "matrix_widths": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 10240
+              },
+              {
+                "base_fields": 18240,
+                "batch": 3,
+                "matrix_widths": [
+                  114
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 1280
+              }
+            ],
+            "main_mask_budget": 512,
+            "ordinary_ood_extension_fields": 1431,
+            "requested_queries": 160,
+            "required_main_mask_budget": 340,
+            "terminal_extension_fields": 1
+          },
+          "parse_bind_decode_seconds": 0.000807397
+        },
+        "prelude_seconds": 5.939e-05,
+        "public_fixed_prepare_seconds": 0.167089068,
+        "repeated_coordinates_omitted_bytes": 54496,
+        "transport_seconds": 0.003466544
+      },
+      "pack_process": {
+        "maxrss_kib": 88084,
+        "process_exit": 0,
+        "system_seconds": 0.032991,
+        "user_seconds": 0.791802,
+        "wall_seconds": 0.8256315320031717
+      },
+      "proof_sha256": "0af477976603c0a15b9e0901e9be49835c2d87f84d682f93ef3ce57c8128dfcf",
+      "public_verify": {
+        "accepted": true,
+        "arity": 2,
+        "candidate_body_bytes": 1484274,
+        "candidate_proof_bytes": 1479398,
+        "distinct_input_coordinates": 159,
+        "distinct_main_trace_row_bytes": 736488,
+        "expected_statement_checked": true,
+        "fixed_batch_omitted_bytes": 216068,
+        "ledger_admission": false,
+        "legacy_body_bytes": 1754838,
+        "legacy_body_roundtrip_checked": false,
+        "legacy_body_sha256": "edc4a1f240e674f05292c8114da2af258fb7c40724deb24e9d441356245bff7a",
+        "legacy_call_seconds": 0.053569366,
+        "legacy_proof_bytes": 1749962,
+        "legacy_registry_prepare_and_root_check_seconds": 0.600120309,
+        "legacy_verifier": {
+          "accepted": true,
+          "arity": 2,
+          "complete_call_seconds": 0.045576021,
+          "crypto_seconds": 0.044436341,
+          "observations": {
+            "base_bytes": 8,
+            "digest_bytes": 64,
+            "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+            "extension_bytes": 40,
+            "folds": [
+              {
+                "extension_fields": 160,
+                "path_digests": 779,
+                "queries": 160,
+                "round": 0,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 625,
+                "queries": 160,
+                "round": 1,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 469,
+                "queries": 160,
+                "round": 2,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 327,
+                "queries": 160,
+                "round": 3,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 202,
+                "queries": 160,
+                "round": 4,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 95,
+                "queries": 160,
+                "round": 5,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 29,
+                "queries": 160,
+                "round": 6,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 5,
+                "queries": 160,
+                "round": 7,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 8,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 9,
+                "salt_base_fields": 1280
+              }
+            ],
+            "helper_ood_extension_fields": 55,
+            "input_batches": [
+              {
+                "base_fields": 1600,
+                "batch": 0,
+                "matrix_widths": [
+                  10
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 93440,
+                "batch": 1,
+                "matrix_widths": [
+                  584
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 12800,
+                "batch": 2,
+                "matrix_widths": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 10240
+              },
+              {
+                "base_fields": 18240,
+                "batch": 3,
+                "matrix_widths": [
+                  114
+                ],
+                "path_digests": 936,
+                "queries": 160,
+                "salt_base_fields": 1280
+              }
+            ],
+            "main_mask_budget": 512,
+            "ordinary_ood_extension_fields": 1431,
+            "requested_queries": 160,
+            "required_main_mask_budget": 340,
+            "terminal_extension_fields": 1
+          },
+          "parse_bind_decode_seconds": 0.000828305
+        },
+        "prelude_seconds": 6.2372e-05,
+        "public_fixed_prepare_seconds": 0.164728665,
+        "repeated_coordinates_omitted_bytes": 54496,
+        "transport_seconds": 0.001996956
+      },
+      "public_verify_process": {
+        "clock_resolution_seconds": 0.01,
+        "maxrss_kib": 86412,
+        "meter_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+        "scope": "GNU time inside namespace waits on the verifier process",
+        "system_seconds": 0.02,
+        "user_seconds": 0.8,
+        "wall_seconds_including_namespace": 0.8402757560834289
+      },
+      "reference_prover": {
+        "child_wall_seconds": 1.8928770310012624,
+        "wait4_maxrss_kib": 168176,
+        "wait4_system_seconds": 0.070905,
+        "wait4_user_seconds": 1.79761
+      },
+      "reference_prover_stages": {
+        "encoding_roundtrip_seconds": 0.002620427,
+        "local_verification_seconds": 0.03912923,
+        "operation_wall_until_sample_seconds": 1.864303439,
+        "preparation_seconds": 0.605145276,
+        "proving_including_entropy_seconds": 1.200551831,
+        "trace_check_seconds": 0.008677072
+      },
+      "source_body_bytes": 1754838,
+      "source_proof_bytes": 1749962,
+      "statement_sha256": "3b2e25f3a1440ced23a8a460241765dfe255a21225e24a075e6494ba74607027",
+      "verifier_libraries": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+        "/lib64/ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f"
+      }
+    },
+    {
+      "baseline_libraries": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+        "/lib64/ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f"
+      },
+      "baseline_preparation_seconds": 1.257275253,
+      "baseline_public_check": {
+        "accepted": true,
+        "arity": 2,
+        "complete_call_seconds": 0.085119272,
+        "crypto_seconds": 0.080753388,
+        "observations": {
+          "base_bytes": 8,
+          "digest_bytes": 64,
+          "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+          "extension_bytes": 40,
+          "folds": [
+            {
+              "extension_fields": 160,
+              "path_digests": 785,
+              "queries": 160,
+              "round": 0,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 630,
+              "queries": 160,
+              "round": 1,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 479,
+              "queries": 160,
+              "round": 2,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 331,
+              "queries": 160,
+              "round": 3,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 204,
+              "queries": 160,
+              "round": 4,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 101,
+              "queries": 160,
+              "round": 5,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 30,
+              "queries": 160,
+              "round": 6,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 2,
+              "queries": 160,
+              "round": 7,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 0,
+              "queries": 160,
+              "round": 8,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 0,
+              "queries": 160,
+              "round": 9,
+              "salt_base_fields": 1280
+            }
+          ],
+          "helper_ood_extension_fields": 55,
+          "input_batches": [
+            {
+              "base_fields": 1600,
+              "batch": 0,
+              "matrix_widths": [
+                10
+              ],
+              "path_digests": 943,
+              "queries": 160,
+              "salt_base_fields": 1280
+            },
+            {
+              "base_fields": 93440,
+              "batch": 1,
+              "matrix_widths": [
+                584
+              ],
+              "path_digests": 943,
+              "queries": 160,
+              "salt_base_fields": 1280
+            },
+            {
+              "base_fields": 12800,
+              "batch": 2,
+              "matrix_widths": [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "path_digests": 943,
+              "queries": 160,
+              "salt_base_fields": 10240
+            },
+            {
+              "base_fields": 18240,
+              "batch": 3,
+              "matrix_widths": [
+                114
+              ],
+              "path_digests": 943,
+              "queries": 160,
+              "salt_base_fields": 1280
+            }
+          ],
+          "main_mask_budget": 512,
+          "ordinary_ood_extension_fields": 1431,
+          "requested_queries": 160,
+          "required_main_mask_budget": 340,
+          "terminal_extension_fields": 1
+        },
+        "parse_bind_decode_seconds": 0.000944454
+      },
+      "baseline_public_verify_process": {
+        "clock_resolution_seconds": 0.01,
+        "maxrss_kib": 63240,
+        "meter_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+        "scope": "GNU time inside namespace waits on the verifier process",
+        "system_seconds": 0.02,
+        "user_seconds": 0.63,
+        "wall_seconds_including_namespace": 1.3646214950131252
+      },
+      "body_sha256": "ff8b9b47f7d755ca4860b5fd93d60d5ccda3632874e2c8d72cec9212f43d546d",
+      "candidate_body_bytes": 1494506,
+      "candidate_proof_bytes": 1489630,
+      "candidate_sha256": "c3b86056e8d19910874915a9d5223513c23cfc70d7a7eb7728dee15f1e430921",
+      "chain": "e1d631d54341870a37d6103bfb1b5ad89d6ea28d6237a7b897462436ef91cf60",
+      "expected_instance_bytes": 528,
+      "label": "psizesample02",
+      "pack": {
+        "accepted": true,
+        "arity": 2,
+        "candidate_body_bytes": 1494506,
+        "candidate_proof_bytes": 1489630,
+        "distinct_input_coordinates": 160,
+        "distinct_main_trace_row_bytes": 741120,
+        "expected_statement_checked": false,
+        "fixed_batch_omitted_bytes": 216516,
+        "ledger_admission": false,
+        "legacy_body_bytes": 1758614,
+        "legacy_body_roundtrip_checked": true,
+        "legacy_body_sha256": "ff8b9b47f7d755ca4860b5fd93d60d5ccda3632874e2c8d72cec9212f43d546d",
+        "legacy_call_seconds": 0.050016968,
+        "legacy_proof_bytes": 1753738,
+        "legacy_registry_prepare_and_root_check_seconds": 0.609013702,
+        "legacy_verifier": {
+          "accepted": true,
+          "arity": 2,
+          "complete_call_seconds": 0.040882047,
+          "crypto_seconds": 0.039719192,
+          "observations": {
+            "base_bytes": 8,
+            "digest_bytes": 64,
+            "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+            "extension_bytes": 40,
+            "folds": [
+              {
+                "extension_fields": 160,
+                "path_digests": 785,
+                "queries": 160,
+                "round": 0,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 630,
+                "queries": 160,
+                "round": 1,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 479,
+                "queries": 160,
+                "round": 2,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 331,
+                "queries": 160,
+                "round": 3,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 204,
+                "queries": 160,
+                "round": 4,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 101,
+                "queries": 160,
+                "round": 5,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 30,
+                "queries": 160,
+                "round": 6,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 2,
+                "queries": 160,
+                "round": 7,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 8,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 9,
+                "salt_base_fields": 1280
+              }
+            ],
+            "helper_ood_extension_fields": 55,
+            "input_batches": [
+              {
+                "base_fields": 1600,
+                "batch": 0,
+                "matrix_widths": [
+                  10
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 93440,
+                "batch": 1,
+                "matrix_widths": [
+                  584
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 12800,
+                "batch": 2,
+                "matrix_widths": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 10240
+              },
+              {
+                "base_fields": 18240,
+                "batch": 3,
+                "matrix_widths": [
+                  114
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 1280
+              }
+            ],
+            "main_mask_budget": 512,
+            "ordinary_ood_extension_fields": 1431,
+            "requested_queries": 160,
+            "required_main_mask_budget": 340,
+            "terminal_extension_fields": 1
+          },
+          "parse_bind_decode_seconds": 0.000831763
+        },
+        "prelude_seconds": 6.2447e-05,
+        "public_fixed_prepare_seconds": 0.170681587,
+        "repeated_coordinates_omitted_bytes": 47592,
+        "transport_seconds": 0.003736071
+      },
+      "pack_process": {
+        "maxrss_kib": 88084,
+        "process_exit": 0,
+        "system_seconds": 0.038985,
+        "user_seconds": 0.8096979999999999,
+        "wall_seconds": 0.8495508140185848
+      },
+      "proof_sha256": "6375e1c36a9eb289cb2bb13fd6ba2a3754179588f20b63f7eb892fd40cd0fa96",
+      "public_verify": {
+        "accepted": true,
+        "arity": 2,
+        "candidate_body_bytes": 1494506,
+        "candidate_proof_bytes": 1489630,
+        "distinct_input_coordinates": 160,
+        "distinct_main_trace_row_bytes": 741120,
+        "expected_statement_checked": true,
+        "fixed_batch_omitted_bytes": 216516,
+        "ledger_admission": false,
+        "legacy_body_bytes": 1758614,
+        "legacy_body_roundtrip_checked": false,
+        "legacy_body_sha256": "ff8b9b47f7d755ca4860b5fd93d60d5ccda3632874e2c8d72cec9212f43d546d",
+        "legacy_call_seconds": 0.098651645,
+        "legacy_proof_bytes": 1753738,
+        "legacy_registry_prepare_and_root_check_seconds": 1.030431488,
+        "legacy_verifier": {
+          "accepted": true,
+          "arity": 2,
+          "complete_call_seconds": 0.084661137,
+          "crypto_seconds": 0.080358642,
+          "observations": {
+            "base_bytes": 8,
+            "digest_bytes": 64,
+            "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+            "extension_bytes": 40,
+            "folds": [
+              {
+                "extension_fields": 160,
+                "path_digests": 785,
+                "queries": 160,
+                "round": 0,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 630,
+                "queries": 160,
+                "round": 1,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 479,
+                "queries": 160,
+                "round": 2,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 331,
+                "queries": 160,
+                "round": 3,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 204,
+                "queries": 160,
+                "round": 4,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 101,
+                "queries": 160,
+                "round": 5,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 30,
+                "queries": 160,
+                "round": 6,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 2,
+                "queries": 160,
+                "round": 7,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 8,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 9,
+                "salt_base_fields": 1280
+              }
+            ],
+            "helper_ood_extension_fields": 55,
+            "input_batches": [
+              {
+                "base_fields": 1600,
+                "batch": 0,
+                "matrix_widths": [
+                  10
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 93440,
+                "batch": 1,
+                "matrix_widths": [
+                  584
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 12800,
+                "batch": 2,
+                "matrix_widths": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 10240
+              },
+              {
+                "base_fields": 18240,
+                "batch": 3,
+                "matrix_widths": [
+                  114
+                ],
+                "path_digests": 943,
+                "queries": 160,
+                "salt_base_fields": 1280
+              }
+            ],
+            "main_mask_budget": 512,
+            "ordinary_ood_extension_fields": 1431,
+            "requested_queries": 160,
+            "required_main_mask_budget": 340,
+            "terminal_extension_fields": 1
+          },
+          "parse_bind_decode_seconds": 0.003859317
+        },
+        "prelude_seconds": 5.8506e-05,
+        "public_fixed_prepare_seconds": 0.172111244,
+        "repeated_coordinates_omitted_bytes": 47592,
+        "transport_seconds": 0.004964449
+      },
+      "public_verify_process": {
+        "clock_resolution_seconds": 0.01,
+        "maxrss_kib": 86420,
+        "meter_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+        "scope": "GNU time inside namespace waits on the verifier process",
+        "system_seconds": 0.03,
+        "user_seconds": 0.82,
+        "wall_seconds_including_namespace": 1.3417872519930825
+      },
+      "reference_prover": {
+        "child_wall_seconds": 1.8773202549200505,
+        "wait4_maxrss_kib": 168176,
+        "wait4_system_seconds": 0.05797,
+        "wait4_user_seconds": 1.795077
+      },
+      "reference_prover_stages": {
+        "encoding_roundtrip_seconds": 0.00208699,
+        "local_verification_seconds": 0.037810872,
+        "operation_wall_until_sample_seconds": 1.849481982,
+        "preparation_seconds": 0.588513242,
+        "proving_including_entropy_seconds": 1.20458191,
+        "trace_check_seconds": 0.008565561
+      },
+      "source_body_bytes": 1758614,
+      "source_proof_bytes": 1753738,
+      "statement_sha256": "76dda543a849a799841a67593cfb0a3df71c4d970768b1fcf58b7f0098e670da",
+      "verifier_libraries": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+        "/lib64/ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f"
+      }
+    },
+    {
+      "baseline_libraries": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+        "/lib64/ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f"
+      },
+      "baseline_preparation_seconds": 1.233534506,
+      "baseline_public_check": {
+        "accepted": true,
+        "arity": 2,
+        "complete_call_seconds": 0.082196387,
+        "crypto_seconds": 0.074850794,
+        "observations": {
+          "base_bytes": 8,
+          "digest_bytes": 64,
+          "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+          "extension_bytes": 40,
+          "folds": [
+            {
+              "extension_fields": 160,
+              "path_digests": 774,
+              "queries": 160,
+              "round": 0,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 615,
+              "queries": 160,
+              "round": 1,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 460,
+              "queries": 160,
+              "round": 2,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 315,
+              "queries": 160,
+              "round": 3,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 188,
+              "queries": 160,
+              "round": 4,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 91,
+              "queries": 160,
+              "round": 5,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 35,
+              "queries": 160,
+              "round": 6,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 6,
+              "queries": 160,
+              "round": 7,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 0,
+              "queries": 160,
+              "round": 8,
+              "salt_base_fields": 1280
+            },
+            {
+              "extension_fields": 160,
+              "path_digests": 0,
+              "queries": 160,
+              "round": 9,
+              "salt_base_fields": 1280
+            }
+          ],
+          "helper_ood_extension_fields": 55,
+          "input_batches": [
+            {
+              "base_fields": 1600,
+              "batch": 0,
+              "matrix_widths": [
+                10
+              ],
+              "path_digests": 932,
+              "queries": 160,
+              "salt_base_fields": 1280
+            },
+            {
+              "base_fields": 93440,
+              "batch": 1,
+              "matrix_widths": [
+                584
+              ],
+              "path_digests": 932,
+              "queries": 160,
+              "salt_base_fields": 1280
+            },
+            {
+              "base_fields": 12800,
+              "batch": 2,
+              "matrix_widths": [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              "path_digests": 932,
+              "queries": 160,
+              "salt_base_fields": 10240
+            },
+            {
+              "base_fields": 18240,
+              "batch": 3,
+              "matrix_widths": [
+                114
+              ],
+              "path_digests": 932,
+              "queries": 160,
+              "salt_base_fields": 1280
+            }
+          ],
+          "main_mask_budget": 512,
+          "ordinary_ood_extension_fields": 1431,
+          "requested_queries": 160,
+          "required_main_mask_budget": 340,
+          "terminal_extension_fields": 1
+        },
+        "parse_bind_decode_seconds": 0.003945577
+      },
+      "baseline_public_verify_process": {
+        "clock_resolution_seconds": 0.01,
+        "maxrss_kib": 63236,
+        "meter_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+        "scope": "GNU time inside namespace waits on the verifier process",
+        "system_seconds": 0.01,
+        "user_seconds": 0.64,
+        "wall_seconds_including_namespace": 1.3433085270226002
+      },
+      "body_sha256": "6d7e372dc611c46a2009d5d54c099a7e6ea977b5bb28785a496d1a01f76e1fe2",
+      "candidate_body_bytes": 1486258,
+      "candidate_proof_bytes": 1481382,
+      "candidate_sha256": "44b1bb738ffc48d60b05cb336cc81fc8e349787611de7a356df0eda37fba7b9b",
+      "chain": "4ce872113ad4dd82ac785a7428d10d50d93e42c9ac98cbf740b81ec768ee9c74",
+      "expected_instance_bytes": 528,
+      "label": "psizesample03",
+      "pack": {
+        "accepted": true,
+        "arity": 2,
+        "candidate_body_bytes": 1486258,
+        "candidate_proof_bytes": 1481382,
+        "distinct_input_coordinates": 160,
+        "distinct_main_trace_row_bytes": 741120,
+        "expected_statement_checked": false,
+        "fixed_batch_omitted_bytes": 215812,
+        "ledger_admission": false,
+        "legacy_body_bytes": 1750806,
+        "legacy_body_roundtrip_checked": true,
+        "legacy_body_sha256": "6d7e372dc611c46a2009d5d54c099a7e6ea977b5bb28785a496d1a01f76e1fe2",
+        "legacy_call_seconds": 0.096618274,
+        "legacy_proof_bytes": 1745930,
+        "legacy_registry_prepare_and_root_check_seconds": 1.2228463330000001,
+        "legacy_verifier": {
+          "accepted": true,
+          "arity": 2,
+          "complete_call_seconds": 0.082550637,
+          "crypto_seconds": 0.07836313,
+          "observations": {
+            "base_bytes": 8,
+            "digest_bytes": 64,
+            "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+            "extension_bytes": 40,
+            "folds": [
+              {
+                "extension_fields": 160,
+                "path_digests": 774,
+                "queries": 160,
+                "round": 0,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 615,
+                "queries": 160,
+                "round": 1,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 460,
+                "queries": 160,
+                "round": 2,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 315,
+                "queries": 160,
+                "round": 3,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 188,
+                "queries": 160,
+                "round": 4,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 91,
+                "queries": 160,
+                "round": 5,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 35,
+                "queries": 160,
+                "round": 6,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 6,
+                "queries": 160,
+                "round": 7,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 8,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 9,
+                "salt_base_fields": 1280
+              }
+            ],
+            "helper_ood_extension_fields": 55,
+            "input_batches": [
+              {
+                "base_fields": 1600,
+                "batch": 0,
+                "matrix_widths": [
+                  10
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 93440,
+                "batch": 1,
+                "matrix_widths": [
+                  584
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 12800,
+                "batch": 2,
+                "matrix_widths": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 10240
+              },
+              {
+                "base_fields": 18240,
+                "batch": 3,
+                "matrix_widths": [
+                  114
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 1280
+              }
+            ],
+            "main_mask_budget": 512,
+            "ordinary_ood_extension_fields": 1431,
+            "requested_queries": 160,
+            "required_main_mask_budget": 340,
+            "terminal_extension_fields": 1
+          },
+          "parse_bind_decode_seconds": 0.000851508
+        },
+        "prelude_seconds": 6.2859e-05,
+        "public_fixed_prepare_seconds": 0.36170812,
+        "repeated_coordinates_omitted_bytes": 48736,
+        "transport_seconds": 0.006523785
+      },
+      "pack_process": {
+        "maxrss_kib": 88084,
+        "process_exit": 0,
+        "system_seconds": 0.034832,
+        "user_seconds": 0.8091039999999999,
+        "wall_seconds": 1.7168652820400894
+      },
+      "proof_sha256": "6c674569d67fc1f248cb62bd7fe122180216f6b65fdfc7699d041f7c1d3e1405",
+      "public_verify": {
+        "accepted": true,
+        "arity": 2,
+        "candidate_body_bytes": 1486258,
+        "candidate_proof_bytes": 1481382,
+        "distinct_input_coordinates": 160,
+        "distinct_main_trace_row_bytes": 741120,
+        "expected_statement_checked": true,
+        "fixed_batch_omitted_bytes": 215812,
+        "ledger_admission": false,
+        "legacy_body_bytes": 1750806,
+        "legacy_body_roundtrip_checked": false,
+        "legacy_body_sha256": "6d7e372dc611c46a2009d5d54c099a7e6ea977b5bb28785a496d1a01f76e1fe2",
+        "legacy_call_seconds": 0.101780853,
+        "legacy_proof_bytes": 1745930,
+        "legacy_registry_prepare_and_root_check_seconds": 1.259833392,
+        "legacy_verifier": {
+          "accepted": true,
+          "arity": 2,
+          "complete_call_seconds": 0.084065071,
+          "crypto_seconds": 0.082755217,
+          "observations": {
+            "base_bytes": 8,
+            "digest_bytes": 64,
+            "distinct_query_positions": "not instrumented; requested count used without dedup credit",
+            "extension_bytes": 40,
+            "folds": [
+              {
+                "extension_fields": 160,
+                "path_digests": 774,
+                "queries": 160,
+                "round": 0,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 615,
+                "queries": 160,
+                "round": 1,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 460,
+                "queries": 160,
+                "round": 2,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 315,
+                "queries": 160,
+                "round": 3,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 188,
+                "queries": 160,
+                "round": 4,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 91,
+                "queries": 160,
+                "round": 5,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 35,
+                "queries": 160,
+                "round": 6,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 6,
+                "queries": 160,
+                "round": 7,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 8,
+                "salt_base_fields": 1280
+              },
+              {
+                "extension_fields": 160,
+                "path_digests": 0,
+                "queries": 160,
+                "round": 9,
+                "salt_base_fields": 1280
+              }
+            ],
+            "helper_ood_extension_fields": 55,
+            "input_batches": [
+              {
+                "base_fields": 1600,
+                "batch": 0,
+                "matrix_widths": [
+                  10
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 93440,
+                "batch": 1,
+                "matrix_widths": [
+                  584
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 1280
+              },
+              {
+                "base_fields": 12800,
+                "batch": 2,
+                "matrix_widths": [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 10240
+              },
+              {
+                "base_fields": 18240,
+                "batch": 3,
+                "matrix_widths": [
+                  114
+                ],
+                "path_digests": 932,
+                "queries": 160,
+                "salt_base_fields": 1280
+              }
+            ],
+            "main_mask_budget": 512,
+            "ordinary_ood_extension_fields": 1431,
+            "requested_queries": 160,
+            "required_main_mask_budget": 340,
+            "terminal_extension_fields": 1
+          },
+          "parse_bind_decode_seconds": 0.00085456
+        },
+        "prelude_seconds": 6.4851e-05,
+        "public_fixed_prepare_seconds": 0.348620373,
+        "repeated_coordinates_omitted_bytes": 48736,
+        "transport_seconds": 0.005046023
+      },
+      "public_verify_process": {
+        "clock_resolution_seconds": 0.01,
+        "maxrss_kib": 86412,
+        "meter_sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10",
+        "scope": "GNU time inside namespace waits on the verifier process",
+        "system_seconds": 0.03,
+        "user_seconds": 0.83,
+        "wall_seconds_including_namespace": 1.7575656820554286
+      },
+      "reference_prover": {
+        "child_wall_seconds": 1.8497052500024438,
+        "wait4_maxrss_kib": 168180,
+        "wait4_system_seconds": 0.058414,
+        "wait4_user_seconds": 1.767143
+      },
+      "reference_prover_stages": {
+        "encoding_roundtrip_seconds": 0.001975346,
+        "local_verification_seconds": 0.038000678,
+        "operation_wall_until_sample_seconds": 1.820989243,
+        "preparation_seconds": 0.58939828,
+        "proving_including_entropy_seconds": 1.174739894,
+        "trace_check_seconds": 0.00860268
+      },
+      "source_body_bytes": 1750806,
+      "source_proof_bytes": 1745930,
+      "statement_sha256": "c646a95ce046b656cd1b9758daf9bee71513ede026bdd968f5b7f55fb7171711",
+      "verifier_libraries": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "755a371e86cc9f564ab54f66140747700fb0a103f698f659f2060f707897e09a",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "6866ed711dab8927e1bf82bf1cd30e828bdfc34f3cc1e83b1c9eb01ce6c37d9a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+        "/lib64/ld-linux-x86-64.so.2": "5fc0940888e9d2e1a00e66d6b1a559c36364ee867683652e1074fa576952cc3f"
+      }
+    }
+  ],
+  "scope": "One complete payment per file. All auxiliaries rebuilt locally from pinned program. Fresh namespace with selected public bytes, executable and its pinned ELF libraries only. Verifier CPU/RSS from GNU time inside the namespace, outer elapsed includes namespace startup. Prover and pack wait4 are direct workers. Source payment generation and candidate encoding are sequential."
+}

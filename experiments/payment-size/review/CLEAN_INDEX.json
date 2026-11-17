@@ -1,0 +1,39 @@
+{
+  "initial_public_clone": "https://github.com/jouliene/pq-private-chain.git",
+  "baseline": "8f9bae9b96248e6c147acf9664fd34bb727cb756",
+  "candidate_revision": "9dce9420fa4fa96a01b63c70fdbea8e6dde08012",
+  "final_binary_sha256": "60a76701f1de3cc5b5f8ceb1d425aa44a61483ce1c8479fe0b20a2ac78bd3f13",
+  "final_binary_bytes": 6201072,
+  "final_build_receipt_sha256": "a46ab1dd0ebd317734fdafa17b028b094b4b6f4337f4479cf0312b60051e39e7",
+  "final_source_inputs": {
+    "/tmp/pq-payment-size-review-20261118-01/experiments/payment-size/candidate/build.py": "ba6801da9d245e1f74d79b506f2e4159bc82761a97e1be8ff78dcca35eab75cf",
+    "/tmp/pq-payment-size-review-20261118-01/experiments/payment-size/candidate/src/main.rs": "3b0685705370db0c00e8cdee52c02fed1bc71779cc0726b8b8630ffb388ce055",
+    "/tmp/pq-payment-size-review-20261118-01/experiments/payment-size/candidate/src/transcript.rs": "d7cb7ce83e70f06dd3c6981905f6b13ef35eb59fe19c18bf0cdd17f1c57afca5",
+    "/tmp/pq-payment-size-review-20261118-01/experiments/payment-size/candidate/src/transport.rs": "c1ebfad20f5a1715659bdeb83f22891f91b13135f570194797d93a6970770aee"
+  },
+  "verified_exact_body_sha256_across_all_three_versions": true,
+  "comparison_versions": [
+    {
+      "sha256": "12f55c37d2150ad0d12be2c973a5db19c2d82f5757bc078443ab48d7aa7c933b",
+      "version": "90549a5fdae4fe9f07a6db5e32727362e3be0c8e",
+      "scope": "Functionality; outer bwrap wait4 does not measure verifier CPU or RSS."
+    },
+    {
+      "sha256": "b115fb859a9a6174cb991cb5cde66496a8aedff39a1ebe37e191967625a40b63",
+      "version": "87f69df1b493210aaea66e0ad439e24c0cd90110",
+      "scope": "Child meter corrected; self-contained verification."
+    },
+    {
+      "sha256": "ed0e061dfd5a16d08d407de5c49c474c3abf5473a0914f667cadc39ed6b9ac84",
+      "version": "9dce9420fa4fa96a01b63c70fdbea8e6dde08012",
+      "scope": "Final binary, child meter and verifier-selected statement."
+    }
+  ],
+  "additional_public_controls_command": "\"\"\"Independently exercise the candidate against verified but different complete payments.\"\"\"\nimport hashlib, importlib.util, json, os, subprocess, sys\nfrom pathlib import Path\nsys.dont_write_bytecode=True\nspec=importlib.util.spec_from_file_location(\"size_measure\",Path(\"experiments/payment-size/measure.py\"))\nm=importlib.util.module_from_spec(spec)\nspec.loader.exec_module(m)\nbin_dir,run_dir=map(Path,sys.argv[1:3])\nbinary=(bin_dir/\"cp03-public-fixed-transport\").resolve()\ninfo=m.common.read_json(run_dir/\"RESULT.json\")\nassert info[\"candidate_binary_sha256\"] == m.digest(binary) and info[\"passed\"]\ninst=m.common.load_installation(Path(\".work/sizerev01/fresh/installation.json\"),info[\"installation_sha256\"])\ndef run(kind, files, args, err):\n    argv=['/usr/bin/bwrap','--unshare-all','--new-session','--die-with-parent','--cap-drop','ALL',\n          '--clearenv','--setenv','LANG','C','--proc','/proc','--dev','/dev','--dir','/inputs',\n          '--ro-bind',str(binary),'/program']\n    for p in m.closure(binary):\n        assert inst['pins'][str(p.resolve())] == m.digest(p)\n        argv += ['--ro-bind',str(p.resolve()),str(p)]\n    files_in={}\n    for name,path in files.items():\n        argv += ['--ro-bind',str(path.resolve()),'/inputs/'+name]\n        files_in[name] = m.digest(path)\n    argv += ['--remount-ro','/','--chdir','/','--','/program',*args]\n    proc,out,errors = m.common.run(argv,cwd=Path.cwd(),seconds=60,cap=256*1024)\n    assert proc['wrapper_exit'] == 0 and not proc['timeout'], proc\n    if err:\n        assert proc['process_exit'] == 1 and not out and errors == (err+'\\n').encode()\n        return dict(case=kind,inputs=files_in,outcome=err,exit=1)\n    result=json.loads(out)\n    assert proc['process_exit'] == 0 and not errors and result['final_positive_reverified']\n    return dict(case=kind,inputs=files_in,outcome=result,exit=0)\nout=[]\nsource=Path(inst['source_root'])\nfor i,row in enumerate(info['rows']):\n    assert row['public_verify']['expected_statement_checked'] and row['expected_instance_bytes'] == 528\n    other=info['rows'][(i+1)%len(info['rows'])]\n    wrong=source/'experiments/compact-all-payments-v3/public'/('cp03-cycle-'+other['label']+'-payer')/'statement.bin'\n    assert m.digest(wrong) == other['statement_sha256'] and m.digest(wrong) != row['statement_sha256']\n    out.append(run(row['label']+' against '+other['label'],dict(body=run_dir/f'sample{i+1}.body',expected=wrong),\n                   ['verify-against','/inputs/body','/inputs/expected'],'ExpectedStatement'))\nfull=source/'experiments/cp03-private-cycle/evidence/psizerev01.public/payer2x2.body'\nout.append(run('candidate and reference controls',dict(full=full),['controls','/inputs/full'],None))\nprint(json.dumps(dict(binary_sha256=m.digest(binary),rows=out),indent=2))\n",
+  "files": {
+    "CLEAN_COMPARISON.json": "ed0e061dfd5a16d08d407de5c49c474c3abf5473a0914f667cadc39ed6b9ac84",
+    "CLEAN_CYCLES.json": "a2f7e9086c194b0176b7d7f4f76014d6194d4f95f9e6e2c93ee61848fd099417",
+    "CLEAN_PUBLIC_CONTROLS.json": "e5ec17f8568c664f50aa3311f61990bb8a004d6252a5c18dc259f7a93bad86df",
+    "CLEAN_WITNESS_CONTROLS.json": "809ba85c29f37679fd1ff01f78091a8a6a42aa736f9fdb87ec7c5f262c969730"
+  }
+}

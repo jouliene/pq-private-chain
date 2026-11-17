@@ -1,0 +1,64 @@
+{
+  "installation_sha256": "f885a09c9768b383cf4004ed92786f25e4b40610089f76b7de489358e06ebb46",
+  "passed": true,
+  "rows": [
+    {
+      "case": "valid",
+      "independent_arithmetic_failures": [],
+      "worker_exit": 0
+    },
+    {
+      "case": "owner",
+      "independent_arithmetic_failures": [
+        "authority0",
+        "NF0"
+      ],
+      "worker_exit": 1
+    },
+    {
+      "case": "second_path",
+      "independent_arithmetic_failures": [
+        "membership1"
+      ],
+      "worker_exit": 1
+    },
+    {
+      "case": "index_at_count",
+      "independent_arithmetic_failures": [
+        "membership1",
+        "index/count1"
+      ],
+      "worker_exit": 1
+    },
+    {
+      "case": "nullifier",
+      "independent_arithmetic_failures": [
+        "NF1"
+      ],
+      "worker_exit": 1
+    },
+    {
+      "case": "output_commitment",
+      "independent_arithmetic_failures": [
+        "output CM1"
+      ],
+      "worker_exit": 1
+    },
+    {
+      "case": "balance_only",
+      "independent_arithmetic_failures": [
+        "integer balance"
+      ],
+      "worker_exit": 1
+    },
+    {
+      "case": "out_of_range",
+      "independent_arithmetic_failures": [
+        "range",
+        "integer balance"
+      ],
+      "worker_exit": 1
+    }
+  ],
+  "scope": "Public arithmetic controls on actual prover; receipt/spending established separately by fresh private cycles"
+}

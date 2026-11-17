@@ -79,7 +79,10 @@ history read. Retained shallow checkpoints support branch replacement; deep
 replay and cold backup recovery still require full scans. See the
 [synchronization results and reproduction commands](experiments/incremental-sync/README.md)
 for measured counts, independent acceptance and current publication status.
-The next experiment targets materially smaller complete payment proofs;
-full PoW/issuance integration remains behind the payment/history participation decision.
+A subsequent [complete-payment size experiment](experiments/payment-size/RESULTS.md)
+saved about 15% with a reversible CP03 representation. Six fresh ordinary
+payments, including independent reproduction, remained around 1.48 MB. The
+decision retains it as a transport experiment and defers ledger integration.
+Full PoW/issuance integration remains behind the payment/history participation decision.
 Standalone valid-work PoW remains the preferred consensus direction. No full
 consensus engine, permissionless reward issuance or production security is claimed.

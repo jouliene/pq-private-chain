@@ -9,6 +9,20 @@ See [construction screen](construction/SOURCE_GATE.md), [relation and assumption
 and [wire accounting](review/CP03_REFERENCE.md). The source screen covers hiding
 WHIR/sumcheck, recursive public verification, and the selected representation.
 
+For a public check after building the candidate, verify one of the actual
+published bodies against its matching expected statement. The statement file
+is a public test oracle. In an application the verifier independently chooses
+the expected instance.
+
+```sh
+.work/size-encoder01/cp03-public-fixed-transport verify-against \
+  experiments/payment-size/evidence/three-payments/sample1.body \
+  experiments/payment-size/evidence/three-payments/sample1.statement
+```
+
+See the [measured decision](RESULTS.md) and the
+[independent clean execution](review/CLEAN_REPRODUCTION.md).
+
 ## Reproduce with three new private payments
 
 Use a clean checkout on the platform in [BUILD.md](../../BUILD.md). Run its

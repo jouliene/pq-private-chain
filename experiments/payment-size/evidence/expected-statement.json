@@ -1,0 +1,44 @@
+{
+  "first-expected-first": {
+    "error": null,
+    "exit": 0,
+    "expected_statement_checked": true,
+    "wall_seconds": 0.8533857919974253
+  },
+  "first-expected-second": {
+    "error": "ExpectedStatement",
+    "exit": 1,
+    "expected_statement_checked": null,
+    "wall_seconds": 0.0032338829478248954
+  },
+  "first-self": {
+    "error": null,
+    "exit": 0,
+    "expected_statement_checked": false,
+    "wall_seconds": 0.8385887620970607
+  },
+  "long-expected": {
+    "error": "ExpectedStatement",
+    "exit": 1,
+    "expected_statement_checked": null,
+    "wall_seconds": 0.0021705070976167917
+  },
+  "second-expected-first": {
+    "error": "ExpectedStatement",
+    "exit": 1,
+    "expected_statement_checked": null,
+    "wall_seconds": 0.002841443056240678
+  },
+  "second-expected-second": {
+    "error": null,
+    "exit": 0,
+    "expected_statement_checked": true,
+    "wall_seconds": 0.8394812380429357
+  },
+  "short-expected": {
+    "error": "ExpectedStatement",
+    "exit": 1,
+    "expected_statement_checked": null,
+    "wall_seconds": 0.0021368219750002027
+  }
+}
