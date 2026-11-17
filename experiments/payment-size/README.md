@@ -55,7 +55,9 @@ require trusting the build host and its compiler, as does the CP03 reference.
 
 The comparison verifies each file in its own new Linux mount, PID and network
 namespaces using bubblewrap. Only the selected body, verifier ELF and its
-pinned dynamic libraries are mounted, with private /proc and /dev. There
+pinned dynamic libraries are mounted, together with GNU time for worker CPU/RSS
+and private /proc and /dev. The outer process measures wall time including namespace
+startup. GNU time measures CPU to 0.01 s and peak RSS of its verifier child. There
 is no repository, wallet, sender-supplied preprocessing, proof cache, database
 or previous process in that filesystem. The process reconstructs all needed
 per-proof data locally. The legacy check separately receives the public full

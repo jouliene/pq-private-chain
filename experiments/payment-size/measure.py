@@ -42,17 +42,24 @@ def isolated(binary, files, args, pins):
     argv = ["/usr/bin/bwrap", "--unshare-all", "--die-with-parent", "--new-session",
             "--cap-drop", "ALL", "--clearenv", "--setenv", "LANG", "C", "--proc", "/proc",
             "--dev", "/dev", "--dir", "/inputs", "--ro-bind", str(binary), "/program"]
-    deps = closure(binary)
+    timer = Path("/usr/bin/time")
+    argv.extend(["--ro-bind", str(timer), "/meter"])
+    deps = sorted(set(closure(binary) + closure(timer)))
     for dep in deps:
         actual = str(dep.resolve())
         common.need(actual in pins and pins[actual] == digest(dep), "approved verifier runtime " + actual)
         argv.extend(["--ro-bind", actual, str(dep)])
     for name, path in files.items():
         argv.extend(["--ro-bind", str(path.resolve(strict=True)), "/inputs/" + name])
-    argv.extend(["--remount-ro", "/", "--chdir", "/", "--", "/program", *args])
+    argv.extend(["--remount-ro", "/", "--chdir", "/", "--", "/meter", "-f", "worker %U %S %M", "/program", *args])
     proc, output, err = common.run(argv, cwd=ROOT, seconds=60, cap=256 * 1024)
-    common.need(proc["wrapper_exit"] == proc["process_exit"] == 0 and not err, "isolated public verification: " + err.decode(errors="replace")[:400])
-    return json.loads(output), resources(proc), {str(p): digest(p) for p in deps}
+    meter = re.fullmatch(rb"worker ([0-9]+\.[0-9]+) ([0-9]+\.[0-9]+) ([0-9]+)\n", err)
+    common.need(proc["wrapper_exit"] == proc["process_exit"] == 0 and meter is not None, "isolated public verification: " + err.decode(errors="replace")[:400])
+    worker = dict(user_seconds=float(meter[1]), system_seconds=float(meter[2]), maxrss_kib=int(meter[3]),
+                  clock_resolution_seconds=0.01, wall_seconds_including_namespace=proc["wall_seconds"],
+                  meter_sha256=digest(timer), scope="GNU time inside namespace waits on the verifier process")
+    common.need(worker["maxrss_kib"] > 0, "worker RSS observed")
+    return json.loads(output), worker, {str(p): digest(p) for p in deps}
 
 
 def main():
@@ -120,7 +127,7 @@ def main():
         candidate_binary_sha256=a.approve_candidate, candidate_binary_bytes=candidate.stat().st_size,
         baseline_binary_bytes=baseline.stat().st_size, dependency_bytes={p:Path(p).stat().st_size for p in deps},
         bwrap_sha256=digest(Path("/usr/bin/bwrap")), rows=rows,
-        scope="One complete payment per file. All auxiliaries rebuilt locally from pinned program. Fresh namespace with selected public bytes, executable and its pinned ELF libraries only. Linux wait4 includes process startup. Source payment generation and candidate encoding are sequential."))
+        scope="One complete payment per file. All auxiliaries rebuilt locally from pinned program. Fresh namespace with selected public bytes, executable and its pinned ELF libraries only. Verifier CPU/RSS from GNU time inside the namespace, outer elapsed includes namespace startup. Prover and pack wait4 are direct workers. Source payment generation and candidate encoding are sequential."))
     print(json.dumps([r["candidate_body_bytes"] for r in rows]))
 
 
