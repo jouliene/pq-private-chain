@@ -1,0 +1,21 @@
+[package]
+name = "compact-bounded-arity-v3"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[lib]
+path = "../../../compact-arities-v3/src/lib.rs"
+
+[dependencies]
+compact-payment-v1 = { package = "compact-bounded-base-v3", path = "../../../compact-bounded-payment-v3/adapters/base" }
+p3-air = { path = "../../../compact-challenge-v1/view01/air" }
+p3-field = { path = "../../../compact-challenge-v1/view01/field" }
+p3-goldilocks = { path = "../../../compact-challenge-v1/view01/goldilocks" }
+p3-matrix = { path = "../../../compact-challenge-v1/view01/matrix" }
+p3-poseidon2-air = { path = "../../../compact-challenge-v1/view01/poseidon2-air" }
+p3-uni-stark = { path = "../../../compact-challenge-v1/view01/uni-stark" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.11"

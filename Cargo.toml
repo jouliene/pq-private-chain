@@ -1,0 +1,26 @@
+[package]
+name = "cp03-fresh-installation"
+version = "0.1.0"
+edition = "2024"
+publish = false
+[workspace]
+resolver = "2"
+[dependencies]
+ledger-cp03 = { path = "source/crates/ledger-cp03" }
+compact-all-payments-v3 = { path = "source/experiments/compact-all-payments-v3" }
+compact-arity-v3 = { package = "compact-bounded-arity-v3", path = "source/experiments/compact-all-payments-v3/adapters/arity" }
+cp03-source-provider = { path = "source/runtime/cp03/provider" }
+serde_json = "=1.0.154"
+libc = "=0.2.191"
+[[bin]]
+name = "ledger-cp03"
+path = "source/crates/ledger-cp03/src/main.rs"
+[[bin]]
+name = "compact-all-payments-v3"
+path = "source/experiments/compact-all-payments-v3/src/main.rs"
+[[bin]]
+name = "cp03-hash-core"
+path = "source/experiments/compact-receiving-v1/cp03/hash-core/src/main.rs"
+[[bin]]
+name = "provider-controls"
+path = "source/runtime/cp03/provider/src/bin/provider_controls.rs"

@@ -1,0 +1,31 @@
+{
+  "blocks": [
+    {
+      "body": "credit0.body",
+      "header": "block01.header"
+    },
+    {
+      "body": "payer2x2.body",
+      "header": "block02.header"
+    },
+    {
+      "body": "recipient1x2.body",
+      "header": "block03.header"
+    },
+    {
+      "body": "restored1x2.body",
+      "header": "block04.header"
+    }
+  ],
+  "chain": "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+  "endpoint": {
+    "blockId": "e0989e94b323032f5cf803bc2df7ef3c356176f23f5d87ecece7ba35c78de9852767d848dda93d9dfd8be0a38df10f0166092745d00b0e223215ba89e55fe0ca",
+    "chain": "1529390cdceac5fcf93c345c33121b55dd6df42d01906dfb6cca3700dd881063",
+    "genesisId": "5239c971fa0b3f2784c869bb2581239c92be50337403f0f08e52235d357d324a27bca432fb5f880d57c50561ea8a3c55e4ebba05110cea768c25c6a4a03c6fe4",
+    "height": "4"
+  },
+  "format": "CP03-AUDIT-PUBLIC01",
+  "genesis": "genesis.bin",
+  "nf_alternate": "nf-alternate.body",
+  "source_alternate": "source-alternate.body"
+}

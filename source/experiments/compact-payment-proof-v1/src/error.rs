@@ -1,0 +1,20 @@
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Error {
+    Manifest,
+    Identity,
+    Shape,
+    Entropy,
+    Preparation,
+    Statement,
+    Input,
+    Prove,
+    Encode,
+    Decode,
+    Crypto,
+    Io,
+    Resource,
+    ProofTooLarge,
+    BoundedOodAbort,
+    BoundedPcsAbort,
+    ChallengeAlgebra,
+}

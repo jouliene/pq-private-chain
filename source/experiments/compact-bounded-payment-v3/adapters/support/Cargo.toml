@@ -1,0 +1,23 @@
+[package]
+name = "compact-bounded-support-v3"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[lib]
+path = "../../../compact-proof-v1/src/lib.rs"
+
+[dependencies]
+p3-challenger = { path = "../../../compact-challenge-v1/view01/challenger" }
+p3-commit = { path = "../../../compact-challenge-v1/view01/commit" }
+p3-dft = { path = "../../../compact-challenge-v1/view01/dft" }
+p3-field = { path = "../../../compact-challenge-v1/view01/field" }
+p3-fri = { path = "../../../compact-challenge-v1/view01/fri" }
+p3-goldilocks = { path = "../../../compact-challenge-v1/view01/goldilocks" }
+p3-merkle-tree = { path = "../../../compact-challenge-v1/view01/merkle-tree" }
+p3-symmetric = { path = "../../../compact-challenge-v1/view01/symmetric" }
+p3-uni-stark = { path = "../../../compact-challenge-v1/view01/uni-stark" }
+rand = { version = "=0.10.1", default-features = false, features = ["std_rng"] }
+tiny-keccak = { version = "=2.0.2", features = ["sha3"] }
+

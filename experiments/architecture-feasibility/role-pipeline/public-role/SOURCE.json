@@ -1,0 +1,14 @@
+{
+  "files": {
+    "Cargo.lock": "57c8b20d10021e88dde32991e8efcd771249c9aa19f8d47bcaf7cf3cde61c7b8",
+    "Cargo.toml": "26fbad57c157da7622f8527ef2081abdc0c186e489e241ee9ceb96246610ab08",
+    "README.md": "8ace2b8d12cac5c0d024cbb957731087420e745bb36de8efab7177713900b3ec",
+    "ops.py": "d1ca2d91a2c6a58a9c073656b225151ba7dc6f516726628e1c14cb77bd3b7be8",
+    "src/fixture.rs": "9d4f52c76047c86d49761ebde1c70018f0fd182a6a1ec2ab7164cf837526e195",
+    "src/inspect.rs": "5aa744881b320559dbce2b9dfaf2c2d246ccd1b3848ebc1de1a393fcb4f406ea",
+    "src/main.rs": "dcdf9b1b41ebf0d1d7b58379f020153f4ebf535e974ccd002b795b3d8f8925bb",
+    "src/metrics.rs": "4b52aee1e7a10b5dab6401aeb286af206a1dde618638fc1c325e99bf2873e862",
+    "src/snapshot.rs": "f204b029a10319e25920f855510ac13a59bb23082bd59c2e6972cb29ed7f629d"
+  },
+  "format": "CP03-PUBLIC-ROLE-SOURCE01"
+}

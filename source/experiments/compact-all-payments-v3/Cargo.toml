@@ -1,0 +1,26 @@
+[package]
+name = "compact-all-payments-v3"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[workspace]
+members = ["adapters/arity"]
+
+[dependencies]
+compact-arity-v3 = { package = "compact-bounded-arity-v3", path = "adapters/arity" }
+compact-proof-v1 = { package = "compact-bounded-support-v3", path = "../compact-bounded-payment-v3/adapters/support" }
+p3-air = { path = "../compact-challenge-v1/view01/air" }
+p3-challenger = { path = "../compact-challenge-v1/view01/challenger" }
+p3-commit = { path = "../compact-challenge-v1/view01/commit" }
+p3-dft = { path = "../compact-challenge-v1/view01/dft" }
+p3-field = { path = "../compact-challenge-v1/view01/field" }
+p3-fri = { path = "../compact-challenge-v1/view01/fri" }
+p3-matrix = { path = "../compact-challenge-v1/view01/matrix" }
+p3-uni-stark = { path = "../compact-challenge-v1/view01/uni-stark" }
+rand = { version = "=0.10.1", default-features = false, features = ["std_rng", "sys_rng"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.11"
+libc = "0.2"

@@ -1,0 +1,8 @@
+{
+  "files": {
+    "README.md": "babf1d4b30459272d455efd01bdf7b6233672c2aa3d81d35028b9a6c71ff8433",
+    "driver.mjs": "09e6d3896f7f3c580504aa2b6981175eb83932fe1d531a06a658c805406f1e96",
+    "run.py": "9fc722f80c714a25d5c99ef379a262d0c33c4e00bdeaff9d68214c7e163c1e3e"
+  },
+  "format": "CP03-PUBLIC-DISTINCT-PRODUCER-SOURCE01"
+}

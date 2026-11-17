@@ -1,0 +1,15 @@
+[package]
+name = "cp03-bounded-history-codec"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[lib]
+path = "../../../../experiments/compact-history-v3/src/lib.rs"
+
+[dependencies]
+compact-arities-v3 = { package = "compact-bounded-arity-v3", path = "../../../../experiments/compact-all-payments-v3/adapters/arity" }
+tiny-keccak = { version = "=2.0.2", features = ["sha3"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "=1.0.154"

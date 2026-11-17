@@ -1,0 +1,33 @@
+[package]
+name = "ledger-cp03"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[workspace]
+members = ["adapters/history"]
+resolver = "2"
+
+[features]
+default = []
+# Diagnostic PUBLIC crash experiment only, absent from production/default build.
+crash-controls = []
+# PUBLIC local archive process-crash experiment only, absent from default.
+archive-crash-controls = []
+# Diagnostic PUBLIC timing only; never co-enable for a measurement.
+admission-cost-trace = []
+# PUBLIC local-cache/status diagnostic only.
+storage-cost-controls = []
+
+[dependencies]
+# Already pinned by cp03-source-provider; one local edge, no new package.
+libc = "=0.2.191"
+cp03-source-provider = { path = "../../runtime/cp03/provider" }
+compact-all-payments-v3 = { path = "../../experiments/compact-all-payments-v3" }
+compact-arities-v3 = { package = "compact-bounded-arity-v3", path = "../../experiments/compact-all-payments-v3/adapters/arity" }
+cp03-history = { package = "cp03-bounded-history-codec", path = "adapters/history" }
+rusqlite = { version = "=0.31.0", features = ["bundled"] }
+libsqlite3-sys = { version = "=0.28.0", features = ["bundled"] }
+tiny-keccak = { version = "=2.0.2", features = ["sha3", "shake"] }
+serde_json = "=1.0.154"

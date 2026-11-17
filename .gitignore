@@ -1,0 +1,15 @@
+/.work/
+/.tools/
+/.tmp/
+/target/
+**/__pycache__/
+*.pyc
+**/target/
+**/*.sqlite
+**/*.sqlite-journal
+**/*.db
+**/*.db-journal
+core
+*.secret
+*.key
+*.pem

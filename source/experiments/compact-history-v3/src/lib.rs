@@ -1,0 +1,16 @@
+//! Unverified CP03 transport data and endpoint-relative byte completeness only.
+pub mod body;
+pub mod genesis;
+pub mod history;
+mod wire;
+mod native_sha3;
+pub use native_sha3::Error as NativeHistoryHashError;
+pub use wire::{Error, Id, Result};
+pub const PROOF_CAP: usize = 2_097_152;
+pub const PREFIX_MAX: usize = 9_423;
+pub const BODY_MAX: usize = PREFIX_MAX + PROOF_CAP;
+pub const REDUCED_MAX: usize = 9_499;
+pub const HEADER_MAX: usize = 1_232;
+pub const SCAN_BLOCK_MAX: usize = 153_292;
+pub const FRAMED_BLOCK_MAX: usize = SCAN_BLOCK_MAX + 4;
+pub const CAPACITY: u64 = 1 << 40;

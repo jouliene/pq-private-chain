@@ -1,0 +1,61 @@
+name: Research payment smoke
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout the selected public revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Provision the declared research toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends build-essential libssl-dev python3 curl xz-utils ripgrep
+          rustup toolchain install 1.99.1 --profile minimal
+          mkdir -p .tools
+          curl --fail --location --silent --show-error --output .tools/node-v24.22.1-linux-x64.tar.xz https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz
+          echo '6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6  .tools/node-v24.22.1-linux-x64.tar.xz' | sha256sum -c -
+          tar -xf .tools/node-v24.22.1-linux-x64.tar.xz -C .tools
+      - name: Prepare and explicitly bind this runner installation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I scripts/setup.py prepare --label ci01
+          python3 -I scripts/setup.py discover --label ci01 --node "$PWD/.tools/node-v24.22.1-linux-x64/bin/node" --libcrypto /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+          # This reviewed workflow selects the hosted Ubuntu image and official
+          # checksum-pinned Node. Runtime checks/pins remain active; this is a
+          # new test installation, never a historical binary attestation.
+          task_runtime_sha=$(sha256sum .work/ci01/runtime-candidate.json | cut -d ' ' -f1)
+          python3 -I scripts/setup.py install --label ci01 --approve-runtime "$task_runtime_sha"
+          python3 -I scripts/setup.py build --label ci01 --cargo "$HOME/.cargo/bin/cargo" --seconds 900
+      - name: Genuine public and fresh private checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          task_installation=.work/ci01/fresh/installation.json
+          task_installation_sha=$(sha256sum "$task_installation" | cut -d ' ' -f1)
+          python3 -I scripts/replay.py --installation "$task_installation" --approve-installation "$task_installation_sha" --attempt public01
+          python3 -I scripts/private_smoke.py --installation "$task_installation" --approve-installation "$task_installation_sha" --attempt private01
+          task_workload=.work/ci01/source/experiments/cp03-private-cycle/evidence/private01.public/workload.json
+          task_workload_sha=$(sha256sum "$task_workload" | cut -d ' ' -f1)
+          task_witness_sha=$(sha256sum experiments/architecture-feasibility/witness-stream/SOURCE.json | cut -d ' ' -f1)
+          python3 -I experiments/architecture-feasibility/witness-stream/probe.py --installation "$task_installation" --approve-installation "$task_installation_sha" --approve-source "$task_witness_sha" --workload "$task_workload" --approve-workload "$task_workload_sha" --output "$PWD/.work/ci01/witness-result.json"
+      - name: Retain only fixed public result records
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: public-smoke-results
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            .work/ci01/build-result.json
+            .work/ci01/public01-result.json
+            .work/ci01/private-private01.json
+            .work/ci01/witness-result.json
+          include-hidden-files: true

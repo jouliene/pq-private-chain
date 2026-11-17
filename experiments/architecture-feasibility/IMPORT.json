@@ -1,0 +1,92 @@
+{
+  "excluded": [
+    "historical raw logs/conversations",
+    "private keys/witnesses/backups/databases",
+    "machine installation manifests and runtime pins",
+    "large historical public proof archives",
+    "unused Source02 experiment delta"
+  ],
+  "files": [
+    {
+      "change": "byte-identical executed Source01 Rust module",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/src/main.rs",
+      "public_sha256": "dcdf9b1b41ebf0d1d7b58379f020153f4ebf535e974ccd002b795b3d8f8925bb",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/source01/src/main.rs",
+      "source_sha256": "dcdf9b1b41ebf0d1d7b58379f020153f4ebf535e974ccd002b795b3d8f8925bb"
+    },
+    {
+      "change": "byte-identical executed Source01 Rust module",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/src/fixture.rs",
+      "public_sha256": "9d4f52c76047c86d49761ebde1c70018f0fd182a6a1ec2ab7164cf837526e195",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/source01/src/fixture.rs",
+      "source_sha256": "9d4f52c76047c86d49761ebde1c70018f0fd182a6a1ec2ab7164cf837526e195"
+    },
+    {
+      "change": "byte-identical executed Source01 Rust module",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/src/metrics.rs",
+      "public_sha256": "4b52aee1e7a10b5dab6401aeb286af206a1dde618638fc1c325e99bf2873e862",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/source01/src/metrics.rs",
+      "source_sha256": "4b52aee1e7a10b5dab6401aeb286af206a1dde618638fc1c325e99bf2873e862"
+    },
+    {
+      "change": "byte-identical executed Source01 Rust module",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/src/snapshot.rs",
+      "public_sha256": "f204b029a10319e25920f855510ac13a59bb23082bd59c2e6972cb29ed7f629d",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/source01/src/snapshot.rs",
+      "source_sha256": "f204b029a10319e25920f855510ac13a59bb23082bd59c2e6972cb29ed7f629d"
+    },
+    {
+      "change": "byte-identical executed Source01 Rust module",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/src/inspect.rs",
+      "public_sha256": "5aa744881b320559dbce2b9dfaf2c2d246ccd1b3848ebc1de1a393fcb4f406ea",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/source01/src/inspect.rs",
+      "source_sha256": "5aa744881b320559dbce2b9dfaf2c2d246ccd1b3848ebc1de1a393fcb4f406ea"
+    },
+    {
+      "change": "Frontier class unchanged; approved public installation and generated-workload entry point replaces machine/old-fixture pins",
+      "public_path": "experiments/architecture-feasibility/witness-stream/probe.py",
+      "public_sha256": "1e11c9a8333765457aeb511af9efd5dc367d6a3bf65b9efba751b4c96f08dbce",
+      "research_path": "experiments/architecture-feasibility/witness-stream/probe.py",
+      "source_sha256": "fe696fbbaeb53bd212a73b8d4a30b824ab87ed8d0063282cef4ac0f8adc3c388"
+    },
+    {
+      "change": "unchanged32-proof workflow; approved installed-source imports/operator/helper identities and local output paths replace fresh01 machine identities",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/producer/driver.mjs",
+      "public_sha256": "09e6d3896f7f3c580504aa2b6981175eb83932fe1d531a06a658c805406f1e96",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/producer/driver.mjs",
+      "source_sha256": "923e2936d30b0cb470b6e88d936e9c8ee6232565c90f7a24a91414995b46aed8"
+    },
+    {
+      "change": "approved public common.run_private lifecycle replaces research helper adaptation; fixed-schema private capture preserved",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/producer/run.py",
+      "public_sha256": "9fc722f80c714a25d5c99ef379a262d0c33c4e00bdeaff9d68214c7e163c1e3e",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/producer/run.py",
+      "source_sha256": "f3793ab8eb22ce285d200ae2b3a1fb6dca5eced5f5619172bf6d629e5fa2cdb3"
+    },
+    {
+      "change": "same package/version dependencies; ledger path relocates to public source/ and approved workspace at build",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/Cargo.toml",
+      "public_sha256": "26fbad57c157da7622f8527ef2081abdc0c186e489e241ee9ceb96246610ab08",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/Cargo.toml",
+      "source_sha256": "23c21ca34a0eb690c25723624a86e3cc71c2a98d58980f98f09ce7cd2b114001"
+    },
+    {
+      "change": "byte-identical executed lock; local paths are not encoded",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/Cargo.lock",
+      "public_sha256": "57c8b20d10021e88dde32991e8efcd771249c9aa19f8d47bcaf7cf3cde61c7b8",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/evidence/build01.Cargo.lock",
+      "source_sha256": "57c8b20d10021e88dde32991e8efcd771249c9aa19f8d47bcaf7cf3cde61c7b8"
+    },
+    {
+      "change": "same genuine role/build gates; approved public installation and offline vendor replace research fresh01 boundary",
+      "public_path": "experiments/architecture-feasibility/role-pipeline/public-role/ops.py",
+      "public_sha256": "d1ca2d91a2c6a58a9c073656b225151ba7dc6f516726628e1c14cb77bd3b7be8",
+      "research_path": "experiments/architecture-feasibility/role-pipeline/public-role/ops.py",
+      "source_sha256": "addd8c74c57c8b4b63fc5ea6535705f17d03b4475556e2da0af49c6bece9641d"
+    }
+  ],
+  "format": "CP03-PUBLIC-ARCHITECTURE-MECHANISM-IMPORT01",
+  "new_public_smoke_executed": false,
+  "source_repository_role": "preserved private research development history; not imported into public Git history",
+  "source_revision": "360fc54e6b76dc864131f5c17b80c93b02c8bc67"
+}
