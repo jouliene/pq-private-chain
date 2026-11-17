@@ -1,0 +1,41 @@
+{
+  "actual_gate3_expiry_or_reorg_acceptance": false,
+  "actual_wallet_discovery": false,
+  "algorithm_has_file_or_network_api": false,
+  "changing_roots": 260,
+  "checks": [
+    "260-changing-root-refreshes",
+    "late-dynamic-discovery-without-history-vector",
+    "public-full-oracle-path-equivalence",
+    "spent-note-removed",
+    "height256-old-anchor-eligible-height257-expired-policy",
+    "current-anchor-old-note-refreshed",
+    "bounded-frontier-owned-and-rewind-state",
+    "rewind-restores-common-prefix-unspentness",
+    "orphan-discovery-and-witness-removed",
+    "replacement-branch-refresh",
+    "orphan-only-anchor-rejected",
+    "old-branch-draft-with-eligible-common-prefix-retained",
+    "stale-epoch-cannot-overwrite-branch",
+    "ordering-parent-count-root-failures-atomic",
+    "wrong-endpoint-no-published-view",
+    "unknown-common-prefix-rejected",
+    "deep-rewind-explicit-replay-required",
+    "owned-capacity-overflow-aborts-without-dropping-note"
+  ],
+  "diagnostic_hash_not_cp03": true,
+  "format": "WALLET-WITNESS-STRUCTURAL-CONTROLS01",
+  "full_oracle_retained_only_in_test": true,
+  "genuine_new_proof_or_admission": false,
+  "maximum_algorithm_payload_counts": {
+    "empty_digests": 41,
+    "frontier_digests": 8,
+    "path_slots": 120,
+    "wanted_references": 117
+  },
+  "passed": true,
+  "private_material_read_or_recorded": false,
+  "recent_anchor_cap": 256,
+  "rewind_checkpoint_cap": 9,
+  "scope": "Public structural controls only; no resource profile, real wallet integration or Gate3 PASS"
+}

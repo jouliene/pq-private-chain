@@ -1,0 +1,14 @@
+{
+  "actual_exit": 0,
+  "actual_wrapper_exit": 0,
+  "format": "WALLET-WITNESS-CP03-SOURCE-READBACK01",
+  "new_proofs_or_gate3_acceptance": false,
+  "source_approval_sha256": "986b65d246fc51300a886c05d30b926748791c26ab4001599ea2e0a18c88af20",
+  "source_hashes": {
+    "README.md": "8f083db906076bcc30eb1dfc20122f6a0e7d334bf57b4382ba5c4897396218eb",
+    "controls.py": "954c104984cc0ec430265b1ce813f9f7213cb872c059dcb27f54f43e97fff8db",
+    "cp03_fixture.py": "179414248ab824c74b55ed32f51c33359c3306e07a4155f35d09018322c2645d",
+    "stream.py": "1d8bd4c1b04ff3b73150df717b9961f9bf776ba11b3d401040c7db037d04b0d8"
+  },
+  "source_pre_and_post_unchanged": true
+}

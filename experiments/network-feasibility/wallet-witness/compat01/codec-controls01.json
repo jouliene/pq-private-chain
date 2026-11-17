@@ -1,0 +1,12 @@
+{
+  "format": "NETWORK04-WALLET-PUBLIC-CODEC-CONTROLS01",
+  "passed": true,
+  "legacy_genesis_exact": true,
+  "legacy_statement_and_body_vectors_exact": 4,
+  "network_genesis_sources": 128,
+  "network_genesis_bytes": 339320,
+  "negative_controls": 5,
+  "private_material": false,
+  "new_proofs_or_gate_acceptance": false,
+  "codec_sha256": "d34bdf00c7b685487e6c39da0c9f2a50ba06650f1a5dd224b5fffcc0c33c8750"
+}

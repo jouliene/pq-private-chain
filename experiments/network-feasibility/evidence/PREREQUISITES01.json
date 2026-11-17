@@ -1,0 +1,16 @@
+{
+  "format": "NETWORK-PREREQUISITES01",
+  "node_relative_path": ".tools/node-v24.22.1-linux-x64/bin/node",
+  "node_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+  "official_archive_sha256": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6",
+  "archive_provenance": "Previously downloaded official Node distribution, exact published BUILD.md checksum; re-extracted into ignored canonical .tools, not a research source dependency.",
+  "runtime": {
+    "node": "24.22.1",
+    "openssl": "3.5.9",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "rust_version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "python": "3.12.3",
+  "scope": "Runtime prerequisite preflight only; no new source build or payment experiment."
+}

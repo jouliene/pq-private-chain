@@ -1,0 +1,42 @@
+{
+  "format": "NETWORK04-PRODUCER-SOURCE-REVIEW01",
+  "candidate_files": {
+    "driver.mjs": "a097ef101aa9d31e0b204ddf1f7fb2d2ed9005caec6deb28fe5ec02c6e7b2116",
+    "run.py": "a6b1190b864d2a3cd98aa2322f7d2961c628a9872eb286cb13001da3e85eb101"
+  },
+  "status": "candidate source structurally acceptable; full192-proof allocation not yet approved",
+  "checks": {
+    "node_syntax_only": true,
+    "python_ast_only": true,
+    "private_execution": false,
+    "funding_proofs": 96,
+    "ordinary_proofs": 96,
+    "registered_total": 9600000000,
+    "funded_occurrences": 192,
+    "ordinary_disjoint_inputs": 192,
+    "final_leaves": 384,
+    "expected_fee_escrow": 405986208,
+    "liabilities_after_funding": 0,
+    "shared_ordinary_anchor": "actual admitted funding block",
+    "private_pair_permutation": "Fisher-Yates crypto.randomInt in RAM before ordinary loop",
+    "private_capture": "unchanged approved Parent bridge and common.run_private bounded RAM; only exact fixed result accepted",
+    "new_network_manifest": "installed full-source pin plus fixed format/base protocol/profile/program/cap checks"
+  },
+  "required_before_allocation": [
+    "final README and SOURCE approval with exact hashes",
+    "reviewed frozen ledger/history/wallet ABI implementing genesis4/schema3/retain/count96",
+    "cheap allocated preflight proving actual genesis/init/retention and adapter capability before192-proof campaign",
+    "Root explicit single-heavy allocation and external terminal guard"
+  ],
+  "cost_labels": [
+    "private_proving_call_wall_seconds includes completeBody write and Parent receipt read; label inclusive",
+    "worker lifecycle includes local verification; producer Ledger admission verifies again; count separately",
+    "private process-tree RSS sum is not simultaneous RSS; source correctly disclaims it"
+  ],
+  "limitations": [
+    "producer uses trusted LOCAL ledger membership to create test workload; not Gate3 local-witness integration",
+    "small real funding population and published benchmark timing do not establish anonymity",
+    "no backup/recovery-network/consensus resource acceptance inferred from producer"
+  ],
+  "scope": "independent static code and syntax review; no generated keys/proofs/ledger invocation"
+}

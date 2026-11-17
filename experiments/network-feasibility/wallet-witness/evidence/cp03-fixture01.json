@@ -1,0 +1,55 @@
+{
+  "actual_gate3_expiry_or_reorg_acceptance": false,
+  "actual_wallet_discovery": false,
+  "algorithm_receives_full_ledger_paths": false,
+  "checkpoints": [
+    {
+      "height": 1,
+      "leaf_count": 2,
+      "public_diagnostic_paths": 1,
+      "root_hex": "84209ba4a46dc405b3ca4e17dbc33f0da75d498d2318cece4856c842de2c3ab8665b230937209047d53962febb0611958a71a76071318ea1a28ad6a8d3d4e114"
+    },
+    {
+      "height": 2,
+      "leaf_count": 4,
+      "public_diagnostic_paths": 1,
+      "root_hex": "a683bdf1eab3a3c3c24d9b5b7ae90eb902da30d2de52f5583642399cba4ced94b07257a94785b6ac5f224b55ad327072a14df93c7c036b07a449538c089cbf65"
+    },
+    {
+      "height": 3,
+      "leaf_count": 6,
+      "public_diagnostic_paths": 2,
+      "root_hex": "e79a0edb8da579702adf9f69d346ce14d1ce1a9dfb078204b755b3759a104bab86353fdab55cefc047fe2350bb8748570319bca7da9808791b8b3c4226b38232"
+    },
+    {
+      "height": 4,
+      "leaf_count": 8,
+      "public_diagnostic_paths": 2,
+      "root_hex": "30ce9228785f24b0e32aae6e782701a9bd11bf0d7a5f11c3bbe8b624934f01e3b5b33efe3cb51973baa6006c7fef829927e595cd4989c0b60f47f3929344e587"
+    }
+  ],
+  "consensus_freshness_and_availability_proved": false,
+  "format": "WALLET-WITNESS-CP03-FIXTURE01",
+  "full_oracle_only_in_harness": true,
+  "genuine_new_proofs_or_admissions": false,
+  "passed": true,
+  "payment_validity": "delegated to existing published genuine-fixture validation; not reverified here",
+  "private_material_read_or_recorded": false,
+  "public_inputs": {
+    "fixtures/cp03-reference/block01.header": "01a2e21dae71398f602d9b113070a34e362d53ca2544ae23c2aed3e29cea6a81",
+    "fixtures/cp03-reference/block02.header": "70204bd7795af2d072e52f871e9e978df2c6187b9108ae6cf3cde04c9a60c091",
+    "fixtures/cp03-reference/block03.header": "5b86c59d305ea172f80af21d521c5d84f5f4877d2a6f8ac9865db09dfb995fcd",
+    "fixtures/cp03-reference/block04.header": "1d20389ec2efd28e59f0258cb10583b1e07008bbb41019a59e8dfeda0eb576cb",
+    "fixtures/cp03-reference/credit0.body": "31ccc3bfc86d200175a03393f406730cf083baa8c9715b6966cef114363a69e8",
+    "fixtures/cp03-reference/expected.json": "9fb2b11d5da81e6135056732185e352a21a8285363b4c4e0e9d5676d2c62f03f",
+    "fixtures/cp03-reference/genesis.bin": "c06a98fc0db466237c59c07bb9670806e6217f475773d8c6b56935eec3aff640",
+    "fixtures/cp03-reference/payer2x2.body": "8907fff56f7b6418c0752c8160cdbae13e10a0ddb19de884d89e99f924a5abe9",
+    "fixtures/cp03-reference/recipient1x2.body": "ca318cb7aadfb15314e4f1a32159f44d3c60d1958313c5fc4314b6f38a1a4dbb",
+    "fixtures/cp03-reference/restored1x2.body": "a22f57b1c582b743f8d01cab618479391c43229f4018bee26d1ced5fc1a49aaa",
+    "source/experiments/compact-arities-v3/reference.py": "f7cfb9addef022e772c1acd609f35253cb4a862a94127472da2e368f83006abd",
+    "source/experiments/compact-payment-v1/data/round-constants.json": "fb86dcd8cb514b391b71cf721be38f766fc2adfa7bc557ed28e333bffed1ff90",
+    "source/experiments/compact-payment-v1/reference.py": "d84f744623dc2843d44a15e950c5deec23ce162513723a2a55102120ca00afca"
+  },
+  "scope": "Short current-CP03 public correspondence only; not streaming RSS, actual wallet integration or Gate3 PASS",
+  "uses_actual_cp03_tree_hashes_and_body_binding": true
+}

@@ -1,0 +1,41 @@
+{
+  "format": "NETWORK04-PRODUCER-SOURCE-REVIEW02",
+  "source_sha256": "572433969448de0a293e80b59c278f275122e926dddf9ac61f1e195fbe0e82d3",
+  "file_pins": {
+    "README.md": "91a1bd6e741f6fd4919e9055de4163ed6194965887983b082a7f2e178e8c2759",
+    "driver.mjs": "a097ef101aa9d31e0b204ddf1f7fb2d2ed9005caec6deb28fe5ec02c6e7b2116",
+    "run.py": "a6b1190b864d2a3cd98aa2322f7d2961c628a9872eb286cb13001da3e85eb101"
+  },
+  "source_disposition": "GO for Root-allocated diagnostic2 only after separately reviewed adapter freeze/build/installation approval; Gate196 generation requires successful ABI/control readback and new explicit allocation",
+  "source_checks": {
+    "fixed_operator_payments_choices": [
+      2,
+      96
+    ],
+    "diagnostic_genuine_proofs": 4,
+    "diagnostic_cannot_satisfy_gate1": true,
+    "gate1_genuine_proofs": 192,
+    "fixed_typed_result_tracks_selected_count": true,
+    "claim_records_diagnostic_and_ceiling": true,
+    "watchdog_seconds": {
+      "diagnostic2": 180,
+      "gate196": 3600
+    },
+    "genesis_root_from_actual_new_local_ledger_head": true,
+    "retained_source_runtime_and_private_parent_boundary": true,
+    "all_SOURCE_pins_match": true,
+    "node_syntax": true,
+    "python_ast": true
+  },
+  "resolved_prior_findings": [
+    "README and SOURCE included",
+    "small real ABI diagnostic before192-proof allocation",
+    "per-body inclusive wall and worker local verification/repeated producer Ledger validation clearly labelled"
+  ],
+  "retained_limits": [
+    "new wallet/ledger ABI implementation still awaits separate source review and actual diagnostic",
+    "local membership used for producer fixture construction is not integrated Gate3 witness construction",
+    "no actual keys/proofs/native ledger run performed by reviewer",
+    "Root owns single-heavy allocation and external terminal confirmation"
+  ]
+}

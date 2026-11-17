@@ -1,3 +1,13 @@
+# Active network feasibility directive
+
+Read NETWORK_FEASIBILITY_GOAL.md completely. It authorizes the gated larger-block
+transport/storage and later wallet-witness changes, measured pivots, independent
+reproduction and ordinary milestone publication. Keep the global blockchain
+objective ACTIVE and distinguish it from this bounded experiment's completion.
+Current ownership and sole-heavy-job allocations are in STATUS.md. Historical
+publication evidence is preserved at d8f8000; do not recreate it. Report briefly
+every30minutes of active work, with material event updates sooner.
+
 # Public implementation working guidance
 
 This is the selected public development checkout for the independent PQ-private

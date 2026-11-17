@@ -1,0 +1,35 @@
+{
+  "format": "NETWORK04-CONTRACT-IMPORT01",
+  "files": [
+    {
+      "path": "source/docs/architecture/CP_ALL_ARITY_PROOFS_03.md",
+      "sha256": "c3ce28968211257c0824e7a4d865e284411b277d39880a9031b14826f255adcb",
+      "bytes": 9313,
+      "source_kind": "retained reviewed technical contract, exact hash named by preserved CP03 manifest",
+      "historical_source_relative_to_research_development": "docs/architecture/CP_ALL_ARITY_PROOFS_03.md"
+    },
+    {
+      "path": "source/docs/architecture/CP_ARITIES_03.md",
+      "sha256": "03b06586a8aa4fedf36aef73fb4648d6aa0aeb6b8a457d7557d94843ae3ba451",
+      "bytes": 7493,
+      "source_kind": "retained reviewed technical contract, exact hash named by preserved CP03 manifest",
+      "historical_source_relative_to_research_development": "docs/architecture/CP_ARITIES_03.md"
+    },
+    {
+      "path": "source/docs/architecture/CP_HISTORY_03.md",
+      "sha256": "2068a3631484b3cdef188a439c5546abdc32a74122cb8cd7e9efe280d2d97fab",
+      "bytes": 7803,
+      "source_kind": "retained reviewed technical contract, exact hash named by preserved CP03 manifest",
+      "historical_source_relative_to_research_development": "docs/audit/snapshot-2026-11-16-cp03/docs/architecture/CP_HISTORY_03.md"
+    },
+    {
+      "path": "source/docs/architecture/CP_INTEGRATION_03.md",
+      "sha256": "9c38caaa573b7ae9fbede3bbbec9cb81d1ce592ae543811811cc541fc4881ce0",
+      "bytes": 16862,
+      "source_kind": "retained reviewed technical contract, exact hash named by preserved CP03 manifest",
+      "historical_source_relative_to_research_development": "docs/architecture/CP_INTEGRATION_03.md"
+    }
+  ],
+  "private_material": false,
+  "historical_Git_imported": false
+}

@@ -1,0 +1,19 @@
+{
+  "format": "NETWORK-WITNESS-CP03-RECEIPT-READBACK01",
+  "passed": true,
+  "source_approval_sha256": "986b65d246fc51300a886c05d30b926748791c26ab4001599ea2e0a18c88af20",
+  "source_files_checked": 4,
+  "public_input_hashes_checked": 13,
+  "actual_cp03_checkpoints": 4,
+  "actual_process": {
+    "process_exit": 0,
+    "wrapper_exit": 0,
+    "timeout": false,
+    "wall_seconds": 1.3540831339778379,
+    "user_seconds": 1.335374,
+    "system_seconds": 0.013002999999999999,
+    "maxrss_kib": 29812,
+    "first_wait4": true
+  },
+  "scope": "Independent existing source/receipt/public-fixture hash/header readback only; no repeated scalar/native/proof run, no Gate3 acceptance"
+}

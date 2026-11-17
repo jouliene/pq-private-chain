@@ -1,0 +1,103 @@
+{
+  "format": "NETWORK04-GATE1-RESEARCH-PROFILE01",
+  "classification": "Researcher-selected finite experimental configuration, not owner budget or WAN/annual service guarantee",
+  "architecture_question": "Can a 96-distinct ordinary-payment block complete bounded producer/archive/destination transport, genuine validation, atomic durable commit and accounted retention?",
+  "workload": {
+    "ordinary_payments": 96,
+    "ordinary_input_arity": 2,
+    "funding_credits": 96,
+    "funding_proofs_reported_separately": true,
+    "proof_profile": "unchanged CP03",
+    "max_count": 128,
+    "max_complete_encoded_block_bytes": 268435456,
+    "funding_and_ordinary_blocks": 2
+  },
+  "transport": {
+    "topology": "producer -> archive -> receiving validator, distinct processes on one Linux host",
+    "kind": "bounded loopback TCP, not WAN",
+    "links": [
+      {
+        "from": "producer",
+        "to": "archive",
+        "application_bits_per_second": 100000000,
+        "simulated_round_trip_milliseconds": 40
+      },
+      {
+        "from": "archive",
+        "to": "validator",
+        "application_bits_per_second": 100000000,
+        "simulated_round_trip_milliseconds": 40
+      }
+    ],
+    "latency_policy": "once per request/response; not once per data chunk",
+    "pacing_policy": "cumulative actual application bytes including protocol framing/retries; report overhead not covered by this application-byte model",
+    "kernel_page_cache": "uncontrolled/warm unless an actual cold condition is established; no cache-dropping privilege assumption",
+    "queue_limits": {
+      "archive_connections": 2,
+      "archive_put_connections": 1,
+      "archive_get_connections": 1,
+      "userspace_chunk_bytes": 65536,
+      "requested_socket_buffer_bytes": 65536,
+      "actual_socket_buffer_bytes": "must record OS readback",
+      "unpublished_archive_spools": 2,
+      "max_spool_bytes_each": 268435456,
+      "validator_frames_inflight": 1,
+      "producer_frames_inflight": 1,
+      "validator_decoded_api_copies": "measure actual RSS; frame cap does not mean only one in-memory copy"
+    }
+  },
+  "roles": {
+    "producer": {
+      "cpu_cores": 1,
+      "address_space_bytes": 4294967296,
+      "private_generator_max_seconds": 3600,
+      "diagnostic_four_proofs_max_seconds": 180,
+      "cpu_affinity": [
+        0
+      ]
+    },
+    "archive": {
+      "cpu_cores": 1,
+      "address_space_bytes": 4294967296,
+      "retention": "durable full bytes; ACK after file and directory persistence, not proof-validity attestation",
+      "cpu_affinity": [
+        1
+      ]
+    },
+    "validator": {
+      "cpu_cores": 1,
+      "address_space_bytes": 4294967296,
+      "retention": "explicit local RETAIN; charge full body/database/journal growth, no pending mandatory export or eviction",
+      "cpu_affinity": [
+        2
+      ]
+    }
+  },
+  "storage": {
+    "initial_host_free_bytes_approx": 143881404416,
+    "per_role_test_output_ceiling_bytes": 8589934592,
+    "scope": "finite experiment headroom only; not annual participant cost allocation",
+    "require_actual_peak_and_final_bytes": true
+  },
+  "control_boundaries": [
+    "coherent mutated final real proof reaches proof rejection, full state unchanged, valid followup",
+    "interrupted bounded transfer accepts no partial block",
+    "durable commit/publication before lost ACK, restart and current-canonical exact retry without double application"
+  ],
+  "measurement": {
+    "correctness_oracle": "outside measured role processes and spans",
+    "receiving_source_access": "actual producer DB and fixture paths inaccessible; only bounded socket data enters",
+    "required": [
+      "wall",
+      "user/system CPU",
+      "process peak RSS",
+      "role concurrent memory qualification",
+      "actual application bytes and retries",
+      "actual stored/retained bytes",
+      "pending and ingress queue peaks",
+      "proof verification counts and preparation/cache conditions",
+      "equal canonical state"
+    ],
+    "stage_gate": "review actual Gate1 before generating larger distinct workload; a failure triggers repair/pivot, never automatic scale-up"
+  }
+}

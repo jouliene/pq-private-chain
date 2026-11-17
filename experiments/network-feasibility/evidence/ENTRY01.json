@@ -1,0 +1,37 @@
+{
+  "format": "NETWORK-FEASIBILITY-ENTRY01",
+  "baseline": "d8f800037b5efbb76a5a1d6d4d3100e55f676a00",
+  "directive_sha256": "751160323b87cd0479381243583b879e6797e8aea4872a505b81f8016a8e2113",
+  "goal_status": "active",
+  "global_blockchain_status": "active",
+  "initial_tree_changes": [
+    "untracked owner NETWORK_FEASIBILITY_GOAL.md"
+  ],
+  "live_heavy_jobs_at_entry": false,
+  "allowed_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source_baseline_body_bytes_historical": 1750350,
+  "derived_comparison": {
+    "year_seconds": 31536000,
+    "offered_ordinary_payments_per_second": 3.170979198376459,
+    "96_payment_mean_interval_seconds": 30.274559999999997,
+    "96_body_bytes_before_block_framing": 168033600,
+    "one_copy_bytes_per_year": 175035000000000,
+    "minimum_payload_seconds_at_100_mbit_s": 13.442688,
+    "single_stream_mean_mbit_s": 44.40258751902588,
+    "six_full_relay_copies_mean_mbit_s": 266.4155251141553
+  },
+  "classification": "Analytical derivation from historical body-size observation; not a new measured network result and not owner hardware/traffic limits."
+}

@@ -1,0 +1,14 @@
+{
+  "format": "NETWORK-HEAVY-ALLOCATION01",
+  "owner": "arch_private_repro",
+  "question": "Does the bounded selective frontier match actual CP03 public funded roots and independent oracle paths, without a ledger path source?",
+  "source_sha256": "986b65d246fc51300a886c05d30b926748791c26ab4001599ea2e0a18c88af20",
+  "command": "python3 -I experiments/network-feasibility/wallet-witness/cp03_fixture.py --output <new owned evidence file>",
+  "cpu": 0,
+  "wall_cpu_seconds": 60,
+  "address_space_bytes": 536870912,
+  "new_proofs": 0,
+  "public_blocks": 4,
+  "phase": "approved; agent must report actual execution status",
+  "gate3_acceptance": false
+}

@@ -1,0 +1,25 @@
+{
+  "affinity_cpu": 0,
+  "command": [
+    "/usr/bin/prlimit",
+    "--as=536870912",
+    "--cpu=60",
+    "--core=0",
+    "--nofile=64",
+    "--",
+    "/usr/bin/python3",
+    "-I",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-witness/cp03_fixture.py",
+    "--output",
+    "/home/neo/jouliene/pq-private-chain/experiments/network-feasibility/wallet-witness/evidence/cp03-fixture01.json"
+  ],
+  "first_wait4": true,
+  "group_cleanup": "SIGKILL sent before reap",
+  "maxrss_kib": 29812,
+  "process_exit": 0,
+  "system_seconds": 0.013002999999999999,
+  "timeout": false,
+  "user_seconds": 1.335374,
+  "wall_seconds": 1.3540831339778379,
+  "wrapper_exit": 0
+}

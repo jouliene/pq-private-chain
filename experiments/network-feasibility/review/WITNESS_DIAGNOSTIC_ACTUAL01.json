@@ -1,0 +1,25 @@
+{
+  "format": "NETWORK-WITNESS-INDEPENDENT-DIAGNOSTIC01",
+  "passed": true,
+  "source_sha256": "1d8bd4c1b04ff3b73150df717b9961f9bf776ba11b3d401040c7db037d04b0d8",
+  "diagnostic_depth": 8,
+  "append_prefixes_checked": 256,
+  "max_selected": 8,
+  "checks": [
+    "shared-right-subtree-targets",
+    "dynamic-late-discovery",
+    "clone-view-does-not-consume-live-frontier",
+    "forget-removes-waiting-references",
+    "full-tree-terminal-boundary",
+    "forget-then-rewind-restores-targets",
+    "stale-epoch-after-rewind-rejected",
+    "deep-rewind-explicit-replay-required",
+    "anchor-window-policy",
+    "empty-block-current-rejection-atomic"
+  ],
+  "empty_block_support": false,
+  "empty_block_is_integration_repair": true,
+  "actual_cp03_hash_or_proof_execution": false,
+  "private_material": false,
+  "scope": "Independent small diagnostic-hash source discriminator only; no Gate3, native or scalar-Poseidon run"
+}

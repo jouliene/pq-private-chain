@@ -1,0 +1,28 @@
+{
+  "format": "NETWORK04-CONTRACT-REVIEW01",
+  "legacy_sha256": "94e002cbbcab6f70e9825f50dc0ef57f4fed560a4197d0463c8627ac0419f967",
+  "new_sha256": "bce402766b5af84da3e48b16709eb43fe37317edac6cca69562ad2b84eff0cca",
+  "base_protocol_binding_correct": true,
+  "unchanged_crypto_fields": [
+    "assurance",
+    "payments",
+    "proof",
+    "receiving"
+  ],
+  "canonical_json": true,
+  "present_normative_hashes_match": {
+    "CP_NETWORK_04.md": "184e36163e28fa9e89a4ca7528234d0ec1a4f0957b7ec58459afd44a5cedebab"
+  },
+  "missing_public_normative_documents": [
+    "CP_ALL_ARITY_PROOFS_03.md",
+    "CP_ARITIES_03.md",
+    "CP_HISTORY_03.md",
+    "CP_INTEGRATION_03.md"
+  ],
+  "pending_clarifications": [
+    "explicit unchanged empty-block root",
+    "archive durable-object ACK distinct from current-canonical admission retry ACK"
+  ],
+  "scope": "candidate contract readback; implementation and execution not accepted",
+  "reviewer_probe_correction": "Initial own hash calculation double-framed protocol blob, corrected against encoding::h64. A second exact-file probe exposed missing public inherited documents. No product mutation/native execution."
+}
