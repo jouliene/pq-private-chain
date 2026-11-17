@@ -50,7 +50,22 @@ prepare)
     curl --fail --location --silent --show-error --output "$archive" "$url"
     printf '%s  %s\n' "$base_sha" "$archive" | sha256sum --check -
     tar --extract --gzip --file "$archive" --directory "$rootfs" \
-        --no-same-owner --no-same-permissions
+        --no-same-owner --same-permissions
+    # Preserve verified archive modes, especially apt's public temporary dirs.
+    python3 -I - "$rootfs" "$record/image-temp-permissions.json" <<'PY'
+import json, pathlib, stat, sys
+root, output = map(pathlib.Path, sys.argv[1:])
+observed = {}
+for name in ('tmp', 'var/tmp'):
+    value = (root / name).lstat()
+    observed[name] = {'mode': '0' + format(stat.S_IMODE(value.st_mode), 'o'),
+                      'directory': stat.S_ISDIR(value.st_mode)}
+passed = all(value == {'mode': '01777', 'directory': True} for value in observed.values())
+with output.open('x') as stream:
+    json.dump({'passed': passed, 'expected_mode': '01777', 'observed': observed}, stream, sort_keys=True)
+    stream.write('\n')
+assert passed, 'Fresh image tmp and var/tmp require exact01777 before sudo'
+PY
     # Create only fresh-image mountpoints; preserve the image's merged-/usr links.
     mkdir -p -- "$rootfs$repo" "$rootfs$rustup_home" "$rootfs$cargo_bin" "$rootfs$guest_home"
     rm -f -- "$rootfs/etc/resolv.conf"

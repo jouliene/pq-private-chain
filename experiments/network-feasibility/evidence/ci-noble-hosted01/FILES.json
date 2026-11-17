@@ -1,0 +1,46 @@
+{
+  "actual_apt_exit": 100,
+  "conclusion": "failure",
+  "failure": "APT could not create temporary configuration for signature checking; signatures not evaluated successfully, do not infer unsigned upstream repositories.",
+  "files": {
+    "base.json": {
+      "artifact_path": "ci-noble/base.json",
+      "bytes": 683,
+      "sha256": "a31a76c244f76b7053d273b5edbba941125ff4920ad4d9efb34a97c629ef7018"
+    },
+    "provision-public.log": {
+      "artifact_path": "ci-noble/provision-public.log",
+      "bytes": 1869,
+      "sha256": "bfcb6ba7dfadb4ae073b7851433c5ea01a605147437c1c4c953d1235ab033bef"
+    },
+    "provision-status.json": {
+      "artifact_path": "ci-noble/provision-status.json",
+      "bytes": 52,
+      "sha256": "ae15cfe40086a4592a7f01ba5038cfc9ccb1967c24dd8af650b515a83dbce5d0"
+    },
+    "ubuntu22-public-preflight01.json": {
+      "artifact_path": "ubuntu22-public-preflight01.json",
+      "bytes": 5754,
+      "sha256": "61ca247251649a675c696482bfb491dd21de0105b18ef926e055429b321a0377"
+    }
+  },
+  "format": "NETWORK-NOBLE-HOSTED-FAILURE01",
+  "head_sha": "afe161943ee6c4e333d5f06ec992a1cf0a159b66",
+  "hosted_tmp_mode_recorded": false,
+  "local_public_permission_control": {
+    "tmp": {
+      "archive_mode": "0o1777",
+      "local_failed_extraction_mode": "0o775"
+    },
+    "var/tmp": {
+      "archive_mode": "0o1777",
+      "local_failed_extraction_mode": "0o775"
+    }
+  },
+  "native_build_or_private_proofs": false,
+  "run_id": 44100085183,
+  "run_readback": {
+    "bytes": 1302,
+    "sha256": "85b569889d31c54373a2c23df17bc771fba89371af2873d0450a9036d300c103"
+  }
+}

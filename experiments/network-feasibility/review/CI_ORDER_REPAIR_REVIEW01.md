@@ -360,3 +360,42 @@ inside an8-minute job bound. The always-upload list contains only the fixed host
 and nested preflight records plus public base/package/provisioning/identity logs.
 No rootfs, database, credentials or arbitrary tree is uploaded. This adds no
 host-policy relaxation and is not final automatic acceptance.
+
+
+## Hosted administrative prepare failure: archive permission restoration
+
+Read actual run44100085183's provision-public.log. Each downloaded InRelease is
+followed by inability to create /tmp/apt.conf.* for apt-key. Apt then reports GPG/
+unsigned-repository errors and stops. This establishes a temporary-config failure
+before successful repository authentication, not a demonstrated invalid upstream
+cryptographic signature. Do not bypass signature verification or the _apt user.
+The historical hosted /tmp mode was not captured.
+
+The reviewed extraction command used --no-same-permissions. Root's separately
+reported exact-archive/local-extraction control found archive tmp and var/tmp01777
+but extracted directories0775, consistent with the command's umask behavior.
+The smallest coherent packaging correction is --same-permissions on the already
+SHA-verified official base archive, retaining --no-same-owner, then public record
+and assertion of exact01777 ordinary nonsymlink tmp/var/tmp directories before
+any privileged package provisioning. This restores the selected image metadata;
+it is not a host/tmp permission change or an apt trust-policy exception.
+A fresh hosted prepare remains necessary; no local crypto/native rerun is useful.
+
+
+Final permission successor SHA256
+`3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e`:
+**source GO for one fresh bounded hosted prepare retry**. Read the exact change:
+verified-archive extraction preserves permissions and the pre-sudo Python lstat
+guard records/requires tmp and var/tmp to be ordinary directories with exact01777.
+A symlink cannot satisfy S_ISDIR on lstat. No signature, apt sandbox, host/tmp,
+provider, runtime or private-test requirement changes.
+
+Read the author's tiny public control source and actual RESULT SHA256
+`576ecdb77338fd59ef059c5275c1910b8816571f288bbc38666b19eec60b32e2`:
+actual GNU tar under umask0002 produces0775 with old flag and01777 with corrected
+flag; the exact extracted wrapper guard rejects the former and accepts the latter.
+Both commands exit0, the complete control passes in0.011674651s, and wrapper pins
+are unchanged. It uses a synthetic directory archive, not a new hosted apt run;
+that scope is explicit. The old failed image is not rewritten. Preserve the new
+image-temp-permissions.json in the workflow's fixed public upload list so the next
+hosted result has actual mode evidence. Reviewer performed no control rerun.

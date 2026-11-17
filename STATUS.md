@@ -203,3 +203,23 @@ administrative. No privilegedmounts/hostservices/hostpolicychange. Actualcaller
 UID, packageinventory, exactOpenSSL/Pythonidentity and unchangednestedpublic
 preflight gateREADY. Allfuturebuild/privatechecksremainunprivileged onhost via
 readonlyguestuserland. No fullbuild/proof allocated untilactualPASS andreview.
+
+Allocation36 terminalFAIL: actualmanualCI44100085183 onafe1619. Hostpublicstartup
+passed; administrativeapt exited100 because /tmp/apt.conf.* couldnotbecreated
+for apt-key. No successfulsignaturecheck, READY, nativebuild orprivateproof.
+Exactpublicreceipts/log/runmetadata: evidence/ci-noble-hosted01. This is not
+evidence upstreamrepositories are unsigned; authentication remainsmandatory.
+Root observed verifiedarchive tmp,var/tmp modes01777 but localfailedextraction
+0775, explainedby --no-same-permissions andumask. Hostedmodes were notlogged.
+Minimalpackagingrepair preservesmodes fromchecksum-approvedarchive, stilldoesnot
+restorearchiveowners, and records/asserts bothdirectories01777 beforeanysudo.
+Independentreview required thenONEfreshhostedprepare retry; no auth/sandbox
+override. Oldlabels/images/source/failures stayunchanged.
+
+Permissionfix sourceGO: wrapper3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e.
+TinyactualGNUtar control underumask0002: oldflag0775/rejected byexactguard;
+correctflag01777/accepted,0.011675s; immutablefailedrootfs stays0775. Rawcontrol
+andreceipt576ecdb77338fd59ef059c5275c1910b8816571f288bbc38666b19eec60b32e2
+in evidence/ci-noble-permissions01. Hostedworkflow nowuploads actualimage-temp-
+permissions.json. Onefreshprepareretry (allocation37), same360s/8min bounds,
+no native/privatework before actualuserland/nestedpublicPASS.

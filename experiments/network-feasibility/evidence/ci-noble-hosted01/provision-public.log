@@ -1,0 +1,21 @@
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Err:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+  Couldn't create temporary file /tmp/apt.conf.JDsYBM for passing config to apt-key
+Err:2 http://archive.ubuntu.com/ubuntu noble InRelease
+  Couldn't create temporary file /tmp/apt.conf.A9ZWk6 for passing config to apt-key
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Err:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+  Couldn't create temporary file /tmp/apt.conf.1BCkuS for passing config to apt-key
+Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Err:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+  Couldn't create temporary file /tmp/apt.conf.iwJiEO for passing config to apt-key
+Reading package lists...
+W: GPG error: http://security.ubuntu.com/ubuntu noble-security InRelease: Couldn't create temporary file /tmp/apt.conf.JDsYBM for passing config to apt-key
+E: The repository 'http://security.ubuntu.com/ubuntu noble-security InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble InRelease: Couldn't create temporary file /tmp/apt.conf.A9ZWk6 for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble-updates InRelease: Couldn't create temporary file /tmp/apt.conf.1BCkuS for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-updates InRelease' is not signed.
+W: GPG error: http://archive.ubuntu.com/ubuntu noble-backports InRelease: Couldn't create temporary file /tmp/apt.conf.iwJiEO for passing config to apt-key
+E: The repository 'http://archive.ubuntu.com/ubuntu noble-backports InRelease' is not signed.

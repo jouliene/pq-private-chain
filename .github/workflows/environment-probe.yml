@@ -42,6 +42,7 @@ jobs:
           path: |
             .work/ubuntu22-public-preflight01.json
             .work/ci-noble/base.json
+            .work/ci-noble/image-temp-permissions.json
             .work/ci-noble/provision-public.log
             .work/ci-noble/provision-status.json
             .work/ci-noble/unprivileged-caller.json

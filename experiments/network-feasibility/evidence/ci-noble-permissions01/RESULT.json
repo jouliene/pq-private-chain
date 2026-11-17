@@ -1,0 +1,53 @@
+{
+  "format": "CP04-NOBLE-TAR-PERMISSIONS-CONTROL01",
+  "passed": true,
+  "rows": [
+    {
+      "argv": [
+        "/usr/bin/tar",
+        "--extract",
+        "--gzip",
+        "--file",
+        "/home/neo/jouliene/pq-private-chain/.work/network-delivery01/noble-permissions01/public-directories.tar.gz",
+        "--directory",
+        "/home/neo/jouliene/pq-private-chain/.work/network-delivery01/noble-permissions01/no-same-permissions",
+        "--no-same-owner",
+        "--no-same-permissions"
+      ],
+      "exit": 0,
+      "guard_passed": false,
+      "modes": {
+        "tmp": "0o775",
+        "var/tmp": "0o775"
+      },
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/tar",
+        "--extract",
+        "--gzip",
+        "--file",
+        "/home/neo/jouliene/pq-private-chain/.work/network-delivery01/noble-permissions01/public-directories.tar.gz",
+        "--directory",
+        "/home/neo/jouliene/pq-private-chain/.work/network-delivery01/noble-permissions01/same-permissions",
+        "--no-same-owner",
+        "--same-permissions"
+      ],
+      "exit": 0,
+      "guard_passed": true,
+      "modes": {
+        "tmp": "0o1777",
+        "var/tmp": "0o1777"
+      },
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "scope": "Tiny public directory archive; actual GNU tar and exact wrapper guard; no sudo/chroot/apt, existing rootfs change, build or proof.",
+  "source_after": "3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e",
+  "source_before": "3b29531619e25c9a3863083a5cc03eee0eb1f145f14beeddea0c5375a159a33e",
+  "umask": "0002",
+  "wall_seconds": 0.011674651061184704
+}
