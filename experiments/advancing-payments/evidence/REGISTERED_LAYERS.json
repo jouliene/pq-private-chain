@@ -1,0 +1,257 @@
+{
+  "layers": {
+    "leaf": {
+      "artifacts": {
+        "common": {
+          "blake2b512": "9fe6e69768bd92341a1f7718e90d3541c2a670b7407458e5b5ebee6af07be693311c5c09a09faf4c661792e5c20808d912e75480650ebcbbf155ec0df64a8ee0",
+          "bytes": 1057,
+          "sha256": "dec6b364a6945f31ff277aa70ec63bcfeb75cf5f56ae6e857556306e8b3bc793"
+        },
+        "only": {
+          "blake2b512": "d1fbecb5be3a94fd86b50fa01d07640b7a71fa5e95ecaba325a32f139f5240e11697dbdddb388e5b14e2d797ff2b4c5dcec147f48c413608a738479fc6d457d7",
+          "bytes": 552,
+          "sha256": "6ea312593556cd52ed5431e84467a99ecededd1ffc494125936d3beeec352509"
+        },
+        "vk": {
+          "blake2b512": "ca507bb0bf8469255db3e01c964a4f43a5c5ea0b2bf97e934c8afbbca51b3a5c2b161b621a80a8b7dc11a7f4f01572db663c14b169bce04a9d5d473c508d68da",
+          "bytes": 1609,
+          "sha256": "f585b32a4138ca04fc6270bf6c216ed389fb7f1f78f2ba99f323d46ef53d2272"
+        }
+      },
+      "parsed": {
+        "base_arithmetic": 1,
+        "challenges": 2,
+        "common_constants": 4,
+        "constants_config": 2,
+        "degree_bits": 9,
+        "fri": [
+          3,
+          4,
+          43,
+          0,
+          4,
+          5
+        ],
+        "gate_constraints": 123,
+        "leaf_hiding": 0,
+        "max_quotient": 8,
+        "public_degree_bits": 9,
+        "public_inputs": 26,
+        "quotient_degree_factor": 8,
+        "reduction_arity_bits": [
+          4
+        ],
+        "routed": 80,
+        "target": 128,
+        "trace_degree_bits": 9,
+        "wires": 143,
+        "zk": 0
+      }
+    },
+    "outer2": {
+      "artifacts": {
+        "common": {
+          "blake2b512": "eb766c3d4dc01fe464b6e82fd1d6c01e7d1545c6d3c581cba7cfd40dc3528aa752b97518223cf47c7159d33a376a251505914c01595e36b96495614be0262918",
+          "bytes": 1189,
+          "sha256": "764181c654176b2e4fe3cb2da7196d11baa1c8f5c6d934dfdef0259a48e550b1"
+        },
+        "only": {
+          "blake2b512": "e656f0b29daabeeabe0c6751d3926661a4fec2df3ea782b784d4a6bdefdd98fec2220d1e0e935fa3dedcb9d6c1bf47a64065723395d4dd3f9e4c91b67953c89b",
+          "bytes": 552,
+          "sha256": "8c914e7c4bee057162d51ef0b0916c42f4a5f1329b30c682118f97272396112e"
+        },
+        "vk": {
+          "blake2b512": "7c422ab1fefd4688b14cf441968c2e5325c67548e4e500e338d2edf06bf4dcd56a0d5b2a7e0ab6759e58c987e4bcb3f8e1848b0d40372756733b50b6365a9982",
+          "bytes": 1741,
+          "sha256": "41f0fa64dd3b98cc8298e4f6e276ca6895aeed63018875b7c9dedb7ac86d4000"
+        }
+      },
+      "parsed": {
+        "base_arithmetic": 1,
+        "challenges": 2,
+        "common_constants": 5,
+        "constants_config": 2,
+        "degree_bits": 15,
+        "fri": [
+          3,
+          4,
+          43,
+          0,
+          4,
+          5
+        ],
+        "gate_constraints": 123,
+        "leaf_hiding": 1,
+        "max_quotient": 8,
+        "public_degree_bits": 15,
+        "public_inputs": 54,
+        "quotient_degree_factor": 8,
+        "reduction_arity_bits": [
+          4,
+          4,
+          4
+        ],
+        "routed": 60,
+        "target": 128,
+        "trace_degree_bits": 15,
+        "wires": 135,
+        "zk": 1
+      }
+    },
+    "outer3": {
+      "artifacts": {
+        "common": {
+          "blake2b512": "7dc3775fa0b017005f347a7c636ce16ea8e5c1dded0e625f02edd59e9bdcd9af9a138ace147987643ea9770cd96d7e61054cd3d6b3deb6c825ff18b5bceddf00",
+          "bytes": 1189,
+          "sha256": "7f80e15c3555eab03d7a6519c2f2c479d7ca60b5c7808293af93b1a6a1aaa5a4"
+        },
+        "only": {
+          "blake2b512": "4c4b5bd3141e4fc57de7a37f6f2bff925addc1f14293e101e88704a58e86c93a33cb585151edfbb90615feb489b4c8143c14f4fd89a2e23308ac43a0658f215c",
+          "bytes": 552,
+          "sha256": "aa2feb863bcdff2bef3f4227cae1853e5314cf6fb1b33d251be1eb1848590de9"
+        },
+        "vk": {
+          "blake2b512": "0cccfb1cf9220346403d21fdb550766c4657a7b62fb75e8eef9ae7409e38f1527e74de40542b77066a7d0cab61fa65284aa3075d862894491729199294b47285",
+          "bytes": 1741,
+          "sha256": "393d757b15064a2c0c76192282ad0ca8f4e36bdb1ca2474bff6de2840da6796e"
+        }
+      },
+      "parsed": {
+        "base_arithmetic": 1,
+        "challenges": 2,
+        "common_constants": 5,
+        "constants_config": 2,
+        "degree_bits": 16,
+        "fri": [
+          3,
+          4,
+          43,
+          0,
+          4,
+          5
+        ],
+        "gate_constraints": 123,
+        "leaf_hiding": 1,
+        "max_quotient": 8,
+        "public_degree_bits": 16,
+        "public_inputs": 80,
+        "quotient_degree_factor": 8,
+        "reduction_arity_bits": [
+          4,
+          4,
+          4
+        ],
+        "routed": 60,
+        "target": 128,
+        "trace_degree_bits": 16,
+        "wires": 135,
+        "zk": 1
+      }
+    },
+    "outer4": {
+      "artifacts": {
+        "common": {
+          "blake2b512": "6233b6ac611b96deb47f968c0d3460384364eb02992041a8b2c3c633fa799144b8b42c396b3bf46fc67f16ad4baf004094b0b27fabb0016a77c059956c27538f",
+          "bytes": 1189,
+          "sha256": "64cdd275bd2e6438856e0ca18475a0622dd85223eb8c3a5f77585678adceec8e"
+        },
+        "only": {
+          "blake2b512": "df5fa8ece4a99dc9ec7e9bedb1ee1b2926d2e963f75730a83fbe5007fe9b0ff79f3a66e718c387138790ba17942d4268d9e2836bbf38bccd80527c26b0846728",
+          "bytes": 552,
+          "sha256": "82587fb4e12032344c929fdd4d575ecdf5ea4f40d2331bba0232d92ebec9ad4f"
+        },
+        "vk": {
+          "blake2b512": "8deb0020144aae9f8afa58b93f46e5b25c0178e5feb3b0c89c7566f9af9fd58c7ad81ef96c87823ea93206df1866238937e9b7bac463e615fb2c98d0eac47cd0",
+          "bytes": 1741,
+          "sha256": "ca45830ce9e192175ef057659e14e176aff163f56b297830ae8509b6c809cb72"
+        }
+      },
+      "parsed": {
+        "base_arithmetic": 1,
+        "challenges": 2,
+        "common_constants": 5,
+        "constants_config": 2,
+        "degree_bits": 16,
+        "fri": [
+          3,
+          4,
+          43,
+          0,
+          4,
+          5
+        ],
+        "gate_constraints": 123,
+        "leaf_hiding": 1,
+        "max_quotient": 8,
+        "public_degree_bits": 16,
+        "public_inputs": 106,
+        "quotient_degree_factor": 8,
+        "reduction_arity_bits": [
+          4,
+          4,
+          4
+        ],
+        "routed": 60,
+        "target": 128,
+        "trace_degree_bits": 16,
+        "wires": 135,
+        "zk": 1
+      }
+    },
+    "wallet": {
+      "artifacts": {
+        "common": {
+          "blake2b512": "ad5db75cec38d7ef28b50ff7688e61eb1846e3516d8a8a424c6f1fa6ab2b0cad4a4f42077d6a5d4ebf75971fe4bcd9940e17d400e9f3b47ba83d997f6c40c1a7",
+          "bytes": 1217,
+          "sha256": "835b9a90119d830df5d07b9fc1983b44001bbef1fe391c6e45052616ab96ff7f"
+        },
+        "only": {
+          "blake2b512": "9b6b40d062db84a41107fd0b9befb1af92a23132f7fb84f398674e98f17aaabf090adbd1bfdc56650a2284cf9186d2976b2e8641fa8fd378b2856cfddb7ee18b",
+          "bytes": 552,
+          "sha256": "457c5bb42fa2d8f92a9d32cf32e985dc2a70fcb1cadaada8ef3ae3b806c6a847"
+        },
+        "vk": {
+          "blake2b512": "4673cf24d8cb1cdf9824f0ea0c3580b8273d043ba289ee522e52040906a7588ab79b8a10c23aeb73551e1ad57d16e3d245187f010efcbf3491af924e7d532420",
+          "bytes": 1769,
+          "sha256": "37b9fc146e2976c4a2bb2c6ba43894cdad2a33b81c6b0593f9bad13db9d6a4b1"
+        }
+      },
+      "parsed": {
+        "base_arithmetic": 1,
+        "challenges": 2,
+        "common_constants": 6,
+        "constants_config": 2,
+        "degree_bits": 15,
+        "fri": [
+          3,
+          4,
+          43,
+          0,
+          4,
+          5
+        ],
+        "gate_constraints": 123,
+        "leaf_hiding": 1,
+        "max_quotient": 8,
+        "public_degree_bits": 15,
+        "public_inputs": 26,
+        "quotient_degree_factor": 8,
+        "reduction_arity_bits": [
+          4,
+          4,
+          4
+        ],
+        "routed": 60,
+        "target": 128,
+        "trace_degree_bits": 15,
+        "wires": 135,
+        "zk": 1
+      }
+    }
+  },
+  "manifest": {
+    "blake2b512": "40c20fe6c8a521acf1e0a77201b7e921a91702e1e01b49000ae5a319a65ef8e7b95f93f5c3d2e03cfaec11ff0e11a3125229535c895a9aa94d1265e004cc805e",
+    "bytes": 2892,
+    "sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1"
+  }
+}

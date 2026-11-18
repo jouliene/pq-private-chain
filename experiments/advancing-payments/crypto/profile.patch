@@ -1,0 +1,44 @@
+--- a/crates/qnero-circuit/src/config.rs
++++ b/crates/qnero-circuit/src/config.rs
+@@ -33,6 +33,18 @@
+ /// to the rest of the numbers a verifier holds a batch artifact to.
+ pub use crate::params::{PRIVATE_BATCH_NUM_ROUTED_WIRES, PRIVATE_BATCH_NUM_WIRES};
+ 
++/// APV2 parameters used by the wallet-private leaf, hiding submission and all
++/// registered outer wrappers. The upstream release verifier is not an APV2 verifier.
++fn advancing_profile(mut config: CircuitConfig) -> CircuitConfig {
++    config.security_bits = 128;
++    config.num_challenges = 2;
++    config.fri_config.rate_bits = 3;
++    config.fri_config.cap_height = 4;
++    config.fri_config.proof_of_work_bits = 0;
++    config.fri_config.num_query_rounds = 43;
++    config
++}
++
+ /// Config for the Qnero leaf (spend) circuit: non-ZK.
+ ///
+ /// A leaf proof is only ever seen by the wallet's own private-batch
+@@ -41,7 +53,7 @@
+ /// on-chain transaction unit. Do not ship a flow where a raw leaf proof
+ /// crosses a trust boundary.
+ pub fn qnero_leaf_circuit_config() -> CircuitConfig {
+-    CircuitConfig::standard_recursion_config() // zero_knowledge: false
++    advancing_profile(CircuitConfig::standard_recursion_config())
+ }
+ 
+ /// Config for a zero-knowledge leaf circuit.
+@@ -67,11 +79,11 @@
+ /// because a production batch that could not blind would be a privacy failure
+ /// that compiles.
+ pub fn qnero_private_batch_circuit_config() -> CircuitConfig {
+-    CircuitConfig {
++    advancing_profile(CircuitConfig {
+         num_wires: PRIVATE_BATCH_NUM_WIRES,
+         num_routed_wires: PRIVATE_BATCH_NUM_ROUTED_WIRES,
+         ..CircuitConfig::standard_recursion_zk_config()
+-    }
++    })
+ }
+ 
+ /// Config for the public batch: not zero knowledge.
