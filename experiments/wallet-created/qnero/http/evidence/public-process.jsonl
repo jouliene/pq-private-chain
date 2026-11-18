@@ -1,0 +1,4 @@
+{"payment_sha256": "04fb8523ba1fcf6d0fc3b2f98a8ab6336234016e966f2886f3ab1b5275b0d24e", "verifier_elf_sha256": "88582021c6441070e7b426bd494d695fb6e30353c2ee61ba365fc0ac86793500"}
+{"exec": "/usr/bin/true", "exit": 0, "user_s": 0.000435, "system_s": 0.0, "peak_rss_kib": 11136}
+{"private_verification_passed":true,"load_elapsed_s":0.000016602,"verify_elapsed_s":0.006705665,"distinct_published_nullifiers":12,"real_slots":1,"padding_slots":5}
+{"exec": "/check", "exit": 0, "user_s": 0.006542999999999999, "system_s": 0.00109, "peak_rss_kib": 11136}
