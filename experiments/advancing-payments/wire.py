@@ -1,6 +1,7 @@
 """Canonical public formats, bounded local process frames and source-selected runtime roles."""
 from __future__ import annotations
 
+import importlib.util
 import hashlib
 import os
 from pathlib import Path
@@ -13,8 +14,10 @@ import tempfile
 import time
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent / "wallet-created/wallet"))
-from bridge import libraries
+bridge_spec=importlib.util.spec_from_file_location("wallet_bridge", HERE.parent/"wallet-created/wallet/bridge.py")
+bridge=importlib.util.module_from_spec(bridge_spec)
+bridge_spec.loader.exec_module(bridge)
+libraries=bridge.libraries
 
 LIMIT = 8 * 1024 * 1024
 P = 2**64 - 2**32 + 1
