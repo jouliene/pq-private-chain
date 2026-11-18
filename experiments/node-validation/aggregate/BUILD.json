@@ -1,0 +1,31 @@
+{
+  "backend": "upstream default CPU accelerator with real proof and verification",
+  "build_flags": "cargo --locked --release -p risc0-circuit-keccak --lib, RUSTFLAGS empty, consumer compiler 1.99.1, upstream workspace requests 1.97",
+  "build_jobs": 2,
+  "build_warnings": "risc0-sys libc free FFI declaration produced suspicious_runtime_symbol_definitions warnings under rustc 1.99.1",
+  "cpu": "Intel Core i7-8700K",
+  "cxx": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "platform": "Linux-6.8.0-149-generic-x86_64-with-glibc2.39",
+  "rayon_workers": 2,
+  "rustc": [
+    "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "binary: rustc",
+    "commit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67",
+    "commit-date: 2026-10-13",
+    "host: x86_64-unknown-linux-gnu",
+    "release: 1.99.1",
+    "LLVM version: 23.1.1"
+  ],
+  "source_commit": "1cc70cf05033a79ebc90f07c679cb4bd1cd301b9",
+  "source_sha256": {
+    "Cargo.lock": "17e8756b0d0baa36080f2079174311e873ade5ce1d510aae935bbeba5d349037",
+    "risc0/circuit/keccak/src/lib.rs": "eead2a7ac821891bda61e65b0dbc4e549016feaecf0c6448c6a0303159a27783",
+    "risc0/circuit/keccak/src/prove/mod.rs": "86861cc278c978441ebfff6af746fcd04e83234f62398c075814cbf12fc7d269",
+    "risc0/circuit/recursion/build.rs": "70c331d6727f8b0aaa2ab10b6291cf70916e53b1154ecaa2258a110d24bf4f22",
+    "risc0/zkp/src/lib.rs": "107521d2426442fbc9358b7b9ae5650be92d670ea85e9a34aec7b9e9cc27dc6d",
+    "risc0/zkp/src/prove/soundness.rs": "6d814ec839d0f4b33f275cdfa2d382f4ce455957b1ec7932d9bc717ccf732921",
+    "risc0/zkvm/src/host/server/session.rs": "95b8bdff08e3ddeca3e2eee9c7288d045c0d7a55bfd270247f67c3de7bc177f2"
+  },
+  "tracked_changes": [],
+  "upstream_recursion_artifact_sha256": "744b999f0a35b3c86753311c7efb2a0054be21727095cf105af6ee7d3f4d8849"
+}

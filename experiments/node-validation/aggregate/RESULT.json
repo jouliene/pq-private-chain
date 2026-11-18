@@ -1,0 +1,33 @@
+{
+  "backend": "CPU, 2 Rayon workers",
+  "corrupt_seal_crypto_rejected": true,
+  "framed_leaf_bytes": 4764,
+  "input_material": "first salted main opening, public payer2x2.body",
+  "leaf_sha3_512": "726ccb0cc6e4a9f3a82871c6594c608fabdd289ec165e9ccec5ea5ed63cf4a631fc3d0eebe26d8c2389f17c6eabe97e2ff39875590dd9cb83cc11cc5d1aab52c",
+  "mismatched_claim_rejected": true,
+  "po2": 14,
+  "results": {
+    "prove": {
+      "circuit_claim_digest": "0ea25ab94a79ee4ee58670838c0b66790ac6886690f69e155767722ddaf67918",
+      "elapsed_s": 15.24,
+      "inner_elapsed_s": 15.246597136,
+      "max_rss_kib": 462464,
+      "permutations": 67,
+      "seal_bytes": 400392,
+      "system_s": 0.18,
+      "user_s": 30.36
+    },
+    "verify": {
+      "circuit_claim_digest": "0ea25ab94a79ee4ee58670838c0b66790ac6886690f69e155767722ddaf67918",
+      "elapsed_s": 0.02,
+      "inner_elapsed_s": 0.022808271,
+      "max_rss_kib": 8192,
+      "permutations": 67,
+      "seal_bytes": 400392,
+      "system_s": 0.0,
+      "user_s": 0.02
+    }
+  },
+  "seal_sha256": "368c75098ddfbe845dbdebd082cac96df3b41ac7d98e74eb357e0d75b15cad05",
+  "upstream": "1cc70cf05033a79ebc90f07c679cb4bd1cd301b9"
+}
