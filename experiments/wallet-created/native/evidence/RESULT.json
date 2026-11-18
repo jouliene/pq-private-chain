@@ -1,0 +1,241 @@
+{
+  "binary_sha256": "33ed751c121a2660cc0636ba2449b72712e24ff2b5dcffdcbc1e54c6e7522fb1",
+  "roles": {
+    "builder": [
+      {
+        "operation": "registered_setup",
+        "elapsed_s": 6.089447494,
+        "cpu_s": 9.837395442,
+        "peak_rss_kib": 664844
+      },
+      {
+        "operation": "verify_two_and_prove_pair",
+        "elapsed_s": 8.637757717,
+        "cpu_s": 16.816116893,
+        "peak_rss_kib": 1071008
+      }
+    ],
+    "wallet_b": [
+      {
+        "operation": "wallet_setup",
+        "elapsed_s": 2.271185358,
+        "cpu_s": 3.775910307,
+        "peak_rss_kib": 312712
+      },
+      {
+        "operation": "wallet_create",
+        "elapsed_s": 4.814433331,
+        "cpu_s": 9.398322597,
+        "peak_rss_kib": 561300
+      },
+      {
+        "operation": "scan_four_receipts",
+        "elapsed_s": 0.00084889,
+        "cpu_s": 0.00084742,
+        "peak_rss_kib": 561300
+      }
+    ],
+    "wallet_a": [
+      {
+        "operation": "wallet_setup",
+        "elapsed_s": 2.212192999,
+        "cpu_s": 3.62311287,
+        "peak_rss_kib": 312704
+      },
+      {
+        "operation": "wallet_create",
+        "elapsed_s": 4.52099779,
+        "cpu_s": 8.785490003,
+        "peak_rss_kib": 561036
+      },
+      {
+        "operation": "scan_four_receipts",
+        "elapsed_s": 0.000831108,
+        "cpu_s": 0.000816292,
+        "peak_rss_kib": 561036
+      },
+      {
+        "operation": "recipient_spend",
+        "elapsed_s": 4.513620134,
+        "cpu_s": 8.75110573,
+        "peak_rss_kib": 561188
+      }
+    ],
+    "node": [
+      {
+        "operation": "registered_setup",
+        "elapsed_s": 6.170926952,
+        "cpu_s": 9.909343176,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "rejected",
+        "elapsed_s": 0.000639793,
+        "cpu_s": 0.000638627,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "rejected",
+        "elapsed_s": 0.000624464,
+        "cpu_s": 0.000623128,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "rejected",
+        "elapsed_s": 0.008379718,
+        "cpu_s": 0.008378032,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "rejected",
+        "elapsed_s": 1.995e-06,
+        "cpu_s": 1.128e-06,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "rejected",
+        "elapsed_s": 1.8e-06,
+        "cpu_s": 1.027e-06,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "accepted",
+        "elapsed_s": 0.010854934,
+        "cpu_s": 0.010853077,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "rejected",
+        "elapsed_s": 0.006610552,
+        "cpu_s": 0.006609325,
+        "peak_rss_kib": 664704
+      },
+      {
+        "operation": "accepted",
+        "elapsed_s": 0.02403846,
+        "cpu_s": 0.024033574,
+        "peak_rss_kib": 664704
+      }
+    ]
+  },
+  "verifiers": [
+    {
+      "bytes": 1769,
+      "sha256": "ceb84e4784d6b6e0029bef39f7a0d0c770ca940738ebfcdfcbbc4d02d1ec87d6"
+    },
+    {
+      "bytes": 1741,
+      "sha256": "567281b03ee7bf05561db52e1af3db8f5f73036390a58cc3687417d95d663169"
+    }
+  ],
+  "genesis_sha256": "3ae5613ac227880476a57eb912cba7e033588655b38e90d9f6d77e2e046713ff",
+  "negative_controls": [
+    "changed-proof",
+    "changed-public-fee",
+    "changed-ciphertext",
+    "short",
+    "trailing",
+    "replay"
+  ],
+  "final_state": [
+    3,
+    10,
+    6,
+    9
+  ],
+  "final_state_blake2b512": "453b65c6857484c139b627454bde8e1f26f1945bea2777a9472a42429f2d35251c6c93b47e51aa30107fc6dd16ef4a86642c4151b945c2f78ac5284ef78fda48",
+  "pair_body_bytes": 157220,
+  "pair_proof_bytes": 150044,
+  "followup_body_bytes": 147324,
+  "pair_history_bytes": 7296,
+  "published_ciphertexts": 4,
+  "public_pipe_frames": [
+    {
+      "role": "wallet",
+      "from_role_payload_lengths": [
+        1665,
+        147324,
+        1,
+        147324
+      ],
+      "to_role_payload_lengths": [
+        128,
+        1601,
+        7296,
+        5
+      ],
+      "frame_length_prefix_bytes": 4
+    },
+    {
+      "role": "wallet",
+      "from_role_payload_lengths": [
+        1665,
+        147324,
+        1
+      ],
+      "to_role_payload_lengths": [
+        128,
+        1601,
+        7296,
+        0
+      ],
+      "frame_length_prefix_bytes": 4
+    },
+    {
+      "role": "builder",
+      "from_role_payload_lengths": [
+        1769,
+        1741,
+        157220
+      ],
+      "to_role_payload_lengths": [
+        128,
+        147324,
+        147324
+      ],
+      "frame_length_prefix_bytes": 4
+    },
+    {
+      "role": "node",
+      "from_role_payload_lengths": [
+        1769,
+        1741,
+        97,
+        97,
+        97,
+        97,
+        97,
+        7393,
+        97,
+        3745
+      ],
+      "to_role_payload_lengths": [
+        128,
+        157220,
+        157220,
+        157220,
+        157219,
+        157221,
+        157220,
+        157220,
+        147324,
+        0
+      ],
+      "frame_length_prefix_bytes": 4
+    }
+  ],
+  "wallet_submissions": [
+    147324,
+    147324
+  ],
+  "wallet_proofs": [
+    143732,
+    143732
+  ],
+  "opened_notes_per_wallet": [
+    2,
+    2
+  ],
+  "handshake_bytes_per_origin": 1665,
+  "pair_archive_saving_bytes": 137428
+}

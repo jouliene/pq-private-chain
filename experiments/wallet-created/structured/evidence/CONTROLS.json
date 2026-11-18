@@ -1,0 +1,97 @@
+{
+  "binary_sha256": "1ec17f5688a275e87a3588faf63ce1f6901847ffdd919cb271ec57d300212d97",
+  "proof_sha256": "ceffe05e777eaf4fb43b655078ef6482269895612b34717849473eae2d4df02e",
+  "statement_sha256": "341237f7e84b06b76aef78e380053607fa2fe5ca2e0907adf712485cfa14a788",
+  "rejected": [
+    {
+      "case": "changed ownership key with matching nullifier",
+      "mode": "prove",
+      "reference_predicates": [
+        "authority0"
+      ],
+      "check_location": "main.rs:394",
+      "exit_code": 101,
+      "wall_s": 0.6389212290523574
+    },
+    {
+      "case": "changed second sibling",
+      "mode": "prove",
+      "reference_predicates": [
+        "membership1"
+      ],
+      "check_location": "main.rs:394",
+      "exit_code": 101,
+      "wall_s": 0.5958677619928494
+    },
+    {
+      "case": "second input index equals count",
+      "mode": "prove",
+      "reference_predicates": [
+        "index/count1"
+      ],
+      "check_location": "main.rs:394",
+      "exit_code": 101,
+      "wall_s": 0.6006137810181826
+    },
+    {
+      "case": "altered public nullifier",
+      "mode": "prove",
+      "reference_predicates": [
+        "NF1"
+      ],
+      "check_location": "main.rs:394",
+      "exit_code": 101,
+      "wall_s": 0.5955540590221062
+    },
+    {
+      "case": "increased output amount with matching commitment",
+      "mode": "prove",
+      "reference_predicates": [
+        "integer balance"
+      ],
+      "check_location": "main.rs:394",
+      "exit_code": 101,
+      "wall_s": 0.6086786329979077
+    },
+    {
+      "case": "different canonical statement nonce",
+      "mode": "verify",
+      "reference_predicates": [],
+      "check_location": "outer.rs:177",
+      "exit_code": 101,
+      "wall_s": 1.1937224389985204
+    },
+    {
+      "case": "last authenticated frontier hash",
+      "mode": "verify",
+      "reference_predicates": [],
+      "check_location": "oracle.rs:127",
+      "exit_code": 101,
+      "wall_s": 1.2723328849533573
+    },
+    {
+      "case": "short proof",
+      "mode": "verify",
+      "reference_predicates": [],
+      "check_location": "tape.rs:106",
+      "exit_code": 101,
+      "wall_s": 1.2475489520002156
+    },
+    {
+      "case": "trailing proof",
+      "mode": "verify",
+      "reference_predicates": [],
+      "check_location": "tape.rs:124",
+      "exit_code": 101,
+      "wall_s": 1.2554187540663406
+    },
+    {
+      "case": "noncanonical outer EF5",
+      "mode": "verify",
+      "reference_predicates": [],
+      "check_location": "tape.rs:36",
+      "exit_code": 101,
+      "wall_s": 1.159574839984998
+    }
+  ]
+}

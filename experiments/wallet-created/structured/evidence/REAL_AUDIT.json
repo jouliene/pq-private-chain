@@ -1,0 +1,58 @@
+{
+  "accepted": true,
+  "instrumentation": "Each ordinary proof was freshly parsed and fully verified. The audit-only executable additionally compared exactly 50 public and 65,536 folded coordinates against the frozen generic matrix and computed an output SHAKE256 digest.",
+  "matrix_preparation_s": 1.0782861910000001,
+  "matrix_preparation_thread_cpu_s": 1.078240128,
+  "mode": "verify-many",
+  "pinned_cpu": 3,
+  "records": [
+    {
+      "accepted": true,
+      "body_sha256": "c934f311eaf0a3007365000ab07308eec1b96c13af6c5e051c5453094dcc00d3",
+      "checked_fold_shake256_32": "1154d6528dbdbb3fcf2bf3581efd9b2595d36cd94b79bb8bb6cbc1a344cbeccc",
+      "folded_coordinates": 65536,
+      "mode": "verify",
+      "oracle_and_audit_digest_cpu_s": 0.2582072379999998,
+      "other_verifier_cpu_s_from_same_process": 0.01120208800000011,
+      "post_preparation_thread_cpu_s": 0.334834109,
+      "post_preparation_wall_s": 0.334865703,
+      "proof_bytes": 259232,
+      "proof_sha256": "ceffe05e777eaf4fb43b655078ef6482269895612b34717849473eae2d4df02e",
+      "public_prefix": 50,
+      "statement_sha256": "341237f7e84b06b76aef78e380053607fa2fe5ca2e0907adf712485cfa14a788",
+      "structured_cpu_s": 0.0654247830000001
+    },
+    {
+      "accepted": true,
+      "body_sha256": "5d726d5ce6a18c45a9fb1fdc27112d5c04090b8e22c055dab4c383ebe902e839",
+      "checked_fold_shake256_32": "ded6c9b8ae4167f1c8d34066f20d3b0a909044435d29ed8a965d8525f88b86bf",
+      "folded_coordinates": 65536,
+      "mode": "verify",
+      "oracle_and_audit_digest_cpu_s": 0.25518575599999993,
+      "other_verifier_cpu_s_from_same_process": 0.01057769300000011,
+      "post_preparation_thread_cpu_s": 0.33445783500000004,
+      "post_preparation_wall_s": 0.334459667,
+      "proof_bytes": 258208,
+      "proof_sha256": "cfb2c12a1b39d22eba0d6461fa1d53d3ee7aee3ed516887ee45e21546ecae041",
+      "public_prefix": 50,
+      "statement_sha256": "01d3bc44023ed9fae945f279c7fff111f394a3ba2823a7ff3ad537f68777bec7",
+      "structured_cpu_s": 0.068694386
+    },
+    {
+      "accepted": true,
+      "body_sha256": "670b2881fa2435cb8b578812a67f8fbb4e91f9282690d499db701788e0f9685d",
+      "checked_fold_shake256_32": "efc57f763f83a2e84c9fa9272076275c50b2c9718610cdda667499583fef4c41",
+      "folded_coordinates": 65536,
+      "mode": "verify",
+      "oracle_and_audit_digest_cpu_s": 0.25305802200000005,
+      "other_verifier_cpu_s_from_same_process": 0.010853306000000007,
+      "post_preparation_thread_cpu_s": 0.33193913900000016,
+      "post_preparation_wall_s": 0.331940837,
+      "proof_bytes": 257808,
+      "proof_sha256": "6c5a7ad4892dd4bf2f5012de6b97cc1399790052eb17868ec25e93c8eb299885",
+      "public_prefix": 50,
+      "statement_sha256": "7547017ed89deaf324a2b7e3e7ea2b1d8dded2dfb5ef5163b889c2d72b5180b6",
+      "structured_cpu_s": 0.0680278110000001
+    }
+  ]
+}

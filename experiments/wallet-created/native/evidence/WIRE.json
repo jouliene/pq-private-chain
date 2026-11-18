@@ -1,0 +1,31 @@
+{
+  "singles": [
+    {
+      "sha256": "56fc8d2876549cf18df4a8673e58ce83c05f7a902fde5cbf66894480cd5c99b0",
+      "packet_bytes": 147324,
+      "proof_bytes": 143732,
+      "ciphertext_bytes": 3584,
+      "framing_bytes": 8
+    },
+    {
+      "sha256": "390bcc496517665e25a4a01d13eabde9d4369db3e8f62142dc521c88ae4504d3",
+      "packet_bytes": 147324,
+      "proof_bytes": 143732,
+      "ciphertext_bytes": 3584,
+      "framing_bytes": 8
+    }
+  ],
+  "pair": {
+    "sha256": "f1a6b9b5db2bf1301fe373c0d28c1529da26845c2524b860bed6f1312bb9615d",
+    "packet_bytes": 157220,
+    "proof_bytes": 150044,
+    "ciphertext_bytes": 7168,
+    "framing_bytes": 8
+  },
+  "public_fees": [
+    3,
+    3
+  ],
+  "all_52_inner_public_felts_preserved_in_order": true,
+  "all_four_ciphertexts_preserved_in_order": true
+}

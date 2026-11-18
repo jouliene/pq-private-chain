@@ -1,0 +1,15 @@
+{
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652",
+  "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "example_sha256": "0f5a78099de729738bf1a6553a36c0568051881af7816dfa75d06b84668fd0f0",
+  "binary_sha256": "33ed751c121a2660cc0636ba2449b72712e24ff2b5dcffdcbc1e54c6e7522fb1",
+  "compiler": [
+    "rustc 1.93.0 (254b59607 2026-01-19)",
+    "binary: rustc",
+    "commit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c",
+    "commit-date: 2026-01-19",
+    "host: x86_64-unknown-linux-gnu",
+    "release: 1.93.0",
+    "LLVM version: 21.1.8"
+  ]
+}

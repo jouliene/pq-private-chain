@@ -1,0 +1,122 @@
+{
+  "affinity": [
+    4
+  ],
+  "counts": {
+    "column_additions": 1017368,
+    "dictionary_patterns": 33678,
+    "dictionary_terms": 1994680,
+    "tile_pattern_products": 1013985,
+    "tiles": 7229
+  },
+  "install_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "kernel": "6.8.0-149-generic",
+  "lowering_sha256": "c7582847f7c064645cc4300dcd4bbce127f271b7f47032018455810866af8dac",
+  "matrix_prep_wall_s": 0.721958574,
+  "oracle_source_sha256": "fc5776cda846fd39437de47d6f629c8a69e5587e1590332d6e6e890ca99f1f1b",
+  "paired_runs": [
+    {
+      "candidate": {
+        "pattern_cpu_s": 0.017974120999999954,
+        "public_and_fold_shake256_32": "b75f283a72dd638a8db6dc48a3fbdde08fda1f0c809888cfeb2829b6f9e8e2cd",
+        "thread_cpu_s": 0.07609305599999994,
+        "through_tile_matrix_cpu_s": 0.07401142499999991,
+        "wall_s": 0.076093076
+      },
+      "reference": {
+        "basis_and_contract_cpu_s": 0.20511212399999978,
+        "basis_and_contract_seconds": 0.205109944,
+        "basis_seconds": 0.081720308,
+        "combined_form_hex": "867ac05f1ad1f0523f8f65ef70273005b5a10a5d06ae0dd324e887bf4d2028dc",
+        "combined_sparse_matrix_terms": 6047930,
+        "digest": "SHAKE256/32",
+        "nonpadding_output_capacity": 612582,
+        "postcheck_digest_outside_measured_interval": true,
+        "prepared_matrix_allocated_bytes": 146800640,
+        "prepared_matrix_used_bytes": 104139524,
+        "public_and_fold_shake256_32": "b75f283a72dd638a8db6dc48a3fbdde08fda1f0c809888cfeb2829b6f9e8e2cd",
+        "through_guard_and_main_fold_cpu_s": 0.2834845079999999,
+        "through_guard_and_main_fold_wall_s": 0.283485222
+      },
+      "statement": "sample1.statement"
+    },
+    {
+      "candidate": {
+        "pattern_cpu_s": 0.019343295000000094,
+        "public_and_fold_shake256_32": "f289cc4b74e2a94d25a74daf07fc909954f7188a306cd9b043ca2cb67f3d81c3",
+        "thread_cpu_s": 0.08719798200000017,
+        "through_tile_matrix_cpu_s": 0.08414254300000001,
+        "wall_s": 0.087198539
+      },
+      "reference": {
+        "basis_and_contract_cpu_s": 0.2497015330000001,
+        "basis_and_contract_seconds": 0.249700746,
+        "basis_seconds": 0.084747186,
+        "combined_form_hex": "395c8b19b12c2d24eac001f457612dda31ec2dc390635c809df9ab0dcaebd15b",
+        "combined_sparse_matrix_terms": 6047930,
+        "digest": "SHAKE256/32",
+        "nonpadding_output_capacity": 612582,
+        "postcheck_digest_outside_measured_interval": true,
+        "prepared_matrix_allocated_bytes": 146800640,
+        "prepared_matrix_used_bytes": 104139524,
+        "public_and_fold_shake256_32": "f289cc4b74e2a94d25a74daf07fc909954f7188a306cd9b043ca2cb67f3d81c3",
+        "through_guard_and_main_fold_cpu_s": 0.33422841000000014,
+        "through_guard_and_main_fold_wall_s": 0.334237508
+      },
+      "statement": "sample2.statement"
+    },
+    {
+      "candidate": {
+        "pattern_cpu_s": 0.022724505999999867,
+        "public_and_fold_shake256_32": "c72dff15bfb667b0a48343d2eb81a1432ce4e9466bb61b6a674d6d332b5d52c6",
+        "thread_cpu_s": 0.09033194499999997,
+        "through_tile_matrix_cpu_s": 0.08842630299999987,
+        "wall_s": 0.090331896
+      },
+      "reference": {
+        "basis_and_contract_cpu_s": 0.26129188700000006,
+        "basis_and_contract_seconds": 0.261289517,
+        "basis_seconds": 0.102315618,
+        "combined_form_hex": "a49bab26ce1a0909c6edcbf8c389ac0fb11b3d4631cab69392be7ddad12a6bbe",
+        "combined_sparse_matrix_terms": 6047930,
+        "digest": "SHAKE256/32",
+        "nonpadding_output_capacity": 612582,
+        "postcheck_digest_outside_measured_interval": true,
+        "prepared_matrix_allocated_bytes": 146800640,
+        "prepared_matrix_used_bytes": 104139524,
+        "public_and_fold_shake256_32": "c72dff15bfb667b0a48343d2eb81a1432ce4e9466bb61b6a674d6d332b5d52c6",
+        "through_guard_and_main_fold_cpu_s": 0.34533266399999984,
+        "through_guard_and_main_fold_wall_s": 0.345333551
+      },
+      "statement": "sample3.statement"
+    }
+  ],
+  "plan_prep_wall_s": 0.67142132,
+  "process": {
+    "maxrss_kib": 348600,
+    "system_s": 0.19,
+    "user_s": 2.97,
+    "wall_s": 3.18
+  },
+  "rlib_sha256": {
+    "libcompact_bounded_arity_v3-cabb910086418d74.rlib": "4f7096ce43845b2adf72223e24f593973f8c89865ff316cfc03a7681cfca1b97",
+    "liblibc-34e983634f114512.rlib": "19e3184343698194e4cdc08bdbffe647503bd57abe1aefdc83a498794280ffb0",
+    "libp3_air-2c3ee6f2c8005865.rlib": "131dc8d9a7c614cfbb90c7de5cf111d90d6dba6f0ff53988cc2b2cc95134e6bb",
+    "libp3_dft-633aafdb54185ab4.rlib": "76e767355dc980286b148d0168d03271c4d2e047ff0c6bbeef36158ac9d8db6d",
+    "libp3_field-9d28c21d4d574500.rlib": "27137b4851ccf7c28ea4bf7a66cbfeebc0a06aec3edfeb57b78c09bcc3c7221e",
+    "libp3_goldilocks-4f8eedeed25e4b33.rlib": "00d8abe7638f19cf943999c4a807ac9397df5be0d16583b0c7caf726ca59cf16",
+    "libp3_matrix-18fc4a2e4e685b01.rlib": "e5efce8919c7822f6b4df5da6eb7540af1d21dd586367b85349092cbc329f63c",
+    "libserde_json-96669d5410fcc0ff.rlib": "e8343b319dee21e7b1e3c6946adbf1eb52157b4cc5ea978065e9f5496d2cc0ac",
+    "libtiny_keccak-c3a93cf21255ff67.rlib": "1d2c79992775c3ca97ee8364e20fe0bdd2692901df0064e594785782bcc008ae"
+  },
+  "rustc": {
+    "path": "/home/neo/.rustup/toolchains/1.99.1-x86_64-unknown-linux-gnu/bin/rustc",
+    "sha256": "b53b780f77f952062f8ca8a3b70aef2390b1e45ad91939be94afdc9543026853",
+    "version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-unknown-linux-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1\n"
+  },
+  "statements_sha256": [
+    "3b2e25f3a1440ced23a8a460241765dfe255a21225e24a075e6494ba74607027",
+    "76dda543a849a799841a67593cfb0a3df71c4d970768b1fcf58b7f0098e670da",
+    "c646a95ce046b656cd1b9758daf9bee71513ede026bdd968f5b7f55fb7171711"
+  ]
+}

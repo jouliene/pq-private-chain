@@ -1,0 +1,30 @@
+{
+  "prove": {
+    "accepted": true,
+    "initial_commitment_wall_s": 21.248098496,
+    "matrix_preparation_s": 0.537586097,
+    "maxrss_kib": 2339336,
+    "mode": "prove",
+    "post_preparation_thread_cpu_s": 30.305048864,
+    "post_preparation_wall_s": 30.307158951,
+    "process_system_s": 1.03,
+    "process_user_s": 29.81,
+    "process_wall_s": 30.86,
+    "proof_bytes": 259744,
+    "through_outer_wall_s": 22.686580822
+  },
+  "verify": {
+    "accepted": true,
+    "initial_commitment_wall_s": 0.000357471,
+    "matrix_preparation_s": 1.091454767,
+    "maxrss_kib": 259788,
+    "mode": "verify",
+    "post_preparation_thread_cpu_s": 0.07834005199999994,
+    "post_preparation_wall_s": 0.078337373,
+    "process_system_s": 0.11,
+    "process_user_s": 1.1,
+    "process_wall_s": 1.21,
+    "proof_bytes": 259744,
+    "through_outer_wall_s": 0.000679499
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "binary_sha256": "1ec17f5688a275e87a3588faf63ce1f6901847ffdd919cb271ec57d300212d97",
+  "installation_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "rlibs": {
+    "libcompact_bounded_arity_v3-cabb910086418d74.rlib": "4f7096ce43845b2adf72223e24f593973f8c89865ff316cfc03a7681cfca1b97",
+    "liblibc-34e983634f114512.rlib": "19e3184343698194e4cdc08bdbffe647503bd57abe1aefdc83a498794280ffb0",
+    "libp3_air-2c3ee6f2c8005865.rlib": "131dc8d9a7c614cfbb90c7de5cf111d90d6dba6f0ff53988cc2b2cc95134e6bb",
+    "libp3_dft-633aafdb54185ab4.rlib": "76e767355dc980286b148d0168d03271c4d2e047ff0c6bbeef36158ac9d8db6d",
+    "libp3_field-9d28c21d4d574500.rlib": "27137b4851ccf7c28ea4bf7a66cbfeebc0a06aec3edfeb57b78c09bcc3c7221e",
+    "libp3_goldilocks-4f8eedeed25e4b33.rlib": "00d8abe7638f19cf943999c4a807ac9397df5be0d16583b0c7caf726ca59cf16",
+    "libp3_matrix-18fc4a2e4e685b01.rlib": "e5efce8919c7822f6b4df5da6eb7540af1d21dd586367b85349092cbc329f63c",
+    "libserde_json-96669d5410fcc0ff.rlib": "e8343b319dee21e7b1e3c6946adbf1eb52157b4cc5ea978065e9f5496d2cc0ac",
+    "libtiny_keccak-c3a93cf21255ff67.rlib": "1d2c79992775c3ca97ee8364e20fe0bdd2692901df0064e594785782bcc008ae"
+  },
+  "rustc_sha256": "b53b780f77f952062f8ca8a3b70aef2390b1e45ad91939be94afdc9543026853"
+}
