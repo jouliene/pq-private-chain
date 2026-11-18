@@ -65,7 +65,7 @@ function admit(l,body) {
   const before=performance.now();
   const x=fields(l,body);
   // These two detached public inputs are the entire per-call namespace of the verifier.
-  const d=fs.mkdtempSync(path.join(out,'.verify-'));
+  const d=fs.mkdtempSync(path.join(cfg.scratch,'.verify-'));
   let m;
   try {
     const s=path.join(d,'statement'),p=path.join(d,'proof');
@@ -166,7 +166,12 @@ async function generate(){
   }finally{for(const n of owned)n.note.fill(0);for(const w of wallets)keys.disposeWallet(w);}
 }
 try {
-  const result=mode==='generate'?await generate():publicReplay(fs.readFileSync(genesisFile));
+  let result;
+  if(mode==='generate') result=await generate();
+  else if(mode==='durable'){
+    const {durable}=await import('./durable.mjs');
+    result=durable({cfg,configPath,dir:cfg.durable_dir,genesis:fs.readFileSync(genesisFile),makeLedger,fields,core,magic,expectedGenesis:approvedGenesis,sha:digest});
+  }else {need(mode==='replay');result=publicReplay(fs.readFileSync(genesisFile));}
   console.log(JSON.stringify(result));
 } catch {
   console.error('wallet cycle failed at '+stage);process.exitCode=1;

@@ -1,0 +1,54 @@
+{
+  "backend": {
+    "backend": {
+      "accepted": true,
+      "matrix_preparation_s": 1.143674131,
+      "matrix_preparation_thread_cpu_s": 1.1436408690000002,
+      "mode": "verify-many",
+      "records": [
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.08569253700000012,
+          "post_preparation_wall_s": 0.085691018,
+          "proof_bytes": 259232
+        },
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.08127259100000006,
+          "post_preparation_wall_s": 0.081278262,
+          "proof_bytes": 258208
+        },
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.07920553400000019,
+          "post_preparation_wall_s": 0.079203929,
+          "proof_bytes": 257808
+        }
+      ]
+    },
+    "elapsed_s": 1.438564818003215,
+    "user_s": 1.34,
+    "system_s": 0.08,
+    "peak_rss_kib": 257764
+  },
+  "cpu_tick_hz": 100,
+  "ledger_cpu_s": 0.048962,
+  "ledger_elapsed_s": 0.05883294699999988,
+  "crypto_process_cpu_s": 1.4200000000000002,
+  "post_preparation_proof_plus_ledger_group_cpu_s": 0.2951326620000004,
+  "whole_path_elapsed_s": 1.588657699,
+  "records": 3,
+  "fees": 6336744,
+  "funded_count": 8,
+  "sqlite_bytes": 815104,
+  "retained_body_bytes": 789876,
+  "ledger_waited_ticks": {
+    "before": 7,
+    "after": 8
+  },
+  "ledger_self_cpu_us": 38962,
+  "genesis_sha256": "22b5472abbab3669f7b8987258e12cd08eee95a0943368b16befb74f05459727"
+}

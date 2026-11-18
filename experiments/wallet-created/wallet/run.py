@@ -24,6 +24,7 @@ def main():
     ap.add_argument("--candidate", type=Path)
     ap.add_argument("--approve-candidate")
     ap.add_argument("--public-genesis", help="Independent public-only replay of an existing output, with this approved genesis SHA256")
+    ap.add_argument("--durable-dir", type=Path, help="Run a fresh public, batch-verified SQLite replay into this new directory")
     args = ap.parse_args()
     inst = common.load_installation(args.installation, args.approve_installation)
     binary = (args.candidate or Path(inst["workspace"]) / "target/release/compact-all-payments-v3").resolve(strict=True)
@@ -40,12 +41,17 @@ def main():
     config = dict(backend="whir" if args.candidate else "reference", binary=str(binary), binary_sha256=expected,
                   libraries=pins, source_root=inst["source_root"], output=str(output), python=sys.executable,
                   bridge=str(HERE / "bridge.py"), helper_sha256=inst["helper_sha256"])
+    if args.durable_dir:
+        common.need(args.public_genesis and args.candidate, "approved public WHIR replay")
+        args.durable_dir.mkdir(parents=True,exist_ok=False)
+        config.update(durable_dir=str(args.durable_dir.resolve()),batch=str(HERE/"batch.py"),clk_tck=os.sysconf("SC_CLK_TCK"))
     import tempfile
     with tempfile.TemporaryDirectory() as tmp:
+        config["scratch"] = tmp
         local = Path(tmp) / "config.json"
         local.write_text(json.dumps(config))
         env = common.controlled_env()
-        proc_args = [inst["node"], "--disable-sigusr1", str(HERE / "cycle.mjs"), str(local)]
+        proc_args = [inst["node"], "--disable-warning=ExperimentalWarning", "--disable-sigusr1", str(HERE / "cycle.mjs"), str(local)]
         def execute(mode, extra=()):
             ret = subprocess.run([*proc_args, mode, *extra], env=env, capture_output=True, timeout=3600)
             if ret.returncode or ret.stderr:
@@ -54,7 +60,7 @@ def main():
                 raise ValueError("wallet cycle failed at " + (stage.decode() if stage in allowed else mode))
             return json.loads(ret.stdout)
         if args.public_genesis:
-            raw = execute("replay", [args.public_genesis])
+            raw = execute("durable" if args.durable_dir else "replay", [args.public_genesis])
             print(json.dumps(raw, indent=2))
             return
         generated = execute("generate")
