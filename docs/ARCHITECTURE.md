@@ -1,6 +1,10 @@
 # Current architecture and implementation boundary
 
-## Validation cost for an independently operated node
+## Current wallet-created payment decision
+
+Both research candidates have executable complete payment paths. Masked WHIR preserves CP03 ordinary-payment constraints and averaged 263,292 B per wallet submission. Two independently controlled native wallets each sent 147,324 B and retained one 157,220 B pair packet, including all four ciphertexts. Defer network activation of both pending cryptographic qualification and a credible role/availability design. The 1/5 TB archive sizes remain research comparisons. [Measured results and decision](../experiments/wallet-created/DECISION.md) · [Independent node and wallet costs](../experiments/wallet-created/ROLES.md)
+
+## Prior validation-cost decision
 
 Retain CP03 for executable payment research. Defer integration of both the masked wallet proof and transparent block-aggregate candidates tested from public revision `7c2d0fc8b68c566d13e3e341c1f49bacaad527f4`. A reviewed masked-proof schedule projects 262,850 mean bytes and 272,556 maximum for a complete ordinary body. Independent block-only relay fits the chosen link profile. The measured generic matrix/guard/first-fold computation already costs 0.245–0.261 CPU seconds per payment, against a two-validation-core catch-up allowance of 0.12476. Joining public CP03 proofs in a block could preserve independent wallet secrets and cut canonical traffic, while the pinned transparent fallback has a weaker component soundness budget and requires thousands of accelerator subproofs for a 96-payment workload. Its 200 kB final receipt is an unmeasured sensitivity.
 

@@ -1,0 +1,38 @@
+{
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652",
+  "test_elf_sha256": "2dfa4153e3b38f186f959fbbceb2fb4e0c5fb5cf1d3b107ee023c9b65f0de741",
+  "upstream_and_overlay_hashes": {
+    "Cargo.lock": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "chain/Cargo.lock": "8f609d02037dc01a0e92da661895d3914c28018d98782969ae510a87af659f70",
+    "overlay/pallet/run.py": "f370ab9f7580cea5ddc4c8378662c3ebaf922a973c9228e8556e7e719782f668",
+    "overlay/pallet/stage.py": "d19956b96cae0e9301c2c7cd89da79d61716f471f0ee37af7a3d6218c033e691",
+    "overlay/comparative_wallet.rs": "38a5f25f191844f6f71e1c58d3250ab06b24d7f36a2850b77d1f916b29c7d965",
+    "overlay/pallet/anchored_wallet_replay.rs": "443079303d50e224c00818a2715e579de45e08e0813bd8d43717ec1e76222d82",
+    "chain/pallets/shielded/src/lib.rs": "68ce48f846960e919cc60fc7dde0ff59df36b6d03696f2fe44f99135378baa4e",
+    "chain/pallets/shielded/src/anchored_wallet_replay.rs": "443079303d50e224c00818a2715e579de45e08e0813bd8d43717ec1e76222d82",
+    "crates/qnero-wallet/tests/dispatch_inputs.rs": "561a44b96451c843da2781f06aadfc3f23e6a6e33b7f5d51337d9bc750d436e0"
+  },
+  "source_manifest_sha256": "c352da43faf897d97c651cb639145340f4f81b12434dcd315d60f47048f2f362",
+  "public_files_sha256": {
+    "funding-inner.bin": "328499149f761fac76ef6df259fd4624401ae54c0ef5ccc94f4677beb3e1b44c",
+    "funding-commitment.bin": "24d2a55bf0b43ab91741b7ce2fb08c6a2bd19fa1170eee618b9904bf42695e07",
+    "payment.scale": "90903fb7b9266b82fbf15bf6c7f1cb332e3aa3d5b90dd5744038fc7aa15e4d4e",
+    "anchor-fields.bin": "71bc1ea30e895f5f817d74b5396982f03e6932a6645a6a9e7bca40fa04b493c6",
+    "anchor.bin": "cdea22a156a698efbc10066503a68d89535199113268fbbcf474062df24f0d2f",
+    "commitments.bin": "68a006c0d78c52ecd427ffabd180ca2735319bda17a5cfe9a5af5c9a2872d2e4",
+    "real-slot-nullifiers.bin": "4a3edd6c9f75050f850fea8da5061f8b48a9de94a47339a60419e1e7f77860d2"
+  },
+  "frame": {
+    "minted_steps": 1000,
+    "remaining_pool_steps": 992,
+    "fee_steps": 8,
+    "burned_steps": 4,
+    "pending_author_steps": 4,
+    "leaves_after": 3,
+    "settled_nullifiers": 2,
+    "output_membership_checked": true,
+    "pool_and_pre_dispatch_passed": true,
+    "replay_refused_by_all_three_paths": true,
+    "final_tree_root": "c5db6ec8408d99ea8707d3d7fcc2aa28e20d7c98ab1934d7f46dd490c830ee98"
+  }
+}

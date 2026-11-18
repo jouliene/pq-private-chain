@@ -1,0 +1,426 @@
+{
+  "author_whir_detached": {
+    "approved_genesis_sha256": "22b5472abbab3669f7b8987258e12cd08eee95a0943368b16befb74f05459727",
+    "binary_sha256": "5bf939b195efd1188edd2f2435f8923ff3217976c53d7d0d62324ddd88d0303d",
+    "distinct_nullifiers": 6,
+    "payments": [
+      {
+        "body_bytes": 264108,
+        "body_sha256": "c934f311eaf0a3007365000ab07308eec1b96c13af6c5e051c5453094dcc00d3",
+        "proof_bytes": 259232,
+        "proof_sha256": "ceffe05e777eaf4fb43b655078ef6482269895612b34717849473eae2d4df02e"
+      },
+      {
+        "body_bytes": 263084,
+        "body_sha256": "5d726d5ce6a18c45a9fb1fdc27112d5c04090b8e22c055dab4c383ebe902e839",
+        "proof_bytes": 258208,
+        "proof_sha256": "cfb2c12a1b39d22eba0d6461fa1d53d3ee7aee3ed516887ee45e21546ecae041"
+      },
+      {
+        "body_bytes": 262684,
+        "body_sha256": "670b2881fa2435cb8b578812a67f8fbb4e91f9282690d499db701788e0f9685d",
+        "proof_bytes": 257808,
+        "proof_sha256": "6c5a7ad4892dd4bf2f5012de6b97cc1399790052eb17868ec25e93c8eb299885"
+      }
+    ],
+    "public_replay": {
+      "accepted": true,
+      "matrix_preparation_s": 1.120697226,
+      "matrix_preparation_thread_cpu_s": 1.120412339,
+      "mode": "verify-many",
+      "records": [
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.08089065799999995,
+          "post_preparation_wall_s": 0.080907527,
+          "proof_bytes": 259232
+        },
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.07936769900000007,
+          "post_preparation_wall_s": 0.079378096,
+          "proof_bytes": 258208
+        },
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.07849640699999982,
+          "post_preparation_wall_s": 0.078501966,
+          "proof_bytes": 257808
+        }
+      ]
+    },
+    "trailing_proof_byte_rejected": true,
+    "valid_second_proof_wrong_first_statement_rejected": true
+  },
+  "fresh_whir_public_ledger": {
+    "admissions": [
+      {
+        "accepted": true,
+        "admission_elapsed_s": 1.306229476,
+        "body_bytes": 261548,
+        "cpu_system_s": 0.08,
+        "cpu_user_s": 1.13,
+        "elapsed_s": 1.2282939379801974,
+        "mode": "verify",
+        "peak_rss_kib": 257756,
+        "proof_bytes": 256672
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 1.3490477310000002,
+        "body_bytes": 266028,
+        "cpu_system_s": 0.09,
+        "cpu_user_s": 1.16,
+        "elapsed_s": 1.2708175290608779,
+        "mode": "verify",
+        "peak_rss_kib": 257632,
+        "proof_bytes": 261152
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 1.2974433100000005,
+        "body_bytes": 264172,
+        "cpu_system_s": 0.08,
+        "cpu_user_s": 1.12,
+        "elapsed_s": 1.2178914279211313,
+        "mode": "verify",
+        "peak_rss_kib": 257628,
+        "proof_bytes": 259296
+      }
+    ],
+    "backend": "whir",
+    "controls": [
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay",
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay",
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay"
+    ],
+    "fees": "6336744",
+    "genesis_sha256": "ccc98b855bfa2f89b3b1120f246247bdb4d67898af73d590dc65e1ee94397bdb",
+    "leaves": 8,
+    "spent": 6
+  },
+  "fresh_whir_wallets": {
+    "admissions": [
+      {
+        "accepted": true,
+        "admission_elapsed_s": 1.303005749,
+        "body_bytes": 261548,
+        "cpu_system_s": 0.09,
+        "cpu_user_s": 1.12,
+        "elapsed_s": 1.2226291589904577,
+        "mode": "verify",
+        "peak_rss_kib": 257756,
+        "proof_bytes": 256672
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 1.3971619829999982,
+        "body_bytes": 266028,
+        "cpu_system_s": 0.09,
+        "cpu_user_s": 1.21,
+        "elapsed_s": 1.3130197059363127,
+        "mode": "verify",
+        "peak_rss_kib": 257760,
+        "proof_bytes": 261152
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 1.3242456549999915,
+        "body_bytes": 264172,
+        "cpu_system_s": 0.11,
+        "cpu_user_s": 1.12,
+        "elapsed_s": 1.2437013140879571,
+        "mode": "verify",
+        "peak_rss_kib": 257628,
+        "proof_bytes": 259296
+      }
+    ],
+    "backend": "whir",
+    "fees": "6336744",
+    "genesis_sha256": "ccc98b855bfa2f89b3b1120f246247bdb4d67898af73d590dc65e1ee94397bdb",
+    "leaves": 8,
+    "produced": [
+      {
+        "accepted": true,
+        "body_bytes": 261548,
+        "cpu_system_s": 1.05,
+        "cpu_user_s": 26.2,
+        "elapsed_s": 27.271558740059845,
+        "mode": "prove",
+        "peak_rss_kib": 2339676,
+        "proof_bytes": 256672,
+        "receipts_opened": 2,
+        "unrelated_receipts": 0
+      },
+      {
+        "accepted": true,
+        "body_bytes": 266028,
+        "cpu_system_s": 1.08,
+        "cpu_user_s": 26.2,
+        "elapsed_s": 27.296000511967577,
+        "mode": "prove",
+        "peak_rss_kib": 2339864,
+        "proof_bytes": 261152,
+        "receipts_opened": 2,
+        "unrelated_receipts": 0
+      },
+      {
+        "accepted": true,
+        "body_bytes": 264172,
+        "cpu_system_s": 1.04,
+        "cpu_user_s": 25.94,
+        "elapsed_s": 26.994917485979386,
+        "mode": "prove",
+        "peak_rss_kib": 2339656,
+        "proof_bytes": 259296,
+        "receipts_opened": 2,
+        "unrelated_receipts": 0
+      }
+    ],
+    "spent": 6
+  },
+  "qnero_author_public": {
+    "controls": {
+      "changed_ciphertext_digest_mismatch": true,
+      "corrupt_proof_rejected": true
+    },
+    "positive": {
+      "distinct_published_nullifiers": 12,
+      "load_elapsed_s": 2.3724e-05,
+      "padding_slots": 5,
+      "private_verification_passed": true,
+      "real_slots": 1,
+      "verify_elapsed_s": 0.006775391
+    },
+    "public_extrinsic_sha256": "895538da35419106dbfbd1ded4aae2061b5934ec3ad5435598cb641cc9df528c"
+  },
+  "qnero_build": {
+    "comparative_wallet.rs": "38a5f25f191844f6f71e1c58d3250ab06b24d7f36a2850b77d1f916b29c7d965",
+    "public_check.rs": "57e9f890b802fcbf483ceaffbe2e2f2229df0121df6f35ea78dc426d96450d93",
+    "public_verifier_executable": "88582021c6441070e7b426bd494d695fb6e30353c2ee61ba365fc0ac86793500",
+    "runner": "11cc9bd02208be7e5c211ead5e9d44b3b4a19668e8c5a047c668fb49d12739f9",
+    "upstream_Cargo.lock": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "wallet_executable": "c216b4cd72032b0ab15bc9e04776986fce24daf4f0b610cb5ca00561ad502e07"
+  },
+  "qnero_fresh_controls": {
+    "changed_ciphertext_digest_mismatch": true,
+    "corrupt_proof_rejected": true
+  },
+  "qnero_fresh_public_crypto": {
+    "distinct_published_nullifiers": 12,
+    "load_elapsed_s": 2.3388e-05,
+    "padding_slots": 5,
+    "private_verification_passed": true,
+    "real_slots": 1,
+    "verify_elapsed_s": 0.00668946
+  },
+  "qnero_fresh_wallet": {
+    "anchor_height": 2,
+    "backup_only_received": true,
+    "ciphertext_lengths": [
+      1792,
+      1792
+    ],
+    "extrinsic_bytes": 154508,
+    "fee_steps": 8,
+    "funded_commitments_at_anchor": 1,
+    "funding_sync": {
+      "json_rpc_request_bodies": 12,
+      "json_rpc_request_bytes": 2150
+    },
+    "independent_recipient_received": true,
+    "leaf_and_private_batch_prove_elapsed_s": 5.057496505,
+    "prepare_cpu_ticks": 1842,
+    "prepare_reads": {
+      "json_rpc_request_bodies": 11,
+      "json_rpc_request_bytes": 1513
+    },
+    "prepare_spend_elapsed_s": 5.068875057,
+    "proof_bytes": 150908,
+    "real_leaves": 1,
+    "receive_from_public_history": {
+      "json_rpc_request_bodies": 13,
+      "json_rpc_request_bytes": 3190
+    },
+    "seed_only_recovery": {
+      "json_rpc_request_bodies": 12,
+      "json_rpc_request_bytes": 3058
+    },
+    "setup_cpu_ticks": 736,
+    "submit": {
+      "json_rpc_request_bodies": 1,
+      "json_rpc_request_bytes": 309091
+    },
+    "wallet_setup_elapsed_s": 3.150651863,
+    "wallet_slots": 6
+  },
+  "qnero_fresh_wallet_process": {
+    "elapsed_s": 8.384174410020933,
+    "exit": 0,
+    "peak_rss_kib": 1112064,
+    "system_s": 0.775948,
+    "user_s": 25.173334
+  },
+  "qnero_pin": "f04c91307837c0231668383bec76ba98d89d2652",
+  "qnero_reviewer_wire": {
+    "call": "submit_private_batch",
+    "ciphertext_bytes": 3584,
+    "extrinsic_bytes": 154508,
+    "public_fees_steps": [
+      8
+    ],
+    "public_input_felts_in_proof": 131,
+    "real_slots": [
+      [
+        0,
+        2
+      ]
+    ],
+    "scale_framing_bytes": 16,
+    "serialized_proof_bytes": 150908,
+    "sha256": "64e9d6fe0b01c1fd601dc169938914deac1ce2efcee47ec10e4b1f3245098768"
+  },
+  "qnero_rustc": "rustc 1.93.0 (254b59607 2026-01-19)\nbinary: rustc\ncommit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c\ncommit-date: 2026-01-19\nhost: x86_64-unknown-linux-gnu\nrelease: 1.93.0\nLLVM version: 21.1.8",
+  "reference_cp03_author_replay": {
+    "admissions": [
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.769939346,
+        "body_bytes": 1753558,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.66,
+        "elapsed_s": 0.6901013710303232,
+        "mode": "verify",
+        "peak_rss_kib": 63360,
+        "proof_bytes": 1748682
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7567996859999998,
+        "body_bytes": 1757014,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.65,
+        "elapsed_s": 0.6787821949692443,
+        "mode": "verify",
+        "peak_rss_kib": 63368,
+        "proof_bytes": 1752138
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7836829010000006,
+        "body_bytes": 1759574,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.66,
+        "elapsed_s": 0.6978427349822596,
+        "mode": "verify",
+        "peak_rss_kib": 63368,
+        "proof_bytes": 1754698
+      }
+    ],
+    "backend": "reference",
+    "controls": [
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay",
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay",
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay"
+    ],
+    "fees": "6336744",
+    "genesis_sha256": "3f3b3e127bc58e5d5ff2288b1110be26bf3422ba212bb4fb65a2e7c3c50bde6d",
+    "leaves": 8,
+    "spent": 6
+  },
+  "research_source_commit": "1e5956364b2a39117f80d00d41923b6b92422439",
+  "reviewer_whir_detached": {
+    "approved_genesis_sha256": "ccc98b855bfa2f89b3b1120f246247bdb4d67898af73d590dc65e1ee94397bdb",
+    "binary_sha256": "5bf939b195efd1188edd2f2435f8923ff3217976c53d7d0d62324ddd88d0303d",
+    "distinct_nullifiers": 6,
+    "payments": [
+      {
+        "body_bytes": 261548,
+        "body_sha256": "55fa33535f47df9eb1aa3e61e6e9042c5d18116caadd8e52c219ba7a833f6f83",
+        "proof_bytes": 256672,
+        "proof_sha256": "abf0ad8a8e50f5047a8961c1211fd871dd6129995deed7ba8a555801424f56f1"
+      },
+      {
+        "body_bytes": 266028,
+        "body_sha256": "5e749d0c6a01d12a920d8f6a2648aaac758faa6698c86718956323a59cc7dfd2",
+        "proof_bytes": 261152,
+        "proof_sha256": "edd4e735fcd6986cc27de818e4640f22e9a7c43993047a6d03956e1ec5ba7166"
+      },
+      {
+        "body_bytes": 264172,
+        "body_sha256": "39f35218613561a1efa59fbff9fbfdac04d7e506eb07d33d4b6a17b76fc52b43",
+        "proof_bytes": 259296,
+        "proof_sha256": "132e8061177e869cb5d9f7099843998322dd165a001d74ab48f37eb82b10044c"
+      }
+    ],
+    "public_replay": {
+      "accepted": true,
+      "matrix_preparation_s": 1.123382879,
+      "matrix_preparation_thread_cpu_s": 1.1233022140000002,
+      "mode": "verify-many",
+      "records": [
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.07981787399999996,
+          "post_preparation_wall_s": 0.079816749,
+          "proof_bytes": 256672
+        },
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.08008832300000002,
+          "post_preparation_wall_s": 0.080087489,
+          "proof_bytes": 261152
+        },
+        {
+          "accepted": true,
+          "mode": "verify",
+          "post_preparation_thread_cpu_s": 0.07681153800000007,
+          "post_preparation_wall_s": 0.076810491,
+          "proof_bytes": 259296
+        }
+      ]
+    },
+    "trailing_proof_byte_rejected": true,
+    "valid_second_proof_wrong_first_statement_rejected": true
+  },
+  "whir_build": {
+    "binary_sha256": "5bf939b195efd1188edd2f2435f8923ff3217976c53d7d0d62324ddd88d0303d",
+    "dense_oracle_audit": false,
+    "installation_sha256": "f885a09c9768b383cf4004ed92786f25e4b40610089f76b7de489358e06ebb46",
+    "rlibs": {
+      "libcompact_bounded_arity_v3-663a1b0678661f2a.rlib": "d09bb2b89737996931df876e90bec62bbab6d3414f463f5b72a3be6e43101152",
+      "liblibc-34e983634f114512.rlib": "102ad7a86f59b5ac2bb475e0cc8f609cbffdf22c382af1c5b48b85f4eb5a1e7f",
+      "libp3_air-70ee08e2e0422512.rlib": "7fcac621381f679db795c701753945534c04030a33b5f78c04d29d7c95b0b6d2",
+      "libp3_dft-d2774077eaadc923.rlib": "f8df51abbb75b8f75b4bf312f893362ffdea7b0e1b2da07f110e1351632bb054",
+      "libp3_field-23366339d6ad30fd.rlib": "6f806a5936a288bccdf8c4c2719d59fb1cebb3c610b0474e2b52320b3fb64462",
+      "libp3_goldilocks-8c9b4cce832603e7.rlib": "2caab2d7b458c19915713d757c2f4f1f15f98556a483e3630069aacee01d8f76",
+      "libp3_matrix-97e6e193fdf52006.rlib": "06fe1cc568d68d2910e328894b88341955e3c05a73a870bd1429b5839bb95660",
+      "libserde_json-96669d5410fcc0ff.rlib": "3b7d23071bf2676e8b3b560bd1e60f41d4c023afa9ac28f22516c48600726027",
+      "libtiny_keccak-c3a93cf21255ff67.rlib": "74c11068556d96601645ce07d63ac16b98b5df052dc749211d059ee6de70e855"
+    },
+    "rustc_sha256": "b53b780f77f952062f8ca8a3b70aef2390b1e45ad91939be94afdc9543026853"
+  }
+}

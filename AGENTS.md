@@ -1,4 +1,8 @@
-# Independent-node validation decision
+# Wallet-created payment decision
+
+The bounded structured-wallet and two-owner native evidence belongs in experiments/wallet-created. Read its DECISION.md, GOAL.md at the repository root and STATUS.md. Keep fresh proof, receipt, ledger, publication and conditional security results distinct. Preserve CP03 as the executable reference.
+
+# Prior independent-node validation decision
 
 Read GOAL.md and STATUS.md for the current owner directive. In experiments/node-validation, evaluate one masked-sumcheck route and one public-proof aggregation fallback. Label component measurements, whole-payment results, estimated byte budgets, service assumptions and remaining assurance obligations. Preserve CP03 and the closed synchronization and proof-encoding milestones.
 

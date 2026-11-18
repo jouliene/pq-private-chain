@@ -1,0 +1,565 @@
+{
+  "author_public_replay": {
+    "binary_sha256": "33ed751c121a2660cc0636ba2449b72712e24ff2b5dcffdcbc1e54c6e7522fb1",
+    "final_state": [
+      3,
+      10,
+      6,
+      9
+    ],
+    "final_state_blake2b512": "453b65c6857484c139b627454bde8e1f26f1945bea2777a9472a42429f2d35251c6c93b47e51aa30107fc6dd16ef4a86642c4151b945c2f78ac5284ef78fda48",
+    "followup_body_bytes": 147324,
+    "genesis_sha256": "3ae5613ac227880476a57eb912cba7e033588655b38e90d9f6d77e2e046713ff",
+    "negative_controls": [
+      "changed-proof",
+      "changed-public-fee",
+      "changed-ciphertext",
+      "short",
+      "trailing",
+      "replay"
+    ],
+    "pair_body_bytes": 157220,
+    "pair_history_bytes": 7296,
+    "pair_proof_bytes": 150044,
+    "public_pipe_frames": [
+      {
+        "frame_length_prefix_bytes": 4,
+        "from_role_payload_lengths": [
+          1769,
+          1741,
+          97,
+          97,
+          97,
+          97,
+          97,
+          7393,
+          97,
+          3745
+        ],
+        "role": "node",
+        "to_role_payload_lengths": [
+          128,
+          157220,
+          157220,
+          157220,
+          157219,
+          157221,
+          157220,
+          157220,
+          147324,
+          0
+        ]
+      }
+    ],
+    "published_ciphertexts": 4,
+    "roles": {
+      "node": [
+        {
+          "cpu_s": 9.995738869,
+          "elapsed_s": 6.196747978,
+          "operation": "registered_setup",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 0.000659089,
+          "elapsed_s": 0.00066063,
+          "operation": "rejected",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 0.000585352,
+          "elapsed_s": 0.000586654,
+          "operation": "rejected",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 0.006971451,
+          "elapsed_s": 0.006972743,
+          "operation": "rejected",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 9.19e-07,
+          "elapsed_s": 1.73e-06,
+          "operation": "rejected",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 8.17e-07,
+          "elapsed_s": 1.575e-06,
+          "operation": "rejected",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 0.006852557,
+          "elapsed_s": 0.006862199,
+          "operation": "accepted",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 0.006673623,
+          "elapsed_s": 0.006675043,
+          "operation": "rejected",
+          "peak_rss_kib": 664580
+        },
+        {
+          "cpu_s": 0.006353226,
+          "elapsed_s": 0.006354434,
+          "operation": "accepted",
+          "peak_rss_kib": 664580
+        }
+      ]
+    },
+    "verifiers": [
+      {
+        "bytes": 1769,
+        "sha256": "ceb84e4784d6b6e0029bef39f7a0d0c770ca940738ebfcdfcbbc4d02d1ec87d6"
+      },
+      {
+        "bytes": 1741,
+        "sha256": "567281b03ee7bf05561db52e1af3db8f5f73036390a58cc3687417d95d663169"
+      }
+    ]
+  },
+  "author_public_wire": {
+    "all_52_inner_public_felts_preserved_in_order": true,
+    "all_four_ciphertexts_preserved_in_order": true,
+    "pair": {
+      "ciphertext_bytes": 7168,
+      "framing_bytes": 8,
+      "packet_bytes": 157220,
+      "proof_bytes": 150044,
+      "sha256": "f1a6b9b5db2bf1301fe373c0d28c1529da26845c2524b860bed6f1312bb9615d"
+    },
+    "public_fees": [
+      3,
+      3
+    ],
+    "singles": [
+      {
+        "ciphertext_bytes": 3584,
+        "framing_bytes": 8,
+        "packet_bytes": 147324,
+        "proof_bytes": 143732,
+        "sha256": "56fc8d2876549cf18df4a8673e58ce83c05f7a902fde5cbf66894480cd5c99b0"
+      },
+      {
+        "ciphertext_bytes": 3584,
+        "framing_bytes": 8,
+        "packet_bytes": 147324,
+        "proof_bytes": 143732,
+        "sha256": "390bcc496517665e25a4a01d13eabde9d4369db3e8f62142dc521c88ae4504d3"
+      }
+    ]
+  },
+  "build": {
+    "binary_sha256": "33ed751c121a2660cc0636ba2449b72712e24ff2b5dcffdcbc1e54c6e7522fb1",
+    "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "compiler": [
+      "rustc 1.93.0 (254b59607 2026-01-19)",
+      "binary: rustc",
+      "commit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c",
+      "commit-date: 2026-01-19",
+      "host: x86_64-unknown-linux-gnu",
+      "release: 1.93.0",
+      "LLVM version: 21.1.8"
+    ],
+    "example_sha256": "0f5a78099de729738bf1a6553a36c0568051881af7816dfa75d06b84668fd0f0",
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+  },
+  "fresh_cycle": {
+    "binary_sha256": "33ed751c121a2660cc0636ba2449b72712e24ff2b5dcffdcbc1e54c6e7522fb1",
+    "final_state": [
+      3,
+      10,
+      6,
+      9
+    ],
+    "final_state_blake2b512": "6e31be558887d423c3b4cfd6c4c8facd79953165cb3975211591e0185426d3e9e97e6b53272299f1cbd383f723bd13be35ee9198e9a1dbaced15e39a6aacb035",
+    "followup_body_bytes": 147324,
+    "genesis_sha256": "51d84759f9de341beb07606d39a9aa90e9a491b67c2b7b78c555a40721f1ba75",
+    "handshake_bytes_per_origin": 1665,
+    "negative_controls": [
+      "changed-proof",
+      "changed-public-fee",
+      "changed-ciphertext",
+      "short",
+      "trailing",
+      "replay"
+    ],
+    "opened_notes_per_wallet": [
+      2,
+      2
+    ],
+    "pair_archive_saving_bytes": 137428,
+    "pair_body_bytes": 157220,
+    "pair_history_bytes": 7296,
+    "pair_proof_bytes": 150044,
+    "public_pipe_frames": [
+      {
+        "frame_length_prefix_bytes": 4,
+        "from_role_payload_lengths": [
+          1665,
+          147324,
+          1,
+          147324
+        ],
+        "role": "wallet",
+        "to_role_payload_lengths": [
+          128,
+          1601,
+          7296,
+          5
+        ]
+      },
+      {
+        "frame_length_prefix_bytes": 4,
+        "from_role_payload_lengths": [
+          1665,
+          147324,
+          1
+        ],
+        "role": "wallet",
+        "to_role_payload_lengths": [
+          128,
+          1601,
+          7296,
+          0
+        ]
+      },
+      {
+        "frame_length_prefix_bytes": 4,
+        "from_role_payload_lengths": [
+          1769,
+          1741,
+          157220
+        ],
+        "role": "builder",
+        "to_role_payload_lengths": [
+          128,
+          147324,
+          147324
+        ]
+      },
+      {
+        "frame_length_prefix_bytes": 4,
+        "from_role_payload_lengths": [
+          1769,
+          1741,
+          97,
+          97,
+          97,
+          97,
+          97,
+          7393,
+          97,
+          3745
+        ],
+        "role": "node",
+        "to_role_payload_lengths": [
+          128,
+          157220,
+          157220,
+          157220,
+          157219,
+          157221,
+          157220,
+          157220,
+          147324,
+          0
+        ]
+      }
+    ],
+    "published_ciphertexts": 4,
+    "roles": {
+      "builder": [
+        {
+          "cpu_s": 9.959266859,
+          "elapsed_s": 6.222483276,
+          "operation": "registered_setup",
+          "peak_rss_kib": 664584
+        },
+        {
+          "cpu_s": 16.731659781,
+          "elapsed_s": 8.610345108,
+          "operation": "verify_two_and_prove_pair",
+          "peak_rss_kib": 1070876
+        }
+      ],
+      "node": [
+        {
+          "cpu_s": 9.822952143,
+          "elapsed_s": 6.110689245,
+          "operation": "registered_setup",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.000628537,
+          "elapsed_s": 0.000630254,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.000935934,
+          "elapsed_s": 0.000937563,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.007184297,
+          "elapsed_s": 0.007185556,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 1.37e-06,
+          "elapsed_s": 2.37e-06,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 1.232e-06,
+          "elapsed_s": 2.225e-06,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.007365951,
+          "elapsed_s": 0.007368802,
+          "operation": "accepted",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.007631402,
+          "elapsed_s": 0.007632797,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.007629175,
+          "elapsed_s": 0.007631225,
+          "operation": "accepted",
+          "peak_rss_kib": 664716
+        }
+      ],
+      "wallet_a": [
+        {
+          "cpu_s": 3.656098363,
+          "elapsed_s": 2.22482907,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 312700
+        },
+        {
+          "cpu_s": 9.030869587,
+          "elapsed_s": 4.633794271,
+          "operation": "wallet_create",
+          "peak_rss_kib": 561032
+        },
+        {
+          "cpu_s": 0.000770611,
+          "elapsed_s": 0.00077206,
+          "operation": "scan_four_receipts",
+          "peak_rss_kib": 561032
+        },
+        {
+          "cpu_s": 8.877215208,
+          "elapsed_s": 4.563299307,
+          "operation": "recipient_spend",
+          "peak_rss_kib": 561260
+        }
+      ],
+      "wallet_b": [
+        {
+          "cpu_s": 3.582068821,
+          "elapsed_s": 2.196443074,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 312684
+        },
+        {
+          "cpu_s": 8.791538101,
+          "elapsed_s": 4.514600939,
+          "operation": "wallet_create",
+          "peak_rss_kib": 560760
+        },
+        {
+          "cpu_s": 0.000788744,
+          "elapsed_s": 0.00079034,
+          "operation": "scan_four_receipts",
+          "peak_rss_kib": 560760
+        }
+      ]
+    },
+    "verifiers": [
+      {
+        "bytes": 1769,
+        "sha256": "ceb84e4784d6b6e0029bef39f7a0d0c770ca940738ebfcdfcbbc4d02d1ec87d6"
+      },
+      {
+        "bytes": 1741,
+        "sha256": "567281b03ee7bf05561db52e1af3db8f5f73036390a58cc3687417d95d663169"
+      }
+    ],
+    "wallet_proofs": [
+      143732,
+      143732
+    ],
+    "wallet_submissions": [
+      147324,
+      147324
+    ]
+  },
+  "reviewer_public_replay": {
+    "binary_sha256": "33ed751c121a2660cc0636ba2449b72712e24ff2b5dcffdcbc1e54c6e7522fb1",
+    "final_state": [
+      3,
+      10,
+      6,
+      9
+    ],
+    "final_state_blake2b512": "6e31be558887d423c3b4cfd6c4c8facd79953165cb3975211591e0185426d3e9e97e6b53272299f1cbd383f723bd13be35ee9198e9a1dbaced15e39a6aacb035",
+    "followup_body_bytes": 147324,
+    "genesis_sha256": "51d84759f9de341beb07606d39a9aa90e9a491b67c2b7b78c555a40721f1ba75",
+    "negative_controls": [
+      "changed-proof",
+      "changed-public-fee",
+      "changed-ciphertext",
+      "short",
+      "trailing",
+      "replay"
+    ],
+    "pair_body_bytes": 157220,
+    "pair_history_bytes": 7296,
+    "pair_proof_bytes": 150044,
+    "public_pipe_frames": [
+      {
+        "frame_length_prefix_bytes": 4,
+        "from_role_payload_lengths": [
+          1769,
+          1741,
+          97,
+          97,
+          97,
+          97,
+          97,
+          7393,
+          97,
+          3745
+        ],
+        "role": "node",
+        "to_role_payload_lengths": [
+          128,
+          157220,
+          157220,
+          157220,
+          157219,
+          157221,
+          157220,
+          157220,
+          147324,
+          0
+        ]
+      }
+    ],
+    "published_ciphertexts": 4,
+    "roles": {
+      "node": [
+        {
+          "cpu_s": 9.785518372,
+          "elapsed_s": 6.078445976,
+          "operation": "registered_setup",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.00064891,
+          "elapsed_s": 0.000650395,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.000594012,
+          "elapsed_s": 0.000595265,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.007077881,
+          "elapsed_s": 0.007079427,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 9.65e-07,
+          "elapsed_s": 1.731e-06,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 8.1e-07,
+          "elapsed_s": 1.568e-06,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.007030118,
+          "elapsed_s": 0.007031193,
+          "operation": "accepted",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.006665361,
+          "elapsed_s": 0.006667868,
+          "operation": "rejected",
+          "peak_rss_kib": 664716
+        },
+        {
+          "cpu_s": 0.006550922,
+          "elapsed_s": 0.006552256,
+          "operation": "accepted",
+          "peak_rss_kib": 664716
+        }
+      ]
+    },
+    "verifiers": [
+      {
+        "bytes": 1769,
+        "sha256": "ceb84e4784d6b6e0029bef39f7a0d0c770ca940738ebfcdfcbbc4d02d1ec87d6"
+      },
+      {
+        "bytes": 1741,
+        "sha256": "567281b03ee7bf05561db52e1af3db8f5f73036390a58cc3687417d95d663169"
+      }
+    ]
+  },
+  "reviewer_public_wire": {
+    "all_52_inner_public_felts_preserved_in_order": true,
+    "all_four_ciphertexts_preserved_in_order": true,
+    "pair": {
+      "ciphertext_bytes": 7168,
+      "framing_bytes": 8,
+      "packet_bytes": 157220,
+      "proof_bytes": 150044,
+      "sha256": "65b299abd8c5d6359d39c1e86cc1ae438bb6932d9b9bf9d29b7031de9479aa51"
+    },
+    "public_fees": [
+      3,
+      3
+    ],
+    "singles": [
+      {
+        "ciphertext_bytes": 3584,
+        "framing_bytes": 8,
+        "packet_bytes": 147324,
+        "proof_bytes": 143732,
+        "sha256": "85d23b8bd58d88946aaba2b54da7acb91b47f069030197f6074f9e2d8b9f098d"
+      },
+      {
+        "ciphertext_bytes": 3584,
+        "framing_bytes": 8,
+        "packet_bytes": 147324,
+        "proof_bytes": 143732,
+        "sha256": "9a3cf9203e5fc7c55203568f3fc8720cddbf9a913df0d37511907b998581fc4f"
+      }
+    ]
+  },
+  "source_commit": "4ab7e6fa4699b94821c7978c37d98fe9c600ea08"
+}

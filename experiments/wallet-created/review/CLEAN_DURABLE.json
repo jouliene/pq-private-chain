@@ -1,0 +1,86 @@
+{
+  "valid": {
+    "committed_payments": 3,
+    "funded": 8,
+    "fees": 6336744,
+    "nullifiers": 6,
+    "root_hex": "aef639eef3e867f193e7c0928cc5510ec97667f374558e91d03ccadc4552a6e9f7530ce2103ba63c241d4d8372c007fa110a08e60f904bac1e06d29a65c2e622",
+    "frontier_sha256": "6ec2b46add20ad664518d74a02dd8509c6ea70642320668b4b2556ac682bb542",
+    "archive_bytes": 789876,
+    "database_integrity": "ok",
+    "measured": {
+      "backend": {
+        "backend": {
+          "accepted": true,
+          "matrix_preparation_s": 1.14834974,
+          "matrix_preparation_thread_cpu_s": 1.148291151,
+          "mode": "verify-many",
+          "records": [
+            {
+              "accepted": true,
+              "mode": "verify",
+              "post_preparation_thread_cpu_s": 0.07856267299999997,
+              "post_preparation_wall_s": 0.078561592,
+              "proof_bytes": 259232
+            },
+            {
+              "accepted": true,
+              "mode": "verify",
+              "post_preparation_thread_cpu_s": 0.07755990700000015,
+              "post_preparation_wall_s": 0.077558754,
+              "proof_bytes": 258208
+            },
+            {
+              "accepted": true,
+              "mode": "verify",
+              "post_preparation_thread_cpu_s": 0.08030453500000023,
+              "post_preparation_wall_s": 0.080303113,
+              "proof_bytes": 257808
+            }
+          ]
+        },
+        "elapsed_s": 1.432153478031978,
+        "user_s": 1.31,
+        "system_s": 0.1,
+        "peak_rss_kib": 257636
+      },
+      "cpu_tick_hz": 100,
+      "ledger_cpu_s": 0.041846,
+      "ledger_elapsed_s": 0.049168744999999944,
+      "crypto_process_cpu_s": 1.4100000000000001,
+      "post_preparation_proof_plus_ledger_group_cpu_s": 0.27827311500000035,
+      "whole_path_elapsed_s": 1.574283402,
+      "records": 3,
+      "fees": 6336744,
+      "funded_count": 8,
+      "sqlite_bytes": 815104,
+      "retained_body_bytes": 789876,
+      "ledger_waited_ticks": {
+        "before": 6,
+        "after": 7
+      },
+      "ledger_self_cpu_us": 31846,
+      "genesis_sha256": "22b5472abbab3669f7b8987258e12cd08eee95a0943368b16befb74f05459727"
+    }
+  },
+  "bad_second_receipt": {
+    "committed_payments": 1,
+    "funded": 4,
+    "fees": 2112248,
+    "nullifiers": 2,
+    "root_hex": "7c83b8c97ba7a4521120b31ad423fb50f2fa2a44f71a4aae983972bf1438fe1911523c3b3152f38c8a8eac35777745f92e17f86591dc61d72995f1f56917528e",
+    "frontier_sha256": "a9ed2497cd3e1df996a754fd2eb865d7fa3a76b8235c6316e4ed147850579f70",
+    "archive_bytes": 264108,
+    "database_integrity": "ok"
+  },
+  "replayed_second_as_third": {
+    "committed_payments": 2,
+    "funded": 6,
+    "fees": 4224496,
+    "nullifiers": 4,
+    "root_hex": "6ffdbbd9e3ce875f5859f9a39be1ddc6b2c273ac089da04d20ed0d605daef089c73b6cbf323e12fdde83fa2223635858ee04125aba6a5d5cf7b6d948ace65f91",
+    "frontier_sha256": "6f9be3ff030affb3ba340e687cb10173d07b08d7eec413a8bf14b8edb6871e28",
+    "archive_bytes": 527192,
+    "database_integrity": "ok"
+  }
+}

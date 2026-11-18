@@ -1,0 +1,85 @@
+{
+  "public_scale": {
+    "call": "submit_private_batch",
+    "ciphertext_bytes": 3584,
+    "extrinsic_bytes": 154508,
+    "public_fees_steps": [
+      8
+    ],
+    "public_input_felts_in_proof": 131,
+    "real_slots": [
+      [
+        0,
+        3
+      ]
+    ],
+    "scale_framing_bytes": 16,
+    "serialized_proof_bytes": 150908,
+    "sha256": "04fb8523ba1fcf6d0fc3b2f98a8ab6336234016e966f2886f3ab1b5275b0d24e"
+  },
+  "positive": {
+    "private_verification_passed": true,
+    "load_elapsed_s": 2.5025e-05,
+    "verify_elapsed_s": 0.006902297,
+    "distinct_published_nullifiers": 12,
+    "real_slots": 1,
+    "padding_slots": 5
+  },
+  "controls": {
+    "corrupt_proof_rejected": true,
+    "changed_ciphertext_digest_mismatch": true
+  },
+  "metered_real_inputs": 2,
+  "public_file_pins": {
+    "anchor.bin": {
+      "bytes": 32,
+      "sha256": "e14c8f16e8f11eb15cff88f4567e1256652f9d90fae6985759ed6c45c26c8c34"
+    },
+    "commitments.bin": {
+      "bytes": 64,
+      "sha256": "11fdf836b5bffb5969ecf02bdb9de3ee57f4091e8c4f1d994376a7ec49dca88f"
+    },
+    "fixture-block.scale": {
+      "bytes": 154680,
+      "sha256": "c8e99f0796bcce8fa38329a874539f28a3650c7c8daf8aeccfca3c61547f3026"
+    },
+    "payment.scale": {
+      "bytes": 154508,
+      "sha256": "04fb8523ba1fcf6d0fc3b2f98a8ab6336234016e966f2886f3ab1b5275b0d24e"
+    },
+    "private-verifier.bin": {
+      "bytes": 1749,
+      "sha256": "072049a475ca904746d3b694f028d57d0285dfa220f8dbbd40966518c5e608e5"
+    },
+    "transaction-notification.scale": {
+      "bytes": 154509,
+      "sha256": "6f76f683d298e65df7cc5a1df623c307cd1c51672c7a16fa45914bb5a50d7cf6"
+    },
+    "wallet-proof.bin": {
+      "bytes": 150908,
+      "sha256": "1156097a0dd52b9008b0e2d6dd92b149e98545e8ca986f8212257fe2ce38aab5"
+    },
+    "wallet.json": {
+      "bytes": 2164,
+      "sha256": "9a34611fc3a290f81b5effcce0f663b60a5abc888dd59c5cd9158257867ce561"
+    }
+  },
+  "total": {
+    "http_incoming_bytes": 988606,
+    "http_outgoing_bytes": 330436,
+    "http_request_header_bytes": 7174,
+    "http_request_line_bytes": 1054,
+    "json_request_body_bytes": 322208,
+    "requests": 62
+  },
+  "announce_and_complete_block_lengths": [
+    154509,
+    154680
+  ],
+  "send_http": [
+    17,
+    119,
+    309091,
+    194
+  ]
+}

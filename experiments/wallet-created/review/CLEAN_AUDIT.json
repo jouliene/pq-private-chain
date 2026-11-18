@@ -1,0 +1,130 @@
+{
+  "build": {
+    "binary_sha256": "1036835109cb97335c2e5255a6640dd10874d419686d800d7087275f5e4e559e",
+    "dense_oracle_audit": true,
+    "installation_sha256": "f885a09c9768b383cf4004ed92786f25e4b40610089f76b7de489358e06ebb46",
+    "rlibs": {
+      "libcompact_bounded_arity_v3-663a1b0678661f2a.rlib": "d09bb2b89737996931df876e90bec62bbab6d3414f463f5b72a3be6e43101152",
+      "liblibc-34e983634f114512.rlib": "102ad7a86f59b5ac2bb475e0cc8f609cbffdf22c382af1c5b48b85f4eb5a1e7f",
+      "libp3_air-70ee08e2e0422512.rlib": "7fcac621381f679db795c701753945534c04030a33b5f78c04d29d7c95b0b6d2",
+      "libp3_dft-d2774077eaadc923.rlib": "f8df51abbb75b8f75b4bf312f893362ffdea7b0e1b2da07f110e1351632bb054",
+      "libp3_field-23366339d6ad30fd.rlib": "6f806a5936a288bccdf8c4c2719d59fb1cebb3c610b0474e2b52320b3fb64462",
+      "libp3_goldilocks-8c9b4cce832603e7.rlib": "2caab2d7b458c19915713d757c2f4f1f15f98556a483e3630069aacee01d8f76",
+      "libp3_matrix-97e6e193fdf52006.rlib": "06fe1cc568d68d2910e328894b88341955e3c05a73a870bd1429b5839bb95660",
+      "libserde_json-96669d5410fcc0ff.rlib": "3b7d23071bf2676e8b3b560bd1e60f41d4c023afa9ac28f22516c48600726027",
+      "libtiny_keccak-c3a93cf21255ff67.rlib": "74c11068556d96601645ce07d63ac16b98b5df052dc749211d059ee6de70e855"
+    },
+    "rustc_sha256": "b53b780f77f952062f8ca8a3b70aef2390b1e45ad91939be94afdc9543026853"
+  },
+  "public_checks": {
+    "author": {
+      "audit": [
+        {
+          "checked_fold_shake256_32": "1154d6528dbdbb3fcf2bf3581efd9b2595d36cd94b79bb8bb6cbc1a344cbeccc",
+          "folded_coordinates": 65536,
+          "oracle_and_audit_digest_cpu_s": 0.2585765120000001,
+          "public_prefix": 50,
+          "structured_cpu_s": 0.06739087200000005
+        },
+        {
+          "checked_fold_shake256_32": "ded6c9b8ae4167f1c8d34066f20d3b0a909044435d29ed8a965d8525f88b86bf",
+          "folded_coordinates": 65536,
+          "oracle_and_audit_digest_cpu_s": 0.248567926,
+          "public_prefix": 50,
+          "structured_cpu_s": 0.06624296800000007
+        },
+        {
+          "checked_fold_shake256_32": "efc57f763f83a2e84c9fa9272076275c50b2c9718610cdda667499583fef4c41",
+          "folded_coordinates": 65536,
+          "oracle_and_audit_digest_cpu_s": 0.24212817999999992,
+          "public_prefix": 50,
+          "structured_cpu_s": 0.06460808700000009
+        }
+      ],
+      "verified": {
+        "accepted": true,
+        "matrix_preparation_s": 1.065013032,
+        "matrix_preparation_thread_cpu_s": 1.0649850360000002,
+        "mode": "verify-many",
+        "records": [
+          {
+            "accepted": true,
+            "mode": "verify",
+            "post_preparation_thread_cpu_s": 0.33648638100000006,
+            "post_preparation_wall_s": 0.33648515,
+            "proof_bytes": 259232
+          },
+          {
+            "accepted": true,
+            "mode": "verify",
+            "post_preparation_thread_cpu_s": 0.3250656850000002,
+            "post_preparation_wall_s": 0.325075726,
+            "proof_bytes": 258208
+          },
+          {
+            "accepted": true,
+            "mode": "verify",
+            "post_preparation_thread_cpu_s": 0.31652170700000015,
+            "post_preparation_wall_s": 0.316520555,
+            "proof_bytes": 257808
+          }
+        ]
+      }
+    },
+    "reviewer": {
+      "audit": [
+        {
+          "checked_fold_shake256_32": "2a677d3aebf33ef95761b1d8e637a3abe57a0d4d0ba240bb5014cdd412a11721",
+          "folded_coordinates": 65536,
+          "oracle_and_audit_digest_cpu_s": 0.265775788,
+          "public_prefix": 50,
+          "structured_cpu_s": 0.06660302200000001
+        },
+        {
+          "checked_fold_shake256_32": "71aa0953e05f7347a0dcf5a5a6705917c07294b7bc5c8f5458b8fe2a3baf6ec7",
+          "folded_coordinates": 65536,
+          "oracle_and_audit_digest_cpu_s": 0.25297132200000005,
+          "public_prefix": 50,
+          "structured_cpu_s": 0.06762158400000007
+        },
+        {
+          "checked_fold_shake256_32": "39914e22c2a59cd5566b842da038d6cd63575f83a57c5d7010fb7d6d194338ae",
+          "folded_coordinates": 65536,
+          "oracle_and_audit_digest_cpu_s": 0.24270560099999994,
+          "public_prefix": 50,
+          "structured_cpu_s": 0.06503487200000002
+        }
+      ],
+      "verified": {
+        "accepted": true,
+        "matrix_preparation_s": 1.099023673,
+        "matrix_preparation_thread_cpu_s": 1.099001832,
+        "mode": "verify-many",
+        "records": [
+          {
+            "accepted": true,
+            "mode": "verify",
+            "post_preparation_thread_cpu_s": 0.343597599,
+            "post_preparation_wall_s": 0.343601079,
+            "proof_bytes": 256672
+          },
+          {
+            "accepted": true,
+            "mode": "verify",
+            "post_preparation_thread_cpu_s": 0.33165202000000016,
+            "post_preparation_wall_s": 0.331654915,
+            "proof_bytes": 261152
+          },
+          {
+            "accepted": true,
+            "mode": "verify",
+            "post_preparation_thread_cpu_s": 0.3179552529999996,
+            "post_preparation_wall_s": 0.317962441,
+            "proof_bytes": 259296
+          }
+        ]
+      }
+    }
+  },
+  "source_commit": "6cccc82b7e084bdd1273d2b667b76f82b4f1b0d4"
+}
