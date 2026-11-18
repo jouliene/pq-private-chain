@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import re
+import signal
 import resource
 import struct
 import subprocess
@@ -27,12 +28,15 @@ class Role:
             argv.extend(["--ro-bind",str(lib.resolve()),str(lib)])
         argv+=["--remount-ro","/","--chdir","/","--","/app",name]
         self.name=name
+        self.from_role=[]
+        self.to_role=[]
         self.p=subprocess.Popen(argv,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
     def send(self,data):
         assert len(data)<=LIMIT
         self.p.stdin.write(struct.pack("<I",len(data))+data)
         self.p.stdin.flush()
+        self.to_role.append(len(data))
 
     def get(self):
         header=self.p.stdout.read(4)
@@ -41,6 +45,7 @@ class Role:
         assert n<=LIMIT
         data=self.p.stdout.read(n)
         assert len(data)==n
+        self.from_role.append(n)
         return data
 
     def finish(self):
@@ -86,6 +91,10 @@ def main():
     def start(name):
         role=Role(binary,name);actors.append(role);return role
     report={"binary_sha256":a.binary_sha256,"roles":{}}
+    def deadline(_signum,_frame):
+        raise TimeoutError("native experiment deadline")
+    signal.signal(signal.SIGALRM,deadline)
+    signal.alarm(360)
     try:
         if not a.replay:
             wallet_a=start("wallet");hello_a=wallet_a.get()
@@ -110,7 +119,14 @@ def main():
         ok,initial,identity,_=node_check(node,mutate(pair,8))
         assert not ok and initial==(1,4,0,0)
         controls=["changed-proof"]
-        for label,raw in [("changed-ciphertext",mutate(pair,len(pair)-10)),("short",pair[:-1]),("trailing",pair+b"x")]:
+        proof_len,=struct.unpack_from("<I",pair,4)
+        public_start=8+proof_len-53*8
+        assert struct.unpack_from("<Q",pair,public_start-8)[0]==53
+        # Canonical field encodings on both sides; only the first leg's public fee changes.
+        first_fee=public_start+(1+21)*8
+        assert struct.unpack_from("<Q",pair,first_fee)[0]==3
+        for label,raw in [("changed-public-fee",mutate(pair,first_fee)),
+                          ("changed-ciphertext",mutate(pair,len(pair)-10)),("short",pair[:-1]),("trailing",pair+b"x")]:
             ok,state,new_id,hist=node_check(node,raw)
             assert not ok and state==initial and new_id==identity and not hist
             controls.append(label)
@@ -133,12 +149,15 @@ def main():
         report.update(genesis_sha256=sha(genesis),negative_controls=controls,final_state=final,final_state_blake2b512=final_id.hex(),
                       pair_body_bytes=len(pair),pair_proof_bytes=len(pair)-8-4*CT,followup_body_bytes=len(follow),
                       pair_history_bytes=len(history),published_ciphertexts=4)
+        report["public_pipe_frames"]=[dict(role=role.name,from_role_payload_lengths=role.from_role,
+            to_role_payload_lengths=role.to_role,frame_length_prefix_bytes=4) for role in actors]
         if not a.replay:
             report.update(wallet_submissions=[len(first),len(second)],wallet_proofs=[len(first)-8-2*CT,len(second)-8-2*CT],
                           opened_notes_per_wallet=[2,2],handshake_bytes_per_origin=len(hello_a),pair_archive_saving_bytes=len(first)+len(second)-len(pair))
             put("RESULT.json",(json.dumps(report,indent=2)+"\n").encode())
         print(json.dumps(report,indent=2))
     finally:
+        signal.alarm(0)
         for role in actors:
             if role.p.poll() is None:
                 role.p.kill();role.p.wait()
