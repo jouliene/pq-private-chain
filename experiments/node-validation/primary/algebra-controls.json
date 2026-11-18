@@ -1,0 +1,20 @@
+{
+  "guard": {
+    "exhaustive_small_field": 7,
+    "extension_assignment_satisfies_unguarded_relation": true,
+    "four_independent_rows_worst": [
+      16,
+      2401
+    ],
+    "full_field_good_roots_for_nonbase_assignment": [
+      0,
+      1
+    ],
+    "nonconstant_polynomials_tested": 336,
+    "quotient_component_polynomial": "b-b^2",
+    "worst_root_count": 2
+  },
+  "outer_independent_observations": 11,
+  "outer_mask_coordinates": 15,
+  "outer_mask_rank": 11
+}

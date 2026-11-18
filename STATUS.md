@@ -1,34 +1,14 @@
-# Complete-payment size experiment
+# Independent-node validation decision in progress
 
-The bounded implementation and evaluation passed independent review. Global
-blockchain development remains **ACTIVE**. The tenfold size screen was missed.
+Global blockchain objective **ACTIVE**. Current baseline and previous completed experiment are recorded in [GOAL.md](GOAL.md) and [the proof-size decision](experiments/payment-size/RESULTS.md). The CP03 and synchronization implementations remain the reference.
 
-The published synchronization baseline is `8f9bae9b96248e6c147acf9664fd34bb727cb756`.
-The independently reproduced executable revision is
-`9dce9420fa4fa96a01b63c70fdbea8e6dde08012`. The candidate uses the reference
-CP03 proof with new versioned public encoding. The reference protocol, backup
-and spending path, ledger, CI workflow, parameters and fees are preserved.
+| Ownership | Evidence and pending action |
+|---|---|
+| Orchestrator | Real AIR to sparse R1CS lowering and public matrix contraction in `experiments/node-validation/dimensions`. Complete the public-input transparent Keccak cost test in `aggregate`, integrate findings, freeze, review and publish. |
+| Construction | Source-correspondent masked reduction, public transcript and complete-byte parameter model in `primary`. Check the cheaper committed subfield mechanism and precise interactive versus compiled guarantees. |
+| Roles | Measured baseline and projections for wallet, public mempool, block-only validation, pruned/archival storage and cold catch-up in `roles`. |
+| Independent reviewer | Verify the complete transcript, conditional geometry, guarded inputs, alternate scheduling, accelerator obligations and non-author reproduction in `review`. |
 
-| Sample | Complete 2x2 proofs | Mean compact body B | Matched reduction |
-|---|---:|---:|---:|
-| Primary | 3 | 1,488,346 | 15.182% |
-| Independent clean execution | 3 | 1,477,063 | 15.599% |
+The actual registered 2x2 AIR lowers to 614,387 base constraints. A direct EF5 lift checking every original trace word needs 19,587,059. The masked reduction runs on a small relation. It has no full payment result yet. The fallback build uses the pinned public RISC Zero v3.0.6 Keccak CPU circuit with the existing CP03 public payer data. One heavy job at a time.
 
-Both executions used fresh processes and independent public inputs. The prover,
-statement, ciphertext and actual cryptographic proof controls passed. The
-[results](experiments/payment-size/RESULTS.md) specify exactly which failures
-reached the crypto verifier. The initial namespace-launcher resource readings
-were corrected by measuring the verifier child. The final evidence charges both
-public registry preparations, body framing, the optional 528-byte named
-statement, complete packing overhead, runtime libraries and native executable.
-
-The decision is to retain this as an experimental transport and defer ledger
-integration. A qualifying smaller payment construction and affordable storage
-model remain open. A masked R1CS reduction to hiding WHIR with verifier-owned
-parameters is the next proposed discriminator. Full recursive verification and
-source-to-construction obligations are documented in the three-route screen.
-No follow-on project, consensus integration or wallet tuning is running.
-
-[Reproduction instructions](experiments/payment-size/README.md) ·
-[Independent disposition](experiments/payment-size/review/CLEAN_REPRODUCTION.md) ·
-[Public sample bodies](experiments/payment-size/evidence/three-payments/).
+To resume, inspect `git status`, the current Goal, and the four evidence directories. Check `/tmp/pq-risc0-nodeval-build.log` and the running Cargo job before starting another. After the library builds, run `python3 -I experiments/node-validation/aggregate/run.py /tmp/pq-risc0-nodeval-306 /tmp/pq-risc0-nodeval-target .work/nodeval-accelerator01` in this checkout. Review the full-size budgets, required verifier work and security correspondence before approving any complete proof job.

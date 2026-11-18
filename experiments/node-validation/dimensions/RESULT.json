@@ -1,0 +1,28 @@
+{
+  "extension_with_base_constraints": {
+    "nnz_abc": [
+      21630815,
+      22046375,
+      19288756
+    ],
+    "private": 19288756,
+    "public": 49,
+    "rows": 19587059
+  },
+  "negative_changed_first_trace_word_residuals": 33,
+  "ordinary": {
+    "base_inputs": 296448,
+    "nnz_abc": [
+      2658143,
+      3073703,
+      316084
+    ],
+    "nonzero_residuals": 0,
+    "private": 612532,
+    "product_rows": 316084,
+    "public": 49,
+    "rows": 614387
+  },
+  "symbolic_assertions": 966,
+  "symbolic_dag_nodes": 6139
+}

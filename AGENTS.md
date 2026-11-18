@@ -1,3 +1,7 @@
+# Independent-node validation decision
+
+Read GOAL.md and STATUS.md for the current owner directive. In experiments/node-validation, evaluate one masked-sumcheck route and one public-proof aggregation fallback. Label component measurements, whole-payment results, estimated byte budgets, service assumptions and remaining assurance obligations. Preserve CP03 and the closed synchronization and proof-encoding milestones.
+
 # Complete-payment proof-size experiment
 
 Read GOAL.md and STATUS.md. The bounded experiment following the published

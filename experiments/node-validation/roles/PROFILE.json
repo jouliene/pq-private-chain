@@ -1,0 +1,49 @@
+{
+  "format": "NODE-ROLE-PROFILE01",
+  "scope": "Researcher-selected home-node and upstream service comparison. Owner sizing input is 100000000 offers per 365-day year.",
+  "annual_offers": 100000000,
+  "include_percentages": [95, 100],
+  "year_days": 365,
+  "years": [1, 5, 10],
+  "payments_per_block": 96,
+  "home": {
+    "line_download_bps": 100000000,
+    "line_upload_bps": 20000000,
+    "useful_application_percent": 80,
+    "physical_cores": 4,
+    "validation_core_seconds_per_second": 2,
+    "ram_bytes": 17179869184,
+    "usable_disk_bytes": 4398046511104,
+    "cold_one_year_days": 90,
+    "wallet_cold_one_year_hours": 48,
+    "reorg_blocks": 256,
+    "tested_wallet_reorg_checkpoints": 8,
+    "mempool_seconds": 600,
+    "fork_copies_staged": 1,
+    "inflight_blocks": 2
+  },
+  "relay": {
+    "inventory_peers": 6,
+    "mempool_payload_peers": 1,
+    "block_payload_peers": 1,
+    "wallet_upload_copies": 1,
+    "wallet_blocks_per_range": 1,
+    "block_reuse_percent": 0,
+    "extra_fork_blocks_per_year": 0,
+    "reorg_wallet_resubmissions_per_year": 0,
+    "wallet_deep_replays_at_first_year_end": 0
+  },
+  "archive": {
+    "replicas_in_independent_failure_domains": 3,
+    "live_full_streams_from_primary": 1,
+    "live_wallet_scan_streams": 1,
+    "serial_request_latency_ms": 40,
+    "offered_proofs_retention_seconds": 600
+  },
+  "burst": {
+    "mean_multiplier": 10,
+    "duration_seconds": 600,
+    "drain_after_burst_seconds": 3600,
+    "stress_offers_per_second": 100
+  }
+}

@@ -1,0 +1,754 @@
+{
+  "effective_private": 19288756,
+  "effective_rows": 19587059,
+  "field_and_hash_bytes": [
+    40,
+    64
+  ],
+  "field_order": "2135987033434293902082969833143585405490115481162544232032811052120416417467265840012020259225601",
+  "field_order_log2": 319.9999999983205,
+  "hypotheses": {
+    "johnson": {
+      "minimum_expected_body": {
+        "algebraic_bits": 262.6478255819241,
+        "direct_wire": {
+          "encrypted_receipts": 4328,
+          "frame": 20,
+          "statement": 528
+        },
+        "expected_auth_bytes": 213668.356,
+        "expected_body_bytes": 373548.389,
+        "expected_message_value_bytes": 106310.485,
+        "initial_main": 33554432,
+        "interactive_error_bits": 129.89377839075178,
+        "outer_direct_bytes": 6400,
+        "outer_rounds": 26,
+        "proximity": "johnson",
+        "query_bits": 129.89377839075178,
+        "query_target_bits": 128,
+        "ratio": 64,
+        "raw_rs_bytes_all_oracles": 183254384640,
+        "sample_complete_body_bytes": 373908,
+        "stages": [
+          {
+            "aux": 9,
+            "d": 2097204,
+            "delta": 0.8991105354672525,
+            "expected_bytes": {
+              "frontier": 55823.69109433925,
+              "messages": 560,
+              "roots": 64,
+              "salts": 2559.999814033517,
+              "values": 25599.99814033517
+            },
+            "k": 4,
+            "list": 420,
+            "main": 2097152,
+            "mca": 1.1498554213753538e+16,
+            "miss": 1.4250584626082647e-40,
+            "n": 268435456,
+            "ood_pad": 12,
+            "outer_merkle_tree_nodes_bytes": 34359738304,
+            "p": 2,
+            "q": 40,
+            "raw_rs_bytes": 171798691840,
+            "sample": {
+              "distinct": 40,
+              "frontier_per_tree": 869,
+              "stage_bytes": 84400
+            },
+            "seeds": 41,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 4,
+            "d": 131119,
+            "delta": 0.8990954694433072,
+            "expected_bytes": {
+              "frontier": 45583.69946282615,
+              "messages": 560,
+              "roots": 64,
+              "salts": 2559.997024538379,
+              "values": 25599.97024538379
+            },
+            "k": 4,
+            "list": 420,
+            "main": 131072,
+            "mca": 718307683653157.2,
+            "miss": 1.4335955693979183e-40,
+            "n": 16777216,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 2147483584,
+            "p": 2,
+            "q": 40,
+            "raw_rs_bytes": 10737418240,
+            "sample": {
+              "distinct": 40,
+              "frontier_per_tree": 720,
+              "stage_bytes": 74864
+            },
+            "seeds": 41,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 3,
+            "d": 8238,
+            "delta": 0.8988584595526956,
+            "expected_bytes": {
+              "frontier": 35343.83335736354,
+              "messages": 560,
+              "roots": 64,
+              "salts": 2559.9523931532112,
+              "values": 25599.523931532112
+            },
+            "k": 4,
+            "list": 418,
+            "main": 8192,
+            "mca": 44550279689615.83,
+            "miss": 1.5746446307801767e-40,
+            "n": 1048576,
+            "ood_pad": 2,
+            "outer_merkle_tree_nodes_bytes": 134217664,
+            "p": 2,
+            "q": 40,
+            "raw_rs_bytes": 671088640,
+            "sample": {
+              "distinct": 40,
+              "frontier_per_tree": 563,
+              "stage_bytes": 64816
+            },
+            "seeds": 41,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 3,
+            "d": 559,
+            "delta": 0.8950612533890684,
+            "expected_bytes": {
+              "frontier": 25639.043992659852,
+              "messages": 560,
+              "roots": 64,
+              "salts": 2623.1993775733545,
+              "values": 26231.993775733543
+            },
+            "k": 4,
+            "list": 397,
+            "main": 512,
+            "mca": 2467475497531.6577,
+            "miss": 7.217233889861768e-41,
+            "n": 65536,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 8388544,
+            "p": 2,
+            "q": 41,
+            "raw_rs_bytes": 41943040,
+            "sample": {
+              "distinct": 41,
+              "frontier_per_tree": 396,
+              "stage_bytes": 54832
+            },
+            "seeds": 42,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 48,
+            "d": 602,
+            "delta": 0.8915778972046197,
+            "expected_bytes": {
+              "frontier": 51278.087985319704,
+              "messages": 24120,
+              "roots": 128,
+              "salts": 5246.398755146709,
+              "values": 3278.999221966693
+            },
+            "k": 0,
+            "list": 384,
+            "main": 512,
+            "mca": 2207458300827.765,
+            "miss": 2.7531562805847233e-40,
+            "n": 65536,
+            "outer_merkle_tree_nodes_bytes": 16777088,
+            "p": 0,
+            "q": 41,
+            "raw_rs_bytes": 5242880,
+            "sample": {
+              "distinct": 41,
+              "frontier_per_tree": 398,
+              "stage_bytes": 83720
+            },
+            "seeds": 42,
+            "trees": 2,
+            "width": 1
+          }
+        ],
+        "subfield_check_rows": 0,
+        "subfield_guard_error_bits": null,
+        "terminal_main_log2": 9
+      },
+      "numerically_admitted": 180,
+      "profiles_considered": 180,
+      "rs_oracles_capped_16_GiB": {
+        "algebraic_bits": 263.67207509706924,
+        "direct_wire": {
+          "encrypted_receipts": 4328,
+          "frame": 20,
+          "statement": 528
+        },
+        "expected_auth_bytes": 311449.083,
+        "expected_body_bytes": 640458.423,
+        "expected_message_value_bytes": 247857.674,
+        "initial_main": 33554432,
+        "interactive_error_bits": 129.72855292445232,
+        "outer_direct_bytes": 6400,
+        "outer_rounds": 26,
+        "proximity": "johnson",
+        "query_bits": 129.72855292445232,
+        "query_target_bits": 128,
+        "ratio": 4,
+        "raw_rs_bytes_all_oracles": 11453399040,
+        "sample_complete_body_bytes": 643180,
+        "stages": [
+          {
+            "aux": 9,
+            "d": 2097255,
+            "delta": 0.6339378429709187,
+            "expected_bytes": {
+              "frontier": 96737.242996168,
+              "messages": 560,
+              "roots": 64,
+              "salts": 5823.9843788423195,
+              "values": 58239.8437884232
+            },
+            "k": 4,
+            "list": 98,
+            "main": 2097152,
+            "mca": 5653821353633785.0,
+            "miss": 1.9208344539709633e-40,
+            "n": 16777216,
+            "ood_pad": 9,
+            "outer_merkle_tree_nodes_bytes": 2147483584,
+            "p": 2,
+            "q": 91,
+            "raw_rs_bytes": 10737418240,
+            "sample": {
+              "distinct": 91,
+              "frontier_per_tree": 1524,
+              "stage_bytes": 162224
+            },
+            "seeds": 92,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 7,
+            "d": 131173,
+            "delta": 0.6338090688464383,
+            "expected_bytes": {
+              "frontier": 73441.94593307158,
+              "messages": 560,
+              "roots": 64,
+              "salts": 5823.750068106366,
+              "values": 58237.500681063655
+            },
+            "k": 4,
+            "list": 98,
+            "main": 131072,
+            "mca": 352985578010803.06,
+            "miss": 1.9833081778159375e-40,
+            "n": 1048576,
+            "ood_pad": 11,
+            "outer_merkle_tree_nodes_bytes": 134217664,
+            "p": 2,
+            "q": 91,
+            "raw_rs_bytes": 671088640,
+            "sample": {
+              "distinct": 91,
+              "frontier_per_tree": 1151,
+              "stage_bytes": 138352
+            },
+            "seeds": 92,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 7,
+            "d": 8294,
+            "delta": 0.6317308961230085,
+            "expected_bytes": {
+              "frontier": 50615.15456652246,
+              "messages": 560,
+              "roots": 64,
+              "salts": 5883.913980027675,
+              "values": 58839.13980027675
+            },
+            "k": 4,
+            "list": 97,
+            "main": 8192,
+            "mca": 21684590145707.707,
+            "miss": 1.2223799633402896e-40,
+            "n": 65536,
+            "ood_pad": 10,
+            "outer_merkle_tree_nodes_bytes": 8388544,
+            "p": 2,
+            "q": 92,
+            "raw_rs_bytes": 41943040,
+            "sample": {
+              "distinct": 92,
+              "frontier_per_tree": 811,
+              "stage_bytes": 117296
+            },
+            "seeds": 93,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 7,
+            "d": 623,
+            "delta": 0.5971876251001,
+            "expected_bytes": {
+              "frontier": 29057.516979974145,
+              "messages": 560,
+              "roots": 64,
+              "salts": 6385.725684718958,
+              "values": 63857.25684718958
+            },
+            "k": 4,
+            "list": 82,
+            "main": 512,
+            "mca": 1217929917918.9912,
+            "miss": 1.3043171952568038e-40,
+            "n": 4096,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 524224,
+            "p": 2,
+            "q": 101,
+            "raw_rs_bytes": 2621440,
+            "sample": {
+              "distinct": 100,
+              "frontier_per_tree": 449,
+              "stage_bytes": 99760
+            },
+            "seeds": 102,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 112,
+            "d": 735,
+            "delta": 0.5636043760546706,
+            "expected_bytes": {
+              "frontier": 61597.22300332898,
+              "messages": 29440,
+              "roots": 128,
+              "salts": 13894.292127952987,
+              "values": 8683.932579970617
+            },
+            "k": 0,
+            "list": 74,
+            "main": 512,
+            "mca": 1518758104420.0376,
+            "miss": 2.43692725299398e-40,
+            "n": 4096,
+            "outer_merkle_tree_nodes_bytes": 1048448,
+            "p": 0,
+            "q": 110,
+            "raw_rs_bytes": 327680,
+            "sample": {
+              "distinct": 110,
+              "frontier_per_tree": 483,
+              "stage_bytes": 114272
+            },
+            "seeds": 111,
+            "trees": 2,
+            "width": 1
+          }
+        ],
+        "subfield_check_rows": 0,
+        "subfield_guard_error_bits": null,
+        "terminal_main_log2": 9
+      }
+    },
+    "third-distance": {
+      "minimum_expected_body": {
+        "algebraic_bits": 292.6684942564365,
+        "direct_wire": {
+          "encrypted_receipts": 4328,
+          "frame": 20,
+          "statement": 528
+        },
+        "expected_auth_bytes": 799456.204,
+        "expected_body_bytes": 1594886.905,
+        "expected_message_value_bytes": 646497.063,
+        "initial_main": 33554432,
+        "interactive_error_bits": 129.15150856038983,
+        "outer_direct_bytes": 6400,
+        "outer_rounds": 26,
+        "proximity": "third-distance",
+        "query_bits": 129.15150856038983,
+        "query_target_bits": 128,
+        "ratio": 8,
+        "raw_rs_bytes_all_oracles": 22907453440,
+        "sample_complete_body_bytes": 1599588,
+        "stages": [
+          {
+            "aux": 9,
+            "d": 2097407,
+            "delta": 0.31249746680259705,
+            "expected_bytes": {
+              "frontier": 251757.6096196976,
+              "messages": 560,
+              "roots": 64,
+              "salts": 15551.943918362414,
+              "values": 155519.43918362414
+            },
+            "k": 4,
+            "list": 1,
+            "main": 2097152,
+            "mca": 10485676,
+            "miss": 2.8685046725788652e-40,
+            "n": 33554432,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 4294967232,
+            "p": 2,
+            "q": 243,
+            "raw_rs_bytes": 21474836480,
+            "sample": {
+              "distinct": 243,
+              "frontier_per_tree": 3959,
+              "stage_bytes": 425072
+            },
+            "seeds": 244,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 16,
+            "d": 131334,
+            "delta": 0.3124580383300781,
+            "expected_bytes": {
+              "frontier": 189552.13321954446,
+              "messages": 560,
+              "roots": 64,
+              "salts": 15551.102726021625,
+              "values": 155511.02726021624
+            },
+            "k": 4,
+            "list": 1,
+            "main": 131072,
+            "mca": 655273,
+            "miss": 2.9087591923308018e-40,
+            "n": 2097152,
+            "ood_pad": 10,
+            "outer_merkle_tree_nodes_bytes": 268435392,
+            "p": 2,
+            "q": 243,
+            "raw_rs_bytes": 1342177280,
+            "sample": {
+              "distinct": 243,
+              "frontier_per_tree": 2988,
+              "stage_bytes": 362928
+            },
+            "seeds": 244,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 17,
+            "d": 8456,
+            "delta": 0.31182861328125,
+            "expected_bytes": {
+              "frontier": 127816.17369551261,
+              "messages": 560,
+              "roots": 64,
+              "salts": 15601.533318792004,
+              "values": 156015.33318792004
+            },
+            "k": 4,
+            "list": 1,
+            "main": 8192,
+            "mca": 40873,
+            "miss": 2.500190761300092e-40,
+            "n": 131072,
+            "ood_pad": 8,
+            "outer_merkle_tree_nodes_bytes": 16777152,
+            "p": 2,
+            "q": 244,
+            "raw_rs_bytes": 83886080,
+            "sample": {
+              "distinct": 244,
+              "frontier_per_tree": 2012,
+              "stage_bytes": 301168
+            },
+            "seeds": 245,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 17,
+            "d": 786,
+            "delta": 0.30126953125,
+            "expected_bytes": {
+              "frontier": 67788.57543651898,
+              "messages": 560,
+              "roots": 64,
+              "salts": 16007.530936636913,
+              "values": 160075.30936636913
+            },
+            "k": 4,
+            "list": 1,
+            "main": 512,
+            "mca": 2469,
+            "miss": 2.8487811684451217e-40,
+            "n": 8192,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 1048512,
+            "p": 2,
+            "q": 254,
+            "raw_rs_bytes": 5242880,
+            "sample": {
+              "distinct": 252,
+              "frontier_per_tree": 1080,
+              "stage_bytes": 247152
+            },
+            "seeds": 255,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 275,
+            "d": 1032,
+            "delta": 0.31231689453125,
+            "expected_bytes": {
+              "frontier": 162541.71174940618,
+              "messages": 41320,
+              "roots": 128,
+              "salts": 31001.52677320565,
+              "values": 19375.95423325353
+            },
+            "k": 0,
+            "list": 1,
+            "main": 512,
+            "mca": 5118,
+            "miss": 2.1026095140458607e-40,
+            "n": 16384,
+            "outer_merkle_tree_nodes_bytes": 4194176,
+            "p": 0,
+            "q": 244,
+            "raw_rs_bytes": 1310720,
+            "sample": {
+              "distinct": 243,
+              "frontier_per_tree": 1250,
+              "stage_bytes": 251992
+            },
+            "seeds": 245,
+            "trees": 2,
+            "width": 1
+          }
+        ],
+        "subfield_check_rows": 0,
+        "subfield_guard_error_bits": null,
+        "terminal_main_log2": 9
+      },
+      "numerically_admitted": 180,
+      "profiles_considered": 180,
+      "rs_oracles_capped_16_GiB": {
+        "algebraic_bits": 293.75718265672214,
+        "direct_wire": {
+          "encrypted_receipts": 4328,
+          "frame": 20,
+          "statement": 528
+        },
+        "expected_auth_bytes": 829433.016,
+        "expected_body_bytes": 1627419.267,
+        "expected_message_value_bytes": 573727.349,
+        "initial_main": 33554432,
+        "interactive_error_bits": 129.20868201080026,
+        "outer_direct_bytes": 6400,
+        "outer_rounds": 26,
+        "proximity": "third-distance",
+        "query_bits": 129.20868201080026,
+        "query_target_bits": 128,
+        "ratio": 4,
+        "raw_rs_bytes_all_oracles": 11454382080,
+        "sample_complete_body_bytes": 1631220,
+        "stages": [
+          {
+            "aux": 9,
+            "d": 2097428,
+            "delta": 0.2916611433029175,
+            "expected_bytes": {
+              "frontier": 254594.20672358116,
+              "messages": 560,
+              "roots": 64,
+              "salts": 16895.867569659087,
+              "values": 168958.67569659086
+            },
+            "k": 4,
+            "list": 1,
+            "main": 2097152,
+            "mca": 4893263,
+            "miss": 2.9083151314653197e-40,
+            "n": 16777216,
+            "ood_pad": 12,
+            "outer_merkle_tree_nodes_bytes": 2147483584,
+            "p": 2,
+            "q": 264,
+            "raw_rs_bytes": 10737418240,
+            "sample": {
+              "distinct": 264,
+              "frontier_per_tree": 4006,
+              "stage_bytes": 442864
+            },
+            "seeds": 265,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 18,
+            "d": 131358,
+            "delta": 0.29157543182373047,
+            "expected_bytes": {
+              "frontier": 187631.90219590697,
+              "messages": 560,
+              "roots": 64,
+              "salts": 16957.865168721673,
+              "values": 169578.65168721674
+            },
+            "k": 4,
+            "list": 1,
+            "main": 131072,
+            "mca": 305740,
+            "miss": 2.127197145918721e-40,
+            "n": 1048576,
+            "ood_pad": 2,
+            "outer_merkle_tree_nodes_bytes": 134217664,
+            "p": 2,
+            "q": 265,
+            "raw_rs_bytes": 671088640,
+            "sample": {
+              "distinct": 265,
+              "frontier_per_tree": 2954,
+              "stage_bytes": 376240
+            },
+            "seeds": 266,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 18,
+            "d": 8479,
+            "delta": 0.2902069091796875,
+            "expected_bytes": {
+              "frontier": 120247.98640407894,
+              "messages": 560,
+              "roots": 64,
+              "salts": 16989.627225202297,
+              "values": 169896.272252023
+            },
+            "k": 4,
+            "list": 1,
+            "main": 8192,
+            "mca": 19020,
+            "miss": 2.5179678197893196e-40,
+            "n": 65536,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 8388544,
+            "p": 2,
+            "q": 266,
+            "raw_rs_bytes": 41943040,
+            "sample": {
+              "distinct": 266,
+              "frontier_per_tree": 1882,
+              "stage_bytes": 308336
+            },
+            "seeds": 267,
+            "trees": 1,
+            "width": 16
+          },
+          {
+            "aux": 72,
+            "d": 2395,
+            "delta": 0.28460693359375,
+            "expected_bytes": {
+              "frontier": 87907.69927551142,
+              "messages": 320,
+              "roots": 64,
+              "salts": 17264.818858445033,
+              "values": 43162.047146112585
+            },
+            "k": 2,
+            "list": 1,
+            "main": 2048,
+            "mca": 4664,
+            "miss": 2.730018867090434e-40,
+            "n": 16384,
+            "ood_pad": 1,
+            "outer_merkle_tree_nodes_bytes": 2097088,
+            "p": 2,
+            "q": 272,
+            "raw_rs_bytes": 2621440,
+            "sample": {
+              "distinct": 270,
+              "frontier_per_tree": 1393,
+              "stage_bytes": 150016
+            },
+            "seeds": 273,
+            "trees": 1,
+            "width": 4
+          },
+          {
+            "aux": 348,
+            "d": 2676,
+            "delta": 0.27886962890625,
+            "expected_bytes": {
+              "frontier": 179051.2209115865,
+              "messages": 107080,
+              "roots": 128,
+              "salts": 35410.72371926184,
+              "values": 22131.70232453865
+            },
+            "k": 0,
+            "list": 1,
+            "main": 2048,
+            "mca": 4570,
+            "miss": 2.431344403604231e-40,
+            "n": 16384,
+            "outer_merkle_tree_nodes_bytes": 4194176,
+            "p": 0,
+            "q": 279,
+            "raw_rs_bytes": 1310720,
+            "sample": {
+              "distinct": 277,
+              "frontier_per_tree": 1388,
+              "stage_bytes": 342488
+            },
+            "seeds": 280,
+            "trees": 2,
+            "width": 1
+          }
+        ],
+        "subfield_check_rows": 0,
+        "subfield_guard_error_bits": null,
+        "terminal_main_log2": 11
+      }
+    }
+  },
+  "inputs": {
+    "base_inputs": 296448,
+    "bits": 128,
+    "guard_checks": 0,
+    "guard_words": 0,
+    "private": 612532,
+    "public": 49,
+    "rows": 614387
+  },
+  "johnson_slack": 0.0125,
+  "padded_witness": 33554432,
+  "paper_square_rows": 67108864,
+  "screen_bytes": 175126,
+  "zero_grinding": true
+}

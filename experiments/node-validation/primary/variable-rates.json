@@ -1,0 +1,1136 @@
+[
+  {
+    "all_nlogn_butterflies": 243793920,
+    "all_rs_bytes": 1027604480,
+    "all_stages_in_memory": 1430257344,
+    "bits": 128,
+    "body": 314477.331,
+    "cap_mib": 512,
+    "conservative_resident_stages": [
+      436207552,
+      436207552,
+      436207552,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.19084958331018,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      524288,
+      524288,
+      524288,
+      262144
+    ],
+    "q": [
+      91,
+      40,
+      28,
+      30
+    ],
+    "ratio": [
+      4,
+      64,
+      1024,
+      512
+    ],
+    "row_fft_bytes": 20971520,
+    "sample": 316300
+  },
+  {
+    "all_nlogn_butterflies": 243793920,
+    "all_rs_bytes": 1027604480,
+    "all_stages_in_memory": 1430257344,
+    "bits": 128,
+    "body": 314477.331,
+    "cap_mib": 768,
+    "conservative_resident_stages": [
+      436207552,
+      436207552,
+      436207552,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.19084958331018,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      524288,
+      524288,
+      524288,
+      262144
+    ],
+    "q": [
+      91,
+      40,
+      28,
+      30
+    ],
+    "ratio": [
+      4,
+      64,
+      1024,
+      512
+    ],
+    "row_fft_bytes": 20971520,
+    "sample": 316300
+  },
+  {
+    "all_nlogn_butterflies": 508035072,
+    "all_rs_bytes": 2034237440,
+    "all_stages_in_memory": 2738880192,
+    "bits": 128,
+    "body": 282567.524,
+    "cap_mib": 1024,
+    "conservative_resident_stages": [
+      872415168,
+      872415168,
+      872415168,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.10873440262975,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      1048576,
+      1048576,
+      1048576,
+      262144
+    ],
+    "q": [
+      68,
+      36,
+      26,
+      30
+    ],
+    "ratio": [
+      8,
+      128,
+      2048,
+      512
+    ],
+    "row_fft_bytes": 41943040,
+    "sample": 283860
+  },
+  {
+    "all_nlogn_butterflies": 508035072,
+    "all_rs_bytes": 2034237440,
+    "all_stages_in_memory": 2738880192,
+    "bits": 128,
+    "body": 282567.524,
+    "cap_mib": 1536,
+    "conservative_resident_stages": [
+      872415168,
+      872415168,
+      872415168,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.10873440262975,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      1048576,
+      1048576,
+      1048576,
+      262144
+    ],
+    "q": [
+      68,
+      36,
+      26,
+      30
+    ],
+    "ratio": [
+      8,
+      128,
+      2048,
+      512
+    ],
+    "row_fft_bytes": 41943040,
+    "sample": 283860
+  },
+  {
+    "all_nlogn_butterflies": 877133824,
+    "all_rs_bytes": 3376414720,
+    "all_stages_in_memory": 4483710656,
+    "bits": 128,
+    "body": 263190.651,
+    "cap_mib": 2048,
+    "conservative_resident_stages": [
+      1744830400,
+      1744830400,
+      872415168,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.1994256604485,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      2097152,
+      2097152,
+      1048576,
+      262144
+    ],
+    "q": [
+      55,
+      32,
+      26,
+      30
+    ],
+    "ratio": [
+      16,
+      256,
+      2048,
+      512
+    ],
+    "row_fft_bytes": 83886080,
+    "sample": 264916
+  },
+  {
+    "all_nlogn_butterflies": 877133824,
+    "all_rs_bytes": 3376414720,
+    "all_stages_in_memory": 4483710656,
+    "bits": 128,
+    "body": 263190.651,
+    "cap_mib": 3072,
+    "conservative_resident_stages": [
+      1744830400,
+      1744830400,
+      872415168,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.1994256604485,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      2097152,
+      2097152,
+      1048576,
+      262144
+    ],
+    "q": [
+      55,
+      32,
+      26,
+      30
+    ],
+    "ratio": [
+      16,
+      256,
+      2048,
+      512
+    ],
+    "row_fft_bytes": 83886080,
+    "sample": 264916
+  },
+  {
+    "all_nlogn_butterflies": 2219311104,
+    "all_rs_bytes": 8074035200,
+    "all_stages_in_memory": 10590617280,
+    "bits": 128,
+    "body": 250978.488,
+    "cap_mib": 4096,
+    "conservative_resident_stages": [
+      3489660864,
+      3489660864,
+      3489660864,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.61255742729034,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      4194304,
+      4194304,
+      4194304,
+      262144
+    ],
+    "q": [
+      46,
+      30,
+      24,
+      30
+    ],
+    "ratio": [
+      32,
+      512,
+      8192,
+      512
+    ],
+    "row_fft_bytes": 167772160,
+    "sample": 251012
+  },
+  {
+    "all_nlogn_butterflies": 4635230208,
+    "all_rs_bytes": 16127098880,
+    "all_stages_in_memory": 21059600064,
+    "bits": 128,
+    "body": 242094.84,
+    "cap_mib": 8192,
+    "conservative_resident_stages": [
+      6979321792,
+      6979321792,
+      6979321792,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.70255285187403,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      8388608,
+      8388608,
+      8388608,
+      262144
+    ],
+    "q": [
+      40,
+      28,
+      23,
+      30
+    ],
+    "ratio": [
+      64,
+      1024,
+      16384,
+      512
+    ],
+    "row_fft_bytes": 335544320,
+    "sample": 243100
+  },
+  {
+    "all_nlogn_butterflies": 7990673408,
+    "all_rs_bytes": 26864517120,
+    "all_stages_in_memory": 35018243776,
+    "bits": 128,
+    "body": 235854.581,
+    "cap_mib": 16384,
+    "conservative_resident_stages": [
+      13958643648,
+      13958643648,
+      6979321792,
+      121634688
+    ],
+    "guard_checks": 4,
+    "interactive_bits": 130.96618747658422,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      16777216,
+      16777216,
+      8388608,
+      262144
+    ],
+    "q": [
+      36,
+      26,
+      23,
+      30
+    ],
+    "ratio": [
+      128,
+      2048,
+      16384,
+      512
+    ],
+    "row_fft_bytes": 671088640,
+    "sample": 237916
+  },
+  {
+    "all_nlogn_butterflies": 243793920,
+    "all_rs_bytes": 1027604480,
+    "all_stages_in_memory": 1430257344,
+    "bits": 192,
+    "body": 444529.384,
+    "cap_mib": 512,
+    "conservative_resident_stages": [
+      436207552,
+      436207552,
+      436207552,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 193.86213495917752,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      524288,
+      524288,
+      524288,
+      262144
+    ],
+    "q": [
+      135,
+      60,
+      41,
+      45
+    ],
+    "ratio": [
+      4,
+      64,
+      1024,
+      512
+    ],
+    "row_fft_bytes": 20971520,
+    "sample": 445388
+  },
+  {
+    "all_nlogn_butterflies": 243793920,
+    "all_rs_bytes": 1027604480,
+    "all_stages_in_memory": 1430257344,
+    "bits": 192,
+    "body": 444529.384,
+    "cap_mib": 768,
+    "conservative_resident_stages": [
+      436207552,
+      436207552,
+      436207552,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 193.86213495917752,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      524288,
+      524288,
+      524288,
+      262144
+    ],
+    "q": [
+      135,
+      60,
+      41,
+      45
+    ],
+    "ratio": [
+      4,
+      64,
+      1024,
+      512
+    ],
+    "row_fft_bytes": 20971520,
+    "sample": 445388
+  },
+  {
+    "all_nlogn_butterflies": 508035072,
+    "all_rs_bytes": 2034237440,
+    "all_stages_in_memory": 2738880192,
+    "bits": 192,
+    "body": 400330.999,
+    "cap_mib": 1024,
+    "conservative_resident_stages": [
+      872415168,
+      872415168,
+      872415168,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 194.72139119615554,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      1048576,
+      1048576,
+      1048576,
+      262144
+    ],
+    "q": [
+      102,
+      53,
+      39,
+      45
+    ],
+    "ratio": [
+      8,
+      128,
+      2048,
+      512
+    ],
+    "row_fft_bytes": 41943040,
+    "sample": 402300
+  },
+  {
+    "all_nlogn_butterflies": 508035072,
+    "all_rs_bytes": 2034237440,
+    "all_stages_in_memory": 2738880192,
+    "bits": 192,
+    "body": 400330.999,
+    "cap_mib": 1536,
+    "conservative_resident_stages": [
+      872415168,
+      872415168,
+      872415168,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 194.72139119615554,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      1048576,
+      1048576,
+      1048576,
+      262144
+    ],
+    "q": [
+      102,
+      53,
+      39,
+      45
+    ],
+    "ratio": [
+      8,
+      128,
+      2048,
+      512
+    ],
+    "row_fft_bytes": 41943040,
+    "sample": 402300
+  },
+  {
+    "all_nlogn_butterflies": 1061683200,
+    "all_rs_bytes": 4047503360,
+    "all_stages_in_memory": 5356125888,
+    "bits": 192,
+    "body": 372192.989,
+    "cap_mib": 2048,
+    "conservative_resident_stages": [
+      1744830400,
+      1744830400,
+      1744830400,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 194.94315433827947,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      2097152,
+      2097152,
+      2097152,
+      262144
+    ],
+    "q": [
+      82,
+      48,
+      37,
+      45
+    ],
+    "ratio": [
+      16,
+      256,
+      4096,
+      512
+    ],
+    "row_fft_bytes": 83886080,
+    "sample": 372996
+  },
+  {
+    "all_nlogn_butterflies": 1061683200,
+    "all_rs_bytes": 4047503360,
+    "all_stages_in_memory": 5356125888,
+    "bits": 192,
+    "body": 372192.989,
+    "cap_mib": 3072,
+    "conservative_resident_stages": [
+      1744830400,
+      1744830400,
+      1744830400,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 194.94315433827947,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      2097152,
+      2097152,
+      2097152,
+      262144
+    ],
+    "q": [
+      82,
+      48,
+      37,
+      45
+    ],
+    "ratio": [
+      16,
+      256,
+      4096,
+      512
+    ],
+    "row_fft_bytes": 83886080,
+    "sample": 372996
+  },
+  {
+    "all_nlogn_butterflies": 2219311104,
+    "all_rs_bytes": 8074035200,
+    "all_stages_in_memory": 10590617280,
+    "bits": 192,
+    "body": 352774.937,
+    "cap_mib": 4096,
+    "conservative_resident_stages": [
+      3489660864,
+      3489660864,
+      3489660864,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 194.28790394052245,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      4194304,
+      4194304,
+      4194304,
+      262144
+    ],
+    "q": [
+      69,
+      44,
+      35,
+      45
+    ],
+    "ratio": [
+      32,
+      512,
+      8192,
+      512
+    ],
+    "row_fft_bytes": 167772160,
+    "sample": 353076
+  },
+  {
+    "all_nlogn_butterflies": 3829923840,
+    "all_rs_bytes": 13442744320,
+    "all_stages_in_memory": 17569939136,
+    "bits": 192,
+    "body": 338537.666,
+    "cap_mib": 8192,
+    "conservative_resident_stages": [
+      6979321792,
+      6979321792,
+      3489660864,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 193.79715815086,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      8388608,
+      8388608,
+      4194304,
+      262144
+    ],
+    "q": [
+      59,
+      41,
+      35,
+      45
+    ],
+    "ratio": [
+      64,
+      1024,
+      8192,
+      512
+    ],
+    "row_fft_bytes": 335544320,
+    "sample": 339060
+  },
+  {
+    "all_nlogn_butterflies": 7185367040,
+    "all_rs_bytes": 24180162560,
+    "all_stages_in_memory": 31528582848,
+    "bits": 192,
+    "body": 329329.467,
+    "cap_mib": 16384,
+    "conservative_resident_stages": [
+      13958643648,
+      13958643648,
+      3489660864,
+      121634688
+    ],
+    "guard_checks": 5,
+    "interactive_bits": 193.9327535343335,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      16777216,
+      16777216,
+      4194304,
+      262144
+    ],
+    "q": [
+      53,
+      38,
+      35,
+      45
+    ],
+    "ratio": [
+      128,
+      2048,
+      8192,
+      512
+    ],
+    "row_fft_bytes": 671088640,
+    "sample": 331084
+  },
+  {
+    "all_nlogn_butterflies": 249036800,
+    "all_rs_bytes": 1048576000,
+    "all_stages_in_memory": 1551892160,
+    "bits": 256,
+    "body": 572510.483,
+    "cap_mib": 512,
+    "conservative_resident_stages": [
+      436207552,
+      436207552,
+      436207552,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 258.1966246575067,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      524288,
+      524288,
+      524288,
+      524288
+    ],
+    "q": [
+      179,
+      79,
+      55,
+      56
+    ],
+    "ratio": [
+      4,
+      64,
+      1024,
+      1024
+    ],
+    "row_fft_bytes": 20971520,
+    "sample": 571356
+  },
+  {
+    "all_nlogn_butterflies": 249036800,
+    "all_rs_bytes": 1048576000,
+    "all_stages_in_memory": 1551892160,
+    "bits": 256,
+    "body": 572510.483,
+    "cap_mib": 768,
+    "conservative_resident_stages": [
+      436207552,
+      436207552,
+      436207552,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 258.1966246575067,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      524288,
+      524288,
+      524288,
+      524288
+    ],
+    "q": [
+      179,
+      79,
+      55,
+      56
+    ],
+    "ratio": [
+      4,
+      64,
+      1024,
+      1024
+    ],
+    "row_fft_bytes": 20971520,
+    "sample": 571356
+  },
+  {
+    "all_nlogn_butterflies": 513277952,
+    "all_rs_bytes": 2055208960,
+    "all_stages_in_memory": 2860515008,
+    "bits": 256,
+    "body": 514905.192,
+    "cap_mib": 1024,
+    "conservative_resident_stages": [
+      872415168,
+      872415168,
+      872415168,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 259.0931655147496,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      1048576,
+      1048576,
+      1048576,
+      524288
+    ],
+    "q": [
+      135,
+      70,
+      52,
+      56
+    ],
+    "ratio": [
+      8,
+      128,
+      2048,
+      1024
+    ],
+    "row_fft_bytes": 41943040,
+    "sample": 514596
+  },
+  {
+    "all_nlogn_butterflies": 513277952,
+    "all_rs_bytes": 2055208960,
+    "all_stages_in_memory": 2860515008,
+    "bits": 256,
+    "body": 514905.192,
+    "cap_mib": 1536,
+    "conservative_resident_stages": [
+      872415168,
+      872415168,
+      872415168,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 259.0931655147496,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      1048576,
+      1048576,
+      1048576,
+      524288
+    ],
+    "q": [
+      135,
+      70,
+      52,
+      56
+    ],
+    "ratio": [
+      8,
+      128,
+      2048,
+      1024
+    ],
+    "row_fft_bytes": 41943040,
+    "sample": 514596
+  },
+  {
+    "all_nlogn_butterflies": 1066926080,
+    "all_rs_bytes": 4068474880,
+    "all_stages_in_memory": 5477760704,
+    "bits": 256,
+    "body": 476704.972,
+    "cap_mib": 2048,
+    "conservative_resident_stages": [
+      1744830400,
+      1744830400,
+      1744830400,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 258.31512829790773,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      2097152,
+      2097152,
+      2097152,
+      524288
+    ],
+    "q": [
+      108,
+      63,
+      49,
+      56
+    ],
+    "ratio": [
+      16,
+      256,
+      4096,
+      1024
+    ],
+    "row_fft_bytes": 83886080,
+    "sample": 475844
+  },
+  {
+    "all_nlogn_butterflies": 1066926080,
+    "all_rs_bytes": 4068474880,
+    "all_stages_in_memory": 5477760704,
+    "bits": 256,
+    "body": 476704.972,
+    "cap_mib": 3072,
+    "conservative_resident_stages": [
+      1744830400,
+      1744830400,
+      1744830400,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 258.31512829790773,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      2097152,
+      2097152,
+      2097152,
+      524288
+    ],
+    "q": [
+      108,
+      63,
+      49,
+      56
+    ],
+    "ratio": [
+      16,
+      256,
+      4096,
+      1024
+    ],
+    "row_fft_bytes": 83886080,
+    "sample": 475844
+  },
+  {
+    "all_nlogn_butterflies": 2224553984,
+    "all_rs_bytes": 8095006720,
+    "all_stages_in_memory": 10712252096,
+    "bits": 256,
+    "body": 453428.94,
+    "cap_mib": 4096,
+    "conservative_resident_stages": [
+      3489660864,
+      3489660864,
+      3489660864,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 259.16292584335156,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      4194304,
+      4194304,
+      4194304,
+      524288
+    ],
+    "q": [
+      91,
+      58,
+      47,
+      56
+    ],
+    "ratio": [
+      32,
+      512,
+      8192,
+      1024
+    ],
+    "row_fft_bytes": 167772160,
+    "sample": 450804
+  },
+  {
+    "all_nlogn_butterflies": 3835166720,
+    "all_rs_bytes": 13463715840,
+    "all_stages_in_memory": 17691573952,
+    "bits": 256,
+    "body": 436906.215,
+    "cap_mib": 8192,
+    "conservative_resident_stages": [
+      6979321792,
+      6979321792,
+      3489660864,
+      243269504
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 259.6062052831849,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      8388608,
+      8388608,
+      4194304,
+      524288
+    ],
+    "q": [
+      79,
+      54,
+      47,
+      56
+    ],
+    "ratio": [
+      64,
+      1024,
+      8192,
+      1024
+    ],
+    "row_fft_bytes": 335544320,
+    "sample": 435532
+  },
+  {
+    "all_nlogn_butterflies": 9668395008,
+    "all_rs_bytes": 32233226240,
+    "all_stages_in_memory": 41997565632,
+    "bits": 256,
+    "body": 424537.376,
+    "cap_mib": 16384,
+    "conservative_resident_stages": [
+      13958643648,
+      13958643648,
+      13958643648,
+      121634688
+    ],
+    "guard_checks": 7,
+    "interactive_bits": 257.7550300354283,
+    "k": [
+      4,
+      4,
+      4,
+      0
+    ],
+    "n": [
+      16777216,
+      16777216,
+      16777216,
+      262144
+    ],
+    "q": [
+      70,
+      51,
+      44,
+      60
+    ],
+    "ratio": [
+      128,
+      2048,
+      32768,
+      512
+    ],
+    "row_fft_bytes": 671088640,
+    "sample": 425204
+  }
+]

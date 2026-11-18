@@ -1,0 +1,261 @@
+{
+  "salted-burst": {
+    "stages": [
+      [
+        2097152,
+        65600,
+        53,
+        11088
+      ],
+      [
+        524288,
+        4142,
+        38,
+        20984
+      ],
+      [
+        65536,
+        296,
+        34,
+        15691
+      ],
+      [
+        131072,
+        329,
+        31,
+        25051
+      ]
+    ],
+    "interactive_error_bits": 130.576527,
+    "expected_salted_separate_B": 266122.355,
+    "expected_salted_paired_B": 241414.472,
+    "expected_unsalted_paired_B": 231431.375,
+    "maximum_salted_separate_B": 276044,
+    "maximum_salted_paired_B": 249644,
+    "all_rs_value_B": 1730150400,
+    "all_separate_merkle_node_B": 377487040,
+    "all_separate_salt_B": 188743680
+  },
+  "salted-burst-worst-case": {
+    "stages": [
+      [
+        2097152,
+        65600,
+        53,
+        11088
+      ],
+      [
+        524288,
+        4142,
+        38,
+        20984
+      ],
+      [
+        131072,
+        292,
+        30,
+        25981
+      ],
+      [
+        131072,
+        325,
+        31,
+        25146
+      ]
+    ],
+    "interactive_error_bits": 130.490158,
+    "expected_salted_separate_B": 262850.011,
+    "expected_salted_paired_B": 238142.129,
+    "expected_unsalted_paired_B": 228414.696,
+    "maximum_salted_separate_B": 272556,
+    "maximum_salted_paired_B": 246156,
+    "all_rs_value_B": 1772093440,
+    "all_separate_merkle_node_B": 385875648,
+    "all_separate_salt_B": 192937984
+  },
+  "paired-burst": {
+    "stages": [
+      [
+        1048576,
+        65613,
+        66,
+        7554
+      ],
+      [
+        262144,
+        4148,
+        44,
+        14240
+      ],
+      [
+        131072,
+        293,
+        30,
+        25955
+      ],
+      [
+        131072,
+        326,
+        31,
+        25122
+      ]
+    ],
+    "interactive_error_bits": 129.999055,
+    "expected_salted_separate_B": 284196.566,
+    "expected_salted_paired_B": 259488.684,
+    "expected_unsalted_paired_B": 248545.485,
+    "maximum_salted_separate_B": 295060,
+    "maximum_salted_paired_B": 268660,
+    "all_rs_value_B": 933232640,
+    "all_separate_merkle_node_B": 218103488,
+    "all_separate_salt_B": 109051904
+  },
+  "threshold-sensitivity": {
+    "stages": [
+      [
+        16777216,
+        65580,
+        33,
+        32439
+      ],
+      [
+        8388608,
+        4126,
+        24,
+        89817
+      ],
+      [
+        1048576,
+        284,
+        23,
+        99805
+      ],
+      [
+        2097152,
+        307,
+        21,
+        144266
+      ]
+    ],
+    "interactive_error_bits": 130.359657,
+    "expected_salted_separate_B": 214141.295,
+    "expected_salted_paired_B": 191082.255,
+    "expected_unsalted_paired_B": 184618.281,
+    "maximum_salted_separate_B": 220348,
+    "maximum_salted_paired_B": 196252,
+    "all_rs_value_B": 16944988160,
+    "all_separate_merkle_node_B": 3892313792,
+    "all_separate_salt_B": 1946157056
+  },
+  "high-memory": {
+    "stages": [
+      [
+        67108864,
+        65574,
+        27,
+        65072
+      ],
+      [
+        16777216,
+        4124,
+        22,
+        127599
+      ],
+      [
+        16777216,
+        278,
+        17,
+        460822
+      ],
+      [
+        33554432,
+        296,
+        16,
+        636167
+      ]
+    ],
+    "interactive_error_bits": 130.5421,
+    "expected_salted_separate_B": 197327.982,
+    "expected_salted_paired_B": 175120.746,
+    "expected_unsalted_paired_B": 169872.748,
+    "maximum_salted_separate_B": 202420,
+    "maximum_salted_paired_B": 179348,
+    "all_rs_value_B": 67108864000,
+    "all_separate_merkle_node_B": 21474836160,
+    "all_separate_salt_B": 10737418240
+  },
+  "high-memory-salted-pair": {
+    "stages": [
+      [
+        134217728,
+        65571,
+        24,
+        91977
+      ],
+      [
+        67108864,
+        4121,
+        19,
+        255335
+      ],
+      [
+        8388608,
+        279,
+        18,
+        320602
+      ],
+      [
+        33554432,
+        297,
+        16,
+        635180
+      ]
+    ],
+    "interactive_error_bits": 130.154461,
+    "expected_salted_separate_B": 190815.613,
+    "expected_salted_paired_B": 168608.377,
+    "expected_unsalted_paired_B": 163680.379,
+    "maximum_salted_separate_B": 195612,
+    "maximum_salted_paired_B": 172540,
+    "all_rs_value_B": 136902082560,
+    "all_separate_merkle_node_B": 35433479872,
+    "all_separate_salt_B": 17716740096
+  },
+  "extreme-salted-separate": {
+    "stages": [
+      [
+        4294967296,
+        65564,
+        17,
+        508164
+      ],
+      [
+        4294967296,
+        4115,
+        14,
+        1858492
+      ],
+      [
+        1073741824,
+        274,
+        13,
+        3240702
+      ],
+      [
+        67108864,
+        291,
+        15,
+        902579
+      ]
+    ],
+    "interactive_error_bits": 130.888308,
+    "expected_salted_separate_B": 173831.632,
+    "expected_salted_paired_B": 151926.014,
+    "expected_unsalted_paired_B": 148150.015,
+    "maximum_salted_separate_B": 177628,
+    "maximum_salted_paired_B": 154940,
+    "all_rs_value_B": 6190121615360,
+    "all_separate_merkle_node_B": 1254130450112,
+    "all_separate_salt_B": 627065225216
+  }
+}

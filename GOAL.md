@@ -1,12 +1,7 @@
-# Complete payment proof size — bounded experiment complete
+# Independent-node payment validation decision
 
-Develop and independently evaluate a substantially smaller complete private 2x2 payment. Preserve CP03 as the working reference. The closed synchronization milestone is recorded at `8f9bae9b96248e6c147acf9664fd34bb727cb756`.
+Start from published `7c2d0fc8b68c566d13e3e341c1f49bacaad527f4`. CP03 is the executable reference. Its 15.39% transport experiment and the wallet synchronization milestone are closed.
 
-First account for genuine bodies. Screen hiding WHIR/sumcheck and two alternative approaches before integration. Verify the statement, constraints, transcript, parameters and verifier correspondence. The selected candidate must retain ownership, nullifiers, both depth-40 funded occurrences, index bounds, output commitments, bounded conservation and fee, and canonical receipt/context binding. Generate three fresh complete proofs, verify from public data in independent processes and exercise invalid witnesses, changed statements and corrupted proofs. Charge complete bytes, preprocessing, all dependencies, CPU and peak memory. Independently reproduce and publish the reviewed result and an integration decision. The tenfold target is a screen. The global blockchain objective remains active.
+Decide how independent nodes should validate complete private payments at the owner's 100M offered payments/year sizing input. Evaluate one primary design, masked outer sumcheck with hiding WHIR-style linear-form openings, and one fallback, transparent block aggregation of public wallet-generated CP03 proofs. Preserve private ownership, funded occurrence membership, nullifiers, bounded conservation and fees, and statement/receipt binding. Separate wallets, builders, pruned and archival nodes and cold recovery. Tenfold reduction is a research screen. Quantify the complete before- and after-inclusion obligation.
 
-The independently tested executable revision is `9dce9420fa4fa96a01b63c70fdbea8e6dde08012`.
-Six newly proved complete payments establish a material saving of 15.39% across
-matched samples. The tenfold screening objective was missed. The decision is
-to preserve the experimental transport and defer integration. See STATUS.md,
-the results, public proof files and non-author reproduction in experiments/payment-size.
-The global blockchain objective remains ACTIVE.
+A selection requires three fresh complete payments, public verification, receipt and subsequent spending. An independently reviewed decision to defer both routes requires an executed discriminator for each, precise barriers and the next test that could change the decision. Publish reviewed source, measurements, projections and reproduction commands to the existing repository. The global blockchain objective stays **ACTIVE**.
