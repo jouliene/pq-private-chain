@@ -5,6 +5,8 @@
   "build_warnings": "risc0-sys libc free FFI declaration produced suspicious_runtime_symbol_definitions warnings under rustc 1.99.1",
   "cpu": "Intel Core i7-8700K",
   "cxx": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "experiment_executable_bytes": 16530712,
+  "experiment_executable_sha256": "4d7074c943d0f4eed889fe63514950c62ca4facffbec586fe21d1d4572edbc37",
   "platform": "Linux-6.8.0-149-generic-x86_64-with-glibc2.39",
   "rayon_workers": 2,
   "rustc": [

@@ -86,3 +86,6 @@ decision retains it as a transport experiment and defers ledger integration.
 Full PoW/issuance integration remains behind the payment/history participation decision.
 Standalone valid-work PoW remains the preferred consensus direction. No full
 consensus engine, permissionless reward issuance or production security is claimed.
+
+
+The [independent-node payment validation decision](experiments/node-validation/DECISION.md) evaluates a masked sumcheck wallet proof and a transparent block proof over public CP03 payments. CP03 remains the executable reference. The candidate wire sizes and annual role costs are projections. The registered 2x2 matrix, full-size verifier components and pinned Keccak accelerator were actually executed. [Reproduction commands](experiments/node-validation/README.md).

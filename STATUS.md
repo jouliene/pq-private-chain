@@ -1,14 +1,11 @@
-# Independent-node validation decision in progress
+# Independent-node payment validation
 
-Global blockchain objective **ACTIVE**. Current baseline and previous completed experiment are recorded in [GOAL.md](GOAL.md) and [the proof-size decision](experiments/payment-size/RESULTS.md). The CP03 and synchronization implementations remain the reference.
+Global blockchain development is **ACTIVE**. The scoped recommendation is to defer both candidates and retain CP03 for research. The previous published baseline and closed encoding experiment are at `7c2d0fc8b68c566d13e3e341c1f49bacaad527f4`.
 
-| Ownership | Evidence and pending action |
-|---|---|
-| Orchestrator | Real AIR to sparse R1CS lowering and public matrix contraction in `experiments/node-validation/dimensions`. Complete the public-input transparent Keccak cost test in `aggregate`, integrate findings, freeze, review and publish. |
-| Construction | Source-correspondent masked reduction, public transcript and complete-byte parameter model in `primary`. Check the cheaper committed subfield mechanism and precise interactive versus compiled guarantees. |
-| Roles | Measured baseline and projections for wallet, public mempool, block-only validation, pruned/archival storage and cold catch-up in `roles`. |
-| Independent reviewer | Verify the complete transcript, conditional geometry, guarded inputs, alternate scheduling, accelerator obligations and non-author reproduction in `review`. |
+- Masked route: real registered 2x2 circuit dimensions, small genuine masked proofs, complete conditional wire budgets, actual matrix and first-stage transform costs. A 262,850-byte mean schedule fits block-only relay. The 0.245–0.261 CPU-second generic verifier component exceeds the chosen 0.12476-second catch-up allowance.
+- Aggregate route: real CPU proof and public verification of one CP03 leaf's 67 Keccak permutations. A historical 96-payment workload needs at least 3,600,891 nonfixed tree permutations. The pinned outer profile and block-prover cost exclude integration.
+- Code freeze `6efae8b29ed9a854768a5e5ec5d69fbceee216c0`. The existing ledger, wallet, old experiments and their requirements are preserved. No complete new-backend payment or aggregate was produced. [Complete decision](experiments/node-validation/DECISION.md), [role costing](experiments/node-validation/roles/README.md) and [reproduction](experiments/node-validation/README.md).
 
-The actual registered 2x2 AIR lowers to 614,387 base constraints. A direct EF5 lift checking every original trace word needs 19,587,059. The masked reduction runs on a small relation. It has no full payment result yet. The fallback build uses the pinned public RISC Zero v3.0.6 Keccak CPU circuit with the existing CP03 public payer data. One heavy job at a time.
+A non-implementing reviewer reproduced the public matrix outputs (0.2234–0.2286 CPU seconds), the real Keccak proof (15.50 seconds elapsed) and the 96-payment count from a separate clean checkout. Pinned reference and dependency builds were reused. Both candidates are deferred. [Review and exact rerun commands](experiments/node-validation/review/CLEAN_REPRODUCTION.md).
 
-To resume, inspect `git status`, the current Goal, and the four evidence directories. Check `/tmp/pq-risc0-nodeval-build.log` and the running Cargo job before starting another. After the library builds, run `python3 -I experiments/node-validation/aggregate/run.py /tmp/pq-risc0-nodeval-306 /tmp/pq-risc0-nodeval-target .work/nodeval-accelerator01` in this checkout. Review the full-size budgets, required verifier work and security correspondence before approving any complete proof job.
+The next design-changing experiment is a source-equivalent structured evaluator for the folded full 2x2 public linear form, together with checking the guard's joint transcript assumptions. This goal does not start that experiment.

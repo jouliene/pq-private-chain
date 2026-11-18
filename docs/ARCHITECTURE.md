@@ -1,5 +1,11 @@
 # Current architecture and implementation boundary
 
+## Validation cost for an independently operated node
+
+Retain CP03 for executable payment research. Defer integration of both the masked wallet proof and transparent block-aggregate candidates tested from public revision `7c2d0fc8b68c566d13e3e341c1f49bacaad527f4`. A reviewed masked-proof schedule projects 262,850 mean bytes and 272,556 maximum for a complete ordinary body. Independent block-only relay fits the chosen link profile. The measured generic matrix/guard/first-fold computation already costs 0.245–0.261 CPU seconds per payment, against a two-validation-core catch-up allowance of 0.12476. Joining public CP03 proofs in a block could preserve independent wallet secrets and cut canonical traffic, while the pinned transparent fallback has a weaker component soundness budget and requires thousands of accelerator subproofs for a 96-payment workload. Its 200 kB final receipt is an unmeasured sensitivity.
+
+Prioritize a structured, verifier-owned computation of the identical folded public matrix claim, including the guarded base-field constraints. Test exact agreement with the sparse evaluator, the remaining verifier cost and the joint simulation/extraction argument before integrating or funding full wallet proving. The projected primary 26.292 TB/year canonical copy and aggregate 0.711 TB/year canonical copy are conditional design alternatives; the unchanged CP03 reference still prices its 175.127 TB/year first copy. [Decision, measurements, service model and reproduction](../experiments/node-validation/DECISION.md).
+
 ## Preferred research path
 
 Retain individual complete CP03 private-payment proofs for the measured finite
