@@ -1,11 +1,14 @@
-# Independent-node payment validation
+# Wallet-created private payment
 
-Global blockchain development is **ACTIVE**. The scoped recommendation is to defer both candidates and retain CP03 for research. The previous published baseline and closed encoding experiment are at `7c2d0fc8b68c566d13e3e341c1f49bacaad527f4`.
+**Active.** Baseline `a131ee5881e89e02f721fcfc3b5d01225437366e`. CP03 remains the working reference. The earlier [independent-node decision](experiments/node-validation/DECISION.md) records the sparse matrix oracle and the prior block experiment.
 
-- Masked route: real registered 2x2 circuit dimensions, small genuine masked proofs, complete conditional wire budgets, actual matrix and first-stage transform costs. A 262,850-byte mean schedule fits block-only relay. The 0.245–0.261 CPU-second generic verifier component exceeds the chosen 0.12476-second catch-up allowance.
-- Aggregate route: real CPU proof and public verification of one CP03 leaf's 67 Keccak permutations. A historical 96-payment workload needs at least 3,600,891 nonfixed tree permutations. The pinned outer profile and block-prover cost exclude integration.
-- Code freeze `6efae8b29ed9a854768a5e5ec5d69fbceee216c0`. The existing ledger, wallet, old experiments and their requirements are preserved. No complete new-backend payment or aggregate was produced. [Complete decision](experiments/node-validation/DECISION.md), [role costing](experiments/node-validation/roles/README.md) and [reproduction](experiments/node-validation/README.md).
+| Owner | Current work |
+|---|---|
+| Structured construction specialist | One folded full-matrix experiment, oracle agreement, joint hiding and noninteractive qualifications in `experiments/wallet-created/structured/`. |
+| Qnero specialist | Pinned default-occupancy wallet payment and actual public wire in `experiments/wallet-created/qnero/`. First heavy-job allocation. |
+| Orchestrator | Integration contract, conditional two-wallet native recursive prototype, role projections and decision. |
+| Non-implementing reviewer | Independent source review and clean execution under `experiments/wallet-created/review/`. |
 
-A non-implementing reviewer reproduced the public matrix outputs (0.2234–0.2286 CPU seconds), the real Keccak proof (15.50 seconds elapsed) and the 96-payment count from a separate clean checkout. Pinned reference and dependency builds were reused. Both candidates are deferred. [Review and exact rerun commands](experiments/node-validation/review/CLEAN_REPRODUCTION.md).
+Resume by checking the current commit, these directories, the three assigned workers and active compiler/prover processes. Qnero is pinned at DigitalGuards/qnero `f04c91307837c0231668383bec76ba98d89d2652`. The pin uses a depth-20 quaternary tree, six private-batch slots and 53 optional public-batch slots. Inspect the actual release circuit, wallet and settlement formats. Reserve timed jobs one at a time. No funds or public testnet submission are required.
 
-The next design-changing experiment is a source-equivalent structured evaluator for the folded full 2x2 public linear form, together with checking the guard's joint transcript assumptions. This goal does not start that experiment.
+The optimized matrix matched the published oracle on three statements, and a first complete masked proof on the public fixture passed its fresh verifier. The wallet frontend generated three new CP03 reference-control payments and decrypted and spent the proceeds. The pinned Qnero upstream wallet emitted a genuine 150,908-byte hiding proof with 3,584 ciphertext bytes and 16 bytes of SCALE framing, independently decoded. The next run is three fresh WHIR wallet payments on the frozen full binary, including receipt and spending. Funding is local synthetic genesis.

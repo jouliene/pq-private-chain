@@ -1,0 +1,182 @@
+{
+  "backend_sha256": "f9615dc3509c972fdc26bf9b57d5bb7eb0fe5c465c746bc108cfa7a329292d11",
+  "files": {
+    "genesis.bin": {
+      "bytes": 296,
+      "sha256": "3f3b3e127bc58e5d5ff2288b1110be26bf3422ba212bb4fb65a2e7c3c50bde6d"
+    },
+    "payment1.body": {
+      "bytes": 1753558,
+      "sha256": "4976733e8f271b32688d380e8da7d391524a82f21f8a02e1bae173c8793be8d4"
+    },
+    "payment1.proof": {
+      "bytes": 1748682,
+      "sha256": "ddabfa85f90af66cf3aad13505516934d4e8ba82e58c3ba4992e8bc0a78f2636"
+    },
+    "payment1.statement": {
+      "bytes": 528,
+      "sha256": "13f7d872a85b261ffb2d8d9563e746637f666dbb54dea4f78be2df728afc4220"
+    },
+    "payment2.body": {
+      "bytes": 1757014,
+      "sha256": "39f8515922d5188d96835d7fdae4ed33890a9368546767638da1ac530569d933"
+    },
+    "payment2.proof": {
+      "bytes": 1752138,
+      "sha256": "2332103b729d470d698cc0e49bb72d2a3bfc224d177727341a91826e9238c6d4"
+    },
+    "payment2.statement": {
+      "bytes": 528,
+      "sha256": "3e3c1122adf5e907af9228b477b48a09d7a2ac5c3e3dee6a03809dcc026f5fa9"
+    },
+    "payment3.body": {
+      "bytes": 1759574,
+      "sha256": "4b7954184cd49213905099ad3eef447224374108f8e89ba553b9f65a63873353"
+    },
+    "payment3.proof": {
+      "bytes": 1754698,
+      "sha256": "b939497821de4a3e0d916ead5d5649aea7db4cadeb673e6fdf386f4909039f53"
+    },
+    "payment3.statement": {
+      "bytes": 528,
+      "sha256": "a9b2e2fbe5607153cbe8eda65ca645e6de141974c755e9dc3256aa83f9898506"
+    }
+  },
+  "generated": {
+    "admissions": [
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7357767479999998,
+        "body_bytes": 1753558,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.62,
+        "elapsed_s": 0.649824975989759,
+        "mode": "verify",
+        "peak_rss_kib": 63232,
+        "proof_bytes": 1748682
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7659057670000002,
+        "body_bytes": 1757014,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.65,
+        "elapsed_s": 0.6883488589664921,
+        "mode": "verify",
+        "peak_rss_kib": 63240,
+        "proof_bytes": 1752138
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7619079730000003,
+        "body_bytes": 1759574,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.65,
+        "elapsed_s": 0.6864616090897471,
+        "mode": "verify",
+        "peak_rss_kib": 63368,
+        "proof_bytes": 1754698
+      }
+    ],
+    "backend": "reference",
+    "fees": "6336744",
+    "genesis_sha256": "3f3b3e127bc58e5d5ff2288b1110be26bf3422ba212bb4fb65a2e7c3c50bde6d",
+    "leaves": 8,
+    "produced": [
+      {
+        "accepted": true,
+        "body_bytes": 1753558,
+        "cpu_system_s": 0.06,
+        "cpu_user_s": 1.79,
+        "elapsed_s": 1.8673324610572308,
+        "mode": "prove",
+        "peak_rss_kib": 168040,
+        "proof_bytes": 1748682,
+        "receipts_opened": 2,
+        "unrelated_receipts": 0
+      },
+      {
+        "accepted": true,
+        "body_bytes": 1757014,
+        "cpu_system_s": 0.07,
+        "cpu_user_s": 1.84,
+        "elapsed_s": 1.9175205409992486,
+        "mode": "prove",
+        "peak_rss_kib": 168172,
+        "proof_bytes": 1752138,
+        "receipts_opened": 2,
+        "unrelated_receipts": 0
+      },
+      {
+        "accepted": true,
+        "body_bytes": 1759574,
+        "cpu_system_s": 0.06,
+        "cpu_user_s": 1.78,
+        "elapsed_s": 1.8569878600537777,
+        "mode": "prove",
+        "peak_rss_kib": 168168,
+        "proof_bytes": 1754698,
+        "receipts_opened": 2,
+        "unrelated_receipts": 0
+      }
+    ],
+    "spent": 6
+  },
+  "installation_sha256": "4dbabf63c36a7e26136d43490ef1d032cd4e46958bd2027f0f439fd46d2ade3d",
+  "public_replay": {
+    "admissions": [
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7416166839999999,
+        "body_bytes": 1753558,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.63,
+        "elapsed_s": 0.668184294947423,
+        "mode": "verify",
+        "peak_rss_kib": 63236,
+        "proof_bytes": 1748682
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7160523270000003,
+        "body_bytes": 1757014,
+        "cpu_system_s": 0.01,
+        "cpu_user_s": 0.62,
+        "elapsed_s": 0.6436112599913031,
+        "mode": "verify",
+        "peak_rss_kib": 63368,
+        "proof_bytes": 1752138
+      },
+      {
+        "accepted": true,
+        "admission_elapsed_s": 0.7520475259999998,
+        "body_bytes": 1759574,
+        "cpu_system_s": 0.02,
+        "cpu_user_s": 0.64,
+        "elapsed_s": 0.6752485629403964,
+        "mode": "verify",
+        "peak_rss_kib": 63368,
+        "proof_bytes": 1754698
+      }
+    ],
+    "backend": "reference",
+    "controls": [
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay",
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay",
+      "wrong-statement",
+      "receipt",
+      "changed-proof",
+      "replay"
+    ],
+    "fees": "6336744",
+    "genesis_sha256": "3f3b3e127bc58e5d5ff2288b1110be26bf3422ba212bb4fb65a2e7c3c50bde6d",
+    "leaves": 8,
+    "spent": 6
+  }
+}
