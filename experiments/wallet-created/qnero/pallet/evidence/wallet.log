@@ -1,0 +1,18 @@
+   Compiling qnero-note-core v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-note-core)
+   Compiling qnero-pqcrypto v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-pqcrypto)
+   Compiling qnero-circuit v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-circuit)
+   Compiling qnero-verifier v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-verifier)
+   Compiling qnero-aggregator v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-aggregator)
+   Compiling qnero-wallet v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-wallet)
+   Compiling qnero-state-proof v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-state-proof)
+   Compiling qnero-circuit-builder v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-circuit-builder)
+   Compiling qnero-prover v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-prover)
+   Compiling qnero-notes v0.1.0 (/tmp/wallet-qnero-pallet-20261119/crates/qnero-notes)
+    Finished `release` profile [optimized] target(s) in 45.03s
+     Running tests/dispatch_inputs.rs (/tmp/wallet-qnero-20261119/target/release/deps/dispatch_inputs-5b78f5457999f928)
+
+running 1 test
+test ordinary_wallet_payment ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.31s
+

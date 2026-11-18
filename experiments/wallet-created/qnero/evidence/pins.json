@@ -1,0 +1,63 @@
+{
+  "git": "f04c91307837c0231668383bec76ba98d89d2652",
+  "before": {
+    "comparative_wallet.rs": "38a5f25f191844f6f71e1c58d3250ab06b24d7f36a2850b77d1f916b29c7d965",
+    "public_check.rs": "57e9f890b802fcbf483ceaffbe2e2f2229df0121df6f35ea78dc426d96450d93",
+    "wallet_executable": "c216b4cd72032b0ab15bc9e04776986fce24daf4f0b610cb5ca00561ad502e07",
+    "public_verifier_executable": "88582021c6441070e7b426bd494d695fb6e30353c2ee61ba365fc0ac86793500",
+    "upstream_Cargo.lock": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "runner": "11cc9bd02208be7e5c211ead5e9d44b3b4a19668e8c5a047c668fb49d12739f9"
+  },
+  "rustc": "rustc 1.93.0 (254b59607 2026-01-19)\nbinary: rustc\ncommit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c\ncommit-date: 2026-01-19\nhost: x86_64-unknown-linux-gnu\nrelease: 1.93.0\nLLVM version: 21.1.8",
+  "kernel": "6.8.0-149-generic",
+  "clock_ticks_per_second": 100,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "threads": 4,
+  "after": {
+    "comparative_wallet.rs": "38a5f25f191844f6f71e1c58d3250ab06b24d7f36a2850b77d1f916b29c7d965",
+    "public_check.rs": "57e9f890b802fcbf483ceaffbe2e2f2229df0121df6f35ea78dc426d96450d93",
+    "wallet_executable": "c216b4cd72032b0ab15bc9e04776986fce24daf4f0b610cb5ca00561ad502e07",
+    "public_verifier_executable": "88582021c6441070e7b426bd494d695fb6e30353c2ee61ba365fc0ac86793500",
+    "upstream_Cargo.lock": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "runner": "11cc9bd02208be7e5c211ead5e9d44b3b4a19668e8c5a047c668fb49d12739f9"
+  },
+  "public": {
+    "anchor.bin": {
+      "sha256": "c3a6da4ac5d7e83e008ce17698b12fbe961cb2300f6626a0f60694325afc6ee2",
+      "bytes": 32
+    },
+    "commitments.bin": {
+      "sha256": "dc95e9ff79ed9361a2fcd8412d9402bfcebf51aa746a1eaaaeb2df69a17b7bab",
+      "bytes": 64
+    },
+    "payment.scale": {
+      "sha256": "895538da35419106dbfbd1ded4aae2061b5934ec3ad5435598cb641cc9df528c",
+      "bytes": 154508
+    },
+    "private-verifier.bin": {
+      "sha256": "072049a475ca904746d3b694f028d57d0285dfa220f8dbbd40966518c5e608e5",
+      "bytes": 1749
+    },
+    "wallet-proof.bin": {
+      "sha256": "8802faea9df3466899c2d02d1a3491f8c15b084dac41e4a704d6ddf5f7d74be0",
+      "bytes": 150908
+    },
+    "wallet.json": {
+      "sha256": "662128d14f37725b3f5828bb2f97d6754e448b8008567a1572dcd7339cd80331",
+      "bytes": 985
+    }
+  }
+}

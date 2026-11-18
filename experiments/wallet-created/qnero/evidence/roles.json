@@ -1,0 +1,112 @@
+{
+  "scope": "Qnero direct default wallet, byte floors; transfer rates are scenarios, no annual throughput run",
+  "data_bytes": 154508,
+  "max_normal_bytes": 3932160,
+  "maximum_by_normal_bytes_per_block": 25,
+  "upper_bound_per_year_without_other_normal_transactions": 6570000,
+  "upper_bound_by_full_block_bytes_before_reservation": 33,
+  "raw_256_block_window_B_at_normal_tx_ceiling": 988851200,
+  "cold_archive_one_and_five_TB_fit_payments": [
+    6472156,
+    32360783
+  ],
+  "offers_per_second_at_100M": 3.170979198376459,
+  "scenarios": [
+    {
+      "inclusion_percent": 95,
+      "included_payments_demand": 95000000,
+      "included_per_120s_block_demand": 361.4916286149163,
+      "accepted_over_byte_ceiling": 14.45966514459665,
+      "annual_one_binary_extrinsic_per_offer_TB": 15.4508,
+      "annual_wallet_submit_json_request_TB": 30.9091,
+      "annual_block_extrinsics_one_copy_TB": 14.67826,
+      "annual_three_archives_TB_before_other_data": 44.03478,
+      "one_and_five_TB_max_B_per_payment": [
+        10526.315789473685,
+        52631.57894736842
+      ],
+      "archive_one_and_five_TB_days_capacity_at_demand": [
+        24.866707634283628,
+        124.33353817141814
+      ],
+      "standalone_extrinsic_only_relay_Mbps": {
+        "pre_inclusion_one_peer": 3.9326230339928974,
+        "qnero_transactions_1_notification_one_unknown_full_peer": 3.919558599695586,
+        "qnero_transactions_1_notifications_six_unknown_full_peers": 23.51735159817352,
+        "block_only_one_peer": 3.7235909702688987,
+        "mempool_plus_full_block": 7.656214004261796,
+        "perfect_cross_phase_payload_cache_lower_bound": 3.932657433992897,
+        "archive_primary_two_replica_payload_egress": 7.447113140537797
+      },
+      "burst_10x600s_network_only_drain_s": {
+        "block_only": 1037.8735370218012,
+        "mempool_plus_block": 4354.989243987185,
+        "runtime_normal_bytes": null
+      },
+      "100_offers_per_s_600s_extrinsic_MB": 9270.48,
+      "steady_validation_CPU_cores_native_component": {
+        "block_only_two_checks": 0.047307204464738704,
+        "mempool_plus_block_three_checks": 0.07220573313039065
+      },
+      "one_year_link_only_catchup_while_live_days_raw_binary": 17.81806675794606,
+      "ninety_days_download_including_live_binary_Mbps": 18.82468150524832,
+      "ninety_days_two_native_checks_cores_including_live": 0.23916420034951236,
+      "one_year_cold_uncompressed_wallet_JSON_hex_min_TB": 29.35652,
+      "wallet_hex_only_duration_at_80Mbps_hours_excluding_live": 815.4588888888889,
+      "commitment_bytes_per_local_spend_at_year_end_excluding_keys_proofs": 6088409600,
+      "new_nullifier_and_commitment_and_leaf_height_logical_bytes_per_year": 12920000000,
+      "nullifier_prefix_entry_cap_reached_days_at_demand": 1.9210526315789476,
+      "pruned_256_block_window_projected_extrinsic_B_at_demand": 14298479336,
+      "live_cache_600s_offers_B_before_indices": 294028724,
+      "burst_cache_600s_offers_B_before_indices": 2939669208
+    },
+    {
+      "inclusion_percent": 100,
+      "included_payments_demand": 100000000,
+      "included_per_120s_block_demand": 380.51750380517507,
+      "accepted_over_byte_ceiling": 15.220700152207002,
+      "annual_one_binary_extrinsic_per_offer_TB": 15.4508,
+      "annual_wallet_submit_json_request_TB": 30.9091,
+      "annual_block_extrinsics_one_copy_TB": 15.4508,
+      "annual_three_archives_TB_before_other_data": 46.3524,
+      "one_and_five_TB_max_B_per_payment": [
+        10000.0,
+        50000.0
+      ],
+      "archive_one_and_five_TB_days_capacity_at_demand": [
+        23.623372252569446,
+        118.11686126284724
+      ],
+      "standalone_extrinsic_only_relay_Mbps": {
+        "pre_inclusion_one_peer": 3.9326230339928974,
+        "qnero_transactions_1_notification_one_unknown_full_peer": 3.919558599695586,
+        "qnero_transactions_1_notifications_six_unknown_full_peers": 23.51735159817352,
+        "block_only_one_peer": 3.919567631861999,
+        "mempool_plus_full_block": 7.852190665854897,
+        "perfect_cross_phase_payload_cache_lower_bound": 3.932657433992897,
+        "archive_primary_two_replica_payload_egress": 7.839066463723999
+      },
+      "burst_10x600s_network_only_drain_s": {
+        "block_only": 1152.0465168017083,
+        "mempool_plus_block": 4604.0545006279735,
+        "runtime_normal_bytes": null
+      },
+      "100_offers_per_s_600s_extrinsic_MB": 9270.48,
+      "steady_validation_CPU_cores_native_component": {
+        "block_only_two_checks": 0.04979705733130391,
+        "mempool_plus_block_three_checks": 0.07469558599695586
+      },
+      "one_year_link_only_catchup_while_live_days_raw_binary": 18.804173229551314,
+      "ninety_days_download_including_live_binary_Mbps": 19.815452405524553,
+      "ninety_days_two_native_checks_cores_including_live": 0.25175178984159197,
+      "one_year_cold_uncompressed_wallet_JSON_hex_min_TB": 30.9016,
+      "wallet_hex_only_duration_at_80Mbps_hours_excluding_live": 858.3777777777777,
+      "commitment_bytes_per_local_spend_at_year_end_excluding_keys_proofs": 6408409600,
+      "new_nullifier_and_commitment_and_leaf_height_logical_bytes_per_year": 13600000000,
+      "nullifier_prefix_entry_cap_reached_days_at_demand": 1.825,
+      "pruned_256_block_window_projected_extrinsic_B_at_demand": 15051087804,
+      "live_cache_600s_offers_B_before_indices": 294028724,
+      "burst_cache_600s_offers_B_before_indices": 2939669208
+    }
+  ]
+}

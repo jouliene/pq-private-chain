@@ -1,0 +1,99 @@
+{
+  "git": "f04c91307837c0231668383bec76ba98d89d2652",
+  "pallet": {
+    "minted_steps": 1000,
+    "remaining_pool_steps": 992,
+    "fee_steps": 8,
+    "burned_steps": 4,
+    "pending_author_steps": 4,
+    "leaves_after": 3,
+    "settled_nullifiers": 2,
+    "output_membership_checked": true,
+    "pool_and_pre_dispatch_passed": true,
+    "replay_refused_by_all_three_paths": true,
+    "final_tree_root": "c5db6ec8408d99ea8707d3d7fcc2aa28e20d7c98ab1934d7f46dd490c830ee98"
+  },
+  "source_unchanged": true,
+  "wallet": {
+    "anchor_height": 2,
+    "backup_only_received": true,
+    "ciphertext_lengths": [
+      1792,
+      1792
+    ],
+    "extrinsic_bytes": 154508,
+    "fee_steps": 8,
+    "funded_commitments_at_anchor": 1,
+    "funding_sync": {
+      "json_rpc_request_bodies": 12,
+      "json_rpc_request_bytes": 2150
+    },
+    "independent_recipient_received": true,
+    "leaf_and_private_batch_prove_elapsed_s": 4.990420421,
+    "prepare_cpu_ticks": 1822,
+    "prepare_reads": {
+      "json_rpc_request_bodies": 11,
+      "json_rpc_request_bytes": 1513
+    },
+    "prepare_spend_elapsed_s": 5.004883521,
+    "proof_bytes": 150908,
+    "real_leaves": 1,
+    "receive_from_public_history": {
+      "json_rpc_request_bodies": 13,
+      "json_rpc_request_bytes": 3190
+    },
+    "seed_only_recovery": {
+      "json_rpc_request_bodies": 12,
+      "json_rpc_request_bytes": 3058
+    },
+    "setup_cpu_ticks": 739,
+    "submit": {
+      "json_rpc_request_bodies": 1,
+      "json_rpc_request_bytes": 309091
+    },
+    "wallet_setup_elapsed_s": 3.195692992,
+    "wallet_slots": 6
+  },
+  "public": {
+    "anchor-fields.bin": {
+      "sha256": "71bc1ea30e895f5f817d74b5396982f03e6932a6645a6a9e7bca40fa04b493c6",
+      "bytes": 242
+    },
+    "anchor.bin": {
+      "sha256": "cdea22a156a698efbc10066503a68d89535199113268fbbcf474062df24f0d2f",
+      "bytes": 32
+    },
+    "commitments.bin": {
+      "sha256": "68a006c0d78c52ecd427ffabd180ca2735319bda17a5cfe9a5af5c9a2872d2e4",
+      "bytes": 64
+    },
+    "funding-commitment.bin": {
+      "sha256": "24d2a55bf0b43ab91741b7ce2fb08c6a2bd19fa1170eee618b9904bf42695e07",
+      "bytes": 32
+    },
+    "funding-inner.bin": {
+      "sha256": "328499149f761fac76ef6df259fd4624401ae54c0ef5ccc94f4677beb3e1b44c",
+      "bytes": 32
+    },
+    "payment.scale": {
+      "sha256": "90903fb7b9266b82fbf15bf6c7f1cb332e3aa3d5b90dd5744038fc7aa15e4d4e",
+      "bytes": 154508
+    },
+    "private-verifier.bin": {
+      "sha256": "072049a475ca904746d3b694f028d57d0285dfa220f8dbbd40966518c5e608e5",
+      "bytes": 1749
+    },
+    "real-slot-nullifiers.bin": {
+      "sha256": "4a3edd6c9f75050f850fea8da5061f8b48a9de94a47339a60419e1e7f77860d2",
+      "bytes": 64
+    },
+    "wallet-proof.bin": {
+      "sha256": "36393b9e3a14bad34529e1b2d8272aaf6d4f024979572755cfb4d99903e0e398",
+      "bytes": 150908
+    },
+    "wallet.json": {
+      "sha256": "6146b50bf6af65666ec9efc397aa3a9b873e9f82a2700ec82da991de69470c87",
+      "bytes": 985
+    }
+  }
+}

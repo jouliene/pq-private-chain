@@ -1,0 +1,40 @@
+{
+  "anchor_height": 2,
+  "backup_only_received": true,
+  "ciphertext_lengths": [
+    1792,
+    1792
+  ],
+  "extrinsic_bytes": 154508,
+  "fee_steps": 8,
+  "funded_commitments_at_anchor": 1,
+  "funding_sync": {
+    "json_rpc_request_bodies": 12,
+    "json_rpc_request_bytes": 2150
+  },
+  "independent_recipient_received": true,
+  "leaf_and_private_batch_prove_elapsed_s": 5.123216916,
+  "prepare_cpu_ticks": 1864,
+  "prepare_reads": {
+    "json_rpc_request_bodies": 11,
+    "json_rpc_request_bytes": 1513
+  },
+  "prepare_spend_elapsed_s": 5.134530388,
+  "proof_bytes": 150908,
+  "real_leaves": 1,
+  "receive_from_public_history": {
+    "json_rpc_request_bodies": 13,
+    "json_rpc_request_bytes": 3190
+  },
+  "seed_only_recovery": {
+    "json_rpc_request_bodies": 12,
+    "json_rpc_request_bytes": 3058
+  },
+  "setup_cpu_ticks": 798,
+  "submit": {
+    "json_rpc_request_bodies": 1,
+    "json_rpc_request_bytes": 309091
+  },
+  "wallet_setup_elapsed_s": 3.341093326,
+  "wallet_slots": 6
+}
