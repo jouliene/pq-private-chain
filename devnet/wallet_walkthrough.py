@@ -299,11 +299,22 @@ def exercise(lab):
                                      "--intent","recipient-spend","--wait",240)
             check(spent["status"]=="confirmed" and spent["real_inputs"]==2 and spent["change"]==6,
                   "two real restored receipts spent")
+            for _ in range(4):
+                observed_height=lab.status("c")["height"]
+                wait(lambda:lab.status("c")["height"],lambda h:h>=observed_height+2,
+                     "successors of restored recipient spend",120)
+                confirmed,_=run_cli(receiver,"resume","recipient","recipient-spend","--wait",180)
+                if confirmed["status"]=="confirmed" and confirmed["tx"]==spent["tx"]:
+                    break
+                spent=confirmed
+            else:
+                raise ValueError("recipient spend did not survive confirmation observation")
             lab.mining("a",0)
             lab.mining("b",0)
             final=same_heads(lab,"abc")
             report["differential"]["live_sender"]=equivalent(client,"c","live")
             report["differential"]["restored_recipient"]=equivalent(receiver,"c","recipient")
+            check(report["differential"]["restored_recipient"]["balance"]==6,"final recipient balance")
             # Re-verify each transmitted replacement, outside the measured wallet and server roles.
             from run import Resources
             v=Resources(lab.native)
@@ -322,18 +333,23 @@ def exercise(lab):
                 (evidence/"attempts"/(tx+".bin")).write_bytes(bank[tx])
             report["selected_chain"]=selected
             matches=[]
+            spent_at=None
             for bid in selected:
                 raw=lab.request("c","block",id=bid)[1]
                 check(block_id(raw).hex()==bid,"selected block identity")
                 for p in decode_block(raw).packets:
                     h=hashlib.sha256(p).hexdigest()
+                    if h==spent["tx"]:
+                        check(spent_at is None,"duplicate recipient spend")
+                        spent_at=decode_block(raw).height
                     if h in payment["attempts"]:
                         matches.append(h)
             check(matches==[payment["tx"]],"exactly one canonical payment for durable intent")
             report["live_intent"]=dict(confirmed=payment["tx"],amount=29,change=payment["change"],
                 input_total=payment["input_total"],attempts=payment["attempts"],shared_nullifier_count=len(common),
                 canonical_count=len(matches),dropped_reply=True,stale_reason="anchor age",resumption_cost=cost)
-            report["offline_recipient"]=dict(received=46,incoming_notes=2,spent=37,change=6,
+            check(spent_at is not None and spent_at+2<=final["height"],"recipient spend successors")
+            report["offline_recipient"]=dict(successors=final["height"]-spent_at,received=46,incoming_notes=2,spent=37,change=6,
                 spend_tx=spent["tx"],restore_cost=restore_cost,spend_cost=spend_cost)
             report.update(final_height=final["height"],final_tip=final["tip"],elapsed_s=time.monotonic()-t)
             (evidence/"WALLET.json").write_text(json.dumps(report,sort_keys=True,indent=2)+"\n")
