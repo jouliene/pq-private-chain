@@ -44,4 +44,5 @@ jobs:
           set -eu
           h="$RUNNER_TEMP/tkn-network"
           ./pqd token --home "$h" walkthrough
+          python3 -IB experiments/token-devnet/check_policy.py "$h/public" --approve-genesis "$(cat "$h/deployment/devnet/approved-genesis.sha256")"
           python3 -IB experiments/token-devnet/money/reconcile.py "$h/public" --approve-genesis "$(cat "$h/deployment/devnet/approved-genesis.sha256")"

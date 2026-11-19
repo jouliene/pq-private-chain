@@ -2,6 +2,8 @@
 
 Deliver live TKN1 token-only receipt, separate mined native funding, seed recovery and subsequent spending on a separately identified local PoW network. Check fork selection, reward rollback, duplicate/retry linkage and monetary reconciliation. Compare a stronger complete proof profile on the same relation. Publish an independently reproduced decision.
 
+The [live walkthrough and public replay](experiments/token-devnet/README.md) record the accepted local behavior, independent results and remaining security obligations. The broader blockchain objective stays active.
+
 ## Earlier milestone
 
 # Private spend profile for one research token

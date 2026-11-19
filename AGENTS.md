@@ -1,3 +1,7 @@
+# Live fixed-token devnet
+
+Use `./pqd token --home NEW_PRIVATE_HOME walkthrough` for the mined TKN1 network. Keep each lab's operator-approved founding digest and registered verifier separate from native-only devnets. The public capture contains the founding record, full blocks and packets, and disclosed numerical fixture results. Publish only allowlisted public evidence. A new home creates a new founding wallet and network identity. Verify existing captures with the independent monetary and cryptographic readers in [the operator guide](experiments/token-devnet/README.md). Changes to the bootstrapping path require a clean clone and new upstream build target.
+
 # Incremental APV2 wallet
 
 For changes to the ordinary wallet, run the acceptance command `./pqd wallet-walkthrough`, read devnet/WALLET_PROTOCOL.md and distinguish compact history bytes, SQLite file reads, complete wallet uploads and native proof costs. Preserve the private outbox's pinned real inputs across retry and reorg. Queries for public history must have identical parameters for different wallet holdings at the same cursor and target. Keep local seeds, owned rows, paths and the outbox outside publication.

@@ -18,6 +18,8 @@ def check(public, branches, blocks, verifier, winner, observations):
     assert final.ids[:len(win.ids)]==win.ids and len(win.ids)>len(loser.ids)
     pay=run['payments']
     a,b=[verifier.checked[pay[k]['tx']] for k in ('branch-first','branch-retry')]
+    pre = run.get('pre_confirmation_retry', pay['branch-retry'])
+    pending = verifier.checked[pre['tx']]
     ordered=['token-only','native-only','combined','onward']
     amounts=[(0,70),(23,0),(9,45),(4,13)]
     def cash(x):
@@ -36,9 +38,15 @@ def check(public, branches, blocks, verifier, winner, observations):
     assert win.locations==common.locations and set(final.locations)-set(win.locations)=={b.txid}
     assert a.nullifiers[0]==b.nullifiers[0] and set(a.nullifiers)&set(b.nullifiers)=={a.nullifiers[0]}
     assert not(set(a.commitments)&set(b.commitments)) and a.receipt_pair!=b.receipt_pair
-    assert a.anchor not in win.anchors and b.anchor==win.anchors[b.height]
+    assert a.anchor not in win.anchors and b.anchor==final.anchors[b.height]
+    assert pending.anchor==win.anchors[pending.height]
+    if pending.txid!=b.txid:
+        assert pending.txid not in final.locations and pending.anchor!=b.anchor
+    assert set(a.nullifiers)&set(pending.nullifiers)=={a.nullifiers[0]}
+    if b.txid!=pending.txid:
+        assert set(b.nullifiers)&set(pending.nullifiers)=={a.nullifiers[0]}
     assert all(x not in {r[0] for r in final.outs} for x in a.commitments)
-    assert run['duplicate']==dict(id=b.txid,duplicate=True)
+    assert run['duplicate']==dict(id=pending.txid,duplicate=True)
     assert cash(run['offline_restore'])==(0,70)
     expected={'mira-restored':(5,18),'next-restored':(2,32),'payee':(4,13),'shop':(3,7),'fork-miner':(0,0)}
     assert all(cash(run['wallets'][name])==amount for name,amount in expected.items())
@@ -48,7 +56,7 @@ def check(public, branches, blocks, verifier, winner, observations):
         return sum(blocks[bid].amount for bid in state.ids[1:] if blocks[bid].miner==detached_miner)
     assert cash(run['losing_miner_before'])==(miner_credits(loser),0) and cash(run['losing_miner_after'])==(miner_credits(win),0)==(0,0)
     before_retry_age=len(win.ids)-a.height
-    report=dict(orphan_age_at_winning_next=before_retry_age,orphan_expired_by_age=before_retry_age>8,
+    report=dict(duplicate_exercised_packet=pending.txid, settled_packet=b.txid, orphan_age_at_winning_next=before_retry_age,orphan_expired_by_age=before_retry_age>8,
                 orphan_anchor_on_winning_chain=False,losing_branch_paid_to_named_miner=miner_credits(loser),
                 winning_branch_paid_to_named_miner=miner_credits(win),native_reward_origin_disclosed=True,
                 two_disclosed_incoming_notes_checked=True,offline_recovered_token=70,
@@ -68,7 +76,7 @@ def check(public, branches, blocks, verifier, winner, observations):
                 if branch is not None:
                     assert all(snap[k]==branch.summary()[k] for k in snapshot_keys)
         captured_positions=[cold.index(t) if t in cold else None for t in phases]
-        observed_pending={n:any(b.txid in row[2] for row in rows) for n,rows in live['nodes'].items()}
+        observed_pending={n:any(pending.txid in row[2] for row in rows) for n,rows in live['nodes'].items()}
         report['public_observer']=dict(changed_state_samples={k:len(v) for k,v in tips_seen.items()},
             cold_genesis_loser_winner_final_observed=[x is not None for x in captured_positions],
             cold_sequence_in_order=[v for v in captured_positions if v is not None]==sorted(v for v in captured_positions if v is not None),

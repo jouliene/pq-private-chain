@@ -2,6 +2,8 @@
 
 An independent blockchain research project with private payments and a post-quantum security objective. Run `./pqd start` to launch the first local proof-of-work network with two CPU miners and three validating peers. Follow the [short wallet walkthrough and reproduction instructions](devnet/README.md) to make a payment, restore a wallet from seed and test a deep reorganization. End-to-end PQ security, network privacy and production economics remain open.
 
+Run `./pqd token --home /path/to/new-private-lab walkthrough` to mine and spend one fixed research token. The ordinary wallet handles a token-only recipient, separate mined native funding, one mixed change note, two seed restorations and a fee-changing fork. [Live operator guide and public replay](experiments/token-devnet/README.md)
+
 The first fixed-supply private token prototype uses TKN1. Each note can carry native currency and one token. The research run covers offline receipt, seed recovery, both balance equations and a fresh spend. DLF1 and D8C1 remain the native-only references. [Decision, measurements and reproduction commands](experiments/token-profile/README.md)
 
 The ordinary devnet wallet keeps its verified cursor and local spending paths. It can import an offline recipient's public address, resume a durable payment after a lost reply and restore a fixed chain prefix while mining continues. Run `./pqd wallet-walkthrough` to exercise the published user commands under real proof of work. [Wallet operation and trust assumptions](devnet/WALLET_PROTOCOL.md)

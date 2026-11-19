@@ -1,0 +1,216 @@
+{
+  "candidate": "c78053fabf7e9944a27921a348cad6c3804284bd",
+  "captures": {
+    "blocks": 50,
+    "branches": {
+      "common": {
+        "fees": 12,
+        "height": 31,
+        "issued": 3100,
+        "spent": 8,
+        "tip": "000001b49801ff265d251aa24798e9adb0baf086a5e5d0d51250f2fcfdbb9436"
+      },
+      "final": {
+        "fees": 15,
+        "height": 44,
+        "issued": 4400,
+        "spent": 10,
+        "tip": "00000214632355f9de7850694a672f914335b681c9e2b6302b99b5e073eba7a1"
+      },
+      "loser": {
+        "fees": 15,
+        "height": 37,
+        "issued": 3700,
+        "spent": 10,
+        "tip": "000002b64dd50a7c6e25a963760b9a99f2bcb518580315473d4782af6587d635"
+      },
+      "winner": {
+        "fees": 12,
+        "height": 41,
+        "issued": 4100,
+        "spent": 8,
+        "tip": "000000fc7f5c6995cba0c317e82c9cff7c6892fa77ec249e308ae3c74dda7244"
+      }
+    },
+    "observer": {
+      "changed_state_samples": {
+        "a": 54,
+        "b": 56,
+        "c": 52,
+        "d": 21
+      },
+      "cold_genesis_loser_winner_final_observed": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "cold_sequence_in_order": true,
+      "retry_pending_observed": {
+        "a": true,
+        "b": true,
+        "c": true,
+        "d": true
+      },
+      "sampled_distinct_node_a_pids": 2
+    },
+    "selected": {
+      "anchor": "cf0f6cae9057557d1a189322fa4fa5774fe4839e80b8cec1974e42dba867d4ff",
+      "fees": 15,
+      "height": 44,
+      "issued": 4400,
+      "miners_credited": 4415,
+      "notes": 55,
+      "payments": 5,
+      "root": "af766a66ff16307de53528b8c654450ea32260a17bedaafe1a7b2974d82848ec",
+      "spent": 10,
+      "spent_set_sha256": "c4cd930622adbaf362b6c00e6bc706780992187e8b5aaf08bce18add48eb07de",
+      "tip": "00000214632355f9de7850694a672f914335b681c9e2b6302b99b5e073eba7a1",
+      "token_issued": 240,
+      "work": 184549376
+    },
+    "unique_verified_packets": 6,
+    "verified_selected_databases": 4
+  },
+  "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "genesis_sha256": "49c9784951723bb725028193c5c6a43c0f964f497a9403dc824169b720ea24f7",
+  "head_clean": true,
+  "independent_primitive_exes": {
+    "founding": "6ec55baff089b9f26d02e4f951d017756d0731a266670ee402c908bbd2ee47eb",
+    "roots": "b0ebeff3799fb0a02e408dcb77d23d6e469ea9f9f51274eb01d4b46e912b4394"
+  },
+  "network": "83b3de75b09dc898f32d9372339e8363f3b3e95a613ca779328968ef82cea128",
+  "node_native_sha256": "6ce7aac8c65a9c69d2de5562a3fc51e7768aaf3c2d35f3174856f2340fdf3266",
+  "original_build_failure": "3041fe96fc5b7a732cef82480e37daa7c50d6e82",
+  "packets": {
+    "branch-first": {
+      "amount": 3,
+      "anchor_height": 32,
+      "change": 5,
+      "fee": 3,
+      "packet_B": 143187,
+      "proving_wall_s": 5.073825262021273,
+      "token_amount": 7,
+      "token_change": 18,
+      "tx": "151d9247c34c27775e2baf84e26c1a3426433d0516dcfe09b5aec87991bb0a57"
+    },
+    "branch-retry": {
+      "amount": 3,
+      "anchor_height": 41,
+      "change": 5,
+      "fee": 3,
+      "packet_B": 143187,
+      "proving_wall_s": 4.981783042894676,
+      "token_amount": 7,
+      "token_change": 18,
+      "tx": "6357de2c17c8af8dfad4a570056309451ce5dbb87b15a90608acdd29fd503976"
+    },
+    "combined": {
+      "amount": 9,
+      "anchor_height": 18,
+      "change": 11,
+      "fee": 3,
+      "packet_B": 143187,
+      "proving_wall_s": 5.030017578974366,
+      "token_amount": 45,
+      "token_change": 25,
+      "tx": "483f181e953665ee3cdef3549fabb6f280f1e05795f917c463f247db7312d98e"
+    },
+    "native-only": {
+      "amount": 23,
+      "anchor_height": 11,
+      "change": 74,
+      "fee": 3,
+      "packet_B": 143187,
+      "proving_wall_s": 4.992883701110259,
+      "token_amount": 0,
+      "token_change": 0,
+      "tx": "0de356d5e1283c31d1a0c180e59e303c515245337295c39e360e9547abb80fac"
+    },
+    "onward": {
+      "amount": 4,
+      "anchor_height": 24,
+      "change": 2,
+      "fee": 3,
+      "packet_B": 143187,
+      "proving_wall_s": 5.061850185971707,
+      "token_amount": 13,
+      "token_change": 32,
+      "tx": "2864e2c2d44ec53280d82610d9509bdc358d858967afb9367b43d975ed07cc31"
+    },
+    "token-only": {
+      "amount": 0,
+      "anchor_height": 5,
+      "change": 97,
+      "fee": 3,
+      "packet_B": 143187,
+      "proving_wall_s": 5.012591276085004,
+      "token_amount": 70,
+      "token_change": 170,
+      "tx": "134f1e4cd9035d7d260032e0b075cfb7ed2671f398ecc52804cb8028070cd53e"
+    }
+  },
+  "process_tree_gnu_time": {
+    "maxrss_KiB": 405096,
+    "scope": "Cold source build plus observed ordinary walkthrough, GNU time reporting boundaries apply.",
+    "system_s": 11.02,
+    "user_s": 228.07,
+    "wall_s": 186.13
+  },
+  "release_bundle": {
+    "bytes": 1727003,
+    "name": "TKN1-PoW-clean-public.tar.gz",
+    "regular_files": 66,
+    "sha256": "e9c8e3c21d38af756ceb430572bcce829f874f2d07b649d68183d0e48d3debf1"
+  },
+  "rustc": "1.93.0 (254b59607 2026-01-19)",
+  "source_url": "https://github.com/jouliene/pq-private-chain.git",
+  "stale": {
+    "anchor_heights": [
+      32,
+      41
+    ],
+    "common_spending_slot": 0,
+    "detached_miner_native_after": 0,
+    "detached_miner_native_before": 603,
+    "original": "151d9247c34c27775e2baf84e26c1a3426433d0516dcfe09b5aec87991bb0a57",
+    "orphan_age_at_winning_next": 10,
+    "pending": "6357de2c17c8af8dfad4a570056309451ce5dbb87b15a90608acdd29fd503976",
+    "same_receipt_digest": false,
+    "settled": "6357de2c17c8af8dfad4a570056309451ce5dbb87b15a90608acdd29fd503976",
+    "shared_cm": 0,
+    "shared_nf": 1,
+    "wallet_refusal": "insufficient funds within two unreserved inputs"
+  },
+  "stronger_native_sha256": "49cc37efa0b458ec883ec6f2943a555a0a6e3a2668753b932fcddbe357d8df98",
+  "stronger_public_replay": {
+    "meters": [
+      {
+        "cpu_s": 3.320123987,
+        "elapsed_s": 2.115832475,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 668436
+      },
+      {
+        "cpu_s": 0.007207573,
+        "elapsed_s": 0.007207376,
+        "operation": "public_verify",
+        "peak_rss_kib": 668436
+      },
+      {
+        "cpu_s": 8.7131e-05,
+        "elapsed_s": 8.7289e-05,
+        "operation": "rejected",
+        "peak_rss_kib": 668436
+      }
+    ],
+    "packet": "aeacb7e108055439226b5a6161d38b29aa6d804567f11285e7d3f85b7bfb6acb",
+    "packet_B": 383033,
+    "positive_and_both_cross_profile_rejections": true,
+    "proof_B": 379440,
+    "wire_cap_excess_B": 120889
+  },
+  "stronger_vk_sha256": "74fa3fb56350de946797b7b68e925ae2193efe6b0257ad62e474225d650cd68c",
+  "tkn1_vk_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+}
