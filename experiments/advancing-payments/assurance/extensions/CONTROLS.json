@@ -1,0 +1,27 @@
+{
+  "original_layout_preserved": true,
+  "proof_or_value_authorization": false,
+  "rejected": {
+    "changed terms": "role/statement mismatch",
+    "cross-block double-spend": "nullifier conflict",
+    "duplicate whole agreement": "duplicate agreement",
+    "left only": "incomplete atom",
+    "one leg per block": "incomplete atom",
+    "ordinary envelope on token": "cross-version role",
+    "oversized candidate": "batch capacity",
+    "pre-spent counterparty": "nullifier conflict",
+    "relabel one swap leg": "role/statement mismatch",
+    "relabel token statement": "role/statement mismatch",
+    "repeated role": "role/statement mismatch",
+    "right only": "incomplete atom",
+    "scheduler given orphan": "incomplete atom",
+    "unmatched agreement": "role/statement mismatch",
+    "wrong role order": "duplicate or reordered role"
+  },
+  "scope": "synthetic structural layouts only",
+  "slots": [
+    3,
+    2
+  ],
+  "successful_replacements": 2
+}

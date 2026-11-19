@@ -1,0 +1,12 @@
+{
+  "approved_manifest_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "registration_rechecked_after_control": true,
+  "rejected": {
+    "different circuit-specific cap, coherent files": "wallet: vk differs from approved manifest",
+    "incorrect external approval": "unapproved manifest",
+    "mismatched separate common": "outer2: common",
+    "stock wallet profile": "wallet: target mismatch",
+    "substituted arity": "outer2: public-input arity",
+    "unapproved manifest bytes": "unapproved manifest"
+  }
+}
