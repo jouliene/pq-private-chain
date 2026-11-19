@@ -87,27 +87,26 @@ class Outbox:
     def reserved(self,cm,ident):
         return self.db.execute("SELECT 1 FROM reservations WHERE cm=? AND intent<>?",(cm,ident)).fetchone() is not None
 
-    def reserve(self,ident,cms):
-        cms=list(cms)
+    def prepare(self,ident,raw,state,payment,wall,pins):
+        tx=hashlib.sha256(raw).hexdigest()
+        cms=list(pins)
         if not 1<=len(cms)<=2 or len(set(cms))!=len(cms) or any(len(bytes.fromhex(cm))!=32 for cm in cms):
             raise ValueError("invalid real inputs")
-        with self.db:
-            updated=self.db.execute("UPDATE intents SET pinned=? WHERE id=? AND pinned IS NULL",(json.dumps(cms),ident))
-            if updated.rowcount:
-                self.db.executemany("INSERT INTO reservations VALUES(?,?)",((cm,ident) for cm in cms))
-        if json.loads(self.get(ident)["pinned"])!=cms:
-            raise ValueError("existing reservation differs")
-
-    def prepare(self,ident,raw,state,payment,wall):
-        tx=hashlib.sha256(raw).hexdigest()
         account={k:payment[k] for k in ("amount","fee","change","input_total","real_inputs")}
         account["encoded_bytes"]=len(raw)
         intent=self.get(ident)
-        if (list(payment["input_commitments"])!=json.loads(intent["pinned"]) or account["amount"]!=intent["amount"] or account["fee"]!=FEE or account["change"]<0
-                or account["input_total"]!=account["amount"]+FEE+account["change"]
-                or account["real_inputs"]!=len(json.loads(intent["pinned"]))):
+        if (list(payment["input_commitments"])!=cms or account["amount"]!=intent["amount"] or
+                account["fee"]!=FEE or account["change"]<0 or account["real_inputs"]!=len(cms) or
+                account["input_total"]!=account["amount"]+FEE+account["change"]):
             raise ValueError("prover accounting differs from persisted intent")
+        # The private prover has no network. Under the wallet lock the first successful
+        # packet and its exclusive real inputs can be installed in the same commit.
         with self.db:
+            if intent["pinned"] is None:
+                self.db.execute("UPDATE intents SET pinned=? WHERE id=?",(json.dumps(cms),ident))
+                self.db.executemany("INSERT INTO reservations VALUES(?,?)",((cm,ident) for cm in cms))
+            elif json.loads(intent["pinned"])!=cms:
+                raise ValueError("existing reservation differs")
             self.db.execute("UPDATE attempts SET packet=NULL WHERE intent=?",(ident,))
             self.db.execute("INSERT INTO attempts VALUES(?,?,?,?,?,?,?)",
                 (tx,ident,state.height,state.tip.hex(),raw,json.dumps(account),wall))
@@ -152,10 +151,9 @@ class Outbox:
                 raise RuntimeError("multiple authorized attempts included for the same intent")
             if included:
                 return result(self.packet(included[0]),"confirmed")
-            if row["pinned"] is None:
-                self.reserve(ident,state.select(row["amount"],exclude=lambda cm:self.reserved(cm,ident)))
-                row=self.get(ident)
-            pins=tuple(json.loads(row["pinned"]))
+            row=self.get(ident)
+            pins=(state.select(row["amount"],exclude=lambda cm:self.reserved(cm,ident))
+                  if row["pinned"] is None else tuple(json.loads(row["pinned"])))
             if any(v!="unspent" for v in state.input_status(pins).values()):
                 self.set_status(ident,"input-unavailable")
                 raise ValueError("reserved real input unavailable on selected branch; resume intent "+ident+" after reconciliation")
@@ -165,7 +163,7 @@ class Outbox:
                     raise ValueError("no eligible inclusion observed; resume saved intent "+ident)
                 t=time.monotonic()
                 raw=state.pay(row["amount"],row["address"],pins)
-                attempt=self.prepare(ident,raw,state,state.last_payment,time.monotonic()-t)
+                attempt=self.prepare(ident,raw,state,state.last_payment,time.monotonic()-t,pins)
                 created+=1
                 force_new=False
                 last_ack=None
