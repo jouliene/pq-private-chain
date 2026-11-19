@@ -53,6 +53,14 @@ async def peer_request(port, metadata):
         await writer.wait_closed()
 
 
+HISTORY_FIELDS = {
+    "history_head": {"op","locator"},
+    "history_range": {"op","target","start","base","limit"},
+    "history_check": {"op","target"},
+    "history_info": {"op"},
+}
+
+
 class Node:
     def __init__(self, args, db):
         self.home = args.home
@@ -86,6 +94,16 @@ class Node:
             raise ValueError("unexpected body")
         if op=="status":
             return self.status(),b""
+        if op in HISTORY_FIELDS and set(m) != HISTORY_FIELDS[op]:
+            raise ValueError("unexpected history request fields")
+        if op=="history_head":
+            return self.db.history_head(m["locator"]),b""
+        if op=="history_range":
+            return self.db.history_range(m["target"],m["start"],m["base"],m["limit"])
+        if op=="history_check":
+            return self.db.history_check(m["target"]),b""
+        if op=="history_info":
+            return dict(version=1,startup=self.db.history.startup),b""
         if op=="locate":
             loc = m["locator"]
             if not isinstance(loc,list) or not 1<=len(loc)<=128:

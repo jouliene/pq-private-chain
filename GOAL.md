@@ -1,3 +1,9 @@
+# Ordinary wallet on a continuously mined PoW devnet
+
+Starting revision `82c803961996864782a5dee050a02b60b4341c0e`. A wallet synchronized yesterday must check its balance and pay an offline recipient today by downloading only changes. Build atomic persistent APV2 wallet cursors, inventory, spentness and local membership paths. Support unchanged heads, bounded direct common-data suffixes, interruptible fixed-prefix seed recovery during mining, shallow and deeper-than-undo reorganizations and verified fresh spending. Export public addresses. Persist sender-only intent and packet state before exposure; all retry authorizations must be mutually exclusive on a selected chain. Reproduce lost replies, reconnection and stale anchors. Compare against full replay and measure warm balance, warm send and cold restore at two substantially different history sizes, with actual history payload, serving reads, memory and elapsed time. Preserve the historical consensus, fees and proofs. Independently reproduce from clean checkout and publish with passing CI. Archive economics, end-to-end PQ/privacy and versioned private assets and swaps stay open.
+
+## Historical milestone
+
 # First runnable local proof-of-work devnet
 
 **Bounded local devnet milestone.** Starting from public revision `46932763d7a0e6d03ea848ae2e22ab65ef48d5df`, deliver a runnable three-peer local network, two independent CPU miners, branch-valid APV2 singleton payments, scheduled spendable rewards, exact fees, seed restoration followed by spending, deep archival reorganization, and fresh genesis sync. Acceptance includes a clean independent reproduction, a published revision and a CI exercise of the changed path. The global private post-quantum blockchain objective remains active. See [the decision](devnet/RESULTS.md) and STATUS.md for the executable delivery and acceptance record.

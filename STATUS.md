@@ -1,3 +1,7 @@
+# Ordinary wallet milestone — ACTIVE
+
+Start from the published first devnet at `82c803961996864782a5dee050a02b60b4341c0e`. The wallet specialist owns Rust receipt/path support, joint private checkpoints and recovery. The history specialist owns indexed branch ranges, snapshot anchors and read counters. A non-author owns independent tests and reproduction. Root owns the ordinary CLI, durable intent journal, acceptance walkthrough, measurements, release and CI. Resume by inspecting `git status --short --branch`, the devnet source, native build receipts and running jobs; do not repeat the previous PoW research campaign. One expensive local proving/build campaign at a time. Preserve all private seed, witness, intent and inventory material outside published artifacts.
+
 # First runnable local PoW devnet
 
 The source and local independent acceptance passed. Run `./pqd start` for continuous mining or `./pqd walkthrough` for a new reproducible network. The [operator guide](devnet/README.md), [decision and costs](devnet/RESULTS.md), [non-author review](devnet/review/REVIEW.md) and [hosted CI history](https://github.com/jouliene/pq-private-chain/actions/workflows/devnet.yml) provide the release record. The global private post-quantum blockchain objective remains **ACTIVE**.

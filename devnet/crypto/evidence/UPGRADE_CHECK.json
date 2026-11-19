@@ -1,0 +1,26 @@
+[
+  {
+    "interrupted_after": 1,
+    "entry_point": "active-runtime",
+    "visible_pair": "legacy",
+    "recovered_current": true
+  },
+  {
+    "interrupted_after": 2,
+    "entry_point": "native",
+    "visible_pair": "legacy",
+    "recovered_current": true
+  },
+  {
+    "interrupted_after": 3,
+    "entry_point": "BUILD.json",
+    "visible_pair": "legacy",
+    "recovered_current": true
+  },
+  {
+    "interrupted_after": 4,
+    "entry_point": "active-runtime",
+    "visible_pair": "current",
+    "recovered_current": true
+  }
+]

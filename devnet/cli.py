@@ -1,6 +1,6 @@
 """Local proof-of-work devnet operator and private wallet client."""
 import argparse
-from contextlib import ExitStack
+from contextlib import ExitStack, contextmanager
 import fcntl
 import hashlib
 import json
@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import socket
+import hmac
 import subprocess
 import tempfile
 import sys
@@ -115,6 +116,30 @@ class Lab:
             raise ValueError("public address size")
         return a
 
+    def export_address(self,name,path):
+        from chain import NETWORK
+        data=b"PQDADDR1"+NETWORK+self.address(name)
+        write_exclusive(path,data+hashlib.sha256(data).digest())
+        return dict(public_address_file=str(path),bytes=len(data)+32)
+
+    def destination(self,value):
+        if not value.startswith("@"):
+            return self.address(value)
+        from chain import NETWORK
+        with Path(value[1:]).open("rb") as f:
+            raw=f.read(1674)
+        if (len(raw)!=1673 or raw[:40]!=b"PQDADDR1"+NETWORK or raw[40]!=1
+                or not hmac.compare_digest(raw[-32:],hashlib.sha256(raw[:-32]).digest())):
+            raise ValueError("invalid public address file, checksum or devnet network")
+        return raw[40:-32]
+
+    @contextmanager
+    def locked_wallet(self,name):
+        directory=private_directory(self.walletdir(name))
+        with (directory/"operation.lock").open("a") as lock:
+            fcntl.flock(lock,fcntl.LOCK_EX)
+            yield directory
+
     def backup(self,name,path):
         seed=self.walletdir(name)/"seed"
         if seed.is_symlink() or seed.stat().st_mode & 0o077:
@@ -122,12 +147,19 @@ class Lab:
         write_exclusive(path,seed.read_bytes())
         return dict(backup=str(path))
 
-    def restore(self,name,path):
+    def restore(self,name,path,node="c",max_blocks=None):
         if path.is_symlink() or not path.is_file() or path.stat().st_mode&0o077:
             raise ValueError("seed backup must be a private regular file (0600)")
         if path.stat().st_size!=32:
             raise ValueError("expected 32-byte wallet seed")
-        return self.install_wallet(name,path.read_bytes())
+        seed=path.read_bytes()
+        directory=self.walletdir(name)
+        if directory.exists():
+            if not hmac.compare_digest((private_directory(directory)/"seed").read_bytes(),seed):
+                raise ValueError("destination holds a different wallet")
+        else:
+            self.install_wallet(name,seed)
+        return self.balance(name,node,max_blocks=max_blocks)
 
     def initialize(self):
         private_directory(self.home,create=True)
@@ -233,26 +265,43 @@ class Lab:
                     raise
         raise ValueError("wallet could not obtain a consistent selected history; retry")
 
-    def balance(self,name,node):
-        s,history=self.snapshot(node)
-        with self.wallet(name) as w:
-            result=w.scan(*history)
-        return dict(wallet=name,tip=s["tip"],height=s["height"],**result)
+    def balance(self,name,node,max_blocks=None):
+        from wallet_sync import synced_wallet
+        with self.locked_wallet(name) as directory, self.wallet(name) as w:
+            with synced_wallet(self,node,w,directory,max_blocks=max_blocks) as (state,stats):
+                result=dict(wallet=name,tip=state.tip.hex(),height=state.height,
+                            sync=stats,**state.inventory())
+        result["wallet_metrics"]=w.metrics
+        return result
 
-    def send(self,name,to,amount,node):
-        s,history=self.snapshot(node)
-        with self.wallet(name) as w:
-            w.scan(*history)
-            before=time.monotonic()
-            packet=w.pay(amount,self.address(to))
-            wall=time.monotonic()-before
-            payment=w.last_payment
-        wire={}
-        admission,_=self.request(node,"submit",packet,meter=wire)
-        if admission["id"]!=hashlib.sha256(packet).hexdigest():
-            raise ValueError("submission identity")
-        return dict(tx=admission["id"],anchor_height=s["height"],packet_B=len(packet),wallet_metrics=w.metrics,submission_frame=wire,
-                    proving_wall_s=wall,**payment)
+    def send(self,name,to,amount,node,intent=None,wait_seconds=0):
+        from intents import default_id
+        address=self.destination(to)
+        return self._outgoing(name,node,intent or default_id(address,amount),wait_seconds,address,amount)
+
+    def resume(self,name,intent,node,wait_seconds=0):
+        return self._outgoing(name,node,intent,wait_seconds)
+
+    def _outgoing(self,name,node,ident,wait_seconds,address=None,amount=None):
+        from intents import Outbox
+        from wallet_sync import synced_wallet
+        if type(wait_seconds) is not int or not 0<=wait_seconds<=3600:
+            raise ValueError("wait must be 0..3600 seconds")
+        with self.locked_wallet(name) as directory, Outbox(directory) as out:
+            if address is not None:
+                out.register(ident,address,amount)
+            else:
+                out.get(ident)
+            with self.wallet(name) as w, synced_wallet(self,node,w,directory) as (state,stats):
+                syncs=[stats]
+                result=out.drive(self,node,state,ident,syncs,wait_seconds)
+        result.update(syncs=syncs,wallet_metrics=w.metrics)
+        return result
+
+    def intents(self,name):
+        from intents import Outbox
+        with self.locked_wallet(name) as directory, Outbox(directory) as out:
+            return [out.summary(r[0]) for r in out.db.execute("SELECT id FROM intents ORDER BY rowid")]
 
 
 def main():
@@ -265,19 +314,32 @@ def main():
     subs.add_parser("stop")
     subs.add_parser("status")
     subs.add_parser("walkthrough")
+    subs.add_parser("wallet-walkthrough")
+    c=subs.add_parser("export-address");c.add_argument("name");c.add_argument("path",type=Path)
+    c=subs.add_parser("intents");c.add_argument("name")
+    c=subs.add_parser("resume");c.add_argument("sender");c.add_argument("intent");c.add_argument("--wait",type=int,default=0);c.add_argument("--node",choices=NODES,default="c")
     c=subs.add_parser("create");c.add_argument("name")
     c=subs.add_parser("backup");c.add_argument("name");c.add_argument("path",type=Path)
-    c=subs.add_parser("restore");c.add_argument("name");c.add_argument("path",type=Path)
+    c=subs.add_parser("restore");c.add_argument("name");c.add_argument("path",type=Path);c.add_argument("--node",choices=NODES,default="c");c.add_argument("--max-blocks",type=int)
     c=subs.add_parser("balance");c.add_argument("name");c.add_argument("--node",choices=NODES,default="c")
-    c=subs.add_parser("send");c.add_argument("sender");c.add_argument("recipient");c.add_argument("amount",type=int);c.add_argument("--node",choices=NODES,default="c")
+    c=subs.add_parser("send");c.add_argument("--intent");c.add_argument("--wait",type=int,default=0);c.add_argument("sender");c.add_argument("recipient");c.add_argument("amount",type=int);c.add_argument("--node",choices=NODES,default="c")
     c=subs.add_parser("mine");c.add_argument("node",choices=NODES);c.add_argument("count",type=int,nargs="?",default=1);c.add_argument("--pay-to")
     args=p.parse_args()
     home=args.home or DEFAULT_HOME
-    if args.op=="walkthrough" and args.home is None:
+    if args.op in ("walkthrough","wallet-walkthrough") and args.home is None:
         DEFAULT_HOME.parent.mkdir(parents=True,exist_ok=True)
         home=Path(tempfile.mkdtemp(prefix="pow-walkthrough-",dir=DEFAULT_HOME.parent))
     lab=Lab(home,args.runtime)
-    if args.op=="walkthrough":
+    if args.op=="wallet-walkthrough":
+        from wallet_walkthrough import exercise
+        result=exercise(lab)
+    elif args.op=="export-address":
+        result=lab.export_address(args.name,args.path)
+    elif args.op=="intents":
+        result=lab.intents(args.name)
+    elif args.op=="resume":
+        result=lab.resume(args.sender,args.intent,args.node,args.wait)
+    elif args.op=="walkthrough":
         from walkthrough import exercise
         result=exercise(lab)
     elif args.op=="start":
@@ -293,13 +355,13 @@ def main():
     elif args.op=="balance":
         result=lab.balance(args.name,args.node)
     elif args.op=="send":
-        result=lab.send(args.sender,args.recipient,args.amount,args.node)
+        result=lab.send(args.sender,args.recipient,args.amount,args.node,args.intent,args.wait)
     elif args.op=="create":
         result=lab.new_wallet(args.name)
     elif args.op=="backup":
         result=lab.backup(args.name,args.path)
     elif args.op=="restore":
-        result=lab.restore(args.name,args.path)
+        result=lab.restore(args.name,args.path,args.node,args.max_blocks)
     print(json.dumps(result,sort_keys=True,indent=2))
 
 

@@ -1,0 +1,36 @@
+{
+  "atomic_invalid_transition": true,
+  "deep": {
+    "height": 15,
+    "owned_records": 5,
+    "positive_unspent": 4
+  },
+  "losing": {
+    "height": 14,
+    "owned_records": 14,
+    "positive_unspent": 13
+  },
+  "owned_related_payment_associations": 3,
+  "pruned_undo_then_genesis": true,
+  "rejected_continuation": true,
+  "rejected_frozen-count": true,
+  "rejected_later-block": true,
+  "replayed_blocks": 15,
+  "resumed_frozen_target": {
+    "height": 5,
+    "owned_records": 5,
+    "positive_unspent": 4
+  },
+  "rewound_blocks": 14,
+  "shallow": {
+    "height": 5,
+    "owned_records": 5,
+    "positive_unspent": 4
+  },
+  "shallow_blocks": 1,
+  "unchanged": {
+    "metadata_queries": 2,
+    "payload_B": 0,
+    "requests": 1
+  }
+}

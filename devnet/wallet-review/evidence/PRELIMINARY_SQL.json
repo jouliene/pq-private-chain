@@ -1,0 +1,585 @@
+{
+  "15": {
+    "before": {
+      "height": 15,
+      "measurements": {
+        "cold": [
+          {
+            "endpoint": {
+              "blocks": 15,
+              "metadata_B": 576,
+              "metadata_queries": 3,
+              "metadata_rows": 17,
+              "nullifiers": 6,
+              "payload_B": 15807,
+              "payload_queries": 1,
+              "payload_rows": 15,
+              "receipts": 6,
+              "reply_history_B": 15816,
+              "rewards": 15,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 134168,
+            "main_db_pread_calls": 37,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 174
+          },
+          {
+            "endpoint": {
+              "blocks": 15,
+              "metadata_B": 576,
+              "metadata_queries": 3,
+              "metadata_rows": 17,
+              "nullifiers": 6,
+              "payload_B": 15807,
+              "payload_queries": 1,
+              "payload_rows": 15,
+              "receipts": 6,
+              "reply_history_B": 15816,
+              "rewards": 15,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 113688,
+            "main_db_pread_calls": 32,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 170
+          }
+        ],
+        "suffix1": [
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "reply_history_B": 314,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 0
+            },
+            "main_db_pread_B": 27348,
+            "main_db_pread_calls": 8,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 48
+          },
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "reply_history_B": 314,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 0
+            },
+            "main_db_pread_B": 10964,
+            "main_db_pread_calls": 4,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 44
+          }
+        ],
+        "unchanged": [
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 242789,
+            "main_db_pread_calls": 61,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 31
+          },
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 230501,
+            "main_db_pread_calls": 58,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 31
+          }
+        ]
+      },
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b"
+    },
+    "hypothesis_with_forced_index": {
+      "height": 15,
+      "measurements": {
+        "cold": [
+          {
+            "endpoint": {
+              "blocks": 15,
+              "metadata_B": 576,
+              "metadata_queries": 3,
+              "metadata_rows": 17,
+              "nullifiers": 6,
+              "payload_B": 15807,
+              "payload_queries": 1,
+              "payload_rows": 15,
+              "receipts": 6,
+              "reply_history_B": 15816,
+              "rewards": 15,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 36384,
+            "main_db_pread_calls": 10,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 190
+          },
+          {
+            "endpoint": {
+              "blocks": 15,
+              "metadata_B": 576,
+              "metadata_queries": 3,
+              "metadata_rows": 17,
+              "nullifiers": 6,
+              "payload_B": 15807,
+              "payload_queries": 1,
+              "payload_rows": 15,
+              "receipts": 6,
+              "reply_history_B": 15816,
+              "rewards": 15,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 7712,
+            "main_db_pread_calls": 3,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 186
+          }
+        ],
+        "suffix1": [
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "reply_history_B": 314,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 0
+            },
+            "main_db_pread_B": 20496,
+            "main_db_pread_calls": 6,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 50
+          },
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "reply_history_B": 314,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 0
+            },
+            "main_db_pread_B": 16,
+            "main_db_pread_calls": 1,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 46
+          }
+        ],
+        "unchanged": [
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 8208,
+            "main_db_pread_calls": 3,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 34
+          },
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 16,
+            "main_db_pread_calls": 1,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 33
+          }
+        ]
+      },
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b"
+    }
+  },
+  "4": {
+    "before": {
+      "height": 4,
+      "measurements": {
+        "cold": [
+          {
+            "endpoint": {
+              "blocks": 4,
+              "metadata_B": 180,
+              "metadata_queries": 3,
+              "metadata_rows": 6,
+              "nullifiers": 6,
+              "payload_B": 12452,
+              "payload_queries": 1,
+              "payload_rows": 4,
+              "receipts": 6,
+              "reply_history_B": 12461,
+              "rewards": 4,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 45148,
+            "main_db_pread_calls": 13,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 75
+          },
+          {
+            "endpoint": {
+              "blocks": 4,
+              "metadata_B": 180,
+              "metadata_queries": 3,
+              "metadata_rows": 6,
+              "nullifiers": 6,
+              "payload_B": 12452,
+              "payload_queries": 1,
+              "payload_rows": 4,
+              "receipts": 6,
+              "reply_history_B": 12461,
+              "rewards": 4,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 32860,
+            "main_db_pread_calls": 10,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 71
+          }
+        ],
+        "suffix1": [
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 4,
+              "payload_B": 7793,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 4,
+              "reply_history_B": 7802,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 2
+            },
+            "main_db_pread_B": 27000,
+            "main_db_pread_calls": 8,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 48
+          },
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 4,
+              "payload_B": 7793,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 4,
+              "reply_history_B": 7802,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 2
+            },
+            "main_db_pread_B": 14712,
+            "main_db_pread_calls": 5,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 44
+          }
+        ],
+        "unchanged": [
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 699676,
+            "main_db_pread_calls": 173,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 31
+          },
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 691484,
+            "main_db_pread_calls": 171,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 31
+          }
+        ]
+      },
+      "tip": "00000242b0c410a6f845f91f6bcb80431cdfdfc43900dcbb763a1a9e6d41870a"
+    },
+    "hypothesis_with_forced_index": {
+      "height": 4,
+      "measurements": {
+        "cold": [
+          {
+            "endpoint": {
+              "blocks": 4,
+              "metadata_B": 180,
+              "metadata_queries": 3,
+              "metadata_rows": 6,
+              "nullifiers": 6,
+              "payload_B": 12452,
+              "payload_queries": 1,
+              "payload_rows": 4,
+              "receipts": 6,
+              "reply_history_B": 12461,
+              "rewards": 4,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 36384,
+            "main_db_pread_calls": 10,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 80
+          },
+          {
+            "endpoint": {
+              "blocks": 4,
+              "metadata_B": 180,
+              "metadata_queries": 3,
+              "metadata_rows": 6,
+              "nullifiers": 6,
+              "payload_B": 12452,
+              "payload_queries": 1,
+              "payload_rows": 4,
+              "receipts": 6,
+              "reply_history_B": 12461,
+              "rewards": 4,
+              "sql_queries": 3,
+              "transactions": 3
+            },
+            "main_db_pread_B": 7712,
+            "main_db_pread_calls": 3,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 76
+          }
+        ],
+        "suffix1": [
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 4,
+              "payload_B": 7793,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 4,
+              "reply_history_B": 7802,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 2
+            },
+            "main_db_pread_B": 24592,
+            "main_db_pread_calls": 7,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 50
+          },
+          {
+            "endpoint": {
+              "blocks": 1,
+              "metadata_B": 72,
+              "metadata_queries": 3,
+              "metadata_rows": 3,
+              "nullifiers": 4,
+              "payload_B": 7793,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 4,
+              "reply_history_B": 7802,
+              "rewards": 1,
+              "sql_queries": 3,
+              "transactions": 2
+            },
+            "main_db_pread_B": 4112,
+            "main_db_pread_calls": 2,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 46
+          }
+        ],
+        "unchanged": [
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 8208,
+            "main_db_pread_calls": 3,
+            "process_physical_read_B": 0,
+            "repetition": 0,
+            "sqlite_vm_instructions": 34
+          },
+          {
+            "endpoint": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "reply_history_B": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "main_db_pread_B": 16,
+            "main_db_pread_calls": 1,
+            "process_physical_read_B": 0,
+            "repetition": 1,
+            "sqlite_vm_instructions": 33
+          }
+        ]
+      },
+      "tip": "00000242b0c410a6f845f91f6bcb80431cdfdfc43900dcbb763a1a9e6d41870a"
+    }
+  },
+  "dataset": "Two actual public prefixes reconstructed and cryptographically admitted from the 82c8039 devnet forensic capture; local SQLite page-cache controls; no new mining",
+  "schema_test": "old primary-key WITHOUT ROWID archive lookup vs temporary forced narrow covering index and separate small ID index for history blob rows",
+  "tracer": "Linux strace pread64 main public SQLite file, raw buffers disabled; process physical_read_B from /proc/self/io. The first operation uses a fresh SQLite connection with normal schema setup; the second repeats the same read using that connection."
+}

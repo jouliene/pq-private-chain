@@ -1,0 +1,61 @@
+{
+  "atomic_invalid_transition": true,
+  "compact_payment": {
+    "native_meters": [
+      {
+        "cpu_s": 0.000202104,
+        "elapsed_s": 0.000202847,
+        "operation": "wallet_open",
+        "peak_rss_kib": 3032
+      },
+      {
+        "cpu_s": 7.19456903,
+        "elapsed_s": 4.496505266,
+        "operation": "wallet_prover_setup",
+        "peak_rss_kib": 583440
+      },
+      {
+        "cpu_s": 17.198571315,
+        "elapsed_s": 8.852383486,
+        "operation": "compact_prove",
+        "peak_rss_kib": 1090928
+      }
+    ],
+    "packet_B": 230206,
+    "packet_sha256": "760c872aaa487e41ed7f4433367bc0a9673c7db5c073cc8bd13b92e4b2527ee8",
+    "proving_wall_s": 13.349992485018447,
+    "real_inputs": 2,
+    "recipient_receipt_matches": true,
+    "verified_and_accepted_at_height": 15
+  },
+  "deep": {
+    "height": 15,
+    "owned_records": 5,
+    "positive_unspent": 4
+  },
+  "losing": {
+    "height": 14,
+    "owned_records": 14,
+    "positive_unspent": 13
+  },
+  "owned_related_payment_associations": 3,
+  "pruned_undo_then_genesis": true,
+  "replayed_blocks": 15,
+  "resumed_frozen_target": {
+    "height": 5,
+    "owned_records": 5,
+    "positive_unspent": 4
+  },
+  "rewound_blocks": 14,
+  "shallow": {
+    "height": 5,
+    "owned_records": 5,
+    "positive_unspent": 4
+  },
+  "shallow_blocks": 1,
+  "unchanged": {
+    "metadata_queries": 2,
+    "payload_B": 0,
+    "requests": 1
+  }
+}

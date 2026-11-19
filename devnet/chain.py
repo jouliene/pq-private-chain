@@ -9,6 +9,8 @@ import struct
 import sys
 import threading
 
+import history
+
 AP = Path(__file__).resolve().parents[1]/"experiments/advancing-payments"
 sys.path.insert(0, str(AP))
 from state import Frontier
@@ -149,9 +151,47 @@ class Chain:
                     row = self._row(GENESIS)
                     need(row and row["header"] == genesis_header and row["ap"] == backend.header_id(genesis_header),
                          "database genesis mismatch")
+                self.history = history.PublicHistory(self.db,NETWORK,PROFILE,GENESIS,genesis_header)
+                if self.history.new:
+                    self._backfill_wallet_history()
         except BaseException:
             self.db.close()
             raise
+
+    def _backfill_wallet_history(self):
+        # Older archives have no per-slot nullifier order in their selected spent index.
+        # Recover authenticated order and ciphertexts from the stored, already admitted blocks once.
+        stats = self.history.startup
+        for bid,height,header,raw in self.db.execute("SELECT id,h,header,raw FROM blocks WHERE h>0"):
+            b = decode_block(raw)
+            need(block_id(raw) == bid and height == b.height and header[32:36] == u32(height)
+                 and header[100:] == b.root, "archived history identity")
+            ctx = reward_context(b.parent,height,b.pk,packet_vector(b.packets))
+            reward = ctx+b.pk+u64(b.amount)+b.reward_cm
+            slots = []
+            for packet in b.packets:
+                slot, = self.backend.verify(packet)
+                slots.append(slot)
+            ids = [sha256(packet).digest() for packet in b.packets]
+            blob = history.record(height,bid,b.parent,header,reward,ids,slots)
+            self.history.put(bid,blob)
+            stats["archive_blocks"] += 1
+            stats["archive_metadata_B"] += 32+4+132
+            stats["archive_bytes"] += len(raw)
+            stats["verified_packets"] += len(ids)
+            stats["written_payload_B"] += len(blob)
+
+    def history_head(self,locator):
+        with self._transaction():
+            return self.history.head(locator)
+
+    def history_range(self,target,start,base,limit):
+        with self._transaction():
+            return self.history.page(target,start,base,limit)
+
+    def history_check(self,target):
+        with self._transaction():
+            return self.history.check(target)
 
     @contextmanager
     def _transaction(self, write=False):
@@ -322,10 +362,11 @@ class Chain:
                 packets = tuple(r[0] for r in self.db.execute("SELECT packet FROM pool ORDER BY seq LIMIT ?",(MAX_TX,)))
             return self._candidate(self._head(),pk,packets)[0]
 
-    def _persist(self,data,packets):
+    def _persist(self,data,txids,wallet_record):
         self.db.execute("INSERT INTO blocks VALUES (?,?,?,?,?,?,?,?,?,?)",data)
         self.db.executemany("INSERT INTO txloc VALUES (?,?,?)",
-                            ((sha256(p).digest(),data[0],i) for i,p in enumerate(packets)))
+                            ((txid,data[0],i) for i,txid in enumerate(txids)))
+        self.history.put(data[0],wallet_record)
 
     def _attach(self,raw,parsed,bid,existing=False):
         head = self._head()
@@ -335,10 +376,13 @@ class Chain:
         header = head["ap"]+u32(parsed.height)+parsed.state+digest(b"dev-seal",NETWORK,bid)+parsed.root
         anchor = self.backend.header_id(header)
         data = (bid,head["id"],parsed.height,head["work"]+WORK,anchor,header,fees,frontier.count,frontier.encode(),raw)
+        txids = tuple(sha256(p).digest() for p in parsed.packets)
+        wallet_record = None
         if existing:
             need(tuple(self._row(bid)) == data[:-1],"stored branch metadata")
         else:
-            self._persist(data,parsed.packets)
+            wallet_record = history.record(parsed.height,bid,head["id"],header,rec,txids,slots)
+            self._persist(data,txids,wallet_record)
         self.db.execute("INSERT INTO sel VALUES (?,?)",(parsed.height,bid))
         pos = head["n"]
         for slot in slots:
@@ -347,7 +391,7 @@ class Chain:
                 self.db.execute("INSERT INTO outs VALUES (?,?,?,?,NULL)",(pos,cm,parsed.height,ct))
                 pos += 1
         self.db.execute("INSERT INTO outs VALUES (?,?,?,NULL,?)",(pos,parsed.reward_cm,parsed.height,rec))
-        return data
+        return data,txids,wallet_record
 
     def _fork_path(self,parent):
         row = self._row(parent)
@@ -414,20 +458,20 @@ class Chain:
                 stored = self.db.execute("SELECT raw FROM blocks WHERE id=?",(side_id,)).fetchone()[0]
                 side = decode_block(stored)
                 need(block_id(stored) == side_id and int.from_bytes(side_id,"big") <= TARGET,"stored branch seal")
-                self._attach(stored,side,side_id,True)
-                included.update(sha256(p).digest() for p in side.packets)
-            data = self._attach(raw,parsed,bid)
+                _,side_txids,_ = self._attach(stored,side,side_id,True)
+                included.update(side_txids)
+            data,txids,wallet_record = self._attach(raw,parsed,bid)
             new_work = data[3]
             wins = new_work > old["work"] or (new_work == old["work"] and bid < old["id"])
             if not wins:
                 self.db.execute("ROLLBACK TO candidate")
             self.db.execute("RELEASE candidate")
             if not wins:
-                self._persist(data,parsed.packets)
+                self._persist(data,txids,wallet_record)
                 return result
             if deep:
                 self.db.execute("UPDATE metrics SET deep_replays=deep_replays+1 WHERE id=1")
-            included.update(sha256(p).digest() for p in parsed.packets)
+            included.update(txids)
             detached = (p for orphan in old_ids for p in decode_block(self.db.execute(
                 "SELECT raw FROM blocks WHERE id=?",(orphan,)).fetchone()[0]).packets)
             requeued,rejected = self._refresh(detached,included)

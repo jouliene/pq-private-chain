@@ -1,6 +1,8 @@
 """Isolated devnet wallet interface. Wallet inventory and payment details stay on the local client."""
 from __future__ import annotations
 
+from collections import deque
+
 import hashlib
 import importlib.util
 import json
@@ -65,12 +67,15 @@ class Wallet:
         if mode not in ("restore","create"):
             raise ValueError("expected create or restore")
         private = private_directory(private_dir,create=mode=="create")
+        self.binary, self.binary_sha = binary, binary_sha
+        self.private_dir = private
         self.metrics = []
         self.history = []
         self.last_payment = None
         self.scanned = False
         self.role = _wire.Role(binary,binary_sha,["wallet","/keys","/private/seed",mode],
                                checked_keys(keys),private=private)
+        self.role.times = deque(maxlen=1)
         try:
             self.address = self.role.get()
             if len(self.address)!=1601:
@@ -111,6 +116,35 @@ class Wallet:
                     receipt_notes=sum(x["source"] in ("incoming","change") for x in live),
                     incoming_notes=sum(x["source"]=="incoming" for x in live),
                     change_notes=sum(x["source"]=="change" for x in live))
+
+    def open_row(self, row):
+        if len(row) not in (104,1824):
+            raise ValueError("invalid note row")
+        res=self.role.call(b"D"+row)
+        if res==b"MISS":
+            return None
+        if len(res)!=44 or res[:3]!=b"HIT" or res[-1] not in (1,2,3):
+            raise ValueError("invalid note opening")
+        return res[3:35],int.from_bytes(res[35:43],"little"),("reward","incoming","change")[res[-1]-1]
+
+    def compact_payment(self, header, amount, to, sources):
+        if (len(header)!=132 or type(amount) is not int or not 0<amount<=MAX_VALUE or
+                len(to)!=1601 or len(sources) not in (1,2)):
+            raise ValueError("invalid compact payment request")
+        data=bytearray(b"K"+header+struct.pack("<Q",amount)+to+bytes([len(sources)]))
+        for row, siblings in sources:
+            if len(row) not in (104,1824) or not 1<=len(siblings)<=20:
+                raise ValueError("compact membership encoding")
+            data.extend(struct.pack("<HB",len(row),len(siblings)))
+            data.extend(row)
+            for level in siblings:
+                if len(level)!=3 or any(len(w)!=32 for w in level):
+                    raise ValueError("compact membership siblings")
+                data.extend(b"".join(level))
+        packet=self.role.call(bytes(data))
+        if not packet.startswith(b"APV2") or _wire.packet_width(packet)!=1:
+            raise ValueError("invalid compact payment")
+        return packet
 
     def pay(self, amount, to):
         self.last_payment = None

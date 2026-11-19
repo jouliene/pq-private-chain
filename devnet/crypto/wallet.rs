@@ -6,7 +6,7 @@ use anyhow::{ensure, Context, Result};
 use blake2::{Blake2b512, Digest as _};
 use qnero_circuit::chain::ct_digest;
 use qnero_circuit::header::HeaderInputs;
-use qnero_circuit::merkle::{empty_digest, CommitmentTree};
+use qnero_circuit::merkle::{empty_digest, CommitmentTree, MerklePath};
 use qnero_circuit::witness::{InputNote, OutputNote, SpendWitness};
 use qnero_notes::{
     encrypt_note, pad_memo, try_receive, Address, Digest, Note, NoteCiphertext, SpendingKey,
@@ -240,50 +240,173 @@ impl Selected {
         to: &Address,
     ) -> Result<Vec<u8>> {
         let tree = self.tree.as_ref().context("empty inventory")?;
-        let keys = key.derived();
-        let mut rng = rand::rng();
-        let real = |o: &Owned| InputNote::real(&keys, &o.note, tree.path(o.pos)?);
-        let second = if notes.len() == 2 {
-            real(notes[1])?
-        } else {
-            InputNote::dummy_random(&mut rng, &keys, tree.depth())
-        };
-        let total: u64 = notes.iter().map(|x| x.note.value).sum();
-        let own = key.address();
-        let mut dest = [(to, amount, false), (&own, total - amount - FEE, true)];
-        if rng.random::<bool>() {
-            dest.swap(0, 1);
-        }
-        let mut random = || {
-            let mut raw = [0u8; 32];
-            rng.fill_bytes(&mut raw);
-            raw
-        };
-        let mut witness = SpendWitness {
-            header: self.header.clone(),
-            depth: tree.depth(),
-            inputs: [real(notes[0])?, second],
-            outputs: dest.map(|(a, v, _)| {
-                OutputNote::new(a.pk, v, Digest::hash_bytes(&[b"PQDEV1/output", &random()]))
-            }),
-            fee: FEE,
-            ct_digest: empty_digest(),
-        };
-        let mut cts = Vec::new();
-        for (i, (addr, _, change)) in dest.into_iter().enumerate() {
-            let note = witness.output_note(i)?;
-            let memo = if change {
-                change_memo(key, &note.commitment())
-            } else {
-                pad_memo("")?
-            };
-            let ct = encrypt_note(&addr.ek, &note, &memo, &random())?.to_bytes();
-            ensure!(ct.len() == CT, "receipt length");
-            cts.extend(ct);
-        }
-        witness.ct_digest = Digest::from_bytes(&ct_digest(&[&cts[..CT], &cts[CT..]]))?;
-        Ok(encode(1, &prover.prove_submission(vec![witness])?, &cts))
+        let proved = notes
+            .iter()
+            .map(|n| Ok((n.note.clone(), tree.path(n.pos)?)))
+            .collect::<Result<Vec<_>>>()?;
+        pay_with_paths(&self.header, key, prover, &proved, amount, to)
     }
+}
+
+fn pay_with_paths(
+    anchor: &HeaderInputs,
+    key: &SpendingKey,
+    prover: &WalletProver,
+    notes: &[(Note, MerklePath)],
+    amount: u64,
+    to: &Address,
+) -> Result<Vec<u8>> {
+    ensure!(
+        (1..=2).contains(&notes.len()) && amount > 0 && amount <= MAX_VALUE,
+        "positive amount and funding"
+    );
+    let depth = notes[0].1.depth();
+    ensure!(
+        depth > 0
+            && notes.iter().all(|(n, p)| n.pk == key.pk()
+                && n.value > 0
+                && p.depth() == depth
+                && p.root(n.commitment()).ok() == Some(anchor.zk_tree_root)),
+        "invalid compact membership"
+    );
+    ensure!(
+        notes.len() == 1 || notes[0].0.commitment() != notes[1].0.commitment(),
+        "duplicate funding"
+    );
+    let total: u64 = notes.iter().map(|x| x.0.value).sum();
+    ensure!(
+        total >= amount + FEE && total - amount - FEE <= MAX_VALUE,
+        "insufficient bounded funding"
+    );
+    let keys = key.derived();
+    let mut rng = rand::rng();
+    let real = |(n, p): &(Note, MerklePath)| InputNote::real(&keys, n, p.clone());
+    let second = if notes.len() == 2 {
+        real(&notes[1])?
+    } else {
+        InputNote::dummy_random(&mut rng, &keys, depth)
+    };
+    let own = key.address();
+    let mut dest = [(to, amount, false), (&own, total - amount - FEE, true)];
+    if rng.random::<bool>() {
+        dest.swap(0, 1);
+    }
+    let mut random = || {
+        let mut raw = [0u8; 32];
+        rng.fill_bytes(&mut raw);
+        raw
+    };
+    let mut witness = SpendWitness {
+        header: anchor.clone(),
+        depth,
+        inputs: [real(&notes[0])?, second],
+        outputs: dest.map(|(a, v, _)| {
+            OutputNote::new(a.pk, v, Digest::hash_bytes(&[b"PQDEV1/output", &random()]))
+        }),
+        fee: FEE,
+        ct_digest: empty_digest(),
+    };
+    let mut cts = Vec::new();
+    for (i, (addr, _, change)) in dest.into_iter().enumerate() {
+        let note = witness.output_note(i)?;
+        let memo = if change {
+            change_memo(key, &note.commitment())
+        } else {
+            pad_memo("")?
+        };
+        let ct = encrypt_note(&addr.ek, &note, &memo, &random())?.to_bytes();
+        ensure!(ct.len() == CT, "receipt length");
+        cts.extend(ct);
+    }
+    witness.ct_digest = Digest::from_bytes(&ct_digest(&[&cts[..CT], &cts[CT..]]))?;
+    Ok(encode(1, &prover.prove_submission(vec![witness])?, &cts))
+}
+
+fn open_row(key: &SpendingKey, row: &[u8]) -> Result<Option<(Note, Source)>> {
+    if row.len() == REWARD {
+        let note = reward_note(&row[..72])?;
+        ensure!(
+            note.commitment() == Digest::from_slice(&row[72..])?,
+            "reward opening"
+        );
+        return Ok((note.pk == key.pk()).then_some((note, Source::Reward)));
+    }
+    ensure!(row.len() == RECEIPT, "receipt length");
+    let cm = Digest::from_slice(&row[..32])?;
+    let ct = NoteCiphertext::from_bytes(&row[32..])?;
+    Ok(try_receive(&key.incoming_viewing_key(), &ct, &cm)
+        .ok()
+        .map(|hit| {
+            let kind = if hit.memo == change_memo(key, &cm) {
+                Source::Change
+            } else {
+                Source::Incoming
+            };
+            (hit.note, kind)
+        }))
+}
+fn ensure_prover<'a>(dir: &Path, prover: &'a mut Option<WalletProver>) -> Result<&'a WalletProver> {
+    if prover.is_none() {
+        let m = Meter::start();
+        registry::compare(
+            dir,
+            0,
+            &qnero_aggregator::artifacts::canonical_leaf_verifier_data(),
+        )?;
+        let p = WalletProver::new(1)?;
+        registry::compare(dir, 1, &p.batch_verifier_data())?;
+        *prover = Some(p);
+        m.finish("wallet_prover_setup");
+    }
+    prover.as_ref().context("prover init")
+}
+fn compact(
+    key: &SpendingKey,
+    dir: &Path,
+    prover: &mut Option<WalletProver>,
+    raw: &[u8],
+) -> Result<Vec<u8>> {
+    ensure!(raw.len() >= 1742, "compact request");
+    let anchor = header(&raw[..132])?;
+    let amount = u64::from_le_bytes(raw[132..140].try_into()?);
+    let to = Address::from_bytes(&raw[140..1741])?;
+    let count = usize::from(raw[1741]);
+    ensure!((1..=2).contains(&count), "input count");
+    let mut rest = &raw[1742..];
+    let mut notes = Vec::new();
+    for _ in 0..count {
+        ensure!(rest.len() >= 3, "compact framing");
+        let size = u16::from_le_bytes(rest[..2].try_into()?) as usize;
+        let depth = rest[2] as usize;
+        ensure!(
+            depth > 0 && depth <= 20 && rest.len() >= 3 + size + 96 * depth,
+            "compact path length"
+        );
+        let (note, _) = open_row(key, &rest[3..3 + size])?.context("not owned")?;
+        let rows = rest[3 + size..3 + size + 96 * depth]
+            .chunks_exact(96)
+            .map(|r| -> Result<_> {
+                Ok([
+                    Digest::from_slice(&r[..32])?,
+                    Digest::from_slice(&r[32..64])?,
+                    Digest::from_slice(&r[64..])?,
+                ])
+            })
+            .collect::<Result<Vec<_>>>()?;
+        let path = MerklePath::from_unsorted(&rows, note.commitment())?;
+        ensure!(
+            path.root(note.commitment())? == anchor.zk_tree_root,
+            "compact funding root mismatch"
+        );
+        notes.push((note, path));
+        rest = &rest[3 + size + 96 * depth..];
+    }
+    ensure!(rest.is_empty(), "trailing compact fields");
+    let p = ensure_prover(dir, prover)?;
+    let meter = Meter::start();
+    let result = pay_with_paths(&anchor, key, p, &notes, amount, &to)?;
+    meter.finish("compact_prove");
+    Ok(result)
 }
 
 pub fn actor(
@@ -305,6 +428,27 @@ pub fn actor(
             return Ok(());
         }
         match cmd.first() {
+            Some(b'D') => {
+                let result = open_row(&key, &cmd[1..]);
+                match result {
+                    Ok(Some((n, kind))) => {
+                        let mut b = b"HIT".to_vec();
+                        b.extend(n.nullifier(&key.nk()).to_bytes());
+                        b.extend(n.value.to_le_bytes());
+                        b.push(kind as u8);
+                        write_frame(w, &b)?;
+                    }
+                    Ok(None) => write_frame(w, b"MISS")?,
+                    Err(_) => write_frame(w, b"invalid row")?,
+                }
+            }
+            Some(b'K') => {
+                let result = compact(&key, dir, &mut prover, &cmd[1..]);
+                match result {
+                    Ok(b) => write_frame(w, &b)?,
+                    Err(_) => write_frame(w, b"invalid compact payment")?,
+                }
+            }
             Some(b'S') => {
                 selected = None;
                 let leaves = pages(r, 32)?;
@@ -347,18 +491,7 @@ pub fn actor(
                     write_frame(w, b"insufficient funds within two inputs")?;
                     continue;
                 };
-                if prover.is_none() {
-                    let m = Meter::start();
-                    registry::compare(
-                        dir,
-                        0,
-                        &qnero_aggregator::artifacts::canonical_leaf_verifier_data(),
-                    )?;
-                    let p = WalletProver::new(1)?;
-                    registry::compare(dir, 1, &p.batch_verifier_data())?;
-                    prover = Some(p);
-                    m.finish("wallet_prover_setup");
-                }
+                ensure_prover(dir, &mut prover)?;
                 let m = Meter::start();
                 let result = s.pay(
                     &key,
