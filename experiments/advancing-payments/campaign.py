@@ -11,7 +11,7 @@ import time
 
 from ingress import BATCH_WAIT, Endpoint, admit_queue, create_pool, recvexact, upload
 from run import Records, payment, put, reject, rescan, save, snapshot
-from state import Ledger
+from state import Ledger, UNDO
 from wire import CT, need, packet_width, sha, split_block, u32
 
 
