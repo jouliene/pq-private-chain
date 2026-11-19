@@ -1,0 +1,74 @@
+{
+  "TKN1": {
+    "assumed_agreements": [
+      {
+        "RS_list_size_max": null,
+        "agreement_fraction": "1/32",
+        "finite_list_bound_before_floor": null,
+        "largest_single_draw_probability": "576460752169205761/18446744069414584321",
+        "set_size": 4096,
+        "single_fixed_set_exponent_bits": 130.0,
+        "union_exponent_for_fixed_prelisted_sets_of_at_most_this_size": null
+      },
+      {
+        "RS_list_size_max": 6,
+        "agreement_fraction": "1/4",
+        "finite_list_bound_before_floor": "28673/4097",
+        "largest_single_draw_probability": "4611686017353646081/18446744069414584321",
+        "set_size": 32768,
+        "single_fixed_set_exponent_bits": 52.0,
+        "union_exponent_for_fixed_prelisted_sets_of_at_most_this_size": 49.415037499278846
+      },
+      {
+        "RS_list_size_max": 2,
+        "agreement_fraction": "1/2",
+        "finite_list_bound_before_floor": "61441/28673",
+        "largest_single_draw_probability": "9223372034707292161/18446744069414584321",
+        "set_size": 65536,
+        "single_fixed_set_exponent_bits": 26.0,
+        "union_exponent_for_fixed_prelisted_sets_of_at_most_this_size": 25.0
+      }
+    ],
+    "domain": 131072,
+    "key_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+    "p_mod_n": 1,
+    "queries": 26,
+    "trace_rows": 4096
+  },
+  "TKQ1": {
+    "assumed_agreements": [
+      {
+        "RS_list_size_max": null,
+        "agreement_fraction": "1/32",
+        "finite_list_bound_before_floor": null,
+        "largest_single_draw_probability": "576460752169205761/18446744069414584321",
+        "set_size": 16384,
+        "single_fixed_set_exponent_bits": 320.0,
+        "union_exponent_for_fixed_prelisted_sets_of_at_most_this_size": null
+      },
+      {
+        "RS_list_size_max": 6,
+        "agreement_fraction": "1/4",
+        "finite_list_bound_before_floor": "114689/16385",
+        "largest_single_draw_probability": "4611686017353646081/18446744069414584321",
+        "set_size": 131072,
+        "single_fixed_set_exponent_bits": 128.0,
+        "union_exponent_for_fixed_prelisted_sets_of_at_most_this_size": 125.41503749927884
+      },
+      {
+        "RS_list_size_max": 2,
+        "agreement_fraction": "1/2",
+        "finite_list_bound_before_floor": "245761/114689",
+        "largest_single_draw_probability": "9223372034707292161/18446744069414584321",
+        "set_size": 262144,
+        "single_fixed_set_exponent_bits": 64.0,
+        "union_exponent_for_fixed_prelisted_sets_of_at_most_this_size": 63.0
+      }
+    ],
+    "domain": 524288,
+    "key_sha256": "74fa3fb56350de946797b7b68e925ae2193efe6b0257ad62e474225d650cd68c",
+    "p_mod_n": 1,
+    "queries": 64,
+    "trace_rows": 16384
+  }
+}

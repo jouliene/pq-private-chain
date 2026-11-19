@@ -1,3 +1,9 @@
+# Live private-token PoW devnet
+
+Active from b5fe04306d4174ebdaa9950335ddc2bfa8845180. Work in experiments/token-devnet. Wallet integration owns private paths, typed compact scanning and the native role. Monetary review owns the public reconciliation and stronger proof comparison. A non-author owns fresh reproduction. The orchestrator owns network identity, founding inventory, node integration, operation, acceptance campaign and publication. Next run the public three-peer experiment, then independently reproduce from a clean checkout. The global blockchain objective remains active.
+
+## Earlier milestone
+
 # Private token spend profile
 
 Select TKN1 for the first fixed native-plus-one-token research prototype. Both lanes are privately committed and conserved. Each full 2×2 packet is 143,187 B. Four fresh transfers included two senders paying an offline recipient, seed-only receipt and respend, and a second restored recipient spending its only note. The founding supply of 400 native and 240 tokens finished with 388 spendable native, a 12-native fee sink, and 240 tokens. DLF1 remains the native-only reference. D8C1 remains optional only for DLF1 history. A separate typed archive would need a new recursive verifier.

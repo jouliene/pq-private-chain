@@ -1,0 +1,251 @@
+{
+  "all_four_tip_public_status_and_disclosed_lanes_match": true,
+  "all_terminal_branches": {
+    "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83": {
+      "fees": 15,
+      "funded_commitments_set_sha256": "c26159496e7ae19b575bcb343aef2cadf2069a8d9376d062b09ad229b6d561be",
+      "gross_native_miner_credits": 3115,
+      "height": 31,
+      "issued": 3100,
+      "native_fees_recaptured_once": 15,
+      "net_native_after_transfer_debits": 3100,
+      "notes": 42,
+      "payments": 5,
+      "spent": 10,
+      "spent_set_sha256": "ac58fe1dfa7b4876d1bed57b99c73c34a68d3daa5b8a5cd416554c2e23dae10e",
+      "tip": "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83",
+      "token_issued": 240,
+      "work": 130023424
+    },
+    "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684": {
+      "fees": 15,
+      "funded_commitments_set_sha256": "93e4a161d83e0a66a48c81edc1c74c0d71100e4cf5ae645f955731112c3043bb",
+      "gross_native_miner_credits": 2415,
+      "height": 24,
+      "issued": 2400,
+      "native_fees_recaptured_once": 15,
+      "net_native_after_transfer_debits": 2400,
+      "notes": 35,
+      "payments": 5,
+      "spent": 10,
+      "spent_set_sha256": "d081f4ed15f024e0ca4a293581d43a9939732465fff065ea5f46acb32c89abc9",
+      "tip": "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684",
+      "token_issued": 240,
+      "work": 100663296
+    }
+  },
+  "approved_genesis_sha256": "a45acce896ccdce3b73e8568a14a34d81d9f203baec04bc466bf6a8abdf6e830",
+  "captured_blocks": 35,
+  "final": {
+    "fees": 15,
+    "funded_commitments_set_sha256": "c26159496e7ae19b575bcb343aef2cadf2069a8d9376d062b09ad229b6d561be",
+    "gross_native_miner_credits": 3115,
+    "height": 31,
+    "issued": 3100,
+    "native_fees_recaptured_once": 15,
+    "net_native_after_transfer_debits": 3100,
+    "notes": 42,
+    "payments": 5,
+    "spent": 10,
+    "spent_set_sha256": "ac58fe1dfa7b4876d1bed57b99c73c34a68d3daa5b8a5cd416554c2e23dae10e",
+    "tip": "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83",
+    "token_issued": 240,
+    "work": 130023424
+  },
+  "final_disclosed_wallet_inventories_match": {
+    "fork-miner": {
+      "native": 0,
+      "token": 0
+    },
+    "miner-a": {
+      "native": 1409,
+      "token": 170
+    },
+    "miner-b": {
+      "native": 677,
+      "token": 0
+    },
+    "mira-restored": {
+      "native": 5,
+      "token": 18
+    },
+    "next-restored": {
+      "native": 2,
+      "token": 32
+    },
+    "payee": {
+      "native": 4,
+      "token": 13
+    },
+    "shop": {
+      "native": 3,
+      "token": 7
+    },
+    "winning-miner": {
+      "native": 1000,
+      "token": 0
+    }
+  },
+  "founding_native": 0,
+  "founding_token": 240,
+  "network": "4e6c262476bd23b7696ede1c3b3527158e0ec27319226d5ca25c7b995995ff06",
+  "orphan_miner_before_after_match": [
+    {
+      "native": 403,
+      "token": 0
+    },
+    {
+      "native": 0,
+      "token": 0
+    }
+  ],
+  "orphan_miner_public_reward_cms_removed": [
+    "0e45202884f8d30f87892004cc0e19ffafa93aaedca4eab9dfd27ef7e538c7e4",
+    "5e7bdf0037c3d1177de6988a6dcd548bb57888bf3fe74d27aeeedd1e0d97124b",
+    "adabe1aff980417df544cce4a73b4c9b23d7ab6bd76d9a66e553b726db6277c5",
+    "c205ba721c9ec0ebe0c7762c10bf7b0672800a23fd55214c47f5f5d2d6bbead1"
+  ],
+  "public_snapshot_agreement": {
+    "common": {
+      "branch_monetary": {
+        "fees": 12,
+        "funded_commitments_set_sha256": "925bc335070bcc17f9c600ee04e053d0a6e7b99fd376879ee55f6e44175d863b",
+        "gross_native_miner_credits": 2012,
+        "height": 20,
+        "issued": 2000,
+        "native_fees_recaptured_once": 12,
+        "net_native_after_transfer_debits": 2000,
+        "notes": 29,
+        "payments": 4,
+        "spent": 8,
+        "spent_set_sha256": "fb093c6639e00f68c8bcce65c2572289b5b53f8b9b0062060d6d38ecd958e990",
+        "tip": "0000024701fc5de81c2692fa6e2eabb6b7807cfb490d1120954cd35e25d942e5",
+        "token_issued": 240,
+        "work": 83886080
+      },
+      "miners_gross_native_credit": {
+        "fork-miner": 0,
+        "miner-a": 1309,
+        "miner-b": 703,
+        "winning-miner": 0
+      },
+      "selected_disclosed_intents": [
+        "token-only",
+        "native-only",
+        "combined",
+        "onward"
+      ]
+    },
+    "final": {
+      "branch_monetary": {
+        "fees": 15,
+        "funded_commitments_set_sha256": "c26159496e7ae19b575bcb343aef2cadf2069a8d9376d062b09ad229b6d561be",
+        "gross_native_miner_credits": 3115,
+        "height": 31,
+        "issued": 3100,
+        "native_fees_recaptured_once": 15,
+        "net_native_after_transfer_debits": 3100,
+        "notes": 42,
+        "payments": 5,
+        "spent": 10,
+        "spent_set_sha256": "ac58fe1dfa7b4876d1bed57b99c73c34a68d3daa5b8a5cd416554c2e23dae10e",
+        "tip": "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83",
+        "token_issued": 240,
+        "work": 130023424
+      },
+      "miners_gross_native_credit": {
+        "fork-miner": 0,
+        "miner-a": 1412,
+        "miner-b": 703,
+        "winning-miner": 1000
+      },
+      "selected_disclosed_intents": [
+        "token-only",
+        "native-only",
+        "combined",
+        "onward",
+        "branch-retry"
+      ]
+    },
+    "loser": {
+      "branch_monetary": {
+        "fees": 15,
+        "funded_commitments_set_sha256": "93e4a161d83e0a66a48c81edc1c74c0d71100e4cf5ae645f955731112c3043bb",
+        "gross_native_miner_credits": 2415,
+        "height": 24,
+        "issued": 2400,
+        "native_fees_recaptured_once": 15,
+        "net_native_after_transfer_debits": 2400,
+        "notes": 35,
+        "payments": 5,
+        "spent": 10,
+        "spent_set_sha256": "d081f4ed15f024e0ca4a293581d43a9939732465fff065ea5f46acb32c89abc9",
+        "tip": "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684",
+        "token_issued": 240,
+        "work": 100663296
+      },
+      "miners_gross_native_credit": {
+        "fork-miner": 403,
+        "miner-a": 1309,
+        "miner-b": 703,
+        "winning-miner": 0
+      },
+      "selected_disclosed_intents": [
+        "token-only",
+        "native-only",
+        "combined",
+        "onward",
+        "branch-first"
+      ]
+    },
+    "winner": {
+      "branch_monetary": {
+        "fees": 12,
+        "funded_commitments_set_sha256": "cd99e6daa2cccaba2be5c7a304f742a8be9ae92418184665f8be5b69725e46af",
+        "gross_native_miner_credits": 3012,
+        "height": 30,
+        "issued": 3000,
+        "native_fees_recaptured_once": 12,
+        "net_native_after_transfer_debits": 3000,
+        "notes": 39,
+        "payments": 4,
+        "spent": 8,
+        "spent_set_sha256": "fb093c6639e00f68c8bcce65c2572289b5b53f8b9b0062060d6d38ecd958e990",
+        "tip": "0000017362c0c71750947611f5ae9c5548d41cf29693168b6a9f2377661dc7ce",
+        "token_issued": 240,
+        "work": 125829120
+      },
+      "miners_gross_native_credit": {
+        "fork-miner": 0,
+        "miner-a": 1309,
+        "miner-b": 703,
+        "winning-miner": 1000
+      },
+      "selected_disclosed_intents": [
+        "token-only",
+        "native-only",
+        "combined",
+        "onward"
+      ]
+    }
+  },
+  "switches": [
+    {
+      "added_fees": 3,
+      "added_reward_credits": 1103,
+      "attached_blocks": 11,
+      "attached_payment_ids": [
+        "a281a44d9edad4a4e615daf9142cc35fc9a9c456c2ebe002a9fc9c2da4576120"
+      ],
+      "common_height": 20,
+      "detached_blocks": 4,
+      "detached_payment_ids": [
+        "2784469c208ccd0eb6d3e554acafbee308af3fd4ce9beb9d9781ee4fad60f096"
+      ],
+      "exact_winner_from_undo_apply": true,
+      "from_tip": "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684",
+      "removed_fees": 3,
+      "removed_reward_credits": 403
+    }
+  ]
+}

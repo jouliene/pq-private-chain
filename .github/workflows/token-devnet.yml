@@ -1,0 +1,39 @@
+name: Live private-token PoW payment
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/token-devnet/**'
+      - 'devnet/**'
+      - 'pqd'
+      - '.github/workflows/token-devnet.yml'
+  pull_request:
+    paths:
+      - 'experiments/token-devnet/**'
+      - 'devnet/**'
+      - 'pqd'
+      - '.github/workflows/token-devnet.yml'
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Prepare pinned toolchain and isolated roles
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap build-essential git
+          rustup toolchain install 1.93.0 --profile minimal
+          bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --ro-bind / / -- /usr/bin/true
+      - name: Mine, restore, spend, switch branches and reconcile issuance
+        run: |
+          set -eu
+          h="$RUNNER_TEMP/tkn-network"
+          ./pqd token --home "$h" walkthrough
+          python3 -IB experiments/token-devnet/money/reconcile.py "$h/public" --approve-genesis "$(cat "$h/deployment/devnet/approved-genesis.sha256")"

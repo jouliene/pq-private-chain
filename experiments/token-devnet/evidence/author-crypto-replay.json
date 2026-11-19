@@ -1,0 +1,217 @@
+{
+  "blocks": 35,
+  "branches": [
+    {
+      "anchor": "381b3c11183bc7948b4e2564f21c279d8fc5328ce3e7f01bf33f4a0f1a7b6883",
+      "fees": 15,
+      "height": 31,
+      "issued": 3100,
+      "miners_credited": 3115,
+      "notes": 42,
+      "payments": 5,
+      "root": "e08b088d0446fe38323a59fb355da0484a77a2b31f2ad3133e898c7944a4cb2c",
+      "spent": 10,
+      "spent_set_sha256": "ac58fe1dfa7b4876d1bed57b99c73c34a68d3daa5b8a5cd416554c2e23dae10e",
+      "tip": "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83",
+      "token_issued": 240,
+      "work": 130023424
+    },
+    {
+      "anchor": "7fad34725920a326ab0ab5e196203cce24cb583fc9201c957f3d6d22fe738740",
+      "fees": 15,
+      "height": 24,
+      "issued": 2400,
+      "miners_credited": 2415,
+      "notes": 35,
+      "payments": 5,
+      "root": "5a2eba8b4a01fec72da5c313bdc448e91f6cfe38c7ca891867d62191210ef67f",
+      "spent": 10,
+      "spent_set_sha256": "d081f4ed15f024e0ca4a293581d43a9939732465fff065ea5f46acb32c89abc9",
+      "tip": "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684",
+      "token_issued": 240,
+      "work": 100663296
+    }
+  ],
+  "databases": [
+    {
+      "height": 31,
+      "outputs": 42,
+      "selected_payments": 5
+    },
+    {
+      "height": 31,
+      "outputs": 42,
+      "selected_payments": 5
+    },
+    {
+      "height": 31,
+      "outputs": 42,
+      "selected_payments": 5
+    },
+    {
+      "height": 31,
+      "outputs": 42,
+      "selected_payments": 5
+    }
+  ],
+  "genesis_id": "bfd9a05b90ed3878ecef812394b6aba5f1caf1ae3bd53d0bfdb0ee57bfa90edc",
+  "genesis_sha256": "a45acce896ccdce3b73e8568a14a34d81d9f203baec04bc466bf6a8abdf6e830",
+  "links": [
+    {
+      "first": "a281a44d9edad4a4e615daf9142cc35fc9a9c456c2ebe002a9fc9c2da4576120",
+      "first_height": 30,
+      "same_anchor": false,
+      "same_nf_positions": [
+        0
+      ],
+      "same_packet": false,
+      "same_receipt_digest": false,
+      "second": "2784469c208ccd0eb6d3e554acafbee308af3fd4ce9beb9d9781ee4fad60f096",
+      "second_height": 21,
+      "shared_nf": 1,
+      "shared_outputs": 0
+    }
+  ],
+  "network": "4e6c262476bd23b7696ede1c3b3527158e0ec27319226d5ca25c7b995995ff06",
+  "nonselected": {
+    "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684": {
+      "fees": 3,
+      "height": 24,
+      "payments": [
+        "2784469c208ccd0eb6d3e554acafbee308af3fd4ce9beb9d9781ee4fad60f096"
+      ],
+      "reward": 103,
+      "reward_cm": "c205ba721c9ec0ebe0c7762c10bf7b0672800a23fd55214c47f5f5d2d6bbead1",
+      "reward_present_on_winner": false
+    },
+    "000002bf6c2faca0c4e1637f6f22edeba8240ebe41748bf19e21373c191242a6": {
+      "fees": 0,
+      "height": 23,
+      "payments": [],
+      "reward": 100,
+      "reward_cm": "adabe1aff980417df544cce4a73b4c9b23d7ab6bd76d9a66e553b726db6277c5",
+      "reward_present_on_winner": false
+    },
+    "000003761212019a0737e315c02b419162ac8e133e8f77d82b1f80a4ca31ec57": {
+      "fees": 0,
+      "height": 22,
+      "payments": [],
+      "reward": 100,
+      "reward_cm": "5e7bdf0037c3d1177de6988a6dcd548bb57888bf3fe74d27aeeedd1e0d97124b",
+      "reward_present_on_winner": false
+    },
+    "000003acebe31a26f3e9e6534cd4f3e1c1a985c43ce62994dbf2c47b039b9c63": {
+      "fees": 0,
+      "height": 21,
+      "payments": [],
+      "reward": 100,
+      "reward_cm": "0e45202884f8d30f87892004cc0e19ffafa93aaedca4eab9dfd27ef7e538c7e4",
+      "reward_present_on_winner": false
+    }
+  },
+  "packet_status": {
+    "2784469c208ccd0eb6d3e554acafbee308af3fd4ce9beb9d9781ee4fad60f096": {
+      "age_at_next_selected_block": 11,
+      "anchor_blocks": [
+        "000003acebe31a26f3e9e6534cd4f3e1c1a985c43ce62994dbf2c47b039b9c63"
+      ],
+      "anchor_height": 21,
+      "originating_packet_in_winner": false,
+      "selected_anchor": false,
+      "selected_spent_nullifiers": 1,
+      "within_age_at_next": false
+    },
+    "5507bdb7251669924a5cbe87ab68ad2d5a1833f5387979155d0a578d39b24339": {
+      "age_at_next_selected_block": 29,
+      "anchor_blocks": [
+        "0000025036c09281688a4285ff0c9859d9a1e9cc26175c7037f1c93ca8c716c1"
+      ],
+      "anchor_height": 3,
+      "originating_packet_in_winner": true,
+      "selected_anchor": true,
+      "selected_spent_nullifiers": 2,
+      "within_age_at_next": false
+    },
+    "805900b481b2c4555997abd97b4e037f1d145021918460043df78ddf65221f18": {
+      "age_at_next_selected_block": 23,
+      "anchor_blocks": [
+        "000000ffed09a98e2027fbc540307cfeca72953bd345c3021cab6bd60a2a81c9"
+      ],
+      "anchor_height": 9,
+      "originating_packet_in_winner": true,
+      "selected_anchor": true,
+      "selected_spent_nullifiers": 2,
+      "within_age_at_next": false
+    },
+    "a281a44d9edad4a4e615daf9142cc35fc9a9c456c2ebe002a9fc9c2da4576120": {
+      "age_at_next_selected_block": 2,
+      "anchor_blocks": [
+        "0000017362c0c71750947611f5ae9c5548d41cf29693168b6a9f2377661dc7ce"
+      ],
+      "anchor_height": 30,
+      "originating_packet_in_winner": true,
+      "selected_anchor": true,
+      "selected_spent_nullifiers": 2,
+      "within_age_at_next": true
+    },
+    "ecc92f8e4ac7395936f890a072802f8da4ba653c5ffbc1bbd7eefe77aada5025": {
+      "age_at_next_selected_block": 16,
+      "anchor_blocks": [
+        "000001dde9a17c0f73c7b90023496979b291e1ef5bc1a7ac98594ede0980de1e"
+      ],
+      "anchor_height": 16,
+      "originating_packet_in_winner": true,
+      "selected_anchor": true,
+      "selected_spent_nullifiers": 2,
+      "within_age_at_next": false
+    },
+    "ee8878c7a9dafd5c21d530d1ecaa1084a04a2aea0c678931e426f4db94d5ede2": {
+      "age_at_next_selected_block": 20,
+      "anchor_blocks": [
+        "0000036cf806906052353dd2a0829051d1addb8729c9e0a4f2efefc37bb22b00"
+      ],
+      "anchor_height": 12,
+      "originating_packet_in_winner": true,
+      "selected_anchor": true,
+      "selected_spent_nullifiers": 2,
+      "within_age_at_next": false
+    }
+  },
+  "payment_blocks": {
+    "2784469c208ccd0eb6d3e554acafbee308af3fd4ce9beb9d9781ee4fad60f096": [
+      "000002afe82bc99b5ad8fa47a166e89cd65a5c5e5248ec97f6c601ce255b6684"
+    ],
+    "5507bdb7251669924a5cbe87ab68ad2d5a1833f5387979155d0a578d39b24339": [
+      "0000026c43e39e44a485db14371b14701ff9abc609b94a3009581a6136d380fb"
+    ],
+    "805900b481b2c4555997abd97b4e037f1d145021918460043df78ddf65221f18": [
+      "0000036cf806906052353dd2a0829051d1addb8729c9e0a4f2efefc37bb22b00"
+    ],
+    "a281a44d9edad4a4e615daf9142cc35fc9a9c456c2ebe002a9fc9c2da4576120": [
+      "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83"
+    ],
+    "ecc92f8e4ac7395936f890a072802f8da4ba653c5ffbc1bbd7eefe77aada5025": [
+      "0000024701fc5de81c2692fa6e2eabb6b7807cfb490d1120954cd35e25d942e5"
+    ],
+    "ee8878c7a9dafd5c21d530d1ecaa1084a04a2aea0c678931e426f4db94d5ede2": [
+      "000001dde9a17c0f73c7b90023496979b291e1ef5bc1a7ac98594ede0980de1e"
+    ]
+  },
+  "payments_checked": 6,
+  "register_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+  "selected": {
+    "anchor": "381b3c11183bc7948b4e2564f21c279d8fc5328ce3e7f01bf33f4a0f1a7b6883",
+    "fees": 15,
+    "height": 31,
+    "issued": 3100,
+    "miners_credited": 3115,
+    "notes": 42,
+    "payments": 5,
+    "root": "e08b088d0446fe38323a59fb355da0484a77a2b31f2ad3133e898c7944a4cb2c",
+    "spent": 10,
+    "spent_set_sha256": "ac58fe1dfa7b4876d1bed57b99c73c34a68d3daa5b8a5cd416554c2e23dae10e",
+    "tip": "00000103b87a0d9c34942684c067f07684a8595c2a50d21af75f62464a183c83",
+    "token_issued": 240,
+    "work": 130023424
+  }
+}

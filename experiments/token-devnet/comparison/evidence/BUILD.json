@@ -1,0 +1,15 @@
+{
+  "binary_sha256": "49cc37efa0b458ec883ec6f2943a555a0a6e3a2668753b932fcddbe357d8df98",
+  "generated_sources": {
+    "crates/qnero-notes/src/encrypt.rs": "726617fd57c933ba166c5929790e61ac9a5bd4d4682788c81f3d2e9b188f6d1c",
+    "crates/qnero-pqcrypto/src/note_encryption.rs": "b7f11268f850eb2f545a76afd6d7d4243c71f8a73d4b2a0db904d6b8efe37fe4",
+    "crates/qnero-prover/examples/token_pair/codec.rs": "154e2f010c273e16113a408e38e0413fc39ded1b155ceac962c3d3e9e5e91dac",
+    "crates/qnero-prover/examples/token_pair/main.rs": "30a258bf337a84e3f3d2a259af4c2f0d9ca4bdd2b902c1f03323f20e51e7c64f",
+    "crates/qnero-prover/examples/token_pair/registry.rs": "ca52a88b8cc2da26441fcf42c87a30addb7747b00d796b4196ebdf8821429c01",
+    "crates/qnero-prover/examples/token_pair/seed.inc": "985813e3eab0a6d0f91b76750ccb63406a1629b57b34ff0a3fc97890411126e5",
+    "crates/qnero-prover/examples/token_pair/wallet.rs": "c7091bd5b36d017572b2b2200c204b0f3985a23395e0f4a8599f734a770ab614"
+  },
+  "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "registration_design_sha256": "8e034e22fcdcb800f52cfe0c846fce11155ad6fa5e5dff64bcc5de0c745d1b93",
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+}

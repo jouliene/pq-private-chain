@@ -1,3 +1,9 @@
+# Live private-token PoW devnet
+
+Deliver live TKN1 token-only receipt, separate mined native funding, seed recovery and subsequent spending on a separately identified local PoW network. Check fork selection, reward rollback, duplicate/retry linkage and monetary reconciliation. Compare a stronger complete proof profile on the same relation. Publish an independently reproduced decision.
+
+## Earlier milestone
+
 # Private spend profile for one research token
 
 Decide whether a registered spend relation supports two separately conserved private balances with ordinary offline receipt and a native fee. Compare a dedicated research profile with DLF1. Determine archival compatibility separately. Reproduce genuine funding, public verification, receipt and spending after seed restoration. Start from 9c21c2b4297657b8c4cca219c4c480910557d00e. Keep DLF1 and D8C1 executable and keep the global blockchain objective active.

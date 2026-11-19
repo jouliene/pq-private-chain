@@ -1,0 +1,77 @@
+{
+  "both_public_cross_key_rejections": true,
+  "new_verifier_meters": [
+    {
+      "cpu_s": 3.460746535,
+      "elapsed_s": 2.195645706,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 668440
+    },
+    {
+      "cpu_s": 0.005823929,
+      "elapsed_s": 0.005823877,
+      "operation": "public_verify",
+      "peak_rss_kib": 668440
+    },
+    {
+      "cpu_s": 7.6342e-05,
+      "elapsed_s": 7.6386e-05,
+      "operation": "rejected",
+      "peak_rss_kib": 668440
+    }
+  ],
+  "packet_B": 383033,
+  "packet_sha256": "aeacb7e108055439226b5a6161d38b29aa6d804567f11285e7d3f85b7bfb6acb",
+  "payer_meters": [
+    {
+      "cpu_s": 0.000256315,
+      "elapsed_s": 0.000256363,
+      "operation": "scan",
+      "peak_rss_kib": 3252
+    },
+    {
+      "cpu_s": 3.254894955,
+      "elapsed_s": 2.018516219,
+      "operation": "wallet_setup",
+      "peak_rss_kib": 668640
+    },
+    {
+      "cpu_s": 8.494778216,
+      "elapsed_s": 4.500964262,
+      "operation": "prove",
+      "peak_rss_kib": 1765260
+    },
+    {
+      "cpu_s": 0.000477848,
+      "elapsed_s": 0.000478377,
+      "operation": "scan",
+      "peak_rss_kib": 1765260
+    }
+  ],
+  "positive_two_lane_receipt_and_change": true,
+  "proof_B": 379440,
+  "proving_call_wall_s": 6.519910275004804,
+  "real_inputs": 2,
+  "receipts_B": 3584,
+  "reference_verifier_meters": [
+    {
+      "cpu_s": 2.372957192,
+      "elapsed_s": 1.279059649,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 201212
+    },
+    {
+      "cpu_s": 0.006300413,
+      "elapsed_s": 0.006300257,
+      "operation": "public_verify",
+      "peak_rss_kib": 201212
+    },
+    {
+      "cpu_s": 0.000843928,
+      "elapsed_s": 0.000844079,
+      "operation": "rejected",
+      "peak_rss_kib": 201212
+    }
+  ],
+  "vk_sha256": "74fa3fb56350de946797b7b68e925ae2193efe6b0257ad62e474225d650cd68c"
+}
