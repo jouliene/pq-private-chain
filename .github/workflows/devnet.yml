@@ -1,0 +1,68 @@
+name: Local proof-of-work devnet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  walkthrough:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out the selected revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Provision the locked native toolchain and exercise user namespaces
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(uname -m)" = x86_64
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends python3 git ca-certificates build-essential bubblewrap
+          /usr/bin/python3 -c 'import sqlite3, sys; assert sys.version_info[:2] == (3, 10); print(sys.version, sqlite3.sqlite_version)'
+          mkdir "$RUNNER_TEMP/pq-python"
+          ln -s /usr/bin/python3 "$RUNNER_TEMP/pq-python/python3"
+          echo "$RUNNER_TEMP/pq-python" >> "$GITHUB_PATH"
+          rustup toolchain install 1.93.0 --profile minimal
+          rustup run 1.93.0 rustc -Vv
+          bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --ro-bind / / -- /usr/bin/true
+
+      - name: Build from clean source and run the operator walkthrough
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e .work/devnet-runtime
+          test ! -e "$RUNNER_TEMP/pq-devnet"
+          ./pqd --home "$RUNNER_TEMP/pq-devnet" walkthrough > /dev/null
+          python3 -IB devnet/crypto/check_build.py .work/devnet-runtime/native .work/devnet-runtime/BUILD.json
+          python3 -IB - "$RUNNER_TEMP/pq-devnet/evidence" <<'PY'
+          import json
+          from pathlib import Path
+          import sys
+
+          evidence = Path(sys.argv[1])
+          result = evidence / "RESULT.json"
+          blocks = list((evidence / "blocks").glob("*.bin"))
+          assert not evidence.is_symlink() and not (evidence / "blocks").is_symlink()
+          assert result.is_file() and not result.is_symlink() and isinstance(json.loads(result.read_bytes()), dict)
+          assert blocks and all(b.is_file() and not b.is_symlink() and b.stat().st_size > 0 for b in blocks)
+          print("Public walkthrough result and", len(blocks), "serialized blocks")
+          PY
+
+      - name: Upload the public result and blocks
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: pow-devnet-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/pq-devnet/evidence/RESULT.json
+            ${{ runner.temp }}/pq-devnet/evidence/blocks/*.bin

@@ -1,3 +1,9 @@
+# First runnable local proof-of-work devnet
+
+**Active milestone.** Starting from public revision `46932763d7a0e6d03ea848ae2e22ab65ef48d5df`, deliver a runnable three-peer local network, two independent CPU miners, branch-valid APV2 singleton payments, scheduled spendable rewards, exact fees, seed restoration followed by spending, deep archival reorganization, and fresh genesis sync. Acceptance includes a clean independent reproduction, a published revision and a CI exercise of the changed path. The global private post-quantum blockchain objective remains active. See STATUS.md for the execution checkpoint.
+
+## Historical milestone
+
 # Advancing-chain independent wallet payments
 
 From published cc2d9b9e6b6e5d4cbcd7e241f0025dc20c84b963, demonstrate and independently reproduce a payment path for the first local PoW development network. Preserve executable CP03 and WHIR. Before proving, register the stronger native parameters and their privacy/security boundaries. Execute 1–4 real payments from independent wallets at retained branch anchors, incremental authenticated state, durable rollback/restart, competing branches, conflicting spends and recipient spending. Measure sparse and busy load, lone-payer delay, alternate submission, before/after-inclusion bytes, builder work, pruned and recovery obligations with the 100M/year and 1/5 TB comparison scenarios. Preserve a versioned private token/native-fee and indivisible two-party exchange path. Publish actual results, independent reproduction and an executable recommendation. Global blockchain development remains ACTIVE.

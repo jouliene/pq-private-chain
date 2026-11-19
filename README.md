@@ -1,10 +1,6 @@
 # PQ private chain
 
-Research implementation of an independent private-payment protocol, intended as
-a component of our own permissionless, post-quantum blockchain. The repository
-name is provisional. This is a working cryptographic payment/ledger/wallet path;
-a distributed consensus network and a fully qualified PQ/privacy composition are
-not implemented or established.
+An independent blockchain research project with private payments and a post-quantum security objective. Run `./pqd start` to launch the first local proof-of-work network with two CPU miners and three validating peers. Follow the [short wallet walkthrough and reproduction instructions](devnet/README.md) to make a payment, restore a wallet from seed and test a deep reorganization. End-to-end PQ security, network privacy and production economics remain open.
 
 The current CP03 backend provides complete proofs for synthetic authorized
 credits and private payments, exact value/fee accounting, nullifiers, durable
