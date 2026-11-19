@@ -1,3 +1,9 @@
+# Next payment-proof architecture — active
+
+Base and current production-independent comparison point `6502ebe7c01e174bcc8b9718130d7cb5f5dd8e63`. Research paths are isolated under `experiments/payment-architecture`. Compact specialist owns MatRiCT+ source-level 2×2 tests and necessary account/ring/receipt data. Shared construction specialist owns deferred cross-block aggregation, raw packet versus semantic PoW commitment correspondence and the actual builder resource test. Independent reviewer owns parameter, privacy, hybrid-receipt and clean reproduction checks. Root owns registration, the full byte ledger, single-stage hiding wallet pivot, real PoW campaign, integration and public decision. No change to baseline payment consensus. The first real outer aggregation has the single heavy slot, then the direct construction. To resume inspect these paths, current branch, process list and `.work/proof-architecture-01`.
+
+## Historical milestone
+
 # Ordinary wallet on a continuously mined devnet
 
 The ordinary `pqd balance`, `send`, `restore` and `resume` paths now use private persistent wallet state and bounded public history. Start the network with `./pqd start`, or run `./pqd wallet-walkthrough` for a fresh isolated acceptance campaign. The global permissionless PQ/private blockchain project remains **ACTIVE**. [Operator commands](devnet/README.md) · [Measurements](devnet/WALLET_RESULTS.md) · [Security boundary](devnet/WALLET_PROTOCOL.md) · [Independent review](devnet/wallet-review/REVIEW.md)
