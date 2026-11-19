@@ -56,6 +56,7 @@ def validate_build(build, approved):
 
 def chain_source():
     src = (ROOT / "devnet/chain.py").read_text()
+    src = replace(src, '"approved APV2 profile"', '"approved TKN1 profile"')
     start, end = src.index("PROFILE = bytes.fromhex"), src.index("\n\ndef packet_vector(")
     src = src[:start] + '''from policy import BLOCK_MAGIC as MAGIC, VERIFIER as PROFILE, TOKEN_SUPPLY, load
 

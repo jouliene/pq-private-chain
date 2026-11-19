@@ -5,12 +5,20 @@ on:
     branches: [main]
     paths:
       - 'experiments/token-devnet/**'
+      - 'experiments/token-profile/**'
+      - 'experiments/payment-architecture/direct/**'
+      - 'experiments/advancing-payments/**'
+      - 'experiments/wallet-created/wallet/**'
       - 'devnet/**'
       - 'pqd'
       - '.github/workflows/token-devnet.yml'
   pull_request:
     paths:
       - 'experiments/token-devnet/**'
+      - 'experiments/token-profile/**'
+      - 'experiments/payment-architecture/direct/**'
+      - 'experiments/advancing-payments/**'
+      - 'experiments/wallet-created/wallet/**'
       - 'devnet/**'
       - 'pqd'
       - '.github/workflows/token-devnet.yml'

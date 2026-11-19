@@ -30,7 +30,7 @@ def run(work, upstream, target):
         tree=Path(tmp)/"source"
         shutil.copytree(upstream,tree,ignore=shutil.ignore_patterns(".git","target"))
         dest=tree/"crates/qnero-prover/examples/token_pair"
-        dest.mkdir()
+        dest.mkdir(parents=True)
         direct.native_sources(dest)
         main=(dest/"main.rs").read_text()
         main=main.replace("effects, encode, packet","effects, packet").replace("use plonky2::iop::witness::{PartialWitness, WitnessWrite};","").replace("use std::collections::HashSet;","")
