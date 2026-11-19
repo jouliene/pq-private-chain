@@ -1,0 +1,234 @@
+{
+  "archive": {
+    "blocks_B": [
+      143371,
+      143371,
+      143371,
+      143371
+    ],
+    "each_packet_B": 143187,
+    "each_proof_B": 139594,
+    "each_receipt_B": 1792,
+    "genesis_B": 488,
+    "total_B": 573972
+  },
+  "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "certificate_verifier_sha256": "9d280dfe7b0b35c2fb768e927239da4a8bdbc9c2ccdde27127a17fe9ae96bdcd",
+  "clean_source_before_and_after": true,
+  "command": "RUSTUP_HOME=<installed rustup home> RAYON_NUM_THREADS=2 python3 -IB experiments/token-profile/reproduce.py <empty-new-work-path>",
+  "comparison_feeds": "Historical-only research captures; no release-bundle scan or fresh wallet access was required by the public oracle",
+  "compiler": "rustc 1.93.0 (254b59607 2026-01-19)",
+  "cross_key": {
+    "DLF1": {
+      "accepted_own": true,
+      "packet_B": 143187,
+      "public_packet_sha256": "39e6519cf477efa14442b72467f934d4b5ae27cc178c2544a68b2e093eca0fcd",
+      "raw_proof_B": 139594,
+      "rejected_reframed_other": true
+    },
+    "TKN1": {
+      "accepted_own": true,
+      "packet_B": 143187,
+      "public_packet_sha256": "f32f054795970c5e2412f2f712d24470022969012c2b17141b78ccf6eeda5fa6",
+      "raw_proof_B": 139594,
+      "rejected_reframed_other": true
+    }
+  },
+  "direct_binary_sha256": "ff2dd9053bcaf5edc72611da8dc033e9af6bd75b262c22812bc5539949849a8b",
+  "direct_verifier_sha256": "5d6cfc6ccff5792e4899799124b2fb1e7dac50f727825c4886485dc01a564ce8",
+  "distinct_spent_ids": 8,
+  "exact_key_derived": true,
+  "fees": 12,
+  "funded_CMs": 12,
+  "genesis_sha256": "6dec606f2aceff5a8dd5c77d548995923f6637be4206ec6639b64ad8e2b64ce2",
+  "git_clone": "HTTPS; detached; new output, native programs, Cargo target and wallet seeds; existing installed rustup and machine dependency download cache",
+  "independent_oracle": "Four public endowment commitments, roots at H0\u20134, exact header hashes, prior nonce seal and 22 bits, ciphertext digests, native verifier effect words, fresh nullifiers/outputs, fee sink, positive states and original/published corpus checked using pinned unmodified upstream library helpers independently of TKN1 ledger.",
+  "issuer_funding_model": "One trusted out-of-band digest approves a public founding schedule for an isolated test network. Native fees accumulate in a sink, with no new issuance or miner payout.",
+  "native_verifier_rss_scope": "Lifetime process peak including setup, across four successful direct validations. Prove RSS is lifetime peak among the four individual wallet processes.",
+  "observed_independent_privacy_comparison_equal": true,
+  "prior_parameters_json_sha256": "f3fcfab82fe99f979feaacc142b2270aab5d8bcd805a72f4d5ba637686780415",
+  "public_endowment": [
+    400,
+    240
+  ],
+  "public_fresh": [
+    {
+      "canonical_packet_sha256": "f32f054795970c5e2412f2f712d24470022969012c2b17141b78ccf6eeda5fa6",
+      "cum_fees": 3,
+      "distinct_salt_tuples": 78,
+      "height": 1,
+      "root": "e5f342253e9fedc697a297e3d6fbbe164e0ca2645bad81edf7d2effc2a51a05a",
+      "work_id": "0000032d401a58d48bfc722df4da45ea7f6f6d0a82d40ea88ff6dceb6973b8b5"
+    },
+    {
+      "canonical_packet_sha256": "c11835b8b23d156f41895529fa685f2bff4c514f019421dbe4eb87a3c56c2c3e",
+      "cum_fees": 6,
+      "distinct_salt_tuples": 78,
+      "height": 2,
+      "root": "f434fee198cd379cfab911a4fab50cce9cb034bd3919683c397af01e02b30e30",
+      "work_id": "0000036070844350b6b2f099f9af44d3bdb091dcab2368be73310472463c940c"
+    },
+    {
+      "canonical_packet_sha256": "01373e774a68c46c1bc789cdad2fede5fb29af7956fc0bc2a11ea3f527d0ad97",
+      "cum_fees": 9,
+      "distinct_salt_tuples": 78,
+      "height": 3,
+      "root": "041a92c8c2fe3cef2e9f1eb5bef091e2073759644b0fde86572bc41b71607a30",
+      "work_id": "000000f8ed56bd9d52b353529cb326fe59238cca6cad7da8c98dce164b1e768f"
+    },
+    {
+      "canonical_packet_sha256": "45d70f207658b1849dd3d5f81cf57498685e8e6b8cca856f4d2403fa0b423873",
+      "cum_fees": 12,
+      "distinct_salt_tuples": 78,
+      "height": 4,
+      "root": "38ea0eb37967fc91f78d211c5c3bc853c247dbd4c9bd8fb43adca292d84018f1",
+      "work_id": "0000019ad45d3b998de07693592f53d69e7d0143101447f2f94ba19c5720809d"
+    }
+  ],
+  "public_release_members": {
+    "RESULT.json": {
+      "bytes": 14433,
+      "sha256": "4d525aa654bdb965c25f2eadd0fecbc9b274bd62c032061fa1146162d646d1e8"
+    },
+    "blocks/1.bin": {
+      "bytes": 143371,
+      "sha256": "111c76fe22fdea9369eefc672ada138eaa026802894d26c761711e8d3f041040"
+    },
+    "blocks/2.bin": {
+      "bytes": 143371,
+      "sha256": "268a8cdb819c817db2a329b308662d6d1dc002706952b1a78fdae0cf5fda5fe4"
+    },
+    "blocks/3.bin": {
+      "bytes": 143371,
+      "sha256": "bd30f3ab59e5d6b266c6c65c716497889961cb366fc970e456da85ece9363dba"
+    },
+    "blocks/4.bin": {
+      "bytes": 143371,
+      "sha256": "a44aba739732b2663d63e7f15842ca09057966c11b1c677e8a4727734affc2ed"
+    },
+    "genesis.bin": {
+      "bytes": 488,
+      "sha256": "6dec606f2aceff5a8dd5c77d548995923f6637be4206ec6639b64ad8e2b64ce2"
+    }
+  },
+  "remote_branch": "ee0da6c9ade4c4342203e63cb274e19efa6df5e9",
+  "reviewed_code_revision": "ee0da6c9ade4c4342203e63cb274e19efa6df5e9",
+  "role_meters": {
+    "prove": {
+      "count": 4,
+      "cpu_s": [
+        7.035375142,
+        6.935653062,
+        6.953193043,
+        6.9674258
+      ],
+      "mean_cpu_s": 6.97291176175,
+      "mean_wall_s": 3.5487391475,
+      "peak_RSS_KiB": 452304
+    },
+    "verifier_setup": {
+      "cpu_s": 2.440466256,
+      "elapsed_s": 1.320445457,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 201084
+    },
+    "verify_steady_mean_cpu_s": 0.006315255,
+    "verify_steady_peak_RSS_KiB": 201084,
+    "wallet_setup": {
+      "count": 4,
+      "cpu_s": [
+        2.465027976,
+        2.333871612,
+        2.363392127,
+        2.427743192
+      ],
+      "mean_cpu_s": 2.39750872675,
+      "mean_wall_s": 1.2824321295,
+      "peak_RSS_KiB": 201172
+    }
+  },
+  "scope": "Non-author of candidate and parameter checker. Authored the separate privacy comparison. Four sealed transfers in a controlled fixed-supply history, no peer election, production performance or cryptographic strength inferred.",
+  "source_authorized_genesis_sha256": "9e95a8af648c826ce0c0d5614ddbcf520a07dbf7a0f20f8a77d6d2102f338e0d",
+  "source_fixture_H4": "cd72e4dc91e16822aa279582e2abe45768d97207d7ad4234acafbbc38e8bbcc4",
+  "token_binary_sha256": "6abb2c79e1cca219933eacb381f67cb421a538f7e9b6689595a0c98056ce016b",
+  "unbalanced_token_control": "prover_refused",
+  "unspent_value_by_conservation": [
+    388,
+    240
+  ],
+  "upstream_compiled": "f04c91307837c0231668383bec76ba98d89d2652",
+  "verifier_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+  "wallet_observations": {
+    "final_synthetic_holdings": {
+      "A": [
+        197,
+        80
+      ],
+      "B": [
+        139,
+        69
+      ],
+      "C": [
+        26,
+        30
+      ],
+      "D": [
+        26,
+        61
+      ]
+    },
+    "mismatch_skip": {
+      "matched_after": 1,
+      "matched_before": 2,
+      "same_public_root": true
+    },
+    "one_real_successor": true,
+    "restore": {
+      "new_private_directory": true,
+      "private_files_imported_per_recipient": 1,
+      "recipients_offline_at_payment": [
+        "C",
+        "D"
+      ]
+    },
+    "transfers": [
+      [
+        0,
+        40,
+        2,
+        [
+          197,
+          80
+        ]
+      ],
+      [
+        70,
+        65,
+        2,
+        [
+          127,
+          55
+        ]
+      ],
+      [
+        41,
+        75,
+        2,
+        [
+          26,
+          30
+        ]
+      ],
+      [
+        12,
+        14,
+        1,
+        [
+          26,
+          61
+        ]
+      ]
+    ]
+  },
+  "whole_command_wall": "2:10.81"
+}

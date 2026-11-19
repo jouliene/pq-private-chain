@@ -1,6 +1,10 @@
-# Private token spend-profile selection
+# Private token spend profile
 
-Work in progress from 9c21c2b4297657b8c4cca219c4c480910557d00e. Monetary analysis owns the integer and issuance model. Privacy review owns the public transcript, receipts and reanchors. The construction specialist owns a fixed native-plus-one-token note, wallet and genuine proof experiment. The orchestrator owns verifier decoding and integration. A non-author will reproduce the decisive experiment from a clean checkout. Continue in experiments/token-profile. Multi-archivist endurance remains in the backlog.
+Select TKN1 for the first fixed native-plus-one-token research prototype. Both lanes are privately committed and conserved. Each full 2×2 packet is 143,187 B. Four fresh transfers included two senders paying an offline recipient, seed-only receipt and respend, and a second restored recipient spending its only note. The founding supply of 400 native and 240 tokens finished with 388 spendable native, a 12-native fee sink, and 240 tokens. DLF1 remains the native-only reference. D8C1 remains optional only for DLF1 history. A separate typed archive would need a new recursive verifier.
+
+Start revision 9c21c2b4297657b8c4cca219c4c480910557d00e. The [decision and commands](experiments/token-profile/README.md) link the monetary and privacy audits, source-derived parameters, actual timing and public fixtures. The independent reviewer rebuilt the candidate from public revision ee0da6c9ade4c4342203e63cb274e19efa6df5e9. Use the [release record](https://github.com/jouliene/pq-private-chain/releases/tag/token-spend-profile-2026-11-20) for final public SHA, CI outcomes and clean reproduction evidence.
+
+The global permissionless private blockchain objective remains **active**. The next integration experiment is typed genesis, native fee/reward credit exactly once, and branch rollback/replay on the local PoW devnet. Mainnet assurance, archive cost, generalized issuance, two-owner swaps and multi-archivist endurance remain open.
 
 ## Earlier milestone
 

@@ -2,6 +2,8 @@
 
 Decide whether a registered spend relation supports two separately conserved private balances with ordinary offline receipt and a native fee. Compare a dedicated research profile with DLF1. Determine archival compatibility separately. Reproduce genuine funding, public verification, receipt and spending after seed restoration. Start from 9c21c2b4297657b8c4cca219c4c480910557d00e. Keep DLF1 and D8C1 executable and keep the global blockchain objective active.
 
+The [architecture decision and measurements](experiments/token-profile/README.md) record the prototype selection and the separate limits on archival verification and cryptographic assurance.
+
 ## Earlier milestone
 
 # Delayed DLF1 certificates for historical validation

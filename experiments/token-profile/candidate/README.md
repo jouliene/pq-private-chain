@@ -41,6 +41,15 @@ A transfer contains 9 bytes of TKN1 framing, a 139,594-byte proof and two 1,792-
 
 The raw role meters use a monotonically increasing wall clock, process CPU including both Rayon threads, and Linux process peak RSS (a lifetime high-water mark). Setup, successful proof, negative control, scan and proof verification have distinct rows. Wallet request duration includes lazy setup for a cold role and stops at receipt of the payment packet. Header construction, mining and public replay are excluded from that duration.
 
+| Wallet role | Setup wall s | Proof wall s | Proof CPU s | Process peak KiB |
+|---|---:|---:|---:|---:|
+| A | 1.564 | 3.810 | 7.439 | 451,828 |
+| B | 1.382 | 3.839 | 7.477 | 451,960 |
+| C after restoration | 1.426 | 3.864 | 7.573 | 451,680 |
+| D after restoration | 1.402 | 3.787 | 7.422 | 452,044 |
+
+A's earlier inconsistent-witness check paid its lazy setup. The measured public replay verifier took 1.473 s wall / 2.707 s CPU for setup and 6.69–6.80 ms wall for each of the four accepted packets, reaching 200,832 KiB process peak. These are four local samples.
+
 ## Controls and remaining assumptions
 
 A dedicated test command constructs an otherwise honest, correctly funded spend with one extra token in the change output. Its four typed openings, native amounts, both ciphertexts, authenticated funded paths and spend credentials agree. The prover refuses this assignment. A canonical one-field change to a genuine proof's fee preserves its representation; source-selected verification precedes effects decoding. A repeated genuine payment reaches fresh cryptographic verification and is then refused by public current spentness. A wallet-only scan gives a successfully decryptable receipt next to the wrong public CM; the later correct receipt still restores and the complete public root remains checked.

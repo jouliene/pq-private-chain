@@ -89,6 +89,16 @@
       "value_bits": 62
     }
   },
+  "public_capture_structure": {
+    "approved_capture_genesis_sha256": "9e95a8af648c826ce0c0d5614ddbcf520a07dbf7a0f20f8a77d6d2102f338e0d",
+    "blocks": 4,
+    "last_state_field": "2bbd44494d588d48b9e3b360c712c42aeb5dbe244e5d79114e345e1245281e54",
+    "last_work_id": "000002d700de423b13ff42efeeed7ee1dc101721ead8aed5da4a5a7312135bd7",
+    "native_fee_sink": 12,
+    "native_proof_replay_performed_by_this_check": false,
+    "raw_public_seals_and_prior_work_state_links_match": true,
+    "unique_public_nullifiers": 8
+  },
   "public_two_lane_example": {
     "final_total_native_token": [
       47,
