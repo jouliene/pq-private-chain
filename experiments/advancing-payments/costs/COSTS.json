@@ -1,0 +1,1126 @@
+{
+  "batch_clock": {
+    "block_period_s": 2,
+    "builder": [
+      {
+        "cpu_s": 13.540629668,
+        "elapsed_s": 8.572795238,
+        "operation": "builder_setup",
+        "peak_rss_kib": 1050944
+      },
+      {
+        "cpu_s": 33.759479395,
+        "elapsed_s": 17.416824209,
+        "operation": "builder_aggregate",
+        "peak_rss_kib": 2130980
+      }
+    ],
+    "four_wallet_upload_B": 920840,
+    "packet_B": 250998,
+    "prospective_height": 9,
+    "ready_s": 17.420588486013003,
+    "result": "expired",
+    "ticks": 9,
+    "ticks_peak_lateness_s": 0.057513742009177804
+  },
+  "branch_disk": {
+    "archive": {
+      "body_B": 2387924,
+      "first_restorable_height": 0,
+      "retained_bodies": 20,
+      "retained_frontiers": 21,
+      "sqlite_B": 2457600
+    },
+    "final": {
+      "count": 140,
+      "fees": 66,
+      "frontier_sha256": "8cd0babdf3a7612f566102d878423a3c235ba11fae6d71edc56c98cb2e8a8d5d",
+      "header": "b84e7579b35af3d0a9f075c50ae1823cd8cb0efbb5858d7d45b68c7966fe51c01400000001e6a40f2084547e4d45bbf7e2af0be1e806bb817dd1f71c2b95f858da6768b73cf0c728de253672dbad331abc6916d52e32713e95d842ab6831aa0617f65583268a6f579c648f503266ca27186fe6906ba3d8512cba1c1a5e216545a517c5ad",
+      "height": 20,
+      "id": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695",
+      "nullifier_set_sha256": "10e483069b394422cc1330bb6cbf3a84673b7bc6910e35e9e5445c87ad7431cc",
+      "ordered_commitments_sha256": "d74a9f06947f7d7fda89c5d85a240d5e0c9b9bf6c02f0afda6dd50c17b0cb8af",
+      "rollback_floor": 12,
+      "spent": 44
+    },
+    "pruned": {
+      "body_B": 1368,
+      "first_restorable_height": 12,
+      "retained_bodies": 9,
+      "retained_frontiers": 9,
+      "sqlite_B": 2220032
+    }
+  },
+  "busy": {
+    "deadline_misses": 0,
+    "interval_s": 26.677480336558077,
+    "last_admission_height": 11,
+    "offered_per_second": 0.14993919776293532,
+    "origin_anchor_heights": [
+      4,
+      8,
+      8,
+      8
+    ],
+    "rounds": [
+      {
+        "builder_wall_s": 17.21842693700455,
+        "completed_s": 17.357315280940384,
+        "queue_head_to_commit_s": 17.318690286017954,
+        "scheduled_s": 0.0
+      },
+      {
+        "builder_wall_s": 17.088818627991714,
+        "completed_s": 43.94197392591741,
+        "queue_head_to_commit_s": 17.184017369057983,
+        "scheduled_s": 26.677480336558077
+      },
+      {
+        "builder_wall_s": 17.0133211229695,
+        "completed_s": 70.58383012097329,
+        "queue_head_to_commit_s": 17.14435097994283,
+        "scheduled_s": 53.35496067311615
+      }
+    ],
+    "synchronized_prepared_payments": 12
+  },
+  "common_historical_P_stage_B": [
+    {
+      "from_wallet": 230210,
+      "label": "waiting0",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "waiting1",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "waiting2",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "waiting3",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "unrelated",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "different-authorization-same-input",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "mixed0",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "mixed1",
+      "to_wallet": 4888
+    },
+    {
+      "from_wallet": 230210,
+      "label": "triple0",
+      "to_wallet": 4952
+    },
+    {
+      "from_wallet": 230210,
+      "label": "triple1",
+      "to_wallet": 4952
+    },
+    {
+      "from_wallet": 230210,
+      "label": "triple2",
+      "to_wallet": 4952
+    },
+    {
+      "from_wallet": 230210,
+      "label": "builder-offline",
+      "to_wallet": 5528
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy0-0",
+      "to_wallet": 5272
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy1-0",
+      "to_wallet": 5272
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy2-0",
+      "to_wallet": 5272
+    },
+    {
+      "from_wallet": 230210,
+      "label": "restored-recipient-spend",
+      "to_wallet": 5592
+    },
+    {
+      "from_wallet": 230210,
+      "label": "window-edge",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "expired-window",
+      "to_wallet": 4824
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy0-1",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy0-2",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy0-3",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy1-1",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy1-2",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy1-3",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy2-1",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy2-2",
+      "to_wallet": 5464
+    },
+    {
+      "from_wallet": 230210,
+      "label": "busy2-3",
+      "to_wallet": 5464
+    }
+  ],
+  "concurrent": {
+    "advance_and_peer_wall_s": 0.03744751599151641,
+    "anchor_height": 0,
+    "during_proof_height": 1,
+    "unrelated_body_B": 230206,
+    "wallet_response_s": 8.632624621968716
+  },
+  "direct_clock": {
+    "acknowledgements_B": 128,
+    "anchor_age_blocks": [
+      5,
+      6,
+      6,
+      6
+    ],
+    "block_period_s": 2.0,
+    "bound_s": 22.0,
+    "creation_s": [
+      8.761508428957313,
+      8.730057646054775,
+      8.718830373021774,
+      8.64864927099552
+    ],
+    "empty_blocks": 19,
+    "extra_intake_B": 0,
+    "full_block_stream_B": 924412,
+    "offer_to_commit_s": [
+      10.045692779007368,
+      10.082950676907785,
+      10.070658229989931,
+      10.043653712957166
+    ],
+    "offered_payments_s": 0.08333333333333333,
+    "period_s": 12,
+    "ready_to_commit_s": [
+      1.2742587550310418,
+      1.3426485589006916,
+      1.3407773850485682,
+      1.38357572699897
+    ]
+  },
+  "direct_singleton_batch_four": {
+    "blocks_B": 921432,
+    "one_full_block_B": 251150,
+    "one_full_relay_B": 251154,
+    "relayed_B": 921448
+  },
+  "finite_busy": {
+    "last_completion_s": 70.58383012097329,
+    "observed_completion_rate": 0.17001060978744362,
+    "offered_fraction_of_target": 0.04728482540651928,
+    "prepared_origin_rate_s": 0.14993919776293532,
+    "reported_rounds": 3,
+    "required_offered_s": 3.170979198376459
+  },
+  "input_sha256": {
+    "RESULT.json": "643cc90170fda63f7f84a641eeec1960385cde51c39d40907357590fd5e1b7bf",
+    "TRACE.json": "25b47f28378fed5d38084298a87b3022f541e066f88aacdea294529f00102656"
+  },
+  "observed_ack_total_B": 800,
+  "observed_branch_switch_relay_application_B": 230518,
+  "observed_extension_relay_application_B": 2869364,
+  "observed_retry": {
+    "builder-offline": [
+      {
+        "accepted": false,
+        "ack_bytes": 0,
+        "endpoint": "builder",
+        "out_bytes": 0
+      },
+      {
+        "accepted": true,
+        "ack_bytes": 32,
+        "endpoint": "direct",
+        "out_bytes": 230210
+      }
+    ],
+    "duplicate-delivery": [
+      {
+        "accepted": false,
+        "ack_bytes": 0,
+        "endpoint": "builder",
+        "out_bytes": 0
+      },
+      {
+        "accepted": true,
+        "ack_bytes": 32,
+        "endpoint": "direct",
+        "out_bytes": 230210
+      }
+    ]
+  },
+  "observed_total_peer_relay_application_B": 3099882,
+  "observed_upload_total_B": 5755250,
+  "physical_storage": {
+    "archive": {
+      "active_page_B": 2457600,
+      "allocated_B": 2461696,
+      "body_B": 2387924,
+      "compacted_allocated_B": 2457600,
+      "compacted_file_B": 2457600,
+      "copy_wall_s": 0.014293225947767496,
+      "file_B": 2457600,
+      "freelist_B": 0,
+      "rows": {
+        "blocks": 21,
+        "funded": 140,
+        "spent": 44
+      }
+    },
+    "pruned": {
+      "active_page_B": 69632,
+      "allocated_B": 2224128,
+      "body_B": 1368,
+      "compacted_allocated_B": 61440,
+      "compacted_file_B": 61440,
+      "copy_wall_s": 0.0031834960682317615,
+      "file_B": 2220032,
+      "freelist_B": 2150400,
+      "rows": {
+        "blocks": 21,
+        "funded": 140,
+        "spent": 44
+      }
+    }
+  },
+  "producer_opportunities": {
+    "builder-processes-offline": {
+      "block_B": 230358,
+      "builder_call_s": 6.021000444889069e-07,
+      "count": 1,
+      "label": "builder-processes-offline",
+      "oldest_accepted_to_commit_s": 0.03569057595450431,
+      "packet_B": 230206,
+      "queue_delay_to_builder_s": 0.020987125928513706,
+      "rejected": [],
+      "state_admission_s": 0.014702847925946116,
+      "wallet_packet_B": [
+        230206
+      ]
+    },
+    "clocked-four-0": {
+      "block_B": 251150,
+      "builder_call_s": 17.21842693700455,
+      "count": 4,
+      "label": "clocked-four-0",
+      "oldest_accepted_to_commit_s": 17.318690286017954,
+      "packet_B": 250998,
+      "queue_delay_to_builder_s": 0.07887703506276011,
+      "rejected": [],
+      "state_admission_s": 0.021386313950642943,
+      "wallet_packet_B": [
+        230206,
+        230206,
+        230206,
+        230206
+      ]
+    },
+    "clocked-four-1": {
+      "block_B": 251150,
+      "builder_call_s": 17.088818627991714,
+      "count": 4,
+      "label": "clocked-four-1",
+      "oldest_accepted_to_commit_s": 17.184017369057983,
+      "packet_B": 250998,
+      "queue_delay_to_builder_s": 0.07192662707529962,
+      "rejected": [],
+      "state_admission_s": 0.023272113990969956,
+      "wallet_packet_B": [
+        230206,
+        230206,
+        230206,
+        230206
+      ]
+    },
+    "clocked-four-2": {
+      "block_B": 251150,
+      "builder_call_s": 17.0133211229695,
+      "count": 4,
+      "label": "clocked-four-2",
+      "oldest_accepted_to_commit_s": 17.14435097994283,
+      "packet_B": 250998,
+      "queue_delay_to_builder_s": 0.10698843095451593,
+      "rejected": [],
+      "state_admission_s": 0.024041426018811762,
+      "wallet_packet_B": [
+        230206,
+        230206,
+        230206,
+        230206
+      ]
+    },
+    "four-independent-genesis-anchors": {
+      "block_B": 251150,
+      "builder_call_s": 17.462954152026214,
+      "count": 4,
+      "label": "four-independent-genesis-anchors",
+      "oldest_accepted_to_commit_s": 25.996990801068023,
+      "packet_B": 250998,
+      "queue_delay_to_builder_s": 8.512003910029307,
+      "rejected": [],
+      "state_admission_s": 0.022032739012502134,
+      "wallet_packet_B": [
+        230206,
+        230206,
+        230206,
+        230206
+      ]
+    },
+    "lone-bounded-wait": {
+      "block_B": 230358,
+      "builder_call_s": 4.4994521886110306e-07,
+      "count": 1,
+      "label": "lone-bounded-wait",
+      "oldest_accepted_to_commit_s": 0.24113490001764148,
+      "packet_B": 230206,
+      "queue_delay_to_builder_s": 0.22093286202289164,
+      "rejected": [],
+      "state_admission_s": 0.020201588049530983,
+      "wallet_packet_B": [
+        230206
+      ]
+    },
+    "restored-recipient-direct": {
+      "block_B": 230358,
+      "builder_call_s": 3.3795367926359177e-07,
+      "count": 1,
+      "label": "restored-recipient-direct",
+      "oldest_accepted_to_commit_s": 0.033097803010605276,
+      "packet_B": 230206,
+      "queue_delay_to_builder_s": 0.018885376979596913,
+      "rejected": [],
+      "state_admission_s": 0.0142120880773291,
+      "wallet_packet_B": [
+        230206
+      ]
+    },
+    "three": {
+      "block_B": 247358,
+      "builder_call_s": 17.180965545005165,
+      "count": 3,
+      "label": "three",
+      "oldest_accepted_to_commit_s": 25.688970409915783,
+      "packet_B": 247206,
+      "queue_delay_to_builder_s": 8.484622180927545,
+      "rejected": [],
+      "state_admission_s": 0.02338268398307264,
+      "wallet_packet_B": [
+        230206,
+        230206,
+        230206
+      ]
+    },
+    "two-distinct-anchor-heights": {
+      "block_B": 233806,
+      "builder_call_s": 8.53507912706118,
+      "count": 2,
+      "label": "two-distinct-anchor-heights",
+      "oldest_accepted_to_commit_s": 12.686535635963082,
+      "packet_B": 233654,
+      "queue_delay_to_builder_s": 4.1318301619030535,
+      "rejected": [],
+      "state_admission_s": 0.01962634699884802,
+      "wallet_packet_B": [
+        230206,
+        230206
+      ]
+    }
+  },
+  "public_replay": {
+    "archive": {
+      "active_pages_B": 2457600,
+      "events": 31,
+      "seconds": 0.3280552428914234,
+      "selected": {
+        "count": 140,
+        "fees": 66,
+        "frontier_sha256": "8cd0babdf3a7612f566102d878423a3c235ba11fae6d71edc56c98cb2e8a8d5d",
+        "header": "b84e7579b35af3d0a9f075c50ae1823cd8cb0efbb5858d7d45b68c7966fe51c01400000001e6a40f2084547e4d45bbf7e2af0be1e806bb817dd1f71c2b95f858da6768b73cf0c728de253672dbad331abc6916d52e32713e95d842ab6831aa0617f65583268a6f579c648f503266ca27186fe6906ba3d8512cba1c1a5e216545a517c5ad",
+        "height": 20,
+        "id": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695",
+        "nullifier_set_sha256": "10e483069b394422cc1330bb6cbf3a84673b7bc6910e35e9e5445c87ad7431cc",
+        "ordered_commitments_sha256": "d74a9f06947f7d7fda89c5d85a240d5e0c9b9bf6c02f0afda6dd50c17b0cb8af",
+        "rollback_floor": 12,
+        "spent": 44
+      },
+      "sqlite_B": 2457600,
+      "stored_body_B": 2387924
+    },
+    "pruned": {
+      "active_pages_B": 69632,
+      "events": 31,
+      "seconds": 0.32521043985616416,
+      "selected": {
+        "count": 140,
+        "fees": 66,
+        "frontier_sha256": "8cd0babdf3a7612f566102d878423a3c235ba11fae6d71edc56c98cb2e8a8d5d",
+        "header": "b84e7579b35af3d0a9f075c50ae1823cd8cb0efbb5858d7d45b68c7966fe51c01400000001e6a40f2084547e4d45bbf7e2af0be1e806bb817dd1f71c2b95f858da6768b73cf0c728de253672dbad331abc6916d52e32713e95d842ab6831aa0617f65583268a6f579c648f503266ca27186fe6906ba3d8512cba1c1a5e216545a517c5ad",
+        "height": 20,
+        "id": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695",
+        "nullifier_set_sha256": "10e483069b394422cc1330bb6cbf3a84673b7bc6910e35e9e5445c87ad7431cc",
+        "ordered_commitments_sha256": "d74a9f06947f7d7fda89c5d85a240d5e0c9b9bf6c02f0afda6dd50c17b0cb8af",
+        "rollback_floor": 12,
+        "spent": 44
+      },
+      "sqlite_B": 2220032,
+      "stored_body_B": 1368
+    }
+  },
+  "receiver_stream_plus_admission_wall_s_mean": {
+    "0": 0.004888215335085988,
+    "1": 0.017385085792435955,
+    "2": 0.015791689977049828,
+    "3": 0.017009068047627807,
+    "4": 0.03304144230787642
+  },
+  "recovery": {
+    "common_nfs_B": 768,
+    "common_receipt_rows_B": 43776,
+    "complete_archived_blocks_B": 1423388,
+    "genesis_B": 3084,
+    "genesis_plus_full_archive_B": 1426472,
+    "local_membership_leaf_payload_B": 3840,
+    "opened_unspent": 6,
+    "private_backup_B": 32,
+    "s_from_wallet": 8,
+    "s_to_wallet": 44565,
+    "scan": {
+      "cpu_s": {
+        "max": 0.00242177,
+        "mean": 0.00242177,
+        "median": 0.00242177,
+        "min": 0.00242177
+      },
+      "n": 1,
+      "peak_rss_kib": 575124,
+      "wall_s": {
+        "max": 0.002421975,
+        "mean": 0.002421975,
+        "median": 0.002421975,
+        "min": 0.002421975
+      }
+    },
+    "successor_P": {
+      "from_wallet": 230210,
+      "to_wallet": 5592
+    }
+  },
+  "scenarios": [
+    {
+      "approximate_9_selected_bodies_B": 1042842.2400000002,
+      "average_archive_B_per_included": 191522.90909090912,
+      "builder_cpu_s_per_s": 8.278117881121236,
+      "complete_canonical_block_bytes": 18194676363636.367,
+      "complete_genesis_and_archive_recovery_B": 18194676366720.367,
+      "days_to_archive_TB": {
+        "1": 20.06081299305131,
+        "5": 100.30406496525656
+      },
+      "dedicated_builder_wall_s_per_s": {
+        "2": 2.124771367145406,
+        "3": 1.710872111898353,
+        "4": 0.4280835949669617
+      },
+      "expected_blocks": 157024793.38842976,
+      "expected_empty_blocks": 78512396.69421488,
+      "expected_paid_blocks": 78512396.69421488,
+      "extra_verifier_cpu_s_per_s_if_excluded_offers_checked_once": 0.0018935555736754367,
+      "fresh_wallet_end_year_all_commitments_B": 6080003072,
+      "fresh_wallet_end_year_framed_pay_input_B": 6080128520,
+      "fresh_wallet_end_year_framed_scan_input_B": 352647226517,
+      "genesis_once_B": 3084,
+      "included": 95000000,
+      "inclusion": 0.95,
+      "ingress_ack_bytes": 3200000000,
+      "mean_seconds_per_block": 0.20083452631578946,
+      "mean_width": 1.21,
+      "mix": "low",
+      "offered": 100000000,
+      "one_archive_max_offers_per_year": {
+        "1": 5496113.148781181,
+        "5": 27480565.743905906
+      },
+      "one_full_upload_retry_per_missing_offer_extra_B": 1151050000000.0,
+      "one_full_upload_retry_per_offer_extra_B": 23021000000000,
+      "one_year_common_nfs_B": 6080000000,
+      "one_year_common_receipt_rows_B": 346560000000,
+      "peer_one_copy_stream_bytes": 18195304462809.92,
+      "peer_one_edge_Mbps": 4.6157545567757285,
+      "per_extra_peer_egress_bytes": 18195304462809.92,
+      "proof_and_receipt_packet_bytes": 18170808595041.324,
+      "raw_header_and_id_minimum_new_payload_B": 25752066115.70248,
+      "real_indexes_minimum_new_payload_B": 12160000000.0,
+      "selected_queue_verifier_cpu_s_per_s": 0.03597755589983329,
+      "serial_builder_service_s_per_s": 4.263727074010721,
+      "single_serial_builder_equivalent_payments_per_s": 0.706525109644028,
+      "submission_bytes_one_egress_per_extra_preinclusion_forward": 23021000000000,
+      "ten_x_600s_builder_only_burst": {
+        "backlog_payment_equivalents": 17650.666364959397,
+        "base_included_per_s": 3.0124302384576356,
+        "post_burst_drain_s_if_capacity_exceeds_base": null
+      },
+      "uniform_eight_block_seconds": 1.6066762105263157,
+      "verifier_cpu_s_per_s": 0.02980779967662751,
+      "wallet_one_ack_per_offer_Mbps": 0.0008117706747843734,
+      "wallet_preparation_to_anchor_window_ratio": 5.387962475441291,
+      "wallet_prover_cpu_s_per_s": 53.514473198091075,
+      "wallet_submission_application_Mbps": 5.839928970065956,
+      "wallet_to_ingress_bytes": 23021000000000,
+      "warm_wallet_equivalent_serial_workers": 27.524064409269226
+    },
+    {
+      "approximate_9_selected_bodies_B": 1042842.24,
+      "average_archive_B_per_included": 191522.9090909091,
+      "builder_cpu_s_per_s": 8.71380829591709,
+      "complete_canonical_block_bytes": 19152290909090.91,
+      "complete_genesis_and_archive_recovery_B": 19152290912174.91,
+      "days_to_archive_TB": {
+        "1": 19.057772343398746,
+        "5": 95.28886171699374
+      },
+      "dedicated_builder_wall_s_per_s": {
+        "2": 2.2366014391004274,
+        "3": 1.8009180125245818,
+        "4": 0.45061431049153855
+      },
+      "expected_blocks": 165289256.19834712,
+      "expected_empty_blocks": 82644628.09917356,
+      "expected_paid_blocks": 82644628.09917356,
+      "extra_verifier_cpu_s_per_s_if_excluded_offers_checked_once": 0.0,
+      "fresh_wallet_end_year_all_commitments_B": 6400003072,
+      "fresh_wallet_end_year_framed_pay_input_B": 6400135032,
+      "fresh_wallet_end_year_framed_scan_input_B": 371207606861,
+      "genesis_once_B": 3084,
+      "included": 100000000,
+      "inclusion": 1,
+      "ingress_ack_bytes": 3200000000,
+      "mean_seconds_per_block": 0.19079279999999998,
+      "mean_width": 1.21,
+      "mix": "low",
+      "offered": 100000000,
+      "one_archive_max_offers_per_year": {
+        "1": 5221307.491342123,
+        "5": 26106537.456710614
+      },
+      "one_full_upload_retry_per_missing_offer_extra_B": 0,
+      "one_full_upload_retry_per_offer_extra_B": 23021000000000,
+      "one_year_common_nfs_B": 6400000000,
+      "one_year_common_receipt_rows_B": 364800000000,
+      "peer_one_copy_stream_bytes": 19152952066115.703,
+      "peer_one_edge_Mbps": 4.8586890071323445,
+      "per_extra_peer_egress_bytes": 19152952066115.703,
+      "proof_and_receipt_packet_bytes": 19127166942148.76,
+      "raw_header_and_id_minimum_new_payload_B": 27107438016.528927,
+      "real_indexes_minimum_new_payload_B": 12800000000,
+      "selected_queue_verifier_cpu_s_per_s": 0.03787111147350873,
+      "serial_builder_service_s_per_s": 4.488133762116548,
+      "single_serial_builder_equivalent_payments_per_s": 0.7065251096440281,
+      "submission_bytes_one_egress_per_extra_preinclusion_forward": 23021000000000,
+      "ten_x_600s_builder_only_burst": {
+        "backlog_payment_equivalents": 18601.960124472338,
+        "base_included_per_s": 3.170979198376459,
+        "post_burst_drain_s_if_capacity_exceeds_base": null
+      },
+      "uniform_eight_block_seconds": 1.5263423999999999,
+      "verifier_cpu_s_per_s": 0.031376631238555275,
+      "wallet_one_ack_per_offer_Mbps": 0.0008117706747843734,
+      "wallet_preparation_to_anchor_window_ratio": 5.671539447832937,
+      "wallet_prover_cpu_s_per_s": 53.514473198091075,
+      "wallet_submission_application_Mbps": 5.839928970065956,
+      "wallet_to_ingress_bytes": 23021000000000,
+      "warm_wallet_equivalent_serial_workers": 27.524064409269226
+    },
+    {
+      "approximate_9_selected_bodies_B": 2007375.12,
+      "average_archive_B_per_included": 70806.88253968254,
+      "builder_cpu_s_per_s": 25.829649592858726,
+      "complete_canonical_block_bytes": 6726653841269.841,
+      "complete_genesis_and_archive_recovery_B": 6726653844353.841,
+      "days_to_archive_TB": {
+        "1": 54.26174865140618,
+        "5": 271.3087432570309
+      },
+      "dedicated_builder_wall_s_per_s": {
+        "2": 0.7345638154988404,
+        "3": 2.218023487925364,
+        "4": 10.359622998200468
+      },
+      "expected_blocks": 30158730.158730157,
+      "expected_empty_blocks": 3015873.0158730154,
+      "expected_paid_blocks": 27142857.14285714,
+      "extra_verifier_cpu_s_per_s_if_excluded_offers_checked_once": 0.0018935555736754367,
+      "fresh_wallet_end_year_all_commitments_B": 6080003072,
+      "fresh_wallet_end_year_framed_pay_input_B": 6080128520,
+      "fresh_wallet_end_year_framed_scan_input_B": 352647226517,
+      "genesis_once_B": 3084,
+      "included": 95000000,
+      "inclusion": 0.95,
+      "ingress_ack_bytes": 3200000000,
+      "mean_seconds_per_block": 1.0456673684210527,
+      "mean_width": 3.5,
+      "mix": "busy",
+      "offered": 100000000,
+      "one_archive_max_offers_per_year": {
+        "1": 14866232.50723457,
+        "5": 74331162.53617285
+      },
+      "one_full_upload_retry_per_missing_offer_extra_B": 1151050000000.0,
+      "one_full_upload_retry_per_offer_extra_B": 23021000000000,
+      "one_year_common_nfs_B": 6080000000,
+      "one_year_common_receipt_rows_B": 346560000000,
+      "peer_one_copy_stream_bytes": 6726774476190.476,
+      "peer_one_edge_Mbps": 1.7064369548935758,
+      "per_extra_peer_egress_bytes": 6726774476190.476,
+      "proof_and_receipt_packet_bytes": 6722069714285.714,
+      "raw_header_and_id_minimum_new_payload_B": 4946031746.031746,
+      "real_indexes_minimum_new_payload_B": 12160000000.0,
+      "selected_queue_verifier_cpu_s_per_s": 0.03597755589983329,
+      "serial_builder_service_s_per_s": 13.312210301624674,
+      "single_serial_builder_equivalent_payments_per_s": 0.22629076390792796,
+      "submission_bytes_one_egress_per_extra_preinclusion_forward": 23021000000000,
+      "ten_x_600s_builder_only_burst": {
+        "backlog_payment_equivalents": 17938.806972401057,
+        "base_included_per_s": 3.0124302384576356,
+        "post_burst_drain_s_if_capacity_exceeds_base": null
+      },
+      "uniform_eight_block_seconds": 8.365338947368421,
+      "verifier_cpu_s_per_s": 0.018402502309314134,
+      "wallet_one_ack_per_offer_Mbps": 0.0008117706747843734,
+      "wallet_preparation_to_anchor_window_ratio": 1.0348308881403112,
+      "wallet_prover_cpu_s_per_s": 53.514473198091075,
+      "wallet_submission_application_Mbps": 5.839928970065956,
+      "wallet_to_ingress_bytes": 23021000000000,
+      "warm_wallet_equivalent_serial_workers": 27.524064409269226
+    },
+    {
+      "approximate_9_selected_bodies_B": 2007375.1199999996,
+      "average_archive_B_per_included": 70806.88253968253,
+      "builder_cpu_s_per_s": 27.189104834588132,
+      "complete_canonical_block_bytes": 7080688253968.253,
+      "complete_genesis_and_archive_recovery_B": 7080688257052.253,
+      "days_to_archive_TB": {
+        "1": 51.548661218835875,
+        "5": 257.7433060941794
+      },
+      "dedicated_builder_wall_s_per_s": {
+        "2": 0.7732250689461477,
+        "3": 2.334761566237226,
+        "4": 10.904866313895232
+      },
+      "expected_blocks": 31746031.746031746,
+      "expected_empty_blocks": 3174603.1746031744,
+      "expected_paid_blocks": 28571428.57142857,
+      "extra_verifier_cpu_s_per_s_if_excluded_offers_checked_once": 0.0,
+      "fresh_wallet_end_year_all_commitments_B": 6400003072,
+      "fresh_wallet_end_year_framed_pay_input_B": 6400135032,
+      "fresh_wallet_end_year_framed_scan_input_B": 371207606861,
+      "genesis_once_B": 3084,
+      "included": 100000000,
+      "inclusion": 1,
+      "ingress_ack_bytes": 3200000000,
+      "mean_seconds_per_block": 0.993384,
+      "mean_width": 3.5,
+      "mix": "busy",
+      "offered": 100000000,
+      "one_archive_max_offers_per_year": {
+        "1": 14122920.881872844,
+        "5": 70614604.40936422
+      },
+      "one_full_upload_retry_per_missing_offer_extra_B": 0,
+      "one_full_upload_retry_per_offer_extra_B": 23021000000000,
+      "one_year_common_nfs_B": 6400000000,
+      "one_year_common_receipt_rows_B": 364800000000,
+      "peer_one_copy_stream_bytes": 7080815238095.237,
+      "peer_one_edge_Mbps": 1.7962494262037638,
+      "per_extra_peer_egress_bytes": 7080815238095.237,
+      "proof_and_receipt_packet_bytes": 7075862857142.856,
+      "raw_header_and_id_minimum_new_payload_B": 5206349206.349206,
+      "real_indexes_minimum_new_payload_B": 12800000000,
+      "selected_queue_verifier_cpu_s_per_s": 0.03787111147350873,
+      "serial_builder_service_s_per_s": 14.012852949078605,
+      "single_serial_builder_equivalent_payments_per_s": 0.22629076390792796,
+      "submission_bytes_one_egress_per_extra_preinclusion_forward": 23021000000000,
+      "ten_x_600s_builder_only_burst": {
+        "backlog_payment_equivalents": 18890.100731913997,
+        "base_included_per_s": 3.170979198376459,
+        "post_burst_drain_s_if_capacity_exceeds_base": null
+      },
+      "uniform_eight_block_seconds": 7.947072,
+      "verifier_cpu_s_per_s": 0.01937105506243593,
+      "wallet_one_ack_per_offer_Mbps": 0.0008117706747843734,
+      "wallet_preparation_to_anchor_window_ratio": 1.0892956717266433,
+      "wallet_prover_cpu_s_per_s": 53.514473198091075,
+      "wallet_submission_application_Mbps": 5.839928970065956,
+      "wallet_to_ingress_bytes": 23021000000000,
+      "warm_wallet_equivalent_serial_workers": 27.524064409269226
+    }
+  ],
+  "setup": {
+    "builder2": {
+      "cpu_s": {
+        "max": 6.538541021,
+        "mean": 6.538541021,
+        "median": 6.538541021,
+        "min": 6.538541021
+      },
+      "n": 1,
+      "peak_rss_kib": 601552,
+      "wall_s": {
+        "max": 4.074455999,
+        "mean": 4.074455999,
+        "median": 4.074455999,
+        "min": 4.074455999
+      }
+    },
+    "builder3": {
+      "cpu_s": {
+        "max": 13.364521337,
+        "mean": 13.364521337,
+        "median": 13.364521337,
+        "min": 13.364521337
+      },
+      "n": 1,
+      "peak_rss_kib": 1030256,
+      "wall_s": {
+        "max": 8.408665734,
+        "mean": 8.408665734,
+        "median": 8.408665734,
+        "min": 8.408665734
+      }
+    },
+    "builder4": {
+      "cpu_s": {
+        "max": 13.428702129,
+        "mean": 13.4286566715,
+        "median": 13.4286566715,
+        "min": 13.428611214
+      },
+      "n": 2,
+      "peak_rss_kib": 1050816,
+      "wall_s": {
+        "max": 8.4451424,
+        "mean": 8.4376734985,
+        "median": 8.4376734985,
+        "min": 8.430204597
+      }
+    },
+    "public_verifier": {
+      "cpu_s": {
+        "max": 0.000338403,
+        "mean": 0.000324615,
+        "median": 0.000324615,
+        "min": 0.000310827
+      },
+      "n": 2,
+      "peak_rss_kib": 4004,
+      "wall_s": {
+        "max": 0.000338819,
+        "mean": 0.0003251415,
+        "median": 0.0003251415,
+        "min": 0.000311464
+      }
+    },
+    "restored_wallet": {
+      "cpu_s": {
+        "max": 6.92132843,
+        "mean": 6.92132843,
+        "median": 6.92132843,
+        "min": 6.92132843
+      },
+      "n": 1,
+      "peak_rss_kib": 575124,
+      "wall_s": {
+        "max": 4.315184839,
+        "mean": 4.315184839,
+        "median": 4.315184839,
+        "min": 4.315184839
+      }
+    },
+    "wallet": {
+      "cpu_s": {
+        "max": 7.074940315,
+        "mean": 7.0052289354,
+        "median": 7.018112118,
+        "min": 6.92132843
+      },
+      "n": 5,
+      "peak_rss_kib": 583080,
+      "wall_s": {
+        "max": 4.399774495,
+        "mean": 4.360287509,
+        "median": 4.367957793,
+        "min": 4.315184839
+      }
+    }
+  },
+  "wallet_create_public_startup_pipe_B": 2377,
+  "wallet_restore_public_startup_pipe_B": 1609,
+  "wallet_warm": {
+    "cpu_s": {
+      "max": 17.380863153,
+      "mean": 16.87632426775,
+      "median": 16.825467048,
+      "min": 16.665199365
+    },
+    "n": 28,
+    "peak_rss_kib": 1090884,
+    "wall_s": {
+      "max": 8.931994749,
+      "mean": 8.679988952107143,
+      "median": 8.6567111325,
+      "min": 8.559257217
+    }
+  },
+  "widths": {
+    "1": {
+      "acks": 32,
+      "block": 230358,
+      "builder_input_pipe_B": 0,
+      "builder_output_pipe_B": 0,
+      "ciphertexts": 3584,
+      "outer_builder": null,
+      "packet": 230206,
+      "preinclusion": 230210,
+      "producer_queue_to_commit_wall_s": [
+        0.24113490001764148,
+        0.03569057595450431,
+        0.033097803010605276
+      ],
+      "producer_state_apply_wall_s_mean": 0.01637217468426873,
+      "proof": 226613,
+      "receiver_verifier": {
+        "cpu_s": {
+          "max": 0.014866886,
+          "mean": 0.011943033714285714,
+          "median": 0.010816842,
+          "min": 0.010187323
+        },
+        "n": 7,
+        "peak_rss_kib": 5544,
+        "wall_s": {
+          "max": 0.014888352,
+          "mean": 0.011948249857142858,
+          "median": 0.010816748,
+          "min": 0.010200329
+        }
+      },
+      "relay": 230362,
+      "verifier_input_pipe_B": 230210,
+      "verifier_output_pipe_B": 3761
+    },
+    "2": {
+      "acks": 64,
+      "block": 233806,
+      "builder_input_pipe_B": 460420,
+      "builder_output_pipe_B": 233658,
+      "ciphertexts": 7168,
+      "outer_builder": {
+        "cpu_s": {
+          "max": 16.549563938,
+          "mean": 16.549563938,
+          "median": 16.549563938,
+          "min": 16.549563938
+        },
+        "n": 1,
+        "peak_rss_kib": 1106660,
+        "wall_s": {
+          "max": 8.534549021,
+          "mean": 8.534549021,
+          "median": 8.534549021,
+          "min": 8.534549021
+        }
+      },
+      "packet": 233654,
+      "preinclusion": 460420,
+      "producer_queue_to_commit_wall_s": [
+        12.686535635963082
+      ],
+      "producer_state_apply_wall_s_mean": 0.01962634699884802,
+      "proof": 226477,
+      "receiver_verifier": {
+        "cpu_s": {
+          "max": 0.010895311,
+          "mean": 0.010895311,
+          "median": 0.010895311,
+          "min": 0.010895311
+        },
+        "n": 1,
+        "peak_rss_kib": 5424,
+        "wall_s": {
+          "max": 0.010895261,
+          "mean": 0.010895261,
+          "median": 0.010895261,
+          "min": 0.010895261
+        }
+      },
+      "relay": 233810,
+      "verifier_input_pipe_B": 233658,
+      "verifier_output_pipe_B": 7517
+    },
+    "3": {
+      "acks": 96,
+      "block": 247358,
+      "builder_input_pipe_B": 690630,
+      "builder_output_pipe_B": 247210,
+      "ciphertexts": 10752,
+      "outer_builder": {
+        "cpu_s": {
+          "max": 33.415934399,
+          "mean": 33.415934399,
+          "median": 33.415934399,
+          "min": 33.415934399
+        },
+        "n": 1,
+        "peak_rss_kib": 2105896,
+        "wall_s": {
+          "max": 17.180109509,
+          "mean": 17.180109509,
+          "median": 17.180109509,
+          "min": 17.180109509
+        }
+      },
+      "packet": 247206,
+      "preinclusion": 690630,
+      "producer_queue_to_commit_wall_s": [
+        25.688970409915783
+      ],
+      "producer_state_apply_wall_s_mean": 0.02338268398307264,
+      "proof": 236445,
+      "receiver_verifier": {
+        "cpu_s": {
+          "max": 0.011897717,
+          "mean": 0.011897717,
+          "median": 0.011897717,
+          "min": 0.011897717
+        },
+        "n": 1,
+        "peak_rss_kib": 5452,
+        "wall_s": {
+          "max": 0.01189823,
+          "mean": 0.01189823,
+          "median": 0.01189823,
+          "min": 0.01189823
+        }
+      },
+      "relay": 247362,
+      "verifier_input_pipe_B": 247210,
+      "verifier_output_pipe_B": 11273
+    },
+    "4": {
+      "acks": 128,
+      "block": 251150,
+      "builder_input_pipe_B": 920840,
+      "builder_output_pipe_B": 251002,
+      "ciphertexts": 14336,
+      "outer_builder": {
+        "cpu_s": {
+          "max": 33.879322492,
+          "mean": 33.346999712249996,
+          "median": 33.260777716999996,
+          "min": 32.987120923
+        },
+        "n": 4,
+        "peak_rss_kib": 2155104,
+        "wall_s": {
+          "max": 17.461816442,
+          "mean": 17.194793203750002,
+          "median": 17.1525308795,
+          "min": 17.012294614
+        }
+      },
+      "packet": 250998,
+      "preinclusion": 920840,
+      "producer_queue_to_commit_wall_s": [
+        25.996990801068023,
+        17.318690286017954,
+        17.184017369057983,
+        17.14435097994283
+      ],
+      "producer_state_apply_wall_s_mean": 0.0226831482432317,
+      "proof": 236653,
+      "receiver_verifier": {
+        "cpu_s": {
+          "max": 0.041353875,
+          "mean": 0.025585221999999998,
+          "median": 0.024732234999999998,
+          "min": 0.011522543
+        },
+        "n": 4,
+        "peak_rss_kib": 5812,
+        "wall_s": {
+          "max": 0.041355336,
+          "mean": 0.02558617525,
+          "median": 0.024733484,
+          "min": 0.011522397
+        }
+      },
+      "relay": 251154,
+      "verifier_input_pipe_B": 251002,
+      "verifier_output_pipe_B": 15029
+    }
+  }
+}

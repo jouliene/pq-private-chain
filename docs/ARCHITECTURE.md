@@ -1,6 +1,10 @@
 # Current architecture and implementation boundary
 
-## Current wallet-created payment decision
+## Payment selection for a local PoW devnet
+
+Use standalone APV2 wallet proofs and direct producer intake as the first local payment path. On the measured hardware a sender making an offer every 12 seconds continued to pay as a two-second local block clock advanced with the preferred builder offline. A four-wallet aggregate verified but arrived after its eighth eligible opportunity on the same clock. Direct service needs 230,358 archive bytes per occupied singleton block. Four-way packing would use 62,787.5 B per payment at full occupancy; the measured service and eligibility limit prevent crediting that cost to the full network. At 100M inclusions the low and busy mix projections are 19.1523 and 7.0807 TB for one archival copy. The owner has not accepted an annual archive or traffic budget. Retain CP03 and the complete WHIR wallet as executable comparisons. The cumulative work rule, issuance, remote failover, globally consistent bootstrap/fork selection and formal post-quantum/privacy qualification remain open. [Decision and reproduction](../experiments/advancing-payments/DECISION.md)
+
+## Prior wallet-created payment decision
 
 Both research candidates have executable complete payment paths. Masked WHIR preserves CP03 ordinary-payment constraints and averaged 263,292 B per wallet submission. Two independently controlled native wallets each sent 147,324 B and retained one 157,220 B pair packet, including all four ciphertexts. Defer network activation of both pending cryptographic qualification and a credible role/availability design. The 1/5 TB archive sizes remain research comparisons. [Measured results and decision](../experiments/wallet-created/DECISION.md) · [Independent node and wallet costs](../experiments/wallet-created/ROLES.md)
 

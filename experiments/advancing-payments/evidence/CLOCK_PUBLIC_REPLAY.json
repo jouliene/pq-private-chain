@@ -1,0 +1,17 @@
+{
+  "aggregate_sha256": "f5847516d2ff7b52a1c5669daacf62a4d70ce874830a9df0aba58bf763aca275",
+  "final": {
+    "count": 98,
+    "fees": 3,
+    "frontier_sha256": "a816486f9fcc93ca72937154a2de1b037cd64e14c1260b05a887ee95457ec870",
+    "header": "a4dd0d95dec430056227aa2b1bc46af00442c95f7b9df5944b9b672d977a7c1309000000e030f6adc07ecaa3ed9d90d62ffe3c38983d8c4874db21867d7c380e27901decd45c21fe7872897f6b35b9841a35dd85a048a073fdb6b5122406cf75f809b1c62c37678062acd072b9f23896b5d8ee97e0663bd50b0ef0951189d80255c342a8",
+    "height": 9,
+    "id": "1c433d91be871e251dadafc81e579b4ebacf04b89597ba20521683960e40b192",
+    "nullifier_set_sha256": "b4bd261bdd16d06733d14d8d2216f72abd5fcaa588cb6940678e711668f8a719",
+    "ordered_commitments_sha256": "7cae9797d74828fd55d6cbd7f81ed1248a2224fa16196c2b443337c4f4e2f6c1",
+    "rollback_floor": 1,
+    "spent": 2
+  },
+  "height": 9,
+  "result": "expired"
+}

@@ -1,0 +1,20 @@
+{
+  "final": {
+    "count": 30,
+    "fees": 9,
+    "frontier_sha256": "c53dcfbb8dbe0274db007810d16b1e3448fa0f138b07e42eea7ab06b428777c1",
+    "header": "41d0239956568639231d97f7792b8f31ed51d74f9beca0575c8793411683a232040000001b5da4914d6673e566df0cf1c7f6baa04dfab4c10e4aec996c596b0acfa64018b55bb57879b301e2f0b4ebed20f1d443ae192d7b5ad7301e949c1050fa4fae40e0bf338bfb54aa0d0dcca007b40f3951f74fb6a341e550355be779903c88ff87",
+    "height": 4,
+    "id": "64247ba02fa4b313a05455bb537d915e33d01b04c4b57bb110b22e715a421a0e",
+    "nullifier_set_sha256": "84b10069d3a52066745dbfc3fa73957b200452ba23ab7d9fc839f1f9d8f886f4",
+    "ordered_commitments_sha256": "96c9f83907d019c991b099305a38864557442c5889849b22370b438330232d6e",
+    "rollback_floor": 0,
+    "spent": 6
+  },
+  "public_widths": [
+    1,
+    1,
+    0,
+    1
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "after": {
+    "count": 30,
+    "fees": 9,
+    "frontier_sha256": "c53dcfbb8dbe0274db007810d16b1e3448fa0f138b07e42eea7ab06b428777c1",
+    "header": "41d0239956568639231d97f7792b8f31ed51d74f9beca0575c8793411683a232040000001b5da4914d6673e566df0cf1c7f6baa04dfab4c10e4aec996c596b0acfa64018b55bb57879b301e2f0b4ebed20f1d443ae192d7b5ad7301e949c1050fa4fae40e0bf338bfb54aa0d0dcca007b40f3951f74fb6a341e550355be779903c88ff87",
+    "height": 4,
+    "id": "64247ba02fa4b313a05455bb537d915e33d01b04c4b57bb110b22e715a421a0e",
+    "nullifier_set_sha256": "84b10069d3a52066745dbfc3fa73957b200452ba23ab7d9fc839f1f9d8f886f4",
+    "ordered_commitments_sha256": "96c9f83907d019c991b099305a38864557442c5889849b22370b438330232d6e",
+    "rollback_floor": 0,
+    "spent": 6
+  },
+  "before": {
+    "count": 28,
+    "fees": 6,
+    "frontier_sha256": "62e252c7b03a715c1ac81355e6fc7a03ce4f0f09c73a93f57e4612773fde02ca",
+    "header": "fcf9c8177162437e146a697d9f3ca969d6ce79d666415cda1d332cd8d39b2a1003000000d5fb7696b8984cb18a9286786fbf89535273e8e4746f13b769f85069d67954fafc0e9d49eeecc9cfafb060da3821e6f04791a5e1c5be2e98c54d54c1a8ea7dfd9f152d8a9bf4cd7ae108fc154abd1c944bb030a67ee86487a58bc5034a95a153",
+    "height": 3,
+    "id": "41d0239956568639231d97f7792b8f31ed51d74f9beca0575c8793411683a232",
+    "nullifier_set_sha256": "c019a71889d521759719dd4a84d38a1ce9df9d33f80f5ed3a37d6e6180aa5d59",
+    "ordered_commitments_sha256": "0632143826967de803aff78081f6363d04ec8f71a7882d52d7a397d9676e9b17",
+    "rollback_floor": 0,
+    "spent": 4
+  },
+  "funding_source_wallets": 1,
+  "genesis_receiver_notes": 0,
+  "genesis_sha256": "8718d0efa7401164b837061bcaa91ed79a8c392b79afec865574471fa609745e",
+  "opened_after_spend": 1,
+  "opened_empty_each_both": [
+    0,
+    1,
+    1,
+    2
+  ],
+  "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "received_spend_height": 4,
+  "receiver_backup_B": 32,
+  "roles": {
+    "funder": {
+      "from_role_B": 462797,
+      "meters": [
+        {
+          "cpu_s": 7.101896818,
+          "elapsed_s": 4.440968923,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 583120
+        },
+        {
+          "cpu_s": 17.268968954,
+          "elapsed_s": 8.8804827,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1089092
+        },
+        {
+          "cpu_s": 16.95469657,
+          "elapsed_s": 8.707413718,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1089444
+        }
+      ],
+      "to_role_B": 5044
+    },
+    "hash": {
+      "from_role_B": 900,
+      "meters": [],
+      "to_role_B": 3349
+    },
+    "receiver": {
+      "from_role_B": 2377,
+      "meters": [
+        {
+          "cpu_s": 7.136832757,
+          "elapsed_s": 4.434435643,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 574968
+        }
+      ],
+      "to_role_B": 4
+    },
+    "restored_receiver": {
+      "from_role_B": 231859,
+      "meters": [
+        {
+          "cpu_s": 7.005103405,
+          "elapsed_s": 4.359317894,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 575048
+        },
+        {
+          "cpu_s": 0.000157481,
+          "elapsed_s": 0.000157772,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 575048
+        },
+        {
+          "cpu_s": 0.000338329,
+          "elapsed_s": 0.00033853,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 575048
+        },
+        {
+          "cpu_s": 0.000340294,
+          "elapsed_s": 0.00034043,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 575048
+        },
+        {
+          "cpu_s": 0.000527757,
+          "elapsed_s": 0.000527909,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 575048
+        },
+        {
+          "cpu_s": 16.922952472,
+          "elapsed_s": 8.698870464,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1091060
+        },
+        {
+          "cpu_s": 0.000744461,
+          "elapsed_s": 0.000744825,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 1091060
+        }
+      ],
+      "to_role_B": 28993
+    },
+    "verifier": {
+      "from_role_B": 22566,
+      "meters": [
+        {
+          "cpu_s": 0.000285248,
+          "elapsed_s": 0.000285851,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 3996
+        },
+        {
+          "cpu_s": 0.010419847,
+          "elapsed_s": 0.010419835,
+          "operation": "public_verify",
+          "peak_rss_kib": 5168
+        },
+        {
+          "cpu_s": 0.010582659,
+          "elapsed_s": 0.010582496,
+          "operation": "public_verify",
+          "peak_rss_kib": 5172
+        },
+        {
+          "cpu_s": 0.010295015,
+          "elapsed_s": 0.010295052,
+          "operation": "public_verify",
+          "peak_rss_kib": 5368
+        },
+        {
+          "cpu_s": 0.010021189,
+          "elapsed_s": 0.01002837,
+          "operation": "public_verify",
+          "peak_rss_kib": 5388
+        },
+        {
+          "cpu_s": 0.010640918,
+          "elapsed_s": 0.010640633,
+          "operation": "public_verify",
+          "peak_rss_kib": 5404
+        },
+        {
+          "cpu_s": 0.010298807,
+          "elapsed_s": 0.010298706,
+          "operation": "public_verify",
+          "peak_rss_kib": 5420
+        }
+      ],
+      "to_role_B": 1381264
+    }
+  }
+}

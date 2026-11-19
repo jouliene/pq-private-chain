@@ -10,7 +10,7 @@ The harness requires the complete authoritative public author trace, approved ge
 
 ## Lost acknowledgement after durable enqueue
 
-A local Unix proxy forwards one real, genesis-anchored singleton to the preferred endpoint, receives its genuine 32-byte post-COMMIT acknowledgement, observes the durable preferred row through a separate SQLite connection and closes the payer connection without returning the acknowledgement. Unchanged `upload` retries the entire frame at the direct endpoint. Both full frame dispositions are counted, including the first failed delivery from the payer's perspective. The test checks that retry promotes the original row to direct without changing its sequence, first arrival, identity or bytes. It restarts both ingress endpoints, resubmits on a fresh direct process and admits exactly the original published singleton block through normal proof and state verification. It then uploads the same bytes after inclusion, verifies the spent-nullifier rejection and empty queue, and compares all ledger rows to the first-commit fingerprint.
+A local Unix proxy forwards one real, genesis-anchored singleton to the preferred endpoint, receives its genuine 32-byte post-COMMIT acknowledgement, observes the durable preferred row through a separate SQLite connection and closes the payer connection without returning the acknowledgement. Unchanged `upload` retries the entire frame at the direct endpoint. Both full frame dispositions are counted, including the first failed delivery from the payer's perspective. The test checks that retry promotes the original row to direct without changing its sequence, first arrival, identity or bytes. It stops both ingress endpoints, starts a fresh direct process, resubmits and admits exactly the original published singleton block through normal proof and state verification. It then uploads the same bytes after inclusion, verifies the spent-nullifier rejection and empty queue, and compares all ledger rows to the first-commit fingerprint.
 
 These tests cover local process death and real post-commit acknowledgement loss on this SQLite/filesystem configuration. A machine-power cut, hostile disk firmware, remote-peer outage, cross-host replicated queue and bounded delivery under permanent partition require different evidence. The origin can observe an intake acknowledgement before final admission. A stale accepted packet may re-enter the queue transiently after inclusion; admission must recheck its nullifiers.
 
@@ -23,3 +23,9 @@ python3 -I -B experiments/advancing-payments/assurance/durability/check.py \
 ```
 
 [Executable test](check.py) · [state transition implementation](../../state.py) · [ingress implementation](../../ingress.py)
+
+## Author03 observations
+
+The dying writer had replaced the old H7 by the paid alternate H5 inside its transaction. Its 865,792-byte rollback journal had SQLite's hot-journal magic. The fresh process recovered H7, 39 fee units, 122 outputs and 26 nullifiers; all four SQL tables matched the original committed fingerprint. Retrying both alternate blocks selected the published H6, 24 fee units, 112 outputs and 16 nullifiers.
+
+For the uncertain delivery the payer sent 230,210 bytes twice. The proxy observed the preferred server's 32-byte acknowledgement, and the payer received only the direct server's acknowledgement. The two pending submissions retained one queue identity and arrival. The subsequent economic transition exactly reproduced the published first block: one payment, fee 3, two new nullifiers and two new commitments. A later retransmission failed spentness, preserved that full state and left the queue empty. [Raw results and fingerprints](RESULT.json)

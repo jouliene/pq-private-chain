@@ -13,6 +13,8 @@ and a newly proved spend. The source includes the prover/verifier, modified proo
 library, native signature adapter and wallet. It uses real cryptographic checks,
 not a mock ledger or precomputed acceptance verdict.
 
+The [advancing-chain payment experiment](experiments/advancing-payments/DECISION.md) measures independently prepared payments at occupancies one through four, direct producer admission, an externally funded receiver's next spend and competing branches. It includes full public artifacts and [clean reproduction commands](experiments/advancing-payments/REPRODUCE.md).
+
 The [wallet-created payment decision](experiments/wallet-created/DECISION.md) reports six fresh full masked-WHIR payments, a default Qnero wallet comparison and one native two-owner aggregate, with separate pre-inclusion and archive costs. CP03 remains the executable reference.
 
 ## Build and reproduce

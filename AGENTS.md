@@ -1,3 +1,7 @@
+# Advancing-chain payments
+
+The APV2 research path, local devnet decision and reproductions live in experiments/advancing-payments. Read its DECISION.md and REPRODUCE.md before running its isolated Rust roles. Use a new work and evidence directory for each run, the registered source/profile and one heavy job at a time. Keep producer-confirmation clocks independent of proof completion. Tests of receipt ownership must distinguish external funding from the payer's own change.
+
 # Wallet-created payment decision
 
 The bounded structured-wallet and two-owner native evidence belongs in experiments/wallet-created. Read its DECISION.md, GOAL.md at the repository root and STATUS.md. Keep fresh proof, receipt, ledger, publication and conditional security results distinct. Preserve CP03 as the executable reference.
