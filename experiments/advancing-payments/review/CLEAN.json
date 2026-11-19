@@ -1,0 +1,1777 @@
+{
+  "author_public": {
+    "branch": {
+      "branch_switches": [
+        {
+          "height": 6,
+          "tip": "fa39e7fcc2e4ae3172886fd0c61e2e04426567e5dbec80396d534e1d6e8b4da3"
+        },
+        {
+          "height": 12,
+          "tip": "b5e99a55b55a23590eb7323dca3e770f7ba2edd21534850d4d3804e77aa9e890"
+        },
+        {
+          "height": 20,
+          "tip": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695"
+        }
+      ],
+      "distinct_block_objects_by_occupancy": {
+        "0": 10,
+        "1": 7,
+        "2": 1,
+        "3": 1,
+        "4": 4
+      },
+      "events": {
+        "extend": 21,
+        "reject": 5,
+        "reject_switch": 2,
+        "switch": 3
+      },
+      "final": {
+        "anchor_ages": [
+          1,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2,
+          5,
+          7,
+          8,
+          5,
+          1,
+          1,
+          1,
+          6,
+          2,
+          2,
+          2,
+          7,
+          3,
+          3,
+          3
+        ],
+        "blocks": 20,
+        "distinct_full_tree_prefixes": 11,
+        "distinct_spent": 44,
+        "fees": 66,
+        "funded": 140,
+        "head_id": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695",
+        "head_sorted_funded_root": "268a6f579c648f503266ca27186fe6906ba3d8512cba1c1a5e216545a517c5ad",
+        "payments": 22,
+        "receipt_digest_comparisons": 22,
+        "widths": [
+          1,
+          1,
+          2,
+          3,
+          1,
+          0,
+          1,
+          1,
+          4,
+          4,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "forwarded_wallet_rows_compared": 28,
+      "genesis_sha256": "6456501cfd69a57a85ab4cb734ced5ef36d5b4b20c8e9cc6e05e9684981ae55e",
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "recognized_authored_singles": 28,
+      "rejection_state_checks": {
+        "anchor branch": 2,
+        "anchor expired or future": 1,
+        "cryptographic payment rejection": 1,
+        "rollback horizon": 1,
+        "spent nullifier": 2
+      },
+      "table_comparisons": 2
+    },
+    "clock": {
+      "aggregate_sha256": "f5847516d2ff7b52a1c5669daacf62a4d70ce874830a9df0aba58bf763aca275",
+      "final": {
+        "count": 98,
+        "fees": 3,
+        "frontier_sha256": "a816486f9fcc93ca72937154a2de1b037cd64e14c1260b05a887ee95457ec870",
+        "header": "a4dd0d95dec430056227aa2b1bc46af00442c95f7b9df5944b9b672d977a7c1309000000e030f6adc07ecaa3ed9d90d62ffe3c38983d8c4874db21867d7c380e27901decd45c21fe7872897f6b35b9841a35dd85a048a073fdb6b5122406cf75f809b1c62c37678062acd072b9f23896b5d8ee97e0663bd50b0ef0951189d80255c342a8",
+        "height": 9,
+        "id": "1c433d91be871e251dadafc81e579b4ebacf04b89597ba20521683960e40b192",
+        "nullifier_set_sha256": "b4bd261bdd16d06733d14d8d2216f72abd5fcaa588cb6940678e711668f8a719",
+        "ordered_commitments_sha256": "7cae9797d74828fd55d6cbd7f81ed1248a2224fa16196c2b443337c4f4e2f6c1",
+        "rollback_floor": 1,
+        "spent": 2
+      },
+      "height": 9,
+      "result": "expired"
+    },
+    "delivery": {
+      "post_retry_repeat": [
+        {
+          "accepted": true,
+          "ack_bytes": 32,
+          "endpoint": "direct",
+          "out_bytes": 230210
+        }
+      ],
+      "public_packet_sha256": "dd0ae70fddfddc0e46f9d23c02e6c709903eb180105884f9c78fa0f63c68d283",
+      "real_durable_ack_lost": true,
+      "retry": [
+        {
+          "accepted": false,
+          "ack_bytes": 0,
+          "endpoint": "lost-ack",
+          "out_bytes": 230210
+        },
+        {
+          "accepted": true,
+          "ack_bytes": 32,
+          "endpoint": "direct",
+          "out_bytes": 230210
+        }
+      ],
+      "singleton_route": true,
+      "unique_durable_rows": 1
+    },
+    "direct": {
+      "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+      "branch": {
+        "anchor_ages": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "blocks": 23,
+        "distinct_full_tree_prefixes": 5,
+        "distinct_spent": 8,
+        "fees": 12,
+        "funded": 32,
+        "head_id": "854d5380d8be556a9a322f678d52712969a4e147ac4f9d4474985378c5788c61",
+        "head_sorted_funded_root": "34c9ad464995ef4285ab623372504e25adaedcf46961141afba09899f0daba90",
+        "payments": 4,
+        "receipt_digest_comparisons": 4,
+        "widths": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "capture_complete_one_edge_B": 924412,
+      "capture_empty_blocks": 19,
+      "genesis_sha256": "bce5f8065b45b1d1c1238977c1956aa5c7db7d6ac6095c495fd5787a1f9640c0",
+      "late_max_s": 0.08386925491504371,
+      "measurements": [
+        {
+          "age": 5,
+          "anchor": 0,
+          "elapsed_s": 10.045692779007368,
+          "height": 5
+        },
+        {
+          "age": 6,
+          "anchor": 5,
+          "elapsed_s": 10.082950676907785,
+          "height": 11
+        },
+        {
+          "age": 6,
+          "anchor": 11,
+          "elapsed_s": 10.070658229989931,
+          "height": 17
+        },
+        {
+          "age": 6,
+          "anchor": 17,
+          "elapsed_s": 10.043653712957166,
+          "height": 23
+        }
+      ],
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1"
+    },
+    "durable_controls": {
+      "ack": {
+        "included_once": {
+          "fees": 3,
+          "head": "4b0974df9eee98097178a9ca7950d5ce51b96025e790287da08a5b1b334a98a1",
+          "height": 1,
+          "logical_tables_sha256": "8e5180f80bb4192720e55a6ac672ec92fbed17dc257acf4fa73dfc2a282cb682",
+          "nullifier_set_sha256": "b4bd261bdd16d06733d14d8d2216f72abd5fcaa588cb6940678e711668f8a719",
+          "ordered_commitments_sha256": "7cae9797d74828fd55d6cbd7f81ed1248a2224fa16196c2b443337c4f4e2f6c1",
+          "table_rows": {
+            "blocks": 2,
+            "config": 1,
+            "outs": 98,
+            "spent": 2
+          }
+        },
+        "original_public_block": "97096726a6995138358f5b9d075e7337bcf03de421be703fd39fd341697f1574",
+        "packet_sha256": "dd0ae70fddfddc0e46f9d23c02e6c709903eb180105884f9c78fa0f63c68d283",
+        "payment_B": 230206,
+        "promoted_to_direct": true,
+        "queue_arrival_retained": true,
+        "queue_identity_and_sequence_retained": true,
+        "received_ack_dropped_B": 32,
+        "remaining_offers": 0,
+        "restarted_endpoint": true,
+        "subsequent_retry_rejection": "spent nullifier",
+        "wallet_uploads": [
+          {
+            "accepted": false,
+            "ack_bytes": 0,
+            "endpoint": "drop-ack",
+            "out_bytes": 230210
+          },
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "direct",
+            "out_bytes": 230210
+          }
+        ]
+      },
+      "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+      "death_signal": "SIGKILL",
+      "foreign_keys": "ok",
+      "genesis_sha256": "6456501cfd69a57a85ab4cb734ced5ef36d5b4b20c8e9cc6e05e9684981ae55e",
+      "integrity": "ok",
+      "old": {
+        "fees": 39,
+        "head": "4e2a118ac6956ba4c6e3fd8aac26369876acdbf520c296489efa4e2ad2341a37",
+        "height": 7,
+        "logical_tables_sha256": "b06a542d0e098be8ce51981814909ad54394799928774cc2e364ef1cc0d718a1",
+        "nullifier_set_sha256": "5ef2538e06df4dfed1a54a3bf849d26469076118e8128da6f2aef57587461b6d",
+        "ordered_commitments_sha256": "bb4f60c8281589472bd980d358db6bb3b3db0561bf77febb93f6801e1bf9d3cd",
+        "table_rows": {
+          "blocks": 8,
+          "config": 1,
+          "outs": 122,
+          "spent": 26
+        }
+      },
+      "partial": {
+        "applied_prefix_block": "a5dad65a06ba83fb6773629de11d2642a5c578f909db51aa4475ed7d11b75282",
+        "applied_prefix_slots": 1,
+        "in_transaction": true,
+        "journal_B": 865792,
+        "journal_magic": "d9d505f920a163d7",
+        "pending_blocks": 1,
+        "writer": {
+          "fees": 24,
+          "head": "3f4b72e869094dbccaa858ffcaf934d8f45110fc9af3eb861a91f624dae297a9",
+          "height": 5,
+          "logical_tables_sha256": "1238344c7843925426d93a2decf02c7d675609d47ec07cb63ff3ab5608e2755e",
+          "nullifier_set_sha256": "f1994992318565ce761f13b98fbf1cf1a81823773275c31f9e2671037215f18d",
+          "ordered_commitments_sha256": "94cc7122301b28a2937ea5f7f3f1a7d511a20a007abf29ad8662eef946894f16",
+          "table_rows": {
+            "blocks": 6,
+            "config": 1,
+            "outs": 112,
+            "spent": 16
+          }
+        }
+      },
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "public_trace_sha256": "25b47f28378fed5d38084298a87b3022f541e066f88aacdea294529f00102656",
+      "recovered": {
+        "fees": 39,
+        "head": "4e2a118ac6956ba4c6e3fd8aac26369876acdbf520c296489efa4e2ad2341a37",
+        "height": 7,
+        "logical_tables_sha256": "b06a542d0e098be8ce51981814909ad54394799928774cc2e364ef1cc0d718a1",
+        "nullifier_set_sha256": "5ef2538e06df4dfed1a54a3bf849d26469076118e8128da6f2aef57587461b6d",
+        "ordered_commitments_sha256": "bb4f60c8281589472bd980d358db6bb3b3db0561bf77febb93f6801e1bf9d3cd",
+        "table_rows": {
+          "blocks": 8,
+          "config": 1,
+          "outs": 122,
+          "spent": 26
+        }
+      },
+      "retried_blocks": [
+        "a5dad65a06ba83fb6773629de11d2642a5c578f909db51aa4475ed7d11b75282",
+        "b1c8f41519a095124ef36b0ea50a29217b925eefcb8c581f4918586686030ce3"
+      ],
+      "retry": {
+        "fees": 24,
+        "head": "fa39e7fcc2e4ae3172886fd0c61e2e04426567e5dbec80396d534e1d6e8b4da3",
+        "height": 6,
+        "logical_tables_sha256": "af8777dd9b7bafa6141b0eac350a8f8136b20140a6aa1b6884ea69862ae5f192",
+        "nullifier_set_sha256": "f1994992318565ce761f13b98fbf1cf1a81823773275c31f9e2671037215f18d",
+        "ordered_commitments_sha256": "94cc7122301b28a2937ea5f7f3f1a7d511a20a007abf29ad8662eef946894f16",
+        "table_rows": {
+          "blocks": 7,
+          "config": 1,
+          "outs": 112,
+          "spent": 16
+        }
+      }
+    },
+    "incoming": {
+      "branch": {
+        "anchor_ages": [
+          1,
+          2,
+          1
+        ],
+        "blocks": 4,
+        "distinct_full_tree_prefixes": 4,
+        "distinct_spent": 6,
+        "fees": 9,
+        "funded": 30,
+        "head_id": "64247ba02fa4b313a05455bb537d915e33d01b04c4b57bb110b22e715a421a0e",
+        "head_sorted_funded_root": "e0bf338bfb54aa0d0dcca007b40f3951f74fb6a341e550355be779903c88ff87",
+        "payments": 3,
+        "receipt_digest_comparisons": 3,
+        "widths": [
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      "opened_after_spend": 1,
+      "opened_before_spend": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "receiver_genesis": 0
+    },
+    "storage": {
+      "archive": {
+        "body_B": 2387924,
+        "compact_B": 2457600,
+        "compact_identical": true,
+        "logical_sha256": "606b81beb519901b7e87a3815a94d6c88e9c1d6a7a2584382421e872d3018019"
+      },
+      "pruned": {
+        "body_B": 1368,
+        "compact_B": 61440,
+        "compact_identical": true,
+        "logical_sha256": "357bcb2ba0fb952417f973eb1040b1b5217458af0255f90f425b64884033eed4"
+      }
+    }
+  },
+  "build": {
+    "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+    "cargo": [
+      "rustup",
+      "run",
+      "1.93.0",
+      "cargo",
+      "build",
+      "--locked",
+      "--offline",
+      "--release",
+      "-j2",
+      "-p",
+      "qnero-prover",
+      "--example",
+      "advancing",
+      "--features",
+      "parallel"
+    ],
+    "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "config_after_sha256": "ab7c381a39c63c08728daafe3c7e0d8217f8186d35ac4acb4cdc0c404c9e8016",
+    "config_before_sha256": "6ecd00581bbd804a65f4485fab7b3e2f287187850ba050652feb89f778758390",
+    "rustc": "rustc 1.93.0 (254b59607 2026-01-19)\nbinary: rustc\ncommit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c\ncommit-date: 2026-01-19\nhost: x86_64-unknown-linux-gnu\nrelease: 1.93.0\nLLVM version: 21.1.8",
+    "sources_sha256": {
+      "PROFILE.md": "8ff2d3754f7e5b4c892e8d97d8018d675f6092656fa48d32f3f26f7d32d34305",
+      "build.py": "520359b29768bac180683fecc7691abd09797fc693c92ea676d6c0d3d86955f5",
+      "profile.patch": "38a082fc0989f06cffd421edc09619a322721a6704b197bb7efd9ed013dc66f0",
+      "src/codec.rs": "775c0e97af7f2ddda49b94178cdd8a80fc310a6f58f65cdd314ce55d21047e7e",
+      "src/main.rs": "555d9a1005f55f4d0f451934294cc8ba9586c3a3d1d23028a6467957764f7325",
+      "src/registry.rs": "8ece04a26a80493ce0369111f5e18bc2f7146771b2b80ac7a078f2f982b2c46a",
+      "src/wallet.rs": "ffb8946b765ded808a5d3f667ab68c6b85524571eaaa294f45515b6101850171"
+    },
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+  },
+  "build_campaign_revision": "940c92159e3a85c2b82ea38bc3f6efa6ec29d408",
+  "clock": {
+    "prospective_height": 9,
+    "ready_s": 17.233301860047504,
+    "result": "expired",
+    "ticks": [
+      {
+        "block_sha256": "26e88fe3e089e138de371e8f9a0a97bc8ccfdf948e121d0d26380b8d488c5751",
+        "end_s": 2.022976290085353,
+        "h": 1,
+        "kind": "unrelated"
+      },
+      {
+        "block_sha256": "da2bfdf1d305130636011c014809a962fdb4160e3b3320a5033fdc82e4746689",
+        "end_s": 4.008928455063142,
+        "h": 2,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "476201dcd0ddccb1e0b4de452c481769a94244b49df4a719966edda755d36999",
+        "end_s": 6.0094400440575555,
+        "h": 3,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "accfde8a4b1616209fa4ffb17e05f041fff2333576e8c9a23d816adf79322d63",
+        "end_s": 8.008358687045984,
+        "h": 4,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "ed7e884d0dd6687eb9f50a14f23c7871d5c6e5dd49f62d9e9041e1d60921b52d",
+        "end_s": 10.009473433019593,
+        "h": 5,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "c040f0d58a0e4cc5b1b0d2a717bc5e74e2d291e6fd3c9eced2aa4ba479fab293",
+        "end_s": 12.008742485078983,
+        "h": 6,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "94c6133744f082e7cd03cf17c94f60fb34478f192760f55a07f533c3ac1d7f16",
+        "end_s": 14.010205339989625,
+        "h": 7,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "ef761c24560d0e1e1b6feee85846b5b1a0fef7ea8511eed877dbbbb68be9fc88",
+        "end_s": 16.0089596650796,
+        "h": 8,
+        "kind": "empty"
+      },
+      {
+        "block_sha256": "654034c0ff44e305699ee1625921e8eead0952fa4258a03c5734eb0bb9a3bb80",
+        "end_s": 18.027200456010178,
+        "h": 9,
+        "kind": "empty"
+      }
+    ]
+  },
+  "cost_checks": {
+    "author": {
+      "archive_bytes_per_included_payment_lower_bound": 62787.5,
+      "busy_origins": 12,
+      "packet_B": {
+        "1": 230206,
+        "2": 233654,
+        "3": 247206,
+        "4": 250998
+      },
+      "scenarios": [
+        {
+          "all_full_width_archive_minimum_TB": 5.9648125,
+          "archive_TB": 18.194676363636365,
+          "builder_wall_per_s": 4.2637270740107205,
+          "included": 95000000,
+          "mix": "low",
+          "relay_one_copy_TB": 18.19530446280992,
+          "uniform_eight_blocks_s": 1.6066762105263157
+        },
+        {
+          "all_full_width_archive_minimum_TB": 6.27875,
+          "archive_TB": 19.152290909090908,
+          "builder_wall_per_s": 4.488133762116547,
+          "included": 100000000,
+          "mix": "low",
+          "relay_one_copy_TB": 19.152952066115702,
+          "uniform_eight_blocks_s": 1.5263424
+        },
+        {
+          "all_full_width_archive_minimum_TB": 5.9648125,
+          "archive_TB": 6.726653841269841,
+          "builder_wall_per_s": 13.312210301624676,
+          "included": 95000000,
+          "mix": "busy",
+          "relay_one_copy_TB": 6.726774476190476,
+          "uniform_eight_blocks_s": 8.365338947368421
+        },
+        {
+          "all_full_width_archive_minimum_TB": 6.27875,
+          "archive_TB": 7.080688253968254,
+          "builder_wall_per_s": 14.012852949078606,
+          "included": 100000000,
+          "mix": "busy",
+          "relay_one_copy_TB": 7.080815238095238,
+          "uniform_eight_blocks_s": 7.947072
+        }
+      ],
+      "wallet_uploaded_TB": 23.021
+    },
+    "fresh": {
+      "archive_bytes_per_included_payment_lower_bound": 62787.5,
+      "busy_origins": 12,
+      "packet_B": {
+        "1": 230206,
+        "2": 233654,
+        "3": 247206,
+        "4": 250998
+      },
+      "scenarios": [
+        {
+          "all_full_width_archive_minimum_TB": 5.9648125,
+          "archive_TB": 18.194676363636365,
+          "builder_wall_per_s": 4.232751213302795,
+          "included": 95000000,
+          "mix": "low",
+          "relay_one_copy_TB": 18.19530446280992,
+          "uniform_eight_blocks_s": 1.6066762105263157
+        },
+        {
+          "all_full_width_archive_minimum_TB": 6.27875,
+          "archive_TB": 19.152290909090908,
+          "builder_wall_per_s": 4.455527592950311,
+          "included": 100000000,
+          "mix": "low",
+          "relay_one_copy_TB": 19.152952066115702,
+          "uniform_eight_blocks_s": 1.5263424
+        },
+        {
+          "all_full_width_archive_minimum_TB": 5.9648125,
+          "archive_TB": 6.726653841269841,
+          "builder_wall_per_s": 13.173455941589431,
+          "included": 95000000,
+          "mix": "busy",
+          "relay_one_copy_TB": 6.726774476190476,
+          "uniform_eight_blocks_s": 8.365338947368421
+        },
+        {
+          "all_full_width_archive_minimum_TB": 6.27875,
+          "archive_TB": 7.080688253968254,
+          "builder_wall_per_s": 13.866795727988874,
+          "included": 100000000,
+          "mix": "busy",
+          "relay_one_copy_TB": 7.080815238095238,
+          "uniform_eight_blocks_s": 7.947072
+        }
+      ],
+      "wallet_uploaded_TB": 23.021
+    }
+  },
+  "direct_clock_incoming_queue_revision": "e19adf88c6bc90becb5656651da4fd79bb0b6233",
+  "environment": {
+    "cpu": "Intel Core i7-8700K, 6 cores, 12 hardware threads",
+    "os": "Linux 6.8.0-149-generic x86_64",
+    "python": "3.12.3",
+    "rayon_threads_per_proving_role": 2,
+    "rust": "1.93.0",
+    "sqlite": "3.45.1"
+  },
+  "fifo_checks": {
+    "absent": {
+      "deliveries": [
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": false,
+            "ack_bytes": 0,
+            "endpoint": "preferred",
+            "out_bytes": 0
+          },
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "direct",
+            "out_bytes": 230210
+          }
+        ]
+      ],
+      "events": [
+        {
+          "block_sha256": "c278bd3a0e0f9878e0848747e561138eb635bf0f92fb03bed6fd70762e0233f7",
+          "fallback": "registered builder unavailable",
+          "height": 1,
+          "packet_sha256": "ee7f4c1fe7f4117f6c49677fad769d314e5e3ef14d249c675327e2faa7617a41",
+          "remaining": 2,
+          "width": 1
+        },
+        {
+          "block_sha256": "a3c1a84632c90dda68fcff9c51f4269f288523f54c8944624781cf857ed49cd0",
+          "fallback": null,
+          "height": 2,
+          "packet_sha256": "8e54dc886caa39bd0dbe0fe2367977d2fb222731f2714b986f039ce5b60cb62c",
+          "remaining": 1,
+          "width": 1
+        },
+        {
+          "block_sha256": "90720b762047bdc7b573ee1ea8ddf7ce407e927abf0a1abb96652cd9a025f4f6",
+          "fallback": null,
+          "height": 3,
+          "packet_sha256": "341907154516490a59b8273127e635c1f83c82060f47ba09b6e8790ac5b50535",
+          "remaining": 0,
+          "width": 1
+        }
+      ],
+      "final": {
+        "count": 102,
+        "fees": 9,
+        "frontier_sha256": "d19f9372690c971e1d62c47bd7025a3a9ed177e45a3b4f73f3348284fa1c7230",
+        "header": "2135821e96c7565f868011f653f6ba0e8d3c7fcfd956d3d8b34a7de0f5ba054c030000006c5bdf5ab7a6874c14b04a7b5a5a59aa423446f556662a3f30588229c433587b78638c167ea1518509e8b79ca7dff61d8f94663d415656d4cdb25161b51c578cc1330253d5ca11c3299260e420543a40ff40d1364712f59877ad67d26e0b70af",
+        "height": 3,
+        "id": "ea5f6fc671a409172478efade19bcfe03164a246b222e69175d07cd2886bb66f",
+        "nullifier_set_sha256": "b10b730eb2af5aaed6295e6d0a1a2a3a95898e8eb9ad176e0de180f53ea3ec5b",
+        "ordered_commitments_sha256": "a89a0c0ac6d83cb0c9c959d83132bbc93003bde67a819b126d23a977a0f6bbfe",
+        "rollback_floor": 0,
+        "spent": 6
+      },
+      "genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "queued_before_outage": 2,
+      "worker_scenario": "absent"
+    },
+    "disconnect": {
+      "deliveries": [
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": false,
+            "ack_bytes": 0,
+            "endpoint": "preferred",
+            "out_bytes": 0
+          },
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "direct",
+            "out_bytes": 230210
+          }
+        ]
+      ],
+      "events": [
+        {
+          "block_sha256": "c278bd3a0e0f9878e0848747e561138eb635bf0f92fb03bed6fd70762e0233f7",
+          "fallback": "builder transport disconnected",
+          "height": 1,
+          "packet_sha256": "ee7f4c1fe7f4117f6c49677fad769d314e5e3ef14d249c675327e2faa7617a41",
+          "remaining": 2,
+          "width": 1
+        },
+        {
+          "block_sha256": "a3c1a84632c90dda68fcff9c51f4269f288523f54c8944624781cf857ed49cd0",
+          "fallback": null,
+          "height": 2,
+          "packet_sha256": "8e54dc886caa39bd0dbe0fe2367977d2fb222731f2714b986f039ce5b60cb62c",
+          "remaining": 1,
+          "width": 1
+        },
+        {
+          "block_sha256": "90720b762047bdc7b573ee1ea8ddf7ce407e927abf0a1abb96652cd9a025f4f6",
+          "fallback": null,
+          "height": 3,
+          "packet_sha256": "341907154516490a59b8273127e635c1f83c82060f47ba09b6e8790ac5b50535",
+          "remaining": 0,
+          "width": 1
+        }
+      ],
+      "final": {
+        "count": 102,
+        "fees": 9,
+        "frontier_sha256": "d19f9372690c971e1d62c47bd7025a3a9ed177e45a3b4f73f3348284fa1c7230",
+        "header": "2135821e96c7565f868011f653f6ba0e8d3c7fcfd956d3d8b34a7de0f5ba054c030000006c5bdf5ab7a6874c14b04a7b5a5a59aa423446f556662a3f30588229c433587b78638c167ea1518509e8b79ca7dff61d8f94663d415656d4cdb25161b51c578cc1330253d5ca11c3299260e420543a40ff40d1364712f59877ad67d26e0b70af",
+        "height": 3,
+        "id": "ea5f6fc671a409172478efade19bcfe03164a246b222e69175d07cd2886bb66f",
+        "nullifier_set_sha256": "b10b730eb2af5aaed6295e6d0a1a2a3a95898e8eb9ad176e0de180f53ea3ec5b",
+        "ordered_commitments_sha256": "a89a0c0ac6d83cb0c9c959d83132bbc93003bde67a819b126d23a977a0f6bbfe",
+        "rollback_floor": 0,
+        "spent": 6
+      },
+      "genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "queued_before_outage": 2,
+      "worker_scenario": "disconnect"
+    },
+    "exited": {
+      "deliveries": [
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": false,
+            "ack_bytes": 0,
+            "endpoint": "preferred",
+            "out_bytes": 0
+          },
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "direct",
+            "out_bytes": 230210
+          }
+        ]
+      ],
+      "events": [
+        {
+          "block_sha256": "c278bd3a0e0f9878e0848747e561138eb635bf0f92fb03bed6fd70762e0233f7",
+          "fallback": "builder exited",
+          "height": 1,
+          "packet_sha256": "ee7f4c1fe7f4117f6c49677fad769d314e5e3ef14d249c675327e2faa7617a41",
+          "remaining": 2,
+          "width": 1
+        },
+        {
+          "block_sha256": "a3c1a84632c90dda68fcff9c51f4269f288523f54c8944624781cf857ed49cd0",
+          "fallback": null,
+          "height": 2,
+          "packet_sha256": "8e54dc886caa39bd0dbe0fe2367977d2fb222731f2714b986f039ce5b60cb62c",
+          "remaining": 1,
+          "width": 1
+        },
+        {
+          "block_sha256": "90720b762047bdc7b573ee1ea8ddf7ce407e927abf0a1abb96652cd9a025f4f6",
+          "fallback": null,
+          "height": 3,
+          "packet_sha256": "341907154516490a59b8273127e635c1f83c82060f47ba09b6e8790ac5b50535",
+          "remaining": 0,
+          "width": 1
+        }
+      ],
+      "final": {
+        "count": 102,
+        "fees": 9,
+        "frontier_sha256": "d19f9372690c971e1d62c47bd7025a3a9ed177e45a3b4f73f3348284fa1c7230",
+        "header": "2135821e96c7565f868011f653f6ba0e8d3c7fcfd956d3d8b34a7de0f5ba054c030000006c5bdf5ab7a6874c14b04a7b5a5a59aa423446f556662a3f30588229c433587b78638c167ea1518509e8b79ca7dff61d8f94663d415656d4cdb25161b51c578cc1330253d5ca11c3299260e420543a40ff40d1364712f59877ad67d26e0b70af",
+        "height": 3,
+        "id": "ea5f6fc671a409172478efade19bcfe03164a246b222e69175d07cd2886bb66f",
+        "nullifier_set_sha256": "b10b730eb2af5aaed6295e6d0a1a2a3a95898e8eb9ad176e0de180f53ea3ec5b",
+        "ordered_commitments_sha256": "a89a0c0ac6d83cb0c9c959d83132bbc93003bde67a819b126d23a977a0f6bbfe",
+        "rollback_floor": 0,
+        "spent": 6
+      },
+      "genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "queued_before_outage": 2,
+      "worker_scenario": "exited"
+    },
+    "healthy": {
+      "deliveries": [
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "preferred",
+            "out_bytes": 230210
+          }
+        ],
+        [
+          {
+            "accepted": false,
+            "ack_bytes": 0,
+            "endpoint": "preferred",
+            "out_bytes": 0
+          },
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "direct",
+            "out_bytes": 230210
+          }
+        ]
+      ],
+      "events": [
+        {
+          "block_sha256": "80290036af7d7d1cb45911f9c6e23eac12d3dc2797d69b15b62acd0c1d707c69",
+          "fallback": null,
+          "height": 1,
+          "packet_sha256": "520759f671acc050737bcc41f301d3ed530473cad7159332f4ebca3adf639628",
+          "remaining": 1,
+          "width": 2
+        },
+        {
+          "block_sha256": "d798853cf8823917aced021622c5ecc75627d481760968c38b76e888014694af",
+          "fallback": null,
+          "height": 2,
+          "packet_sha256": "341907154516490a59b8273127e635c1f83c82060f47ba09b6e8790ac5b50535",
+          "remaining": 0,
+          "width": 1
+        }
+      ],
+      "final": {
+        "count": 102,
+        "fees": 9,
+        "frontier_sha256": "d19f9372690c971e1d62c47bd7025a3a9ed177e45a3b4f73f3348284fa1c7230",
+        "header": "ab2737d7d8de018013724911a6047c46271f07a94cdde040c97ba4be7167397e020000005a89b5b3a53a512ffe5430e99d86e17cd58235b24372c6f22d8d8a212173066b5ba8d95efedc3e427828671bfda4d064f4356ae0c2a0983e5dfa96da58ab8c89c1330253d5ca11c3299260e420543a40ff40d1364712f59877ad67d26e0b70af",
+        "height": 2,
+        "id": "a501c089a81b798e78a7a5ef450ba29e618edfcb1b52580ca287da3a21937a74",
+        "nullifier_set_sha256": "b10b730eb2af5aaed6295e6d0a1a2a3a95898e8eb9ad176e0de180f53ea3ec5b",
+        "ordered_commitments_sha256": "a89a0c0ac6d83cb0c9c959d83132bbc93003bde67a819b126d23a977a0f6bbfe",
+        "rollback_floor": 0,
+        "spent": 6
+      },
+      "genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "queued_before_outage": 2,
+      "worker_scenario": "healthy"
+    }
+  },
+  "fresh_busy": {
+    "deadline_misses": 0,
+    "interval_s": 26.03328806102509,
+    "last_admission_height": 11,
+    "offered_per_second": 0.15364943493205813,
+    "origin_anchor_heights": [
+      4,
+      8,
+      8,
+      8
+    ],
+    "rounds": [
+      {
+        "builder_wall_s": 17.13363950897474,
+        "completed_s": 17.317522158962674,
+        "queue_head_to_commit_s": 17.278982263989747,
+        "scheduled_s": 0.0
+      },
+      {
+        "builder_wall_s": 16.93376648402773,
+        "completed_s": 43.09298043104354,
+        "queue_head_to_commit_s": 17.021127467043698,
+        "scheduled_s": 26.03328806102509
+      },
+      {
+        "builder_wall_s": 16.852042646962218,
+        "completed_s": 69.0506665930152,
+        "queue_head_to_commit_s": 16.946056180051528,
+        "scheduled_s": 52.06657612205018
+      }
+    ],
+    "synchronized_prepared_payments": 12
+  },
+  "fresh_captured_groups": {
+    "builder-processes-offline": {
+      "wall_s": 0.03456944494973868,
+      "width": 1
+    },
+    "clocked-four-0": {
+      "wall_s": 17.278982263989747,
+      "width": 4
+    },
+    "clocked-four-1": {
+      "wall_s": 17.021127467043698,
+      "width": 4
+    },
+    "clocked-four-2": {
+      "wall_s": 16.946056180051528,
+      "width": 4
+    },
+    "four-independent-genesis-anchors": {
+      "wall_s": 25.39058256102726,
+      "width": 4
+    },
+    "lone-bounded-wait": {
+      "wall_s": 0.23632765805814415,
+      "width": 1
+    },
+    "restored-recipient-direct": {
+      "wall_s": 0.028754484024830163,
+      "width": 1
+    },
+    "three": {
+      "wall_s": 25.477522894972935,
+      "width": 3
+    },
+    "two-distinct-anchor-heights": {
+      "wall_s": 12.523457214003429,
+      "width": 2
+    }
+  },
+  "fresh_genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+  "fresh_public": {
+    "branch": {
+      "branch_switches": [
+        {
+          "height": 6,
+          "tip": "cd4442b06099a302fe593bf0a8743ba988e0088087db5ed63cc8b91f020fc5d7"
+        },
+        {
+          "height": 12,
+          "tip": "3cea36642a0754cd51c860b2ac8a3f311b377535917455a46e8217a498d4a58e"
+        },
+        {
+          "height": 20,
+          "tip": "cb695007bc047727fd8ad6187298664f18c23b60dc6c57ab9f12e7de9ed6cc6e"
+        }
+      ],
+      "distinct_block_objects_by_occupancy": {
+        "0": 10,
+        "1": 7,
+        "2": 1,
+        "3": 1,
+        "4": 4
+      },
+      "events": {
+        "extend": 21,
+        "reject": 5,
+        "reject_switch": 2,
+        "switch": 3
+      },
+      "final": {
+        "anchor_ages": [
+          1,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2,
+          5,
+          7,
+          8,
+          5,
+          1,
+          1,
+          1,
+          6,
+          2,
+          2,
+          2,
+          7,
+          3,
+          3,
+          3
+        ],
+        "blocks": 20,
+        "distinct_full_tree_prefixes": 11,
+        "distinct_spent": 44,
+        "fees": 66,
+        "funded": 140,
+        "head_id": "cb695007bc047727fd8ad6187298664f18c23b60dc6c57ab9f12e7de9ed6cc6e",
+        "head_sorted_funded_root": "f3086f86d5a385e456c9a7d7f6cd9fbbf112c669375126b507a8cef296c49a82",
+        "payments": 22,
+        "receipt_digest_comparisons": 22,
+        "widths": [
+          1,
+          1,
+          2,
+          3,
+          1,
+          0,
+          1,
+          1,
+          4,
+          4,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "forwarded_wallet_rows_compared": 28,
+      "genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "recognized_authored_singles": 28,
+      "rejection_state_checks": {
+        "anchor branch": 2,
+        "anchor expired or future": 1,
+        "cryptographic payment rejection": 1,
+        "rollback horizon": 1,
+        "spent nullifier": 2
+      },
+      "table_comparisons": 2
+    },
+    "clock": {
+      "aggregate_sha256": "78a8d4835d089c5cce6fee839b2fec6065d4e609af7ca98ff6e1988ec2362a3b",
+      "final": {
+        "count": 98,
+        "fees": 3,
+        "frontier_sha256": "a41f794a6040bee7865f6a3e4c9f3a231455ca7325ec173b1d3f80a14b50d43e",
+        "header": "1b546ca021b6599fe0c9b40e078631b29e025318711593e5999848b5ae53116f090000008c3fa2350e9843f7fd54850c8049284e4c81817b11b7d5aaf0d0b1a055a01c69d45c21fe7872897f6b35b9841a35dd85a048a073fdb6b5122406cf75f809b1c66af41c05591cc137c001bc14fa55512733b5b77541d1cb7585f61971a5b6734e",
+        "height": 9,
+        "id": "e8fdcbd4ec0a5814e59ace6e7598cdc9f51e108a0d50c81f24ee0fe4b80b19e0",
+        "nullifier_set_sha256": "ed01f58adedbd461c85e10a0f586ad1d62847ccbbb8c5729382449c6e32353c1",
+        "ordered_commitments_sha256": "43775f938c98dad0c5e6048ecc785c54dde8fe70c9385a8c4337c561a382166b",
+        "rollback_floor": 1,
+        "spent": 2
+      },
+      "height": 9,
+      "result": "expired"
+    },
+    "delivery": {
+      "post_retry_repeat": [
+        {
+          "accepted": true,
+          "ack_bytes": 32,
+          "endpoint": "direct",
+          "out_bytes": 230210
+        }
+      ],
+      "public_packet_sha256": "2e89677712b80c805bb1f96814a17fff06a39bc8866c74087e247841ae304ea3",
+      "real_durable_ack_lost": true,
+      "retry": [
+        {
+          "accepted": false,
+          "ack_bytes": 0,
+          "endpoint": "lost-ack",
+          "out_bytes": 230210
+        },
+        {
+          "accepted": true,
+          "ack_bytes": 32,
+          "endpoint": "direct",
+          "out_bytes": 230210
+        }
+      ],
+      "singleton_route": true,
+      "unique_durable_rows": 1
+    },
+    "direct": {
+      "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+      "branch": {
+        "anchor_ages": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "blocks": 23,
+        "distinct_full_tree_prefixes": 5,
+        "distinct_spent": 8,
+        "fees": 12,
+        "funded": 32,
+        "head_id": "d82e54508b38bdea0704cae29151fc07b90534e94292257ab9849f5cad9e771c",
+        "head_sorted_funded_root": "4e2475e7dfbbb8b79e3d2819c759a60570ec0d8cb7767f1a66d50401180ca240",
+        "payments": 4,
+        "receipt_digest_comparisons": 4,
+        "widths": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "capture_complete_one_edge_B": 924412,
+      "capture_empty_blocks": 19,
+      "genesis_sha256": "c769676d53784fef6349b87f2684142c03f96fc390740d57d2af08f5428d5381",
+      "late_max_s": 0.04323327692691237,
+      "measurements": [
+        {
+          "age": 5,
+          "anchor": 0,
+          "elapsed_s": 10.036598853999749,
+          "height": 5
+        },
+        {
+          "age": 6,
+          "anchor": 5,
+          "elapsed_s": 10.041980193927884,
+          "height": 11
+        },
+        {
+          "age": 6,
+          "anchor": 11,
+          "elapsed_s": 10.037564086960629,
+          "height": 17
+        },
+        {
+          "age": 6,
+          "anchor": 17,
+          "elapsed_s": 10.04237879498396,
+          "height": 23
+        }
+      ],
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1"
+    },
+    "durable_controls": {
+      "ack": {
+        "included_once": {
+          "fees": 3,
+          "head": "9d2ffacb3ef0bc6f35c9501c1b0e251fae1fcb926bc42a32898880af5a1da333",
+          "height": 1,
+          "logical_tables_sha256": "e004daa3bc3b25d0dca872a94cc2bde16e4d1b63c53cce0cca3ecc4c2870b5e1",
+          "nullifier_set_sha256": "ed01f58adedbd461c85e10a0f586ad1d62847ccbbb8c5729382449c6e32353c1",
+          "ordered_commitments_sha256": "43775f938c98dad0c5e6048ecc785c54dde8fe70c9385a8c4337c561a382166b",
+          "table_rows": {
+            "blocks": 2,
+            "config": 1,
+            "outs": 98,
+            "spent": 2
+          }
+        },
+        "original_public_block": "26e88fe3e089e138de371e8f9a0a97bc8ccfdf948e121d0d26380b8d488c5751",
+        "packet_sha256": "2e89677712b80c805bb1f96814a17fff06a39bc8866c74087e247841ae304ea3",
+        "payment_B": 230206,
+        "promoted_to_direct": true,
+        "queue_arrival_retained": true,
+        "queue_identity_and_sequence_retained": true,
+        "received_ack_dropped_B": 32,
+        "remaining_offers": 0,
+        "restarted_endpoint": true,
+        "subsequent_retry_rejection": "spent nullifier",
+        "wallet_uploads": [
+          {
+            "accepted": false,
+            "ack_bytes": 0,
+            "endpoint": "drop-ack",
+            "out_bytes": 230210
+          },
+          {
+            "accepted": true,
+            "ack_bytes": 32,
+            "endpoint": "direct",
+            "out_bytes": 230210
+          }
+        ]
+      },
+      "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+      "death_signal": "SIGKILL",
+      "foreign_keys": "ok",
+      "genesis_sha256": "e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42",
+      "integrity": "ok",
+      "old": {
+        "fees": 39,
+        "head": "123ec42d0afb2d925f899e63a51c86e6650da8b74b599c91cd632746b10507a2",
+        "height": 7,
+        "logical_tables_sha256": "fc4322a00f56cad935750f3d3bad06bf61a24cd09246f8bd731e0457a4358db1",
+        "nullifier_set_sha256": "2664b664075744b8262281ccf7cc59fa9c03e9b2939920231bad8a0b524f78b7",
+        "ordered_commitments_sha256": "b1fb2cb529ba5225567b30cb9ddea40e18dc2e4150e9e5dc6ecd745a2347a228",
+        "table_rows": {
+          "blocks": 8,
+          "config": 1,
+          "outs": 122,
+          "spent": 26
+        }
+      },
+      "partial": {
+        "applied_prefix_block": "be16e7ab1a503550caef95d6cfb1f56c1e34511d0485523216cb46f5fad24952",
+        "applied_prefix_slots": 1,
+        "in_transaction": true,
+        "journal_B": 865792,
+        "journal_magic": "d9d505f920a163d7",
+        "pending_blocks": 1,
+        "writer": {
+          "fees": 24,
+          "head": "a0e5690461c20628656ccd0c9de2c2f6abf3635d56d7816aba9b2272a157d189",
+          "height": 5,
+          "logical_tables_sha256": "2b6ed27a5726ce43117f23abe2d867b68802f5e48bc6302f327361bc1e78a475",
+          "nullifier_set_sha256": "0fe2fc1158a4735a752265e27d3bdc1bd53aa1e6347ea515e110a0a2633bb697",
+          "ordered_commitments_sha256": "e388b074ed7d08624d989a2d9447c0eb5bb6a99c4f3ed73a3bb69ce89a1d695d",
+          "table_rows": {
+            "blocks": 6,
+            "config": 1,
+            "outs": 112,
+            "spent": 16
+          }
+        }
+      },
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "public_trace_sha256": "3020d8bdf8cad0cfb8bc8374e68f9837d374cfdbe3a00b0ace8add3d666f97fd",
+      "recovered": {
+        "fees": 39,
+        "head": "123ec42d0afb2d925f899e63a51c86e6650da8b74b599c91cd632746b10507a2",
+        "height": 7,
+        "logical_tables_sha256": "fc4322a00f56cad935750f3d3bad06bf61a24cd09246f8bd731e0457a4358db1",
+        "nullifier_set_sha256": "2664b664075744b8262281ccf7cc59fa9c03e9b2939920231bad8a0b524f78b7",
+        "ordered_commitments_sha256": "b1fb2cb529ba5225567b30cb9ddea40e18dc2e4150e9e5dc6ecd745a2347a228",
+        "table_rows": {
+          "blocks": 8,
+          "config": 1,
+          "outs": 122,
+          "spent": 26
+        }
+      },
+      "retried_blocks": [
+        "be16e7ab1a503550caef95d6cfb1f56c1e34511d0485523216cb46f5fad24952",
+        "763b2f6ad4239e7796148afac177b913d6e0422a3f44df26769f36d945fe9669"
+      ],
+      "retry": {
+        "fees": 24,
+        "head": "cd4442b06099a302fe593bf0a8743ba988e0088087db5ed63cc8b91f020fc5d7",
+        "height": 6,
+        "logical_tables_sha256": "cdc761c035df2a406b3851f9653beeaba94bdb795008d92e6bb9e05f27f69b09",
+        "nullifier_set_sha256": "0fe2fc1158a4735a752265e27d3bdc1bd53aa1e6347ea515e110a0a2633bb697",
+        "ordered_commitments_sha256": "e388b074ed7d08624d989a2d9447c0eb5bb6a99c4f3ed73a3bb69ce89a1d695d",
+        "table_rows": {
+          "blocks": 7,
+          "config": 1,
+          "outs": 112,
+          "spent": 16
+        }
+      }
+    },
+    "incoming": {
+      "branch": {
+        "anchor_ages": [
+          1,
+          2,
+          1
+        ],
+        "blocks": 4,
+        "distinct_full_tree_prefixes": 4,
+        "distinct_spent": 6,
+        "fees": 9,
+        "funded": 30,
+        "head_id": "7367e6f6a8f76a1f5fd2d607a6078a107ca00d69af21eab2bda41bf469489d6a",
+        "head_sorted_funded_root": "9ce5124480c613826894cc06cea4207951d76ca778b16b96dc7c6f9d6e42a833",
+        "payments": 3,
+        "receipt_digest_comparisons": 3,
+        "widths": [
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      "opened_after_spend": 1,
+      "opened_before_spend": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "receiver_genesis": 0
+    },
+    "storage": {
+      "archive": {
+        "body_B": 2387924,
+        "compact_B": 2457600,
+        "compact_identical": true,
+        "logical_sha256": "ff1206be18d5733eb5a2ad9664552cb715b115f2a00dc7ec0b1af8e75fd6fd0f"
+      },
+      "pruned": {
+        "body_B": 1368,
+        "compact_B": 61440,
+        "compact_identical": true,
+        "logical_sha256": "3f7bfdb0cdb6b9512943347ebd66d945bc2b2cecd9be81aa6ef61b006a86a202"
+      }
+    }
+  },
+  "fresh_wallet_proofs": 28,
+  "fresh_wallet_times": {
+    "max_wall_s": 8.756528409,
+    "min_wall_s": 8.454184365
+  },
+  "funded_roots": {
+    "baseline_compared": 14,
+    "matched_author_and_fresh": 16,
+    "roots": {
+      "1": "1d1b9d6cef4226be7b5bbc5ede6e95d541663c3ffee144dca053d830280b8bac",
+      "1024": "676e13b1e9f2761fd06d75ffc0bbc3f2f30a2f1143d34109a8777bffcf10684f",
+      "15": "ab9788181f8294c15745a1da1594da9fb80972830487c8956e55e6d3e1bd9c5d",
+      "16": "5f97302d2b6fd0242e758d63c2f2e315c640d05abc8ded08e9660baf5967beb0",
+      "16384": "7cf4bb167047ad74fa9c117dd441e2483cdc181b108f86608c0371b74cb41dd6",
+      "17": "c74e803f0a09aea2270c0e6580f279d1f8f4344431cb2d74d7367f6d97b92689",
+      "255": "cb041299869d6c5b885fcb3a62dd062ca57ee1cf1d98550bb0ac757f3c4d56c0",
+      "256": "e9e1201c4a23eb1bfb7f38a5a4e1c41a1b9f36673467b4aedd6fbb202fbf1d62",
+      "257": "300e58f6e687b7f0326953b185e099d578c07a09249938cf3ab0dc6f2930849c",
+      "260": "256e4a76f25f00644cf2c7eb5bcd222fe70f67d877308b040f3cff6c5a2644aa",
+      "3": "df1867decda32171b93692114812e891a9d3c05d0feee2143ea84e41d375ffff",
+      "4": "6551e59306d6f70fcd27aaab4004875a3e88aea09a771105ff9811c41fea014e",
+      "4096": "6934e953836bca075f1d2d1b64648dbf174642bbc590d71775fc7275b4d1819c",
+      "5": "61a804fc798507ecb9cf273a97907f4e74edeacefb9e862d7766586dd76e237a",
+      "63": "66c4eb028b103a2f01e3f82f2f870b382f423b80202f5a4381b4cd42a032179b",
+      "64": "de54efaae22896ec0f6114bdd4f345bd8baef3f9a4da85ba77bd4f6c429985c8",
+      "65": "8e72218124de7c5ec97f30556b5ff41f57d41b47de9a03a17842cec002b51604"
+    }
+  },
+  "operator_registration_files": {
+    "leaf.common": "dec6b364a6945f31ff277aa70ec63bcfeb75cf5f56ae6e857556306e8b3bc793",
+    "leaf.only": "6ea312593556cd52ed5431e84467a99ecededd1ffc494125936d3beeec352509",
+    "leaf.vk": "f585b32a4138ca04fc6270bf6c216ed389fb7f1f78f2ba99f323d46ef53d2272",
+    "outer2.common": "764181c654176b2e4fe3cb2da7196d11baa1c8f5c6d934dfdef0259a48e550b1",
+    "outer2.only": "8c914e7c4bee057162d51ef0b0916c42f4a5f1329b30c682118f97272396112e",
+    "outer2.vk": "41f0fa64dd3b98cc8298e4f6e276ca6895aeed63018875b7c9dedb7ac86d4000",
+    "outer3.common": "7f80e15c3555eab03d7a6519c2f2c479d7ca60b5c7808293af93b1a6a1aaa5a4",
+    "outer3.only": "aa2feb863bcdff2bef3f4227cae1853e5314cf6fb1b33d251be1eb1848590de9",
+    "outer3.vk": "393d757b15064a2c0c76192282ad0ca8f4e36bdb1ca2474bff6de2840da6796e",
+    "outer4.common": "64cdd275bd2e6438856e0ca18475a0622dd85223eb8c3a5f77585678adceec8e",
+    "outer4.only": "82587fb4e12032344c929fdd4d575ecdf5ea4f40d2331bba0232d92ebec9ad4f",
+    "outer4.vk": "ca45830ce9e192175ef057659e14e176aff163f56b297830ae8509b6c809cb72",
+    "profile.json": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+    "wallet.common": "835b9a90119d830df5d07b9fc1983b44001bbef1fe391c6e45052616ab96ff7f",
+    "wallet.only": "457c5bb42fa2d8f92a9d32cf32e985dc2a70fcb1cadaada8ef3ae3b806c6a847",
+    "wallet.vk": "37b9fc146e2976c4a2bb2c6ba43894cdad2a33b81c6b0593f9bad13db9d6a4b1"
+  },
+  "paced_public": {
+    "author": {
+      "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+      "branch": {
+        "anchor_ages": [
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "blocks": 60,
+        "distinct_full_tree_prefixes": 13,
+        "distinct_spent": 24,
+        "fees": 36,
+        "funded": 48,
+        "head_id": "2d5cb5a416bdd6d577d640766a4531708280cfe518bd7ac6a0f75009ebdcd79e",
+        "head_sorted_funded_root": "46b0806845f13106baadcedc397f9ac963d01e4674e132889abd32e8c3808253",
+        "payments": 12,
+        "receipt_digest_comparisons": 12,
+        "widths": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "capture_complete_one_edge_B": 2771832,
+      "capture_empty_blocks": 48,
+      "finite_twelve": {
+        "final_pending": 0,
+        "finite_service_pass": true,
+        "last_commit_s": 120.08070957195014,
+        "max_dispatch_lag_s": 0.004578668973408639
+      },
+      "genesis_sha256": "cb68420601e81d34b1e241732eca86cbff9ea9680a303ab6ba89283bfaf46435",
+      "late_max_s": 0.08169923594687134,
+      "measurements": [
+        {
+          "age": 5,
+          "anchor": 0,
+          "elapsed_s": 10.05354604893364,
+          "height": 5
+        },
+        {
+          "age": 6,
+          "anchor": 4,
+          "elapsed_s": 10.039582188008353,
+          "height": 10
+        },
+        {
+          "age": 6,
+          "anchor": 9,
+          "elapsed_s": 10.054575764923356,
+          "height": 15
+        },
+        {
+          "age": 6,
+          "anchor": 14,
+          "elapsed_s": 10.043020889977925,
+          "height": 20
+        },
+        {
+          "age": 6,
+          "anchor": 19,
+          "elapsed_s": 10.042141521000303,
+          "height": 25
+        },
+        {
+          "age": 6,
+          "anchor": 24,
+          "elapsed_s": 10.05716148391366,
+          "height": 30
+        },
+        {
+          "age": 6,
+          "anchor": 29,
+          "elapsed_s": 10.059321110951714,
+          "height": 35
+        },
+        {
+          "age": 6,
+          "anchor": 34,
+          "elapsed_s": 10.055377366021276,
+          "height": 40
+        },
+        {
+          "age": 6,
+          "anchor": 39,
+          "elapsed_s": 10.042503715958446,
+          "height": 45
+        },
+        {
+          "age": 6,
+          "anchor": 44,
+          "elapsed_s": 10.036799468914978,
+          "height": 50
+        },
+        {
+          "age": 6,
+          "anchor": 49,
+          "elapsed_s": 10.039381603011861,
+          "height": 55
+        },
+        {
+          "age": 6,
+          "anchor": 54,
+          "elapsed_s": 10.080709571950138,
+          "height": 60
+        }
+      ],
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1"
+    },
+    "fresh": {
+      "binary_sha256": "4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82",
+      "branch": {
+        "anchor_ages": [
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "blocks": 60,
+        "distinct_full_tree_prefixes": 13,
+        "distinct_spent": 24,
+        "fees": 36,
+        "funded": 48,
+        "head_id": "6207351e6749f5740a4f9d90579bb3ff18a30ff7f09e16b21bcb0ebbcfd1d940",
+        "head_sorted_funded_root": "7e4802542a283a698b11a149e2efd7f5dbd39a75c4b93c7103babd658808cbdc",
+        "payments": 12,
+        "receipt_digest_comparisons": 12,
+        "widths": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "capture_complete_one_edge_B": 2771832,
+      "capture_empty_blocks": 48,
+      "finite_twelve": {
+        "final_pending": 0,
+        "finite_service_pass": true,
+        "last_commit_s": 120.04242840304505,
+        "max_dispatch_lag_s": 0.004059101105667651
+      },
+      "genesis_sha256": "8f7fdb3df9fb1d6c7ea929f4c0f6cc0089d4caa07b43cdbea134664c150c144b",
+      "late_max_s": 0.04794963705353439,
+      "measurements": [
+        {
+          "age": 5,
+          "anchor": 0,
+          "elapsed_s": 10.040848236065358,
+          "height": 5
+        },
+        {
+          "age": 6,
+          "anchor": 4,
+          "elapsed_s": 10.041909254039638,
+          "height": 10
+        },
+        {
+          "age": 6,
+          "anchor": 9,
+          "elapsed_s": 10.04605565406382,
+          "height": 15
+        },
+        {
+          "age": 6,
+          "anchor": 14,
+          "elapsed_s": 10.040294047095813,
+          "height": 20
+        },
+        {
+          "age": 6,
+          "anchor": 19,
+          "elapsed_s": 10.043930578045547,
+          "height": 25
+        },
+        {
+          "age": 6,
+          "anchor": 24,
+          "elapsed_s": 10.041277504060417,
+          "height": 30
+        },
+        {
+          "age": 6,
+          "anchor": 29,
+          "elapsed_s": 10.047046338091604,
+          "height": 35
+        },
+        {
+          "age": 6,
+          "anchor": 34,
+          "elapsed_s": 10.041612058063038,
+          "height": 40
+        },
+        {
+          "age": 6,
+          "anchor": 39,
+          "elapsed_s": 10.039702099049464,
+          "height": 45
+        },
+        {
+          "age": 6,
+          "anchor": 44,
+          "elapsed_s": 10.035960109089501,
+          "height": 50
+        },
+        {
+          "age": 6,
+          "anchor": 49,
+          "elapsed_s": 10.041270185029134,
+          "height": 55
+        },
+        {
+          "age": 6,
+          "anchor": 54,
+          "elapsed_s": 10.04242840304505,
+          "height": 60
+        }
+      ],
+      "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1"
+    }
+  },
+  "paced_twelve_production_revision": "247e9645a4c0abb4dfb544233db91924ec99fac7",
+  "preserved_finality_policy": {
+    "archive": {
+      "canonical_only_height_four_floor": 0,
+      "four_to_one_after_restart": "rollback horizon",
+      "replayed_height": 12,
+      "restored_tip": "8a26e9c9e3fc765b2d7afe303c5d49bfae0ae7ebc73481553836a799eef32b2a",
+      "same_tip_canonical_only_four_to_one": "accepted",
+      "twelve_to_four": "accepted",
+      "twelve_to_three": "rollback horizon"
+    },
+    "pruned": {
+      "canonical_only_height_four_floor": 0,
+      "four_to_one_after_restart": "rollback horizon",
+      "replayed_height": 12,
+      "restored_tip": "8a26e9c9e3fc765b2d7afe303c5d49bfae0ae7ebc73481553836a799eef32b2a",
+      "same_tip_canonical_only_four_to_one": "accepted",
+      "twelve_to_four": "accepted",
+      "twelve_to_three": "rollback horizon"
+    }
+  },
+  "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "public_archive": {
+    "bytes": 12657781,
+    "entry_totals": {
+      "clock": 2,
+      "direct": 7,
+      "incoming": 6,
+      "main": 38,
+      "paced": 15
+    },
+    "files": 68,
+    "sha256": "f68cff5c6cc3c10c8c547c5d16813904931296a484dac74eb5b3612b6fb22e96"
+  }
+}

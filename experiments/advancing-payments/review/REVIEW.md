@@ -12,3 +12,83 @@ The starting revision is `cc2d9b9e6b6e5d4cbcd7e241f0025dc20c84b963`. The owner s
 - Check limits on wall-clock claims against the anchor window. To include 100M payments per year consistently at occupancy four, even without empty blocks, the minimum rate is about 0.7927 blocks/s, leaving roughly 10.09 s across eight produced blocks at uniform spacing. At mean occupancy two the analogous time is 5.05 s. Real block spacing has a distribution. Compare wallet preparation, queueing, sequential builder service and inclusion with the actual elapsed age and number of blocks; distinguish stable archived verification from sustained live payment viability.
 
 The [reference oracle](reference_roots.rs) calls only the upstream `CommitmentTree::new` and `depth_for` from Qnero revision `f04c91307837c0231668383bec76ba98d89d2652`. [Initial public vectors](REFERENCE_ROOTS.json) contain synthetic canonical commitments derived by setting word j of leaf i to `731*i+j+1`, with both indexes starting at zero. At 260 leaves, a sibling swap preserved the reference root and a cross-quartet swap changed it. These vectors establish the independent comparator before the candidate state code is tested.
+
+## Independent source and boundary checks
+
+The pristine upstream oracle also computes Qnero header IDs and ordered ciphertext digests. The [public branch checker](public_chain.py) reads the actual proof public-input suffixes and reconstructs each block from its immediate ancestor, ordered effects, fee/count state, complete packet and nonce. It rebuilds the funded tree from the entire ordered commitment vector at each distinct funded count. The [campaign reader](campaign_oracle.py) compares every admitted slot, including both encrypted notes, against a recorded standalone wallet submission and checks the selected branch following each event. Cryptographic proof acceptance is separately performed by a fresh registered APV2 verifier. These comparisons independently check encoding, statement forwarding and incremental state while sharing the same upstream note hash primitive.
+
+The [rollback test](horizon.py) uses authentic headers and empty blocks. On the original code, both storage modes could move from height 12 to 4, and only the archive then accepted 4 to 1. The revised persistent floor makes both roles reject the second move after restart. Reapplying the original eight blocks reconstructs the same height-12 tip. A node that independently downloads only through height 4 has floor zero. It accepts the 4-to-1 transition that a node which previously selected height 12 rejects. Nodes following the same ordered selection history agree on the tested finality floor. A permissionless fork-choice or state-sync design must explicitly reconcile this path-dependent finality metadata.
+
+The [lost-ack test](delivery.py) closes the payer-facing socket after the preferred ingress has durably committed a complete payment and given the forwarding peer its 32-byte acknowledgement. The payer sends the full frame again. The direct endpoint retains one original queue row, promoted to singleton delivery. The complete integration uses one shared queue and local producer. Downstream exposure of the same slot, source metadata, timing and complete receipts permits a builder to correlate the wallet submission with its on-chain slot.
+
+The published profile requests 43 queries and zero grinding at every recursive layer. Its implemented FRI target screen is 128 bits after the extension-field cap. The inherited original Poseidon performance/security trade-off, Fiat–Shamir composition, recursive soundness, multi-target security and adversarial recipient privacy remain separate assumptions. Its real-payment wallet generates two positive outputs from two real funded notes. The circuit also permits dummy input slots. The archived branch records cumulative native fees and an authorized local endowment. Fungible token/private fee and indivisible exchange rules are proposed future relation types. Their structural controls do not implement proof, acceptance or liquidity for either feature.
+
+The input to wallet payment preparation grows by 64 bytes in public funded commitments per included transfer. Full-history recovery adds 3,648 bytes of receipt records and 64 bytes of nullifiers per included payment. At 100M inclusions this gives a 6.4 GB year-end commitment vector beyond genesis and 371.2 GB of receipt/nullifier payload for one full rescan. Re-fetching the whole commitment vector at every spend throughout such a year gives approximately 320 PB of cumulative reads before replication, using uniform growth from an empty starting history. A local full node can supply those reads. Separate global and framed network bytes depend on how that state reaches each actual wallet. A pruned node needs an archival source for historical receipt recovery.
+
+## Independent execution
+
+On an i7-8700K with the other expensive jobs stopped, the review built the release executable from a clean disposable Qnero checkout with Rust 1.93.0, the pinned lockfile, the profile patch and a previously populated independent release dependency cache. The application code and changed circuit crates were recompiled. The unmodified upstream tree was restored and verified clean. The resulting executable SHA-256 was `4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82`. Registration ran before creating a review wallet. Its manifest SHA-256 was `af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1`. All 15 common, verifier-only and combined artifacts matched the original registration. The independent upstream reference executable was separately linked against pristine, previously built Qnero leaf/tree code, outside the APV2 executable.
+
+The fresh main campaign ran at `940c92159e3a85c2b82ea38bc3f6efa6ec29d408`. A second detached checkout, `e19adf88c6bc90becb5656651da4fd79bb0b6233`, ran the four-intent direct clock, warm aggregate clock, unfunded-recipient trial, queued-builder fault cases and public replays. The latter revision changes optional-worker transport fallback. It keeps the proving executable and registered circuits byte-identical. Independent captures contain newly randomized public funding, proofs and encrypted receipts.
+
+| Independent execution | Observed result |
+| --- | --- |
+| Main payment path | Four distinct funded wallet processes and one seed-only restore produced 28 wallet proofs. All four genuine occupancies passed. The initial assembly of the four payer group and three subsequent four-way aggregates used two independently started builder processes. The finite prepared busy stream offered 0.15365 payments/s with no misses at its calibrated interval. |
+| Full main public replay | 31 selection/rejection events on archival and pruned databases. The final selected branch has 20 blocks, 22 payments, 44 nullifiers, 140 commitments and 66 fee units. Across the 23 distinct submitted block objects, all 28 forwarded slot records and both ciphertexts for each matched their standalone wallet submissions. The initial submitted four-payer block belongs to the old suffix. |
+| Frontiers and atomicity | All 11 distinct selected funded counts matched the unmodified upstream full tree. Every retained SQL frontier matched independently rebuilt perfect subtrees. The exact body/retention policy, ordered output table and nullifier table also matched. Separate deterministic comparisons passed at 16 candidate sizes through 16,384 leaves, plus the independent 260-leaf test. Killing the SQLite writer inside an actual competing-suffix transaction restored the original H7 tables; the valid alternate suffix then committed at H6. |
+| Direct four-intent clock | Four independently timed intents from one wallet, 12 s apart with 2 s block opportunities, all reached final local admission in 10.037–10.042 s. Anchor ages were 5/6/6/6 and maximum block-finish lateness was 0.04324 s. The 19 empties and four singletons used 924,412 framed bytes on one edge. |
+| Paced twelve-intent clock | A separate clean trial at `247e9645a4c0abb4dfb544233db91924ec99fac7` generated all 12 wallet payments in response to regularly scheduled new intents, 10 s apart. At 0.1 offered/s every payment was admitted, the queue drained, the maximum creation dispatch delay was 0.00406 s and the last commitment arrived at 120.04243 s, inside the 122 s preset deadline. The chain advanced to H60, with 48 empties. The full intent latency range was 10.0360–10.0471 s; maximum tick lateness was 0.04795 s. This exercised the entire local sender endowment over one finite window. |
+| Four-way builder clock | Four prepared, independently funded, initially eligible wallets entered an already-warm builder at height zero. It returned a valid 250,998-byte proof-and-receipts packet after 17.2333 s. On the independent 2 s block clock, the prospective height was 9. Its anchor had expired and the last block was empty. The public verifier subsequently accepted the proof and confirmed all four original statements and sidecars. |
+| Incoming-only recovery | Two fresh externally originated payments, a separate receiver with no funded genesis notes and no earlier outgoing history. After a 32-byte seed-only restore, scans over zero, first, second and both incoming payment records returned 0/1/1/2 openings. Spending those notes at H4 added two nullifiers and three fee units. One newly received change note remained. The public H1/H2/empty/H4 branch passed fresh proof verification and independent statement/header reconstruction. |
+| Queued worker outage | Two preferred submissions preceded the newly direct payer. With the worker absent, already exited, or disconnected after consuming both complete inputs, the producer committed the three original singleton packets in FIFO order. A healthy worker produced widths 2,1. Both queues drained, every input was applied once and all blocks used the registered proof verifier. |
+
+The public caller never needs access to the private receiver seed or openings. Private scan counts are reported by the isolated wallet. The beneficiary's identity and ownership of the two hidden inputs follow from the controlled setup and successful local restoration; public-only verification checks the contract, branch and effects visible on chain.
+
+**Cost and selection.** The [independent calculator](accounting.py) reads real packet lengths and measured role invocations. It reproduced 230,206 / 233,654 / 247,206 / 250,998 bytes for occupancy 1/2/3/4, before the 152-byte block wrapper. One successful payer upload costs 230,210 bytes. Full occupancy on this profile uses 62,787.5 canonical archived bytes per included payment with its required receipts and header. That yields 6.27875 TB for 100M inclusions and 5.9648125 TB for 95M, before empties or database overhead. The actual modelled low/busy shapes at 100M included give 19.1523/7.0807 TB, respectively. The registration, complete payment and receiver checks justify a local singleton development path. The moving two-second clock, 100M/year sizing and 1/5 TB archive comparisons provide distinct service and financial qualifications. A PoW consensus/fork-choice implementation, distributed durable ingress, affordable late wallet recovery, fee payout and a concrete security/privacy bound remain outstanding for general network activation.
+
+## Public evidence and replay
+
+[CLEAN.json](CLEAN.json) records the independent executable and registry hashes, workload and role checks, branch roots, latency observations, failover dispositions, archive calculations and the comparisons on both captures. The [independent capture](PUBLIC.tar.gz) contains only complete public packages, encrypted receipts, approved genesis bytes, trace manifests and measurements. It excludes databases, private mounts, seeds and build products. After digest verification, unpack the capture into an empty directory and use its `main`, `direct`, `clock`, `incoming` and `paced` directories with the registered public replay commands in the [run instructions](../REPRODUCE.md).
+
+```bash
+set -euo pipefail
+d="$(realpath experiments/advancing-payments)"
+lab="$(mktemp -d)"
+python3 -I -B - "$d/review/PUBLIC.tar.gz" "$lab" <<'PY'
+import hashlib, pathlib, sys, tarfile
+path, dst = map(pathlib.Path, sys.argv[1:])
+assert hashlib.sha256(path.read_bytes()).hexdigest() == "f68cff5c6cc3c10c8c547c5d16813904931296a484dac74eb5b3612b6fb22e96"
+with tarfile.open(path, "r:gz") as t:
+    assert all(item.isfile() for item in t)
+    t.extractall(dst, filter="data")
+PY
+```
+
+Supply the operator-approved binary and key directory from the source registration. The independent main genesis is `e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42`, independent direct genesis `c769676d53784fef6349b87f2684142c03f96fc390740d57d2af08f5428d5381`, incoming-only genesis `dba9ded5e5dae3625dc30ac43b4d056eb5ce6c439adcf9ba1a76d26ae89d3792` and twelve-intent genesis `8f7fdb3df9fb1d6c7ea929f4c0f6cc0089d4caa07b43cdbea134664c150c144b`. The aggregate clock reuses the independent main genesis. Running the public replay creates new local databases.
+
+```bash
+profile=af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1
+binary_sha=4ea689bb85296e424e80b03035da71a7a7419b52ef3dc9a2c0ce31f615914e82
+deploy=(--keys "$registered_keys" --binary "$registered_binary" --binary-sha "$binary_sha" --profile-sha "$profile")
+python3 -IB "$d/run.py" replay "${deploy[@]}" --genesis-sha e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42 --evidence "$lab/main" --work "$lab/replayed-main"
+python3 -IB "$d/run.py" replay-direct "${deploy[@]}" --genesis-sha c769676d53784fef6349b87f2684142c03f96fc390740d57d2af08f5428d5381 --evidence "$lab/direct" --work "$lab/replayed-direct"
+python3 -IB "$d/aggregate_clock.py" replay "${deploy[@]}" --genesis-sha e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42 --main "$lab/main" --evidence "$lab/clock" --work "$lab/replayed-clock"
+python3 -IB "$d/incoming_only.py" replay "${deploy[@]}" --genesis-sha dba9ded5e5dae3625dc30ac43b4d056eb5ce6c439adcf9ba1a76d26ae89d3792 --evidence "$lab/incoming" --work "$lab/replayed-incoming"
+python3 -IB "$d/run.py" replay-paced "${deploy[@]}" --genesis-sha 8f7fdb3df9fb1d6c7ea929f4c0f6cc0089d4caa07b43cdbea134664c150c144b --evidence "$lab/paced" --work "$lab/replayed-paced"
+```
+
+For independent full-tree, ciphertext and header reconstruction, copy `reference_roots.rs` into a separate disposable checkout of the **unmodified** upstream Qnero revision `f04c91307837c0231668383bec76ba98d89d2652` and build it with the same locked Rust toolchain. The following commands also rerun the local finality comparison and the duration/queue checks.
+
+```bash
+cp "$d/review/reference_roots.rs" "$upstream/crates/qnero-prover/examples/ap_fulltree_review.rs"
+(cd "$upstream" && cargo +1.93.0 build --locked --offline --release -p qnero-prover --example ap_fulltree_review --features parallel --target-dir "$lab/reference-target")
+oracle="$lab/reference-target/release/examples/ap_fulltree_review"
+python3 -IB "$d/review/horizon.py" "$oracle"
+python3 -IB "$d/review/campaign_oracle.py" "$lab/main" "$oracle" e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42 "$profile" --database "$lab/replayed-main/archive.sqlite" --database "$lab/replayed-main/pruned.sqlite"
+python3 -IB "$d/review/direct_oracle.py" "${deploy[@]}" --expected 12 --genesis-sha 8f7fdb3df9fb1d6c7ea929f4c0f6cc0089d4caa07b43cdbea134664c150c144b --campaign "$lab/paced" --reference "$oracle" --database "$lab/checked-paced.sqlite"
+for mode in absent exited disconnect healthy; do
+  python3 -IB "$d/assurance/pending_failover.py" "${deploy[@]}" --main "$lab/main" --genesis-sha e5ade780b98001ebd857df733ec92d8bc5976072603de33d08be19940b98dd42 --worker "$mode"
+done
+```
+
+All reconstructed roots and SQL records use public data. A new independent campaign changes genesis, payments, proof and timing fingerprints. Replaying the preserved capture checks fixed bytes. Peak RSS and CPU measurements describe this host and reference configuration.
