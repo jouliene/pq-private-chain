@@ -146,12 +146,12 @@ class Node:
             m,b=await asyncio.wait_for(receive(reader),5)
             result,body=self.dispatch(m,b,admin)
             writer.write(frame(dict(ok=True,result=result),body))
-        except (ValueError,KeyError,TypeError,OverflowError,RuntimeError,TimeoutError,asyncio.IncompleteReadError) as e:
+        except (ValueError,KeyError,TypeError,OverflowError,RuntimeError,asyncio.TimeoutError,asyncio.IncompleteReadError) as e:
             writer.write(frame(dict(ok=False,error=str(e)[:200])))
         finally:
             try:
                 await asyncio.wait_for(writer.drain(),5)
-            except (OSError,TimeoutError):
+            except (OSError,asyncio.TimeoutError):
                 pass
             writer.close()
             self.clients-=1
@@ -201,7 +201,7 @@ class Node:
             for p in sorted(self.peers):
                 try:
                     await self.sync_peer(p)
-                except (ConnectionError, OSError, TimeoutError, asyncio.IncompleteReadError):
+                except (ConnectionError, OSError, asyncio.TimeoutError, asyncio.IncompleteReadError):
                     pass
                 except (ValueError,KeyError,TypeError,RuntimeError) as e:
                     self.errors.append(str(e)[:160])
