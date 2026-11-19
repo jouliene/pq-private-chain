@@ -1,0 +1,1091 @@
+{
+  "archive_B": 693960,
+  "balances": {
+    "miner-a": [
+      {
+        "balance": 100,
+        "change_notes": 0,
+        "height": 2,
+        "incoming_notes": 0,
+        "notes": 1,
+        "receipt_notes": 0,
+        "reward_notes": 1,
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "wallet": "miner-a"
+      },
+      {
+        "balance": 301,
+        "change_notes": 1,
+        "height": 4,
+        "incoming_notes": 2,
+        "notes": 4,
+        "receipt_notes": 3,
+        "reward_notes": 1,
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "wallet": "miner-a"
+      }
+    ],
+    "miner-b": [
+      {
+        "balance": 100,
+        "change_notes": 0,
+        "height": 2,
+        "incoming_notes": 0,
+        "notes": 1,
+        "receipt_notes": 0,
+        "reward_notes": 1,
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "wallet": "miner-b"
+      },
+      {
+        "balance": 76,
+        "change_notes": 1,
+        "height": 4,
+        "incoming_notes": 0,
+        "notes": 1,
+        "receipt_notes": 1,
+        "reward_notes": 0,
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "wallet": "miner-b"
+      }
+    ],
+    "orphan-miner": [
+      {
+        "balance": 100,
+        "change_notes": 0,
+        "height": 5,
+        "incoming_notes": 0,
+        "notes": 1,
+        "receipt_notes": 0,
+        "reward_notes": 1,
+        "tip": "0000035f66e37343bdb5d608bd31c265c14121d556a34c58ec4846c1bdd50f82",
+        "wallet": "orphan-miner"
+      },
+      {
+        "balance": 0,
+        "change_notes": 0,
+        "height": 15,
+        "incoming_notes": 0,
+        "notes": 0,
+        "receipt_notes": 0,
+        "reward_notes": 0,
+        "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+        "wallet": "orphan-miner"
+      }
+    ],
+    "recipient": [
+      {
+        "balance": 0,
+        "change_notes": 0,
+        "height": 2,
+        "incoming_notes": 0,
+        "notes": 0,
+        "receipt_notes": 0,
+        "reward_notes": 0,
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "wallet": "recipient"
+      },
+      {
+        "balance": 37,
+        "change_notes": 0,
+        "height": 3,
+        "incoming_notes": 1,
+        "notes": 1,
+        "receipt_notes": 1,
+        "reward_notes": 0,
+        "tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+        "wallet": "recipient"
+      }
+    ],
+    "recovered": [
+      {
+        "balance": 37,
+        "change_notes": 0,
+        "height": 3,
+        "incoming_notes": 1,
+        "notes": 1,
+        "receipt_notes": 1,
+        "reward_notes": 0,
+        "tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+        "wallet": "recovered"
+      },
+      {
+        "balance": 23,
+        "change_notes": 1,
+        "height": 4,
+        "incoming_notes": 0,
+        "notes": 1,
+        "receipt_notes": 1,
+        "reward_notes": 0,
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "wallet": "recovered"
+      },
+      {
+        "balance": 36,
+        "change_notes": 1,
+        "height": 6,
+        "incoming_notes": 1,
+        "notes": 2,
+        "receipt_notes": 2,
+        "reward_notes": 0,
+        "tip": "0000005869ce49d8da2327c2fcb981ceaf4a1f89c63bc72fcc6b24368dc2cbc7",
+        "wallet": "recovered"
+      },
+      {
+        "balance": 23,
+        "change_notes": 1,
+        "height": 15,
+        "incoming_notes": 0,
+        "notes": 1,
+        "receipt_notes": 1,
+        "reward_notes": 0,
+        "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+        "wallet": "recovered"
+      }
+    ]
+  },
+  "blocks_by_payment_count": {
+    "0": 13,
+    "1": 1,
+    "2": 1
+  },
+  "controls": {
+    "confirmed_conflict": "spent nullifier",
+    "orphan": "anchor age",
+    "pool_conflict": "pool conflict"
+  },
+  "elapsed_s": 136.5569338798523,
+  "elected_payments": 3,
+  "final": {
+    "a": {
+      "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+      "deep_replays": 1,
+      "errors": [],
+      "fees": 9,
+      "found": 0,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "header": "997c94eb14933a042c15c523ad0471e5e1e48ecb4b0c283f49d92ebf9e9b63ef0f000000b04cc827ce53c0f5c320ac067a494a8d38d9e299eb21ad6c434ea0ce2d77fd489e58d6ca2de9735e784070a8d7aab2a4eb21b5c598d85cbf903c9b3a1b9aa7d772ad8cbde625b41080bd79cf3ac6aadf8d674c55105766f3a9d846b8d8966838",
+      "height": 15,
+      "issued": 1500,
+      "mempool": 0,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "node": "a",
+      "notes": 21,
+      "peers": [
+        47509,
+        49001
+      ],
+      "pid": 3056642,
+      "port": 53537,
+      "remaining": 0,
+      "spent": 6,
+      "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+      "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+      "work": 62914560
+    },
+    "b": {
+      "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+      "deep_replays": 0,
+      "errors": [],
+      "fees": 9,
+      "found": 13,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "header": "997c94eb14933a042c15c523ad0471e5e1e48ecb4b0c283f49d92ebf9e9b63ef0f000000b04cc827ce53c0f5c320ac067a494a8d38d9e299eb21ad6c434ea0ce2d77fd489e58d6ca2de9735e784070a8d7aab2a4eb21b5c598d85cbf903c9b3a1b9aa7d772ad8cbde625b41080bd79cf3ac6aadf8d674c55105766f3a9d846b8d8966838",
+      "height": 15,
+      "issued": 1500,
+      "mempool": 0,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "node": "b",
+      "notes": 21,
+      "peers": [
+        49001,
+        53537
+      ],
+      "pid": 3054872,
+      "port": 47509,
+      "remaining": 0,
+      "spent": 6,
+      "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+      "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+      "work": 62914560
+    },
+    "c": {
+      "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+      "deep_replays": 0,
+      "errors": [],
+      "fees": 9,
+      "found": 0,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "header": "997c94eb14933a042c15c523ad0471e5e1e48ecb4b0c283f49d92ebf9e9b63ef0f000000b04cc827ce53c0f5c320ac067a494a8d38d9e299eb21ad6c434ea0ce2d77fd489e58d6ca2de9735e784070a8d7aab2a4eb21b5c598d85cbf903c9b3a1b9aa7d772ad8cbde625b41080bd79cf3ac6aadf8d674c55105766f3a9d846b8d8966838",
+      "height": 15,
+      "issued": 1500,
+      "mempool": 0,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "node": "c",
+      "notes": 21,
+      "peers": [
+        47509,
+        53537
+      ],
+      "pid": 3054899,
+      "port": 49001,
+      "remaining": 0,
+      "spent": 6,
+      "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+      "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+      "work": 62914560
+    },
+    "d": {
+      "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+      "deep_replays": 0,
+      "errors": [],
+      "fees": 9,
+      "found": 0,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "header": "997c94eb14933a042c15c523ad0471e5e1e48ecb4b0c283f49d92ebf9e9b63ef0f000000b04cc827ce53c0f5c320ac067a494a8d38d9e299eb21ad6c434ea0ce2d77fd489e58d6ca2de9735e784070a8d7aab2a4eb21b5c598d85cbf903c9b3a1b9aa7d772ad8cbde625b41080bd79cf3ac6aadf8d674c55105766f3a9d846b8d8966838",
+      "height": 15,
+      "issued": 1500,
+      "mempool": 0,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "node": "d",
+      "notes": 21,
+      "peers": [
+        47509
+      ],
+      "pid": 3056614,
+      "port": 38179,
+      "remaining": 0,
+      "spent": 6,
+      "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+      "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+      "work": 62914560
+    }
+  },
+  "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+  "initial_pids": {
+    "a": 3054844,
+    "b": 3054872,
+    "c": 3054899
+  },
+  "mean_observed_interval_s": 9.434159428571428,
+  "median_observed_interval_s": 6.2913145,
+  "median_search_wall_s": 1.883088201051578,
+  "observed_blocks": {
+    "a": [
+      {
+        "bytes": 222,
+        "found_unix": 1795061438.7439716,
+        "hashes": 2148086,
+        "height": 1,
+        "parent": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "payments": 0,
+        "search_cpu_s": 1.4813507709999998,
+        "search_wall_s": 1.585437629953958,
+        "tip": "0000037d3b11d5ecdb82ee0019f8cb72862d667fc50edd1997341612e45750ff"
+      },
+      {
+        "bytes": 460642,
+        "found_unix": 1795061503.0503895,
+        "hashes": 2607027,
+        "height": 4,
+        "parent": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+        "payments": 2,
+        "search_cpu_s": 1.761301341,
+        "search_wall_s": 1.883088201051578,
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061504.3834329,
+        "hashes": 943854,
+        "height": 5,
+        "parent": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "payments": 0,
+        "search_cpu_s": 0.655853254,
+        "search_wall_s": 0.7670029129367322,
+        "tip": "0000035f66e37343bdb5d608bd31c265c14121d556a34c58ec4846c1bdd50f82"
+      },
+      {
+        "bytes": 230432,
+        "found_unix": 1795061519.9699848,
+        "hashes": 1788379,
+        "height": 6,
+        "parent": "0000035f66e37343bdb5d608bd31c265c14121d556a34c58ec4846c1bdd50f82",
+        "payments": 1,
+        "search_cpu_s": 1.25182715,
+        "search_wall_s": 1.3682316119084135,
+        "tip": "0000005869ce49d8da2327c2fcb981ceaf4a1f89c63bc72fcc6b24368dc2cbc7"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061523.4120486,
+        "hashes": 4598519,
+        "height": 7,
+        "parent": "0000005869ce49d8da2327c2fcb981ceaf4a1f89c63bc72fcc6b24368dc2cbc7",
+        "payments": 0,
+        "search_cpu_s": 3.106900568,
+        "search_wall_s": 3.1985063740285113,
+        "tip": "000001ebcb2498ae9804c7b704b7543340bd6590676ac96fc7bf3f40a3173648"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061525.4661238,
+        "hashes": 2774366,
+        "height": 8,
+        "parent": "000001ebcb2498ae9804c7b704b7543340bd6590676ac96fc7bf3f40a3173648",
+        "payments": 0,
+        "search_cpu_s": 1.960631427,
+        "search_wall_s": 2.0527197659248486,
+        "tip": "000002a0f1f9a9ff5674dc7fe92bdf7e6d9ab66a6ac04824876d564bdf8b6458"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061525.6279175,
+        "hashes": 96063,
+        "height": 9,
+        "parent": "000002a0f1f9a9ff5674dc7fe92bdf7e6d9ab66a6ac04824876d564bdf8b6458",
+        "payments": 0,
+        "search_cpu_s": 0.06884379599999998,
+        "search_wall_s": 0.1604473430197686,
+        "tip": "00000067282766b9660bb02af15b2bc9fa2f9f17deeb83993076829a294ffeea"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061526.4513888,
+        "hashes": 1060426,
+        "height": 10,
+        "parent": "00000067282766b9660bb02af15b2bc9fa2f9f17deeb83993076829a294ffeea",
+        "payments": 0,
+        "search_cpu_s": 0.729743692,
+        "search_wall_s": 0.821339618996717,
+        "tip": "000002b7ba9e42d2d65c0bea580097b59893699b07af0845458ac1e1608b47ea"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061528.0873024,
+        "hashes": 2307230,
+        "height": 11,
+        "parent": "000002b7ba9e42d2d65c0bea580097b59893699b07af0845458ac1e1608b47ea",
+        "payments": 0,
+        "search_cpu_s": 1.540795039,
+        "search_wall_s": 1.6348546979716048,
+        "tip": "00000294419db3fa720f9443ad4fec23f84c6f5a94c70ff32ce7b08e761232b6"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061529.675493,
+        "hashes": 2172776,
+        "height": 12,
+        "parent": "00000294419db3fa720f9443ad4fec23f84c6f5a94c70ff32ce7b08e761232b6",
+        "payments": 0,
+        "search_cpu_s": 1.495253649,
+        "search_wall_s": 1.586627644021064,
+        "tip": "000003f7993cb91b7a9e3066a1886076da903e2653ac52b5d8f414fc03f630e6"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061529.9199421,
+        "hashes": 206838,
+        "height": 13,
+        "parent": "000003f7993cb91b7a9e3066a1886076da903e2653ac52b5d8f414fc03f630e6",
+        "payments": 0,
+        "search_cpu_s": 0.15672660700000002,
+        "search_wall_s": 0.24322561593726277,
+        "tip": "0000004d20e6c52f96f104085b1531e5a789fcc5e270ad5266ce606a2531ee83"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061531.1834843,
+        "hashes": 1770163,
+        "height": 14,
+        "parent": "0000004d20e6c52f96f104085b1531e5a789fcc5e270ad5266ce606a2531ee83",
+        "payments": 0,
+        "search_cpu_s": 1.168079705,
+        "search_wall_s": 1.2622149350354448,
+        "tip": "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2"
+      }
+    ],
+    "b": [
+      {
+        "bytes": 222,
+        "found_unix": 1795061442.9507954,
+        "hashes": 5555453,
+        "height": 2,
+        "parent": "0000037d3b11d5ecdb82ee0019f8cb72862d667fc50edd1997341612e45750ff",
+        "payments": 0,
+        "search_cpu_s": 3.8032773210000004,
+        "search_wall_s": 3.937830067006871,
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7"
+      },
+      {
+        "bytes": 230432,
+        "found_unix": 1795061472.5555437,
+        "hashes": 1875971,
+        "height": 3,
+        "parent": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "payments": 1,
+        "search_cpu_s": 1.3051001020000002,
+        "search_wall_s": 1.4128338389564306,
+        "tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061511.125532,
+        "hashes": 10834887,
+        "height": 5,
+        "parent": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "payments": 0,
+        "search_cpu_s": 7.405460367,
+        "search_wall_s": 7.509527361951768,
+        "tip": "00000392c631f86afc4f4c101c2b82dae646c77321023d52661c42f412f94beb"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061517.9303887,
+        "hashes": 9920566,
+        "height": 6,
+        "parent": "00000392c631f86afc4f4c101c2b82dae646c77321023d52661c42f412f94beb",
+        "payments": 0,
+        "search_cpu_s": 6.710620583,
+        "search_wall_s": 6.802936578984372,
+        "tip": "0000031478d1b37d1f9b40e835826a0875110d1ec01d1eed39c30e7d94f7520e"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061519.2871156,
+        "hashes": 1779959,
+        "height": 7,
+        "parent": "0000031478d1b37d1f9b40e835826a0875110d1ec01d1eed39c30e7d94f7520e",
+        "payments": 0,
+        "search_cpu_s": 1.253999683,
+        "search_wall_s": 1.3556676880689338,
+        "tip": "000003d601ba4f5ab0788c915eb23413a7641d69d1b8b930e707fdf9d8d93c1b"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061520.703325,
+        "hashes": 1882309,
+        "height": 8,
+        "parent": "000003d601ba4f5ab0788c915eb23413a7641d69d1b8b930e707fdf9d8d93c1b",
+        "payments": 0,
+        "search_cpu_s": 1.319914915,
+        "search_wall_s": 1.415039399988018,
+        "tip": "0000008b9d128b9530cb9a41449bd93af1a5189095d23a451008c3ddb7e5231e"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061526.481097,
+        "hashes": 8417092,
+        "height": 9,
+        "parent": "0000008b9d128b9530cb9a41449bd93af1a5189095d23a451008c3ddb7e5231e",
+        "payments": 0,
+        "search_cpu_s": 5.688282334,
+        "search_wall_s": 5.776430220925249,
+        "tip": "0000035b09820b445b0e66681e1843bb4b183cc30ccb55dcb6468a4c34ac75b9"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061536.9349937,
+        "hashes": 14573022,
+        "height": 10,
+        "parent": "0000035b09820b445b0e66681e1843bb4b183cc30ccb55dcb6468a4c34ac75b9",
+        "payments": 0,
+        "search_cpu_s": 10.355019406,
+        "search_wall_s": 10.452808522968553,
+        "tip": "0000001095725c5303b8234d1f113a40841eb82a43257f9ffaa87a8a799c5415"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061539.4325516,
+        "hashes": 3428261,
+        "height": 11,
+        "parent": "0000001095725c5303b8234d1f113a40841eb82a43257f9ffaa87a8a799c5415",
+        "payments": 0,
+        "search_cpu_s": 2.403374266,
+        "search_wall_s": 2.49572430702392,
+        "tip": "0000025ed9b4824d1b4386b9a151e6c14ffda703a2fc2d9841abee6ae133f573"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061541.6227896,
+        "hashes": 3090594,
+        "height": 12,
+        "parent": "0000025ed9b4824d1b4386b9a151e6c14ffda703a2fc2d9841abee6ae133f573",
+        "payments": 0,
+        "search_cpu_s": 2.094918468,
+        "search_wall_s": 2.189079003990628,
+        "tip": "00000384d103e9f103743009b51ef462625e9577332b2167b3e600f079eb63de"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061555.9918895,
+        "hashes": 21134764,
+        "height": 13,
+        "parent": "00000384d103e9f103743009b51ef462625e9577332b2167b3e600f079eb63de",
+        "payments": 0,
+        "search_cpu_s": 14.26724419,
+        "search_wall_s": 14.36786081106402,
+        "tip": "0000018bb26b157a02deead6a3bd3e4f59ceb376695bfe402198a2be497ac6c5"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061558.674658,
+        "hashes": 3837060,
+        "height": 14,
+        "parent": "0000018bb26b157a02deead6a3bd3e4f59ceb376695bfe402198a2be497ac6c5",
+        "payments": 0,
+        "search_cpu_s": 2.591832783,
+        "search_wall_s": 2.6805114140734076,
+        "tip": "00000236bfae57b0287c6ccaf4166773805fed3a92777d84ca3312f6cf5acc24"
+      },
+      {
+        "bytes": 222,
+        "found_unix": 1795061570.822203,
+        "hashes": 17890342,
+        "height": 15,
+        "parent": "00000236bfae57b0287c6ccaf4166773805fed3a92777d84ca3312f6cf5acc24",
+        "payments": 0,
+        "search_cpu_s": 12.050458836,
+        "search_wall_s": 12.146113944007084,
+        "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615"
+      }
+    ]
+  },
+  "observed_selected_intervals_s": [
+    4.206824,
+    29.604748,
+    30.494846,
+    8.075142,
+    6.804857,
+    1.356727,
+    1.416209,
+    5.777772,
+    10.453897,
+    2.497558,
+    2.190238,
+    14.3691,
+    2.682769,
+    12.147545
+  ],
+  "ordered_multi_tx": [
+    "95ef36da6109c5ce8d27b19ede47285d4d3081b3bd61ab5b50698b90a1b4c2f3",
+    "5c7955797cfb55b131ead3516b798aec39e05fbb76b7ee4b65d212f96f386f08"
+  ],
+  "payments": {
+    "detached": {
+      "amount": 13,
+      "anchor_height": 5,
+      "change": 84,
+      "fee": 3,
+      "input_total": 100,
+      "packet_B": 230206,
+      "proving_wall_s": 13.700605898047797,
+      "real_inputs": 1,
+      "tx": "56eb591e767deae71e4cea95163ae9f62f36761a271f0da85dd69fe04d621bf7",
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.000205152,
+          "elapsed_s": 0.000205761,
+          "operation": "wallet_open",
+          "peak_rss_kib": 3148
+        },
+        {
+          "cpu_s": 0.000928873,
+          "elapsed_s": 0.000928817,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 3812
+        },
+        {
+          "cpu_s": 7.508839568,
+          "elapsed_s": 4.703007766,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 575184
+        },
+        {
+          "cpu_s": 17.50383746,
+          "elapsed_s": 8.99744179,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1090740
+        }
+      ]
+    },
+    "independent": {
+      "amount": 124,
+      "anchor_height": 3,
+      "change": 76,
+      "fee": 3,
+      "input_total": 203,
+      "packet_B": 230206,
+      "proving_wall_s": 13.520823155995458,
+      "real_inputs": 2,
+      "tx": "5c7955797cfb55b131ead3516b798aec39e05fbb76b7ee4b65d212f96f386f08",
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.000215168,
+          "elapsed_s": 0.000215752,
+          "operation": "wallet_open",
+          "peak_rss_kib": 3088
+        },
+        {
+          "cpu_s": 0.000520724,
+          "elapsed_s": 0.000520763,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 3680
+        },
+        {
+          "cpu_s": 7.304837294,
+          "elapsed_s": 4.556382684,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 583508
+        },
+        {
+          "cpu_s": 17.428564169,
+          "elapsed_s": 8.964292555,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1091256
+        }
+      ]
+    },
+    "lone": {
+      "amount": 37,
+      "anchor_height": 2,
+      "change": 60,
+      "fee": 3,
+      "input_total": 100,
+      "packet_B": 230206,
+      "proving_wall_s": 13.420575376949273,
+      "real_inputs": 1,
+      "tx": "cee6e22b1a977fb4fc0c1cd20fee4561c6debcb5a1083e5f1de44037af04c95e",
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.000268055,
+          "elapsed_s": 0.000268504,
+          "operation": "wallet_open",
+          "peak_rss_kib": 3080
+        },
+        {
+          "cpu_s": 0.000226617,
+          "elapsed_s": 0.000226569,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 3660
+        },
+        {
+          "cpu_s": 7.242879918,
+          "elapsed_s": 4.540863592,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 575140
+        },
+        {
+          "cpu_s": 17.288451077,
+          "elapsed_s": 8.879547225,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1091168
+        }
+      ]
+    },
+    "restored": {
+      "amount": 11,
+      "anchor_height": 3,
+      "change": 23,
+      "fee": 3,
+      "input_total": 37,
+      "packet_B": 230206,
+      "proving_wall_s": 13.686725089908578,
+      "real_inputs": 1,
+      "tx": "95ef36da6109c5ce8d27b19ede47285d4d3081b3bd61ab5b50698b90a1b4c2f3",
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.00021754,
+          "elapsed_s": 0.000217629,
+          "operation": "wallet_open",
+          "peak_rss_kib": 3084
+        },
+        {
+          "cpu_s": 0.000534188,
+          "elapsed_s": 0.000534117,
+          "operation": "wallet_scan",
+          "peak_rss_kib": 3676
+        },
+        {
+          "cpu_s": 7.340916709,
+          "elapsed_s": 4.572351306,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 575228
+        },
+        {
+          "cpu_s": 17.712412713,
+          "elapsed_s": 9.114046044,
+          "operation": "wallet_prove",
+          "peak_rss_kib": 1091128
+        }
+      ]
+    }
+  },
+  "protocol": "PQDEVBL1",
+  "reorg": {
+    "attached": [
+      "00000392c631f86afc4f4c101c2b82dae646c77321023d52661c42f412f94beb",
+      "0000031478d1b37d1f9b40e835826a0875110d1ec01d1eed39c30e7d94f7520e",
+      "000003d601ba4f5ab0788c915eb23413a7641d69d1b8b930e707fdf9d8d93c1b",
+      "0000008b9d128b9530cb9a41449bd93af1a5189095d23a451008c3ddb7e5231e",
+      "0000035b09820b445b0e66681e1843bb4b183cc30ccb55dcb6468a4c34ac75b9",
+      "0000001095725c5303b8234d1f113a40841eb82a43257f9ffaa87a8a799c5415",
+      "0000025ed9b4824d1b4386b9a151e6c14ffda703a2fc2d9841abee6ae133f573",
+      "00000384d103e9f103743009b51ef462625e9577332b2167b3e600f079eb63de",
+      "0000018bb26b157a02deead6a3bd3e4f59ceb376695bfe402198a2be497ac6c5",
+      "00000236bfae57b0287c6ccaf4166773805fed3a92777d84ca3312f6cf5acc24",
+      "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615"
+    ],
+    "common": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+    "detached": [
+      "0000035f66e37343bdb5d608bd31c265c14121d556a34c58ec4846c1bdd50f82",
+      "0000005869ce49d8da2327c2fcb981ceaf4a1f89c63bc72fcc6b24368dc2cbc7",
+      "000001ebcb2498ae9804c7b704b7543340bd6590676ac96fc7bf3f40a3173648",
+      "000002a0f1f9a9ff5674dc7fe92bdf7e6d9ab66a6ac04824876d564bdf8b6458",
+      "00000067282766b9660bb02af15b2bc9fa2f9f17deeb83993076829a294ffeea",
+      "000002b7ba9e42d2d65c0bea580097b59893699b07af0845458ac1e1608b47ea",
+      "00000294419db3fa720f9443ad4fec23f84c6f5a94c70ff32ce7b08e761232b6",
+      "000003f7993cb91b7a9e3066a1886076da903e2653ac52b5d8f414fc03f630e6",
+      "0000004d20e6c52f96f104085b1531e5a789fcc5e270ad5266ce606a2531ee83",
+      "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2"
+    ],
+    "retained_undo": 8
+  },
+  "runtime_sha256": "0d74f63ee0a201fd49f62f91b269fa959b5388a17b4665a14dbb77200f9b0634",
+  "source_base": "46932763d7a0e6d03ea848ae2e22ab65ef48d5df",
+  "states": {
+    "before_rejoin": {
+      "a": {
+        "anchor": "5b5c552512a9908f132c3c5bd3a7c7d2d500e82dbc75be5322386b0cc68a5c22",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 12,
+        "found": 12,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "c9062b387fd917082e3daab5aedebf3f96334b2ef70d398edad2da9540f557640e000000833e6733449214f5b885405f06fe4fb563b11923d615e4bda71b2adfacf502a4d3448069de3935626e2c9c1e2c5bd32f5a238c91238c3decaf9b7fda1156d76a17c70890fcd7f077792a978cb579c2ad8054cb712314767722ca6dca691ae2e6",
+        "height": 14,
+        "issued": 1400,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "a",
+        "notes": 22,
+        "peers": [],
+        "pid": 3054844,
+        "port": 53537,
+        "remaining": 0,
+        "spent": 8,
+        "spent_set_sha256": "852b731cde69ddbdba78d294082a2106e3f54c46784e8a9dfbda882d90089a30",
+        "tip": "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2",
+        "work": 58720256
+      },
+      "b": {
+        "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 9,
+        "found": 13,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "997c94eb14933a042c15c523ad0471e5e1e48ecb4b0c283f49d92ebf9e9b63ef0f000000b04cc827ce53c0f5c320ac067a494a8d38d9e299eb21ad6c434ea0ce2d77fd489e58d6ca2de9735e784070a8d7aab2a4eb21b5c598d85cbf903c9b3a1b9aa7d772ad8cbde625b41080bd79cf3ac6aadf8d674c55105766f3a9d846b8d8966838",
+        "height": 15,
+        "issued": 1500,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "b",
+        "notes": 21,
+        "peers": [
+          49001
+        ],
+        "pid": 3054872,
+        "port": 47509,
+        "remaining": 0,
+        "spent": 6,
+        "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+        "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+        "work": 62914560
+      },
+      "c": {
+        "anchor": "997c94eb14933a042c15c523ad0471e5e1e48ecb4b0c283f49d92ebf9e9b63ef",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 9,
+        "found": 0,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "2b661fcef22b58fa5f2d01ec4a97372b209a3ef4e144a393376ef66ddd2e9aab0e00000035b940ac68d793f833d5f42a53a314b7f08a9fcf3a08e05b2cedeb93e130efd85ab5361906da31049c8b8e5bab9164ad5a124dbc17802192e7d14784efca9e4b0d3bf04a62715265b1dddbdb6178dd6036839da7ed9973b8d46a563a3746672b",
+        "height": 14,
+        "issued": 1400,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "c",
+        "notes": 20,
+        "peers": [
+          47509
+        ],
+        "pid": 3054899,
+        "port": 49001,
+        "remaining": 0,
+        "spent": 6,
+        "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+        "tip": "00000236bfae57b0287c6ccaf4166773805fed3a92777d84ca3312f6cf5acc24",
+        "work": 58720256
+      }
+    },
+    "funded": {
+      "a": {
+        "anchor": "f7e3783fcf38c8e44a718e555ad3197a9862dd72671b4abb3f0ec53407ed8528",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 0,
+        "found": 1,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "b8ca8b16710b4516a6e4ad61b0374f32b58fe7441bbe6746a904b2ad46d931ac02000000ee1de948f2074327f0b72abd31712970cc3b701ca3ed0556d1a0d7f9c5b62c4a1f0b816e09be07ccb3993da9f51a609a67e5b06d126166fcca3373944f0651499e1b96801851ec8f3e54e34c2818df5599514f4d7714311b4e779623a49d1a7c",
+        "height": 2,
+        "issued": 200,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "a",
+        "notes": 2,
+        "peers": [
+          47509,
+          49001
+        ],
+        "pid": 3054844,
+        "port": 53537,
+        "remaining": 0,
+        "spent": 0,
+        "spent_set_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "work": 8388608
+      },
+      "b": {
+        "anchor": "f7e3783fcf38c8e44a718e555ad3197a9862dd72671b4abb3f0ec53407ed8528",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 0,
+        "found": 1,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "b8ca8b16710b4516a6e4ad61b0374f32b58fe7441bbe6746a904b2ad46d931ac02000000ee1de948f2074327f0b72abd31712970cc3b701ca3ed0556d1a0d7f9c5b62c4a1f0b816e09be07ccb3993da9f51a609a67e5b06d126166fcca3373944f0651499e1b96801851ec8f3e54e34c2818df5599514f4d7714311b4e779623a49d1a7c",
+        "height": 2,
+        "issued": 200,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "b",
+        "notes": 2,
+        "peers": [
+          49001,
+          53537
+        ],
+        "pid": 3054872,
+        "port": 47509,
+        "remaining": 0,
+        "spent": 0,
+        "spent_set_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "work": 8388608
+      },
+      "c": {
+        "anchor": "f7e3783fcf38c8e44a718e555ad3197a9862dd72671b4abb3f0ec53407ed8528",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 0,
+        "found": 0,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "b8ca8b16710b4516a6e4ad61b0374f32b58fe7441bbe6746a904b2ad46d931ac02000000ee1de948f2074327f0b72abd31712970cc3b701ca3ed0556d1a0d7f9c5b62c4a1f0b816e09be07ccb3993da9f51a609a67e5b06d126166fcca3373944f0651499e1b96801851ec8f3e54e34c2818df5599514f4d7714311b4e779623a49d1a7c",
+        "height": 2,
+        "issued": 200,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "c",
+        "notes": 2,
+        "peers": [
+          47509,
+          53537
+        ],
+        "pid": 3054899,
+        "port": 49001,
+        "remaining": 0,
+        "spent": 0,
+        "spent_set_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tip": "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+        "work": 8388608
+      }
+    },
+    "lone": {
+      "a": {
+        "anchor": "5b76ea9f100204dfb78616cb42ee43f56e6a7c2c91e71bb1e452b7b75006bea9",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 3,
+        "found": 1,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "f7e3783fcf38c8e44a718e555ad3197a9862dd72671b4abb3f0ec53407ed85280300000002f154c452cfd0325f8cc3d39354a15d66aa453318bfdd23e2fa712d74c3e563236873f7846833e538d8172504639edf7067c68494565d5132099e4e695a646f6b12f68b4f662ff4bbf535177ca4818f5ce0bb0f270c50a5b878764f09d1d494",
+        "height": 3,
+        "issued": 300,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "a",
+        "notes": 5,
+        "peers": [
+          47509,
+          49001
+        ],
+        "pid": 3054844,
+        "port": 53537,
+        "remaining": 0,
+        "spent": 2,
+        "spent_set_sha256": "652f411ff742e0dbbd739e1d3d402468a9b1e9af626dfed91f38b398b68cd81a",
+        "tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+        "work": 12582912
+      },
+      "b": {
+        "anchor": "5b76ea9f100204dfb78616cb42ee43f56e6a7c2c91e71bb1e452b7b75006bea9",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 3,
+        "found": 2,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "f7e3783fcf38c8e44a718e555ad3197a9862dd72671b4abb3f0ec53407ed85280300000002f154c452cfd0325f8cc3d39354a15d66aa453318bfdd23e2fa712d74c3e563236873f7846833e538d8172504639edf7067c68494565d5132099e4e695a646f6b12f68b4f662ff4bbf535177ca4818f5ce0bb0f270c50a5b878764f09d1d494",
+        "height": 3,
+        "issued": 300,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "b",
+        "notes": 5,
+        "peers": [
+          49001,
+          53537
+        ],
+        "pid": 3054872,
+        "port": 47509,
+        "remaining": 0,
+        "spent": 2,
+        "spent_set_sha256": "652f411ff742e0dbbd739e1d3d402468a9b1e9af626dfed91f38b398b68cd81a",
+        "tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+        "work": 12582912
+      },
+      "c": {
+        "anchor": "5b76ea9f100204dfb78616cb42ee43f56e6a7c2c91e71bb1e452b7b75006bea9",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 3,
+        "found": 0,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "f7e3783fcf38c8e44a718e555ad3197a9862dd72671b4abb3f0ec53407ed85280300000002f154c452cfd0325f8cc3d39354a15d66aa453318bfdd23e2fa712d74c3e563236873f7846833e538d8172504639edf7067c68494565d5132099e4e695a646f6b12f68b4f662ff4bbf535177ca4818f5ce0bb0f270c50a5b878764f09d1d494",
+        "height": 3,
+        "issued": 300,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "c",
+        "notes": 5,
+        "peers": [
+          47509,
+          53537
+        ],
+        "pid": 3054899,
+        "port": 49001,
+        "remaining": 0,
+        "spent": 2,
+        "spent_set_sha256": "652f411ff742e0dbbd739e1d3d402468a9b1e9af626dfed91f38b398b68cd81a",
+        "tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+        "work": 12582912
+      }
+    },
+    "multi": {
+      "a": {
+        "anchor": "b2c1ccfd79a3ccd991aa0c27d02110beed9178fe7d78d262cfa03dea2f98d2d9",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 9,
+        "found": 2,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "5b76ea9f100204dfb78616cb42ee43f56e6a7c2c91e71bb1e452b7b75006bea904000000633ecaa51712424e0bd6ee97b13e40effeab2d679b83fff2d72b5e462323371fe1c4512da54833e50aa4bc4301a354e8f3a98adc37d74daeb44cc172333061ca551cf4b1e558919e9fef359a8aa7aa20ca7405444dbaf01d234b73b622982277",
+        "height": 4,
+        "issued": 400,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "a",
+        "notes": 10,
+        "peers": [
+          47509,
+          49001
+        ],
+        "pid": 3054844,
+        "port": 53537,
+        "remaining": 0,
+        "spent": 6,
+        "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "work": 16777216
+      },
+      "b": {
+        "anchor": "b2c1ccfd79a3ccd991aa0c27d02110beed9178fe7d78d262cfa03dea2f98d2d9",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 9,
+        "found": 2,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "5b76ea9f100204dfb78616cb42ee43f56e6a7c2c91e71bb1e452b7b75006bea904000000633ecaa51712424e0bd6ee97b13e40effeab2d679b83fff2d72b5e462323371fe1c4512da54833e50aa4bc4301a354e8f3a98adc37d74daeb44cc172333061ca551cf4b1e558919e9fef359a8aa7aa20ca7405444dbaf01d234b73b622982277",
+        "height": 4,
+        "issued": 400,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "b",
+        "notes": 10,
+        "peers": [
+          49001,
+          53537
+        ],
+        "pid": 3054872,
+        "port": 47509,
+        "remaining": 0,
+        "spent": 6,
+        "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "work": 16777216
+      },
+      "c": {
+        "anchor": "b2c1ccfd79a3ccd991aa0c27d02110beed9178fe7d78d262cfa03dea2f98d2d9",
+        "deep_replays": 0,
+        "errors": [],
+        "fees": 9,
+        "found": 0,
+        "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+        "header": "5b76ea9f100204dfb78616cb42ee43f56e6a7c2c91e71bb1e452b7b75006bea904000000633ecaa51712424e0bd6ee97b13e40effeab2d679b83fff2d72b5e462323371fe1c4512da54833e50aa4bc4301a354e8f3a98adc37d74daeb44cc172333061ca551cf4b1e558919e9fef359a8aa7aa20ca7405444dbaf01d234b73b622982277",
+        "height": 4,
+        "issued": 400,
+        "mempool": 0,
+        "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+        "node": "c",
+        "notes": 10,
+        "peers": [
+          47509,
+          53537
+        ],
+        "pid": 3054899,
+        "port": 49001,
+        "remaining": 0,
+        "spent": 6,
+        "spent_set_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+        "tip": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+        "work": 16777216
+      }
+    }
+  },
+  "winning": [
+    "0000037d3b11d5ecdb82ee0019f8cb72862d667fc50edd1997341612e45750ff",
+    "000001f93b28bfa6a1a405396d2c673ba13626a4e3991c6a21352110342e33b7",
+    "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+    "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+    "00000392c631f86afc4f4c101c2b82dae646c77321023d52661c42f412f94beb",
+    "0000031478d1b37d1f9b40e835826a0875110d1ec01d1eed39c30e7d94f7520e",
+    "000003d601ba4f5ab0788c915eb23413a7641d69d1b8b930e707fdf9d8d93c1b",
+    "0000008b9d128b9530cb9a41449bd93af1a5189095d23a451008c3ddb7e5231e",
+    "0000035b09820b445b0e66681e1843bb4b183cc30ccb55dcb6468a4c34ac75b9",
+    "0000001095725c5303b8234d1f113a40841eb82a43257f9ffaa87a8a799c5415",
+    "0000025ed9b4824d1b4386b9a151e6c14ffda703a2fc2d9841abee6ae133f573",
+    "00000384d103e9f103743009b51ef462625e9577332b2167b3e600f079eb63de",
+    "0000018bb26b157a02deead6a3bd3e4f59ceb376695bfe402198a2be497ac6c5",
+    "00000236bfae57b0287c6ccaf4166773805fed3a92777d84ca3312f6cf5acc24",
+    "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615"
+  ],
+  "work_bits": 22
+}

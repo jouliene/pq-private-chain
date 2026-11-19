@@ -1,0 +1,45 @@
+{
+  "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+  "common": "000001dcd4b09753efb3df65ad694b93cedaf07a9d24a459ddbf42aa9930f8f4",
+  "complete_body_bytes": 693960,
+  "deep_replays_after_restart": 1,
+  "deep_selected_at_height": 15,
+  "detached_old_blocks": 10,
+  "fee_recycled": 9,
+  "foreign_key_violations": 0,
+  "fresh_deep_replays": 0,
+  "gross_miner_reward": 1509,
+  "height": 15,
+  "issuance": 1500,
+  "losing_branch_archive_blocks": 10,
+  "old_height": 14,
+  "old_tip": "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2",
+  "public_result_sha256": "367d81047b2a0aa126fdff682d342062121c15b2d54d3ee47a8ab4a77ed2f2cd",
+  "reorg_semantic_evictions": [
+    {
+      "id": "56eb591e767deae71e4cea95163ae9f62f36761a271f0da85dd69fe04d621bf7",
+      "reason": "anchor age"
+    }
+  ],
+  "restored_pending": [],
+  "selected_nullifiers": 6,
+  "selected_outputs": 21,
+  "selected_table_hashes": {
+    "current_spent_index": "a765d51e7b3e93f757f221b8a42c8a1ddd1bf3726756cc617e1311e30d0b4772",
+    "ordered_outputs_receipts_rewards": "9bc449b3e66eea15ee978b35201b739c4263a330a7db43cacab642ea3b26b3fe",
+    "pending": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "selected_bodies_headers_frontiers": "198a77e5f4c80049ca9f96c0558bdf65301d3f5f17f12d71787a6dfa2e803689"
+  },
+  "selected_transactions": 3,
+  "selected_widths": {
+    "0": 13,
+    "1": 1,
+    "2": 1
+  },
+  "sorted_nullifiers_sha256": "011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72",
+  "sqlite_integrity": "ok",
+  "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+  "verified_ciphertext_bytes": 10752,
+  "winning_suffix_blocks": 11,
+  "work": 62914560
+}

@@ -1,3 +1,7 @@
+# Local PoW devnet
+
+Run `./pqd start` for persistent continuous mining and `./pqd walkthrough` for an isolated acceptance run. Read [the operator guide](devnet/README.md) and [the monetary and fork rules](devnet/CONSENSUS.md) before edits. Consensus owns work, ancestor validation, rewards and node-local chain selection. Never elect a branch in the test driver. The published evidence allowlist contains public packets, complete blocks, explicitly synthetic numerical results and timings. Keep seed backups and local databases outside Git. Use separate empty homes and preserve the registered native verifier and historical CP03/WHIR paths.
+
 # Advancing-chain payments
 
 The APV2 research path, local devnet decision and reproductions live in experiments/advancing-payments. Read its DECISION.md and REPRODUCE.md before running its isolated Rust roles. Use a new work and evidence directory for each run, the registered source/profile and one heavy job at a time. Keep producer-confirmation clocks independent of proof completion. Tests of receipt ownership must distinguish external funding from the payer's own change.
