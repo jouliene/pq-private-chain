@@ -1,0 +1,118 @@
+{
+  "APV2_pinned_intent": {
+    "all_pairwise_comparisons": [
+      {
+        "equal_anchor": false,
+        "same_nf_positions": [
+          0
+        ],
+        "shared_cm": 0,
+        "shared_encapsulations": 0,
+        "shared_nf": 1,
+        "shared_receipts": 0
+      },
+      {
+        "equal_anchor": false,
+        "same_nf_positions": [
+          0
+        ],
+        "shared_cm": 0,
+        "shared_encapsulations": 0,
+        "shared_nf": 1,
+        "shared_receipts": 0
+      },
+      {
+        "equal_anchor": false,
+        "same_nf_positions": [
+          0
+        ],
+        "shared_cm": 0,
+        "shared_encapsulations": 0,
+        "shared_nf": 1,
+        "shared_receipts": 0
+      }
+    ],
+    "distinct_packets": 3,
+    "packet_sha256": [
+      "50d9e1da16fa1acd3ff05eab07dc237a1d16570c9e2daeaf09a090b714f5d1f4",
+      "23b9d70b6db5f300081410b37d1a68260f0216a5d8085379272a053369e6faf9",
+      "7879c74884822a4cf02ed158aba926a0bc70ad32b6675e0e04c996ad92e3af86"
+    ],
+    "public_anchor_heights": [
+      48,
+      66,
+      78
+    ]
+  },
+  "APV2_stale": {
+    "all_pairwise_comparisons": [
+      {
+        "equal_anchor": false,
+        "same_nf_positions": [
+          0
+        ],
+        "shared_cm": 0,
+        "shared_encapsulations": 0,
+        "shared_nf": 1,
+        "shared_receipts": 0
+      }
+    ],
+    "distinct_packets": 2,
+    "packet_sha256": [
+      "7b0ea1ae9d238ecdc51589178e31a327d90d28d54fac8bbdebce3909236300d7",
+      "1199f966d8ae7715cd2cf367bf149091bb9e2b542f1d4c81944564605aad126b"
+    ],
+    "public_anchor_heights": [
+      2,
+      11
+    ]
+  },
+  "D8C1_public": {
+    "archive_sha256": "38c3a03b6593f95d725533e7d4b5ca1d78d50a22bb2417762c168e53d36cedb5",
+    "cross_payment_pairs": 36,
+    "distinct_ciphertexts": 18,
+    "distinct_components_by_KEM_payload_memo": [
+      18,
+      18,
+      18
+    ],
+    "equal_nullifier_pairs": 0,
+    "ordered_SIDs_agree_with_original_send_log": true,
+    "public_header_version_suite_diversifier": [
+      1,
+      1,
+      0
+    ],
+    "public_payments": 9,
+    "receipt_B": 1792
+  },
+  "DLF1_fork": {
+    "capture_sha256": "b1b757c8620bed2fc8ff533e918c8282f08f056f0b80375e92708d8d54d0d436",
+    "competing_public_authorizations": {
+      "equal_anchor": true,
+      "same_nf_positions": [
+        0,
+        1
+      ],
+      "shared_cm": 0,
+      "shared_encapsulations": 0,
+      "shared_nf": 2,
+      "shared_receipts": 0
+    },
+    "distinct_packets": 5,
+    "independently_funded_same_anchor": {
+      "equal_anchor": true,
+      "same_nf_positions": [],
+      "shared_cm": 0,
+      "shared_encapsulations": 0,
+      "shared_nf": 0,
+      "shared_receipts": 0
+    },
+    "txids": [
+      "015782a247da21999a6dbd34d70c3054cb38f095c3cf22d670491852b0262855",
+      "800112021872fc6fb80c1a1a683228c30c9145ee769ac4c92ebffdf8e9420321",
+      "3a83f2917003228f12ea56aa629c79a7fc9bebfcf67806330f4f68b42635c62b"
+    ]
+  },
+  "revision_of_captures": "9c21c2b4297657b8c4cca219c4c480910557d00e"
+}

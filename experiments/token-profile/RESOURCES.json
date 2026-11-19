@@ -1,0 +1,53 @@
+{
+  "block_B": [
+    143371,
+    143371,
+    143371,
+    143371
+  ],
+  "full_one_payment_block_copy_at_100M_TB": 14.3371,
+  "one_packet_copy_at_100M_TB": 14.3187,
+  "payment_B": [
+    143187,
+    143187,
+    143187,
+    143187
+  ],
+  "proof_B": [
+    139594,
+    139594,
+    139594,
+    139594
+  ],
+  "public_genesis_B": 488,
+  "public_verifier_setup": {
+    "count": 1,
+    "cpu_s_mean": 2.70679879,
+    "peak_rss_KiB": 200832,
+    "wall_s_mean": 1.47326669
+  },
+  "public_verify": {
+    "count": 4,
+    "cpu_s_mean": 0.00675840725,
+    "peak_rss_KiB": 200832,
+    "wall_s_mean": 0.00675940825
+  },
+  "receipt_pair_B": [
+    3584,
+    3584,
+    3584,
+    3584
+  ],
+  "wallet_prove": {
+    "count": 4,
+    "cpu_s_mean": 7.477601968,
+    "peak_rss_KiB": 452044,
+    "wall_s_mean": 3.82498563
+  },
+  "wallet_setup": {
+    "count": 4,
+    "cpu_s_mean": 2.679680145,
+    "peak_rss_KiB": 201168,
+    "wall_s_mean": 1.443644782
+  }
+}

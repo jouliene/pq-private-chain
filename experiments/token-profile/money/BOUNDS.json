@@ -1,0 +1,132 @@
+{
+  "four_max_values_excess_above_modulus": 4294967291,
+  "max_62_bit_value": 4611686018427387903,
+  "modulus": 18446744069414584321,
+  "native_verified_key_sha256": {
+    "direct.vk": "5d6cfc6ccff5792e4899799124b2fb1e7dac50f727825c4886485dc01a564ce8",
+    "eight.vk": "9d280dfe7b0b35c2fb768e927239da4a8bdbc9c2ccdde27127a17fe9ae96bdcd"
+  },
+  "per_lane_integer_bounds": {
+    "DLF1_circuit": {
+      "both_sides_below_modulus": true,
+      "inputs": 2,
+      "max_fee": 4611686018427387903,
+      "max_input_sum": 9223372036854775806,
+      "max_output_plus_fee": 13835058055282163709,
+      "outputs": 2,
+      "value_bits": 62
+    },
+    "DLF1_consensus_fee": {
+      "both_sides_below_modulus": true,
+      "inputs": 2,
+      "max_fee": 3,
+      "max_input_sum": 9223372036854775806,
+      "max_output_plus_fee": 9223372036854775809,
+      "outputs": 2,
+      "value_bits": 62
+    },
+    "four_fungible_inputs_and_outputs": {
+      "both_sides_below_modulus": false,
+      "inputs": 4,
+      "max_fee": 3,
+      "max_input_sum": 18446744073709551612,
+      "max_output_plus_fee": 18446744073709551615,
+      "outputs": 4,
+      "value_bits": 62
+    },
+    "four_fungible_inputs_and_outputs_at_61_bits": {
+      "both_sides_below_modulus": true,
+      "inputs": 4,
+      "max_fee": 3,
+      "max_input_sum": 9223372036854775804,
+      "max_output_plus_fee": 9223372036854775807,
+      "outputs": 4,
+      "value_bits": 61
+    },
+    "three_fungible_inputs_and_outputs": {
+      "both_sides_below_modulus": true,
+      "inputs": 3,
+      "max_fee": 3,
+      "max_input_sum": 13835058055282163709,
+      "max_output_plus_fee": 13835058055282163712,
+      "outputs": 3,
+      "value_bits": 62
+    },
+    "two_scalar_roles_native": {
+      "both_sides_below_modulus": true,
+      "inputs": 1,
+      "max_fee": 3,
+      "max_input_sum": 4611686018427387903,
+      "max_output_plus_fee": 4611686018427387906,
+      "outputs": 1,
+      "value_bits": 62
+    },
+    "two_scalar_roles_token": {
+      "both_sides_below_modulus": true,
+      "inputs": 1,
+      "max_fee": 0,
+      "max_input_sum": 4611686018427387903,
+      "max_output_plus_fee": 9223372036854775806,
+      "outputs": 2,
+      "value_bits": 62
+    },
+    "two_vector_notes_native": {
+      "both_sides_below_modulus": true,
+      "inputs": 2,
+      "max_fee": 3,
+      "max_input_sum": 9223372036854775806,
+      "max_output_plus_fee": 9223372036854775809,
+      "outputs": 2,
+      "value_bits": 62
+    },
+    "two_vector_notes_token": {
+      "both_sides_below_modulus": true,
+      "inputs": 2,
+      "max_fee": 0,
+      "max_input_sum": 9223372036854775806,
+      "max_output_plus_fee": 9223372036854775806,
+      "outputs": 2,
+      "value_bits": 62
+    }
+  },
+  "public_two_lane_example": {
+    "final_total_native_token": [
+      47,
+      70
+    ],
+    "initial_total_native_token": [
+      53,
+      70
+    ],
+    "mint_burn_subsidy_in_example": 0,
+    "ordinary_transfers": 2,
+    "prover_or_consensus_execution": false,
+    "unspendable_native_fee_sink": 6
+  },
+  "registered_token": {
+    "degree_bits": 12,
+    "folds": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "gates_before_blinding": 468,
+    "key_bytes": 1481,
+    "key_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+    "public_inputs": 26,
+    "suite": "TKN1"
+  },
+  "upstream_source_sha256": {
+    "qnero-aggregator/src/recursive.rs": "469b2265737c542d58e81b4daf40c4a2d85aaddffa30fc18c327993c4ac0d5f2",
+    "qnero-circuit/src/chain.rs": "c11620396440fdb969c524b265eba9d634de6b9216160f29d974962bb1813c6c",
+    "qnero-circuit/src/circuit.rs": "ca9c8a2d98c7c3c3b4a78f7f3dc6c61df9cc21f6cd067a06efef0ac6c279251b",
+    "qnero-circuit/src/header.rs": "9d05d76f7652d67e2b715da318a023a24c842959e0f0cf888ac35aada0b706cd",
+    "qnero-circuit/src/merkle.rs": "9d194e29c812e191f5fd6a40a57a7150a329f76e281c7328c177ee3b4abd50d3",
+    "qnero-circuit/src/note_gadget.rs": "80d51dc448488facae3e65fa6fd56f3f4e886857ae246194e66077ef37875560",
+    "qnero-note-core/src/note.rs": "6d2a2a32bd718efbf2d4811b5e113522e4f1173cb0b34a9aea8a28581b33cec0",
+    "qnero-notes/src/encrypt.rs": "3c878c61e8e81aeefd76d01d5bedfbf84ec0ec7a8c49064246b81942c5a613fd",
+    "qnero-pqcrypto/src/note_encryption.rs": "03e9219c57c11c9442ce2adda12607c6a0a014853ee672b337ed96aa6ea86989"
+  }
+}

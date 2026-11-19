@@ -1,0 +1,30 @@
+name: Token spend-profile public verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/token-profile/**'
+      - '.github/workflows/token-profile.yml'
+  pull_request:
+    paths:
+      - 'experiments/token-profile/**'
+      - '.github/workflows/token-profile.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Prepare pinned Rust and native role isolation
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap build-essential git
+          rustup toolchain install 1.93.0 --profile minimal
+      - name: Rebuild both keys, replay public token history and test cross-key rejection
+        run: python3 -IB experiments/token-profile/reproduce.py "$RUNNER_TEMP/token" --public-only

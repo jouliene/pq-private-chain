@@ -1,3 +1,9 @@
+# Private spend profile for one research token
+
+Decide whether a registered spend relation supports two separately conserved private balances with ordinary offline receipt and a native fee. Compare a dedicated research profile with DLF1. Determine archival compatibility separately. Reproduce genuine funding, public verification, receipt and spending after seed restoration. Start from 9c21c2b4297657b8c4cca219c4c480910557d00e. Keep DLF1 and D8C1 executable and keep the global blockchain objective active.
+
+## Earlier milestone
+
 # Delayed DLF1 certificates for historical validation
 
 Evaluate a real certificate over up to eight independently funded DLF1 payments across multiple PoW blocks from baseline d9e4114967302916354a7f75787ada2b5e2d27fe. Retain unilateral admission. Compare complete archival liability, builder capacity and public verification against 1/5 TB scenarios per 100M payments. If viable, require a versioned statement-committing core, independent peer-only genesis verification after destructive pruning on disposable stores, missing-data pause/resume, atomic compaction, a boundary reorganization, offline seed recovery and a new spend. Publish a measured decision and independent reproduction. Global blockchain goal active.

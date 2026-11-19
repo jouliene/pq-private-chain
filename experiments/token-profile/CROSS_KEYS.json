@@ -1,0 +1,16 @@
+{
+  "DLF1": {
+    "accepted_own": true,
+    "packet_B": 143187,
+    "public_packet_sha256": "39e6519cf477efa14442b72467f934d4b5ae27cc178c2544a68b2e093eca0fcd",
+    "raw_proof_B": 139594,
+    "rejected_reframed_other": true
+  },
+  "TKN1": {
+    "accepted_own": true,
+    "packet_B": 143187,
+    "public_packet_sha256": "b981e07c7135fb81138f5badcaca2b5a63ec146c46cb04a4558b3ed449c45687",
+    "raw_proof_B": 139594,
+    "rejected_reframed_other": true
+  }
+}

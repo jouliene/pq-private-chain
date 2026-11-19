@@ -1,0 +1,531 @@
+{
+  "final_fee_sink_native": 12,
+  "final_synthetic_balances": {
+    "A": [
+      197,
+      80
+    ],
+    "B": [
+      139,
+      69
+    ],
+    "C": [
+      26,
+      30
+    ],
+    "D": [
+      26,
+      61
+    ]
+  },
+  "genesis_sha256": "9e95a8af648c826ce0c0d5614ddbcf520a07dbf7a0f20f8a77d6d2102f338e0d",
+  "network": "10d666acb7b62cb9cca790bc3ba7f280530b889eb07f2d612f12dc3297317432",
+  "offline_restore": {
+    "new_private_directory": true,
+    "private_files_imported_per_recipient": 1,
+    "recipients_offline_at_payment": [
+      "C",
+      "D"
+    ]
+  },
+  "profile_vk_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+  "public_replay": {
+    "approved_genesis_sha256": "9e95a8af648c826ce0c0d5614ddbcf520a07dbf7a0f20f8a77d6d2102f338e0d",
+    "blocks": [
+      {
+        "anchor": "5a2c5fa67db1834bbb21900651e66173446b0129ad25ec1095e6ddd8001c17fd",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 3,
+        "funded_root": "5c374528325c7103701dee957714cfd2a0600803f2c570d078cacc3d1001cc5d",
+        "height": 1,
+        "nonce": 7465846,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "b981e07c7135fb81138f5badcaca2b5a63ec146c46cb04a4558b3ed449c45687",
+        "work_hash": "000002a9148ae1ef22c1a21cf9847a2f569133c0ac9f7e8d2908c42e78f54f13"
+      },
+      {
+        "anchor": "bd945e474926471f496d47cef51566a146ab90a1b0ab10d08b16a01adc34cf09",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 6,
+        "funded_root": "7e3efaf4f1b508ec4e367cabf154ded04e00613a5dbdeda9e883663cd9bc2982",
+        "height": 2,
+        "nonce": 5431038,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "7247d13689d45d79053fe87140415fb9d6642f6b4bb9f72b77cee2c5b799898d",
+        "work_hash": "000002ea7019c9ba5491d9f999e33e228ec54f95aed3d56e45994fcb7ecbf32d"
+      },
+      {
+        "anchor": "31fe6b4c14ad152ae8aa794b79d68f5b70c9b7b7ee6d2c5d8d1e85520779c6eb",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 9,
+        "funded_root": "244a4a0546b47f2432d5b59903518bea6c41b42aff6c196475cd5400bf54cad4",
+        "height": 3,
+        "nonce": 1138856,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "4145712b3e02003f333b700a84f036a0e00f2e805829b519c3054c28a4897c70",
+        "work_hash": "000003e416fdd83186ce14a96f8d0865d9ef78503934be82d39c5efe4ec8b1e6"
+      },
+      {
+        "anchor": "971b463705d95e291bef92e849c862fe8af6d7a99b4b4aa272e960fcd24c5352",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 12,
+        "funded_root": "cd72e4dc91e16822aa279582e2abe45768d97207d7ad4234acafbbc38e8bbcc4",
+        "height": 4,
+        "nonce": 1755202,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "424ce98ecbb48dfa3fc117bc5e346c4aeade8f0e74b9b13e0fed45606c6b0114",
+        "work_hash": "000002d700de423b13ff42efeeed7ee1dc101721ead8aed5da4a5a7312135bd7"
+      }
+    ],
+    "canonical_proof_pi_control": "fee 3 to 4, same field width, parseable canonical proof; fails cryptographic verifier before fee codec",
+    "cross_profile_frame_rejected": true,
+    "duplicate_spend_refused": true,
+    "final_fee_sink_native": 12,
+    "network": "10d666acb7b62cb9cca790bc3ba7f280530b889eb07f2d612f12dc3297317432",
+    "public_verifier_meters": [
+      {
+        "cpu_s": 2.70679879,
+        "elapsed_s": 1.47326669,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 0.006803864,
+        "elapsed_s": 0.006802947,
+        "operation": "public_verify",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 0.00675745,
+        "elapsed_s": 0.006756774,
+        "operation": "public_verify",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 0.00669135,
+        "elapsed_s": 0.00669075,
+        "operation": "public_verify",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 0.006780965,
+        "elapsed_s": 0.006787162,
+        "operation": "public_verify",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 0.000791021,
+        "elapsed_s": 0.00079095,
+        "operation": "rejected",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 3.1536e-05,
+        "elapsed_s": 3.1696e-05,
+        "operation": "rejected",
+        "peak_rss_kib": 200832
+      },
+      {
+        "cpu_s": 0.00805825,
+        "elapsed_s": 0.008064573,
+        "operation": "public_verify",
+        "peak_rss_kib": 200832
+      }
+    ],
+    "registered_vk_sha256": "f4b865c6c2aaa9afdd6a7a7ecb94fe9b76ffdc75d25d5a570cf595d315576c2b",
+    "state_hash": "618aed7f3d8e2e6d70dc656f5665133e19b571bdac873bb3fef6d41db6987f8b"
+  },
+  "role_meters": {
+    "A": [
+      {
+        "cpu_s": 0.000377679,
+        "elapsed_s": 0.000377924,
+        "operation": "scan",
+        "peak_rss_kib": 3260
+      },
+      {
+        "cpu_s": 2.897037303,
+        "elapsed_s": 1.564091992,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201036
+      },
+      {
+        "cpu_s": 0.031412133,
+        "elapsed_s": 0.031411028,
+        "operation": "refused",
+        "peak_rss_kib": 201036
+      },
+      {
+        "cpu_s": 0.000457119,
+        "elapsed_s": 0.000457464,
+        "operation": "scan",
+        "peak_rss_kib": 201036
+      },
+      {
+        "cpu_s": 7.438975916,
+        "elapsed_s": 3.809822968,
+        "operation": "prove",
+        "peak_rss_kib": 451828
+      },
+      {
+        "cpu_s": 0.000587088,
+        "elapsed_s": 0.000587876,
+        "operation": "scan",
+        "peak_rss_kib": 451828
+      },
+      {
+        "cpu_s": 0.001712007,
+        "elapsed_s": 0.001712484,
+        "operation": "scan",
+        "peak_rss_kib": 451828
+      }
+    ],
+    "B": [
+      {
+        "cpu_s": 0.000568626,
+        "elapsed_s": 0.00056896,
+        "operation": "scan",
+        "peak_rss_kib": 3468
+      },
+      {
+        "cpu_s": 2.556061024,
+        "elapsed_s": 1.38203905,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201168
+      },
+      {
+        "cpu_s": 7.477125586,
+        "elapsed_s": 3.83867837,
+        "operation": "prove",
+        "peak_rss_kib": 451960
+      },
+      {
+        "cpu_s": 0.000792789,
+        "elapsed_s": 0.000793436,
+        "operation": "scan",
+        "peak_rss_kib": 451960
+      },
+      {
+        "cpu_s": 0.001216419,
+        "elapsed_s": 0.001216786,
+        "operation": "scan",
+        "peak_rss_kib": 451960
+      }
+    ],
+    "C": [
+      {
+        "cpu_s": 0.000834857,
+        "elapsed_s": 0.000836227,
+        "operation": "scan",
+        "peak_rss_kib": 3340
+      },
+      {
+        "cpu_s": 0.000773193,
+        "elapsed_s": 0.000777271,
+        "operation": "scan",
+        "peak_rss_kib": 3340
+      },
+      {
+        "cpu_s": 0.00078838,
+        "elapsed_s": 0.000791075,
+        "operation": "scan",
+        "peak_rss_kib": 3344
+      },
+      {
+        "cpu_s": 2.658582428,
+        "elapsed_s": 1.426485753,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201044
+      },
+      {
+        "cpu_s": 7.572535592,
+        "elapsed_s": 3.86427379,
+        "operation": "prove",
+        "peak_rss_kib": 451680
+      },
+      {
+        "cpu_s": 0.001074447,
+        "elapsed_s": 0.001074955,
+        "operation": "scan",
+        "peak_rss_kib": 451680
+      },
+      {
+        "cpu_s": 0.002078478,
+        "elapsed_s": 0.002078073,
+        "operation": "scan",
+        "peak_rss_kib": 451680
+      }
+    ],
+    "C_offline_before_funding": [],
+    "D": [
+      {
+        "cpu_s": 0.000999755,
+        "elapsed_s": 0.001000261,
+        "operation": "scan",
+        "peak_rss_kib": 3276
+      },
+      {
+        "cpu_s": 0.001393692,
+        "elapsed_s": 0.001398086,
+        "operation": "scan",
+        "peak_rss_kib": 3284
+      },
+      {
+        "cpu_s": 2.607039825,
+        "elapsed_s": 1.401962333,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201168
+      },
+      {
+        "cpu_s": 7.421770778,
+        "elapsed_s": 3.787167392,
+        "operation": "prove",
+        "peak_rss_kib": 452044
+      },
+      {
+        "cpu_s": 0.002035558,
+        "elapsed_s": 0.002035691,
+        "operation": "scan",
+        "peak_rss_kib": 452044
+      },
+      {
+        "cpu_s": 0.002022514,
+        "elapsed_s": 0.002022119,
+        "operation": "scan",
+        "peak_rss_kib": 452044
+      }
+    ],
+    "D_offline_before_funding": [],
+    "producer_verify": [
+      {
+        "cpu_s": 3.159467238,
+        "elapsed_s": 1.705463217,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.010679868,
+        "elapsed_s": 0.010679087,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.006875055,
+        "elapsed_s": 0.006883818,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.012087859,
+        "elapsed_s": 0.012087425,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.011789276,
+        "elapsed_s": 0.011789644,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.006658909,
+        "elapsed_s": 0.006672605,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.011727094,
+        "elapsed_s": 0.011726942,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.011579709,
+        "elapsed_s": 0.011578603,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      },
+      {
+        "cpu_s": 0.006681364,
+        "elapsed_s": 0.006681523,
+        "operation": "public_verify",
+        "peak_rss_kib": 200576
+      }
+    ]
+  },
+  "synthetic_allocations": [
+    [
+      100,
+      70
+    ],
+    [
+      100,
+      50
+    ],
+    [
+      100,
+      70
+    ],
+    [
+      100,
+      50
+    ]
+  ],
+  "transfers": [
+    {
+      "block": {
+        "anchor": "5a2c5fa67db1834bbb21900651e66173446b0129ad25ec1095e6ddd8001c17fd",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 3,
+        "funded_root": "5c374528325c7103701dee957714cfd2a0600803f2c570d078cacc3d1001cc5d",
+        "height": 1,
+        "nonce": 7465846,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "b981e07c7135fb81138f5badcaca2b5a63ec146c46cb04a4558b3ed449c45687",
+        "work_hash": "000002a9148ae1ef22c1a21cf9847a2f569133c0ac9f7e8d2908c42e78f54f13"
+      },
+      "change": [
+        197,
+        80
+      ],
+      "pay_native": 0,
+      "pay_token": 40,
+      "payee": "C",
+      "payer": "A",
+      "prove_request_wall_s_including_lazy_setup_if_cold": 3.810085164150223,
+      "real_inputs": 2,
+      "selected_values": [
+        200,
+        120
+      ],
+      "wallet_request_reply_bytes": [
+        1623,
+        143191
+      ]
+    },
+    {
+      "block": {
+        "anchor": "bd945e474926471f496d47cef51566a146ab90a1b0ab10d08b16a01adc34cf09",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 6,
+        "funded_root": "7e3efaf4f1b508ec4e367cabf154ded04e00613a5dbdeda9e883663cd9bc2982",
+        "height": 2,
+        "nonce": 5431038,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "7247d13689d45d79053fe87140415fb9d6642f6b4bb9f72b77cee2c5b799898d",
+        "work_hash": "000002ea7019c9ba5491d9f999e33e228ec54f95aed3d56e45994fcb7ecbf32d"
+      },
+      "change": [
+        127,
+        55
+      ],
+      "pay_native": 70,
+      "pay_token": 65,
+      "payee": "C",
+      "payer": "B",
+      "prove_request_wall_s_including_lazy_setup_if_cold": 5.221031476045027,
+      "real_inputs": 2,
+      "selected_values": [
+        200,
+        120
+      ],
+      "wallet_request_reply_bytes": [
+        1623,
+        143191
+      ]
+    },
+    {
+      "block": {
+        "anchor": "31fe6b4c14ad152ae8aa794b79d68f5b70c9b7b7ee6d2c5d8d1e85520779c6eb",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 9,
+        "funded_root": "244a4a0546b47f2432d5b59903518bea6c41b42aff6c196475cd5400bf54cad4",
+        "height": 3,
+        "nonce": 1138856,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "4145712b3e02003f333b700a84f036a0e00f2e805829b519c3054c28a4897c70",
+        "work_hash": "000003e416fdd83186ce14a96f8d0865d9ef78503934be82d39c5efe4ec8b1e6"
+      },
+      "change": [
+        26,
+        30
+      ],
+      "pay_native": 41,
+      "pay_token": 75,
+      "payee": "D",
+      "payer": "C",
+      "prove_request_wall_s_including_lazy_setup_if_cold": 5.2909650390502065,
+      "real_inputs": 2,
+      "selected_values": [
+        70,
+        105
+      ],
+      "wallet_request_reply_bytes": [
+        1623,
+        143191
+      ]
+    },
+    {
+      "block": {
+        "anchor": "971b463705d95e291bef92e849c862fe8af6d7a99b4b4aa272e960fcd24c5352",
+        "block_bytes": 143371,
+        "cumulative_fee_sink_native": 12,
+        "funded_root": "cd72e4dc91e16822aa279582e2abe45768d97207d7ad4234acafbbc38e8bbcc4",
+        "height": 4,
+        "nonce": 1755202,
+        "packet_bytes": 143187,
+        "proof_bytes": 139594,
+        "receipts_bytes": 3584,
+        "tx_sha256": "424ce98ecbb48dfa3fc117bc5e346c4aeade8f0e74b9b13e0fed45606c6b0114",
+        "work_hash": "000002d700de423b13ff42efeeed7ee1dc101721ead8aed5da4a5a7312135bd7"
+      },
+      "change": [
+        26,
+        61
+      ],
+      "pay_native": 12,
+      "pay_token": 14,
+      "payee": "B",
+      "payer": "D",
+      "prove_request_wall_s_including_lazy_setup_if_cold": 5.189390727085993,
+      "real_inputs": 1,
+      "selected_values": [
+        41,
+        75
+      ],
+      "wallet_request_reply_bytes": [
+        1623,
+        143191
+      ]
+    }
+  ],
+  "unbalanced_witness": {
+    "all_four_typed_openings_consistent": true,
+    "native_balance_unchanged": true,
+    "out_token_delta": 1,
+    "stage": "prover_refused",
+    "wallet_request_reply_bytes": [
+      1623,
+      5
+    ]
+  },
+  "wallet_only_mismatch_control": {
+    "matched_after": 1,
+    "matched_before": 2,
+    "same_public_root": true
+  }
+}

@@ -1,3 +1,9 @@
+# Private token spend-profile selection
+
+Work in progress from 9c21c2b4297657b8c4cca219c4c480910557d00e. Monetary analysis owns the integer and issuance model. Privacy review owns the public transcript, receipts and reanchors. The construction specialist owns a fixed native-plus-one-token note, wallet and genuine proof experiment. The orchestrator owns verifier decoding and integration. A non-author will reproduce the decisive experiment from a clean checkout. Continue in experiments/token-profile. Multi-archivist endurance remains in the backlog.
+
+## Earlier milestone
+
 # Delayed DLF1 certificate decision
 
 Adopt D8C1 as optional experimental historical evidence on a versioned PoW network. A real eight-payment certificate is 208,487 B; the same circuit with two real active slots is 186,983 B. Sparse/busy one-copy projections for full groups are 2.647/2.617 TB per 100M. Full coverage costs roughly 44 continuously busy CPU cores before headroom. Nine genuine independent payers across two PoW branches, destructive pruning on a disposable replica, a stopped original service, missing-evidence resume, rollback across a certified boundary, fresh cold verification and seed-only receipt followed by a new 250-unit spend were exercised. Seven of eight winning payments remained covered by the original full certificate. The global chain project remains active, including the open PQ/availability obligations, private native assets and atomic multi-owner swaps.
