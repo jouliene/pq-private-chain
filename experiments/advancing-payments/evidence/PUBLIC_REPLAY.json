@@ -1,0 +1,40 @@
+{
+  "archive": {
+    "active_pages_B": 2457600,
+    "events": 31,
+    "seconds": 0.3280552428914234,
+    "selected": {
+      "count": 140,
+      "fees": 66,
+      "frontier_sha256": "8cd0babdf3a7612f566102d878423a3c235ba11fae6d71edc56c98cb2e8a8d5d",
+      "header": "b84e7579b35af3d0a9f075c50ae1823cd8cb0efbb5858d7d45b68c7966fe51c01400000001e6a40f2084547e4d45bbf7e2af0be1e806bb817dd1f71c2b95f858da6768b73cf0c728de253672dbad331abc6916d52e32713e95d842ab6831aa0617f65583268a6f579c648f503266ca27186fe6906ba3d8512cba1c1a5e216545a517c5ad",
+      "height": 20,
+      "id": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695",
+      "nullifier_set_sha256": "10e483069b394422cc1330bb6cbf3a84673b7bc6910e35e9e5445c87ad7431cc",
+      "ordered_commitments_sha256": "d74a9f06947f7d7fda89c5d85a240d5e0c9b9bf6c02f0afda6dd50c17b0cb8af",
+      "rollback_floor": 12,
+      "spent": 44
+    },
+    "sqlite_B": 2457600,
+    "stored_body_B": 2387924
+  },
+  "pruned": {
+    "active_pages_B": 69632,
+    "events": 31,
+    "seconds": 0.32521043985616416,
+    "selected": {
+      "count": 140,
+      "fees": 66,
+      "frontier_sha256": "8cd0babdf3a7612f566102d878423a3c235ba11fae6d71edc56c98cb2e8a8d5d",
+      "header": "b84e7579b35af3d0a9f075c50ae1823cd8cb0efbb5858d7d45b68c7966fe51c01400000001e6a40f2084547e4d45bbf7e2af0be1e806bb817dd1f71c2b95f858da6768b73cf0c728de253672dbad331abc6916d52e32713e95d842ab6831aa0617f65583268a6f579c648f503266ca27186fe6906ba3d8512cba1c1a5e216545a517c5ad",
+      "height": 20,
+      "id": "d7f4befd8fd74aae66d1d5c1a350d8966c04b142e0bd4f014aa5fff22892b695",
+      "nullifier_set_sha256": "10e483069b394422cc1330bb6cbf3a84673b7bc6910e35e9e5445c87ad7431cc",
+      "ordered_commitments_sha256": "d74a9f06947f7d7fda89c5d85a240d5e0c9b9bf6c02f0afda6dd50c17b0cb8af",
+      "rollback_floor": 12,
+      "spent": 44
+    },
+    "sqlite_B": 2220032,
+    "stored_body_B": 1368
+  }
+}

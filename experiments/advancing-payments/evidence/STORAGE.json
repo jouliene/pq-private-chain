@@ -1,0 +1,110 @@
+{
+  "archive": {
+    "after": {
+      "allocated_filesystem_B": 2457600,
+      "body_B": 2387924,
+      "file_B": 2457600,
+      "freelist_B": 0,
+      "live_page_B": 2457600,
+      "material_sha256": "606b81beb519901b7e87a3815a94d6c88e9c1d6a7a2584382421e872d3018019",
+      "page_B": 4096,
+      "physical_objects_B": {
+        "blocks": 2408448,
+        "config": 4096,
+        "outs": 12288,
+        "outs_h": 4096,
+        "spent": 4096,
+        "spent_h": 4096,
+        "sqlite_autoindex_blocks_1": 4096,
+        "sqlite_autoindex_outs_1": 12288,
+        "sqlite_schema": 4096
+      },
+      "rows": {
+        "blocks": 21,
+        "funded": 140,
+        "spent": 44
+      }
+    },
+    "before": {
+      "allocated_filesystem_B": 2461696,
+      "body_B": 2387924,
+      "file_B": 2457600,
+      "freelist_B": 0,
+      "live_page_B": 2457600,
+      "material_sha256": "606b81beb519901b7e87a3815a94d6c88e9c1d6a7a2584382421e872d3018019",
+      "page_B": 4096,
+      "physical_objects_B": {
+        "blocks": 2408448,
+        "config": 4096,
+        "outs": 12288,
+        "outs_h": 4096,
+        "spent": 4096,
+        "spent_h": 4096,
+        "sqlite_autoindex_blocks_1": 4096,
+        "sqlite_autoindex_outs_1": 12288,
+        "sqlite_schema": 4096
+      },
+      "rows": {
+        "blocks": 21,
+        "funded": 140,
+        "spent": 44
+      }
+    },
+    "copy_compaction_cpu_s": 0.005433267999999998,
+    "copy_compaction_wall_s": 0.014293225947767496
+  },
+  "pruned": {
+    "after": {
+      "allocated_filesystem_B": 61440,
+      "body_B": 1368,
+      "file_B": 61440,
+      "freelist_B": 0,
+      "live_page_B": 61440,
+      "material_sha256": "357bcb2ba0fb952417f973eb1040b1b5217458af0255f90f425b64884033eed4",
+      "page_B": 4096,
+      "physical_objects_B": {
+        "blocks": 12288,
+        "config": 4096,
+        "outs": 12288,
+        "outs_h": 4096,
+        "spent": 4096,
+        "spent_h": 4096,
+        "sqlite_autoindex_blocks_1": 4096,
+        "sqlite_autoindex_outs_1": 12288,
+        "sqlite_schema": 4096
+      },
+      "rows": {
+        "blocks": 21,
+        "funded": 140,
+        "spent": 44
+      }
+    },
+    "before": {
+      "allocated_filesystem_B": 2224128,
+      "body_B": 1368,
+      "file_B": 2220032,
+      "freelist_B": 2150400,
+      "live_page_B": 69632,
+      "material_sha256": "357bcb2ba0fb952417f973eb1040b1b5217458af0255f90f425b64884033eed4",
+      "page_B": 4096,
+      "physical_objects_B": {
+        "blocks": 20480,
+        "config": 4096,
+        "outs": 12288,
+        "outs_h": 4096,
+        "spent": 4096,
+        "spent_h": 4096,
+        "sqlite_autoindex_blocks_1": 4096,
+        "sqlite_autoindex_outs_1": 12288,
+        "sqlite_schema": 4096
+      },
+      "rows": {
+        "blocks": 21,
+        "funded": 140,
+        "spent": 44
+      }
+    },
+    "copy_compaction_cpu_s": 0.000769156,
+    "copy_compaction_wall_s": 0.0031834960682317615
+  }
+}
