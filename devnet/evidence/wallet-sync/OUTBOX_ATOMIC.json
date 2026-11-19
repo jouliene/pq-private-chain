@@ -1,0 +1,23 @@
+{
+  "invalid_address": {
+    "matching_tuple_on_reopen": true,
+    "native_invalid_address_rejections": 2,
+    "observed_submit_frames": 0,
+    "real_input_reservations": 0,
+    "recorded_attempts": 0,
+    "selected_height": 108
+  },
+  "prepare": {
+    "atomic_rollback": {
+      "first_commit": true,
+      "first_serialization": true,
+      "first_trigger": true,
+      "replacement_commit": true,
+      "replacement_serialization": true,
+      "replacement_trigger": true
+    },
+    "common_real_inputs_verified": true,
+    "publicly_verified_genuine_packets": 2,
+    "valid_replacement_retains_one_packet": true
+  }
+}

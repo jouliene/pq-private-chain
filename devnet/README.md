@@ -50,7 +50,7 @@ Balance, send and restore now use a persistent private cursor, inventory, spent 
 ./pqd wallet-walkthrough
 ```
 
-Install the GNU `time` utility for the measured walkthrough. It starts a fresh isolated network, exercises normal CLI commands at two real mined history sizes, interrupts a restore during active mining, disconnects a sender before submission and after a valid acknowledgement, and checks a fresh recipient spend. It writes measurements and public artifacts to the printed evidence directory. [Wallet sync and intent design](WALLET_PROTOCOL.md)
+Install the GNU `time` utility for the measured walkthrough. It starts a fresh isolated network, exercises normal CLI commands at two real mined history sizes, interrupts a restore during active mining, disconnects a sender before submission and after a valid acknowledgement, and checks a fresh recipient spend. It writes measurements and public artifacts to the printed evidence directory. [Wallet measurements](WALLET_RESULTS.md) · [Wallet sync and intent design](WALLET_PROTOCOL.md)
 
 ### Reproduce the acceptance walkthrough
 

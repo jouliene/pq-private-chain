@@ -1,0 +1,47 @@
+{
+  "method": "real Chain.offer on freshly reopened genuine H6/H42 prefix; registered verifier warmed with a different packet; SQL progress callback and strace only in this measurement",
+  "samples": {
+    "small": {
+      "accepted": true,
+      "appended_to_pool": 1,
+      "block_height": 6,
+      "packet_B": 230206,
+      "controller_cpu_s": 0.0018859019999999949,
+      "wall_s": 0.02121594501659274,
+      "sqlite_vm_instructions": 152,
+      "native_verification": {
+        "operation": "public_verify",
+        "elapsed_s": 0.010100777,
+        "cpu_s": 0.010100701,
+        "peak_rss_kib": 5244
+      },
+      "verifier_pipe_request_B": 230214,
+      "verifier_pipe_reply_B": 3761,
+      "process_physical_read_B": 0,
+      "process_charged_write_B": 262144,
+      "main_db_pread_calls": 6,
+      "main_db_pread_B": 20496
+    },
+    "large": {
+      "accepted": true,
+      "appended_to_pool": 1,
+      "block_height": 42,
+      "packet_B": 230206,
+      "controller_cpu_s": 0.002077818000000009,
+      "wall_s": 0.02153135708067566,
+      "sqlite_vm_instructions": 152,
+      "native_verification": {
+        "operation": "public_verify",
+        "elapsed_s": 0.010202557,
+        "cpu_s": 0.010202556,
+        "peak_rss_kib": 5160
+      },
+      "verifier_pipe_request_B": 230214,
+      "verifier_pipe_reply_B": 3761,
+      "process_physical_read_B": 4096,
+      "process_charged_write_B": 262144,
+      "main_db_pread_calls": 7,
+      "main_db_pread_B": 24592
+    }
+  }
+}

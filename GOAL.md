@@ -2,6 +2,10 @@
 
 Starting revision `82c803961996864782a5dee050a02b60b4341c0e`. A wallet synchronized yesterday must check its balance and pay an offline recipient today by downloading only changes. Build atomic persistent APV2 wallet cursors, inventory, spentness and local membership paths. Support unchanged heads, bounded direct common-data suffixes, interruptible fixed-prefix seed recovery during mining, shallow and deeper-than-undo reorganizations and verified fresh spending. Export public addresses. Persist sender-only intent and packet state before exposure; all retry authorizations must be mutually exclusive on a selected chain. Reproduce lost replies, reconnection and stale anchors. Compare against full replay and measure warm balance, warm send and cold restore at two substantially different history sizes, with actual history payload, serving reads, memory and elapsed time. Preserve the historical consensus, fees and proofs. Independently reproduce from clean checkout and publish with passing CI. Archive economics, end-to-end PQ/privacy and versioned private assets and swaps stay open.
 
+## Acceptance record
+
+The ordinary CLI, cost measurements, fault reproductions and scope are recorded in [the wallet decision](devnet/WALLET_RESULTS.md). The final exact public revision, separately observed CI results and independent final checkout are identified in the [release readback](https://github.com/jouliene/pq-private-chain/releases/tag/incremental-apv2-wallet-2026-11-19). The global permissionless private blockchain objective remains active.
+
 ## Historical milestone
 
 # First runnable local proof-of-work devnet

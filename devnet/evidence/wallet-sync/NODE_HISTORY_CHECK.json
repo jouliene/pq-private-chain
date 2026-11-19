@@ -1,0 +1,105 @@
+{
+  "deep_common_height": 4,
+  "empty_suffix_reads": {
+    "blocks": 0,
+    "metadata_B": 36,
+    "metadata_queries": 2,
+    "metadata_rows": 2,
+    "nullifiers": 0,
+    "payload_B": 0,
+    "payload_queries": 0,
+    "payload_rows": 0,
+    "receipts": 0,
+    "rewards": 0,
+    "sql_queries": 2,
+    "transactions": 0
+  },
+  "extension_served_before_remaining_page": true,
+  "fixed_target_height": 4,
+  "head_query_plan": "SEARCH blocks USING COVERING INDEX wallet_header_lookup (id=?)",
+  "operator_v1_copy": {
+    "after_file_B": 1232896,
+    "before_file_B": 1232896,
+    "elapsed_s": 0.052611020975746214,
+    "selected_height": 15,
+    "selected_tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+    "startup": {
+      "archive_blocks": 25,
+      "archive_bytes": 926390,
+      "archive_metadata_B": 4200,
+      "index_created": true,
+      "projection_bytes_copied": 0,
+      "projection_rows_copied": 0,
+      "schema_version": 2,
+      "verified_packets": 4,
+      "written_payload_B": 22601
+    }
+  },
+  "public_capture_sha256": "367d81047b2a0aa126fdff682d342062121c15b2d54d3ee47a8ab4a77ed2f2cd",
+  "query_plan": [
+    "SEARCH s USING INTEGER PRIMARY KEY (rowid>? AND rowid<?)",
+    "SEARCH w USING INDEX sqlite_autoindex_wallet_history_v2_1 (bid=?)"
+  ],
+  "repeat_migration_required": false,
+  "restored_selected_effects_identical": true,
+  "selected_blocks": 15,
+  "shallow_common_height": 4,
+  "single_suffix_body_B": 314,
+  "single_suffix_reads": {
+    "blocks": 1,
+    "metadata_B": 72,
+    "metadata_queries": 3,
+    "metadata_rows": 3,
+    "nullifiers": 0,
+    "payload_B": 305,
+    "payload_queries": 1,
+    "payload_rows": 1,
+    "receipts": 0,
+    "rewards": 1,
+    "sql_queries": 3,
+    "transactions": 0
+  },
+  "single_suffix_sqlite_vm_steps": 46,
+  "unchanged_at_heights": [
+    1,
+    15
+  ],
+  "unchanged_reads": {
+    "blocks": 0,
+    "metadata_B": 216,
+    "metadata_queries": 2,
+    "metadata_rows": 2,
+    "nullifiers": 0,
+    "payload_B": 0,
+    "payload_queries": 0,
+    "payload_rows": 0,
+    "receipts": 0,
+    "rewards": 0,
+    "sql_queries": 2,
+    "transactions": 0
+  },
+  "unchanged_sqlite_vm_steps": 33,
+  "v1_compatible_migration": {
+    "archive_blocks": 25,
+    "archive_bytes": 926390,
+    "archive_metadata_B": 4200,
+    "index_created": true,
+    "projection_bytes_copied": 0,
+    "projection_rows_copied": 0,
+    "schema_version": 2,
+    "verified_packets": 4,
+    "written_payload_B": 22601
+  },
+  "v1_projection_migration": {
+    "archive_blocks": 0,
+    "archive_bytes": 0,
+    "archive_metadata_B": 0,
+    "index_created": true,
+    "projection_bytes_copied": 22601,
+    "projection_rows_copied": 25,
+    "schema_version": 2,
+    "verified_packets": 0,
+    "written_payload_B": 0
+  },
+  "verified_ordinary_slots": 3
+}

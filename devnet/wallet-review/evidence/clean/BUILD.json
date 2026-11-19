@@ -1,0 +1,40 @@
+{
+  "base_build_sha256": "68f711df34467ffd3a9025cd716a6b79ea2dc19094d78ec21e87f4e73c0ec852",
+  "binary_sha256": "a8234eb7f0e67dfa07df26c30317fd6f3590d6bb95e2449d56a5375caabd2a97",
+  "cargo": [
+    "rustup",
+    "run",
+    "1.93.0",
+    "cargo",
+    "build",
+    "--locked",
+    "--offline",
+    "--release",
+    "-j2",
+    "-p",
+    "qnero-prover",
+    "--example",
+    "advancing",
+    "--features",
+    "parallel"
+  ],
+  "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "config_after_sha256": "ab7c381a39c63c08728daafe3c7e0d8217f8186d35ac4acb4cdc0c404c9e8016",
+  "config_before_sha256": "6ecd00581bbd804a65f4485fab7b3e2f287187850ba050652feb89f778758390",
+  "devnet_overlay_sha256": {
+    "build.py": "49bbbed9a53e962566651b3e79d758a43d315ee8229d7f60469054a9ef07a478",
+    "wallet.rs": "f041df7c76c6c9b1dce1714d6f26c6fd303d591cbaf981ad45aef7f3b4c54c20"
+  },
+  "registered_profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "rustc": "rustc 1.93.0 (254b59607 2026-01-19)\nbinary: rustc\ncommit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c\ncommit-date: 2026-01-19\nhost: x86_64-unknown-linux-gnu\nrelease: 1.93.0\nLLVM version: 21.1.8",
+  "sources_sha256": {
+    "PROFILE.md": "8ff2d3754f7e5b4c892e8d97d8018d675f6092656fa48d32f3f26f7d32d34305",
+    "build.py": "520359b29768bac180683fecc7691abd09797fc693c92ea676d6c0d3d86955f5",
+    "profile.patch": "38a082fc0989f06cffd421edc09619a322721a6704b197bb7efd9ed013dc66f0",
+    "src/codec.rs": "775c0e97af7f2ddda49b94178cdd8a80fc310a6f58f65cdd314ce55d21047e7e",
+    "src/main.rs": "5a32f7d4ea14b7246b8a24a90b8aa49fc1bef43871c8c1911c9ee6c234b837b7",
+    "src/registry.rs": "8ece04a26a80493ce0369111f5e18bc2f7146771b2b80ac7a078f2f982b2c46a",
+    "src/wallet.rs": "f041df7c76c6c9b1dce1714d6f26c6fd303d591cbaf981ad45aef7f3b4c54c20"
+  },
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+}

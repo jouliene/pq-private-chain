@@ -1,6 +1,13 @@
-# Ordinary wallet milestone — ACTIVE
+# Ordinary wallet on a continuously mined devnet
 
-Start from the published first devnet at `82c803961996864782a5dee050a02b60b4341c0e`. The wallet specialist owns Rust receipt/path support, joint private checkpoints and recovery. The history specialist owns indexed branch ranges, snapshot anchors and read counters. A non-author owns independent tests and reproduction. Root owns the ordinary CLI, durable intent journal, acceptance walkthrough, measurements, release and CI. Resume by inspecting `git status --short --branch`, the devnet source, native build receipts and running jobs; do not repeat the previous PoW research campaign. One expensive local proving/build campaign at a time. Preserve all private seed, witness, intent and inventory material outside published artifacts.
+The ordinary `pqd balance`, `send`, `restore` and `resume` paths now use private persistent wallet state and bounded public history. Start the network with `./pqd start`, or run `./pqd wallet-walkthrough` for a fresh isolated acceptance campaign. The global permissionless PQ/private blockchain project remains **ACTIVE**. [Operator commands](devnet/README.md) · [Measurements](devnet/WALLET_RESULTS.md) · [Security boundary](devnet/WALLET_PROTOCOL.md) · [Independent review](devnet/wallet-review/REVIEW.md)
+
+- Starting public revision `82c803961996864782a5dee050a02b60b4341c0e`. The independently built candidate `2b6ae99f4f91135ef5974b69fbef987357336711` exercised real singletons, expiry, loss of a reply after admission, a 12-block detach, seed-only recovery during mining and recipient spending. At H4/H40 the unchanged history payload was zero. A one-block balance or send requested one 305-byte projected row and received 314 historical bytes at both sizes. Cold recovery received 1,229 / 12,227 bytes. The node's one-time migration and full payment admission have separate measurements.
+- Revision `9e882b6a685eeb889ce4d2d086451ddd019adca1` adds the public replay checker and requires the final recipient spend to survive two observed successors. Revision `f87dd7292f80739fffcee91f1444358f189c47b6` atomically reserves real inputs with the first transmissible packet. Targeted first/replacement rollback checks passed.
+- Release acceptance requires an actual clean public-clone walkthrough and both push CI checks on the released SHA. Read their results at the [wallet release](https://github.com/jouliene/pq-private-chain/releases/tag/incremental-apv2-wallet-2026-11-19). To verify the handoff, fetch its tag, compare the SHA to `delivery-result.json`, run `gh run list --commit "$(git rev-parse HEAD)"` and independently replay the public captures using the instructions in the release.
+- Ordinary sync relies on the user's own validating node. A seed restores selected on-chain holdings. A sender needs its private outbox to resume an ambiguous off-chain intent. Full packet archive economics, end-to-end PQ/privacy, private assets and atomic swaps remain open.
+
+## Historical milestone
 
 # First runnable local PoW devnet
 

@@ -1,0 +1,2170 @@
+{
+  "deep": {
+    "blocks": 45,
+    "branch_changes": 0,
+    "catchup_heads": 1,
+    "complete": true,
+    "completed_prefixes": [
+      45,
+      45
+    ],
+    "controller_cpu_s": 0.01007218700000001,
+    "controller_peak_rss_KiB": 31164,
+    "deep_resets": 1,
+    "end_height": 45,
+    "frontier_B": 256,
+    "native_hash": {
+      "cpu_s": 0.0,
+      "from_role_B": 6156,
+      "peak_rss_KiB": 3348,
+      "to_role_B": 22943
+    },
+    "native_wallet": {
+      "cpu_s": 0.0,
+      "from_role_B": 456,
+      "peak_rss_KiB": 3364,
+      "to_role_B": 8563
+    },
+    "node_reads": {
+      "blocks": 45,
+      "metadata_B": 2452,
+      "metadata_queries": 23,
+      "metadata_rows": 65,
+      "nullifiers": 2,
+      "payload_B": 17469,
+      "payload_queries": 3,
+      "payload_rows": 45,
+      "receipts": 2,
+      "rewards": 45,
+      "sql_queries": 23,
+      "transactions": 1
+    },
+    "public_body_B": 17496,
+    "public_requests": 6,
+    "receipt_rows": 2,
+    "reply_B": 21679,
+    "request_B": 2227,
+    "requests_by_op": {
+      "history_check": {
+        "count": 1,
+        "reply_B": 314,
+        "request_B": 106
+      },
+      "history_head": {
+        "count": 2,
+        "reply_B": 2614,
+        "request_B": 1516
+      },
+      "history_range": {
+        "count": 3,
+        "reply_B": 18751,
+        "request_B": 605
+      }
+    },
+    "rewound_blocks": 14,
+    "start_height": 14,
+    "target_height": 45,
+    "target_tip": "000003510a7ba1d7af47eff6ee3159ec1f1b9e40ed98386d07d02c64ea319bf3",
+    "tree_hashes": 121,
+    "wall_s": 0.040479882969520986,
+    "wallet_db_B": 57344,
+    "witness_B": 288,
+    "witness_updates": 45
+  },
+  "differential": {
+    "deep": {
+      "balance": 80,
+      "funded": 47,
+      "height": 45,
+      "owned_records": 2,
+      "paths": 1,
+      "siblings": 9
+    },
+    "large": {
+      "balance": 80,
+      "funded": 45,
+      "height": 43,
+      "owned_records": 2,
+      "paths": 1,
+      "siblings": 9
+    },
+    "live_sender": {
+      "balance": 3068,
+      "funded": 110,
+      "height": 102,
+      "owned_records": 32,
+      "paths": 31,
+      "siblings": 372
+    },
+    "restored_recipient": {
+      "balance": 6,
+      "funded": 110,
+      "height": 102,
+      "owned_records": 3,
+      "paths": 1,
+      "siblings": 12
+    },
+    "shallow": {
+      "balance": 80,
+      "funded": 47,
+      "height": 45,
+      "owned_records": 2,
+      "paths": 1,
+      "siblings": 9
+    },
+    "small": {
+      "balance": 80,
+      "funded": 9,
+      "height": 7,
+      "owned_records": 2,
+      "paths": 1,
+      "siblings": 6
+    }
+  },
+  "elapsed_s": 279.8448927149875,
+  "final_height": 102,
+  "final_tip": "000000857b71f6f1758f389ba733b08cbccadc3f288c592d11d2c3d4146f52eb",
+  "format": "PQD-WALLET-ACCEPT-1",
+  "live_intent": {
+    "amount": 29,
+    "attempts": [
+      "50d9e1da16fa1acd3ff05eab07dc237a1d16570c9e2daeaf09a090b714f5d1f4",
+      "23b9d70b6db5f300081410b37d1a68260f0216a5d8085379272a053369e6faf9",
+      "7879c74884822a4cf02ed158aba926a0bc70ad32b6675e0e04c996ad92e3af86"
+    ],
+    "canonical_count": 1,
+    "change": 68,
+    "confirmed": "7879c74884822a4cf02ed158aba926a0bc70ad32b6675e0e04c996ad92e3af86",
+    "dropped_reply": true,
+    "input_total": 100,
+    "resumption_cost": {
+      "peak_rss_kib": 31132,
+      "system_cpu_s": 0.04,
+      "user_cpu_s": 0.17,
+      "wall_s": 5.17487480409909
+    },
+    "shared_nullifier_count": 1,
+    "stale_reason": "anchor age"
+  },
+  "live_restore": {
+    "completed": {
+      "blocks": 31,
+      "branch_changes": 0,
+      "catchup_heads": 1,
+      "complete": true,
+      "completed_prefixes": [
+        46,
+        47
+      ],
+      "controller_cpu_s": 0.012613066000000006,
+      "controller_peak_rss_KiB": 31260,
+      "deep_resets": 0,
+      "end_height": 47,
+      "frontier_B": 192,
+      "native_hash": {
+        "cpu_s": 0.0,
+        "from_role_B": 5076,
+        "peak_rss_KiB": 3300,
+        "to_role_B": 18897
+      },
+      "native_wallet": {
+        "cpu_s": 0.0,
+        "from_role_B": 280,
+        "peak_rss_KiB": 3372,
+        "to_role_B": 10695
+      },
+      "node_reads": {
+        "blocks": 31,
+        "metadata_B": 1484,
+        "metadata_queries": 15,
+        "metadata_rows": 43,
+        "nullifiers": 4,
+        "payload_B": 16943,
+        "payload_queries": 3,
+        "payload_rows": 31,
+        "receipts": 4,
+        "rewards": 31,
+        "sql_queries": 15,
+        "transactions": 2
+      },
+      "public_body_B": 16970,
+      "public_requests": 7,
+      "receipt_rows": 4,
+      "reply_B": 20471,
+      "request_B": 1683,
+      "requests_by_op": {
+        "history_check": {
+          "count": 3,
+          "reply_B": 942,
+          "request_B": 318
+        },
+        "history_head": {
+          "count": 1,
+          "reply_B": 1306,
+          "request_B": 760
+        },
+        "history_range": {
+          "count": 3,
+          "reply_B": 18223,
+          "request_B": 605
+        }
+      },
+      "rewound_blocks": 0,
+      "start_height": 16,
+      "target_height": 47,
+      "target_tip": "000001c2d0747b2c3397ee995df58322ab7d79ee70ebd4c9e419361a6d505976",
+      "tree_hashes": 105,
+      "wall_s": 0.03477750904858112,
+      "wallet_db_B": 57344,
+      "witness_B": 288,
+      "witness_updates": 35
+    },
+    "interrupted": {
+      "next_requested": 17,
+      "target": "000003aa24a6ffa556f833ecdffed4af6af240d9de4136b451c84a25028a8a3c"
+    },
+    "resources": {
+      "peak_rss_kib": 31260,
+      "system_cpu_s": 0.03,
+      "user_cpu_s": 0.14,
+      "wall_s": 0.20884026598650962
+    },
+    "resumed_first_range": {
+      "base": "000001252543e6103a02a3a724a376646888e326670b45519509cccb7c68bc54",
+      "limit": 16,
+      "start": 17,
+      "target": "000003aa24a6ffa556f833ecdffed4af6af240d9de4136b451c84a25028a8a3c"
+    }
+  },
+  "losing_chain": [
+    "00000287209a4526c540f87552b615b263502256fbc84a97ffc87f640da88d21",
+    "0000023d756b812b6b47cd230e5bf297a2d4261f11d14deecb8d02d04df3d28f",
+    "000003fdf97dda104817a8bf652c8d84f86aca0cba6d50e172730b92c8e1e0a6",
+    "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+    "00000047b5b037378af4d085497aad6b17ece3fb1d0554549e2f451731da0990",
+    "000002dcdf0cbad0e9dad8dfc2475a26af8f6f656cf1e1601c967d50203ea7e9",
+    "000003155a3f6ec8faa378cc045879f43858e4ede3f19911cf5057e5a9a079ac",
+    "00000150efae55f430169f4596b8cd0a505b1eec5128be9348ec6323951eb6f6",
+    "000003081ea230f885060575498e511d68e3cb5eeda388868f4638f7f7260250",
+    "000003f04fd826d8400695822660c8adcf59f5f810a35491a090391220231dcd",
+    "0000000d928aa785feb12b08fb75b9510e141ed717f4067151992281b05e715d",
+    "0000010dc28fabfc2ec999770150859b89c8743e591069a0ec9853c9bda0bfcf",
+    "000000a58cc5ae86bd947a6bb35677809826e63a72963772ed765eb381579357",
+    "00000026a8a20617ffe33d223b92a22e317465b13fd4e901ba058578e352934d"
+  ],
+  "offline_recipient": {
+    "change": 6,
+    "incoming_notes": 2,
+    "received": 46,
+    "restore_cost": {
+      "peak_rss_kib": 31400,
+      "system_cpu_s": 0.03,
+      "user_cpu_s": 0.16,
+      "wall_s": 0.25778915104456246
+    },
+    "spend_cost": {
+      "peak_rss_kib": 31924,
+      "system_cpu_s": 0.03,
+      "user_cpu_s": 0.17,
+      "wall_s": 26.154772648005746
+    },
+    "spend_tx": "4f6219413fde393c1ae11673f06a73117ac4cc7263191a6bdba3614abcf67f35",
+    "spent": 37
+  },
+  "ownership_independent_requests": {
+    "height": 46,
+    "identical": true,
+    "request_ops": [
+      "history_head",
+      "history_range",
+      "history_check",
+      "history_head"
+    ]
+  },
+  "scale": {
+    "large": {
+      "append": {
+        "balance": 100,
+        "cli_resources": {
+          "peak_rss_kib": 31148,
+          "system_cpu_s": 0.02,
+          "user_cpu_s": 0.13,
+          "wall_s": 0.18390279507730156
+        },
+        "height": 41,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000212839,
+            "elapsed_s": 0.000213255,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3156
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 1,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              41,
+              41
+            ],
+            "controller_cpu_s": 0.002576681999999997,
+            "controller_peak_rss_KiB": 31148,
+            "deep_resets": 0,
+            "end_height": 41,
+            "frontier_B": 160,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 324,
+              "peak_rss_KiB": 3348,
+              "to_role_B": 1221
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 8,
+              "peak_rss_KiB": 3284,
+              "to_role_B": 109
+            },
+            "node_reads": {
+              "blocks": 1,
+              "metadata_B": 540,
+              "metadata_queries": 9,
+              "metadata_rows": 9,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "rewards": 1,
+              "sql_queries": 9,
+              "transactions": 0
+            },
+            "public_body_B": 314,
+            "public_requests": 4,
+            "receipt_rows": 0,
+            "reply_B": 3654,
+            "request_B": 1827,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 314,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2612,
+                "request_B": 1520
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 728,
+                "request_B": 201
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 40,
+            "target_height": 41,
+            "target_tip": "000001b26597ff4911baf55d736085c37bf5aca5230707c08add627eee983a9a",
+            "tree_hashes": 3,
+            "wall_s": 0.01821918901987374,
+            "wallet_db_B": 57344,
+            "witness_B": 288,
+            "witness_updates": 1
+          }
+        ],
+        "tip": "000001b26597ff4911baf55d736085c37bf5aca5230707c08add627eee983a9a",
+        "wire": {
+          "observed": {
+            "blocks": 1,
+            "history_payload_B": 314,
+            "reply_frame_B": 3654,
+            "reply_payload_B": 314,
+            "request_frame_B": 1827,
+            "request_payload_B": 0,
+            "transactions": 0
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1
+          },
+          "server_reported": {
+            "blocks": 1,
+            "metadata_B": 540,
+            "metadata_queries": 9,
+            "metadata_rows": 9,
+            "nullifiers": 0,
+            "payload_B": 305,
+            "payload_queries": 1,
+            "payload_rows": 1,
+            "receipts": 0,
+            "rewards": 1,
+            "sql_queries": 9,
+            "transactions": 0
+          }
+        }
+      },
+      "archive": {
+        "complete_block_B": 239756,
+        "order": [
+          "00000287209a4526c540f87552b615b263502256fbc84a97ffc87f640da88d21",
+          "0000023d756b812b6b47cd230e5bf297a2d4261f11d14deecb8d02d04df3d28f",
+          "00000118994bf0ae59341f4e900dc821bbafc7ced458fdcec4a8a60c3c3db3d1",
+          "000002693e8781904ea4fdbd3d11c0d7d24b819bf1f1e1c345cf790e31bc5a06",
+          "000001fc7056b6e4eedddc8ea49550db550ff203f316831f443779ed8f8c488a",
+          "000003af899899b91d2f2c05066bfc36a3c3385dda197fc1afa837f98d14d1fb",
+          "0000034ea5490c3d9c2bc8e934bd395f531728815d51c1c1a10009ee8d4794cd",
+          "00000307cfe0efcd2a019bf68f8d387545dc459c34623a098ac74a7f3a0b79c2",
+          "000000eafb8a76f233b683282d32d00df56dc35c1d7b92cfa1fa46c0e03e8039",
+          "000001218eeb1612496617e9c3fc0e088bb640b07f0f6bddfb7077ab2a499464",
+          "000001c661d2a769a3c686bb0426c5cb496ec47ec0de008bf5f2c9c217587ea5",
+          "00000387e030f548a7a7fbe4ac0e6f856cd114a89affb8d8b3b188ae758dc389",
+          "00000268a8f5f1b274f5777d541c2848da8dd314adb3478d337ed1ba4f8340e1",
+          "00000227ebdc2f0dd90f32248808dda70d4a2eaee97394fea9a0c38109fadd3a",
+          "0000004e5aa84b7e12cb7653936fe31bc7590d7f58017da4862653c62b7317a9",
+          "000001252543e6103a02a3a724a376646888e326670b45519509cccb7c68bc54",
+          "000003b9ec72edb8d67edb4d439384d59144ed28929ae9f0ba93539aad00cb6c",
+          "00000296c1a265116180e5491269908142974dbcddbf221aadfdde149cb3058b",
+          "0000000bae340f11cee3f36533255302df1a27ca661e9232e7a8da77534ccdc7",
+          "000000a14a61be7e1363eef42a0bbcdb544c5678fea52a1ab1a4a0d18c0a54d5",
+          "0000006aa336840ce2518774947ce4c3ea18d34f55deab1b6e38b3815a989a92",
+          "000000804c236f486e0faaf1a094a8357ca3a5f17ce2f9dfc359be9bf31d450f",
+          "0000029ca880f66b193e8aac63788d05c95d2eb3c13696746ae10889ef8cc7f5",
+          "0000023f624ffc6f6c3a302e2e45caecfed790eaa2116e09983844d3616252b5",
+          "000003b3fdbba3e7bde917fabdc76ed604a2fd972033e16c11b5f0b3bf025d23",
+          "0000001d62d590a7f5e94689bcd250a1e46b6660d8f3b0e625f11f0bb3b750d5",
+          "0000035246465777b9ad04e05168c129f70ebe0f2e072e6d128a698a2b58d5ca",
+          "000002ab20ad06d9288eb7f3f65b95100746d426802a437bfd19afc27ea065ea",
+          "000000db7f572d2672f51fa8e54e0711455004ac4b2127ec290d059e26d8648e",
+          "00000280774a36adb7001b85223ff2649b2d8130b67c467a071a85fd5572658d",
+          "000003ce3d8421ac33b02a9b65601739e68fe7cbcc86645f4813e67c44d253df",
+          "00000242326bb220d03d7c879c5a0c1670c60b15bc42ce16f1d08133958ea4df",
+          "0000031a1e7d4d0eac3dc5f5fc25426ff7e86580484d62a9be063528fdc0b2e8",
+          "000001cf514160a010f355a4ea17ff55b4303598a4386d6ed21618a1b70d4821",
+          "000001897209749b6af52052cde771773e070ea5f8c0f8104cf4a1f3907d8b73",
+          "0000004ea1b01e2ec7dab7badf78a3e2303925286aef61c3145eaf5a9f1453a5",
+          "00000200e99c94d3b1af0913989ac1bfcda3c7f24bcd391756126b08a61473fa",
+          "0000012fc94cac68c4d79e815e190913be2e31f7d0bf697ec15bf78f6f62f591",
+          "00000110f9e830107237355574573932a9839824ef83af68d7cc01ce829b7a33",
+          "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+          "000001b26597ff4911baf55d736085c37bf5aca5230707c08add627eee983a9a",
+          "00000189d38c262dd4c9afd4fcb9522d51751818536add08c6142d8fc97eef03",
+          "000002c6c86c46c5a7482ffb21ed003a785064f1757faf4550b0449e9b06403d"
+        ],
+        "packet_ids": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [
+            "9dd1a3a274ec12965d1bf1310207967da32c98823ec1f280eab00baa80f96373"
+          ]
+        ],
+        "sizes": [
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          230432
+        ],
+        "widths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "base_height": 40,
+      "cold": {
+        "balance": 100,
+        "cli_resources": {
+          "peak_rss_kib": 31228,
+          "system_cpu_s": 0.03,
+          "user_cpu_s": 0.15,
+          "wall_s": 0.230716823018156
+        },
+        "height": 40,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000226307,
+            "elapsed_s": 0.000226783,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3168
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 40,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              40,
+              40
+            ],
+            "controller_cpu_s": 0.008835230999999999,
+            "controller_peak_rss_KiB": 31228,
+            "deep_resets": 0,
+            "end_height": 40,
+            "frontier_B": 128,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 5220,
+              "peak_rss_KiB": 3352,
+              "to_role_B": 19465
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 360,
+              "peak_rss_KiB": 3360,
+              "to_role_B": 4360
+            },
+            "node_reads": {
+              "blocks": 40,
+              "metadata_B": 1984,
+              "metadata_queries": 14,
+              "metadata_rows": 51,
+              "nullifiers": 0,
+              "payload_B": 12200,
+              "payload_queries": 3,
+              "payload_rows": 40,
+              "receipts": 0,
+              "rewards": 40,
+              "sql_queries": 14,
+              "transactions": 0
+            },
+            "public_body_B": 12227,
+            "public_requests": 6,
+            "receipt_rows": 0,
+            "reply_B": 16404,
+            "request_B": 1582,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 314,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2611,
+                "request_B": 872
+              },
+              "history_range": {
+                "count": 3,
+                "reply_B": 13479,
+                "request_B": 604
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 0,
+            "target_height": 40,
+            "target_tip": "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+            "tree_hashes": 100,
+            "wall_s": 0.03035410202573985,
+            "wallet_db_B": 57344,
+            "witness_B": 288,
+            "witness_updates": 39
+          }
+        ],
+        "tip": "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+        "wire": {
+          "observed": {
+            "blocks": 40,
+            "history_payload_B": 12227,
+            "reply_frame_B": 16404,
+            "reply_payload_B": 12227,
+            "request_frame_B": 1582,
+            "request_payload_B": 0,
+            "transactions": 0
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 3
+          },
+          "server_reported": {
+            "blocks": 40,
+            "metadata_B": 1984,
+            "metadata_queries": 14,
+            "metadata_rows": 51,
+            "nullifiers": 0,
+            "payload_B": 12200,
+            "payload_queries": 3,
+            "payload_rows": 40,
+            "receipts": 0,
+            "rewards": 40,
+            "sql_queries": 14,
+            "transactions": 0
+          }
+        }
+      },
+      "confirmed": {
+        "balance": 80,
+        "cli_resources": {
+          "peak_rss_kib": 31020,
+          "system_cpu_s": 0.02,
+          "user_cpu_s": 0.14,
+          "wall_s": 0.19055039796512574
+        },
+        "height": 43,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000295939,
+            "elapsed_s": 0.000296334,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3232
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 1,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              43,
+              43
+            ],
+            "controller_cpu_s": 0.003205622999999991,
+            "controller_peak_rss_KiB": 31020,
+            "deep_resets": 0,
+            "end_height": 43,
+            "frontier_B": 192,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 540,
+              "peak_rss_KiB": 3204,
+              "to_role_B": 2019
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 64,
+              "peak_rss_KiB": 3436,
+              "to_role_B": 3767
+            },
+            "node_reads": {
+              "blocks": 1,
+              "metadata_B": 540,
+              "metadata_queries": 9,
+              "metadata_rows": 9,
+              "nullifiers": 2,
+              "payload_B": 4049,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 2,
+              "rewards": 1,
+              "sql_queries": 9,
+              "transactions": 1
+            },
+            "public_body_B": 4058,
+            "public_requests": 4,
+            "receipt_rows": 2,
+            "reply_B": 7399,
+            "request_B": 1827,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 314,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2612,
+                "request_B": 1520
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 4473,
+                "request_B": 201
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 42,
+            "target_height": 43,
+            "target_tip": "000002c6c86c46c5a7482ffb21ed003a785064f1757faf4550b0449e9b06403d",
+            "tree_hashes": 9,
+            "wall_s": 0.01966341899242252,
+            "wallet_db_B": 57344,
+            "witness_B": 288,
+            "witness_updates": 2
+          }
+        ],
+        "tip": "000002c6c86c46c5a7482ffb21ed003a785064f1757faf4550b0449e9b06403d",
+        "wire": {
+          "observed": {
+            "blocks": 1,
+            "history_payload_B": 4058,
+            "reply_frame_B": 7399,
+            "reply_payload_B": 4058,
+            "request_frame_B": 1827,
+            "request_payload_B": 0,
+            "transactions": 1
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1
+          },
+          "server_reported": {
+            "blocks": 1,
+            "metadata_B": 540,
+            "metadata_queries": 9,
+            "metadata_rows": 9,
+            "nullifiers": 2,
+            "payload_B": 4049,
+            "payload_queries": 1,
+            "payload_rows": 1,
+            "receipts": 2,
+            "rewards": 1,
+            "sql_queries": 9,
+            "transactions": 1
+          }
+        }
+      },
+      "legacy": {
+        "base": {
+          "balance": 100,
+          "child_cpu_s": 0.0068379999999999995,
+          "child_peak_rss_kib": 30160,
+          "controller_cpu_s": 0.120033,
+          "controller_peak_rss_kib": 33008,
+          "full_wallet_input_B": 5572,
+          "height": 40,
+          "matching_all_owned_rows": true,
+          "native_wallet": [
+            {
+              "cpu_s": 0.00020365,
+              "elapsed_s": 0.000204646,
+              "operation": "wallet_open",
+              "peak_rss_kib": 3036
+            },
+            {
+              "cpu_s": 0.001409738,
+              "elapsed_s": 0.001409758,
+              "operation": "wallet_scan",
+              "peak_rss_kib": 3768
+            }
+          ],
+          "stream_bytes": {
+            "header": 132,
+            "leaves": 1280,
+            "nullifiers": 0,
+            "receipts": 0,
+            "rewards": 4160
+          },
+          "stream_records": {
+            "header": 1,
+            "leaves": 40,
+            "nullifiers": 0,
+            "receipts": 0,
+            "rewards": 40
+          },
+          "tip": "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+          "wall_s": 0.06551366695202887,
+          "wire": {
+            "observed": {
+              "blocks": 0,
+              "reply_frame_B": 6496,
+              "reply_payload_B": 5440,
+              "request_frame_B": 547,
+              "request_payload_B": 0,
+              "transactions": 0
+            },
+            "operations": {
+              "page": 4,
+              "status": 1
+            },
+            "server_reported": {}
+          }
+        },
+        "final": {
+          "balance": 80,
+          "child_cpu_s": 0.0069299999999999995,
+          "child_peak_rss_kib": 30160,
+          "controller_cpu_s": 0.12422,
+          "controller_peak_rss_kib": 33136,
+          "full_wallet_input_B": 9756,
+          "height": 43,
+          "matching_all_owned_rows": true,
+          "native_wallet": [
+            {
+              "cpu_s": 0.000257298,
+              "elapsed_s": 0.000257815,
+              "operation": "wallet_open",
+              "peak_rss_kib": 3164
+            },
+            {
+              "cpu_s": 0.0019685,
+              "elapsed_s": 0.001968424,
+              "operation": "wallet_scan",
+              "peak_rss_kib": 3812
+            }
+          ],
+          "stream_bytes": {
+            "header": 132,
+            "leaves": 1440,
+            "nullifiers": 64,
+            "receipts": 3648,
+            "rewards": 4472
+          },
+          "stream_records": {
+            "header": 1,
+            "leaves": 45,
+            "nullifiers": 2,
+            "receipts": 2,
+            "rewards": 43
+          },
+          "tip": "000002c6c86c46c5a7482ffb21ed003a785064f1757faf4550b0449e9b06403d",
+          "wall_s": 0.0693296070676297,
+          "wire": {
+            "observed": {
+              "blocks": 0,
+              "reply_frame_B": 10680,
+              "reply_payload_B": 9624,
+              "request_frame_B": 547,
+              "request_payload_B": 0,
+              "transactions": 0
+            },
+            "operations": {
+              "page": 4,
+              "status": 1
+            },
+            "server_reported": {}
+          }
+        }
+      },
+      "name": "large",
+      "node": "b",
+      "payment": {
+        "amount": 17,
+        "anchor_height": 42,
+        "change": 80,
+        "fee": 3,
+        "packet_B": 230206,
+        "proving_wall_s": 13.469733890960924,
+        "status": "submitted",
+        "tx": "9dd1a3a274ec12965d1bf1310207967da32c98823ec1f280eab00baa80f96373"
+      },
+      "send": {
+        "cli_resources": {
+          "peak_rss_kib": 32036,
+          "system_cpu_s": 0.03,
+          "user_cpu_s": 0.14,
+          "wall_s": 13.867179655004293
+        },
+        "height": 42,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000210633,
+            "elapsed_s": 0.000211124,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3168
+          },
+          {
+            "cpu_s": 7.181374345,
+            "elapsed_s": 4.465539351,
+            "operation": "wallet_prover_setup",
+            "peak_rss_kib": 575068
+          },
+          {
+            "cpu_s": 17.507285949,
+            "elapsed_s": 9.003617121,
+            "operation": "compact_prove",
+            "peak_rss_kib": 1090924
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 1,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              42,
+              42
+            ],
+            "controller_cpu_s": 0.0024625880000000155,
+            "controller_peak_rss_KiB": 32036,
+            "deep_resets": 0,
+            "end_height": 42,
+            "frontier_B": 192,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 324,
+              "peak_rss_KiB": 3136,
+              "to_role_B": 1221
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 8,
+              "peak_rss_KiB": 3296,
+              "to_role_B": 109
+            },
+            "node_reads": {
+              "blocks": 1,
+              "metadata_B": 540,
+              "metadata_queries": 9,
+              "metadata_rows": 9,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "rewards": 1,
+              "sql_queries": 9,
+              "transactions": 0
+            },
+            "public_body_B": 314,
+            "public_requests": 4,
+            "receipt_rows": 0,
+            "reply_B": 3654,
+            "request_B": 1827,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 314,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2612,
+                "request_B": 1520
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 728,
+                "request_B": 201
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 41,
+            "target_height": 42,
+            "target_tip": "00000189d38c262dd4c9afd4fcb9522d51751818536add08c6142d8fc97eef03",
+            "tree_hashes": 3,
+            "wall_s": 0.013754506944678724,
+            "wallet_db_B": 57344,
+            "witness_B": 288,
+            "witness_updates": 1
+          }
+        ],
+        "wire": {
+          "observed": {
+            "blocks": 1,
+            "history_payload_B": 314,
+            "reply_frame_B": 3774,
+            "reply_payload_B": 314,
+            "request_frame_B": 232056,
+            "request_payload_B": 230206,
+            "transactions": 0
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1,
+            "submit": 1
+          },
+          "server_reported": {
+            "blocks": 1,
+            "metadata_B": 540,
+            "metadata_queries": 9,
+            "metadata_rows": 9,
+            "nullifiers": 0,
+            "payload_B": 305,
+            "payload_queries": 1,
+            "payload_rows": 1,
+            "receipts": 0,
+            "rewards": 1,
+            "sql_queries": 9,
+            "transactions": 0
+          }
+        }
+      },
+      "tx": "9dd1a3a274ec12965d1bf1310207967da32c98823ec1f280eab00baa80f96373",
+      "unchanged": {
+        "balance": 100,
+        "cli_resources": {
+          "peak_rss_kib": 31152,
+          "system_cpu_s": 0.03,
+          "user_cpu_s": 0.13,
+          "wall_s": 0.17175893997773528
+        },
+        "height": 40,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000212827,
+            "elapsed_s": 0.000213632,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3292
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 0,
+            "branch_changes": 0,
+            "catchup_heads": 0,
+            "complete": true,
+            "completed_prefixes": [
+              40
+            ],
+            "controller_cpu_s": 0.0007336980000000048,
+            "controller_peak_rss_KiB": 31152,
+            "deep_resets": 0,
+            "end_height": 40,
+            "frontier_B": 128,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 72,
+              "peak_rss_KiB": 3100,
+              "to_role_B": 274
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 0,
+              "peak_rss_KiB": 3420,
+              "to_role_B": 0
+            },
+            "node_reads": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "public_body_B": 0,
+            "public_requests": 1,
+            "receipt_rows": 0,
+            "reply_B": 1306,
+            "request_B": 760,
+            "requests_by_op": {
+              "history_head": {
+                "count": 1,
+                "reply_B": 1306,
+                "request_B": 760
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 40,
+            "target_height": 40,
+            "target_tip": "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+            "tree_hashes": 0,
+            "wall_s": 0.0037213130854070187,
+            "wallet_db_B": 57344,
+            "witness_B": 288,
+            "witness_updates": 0
+          }
+        ],
+        "tip": "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+        "wire": {
+          "observed": {
+            "blocks": 0,
+            "reply_frame_B": 1306,
+            "reply_payload_B": 0,
+            "request_frame_B": 760,
+            "request_payload_B": 0,
+            "transactions": 0
+          },
+          "operations": {
+            "history_head": 1
+          },
+          "server_reported": {
+            "blocks": 0,
+            "metadata_B": 216,
+            "metadata_queries": 2,
+            "metadata_rows": 2,
+            "nullifiers": 0,
+            "payload_B": 0,
+            "payload_queries": 0,
+            "payload_rows": 0,
+            "receipts": 0,
+            "rewards": 0,
+            "sql_queries": 2,
+            "transactions": 0
+          }
+        }
+      }
+    },
+    "small": {
+      "append": {
+        "balance": 100,
+        "cli_resources": {
+          "peak_rss_kib": 31148,
+          "system_cpu_s": 0.02,
+          "user_cpu_s": 0.13,
+          "wall_s": 0.18595816299784929
+        },
+        "height": 5,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000214476,
+            "elapsed_s": 0.000215279,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3160
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 1,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              5,
+              5
+            ],
+            "controller_cpu_s": 0.002403565999999996,
+            "controller_peak_rss_KiB": 31024,
+            "deep_resets": 0,
+            "end_height": 5,
+            "frontier_B": 64,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 288,
+              "peak_rss_KiB": 3224,
+              "to_role_B": 1088
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 8,
+              "peak_rss_KiB": 3352,
+              "to_role_B": 109
+            },
+            "node_reads": {
+              "blocks": 1,
+              "metadata_B": 540,
+              "metadata_queries": 9,
+              "metadata_rows": 9,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "rewards": 1,
+              "sql_queries": 9,
+              "transactions": 0
+            },
+            "public_body_B": 314,
+            "public_requests": 4,
+            "receipt_rows": 0,
+            "reply_B": 3643,
+            "request_B": 1169,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 313,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2604,
+                "request_B": 863
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 726,
+                "request_B": 200
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 4,
+            "target_height": 5,
+            "target_tip": "00000047b5b037378af4d085497aad6b17ece3fb1d0554549e2f451731da0990",
+            "tree_hashes": 2,
+            "wall_s": 0.01861978496890515,
+            "wallet_db_B": 49152,
+            "witness_B": 192,
+            "witness_updates": 1
+          }
+        ],
+        "tip": "00000047b5b037378af4d085497aad6b17ece3fb1d0554549e2f451731da0990",
+        "wire": {
+          "observed": {
+            "blocks": 1,
+            "history_payload_B": 314,
+            "reply_frame_B": 3643,
+            "reply_payload_B": 314,
+            "request_frame_B": 1169,
+            "request_payload_B": 0,
+            "transactions": 0
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1
+          },
+          "server_reported": {
+            "blocks": 1,
+            "metadata_B": 540,
+            "metadata_queries": 9,
+            "metadata_rows": 9,
+            "nullifiers": 0,
+            "payload_B": 305,
+            "payload_queries": 1,
+            "payload_rows": 1,
+            "receipts": 0,
+            "rewards": 1,
+            "sql_queries": 9,
+            "transactions": 0
+          }
+        }
+      },
+      "archive": {
+        "complete_block_B": 231764,
+        "order": [
+          "00000287209a4526c540f87552b615b263502256fbc84a97ffc87f640da88d21",
+          "0000023d756b812b6b47cd230e5bf297a2d4261f11d14deecb8d02d04df3d28f",
+          "000003fdf97dda104817a8bf652c8d84f86aca0cba6d50e172730b92c8e1e0a6",
+          "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+          "00000047b5b037378af4d085497aad6b17ece3fb1d0554549e2f451731da0990",
+          "000002dcdf0cbad0e9dad8dfc2475a26af8f6f656cf1e1601c967d50203ea7e9",
+          "000003155a3f6ec8faa378cc045879f43858e4ede3f19911cf5057e5a9a079ac"
+        ],
+        "packet_ids": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [
+            "f5d2f7a979af36f9877213ab050e6dc9c1d292fcd25fea2b31e528c927418566"
+          ]
+        ],
+        "sizes": [
+          222,
+          222,
+          222,
+          222,
+          222,
+          222,
+          230432
+        ],
+        "widths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "base_height": 4,
+      "cold": {
+        "balance": 100,
+        "cli_resources": {
+          "peak_rss_kib": 31244,
+          "system_cpu_s": 0.03,
+          "user_cpu_s": 0.17,
+          "wall_s": 0.23688248498365283
+        },
+        "height": 4,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000206952,
+            "elapsed_s": 0.000207464,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3168
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 4,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              4,
+              4
+            ],
+            "controller_cpu_s": 0.0031090619999999958,
+            "controller_peak_rss_KiB": 31244,
+            "deep_resets": 0,
+            "end_height": 4,
+            "frontier_B": 32,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 468,
+              "peak_rss_KiB": 3344,
+              "to_role_B": 1765
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 72,
+              "peak_rss_KiB": 3360,
+              "to_role_B": 436
+            },
+            "node_reads": {
+              "blocks": 4,
+              "metadata_B": 616,
+              "metadata_queries": 8,
+              "metadata_rows": 11,
+              "nullifiers": 0,
+              "payload_B": 1220,
+              "payload_queries": 1,
+              "payload_rows": 4,
+              "receipts": 0,
+              "rewards": 4,
+              "sql_queries": 8,
+              "transactions": 0
+            },
+            "public_body_B": 1229,
+            "public_requests": 4,
+            "receipt_rows": 0,
+            "reply_B": 4560,
+            "request_B": 814,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 313,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2604,
+                "request_B": 508
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 1643,
+                "request_B": 200
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 0,
+            "target_height": 4,
+            "target_tip": "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+            "tree_hashes": 4,
+            "wall_s": 0.014792419970035553,
+            "wallet_db_B": 49152,
+            "witness_B": 96,
+            "witness_updates": 3
+          }
+        ],
+        "tip": "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+        "wire": {
+          "observed": {
+            "blocks": 4,
+            "history_payload_B": 1229,
+            "reply_frame_B": 4560,
+            "reply_payload_B": 1229,
+            "request_frame_B": 814,
+            "request_payload_B": 0,
+            "transactions": 0
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1
+          },
+          "server_reported": {
+            "blocks": 4,
+            "metadata_B": 616,
+            "metadata_queries": 8,
+            "metadata_rows": 11,
+            "nullifiers": 0,
+            "payload_B": 1220,
+            "payload_queries": 1,
+            "payload_rows": 4,
+            "receipts": 0,
+            "rewards": 4,
+            "sql_queries": 8,
+            "transactions": 0
+          }
+        }
+      },
+      "confirmed": {
+        "balance": 80,
+        "cli_resources": {
+          "peak_rss_kib": 31148,
+          "system_cpu_s": 0.02,
+          "user_cpu_s": 0.14,
+          "wall_s": 0.19197240902576596
+        },
+        "height": 7,
+        "native_wallet": [
+          {
+            "cpu_s": 0.00021436,
+            "elapsed_s": 0.000215158,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3292
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 1,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              7,
+              7
+            ],
+            "controller_cpu_s": 0.0029392990000000063,
+            "controller_peak_rss_KiB": 31148,
+            "deep_resets": 0,
+            "end_height": 7,
+            "frontier_B": 96,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 432,
+              "peak_rss_KiB": 3344,
+              "to_role_B": 1620
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 64,
+              "peak_rss_KiB": 3368,
+              "to_role_B": 3767
+            },
+            "node_reads": {
+              "blocks": 1,
+              "metadata_B": 540,
+              "metadata_queries": 9,
+              "metadata_rows": 9,
+              "nullifiers": 2,
+              "payload_B": 4049,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 2,
+              "rewards": 1,
+              "sql_queries": 9,
+              "transactions": 1
+            },
+            "public_body_B": 4058,
+            "public_requests": 4,
+            "receipt_rows": 2,
+            "reply_B": 7388,
+            "request_B": 1453,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 313,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2604,
+                "request_B": 1147
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 4471,
+                "request_B": 200
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 6,
+            "target_height": 7,
+            "target_tip": "000003155a3f6ec8faa378cc045879f43858e4ede3f19911cf5057e5a9a079ac",
+            "tree_hashes": 6,
+            "wall_s": 0.01938798907212913,
+            "wallet_db_B": 49152,
+            "witness_B": 192,
+            "witness_updates": 2
+          }
+        ],
+        "tip": "000003155a3f6ec8faa378cc045879f43858e4ede3f19911cf5057e5a9a079ac",
+        "wire": {
+          "observed": {
+            "blocks": 1,
+            "history_payload_B": 4058,
+            "reply_frame_B": 7388,
+            "reply_payload_B": 4058,
+            "request_frame_B": 1453,
+            "request_payload_B": 0,
+            "transactions": 1
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1
+          },
+          "server_reported": {
+            "blocks": 1,
+            "metadata_B": 540,
+            "metadata_queries": 9,
+            "metadata_rows": 9,
+            "nullifiers": 2,
+            "payload_B": 4049,
+            "payload_queries": 1,
+            "payload_rows": 1,
+            "receipts": 2,
+            "rewards": 1,
+            "sql_queries": 9,
+            "transactions": 1
+          }
+        }
+      },
+      "legacy": {
+        "base": {
+          "balance": 100,
+          "child_cpu_s": 0.007103,
+          "child_peak_rss_kib": 30156,
+          "controller_cpu_s": 0.12143999999999999,
+          "controller_peak_rss_kib": 31088,
+          "full_wallet_input_B": 676,
+          "height": 4,
+          "matching_all_owned_rows": true,
+          "native_wallet": [
+            {
+              "cpu_s": 0.000208265,
+              "elapsed_s": 0.000208815,
+              "operation": "wallet_open",
+              "peak_rss_kib": 3228
+            },
+            {
+              "cpu_s": 0.000294566,
+              "elapsed_s": 0.000294592,
+              "operation": "wallet_scan",
+              "peak_rss_kib": 3936
+            }
+          ],
+          "stream_bytes": {
+            "header": 132,
+            "leaves": 128,
+            "nullifiers": 0,
+            "receipts": 0,
+            "rewards": 416
+          },
+          "stream_records": {
+            "header": 1,
+            "leaves": 4,
+            "nullifiers": 0,
+            "receipts": 0,
+            "rewards": 4
+          },
+          "tip": "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+          "wall_s": 0.06494192406535149,
+          "wire": {
+            "observed": {
+              "blocks": 0,
+              "reply_frame_B": 1590,
+              "reply_payload_B": 544,
+              "request_frame_B": 547,
+              "request_payload_B": 0,
+              "transactions": 0
+            },
+            "operations": {
+              "page": 4,
+              "status": 1
+            },
+            "server_reported": {}
+          }
+        },
+        "final": {
+          "balance": 80,
+          "child_cpu_s": 0.006933,
+          "child_peak_rss_kib": 30156,
+          "controller_cpu_s": 0.12697899999999998,
+          "controller_peak_rss_kib": 31472,
+          "full_wallet_input_B": 4860,
+          "height": 7,
+          "matching_all_owned_rows": true,
+          "native_wallet": [
+            {
+              "cpu_s": 0.000249492,
+              "elapsed_s": 0.000249914,
+              "operation": "wallet_open",
+              "peak_rss_kib": 3292
+            },
+            {
+              "cpu_s": 0.000610436,
+              "elapsed_s": 0.000610386,
+              "operation": "wallet_scan",
+              "peak_rss_kib": 3948
+            }
+          ],
+          "stream_bytes": {
+            "header": 132,
+            "leaves": 288,
+            "nullifiers": 64,
+            "receipts": 3648,
+            "rewards": 728
+          },
+          "stream_records": {
+            "header": 1,
+            "leaves": 9,
+            "nullifiers": 2,
+            "receipts": 2,
+            "rewards": 7
+          },
+          "tip": "000003155a3f6ec8faa378cc045879f43858e4ede3f19911cf5057e5a9a079ac",
+          "wall_s": 0.06573800300247967,
+          "wire": {
+            "observed": {
+              "blocks": 0,
+              "reply_frame_B": 5774,
+              "reply_payload_B": 4728,
+              "request_frame_B": 547,
+              "request_payload_B": 0,
+              "transactions": 0
+            },
+            "operations": {
+              "page": 4,
+              "status": 1
+            },
+            "server_reported": {}
+          }
+        }
+      },
+      "name": "small",
+      "node": "a",
+      "payment": {
+        "amount": 17,
+        "anchor_height": 6,
+        "change": 80,
+        "fee": 3,
+        "packet_B": 230206,
+        "proving_wall_s": 13.602705655037425,
+        "status": "submitted",
+        "tx": "f5d2f7a979af36f9877213ab050e6dc9c1d292fcd25fea2b31e528c927418566"
+      },
+      "send": {
+        "cli_resources": {
+          "peak_rss_kib": 31944,
+          "system_cpu_s": 0.03,
+          "user_cpu_s": 0.17,
+          "wall_s": 14.03550428908784
+        },
+        "height": 6,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000213019,
+            "elapsed_s": 0.000213507,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3292
+          },
+          {
+            "cpu_s": 7.386404312,
+            "elapsed_s": 4.632015185,
+            "operation": "wallet_prover_setup",
+            "peak_rss_kib": 583036
+          },
+          {
+            "cpu_s": 17.470139143,
+            "elapsed_s": 8.970248398,
+            "operation": "compact_prove",
+            "peak_rss_kib": 1090572
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 1,
+            "branch_changes": 0,
+            "catchup_heads": 1,
+            "complete": true,
+            "completed_prefixes": [
+              6,
+              6
+            ],
+            "controller_cpu_s": 0.002646839000000012,
+            "controller_peak_rss_KiB": 31944,
+            "deep_resets": 0,
+            "end_height": 6,
+            "frontier_B": 96,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 288,
+              "peak_rss_KiB": 3352,
+              "to_role_B": 1088
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 8,
+              "peak_rss_KiB": 3356,
+              "to_role_B": 109
+            },
+            "node_reads": {
+              "blocks": 1,
+              "metadata_B": 540,
+              "metadata_queries": 9,
+              "metadata_rows": 9,
+              "nullifiers": 0,
+              "payload_B": 305,
+              "payload_queries": 1,
+              "payload_rows": 1,
+              "receipts": 0,
+              "rewards": 1,
+              "sql_queries": 9,
+              "transactions": 0
+            },
+            "public_body_B": 314,
+            "public_requests": 4,
+            "receipt_rows": 0,
+            "reply_B": 3643,
+            "request_B": 1311,
+            "requests_by_op": {
+              "history_check": {
+                "count": 1,
+                "reply_B": 313,
+                "request_B": 106
+              },
+              "history_head": {
+                "count": 2,
+                "reply_B": 2604,
+                "request_B": 1005
+              },
+              "history_range": {
+                "count": 1,
+                "reply_B": 726,
+                "request_B": 200
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 5,
+            "target_height": 6,
+            "target_tip": "000002dcdf0cbad0e9dad8dfc2475a26af8f6f656cf1e1601c967d50203ea7e9",
+            "tree_hashes": 2,
+            "wall_s": 0.014160007936879992,
+            "wallet_db_B": 49152,
+            "witness_B": 192,
+            "witness_updates": 1
+          }
+        ],
+        "wire": {
+          "observed": {
+            "blocks": 1,
+            "history_payload_B": 314,
+            "reply_frame_B": 3763,
+            "reply_payload_B": 314,
+            "request_frame_B": 231540,
+            "request_payload_B": 230206,
+            "transactions": 0
+          },
+          "operations": {
+            "history_check": 1,
+            "history_head": 2,
+            "history_range": 1,
+            "submit": 1
+          },
+          "server_reported": {
+            "blocks": 1,
+            "metadata_B": 540,
+            "metadata_queries": 9,
+            "metadata_rows": 9,
+            "nullifiers": 0,
+            "payload_B": 305,
+            "payload_queries": 1,
+            "payload_rows": 1,
+            "receipts": 0,
+            "rewards": 1,
+            "sql_queries": 9,
+            "transactions": 0
+          }
+        }
+      },
+      "tx": "f5d2f7a979af36f9877213ab050e6dc9c1d292fcd25fea2b31e528c927418566",
+      "unchanged": {
+        "balance": 100,
+        "cli_resources": {
+          "peak_rss_kib": 31268,
+          "system_cpu_s": 0.03,
+          "user_cpu_s": 0.13,
+          "wall_s": 0.17434731393586844
+        },
+        "height": 4,
+        "native_wallet": [
+          {
+            "cpu_s": 0.000213736,
+            "elapsed_s": 0.000214229,
+            "operation": "wallet_open",
+            "peak_rss_kib": 3160
+          }
+        ],
+        "sync": [
+          {
+            "blocks": 0,
+            "branch_changes": 0,
+            "catchup_heads": 0,
+            "complete": true,
+            "completed_prefixes": [
+              4
+            ],
+            "controller_cpu_s": 0.000707205999999988,
+            "controller_peak_rss_KiB": 31148,
+            "deep_resets": 0,
+            "end_height": 4,
+            "frontier_B": 32,
+            "native_hash": {
+              "cpu_s": 0.0,
+              "from_role_B": 72,
+              "peak_rss_KiB": 2968,
+              "to_role_B": 274
+            },
+            "native_wallet": {
+              "cpu_s": 0.0,
+              "from_role_B": 0,
+              "peak_rss_KiB": 3288,
+              "to_role_B": 0
+            },
+            "node_reads": {
+              "blocks": 0,
+              "metadata_B": 216,
+              "metadata_queries": 2,
+              "metadata_rows": 2,
+              "nullifiers": 0,
+              "payload_B": 0,
+              "payload_queries": 0,
+              "payload_rows": 0,
+              "receipts": 0,
+              "rewards": 0,
+              "sql_queries": 2,
+              "transactions": 0
+            },
+            "public_body_B": 0,
+            "public_requests": 1,
+            "receipt_rows": 0,
+            "reply_B": 1302,
+            "request_B": 396,
+            "requests_by_op": {
+              "history_head": {
+                "count": 1,
+                "reply_B": 1302,
+                "request_B": 396
+              }
+            },
+            "rewound_blocks": 0,
+            "start_height": 4,
+            "target_height": 4,
+            "target_tip": "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+            "tree_hashes": 0,
+            "wall_s": 0.0036570068914443254,
+            "wallet_db_B": 49152,
+            "witness_B": 96,
+            "witness_updates": 0
+          }
+        ],
+        "tip": "000000de0e5af385b5bbcc17a84e57d38f57389f90fd79c0e9b70f17154c4c00",
+        "wire": {
+          "observed": {
+            "blocks": 0,
+            "reply_frame_B": 1302,
+            "reply_payload_B": 0,
+            "request_frame_B": 396,
+            "request_payload_B": 0,
+            "transactions": 0
+          },
+          "operations": {
+            "history_head": 1
+          },
+          "server_reported": {
+            "blocks": 0,
+            "metadata_B": 216,
+            "metadata_queries": 2,
+            "metadata_rows": 2,
+            "nullifiers": 0,
+            "payload_B": 0,
+            "payload_queries": 0,
+            "payload_rows": 0,
+            "receipts": 0,
+            "rewards": 0,
+            "sql_queries": 2,
+            "transactions": 0
+          }
+        }
+      }
+    }
+  },
+  "scaling_fixture": "real mined branches",
+  "selected_chain": [
+    "00000287209a4526c540f87552b615b263502256fbc84a97ffc87f640da88d21",
+    "0000023d756b812b6b47cd230e5bf297a2d4261f11d14deecb8d02d04df3d28f",
+    "00000118994bf0ae59341f4e900dc821bbafc7ced458fdcec4a8a60c3c3db3d1",
+    "000002693e8781904ea4fdbd3d11c0d7d24b819bf1f1e1c345cf790e31bc5a06",
+    "000001fc7056b6e4eedddc8ea49550db550ff203f316831f443779ed8f8c488a",
+    "000003af899899b91d2f2c05066bfc36a3c3385dda197fc1afa837f98d14d1fb",
+    "0000034ea5490c3d9c2bc8e934bd395f531728815d51c1c1a10009ee8d4794cd",
+    "00000307cfe0efcd2a019bf68f8d387545dc459c34623a098ac74a7f3a0b79c2",
+    "000000eafb8a76f233b683282d32d00df56dc35c1d7b92cfa1fa46c0e03e8039",
+    "000001218eeb1612496617e9c3fc0e088bb640b07f0f6bddfb7077ab2a499464",
+    "000001c661d2a769a3c686bb0426c5cb496ec47ec0de008bf5f2c9c217587ea5",
+    "00000387e030f548a7a7fbe4ac0e6f856cd114a89affb8d8b3b188ae758dc389",
+    "00000268a8f5f1b274f5777d541c2848da8dd314adb3478d337ed1ba4f8340e1",
+    "00000227ebdc2f0dd90f32248808dda70d4a2eaee97394fea9a0c38109fadd3a",
+    "0000004e5aa84b7e12cb7653936fe31bc7590d7f58017da4862653c62b7317a9",
+    "000001252543e6103a02a3a724a376646888e326670b45519509cccb7c68bc54",
+    "000003b9ec72edb8d67edb4d439384d59144ed28929ae9f0ba93539aad00cb6c",
+    "00000296c1a265116180e5491269908142974dbcddbf221aadfdde149cb3058b",
+    "0000000bae340f11cee3f36533255302df1a27ca661e9232e7a8da77534ccdc7",
+    "000000a14a61be7e1363eef42a0bbcdb544c5678fea52a1ab1a4a0d18c0a54d5",
+    "0000006aa336840ce2518774947ce4c3ea18d34f55deab1b6e38b3815a989a92",
+    "000000804c236f486e0faaf1a094a8357ca3a5f17ce2f9dfc359be9bf31d450f",
+    "0000029ca880f66b193e8aac63788d05c95d2eb3c13696746ae10889ef8cc7f5",
+    "0000023f624ffc6f6c3a302e2e45caecfed790eaa2116e09983844d3616252b5",
+    "000003b3fdbba3e7bde917fabdc76ed604a2fd972033e16c11b5f0b3bf025d23",
+    "0000001d62d590a7f5e94689bcd250a1e46b6660d8f3b0e625f11f0bb3b750d5",
+    "0000035246465777b9ad04e05168c129f70ebe0f2e072e6d128a698a2b58d5ca",
+    "000002ab20ad06d9288eb7f3f65b95100746d426802a437bfd19afc27ea065ea",
+    "000000db7f572d2672f51fa8e54e0711455004ac4b2127ec290d059e26d8648e",
+    "00000280774a36adb7001b85223ff2649b2d8130b67c467a071a85fd5572658d",
+    "000003ce3d8421ac33b02a9b65601739e68fe7cbcc86645f4813e67c44d253df",
+    "00000242326bb220d03d7c879c5a0c1670c60b15bc42ce16f1d08133958ea4df",
+    "0000031a1e7d4d0eac3dc5f5fc25426ff7e86580484d62a9be063528fdc0b2e8",
+    "000001cf514160a010f355a4ea17ff55b4303598a4386d6ed21618a1b70d4821",
+    "000001897209749b6af52052cde771773e070ea5f8c0f8104cf4a1f3907d8b73",
+    "0000004ea1b01e2ec7dab7badf78a3e2303925286aef61c3145eaf5a9f1453a5",
+    "00000200e99c94d3b1af0913989ac1bfcda3c7f24bcd391756126b08a61473fa",
+    "0000012fc94cac68c4d79e815e190913be2e31f7d0bf697ec15bf78f6f62f591",
+    "00000110f9e830107237355574573932a9839824ef83af68d7cc01ce829b7a33",
+    "00000322577bad0e6aeeeb3e570eef93fd8b2de858e392ae6f37925d547bcac4",
+    "000001b26597ff4911baf55d736085c37bf5aca5230707c08add627eee983a9a",
+    "00000189d38c262dd4c9afd4fcb9522d51751818536add08c6142d8fc97eef03",
+    "000002c6c86c46c5a7482ffb21ed003a785064f1757faf4550b0449e9b06403d",
+    "00000108df73cad9089c6fcbbdf268859c377feb29e4cce97819b30c2d65ab9a",
+    "000003510a7ba1d7af47eff6ee3159ec1f1b9e40ed98386d07d02c64ea319bf3",
+    "000003aa24a6ffa556f833ecdffed4af6af240d9de4136b451c84a25028a8a3c",
+    "000001c2d0747b2c3397ee995df58322ab7d79ee70ebd4c9e419361a6d505976",
+    "000003b6d76cda99e8e37a25b403c419205b2a479fb063a50f372f3be9f07d6a",
+    "000000a026c8ec5113233b37460b103d4d16ff46716310ea0d08c7f01b5066d8",
+    "000001407b0f1088841591f2a7c614a593f40b013569a27cc2d4b04d1fe145b4",
+    "0000023db7490084151b668554b04ce4cfe859f87a6217846340a939c17ebe6e",
+    "0000017f78690e7034dfe35037be7978c0fe527361244e531d039222532e21e3",
+    "0000038d148494426bf0171b6210a14e83a40e568280efbed6a94331b2edb1b0",
+    "000003c4ac3b31748f732de2178fa9a06cbcd90294ec58803e95ce98c6ec42b2",
+    "0000039e43f6be7d2fbbd20bda0729ba2f043951c853b6869220d0a72101d783",
+    "000000f3570e1223eb82dfafea8c29ad527f564fd8fe9e7ea8f070426fadd7f0",
+    "00000068d03e2f02378f03c7c2b2fc0dd13ec29e18e32e024c24999f3d0213f9",
+    "0000010bd849f704bcc66b5237d41d9650b1018dbace90507e4cd1ec93a99491",
+    "00000136c722d567796c53c1fddf13f86bf45c6adb33b100a1f69f7fe1f71169",
+    "00000227c69c853f244218339ba167c302a56fefa356463f65ed2b017108795b",
+    "000001a6a57956caef0538c4aad9f180ea11850c9dbdb64dd28cdc0c0f88d5af",
+    "00000096c8bb44159b41398424461c85aa89ddfe67c63fec8a830555caf160b4",
+    "000000580ad55d6ab6cab9ea0dbf7b86040ad513a290b8a223776d186b20db84",
+    "00000305df1ffcb6d81567a1faaa72f61d6f40297a87723abf569e906efd716d",
+    "00000228ce32a12d4efdebcf6155399a8cf0bb02ab83abaf6fe19602d174bff6",
+    "000000febf186e61d2002b4f2456f2d8ec46012c6e041ef837f6e8ea45b1e016",
+    "000003de3305a0c515e38ed9b5a04b4b42a04d3a7cc0da7ba43371cd507c27b4",
+    "000003420c9589742cb4c7ad7c06acd9e0a40d65bd2361be83eba20637524c9d",
+    "000000dfbb3d923e839851a7bd5fefec42bc1ac940091a38ea77ac55174f0871",
+    "000003661a9f87a97b6ac9c6463cf1e68ff9618cd3b197aee0d04173f70d87e3",
+    "000001f1dd952cb0dab8af47d3dc432d21620a2267c2a5e341a82f77ee8d1df7",
+    "0000030a28c66f3c8178da3649d8cbbefc29c3cf7c77c1ca4348abfdd49e89a7",
+    "00000024b959a36ef55e51604a018db478f3d018947a08ffdfe53a4b47386b10",
+    "0000037df9d01055c5d39b3f77e8e8fcbf1bc828574db3f083a73c5614006ab1",
+    "0000010cd76d9816f3d49904e6f524fd59451a0b8d2338570151a3bd812f2867",
+    "0000006a1f3c4ddb6b48701b7c69681f6215bffa3259a4ae3a8b2d3b31e58b6d",
+    "000000ec6de5382ef725e3d2fce66abb7234eeba963e12f911028e3b99bd0e22",
+    "0000039e8c8c6616ce505550dbeadf88e4b8c1a21aeef7a120e08d454939e9dd",
+    "0000032e46424ac870e48ced15a14f4f85962120395622a0f097f85ef5cdd91c",
+    "000001e933af2ada187d6226787cf8ace41e9e94520af7d61358135fdbe4e037",
+    "0000005f54425be5b6b8661a618d072d7222f707c9d40e50d95b3ac5506612f1",
+    "000001e02f230b0bbe6a5ea667f85804c2aba9f23c6b0f889e698f2d9936adf8",
+    "000003529d659561c51d8be83f5e0a7645d3b4932c4a964279ec07ecde4a8175",
+    "000002c08ffa46851f41b8d7038a53bc323d25fd643d956553e3e2bea7e811cf",
+    "00000118c02421f68cb9de181fed56063b2e11a33a6c8117c8cbb377b503ca03",
+    "0000025a77d00328e9feb37aa50a4b7f5980c16f0a3eb9fdffb64eed1789947e",
+    "00000381c108dbb07d25f7b77c63e5e846cdba3c4df8cce6caf8d11db0243643",
+    "000002e33a8cc05dcb72badd8e4bc5f11890cc66cd24783c3f5abe7bf20b4c91",
+    "0000017b7769d003c9c6c8a1a9b76fd220bfd465a52aaa7ebb71d3ed031b4e4b",
+    "000002f02d6853129946e62a38d4683f6870020c97c0ac3f1793cfecbfefab8a",
+    "00000050b19329b15f3816bd2ab74d276f64fa6f8e94ea79b328431aae143a8b",
+    "0000010bb0125c7187562be31f0be4853815c20762e5cfdd6348b8b1bceff8ab",
+    "000000a334795552bc18598ca38a6b13c5525a3483a899a3754b50d217fe1f75",
+    "0000004349f7f2d26f2e9424bb4c3dc7c55320234ec323c3bc48d733ff1cab67",
+    "000002cde3dafa7c396816ee439692e173f5518e36d93cc473e3c75c3c2a9a7b",
+    "000002a107b1a69d99dd3679a048028006daf2f8027a3a2a3ff0066dfd6aefe7",
+    "0000039c05f16d51b8e363207225dec9417855801796488765fb4f7af150bfa3",
+    "0000011e47178acea7bbe214264ee7e5b06a333a7535b408a1398d75b9e98b97",
+    "00000108d6a79fed07a186006be800c7039d1193d536790f5caea64ff54de110",
+    "000003c4c83bebb9f4b0a529987ca061a952b7dfff9c6e8766fd72ae949556d9",
+    "000003f56349188f202e9317004cb0313354ec586d70125618dd9b5c9acfbdb1",
+    "000000857b71f6f1758f389ba733b08cbccadc3f288c592d11d2c3d4146f52eb"
+  ],
+  "shallow": {
+    "blocks": 2,
+    "branch_changes": 0,
+    "catchup_heads": 1,
+    "complete": true,
+    "completed_prefixes": [
+      45,
+      45
+    ],
+    "controller_cpu_s": 0.003780718999999988,
+    "controller_peak_rss_KiB": 31020,
+    "deep_resets": 0,
+    "end_height": 45,
+    "frontier_B": 256,
+    "native_hash": {
+      "cpu_s": 0.0,
+      "from_role_B": 468,
+      "peak_rss_KiB": 3096,
+      "to_role_B": 1757
+    },
+    "native_wallet": {
+      "cpu_s": 0.0,
+      "from_role_B": 16,
+      "peak_rss_KiB": 3288,
+      "to_role_B": 218
+    },
+    "node_reads": {
+      "blocks": 2,
+      "metadata_B": 608,
+      "metadata_queries": 10,
+      "metadata_rows": 11,
+      "nullifiers": 0,
+      "payload_B": 610,
+      "payload_queries": 1,
+      "payload_rows": 2,
+      "receipts": 0,
+      "rewards": 2,
+      "sql_queries": 10,
+      "transactions": 0
+    },
+    "public_body_B": 619,
+    "public_requests": 4,
+    "receipt_rows": 0,
+    "reply_B": 3960,
+    "request_B": 1827,
+    "requests_by_op": {
+      "history_check": {
+        "count": 1,
+        "reply_B": 314,
+        "request_B": 106
+      },
+      "history_head": {
+        "count": 2,
+        "reply_B": 2612,
+        "request_B": 1520
+      },
+      "history_range": {
+        "count": 1,
+        "reply_B": 1034,
+        "request_B": 201
+      }
+    },
+    "rewound_blocks": 1,
+    "start_height": 44,
+    "target_height": 45,
+    "target_tip": "000003510a7ba1d7af47eff6ee3159ec1f1b9e40ed98386d07d02c64ea319bf3",
+    "tree_hashes": 6,
+    "wall_s": 0.02123238006606698,
+    "wallet_db_B": 57344,
+    "witness_B": 288,
+    "witness_updates": 2
+  },
+  "shallow_old": "000001e63850d2959d2409c240e68248ef1b69ad68d7bccf651afb661d8f995a"
+}

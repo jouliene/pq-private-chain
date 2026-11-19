@@ -1,0 +1,23 @@
+{
+  "actual_attempt_objects": 3,
+  "actual_body_objects": 115,
+  "actual_walkthrough_wall_s": 279.8448927149875,
+  "cargo_build_s": 76,
+  "clean_product": true,
+  "clean_upstream": true,
+  "later_reviewed_outbox_change": "f87dd7292f80739fffcee91f1444358f189c47b6",
+  "new_native_from_empty_target_sha256": "a8234eb7f0e67dfa07df26c30317fd6f3590d6bb95e2449d56a5375caabd2a97",
+  "path_oracle_native_sha256": "20bf1063983605b0f46adc682aed00459a7e5a48ddfe0f8d49d296985f78432b",
+  "path_oracle_public_source_sha256": "6f828d03c16cf96478a12083aeec5504cf1c54716b4da75e37a58ffba39e1b0a",
+  "path_oracle_reference": "Separate pristine Qnero compiled libraries, path-check driver relinked from frozen source",
+  "pinned_upstream": "f04c91307837c0231668383bec76ba98d89d2652",
+  "prior_public_source": "82c803961996864782a5dee050a02b60b4341c0e",
+  "prior_reference_source": "8c4fb94334994ac98253348384050f23904d40a5",
+  "public_capture_bytes": 1848348,
+  "public_capture_files": 121,
+  "public_capture_sha256": "aa409fe5c57b4560a257d42f02c24ee67eed04e02e11db140262dcd007da29fb",
+  "reused_installed_toolchain": "Rust 1.93.0, Cargo downloads cached",
+  "supplemental_body_objects": 1,
+  "supplemental_public_checker": "9e882b6a685eeb889ce4d2d086451ddd019adca1",
+  "tested_source": "2b6ae99f4f91135ef5974b69fbef987357336711"
+}

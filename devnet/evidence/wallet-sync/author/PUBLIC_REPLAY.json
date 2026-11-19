@@ -1,0 +1,12 @@
+{
+  "archive_blocks": 121,
+  "canonical_intent_payments": 1,
+  "fees": 12,
+  "height": 108,
+  "issued": 10800,
+  "public_valid_attempts": 3,
+  "recipient_spend_height": 106,
+  "recipient_spend_successors": 2,
+  "shared_nullifiers": 1,
+  "tip": "000001d37685664554dc21d8357bfa0870f0909b71ed8f16de702cddcf26cfee"
+}

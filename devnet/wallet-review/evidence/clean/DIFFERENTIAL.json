@@ -1,0 +1,193 @@
+{
+  "durable_intent": {
+    "all_shared_nullifiers": 1,
+    "real_inputs_shared_by_all": 1,
+    "registered_verified_attempts": 3,
+    "selected_effects": 1,
+    "selected_fee": 3,
+    "selected_height": 86
+  },
+  "scan_atomic": {
+    "after_restart_cursor_height": 0,
+    "invalid_root_rolled_back": true,
+    "observed_hot_journal_B": 21032,
+    "post_ownership_abrupt_exit_code": 73,
+    "real_valid_reward_funded": true,
+    "resumed": {
+      "all_statuses_match": true,
+      "balance_matches": true,
+      "height": 1,
+      "membership": {
+        "depth": 1,
+        "owned_paths": 1,
+        "positional_siblings_checked": 3,
+        "public_leaves": 1
+      },
+      "owned_records": 1,
+      "public_full_replay_B": 268,
+      "spent_records": 0
+    }
+  },
+  "synthetic_path_controls": {
+    "cases": [
+      {
+        "depth": 1,
+        "owned_paths": 1,
+        "positional_siblings_checked": 3,
+        "public_leaves": 1
+      },
+      {
+        "depth": 1,
+        "owned_paths": 2,
+        "positional_siblings_checked": 6,
+        "public_leaves": 2
+      },
+      {
+        "depth": 1,
+        "owned_paths": 3,
+        "positional_siblings_checked": 9,
+        "public_leaves": 3
+      },
+      {
+        "depth": 1,
+        "owned_paths": 4,
+        "positional_siblings_checked": 12,
+        "public_leaves": 4
+      },
+      {
+        "depth": 2,
+        "owned_paths": 5,
+        "positional_siblings_checked": 30,
+        "public_leaves": 5
+      },
+      {
+        "depth": 2,
+        "owned_paths": 15,
+        "positional_siblings_checked": 90,
+        "public_leaves": 15
+      },
+      {
+        "depth": 2,
+        "owned_paths": 16,
+        "positional_siblings_checked": 96,
+        "public_leaves": 16
+      },
+      {
+        "depth": 3,
+        "owned_paths": 17,
+        "positional_siblings_checked": 153,
+        "public_leaves": 17
+      },
+      {
+        "depth": 3,
+        "owned_paths": 63,
+        "positional_siblings_checked": 567,
+        "public_leaves": 63
+      },
+      {
+        "depth": 3,
+        "owned_paths": 64,
+        "positional_siblings_checked": 576,
+        "public_leaves": 64
+      },
+      {
+        "depth": 4,
+        "owned_paths": 65,
+        "positional_siblings_checked": 780,
+        "public_leaves": 65
+      },
+      {
+        "depth": 4,
+        "owned_paths": 255,
+        "positional_siblings_checked": 3060,
+        "public_leaves": 255
+      },
+      {
+        "depth": 4,
+        "owned_paths": 256,
+        "positional_siblings_checked": 3072,
+        "public_leaves": 256
+      },
+      {
+        "depth": 5,
+        "owned_paths": 257,
+        "positional_siblings_checked": 3855,
+        "public_leaves": 257
+      }
+    ],
+    "dataset": "deterministic public commitments, no proofs or mining",
+    "positional_permutation_rejected": true
+  },
+  "wallets": {
+    "large": {
+      "all_statuses_match": true,
+      "balance_matches": true,
+      "height": 45,
+      "membership": {
+        "depth": 3,
+        "owned_paths": 1,
+        "positional_siblings_checked": 9,
+        "public_leaves": 47
+      },
+      "owned_records": 2,
+      "public_full_replay_B": 10028,
+      "spent_records": 1
+    },
+    "live": {
+      "all_statuses_match": true,
+      "balance_matches": true,
+      "height": 102,
+      "membership": {
+        "depth": 4,
+        "owned_paths": 31,
+        "positional_siblings_checked": 372,
+        "public_leaves": 110
+      },
+      "owned_records": 32,
+      "public_full_replay_B": 29108,
+      "spent_records": 1
+    },
+    "observer": {
+      "all_statuses_match": true,
+      "balance_matches": true,
+      "height": 46,
+      "membership": {
+        "depth": 3,
+        "owned_paths": 0,
+        "positional_siblings_checked": 0,
+        "public_leaves": 50
+      },
+      "owned_records": 0,
+      "public_full_replay_B": 13940,
+      "spent_records": 0
+    },
+    "recipient": {
+      "all_statuses_match": true,
+      "balance_matches": true,
+      "height": 103,
+      "membership": {
+        "depth": 4,
+        "owned_paths": 1,
+        "positional_siblings_checked": 12,
+        "public_leaves": 111
+      },
+      "owned_records": 3,
+      "public_full_replay_B": 29244,
+      "spent_records": 2
+    },
+    "small": {
+      "all_statuses_match": true,
+      "balance_matches": true,
+      "height": 46,
+      "membership": {
+        "depth": 3,
+        "owned_paths": 1,
+        "positional_siblings_checked": 9,
+        "public_leaves": 50
+      },
+      "owned_records": 3,
+      "public_full_replay_B": 13940,
+      "spent_records": 2
+    }
+  }
+}

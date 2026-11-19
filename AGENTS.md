@@ -1,3 +1,7 @@
+# Incremental APV2 wallet
+
+For changes to the ordinary wallet, run the acceptance command `./pqd wallet-walkthrough`, read devnet/WALLET_PROTOCOL.md and distinguish compact history bytes, SQLite file reads, complete wallet uploads and native proof costs. Preserve the private outbox's pinned real inputs across retry and reorg. Queries for public history must have identical parameters for different wallet holdings at the same cursor and target. Keep local seeds, owned rows, paths and the outbox outside publication.
+
 # Local PoW devnet
 
 Run `./pqd start` for persistent continuous mining and `./pqd walkthrough` for an isolated acceptance run. Read [the operator guide](devnet/README.md) and [the monetary and fork rules](devnet/CONSENSUS.md) before edits. Consensus owns work, ancestor validation, rewards and node-local chain selection. Never elect a branch in the test driver. The published evidence allowlist contains public packets, complete blocks, explicitly synthetic numerical results and timings. Keep seed backups and local databases outside Git. Use separate empty homes and preserve the registered native verifier and historical CP03/WHIR paths.

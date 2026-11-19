@@ -62,7 +62,7 @@ jobs:
         run: |
           set -euo pipefail
           ./pqd --home "$RUNNER_TEMP/pq-wallet" wallet-walkthrough
-          test -s "$RUNNER_TEMP/pq-wallet/evidence/WALLET.json"
+          python3 -IB devnet/check_wallet_capture.py "$RUNNER_TEMP/pq-wallet/evidence" .work/devnet-runtime > "$RUNNER_TEMP/pq-wallet/evidence/PUBLIC_REPLAY.json"
 
       - name: Upload the public result and blocks
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -73,6 +73,15 @@ jobs:
           path: |
             ${{ runner.temp }}/pq-devnet/evidence/RESULT.json
             ${{ runner.temp }}/pq-devnet/evidence/blocks/*.bin
+
+      - name: Upload the public wallet acceptance record and verified packets
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: wallet-sync-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/pq-wallet/evidence/PUBLIC_REPLAY.json
             ${{ runner.temp }}/pq-wallet/evidence/WALLET.json
             ${{ runner.temp }}/pq-wallet/evidence/blocks/*.bin
             ${{ runner.temp }}/pq-wallet/evidence/attempts/*.bin

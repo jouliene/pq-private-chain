@@ -1,0 +1,15 @@
+{
+  "added_ordinary_mined_successors": 1,
+  "final_height": 103,
+  "final_tip": "00000194571729d8f92d1a14f7743199dc6e087a0d2beebfd4ce06d5b08478ec",
+  "final_wallet_balance": 6,
+  "new_public_blocks": [
+    "00000194571729d8f92d1a14f7743199dc6e087a0d2beebfd4ce06d5b08478ec"
+  ],
+  "observed_successors": 2,
+  "original_height": 102,
+  "original_successors": 1,
+  "peers_in_agreement": 3,
+  "recipient_spend_height": 101,
+  "selected_recipient_payment_occurrences": 1
+}

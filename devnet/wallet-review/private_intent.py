@@ -7,7 +7,7 @@ import sqlite3
 import sys
 
 HERE=Path(__file__).resolve().parent
-sys.path[:0]=[str(HERE),str(HERE.parent)]
+sys.path[:0]=[str(HERE),str(HERE.parent),str(HERE.parents[1]/"experiments/advancing-payments")]
 from private_compare import decode
 from runtime import config
 from run import Resources
