@@ -1,0 +1,73 @@
+{
+  "all_four_public_db_and_live_peer_views_match": true,
+  "branches": {
+    "detached": {
+      "anchor": "f9c8e2b3263e66a072b1452e1c4570549396e3c26b5c4f64667dc082d8a23162",
+      "body_B": 923948,
+      "fees": 12,
+      "funded": 22,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 14,
+      "issued": 1400,
+      "miners_credited": 1412,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 4,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 8,
+      "tip": "00000206bb98779c93fdaeb621c280f04e2504718088b590dc9e25ae273ccd81",
+      "work": 58720256
+    },
+    "selected": {
+      "anchor": "e59a046dd2f88ff526bf774869b0623aeb6431363e55459400ad1a357e4681f2",
+      "body_B": 693960,
+      "fees": 9,
+      "funded": 21,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 15,
+      "issued": 1500,
+      "miners_credited": 1509,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 3,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 6,
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b",
+      "work": 62914560
+    }
+  },
+  "candidate": "8c4fb94334994ac98253348384050f23904d40a5",
+  "cargo_release_elapsed_s": 75,
+  "elapsed_s_incl_build": 197.22985100746155,
+  "empty_home_and_new_Cargo_target": true,
+  "equal_work_in_both_orders": true,
+  "four_public_daemon_requests_each": 40,
+  "genesis_mint": 0,
+  "independent_clone": true,
+  "installed_rust": "1.93.0",
+  "native_sha256": "0d74f63ee0a201fd49f62f91b269fa959b5388a17b4665a14dbb77200f9b0634",
+  "positive_block_occupancies": {
+    "0": 13,
+    "1": 1,
+    "2": 1
+  },
+  "public_evidence_manifest_sha256": "79c4e260b3c1487f83b5c819884d3dacf95ac9f83f9e02bd23e8e00c3b0148db",
+  "reference_dependencies": "Pristine pinned precompiled Qnero Rust libraries, separate from source-built product and relinked against independent reference programs.",
+  "side_reannouncement": {
+    "accepted_payment": "cd7ab665ceb60265e9501715bcf8faef4c16a5ab968cb8cf03667d9d83027576",
+    "archived_losing": "0000000809d1a0eb28d2954a88e5f32686f06cd2c535ed32e43f3eb47d39a43e",
+    "common_height": 2,
+    "fees": 3,
+    "included_tip": "0000026fdc33d6f79eb0fb648823bd322083e8afd2bc92a6c0ca62149d07832c",
+    "preannounce_selected_tip": "00000178838b06bebfe80a93d889b28276688dde4a46b3bea4c49cb205df2c95",
+    "received_from_other_peer": true,
+    "registered_nullifier_slots": 2,
+    "repeated_economic_effects": 0,
+    "selected_height": 5,
+    "total_issuance": 500
+  },
+  "source_built_public_replay_of_both_captures": true,
+  "truncated_backup_leaves_no_destination": true,
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652",
+  "upstream_full_tree_reference_sha256": "f9993157478ec5cd035a0b9c05f468a48bdd4a3f058cb640a0dc3c620a53db3a",
+  "upstream_reward_reference_sha256": "8eeda2ed743a343068457862231dd1686b5e55e041337bd11c83e99265bef449",
+  "valid_work_rejected_economic_cases": 3
+}

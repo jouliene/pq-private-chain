@@ -9,7 +9,27 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
-from network_oracle import GENESIS, NETWORK, ZERO, best, counted_hash, decode, examine, proof_public, u32
+from network_oracle import GENESIS, NETWORK, ZERO, best, counted_hash, decode, examine, proof_public, reference, u32
+
+
+def reference_frontier(leaves, roots_exe, cache):
+    n = len(leaves)
+    words = []
+    size = 1
+    while size <= n:
+        left = n - n % (4 * size)
+        for i in range((n // size) % 4):
+            start = left + i * size
+            part = tuple(leaves[start:start+size])
+            if size == 1:
+                words.append(part[0])
+            else:
+                if part not in cache:
+                    line, = reference(roots_exe,[str(size)],b"".join(part))
+                    cache[part] = bytes.fromhex(line.split()[2])
+                words.append(cache[part])
+        size *= 4
+    return b"".join(words)
 
 
 def audit_db(path, roots_exe, reward_exe):
@@ -29,6 +49,7 @@ def audit_db(path, roots_exe, reward_exe):
         assert genesis["ap"].hex()==examine([],roots_exe,reward_exe)["anchor"]
         assert all(i==h for h,(i,) in enumerate(con.execute("SELECT h FROM sel ORDER BY h")))
         results={}
+        segment_cache={}
         parents={r["parent"] for r in stored.values()}
         for tip in {chain[-1],*(b for b in stored if b not in parents)}:
             path_to_tip=[]
@@ -43,10 +64,20 @@ def audit_db(path, roots_exe, reward_exe):
             path_to_tip.reverse()
             result=examine(path_to_tip,roots_exe,reward_exe)
             assert bytes.fromhex(result["tip"])==tip and result["height"]==stored[tip]["h"]
-            for info in result["headers"]:
+            leaves=[]
+            previous_anchor=genesis["ap"]
+            for info,body in zip(result["headers"],path_to_tip,strict=True):
+                b=decode(body)
+                for packet in b["packets"]:
+                    slot,=proof_public(packet)
+                    leaves.extend(slot[3])
+                leaves.append(b["cm"])
                 row=stored[bytes.fromhex(info["id"])]
                 assert row["work"]==info["work"] and row["fees"]==info["fees"] and row["ap"].hex()==info["anchor"]
-                assert row["header"][100:132].hex()==info["funded_root"]
+                expected_header=previous_anchor+u32(b["h"])+b["state"]+counted_hash(b"dev-seal",NETWORK,b["id"])+b["root"]
+                assert row["header"]==expected_header and row["h"]==info["height"]
+                assert row["n"]==len(leaves) and row["front"]==reference_frontier(leaves,roots_exe,segment_cache)
+                previous_anchor=row["ap"]
             results[tip]=result
         assert best(results.values())["tip"]==chain[-1].hex()
         selected=results[chain[-1]]

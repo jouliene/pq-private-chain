@@ -1,0 +1,25 @@
+{
+  "ties": [
+    {
+      "order": [
+        "first",
+        "sibling"
+      ],
+      "H1": "000000166d485b8a884f33b1f31350eafb04c27b082c84157b5dcf0db075cd1d",
+      "H2": "0000014dd8c6e1913339de736917081ff2f8b2c991eb4f9a373a654b1119b68f",
+      "work": 8388608,
+      "issued": 200
+    },
+    {
+      "order": [
+        "sibling",
+        "first"
+      ],
+      "H1": "000000166d485b8a884f33b1f31350eafb04c27b082c84157b5dcf0db075cd1d",
+      "H2": "0000014dd8c6e1913339de736917081ff2f8b2c991eb4f9a373a654b1119b68f",
+      "work": 8388608,
+      "issued": 200
+    }
+  ],
+  "truncated_backup_rejected_before_destination_creation": true
+}

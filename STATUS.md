@@ -1,6 +1,14 @@
-# First local PoW devnet — implementation in progress
+# First runnable local PoW devnet
 
-Base `46932763d7a0e6d03ea848ae2e22ab65ef48d5df`. Root owns the loopback peer network, mining orchestration, CLI, walkthrough, CI and integration. The consensus specialist owns `devnet/chain.py` and monetary validation. The wallet specialist owns the isolated amount-selecting wallet and reward commitment. A non-author owns `devnet/review/` and the clean reproduction. Deep reorganization must replay independently validated history automatically. Winning tips cannot be selected by the driver. Run from this repository root. Resume with `git status --short --branch`, inspect devnet files and running node processes, then exercise the walkthrough before running the independent clone. Author pre-freeze walkthrough completed with 15 winning blocks, 1,500 issued, 9 recycled fees, 3 selected payments, 693,960 selected block bytes, and an automatic 10-block detach. The active source changes add metered TCP uploads and atomic seed import. Repeat from the frozen revision, compare a non-author clean checkout and validate hosted CI before milestone closure. Preserve earlier evidence below.
+The source and local independent acceptance passed. Run `./pqd start` for continuous mining or `./pqd walkthrough` for a new reproducible network. The [operator guide](devnet/README.md), [decision and costs](devnet/RESULTS.md), [non-author review](devnet/review/REVIEW.md) and [hosted CI history](https://github.com/jouliene/pq-private-chain/actions/workflows/devnet.yml) provide the release record. The global private post-quantum blockchain objective remains **ACTIVE**.
+
+- Base `46932763d7a0e6d03ea848ae2e22ab65ef48d5df`; independently rebuilt, tested node/wallet revision `8c4fb94334994ac98253348384050f23904d40a5`. The release adds tests, raw public evidence and operator documentation to this same implementation.
+- Two CPU miners and a third validator agreed after partitions. The freshly seed-restored recipient spent again. After a ten-block detach, all three and a new fourth node agreed on the H15 tip, 1,500 issued units, 9 recycled fees and 6 nullifiers. H15 bodies totaled 693,960 B. Independent public-only branch replay and interrupted deep rollback matched.
+- Under continuous mining a first proof expired. Its replacement entered H18, and the recipient observed 17 units. Live observations, submission costs and the cost of failure are in [LIVE.md](devnet/LIVE.md).
+- Release verification: run `git rev-parse HEAD`, `git ls-remote origin refs/heads/main`, and `gh run list --commit "$(git rev-parse HEAD)"`. A successful **Local proof-of-work devnet** walkthrough and the existing **Research payment smoke** are the hosted checks. Re-run public evidence checks from the review with an independently built runtime. All release material excludes private wallets.
+- Remaining work belongs to the global project. End-to-end PQ/privacy composition, network-level anonymity, conflict and propagation behavior beyond the local test, production PoW economics and archival affordability remain open. Native private assets and indivisible two-owner swaps remain proposed versioned extensions.
+
+## Historical milestone
 
 # Advancing payments for the first local PoW devnet
 

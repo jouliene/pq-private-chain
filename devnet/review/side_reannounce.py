@@ -63,6 +63,10 @@ def run(args):
             audit=examine(prefix+alternative+[block],args.reference,args.reward)
             assert audit["tip"]==confirmed["tip"] and audit["payments"]==1
             assert check_peer(demo.cfg["ports"]["a"],args.reference,args.reward)["selected"]["tip"]==audit["tip"]
+            if args.capture is not None:
+                args.capture.mkdir(parents=True,exist_ok=False)
+                for body in (*prefix,losing,*alternative,block):
+                    (args.capture/(decode(body)["id"].hex()+".bin")).write_bytes(body)
             return dict(accepted_payment=txid,archived_losing=decode(losing)["id"].hex(),common_height=2,
                         preannounce_selected_tip=candidate_ids[-1],selected_height=5,received_from_other_peer=True,
                         included_tip=audit["tip"],fees=audit["fees"],total_issuance=audit["issued"],
@@ -74,4 +78,5 @@ if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     for name in ["evidence","runtime","reference","reward"]:
         p.add_argument("--"+name,type=lambda x:Path(x).resolve(),required=True)
+    p.add_argument("--capture",type=lambda x:Path(x).resolve(),help="new directory for the six public blocks")
     print(json.dumps(run(p.parse_args()),indent=2,sort_keys=True))

@@ -1,6 +1,6 @@
 # First runnable local proof-of-work devnet
 
-**Active milestone.** Starting from public revision `46932763d7a0e6d03ea848ae2e22ab65ef48d5df`, deliver a runnable three-peer local network, two independent CPU miners, branch-valid APV2 singleton payments, scheduled spendable rewards, exact fees, seed restoration followed by spending, deep archival reorganization, and fresh genesis sync. Acceptance includes a clean independent reproduction, a published revision and a CI exercise of the changed path. The global private post-quantum blockchain objective remains active. See STATUS.md for the execution checkpoint.
+**Bounded local devnet milestone.** Starting from public revision `46932763d7a0e6d03ea848ae2e22ab65ef48d5df`, deliver a runnable three-peer local network, two independent CPU miners, branch-valid APV2 singleton payments, scheduled spendable rewards, exact fees, seed restoration followed by spending, deep archival reorganization, and fresh genesis sync. Acceptance includes a clean independent reproduction, a published revision and a CI exercise of the changed path. The global private post-quantum blockchain objective remains active. See [the decision](devnet/RESULTS.md) and STATUS.md for the executable delivery and acceptance record.
 
 ## Historical milestone
 

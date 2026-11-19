@@ -1,0 +1,47 @@
+{
+  "branches": {
+    "detached": {
+      "anchor": "5b5c552512a9908f132c3c5bd3a7c7d2d500e82dbc75be5322386b0cc68a5c22",
+      "body_B": 923948,
+      "fees": 12,
+      "funded": 22,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 14,
+      "issued": 1400,
+      "miners_credited": 1412,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 4,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 8,
+      "tip": "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2",
+      "work": 58720256
+    },
+    "selected": {
+      "anchor": "d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36",
+      "body_B": 693960,
+      "fees": 9,
+      "funded": 21,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 15,
+      "issued": 1500,
+      "miners_credited": 1509,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 3,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 6,
+      "tip": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615",
+      "work": 62914560
+    }
+  },
+  "common_height": 4,
+  "decoded_public_objects": 25,
+  "deep_replays": 1,
+  "public_capture_sha256": "367d81047b2a0aa126fdff682d342062121c15b2d54d3ee47a8ab4a77ed2f2cd",
+  "registered_verifier": true,
+  "replayed_from_genesis": true,
+  "selected_occupancies": {
+    "0": 13,
+    "1": 1,
+    "2": 1
+  }
+}

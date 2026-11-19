@@ -1,0 +1,31 @@
+{
+  "cases": {
+    "excess-subsidy": {
+      "bytes": 222,
+      "claimed": 101,
+      "file_sha256": "f97267dc9a9bf076e9d363eeccd718e6e68ea4d97324ee3c82b25cf546a8a992",
+      "id": "000002b18edcedf2957bae7e22e8437f27fc311dc011643f6d58babb0999b214",
+      "unchanged_all_tables": true,
+      "work_threshold_passed": true
+    },
+    "incorrect-tree": {
+      "bytes": 222,
+      "claimed": 100,
+      "file_sha256": "a7da0218299e4004f698e299ce3c0a4a10416873e6a9cf073cbfa6891ba470c5",
+      "id": "000003e646a3b7d27e288fd46365664986c3c617c3ed2257d7777a823cce468e",
+      "unchanged_all_tables": true,
+      "work_threshold_passed": true
+    },
+    "wrong-note-denomination": {
+      "bytes": 222,
+      "claimed": 100,
+      "file_sha256": "5dabe018c2043af90514cccb8290a4aa0de1898ddd415b367249b65be9ec9b8b",
+      "id": "00000276d7140b6fe6eda924c6985cffa0bf6e3f4daa1e720db4379c5977a9f7",
+      "unchanged_all_tables": true,
+      "work_threshold_passed": true
+    }
+  },
+  "valid_first_sha256": "7dd0217c625c5caaabbef521e3aa8709eb292f7887e916616d3cf9f4ecbb2d1f",
+  "valid_positive_issuance": 100,
+  "valid_positive_tip": "00000348fd008e5ed2170db1d40a72fe6efa85f3d4a7cf057fee9ddc1a6b8090"
+}

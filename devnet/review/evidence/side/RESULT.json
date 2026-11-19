@@ -1,0 +1,13 @@
+{
+  "accepted_payment": "cd7ab665ceb60265e9501715bcf8faef4c16a5ab968cb8cf03667d9d83027576",
+  "archived_losing": "0000000809d1a0eb28d2954a88e5f32686f06cd2c535ed32e43f3eb47d39a43e",
+  "common_height": 2,
+  "fees": 3,
+  "included_tip": "0000026fdc33d6f79eb0fb648823bd322083e8afd2bc92a6c0ca62149d07832c",
+  "preannounce_selected_tip": "00000178838b06bebfe80a93d889b28276688dde4a46b3bea4c49cb205df2c95",
+  "received_from_other_peer": true,
+  "registered_nullifier_slots": 2,
+  "repeated_economic_effects": 0,
+  "selected_height": 5,
+  "total_issuance": 500
+}

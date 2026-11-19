@@ -1,0 +1,126 @@
+[
+  {
+    "deep_replays": 1,
+    "node": "a",
+    "page_hashes": {
+      "leaves": "4430a9a7ba76cdbb0a5a4f11871126d5032db3cbfc753a72dfb02396a380308d",
+      "nfs": "d62586245a51da20ffff6d343b41accd3a76af6f2b8d0c504528843bc9a8301f",
+      "receipts": "1e9251ec28e850a802051f4187eb4ecf66be5e65fd9dd4110f0b9543b14580cc",
+      "rewards": "d0adeaef67102b200a20099c5b6726681b53670e242954380afb144388c719de"
+    },
+    "port": 40359,
+    "process": 3063452,
+    "public_requests": 40,
+    "selected": {
+      "anchor": "e59a046dd2f88ff526bf774869b0623aeb6431363e55459400ad1a357e4681f2",
+      "body_B": 693960,
+      "fees": 9,
+      "funded": 21,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 15,
+      "issued": 1500,
+      "miners_credited": 1509,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 3,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 6,
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b",
+      "work": 62914560
+    },
+    "wire_bytes_in": 711500,
+    "wire_bytes_out": 3909
+  },
+  {
+    "deep_replays": 0,
+    "node": "b",
+    "page_hashes": {
+      "leaves": "4430a9a7ba76cdbb0a5a4f11871126d5032db3cbfc753a72dfb02396a380308d",
+      "nfs": "d62586245a51da20ffff6d343b41accd3a76af6f2b8d0c504528843bc9a8301f",
+      "receipts": "1e9251ec28e850a802051f4187eb4ecf66be5e65fd9dd4110f0b9543b14580cc",
+      "rewards": "d0adeaef67102b200a20099c5b6726681b53670e242954380afb144388c719de"
+    },
+    "port": 34489,
+    "process": 3063479,
+    "public_requests": 40,
+    "selected": {
+      "anchor": "e59a046dd2f88ff526bf774869b0623aeb6431363e55459400ad1a357e4681f2",
+      "body_B": 693960,
+      "fees": 9,
+      "funded": 21,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 15,
+      "issued": 1500,
+      "miners_credited": 1509,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 3,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 6,
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b",
+      "work": 62914560
+    },
+    "wire_bytes_in": 711500,
+    "wire_bytes_out": 3909
+  },
+  {
+    "deep_replays": 0,
+    "node": "c",
+    "page_hashes": {
+      "leaves": "4430a9a7ba76cdbb0a5a4f11871126d5032db3cbfc753a72dfb02396a380308d",
+      "nfs": "d62586245a51da20ffff6d343b41accd3a76af6f2b8d0c504528843bc9a8301f",
+      "receipts": "1e9251ec28e850a802051f4187eb4ecf66be5e65fd9dd4110f0b9543b14580cc",
+      "rewards": "d0adeaef67102b200a20099c5b6726681b53670e242954380afb144388c719de"
+    },
+    "port": 41477,
+    "process": 3063506,
+    "public_requests": 40,
+    "selected": {
+      "anchor": "e59a046dd2f88ff526bf774869b0623aeb6431363e55459400ad1a357e4681f2",
+      "body_B": 693960,
+      "fees": 9,
+      "funded": 21,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 15,
+      "issued": 1500,
+      "miners_credited": 1509,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 3,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 6,
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b",
+      "work": 62914560
+    },
+    "wire_bytes_in": 711500,
+    "wire_bytes_out": 3909
+  },
+  {
+    "deep_replays": 0,
+    "node": "d",
+    "page_hashes": {
+      "leaves": "4430a9a7ba76cdbb0a5a4f11871126d5032db3cbfc753a72dfb02396a380308d",
+      "nfs": "d62586245a51da20ffff6d343b41accd3a76af6f2b8d0c504528843bc9a8301f",
+      "receipts": "1e9251ec28e850a802051f4187eb4ecf66be5e65fd9dd4110f0b9543b14580cc",
+      "rewards": "d0adeaef67102b200a20099c5b6726681b53670e242954380afb144388c719de"
+    },
+    "port": 41689,
+    "process": 3063533,
+    "public_requests": 40,
+    "selected": {
+      "anchor": "e59a046dd2f88ff526bf774869b0623aeb6431363e55459400ad1a357e4681f2",
+      "body_B": 693960,
+      "fees": 9,
+      "funded": 21,
+      "genesis": "9f60d1091c747fd598c286772e9bd544c1d2144b9b7b52a562addb50e7d169a4",
+      "height": 15,
+      "issued": 1500,
+      "miners_credited": 1509,
+      "network": "672a640b8b0416d093895f096d83bfb5b59c810bdedd6f3852429ad2e70b136d",
+      "payments": 3,
+      "registered_profile": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+      "spent": 6,
+      "tip": "00000074e008a2db0d59bad2d4899371b5d3c9dbfaf50cb8a8b546ff7f6f192b",
+      "work": 62914560
+    },
+    "wire_bytes_in": 711488,
+    "wire_bytes_out": 3909
+  }
+]
