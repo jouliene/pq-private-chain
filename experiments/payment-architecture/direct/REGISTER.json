@@ -1,0 +1,1 @@
+{"suite":"DLF1","gates_before_blinding":455,"degree_bits":12,"public_inputs":26,"wires":135,"routed":60,"rate_bits":5,"queries":26,"cap_height":4,"folds":[2, 2, 2, 2, 2],"row_blinding":true,"leaf_hiding":true}

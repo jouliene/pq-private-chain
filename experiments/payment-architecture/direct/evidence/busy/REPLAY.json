@@ -1,0 +1,100 @@
+{
+  "current_spent": 8,
+  "distinct_nullifiers": 8,
+  "distinct_outputs": 8,
+  "fees": 12,
+  "four_distinct_public_reward_keys_each_paid_twice": true,
+  "four_fresh_registered_verifications": true,
+  "fresh_replay_and_controls_wall_s": 1.5870856860419735,
+  "height": 10,
+  "included_height": 10,
+  "issued": 1000,
+  "last_gross_reward": 112,
+  "nonces_and_full_bodies_verified": 10,
+  "payment_anchor_height": 8,
+  "registered_profile": "5d6cfc6ccff5792e4899799124b2fb1e7dac50f727825c4886485dc01a564ce8",
+  "root": "320acbebf0b4d292fb9ab65de802d615dc3e58e215c85071d71d4db7c69eb992",
+  "selected_work": 41943040,
+  "standalone_spent_readmissions_rejected": 4,
+  "tip": "00000344474c89e1e7c0066ea79e6c20a3f7424ba11c5c932ca9068d6f9dad31",
+  "verifier_meters": [
+    {
+      "cpu_s": 2.624700844,
+      "elapsed_s": 1.430635938,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.007923446,
+      "elapsed_s": 0.00792308,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.007275082,
+      "elapsed_s": 0.00727501,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006324718,
+      "elapsed_s": 0.006324695,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006394856,
+      "elapsed_s": 0.006394614,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006389626,
+      "elapsed_s": 0.006389743,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006886272,
+      "elapsed_s": 0.006886245,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006353895,
+      "elapsed_s": 0.006353883,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006329855,
+      "elapsed_s": 0.006329892,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006327137,
+      "elapsed_s": 0.006327228,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006324243,
+      "elapsed_s": 0.006324322,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.006319615,
+      "elapsed_s": 0.006319584,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    },
+    {
+      "cpu_s": 0.008066561,
+      "elapsed_s": 0.008065911,
+      "operation": "public_verify",
+      "peak_rss_kib": 200708
+    }
+  ]
+}

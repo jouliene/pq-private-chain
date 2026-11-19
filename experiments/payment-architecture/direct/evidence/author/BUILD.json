@@ -1,0 +1,12 @@
+{
+  "binary_sha256": "ff2dd9053bcaf5edc72611da8dc033e9af6bd75b262c22812bc5539949849a8b",
+  "compiled_sources": {
+    "codec.rs": "de78dea624c6e30adc74cddf7a1e0406573686cfdfae89564b984de301fe79b9",
+    "main.rs": "ee5227d4dd801f876f71857c4f222de659f4cd1cd69d1efa2b169a31e81bc4e3",
+    "registry.rs": "7e57e8b71ab8efcd1a200bf30646d6d8206bf5987f9c27ee53895356f714a524",
+    "wallet.rs": "8084d74441ffaf281ee39f23d979d7bac5072513f55cb698a4a529783956268e"
+  },
+  "driver_sha256": "c92f7967271599cb05dd903eade78fcb3140409bdd77c3afe2943413cb13bc08",
+  "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+}

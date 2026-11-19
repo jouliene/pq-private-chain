@@ -1,0 +1,76 @@
+{
+  "baseline": {
+    "busy": {
+      "archive_B_per_payment": 230280.47619047618,
+      "archive_TB_per_year": 23.028047619047616,
+      "blocks_per_inclusion": 0.3174603174603175,
+      "cold_wallet_projection_GB": 384.0825396825397,
+      "headers_ids_GB": 5.2063492063492065,
+      "mean_paid_width": 3.5,
+      "node_effects_min_GB": 13.815873015873015,
+      "one_block_relay_body_TB": 23.028047619047616,
+      "one_preforward_plus_block_body_TB": 46.04864761904763,
+      "proof_allowance_1TB": 6332.523809523809,
+      "proof_allowance_5TB": 46332.52380952381,
+      "wallet_upload_body_TB": 23.0206
+    },
+    "full": {
+      "archive_B_per_payment": 230265.5,
+      "archive_TB_per_year": 23.02655,
+      "blocks_per_inclusion": 0.25,
+      "cold_wallet_projection_GB": 382.025,
+      "headers_ids_GB": 4.1,
+      "mean_paid_width": 4.0,
+      "node_effects_min_GB": 13.6,
+      "one_block_relay_body_TB": 23.02655,
+      "one_preforward_plus_block_body_TB": 46.04715,
+      "proof_allowance_1TB": 6347.5,
+      "proof_allowance_5TB": 46347.5,
+      "wallet_upload_body_TB": 23.0206
+    },
+    "low": {
+      "archive_B_per_payment": 230576.94214876034,
+      "archive_TB_per_year": 23.057694214876037,
+      "blocks_per_inclusion": 1.6528925619834711,
+      "cold_wallet_projection_GB": 424.81322314049584,
+      "headers_ids_GB": 27.107438016528928,
+      "mean_paid_width": 1.21,
+      "node_effects_min_GB": 18.08925619834711,
+      "one_block_relay_body_TB": 23.057694214876037,
+      "one_preforward_plus_block_body_TB": 46.07829421487603,
+      "proof_allowance_1TB": 6036.05785123967,
+      "proof_allowance_5TB": 46036.05785123967,
+      "wallet_upload_body_TB": 23.0206
+    },
+    "single": {
+      "archive_B_per_payment": 230432.0,
+      "archive_TB_per_year": 23.0432,
+      "blocks_per_inclusion": 1.0,
+      "cold_wallet_projection_GB": 404.9,
+      "headers_ids_GB": 16.4,
+      "mean_paid_width": 1.0,
+      "node_effects_min_GB": 16.0,
+      "one_block_relay_body_TB": 23.0432,
+      "one_preforward_plus_block_body_TB": 46.0638,
+      "proof_allowance_1TB": 6181.0,
+      "proof_allowance_5TB": 46181.0,
+      "wallet_upload_body_TB": 23.0206
+    }
+  },
+  "ciphertexts_B": 3584,
+  "complete_blocks": 102,
+  "complete_packet_B": 230206,
+  "included_per_year": 100000000,
+  "observed_canonical_occupancy": {
+    "0": 98,
+    "1": 4,
+    "2": 0,
+    "3": 0,
+    "4": 0
+  },
+  "packet_prefix_B": 9,
+  "per_packet_block_length_B": 4,
+  "pow_block_B": 222,
+  "proof_including_public_inputs_B": 226613,
+  "source_sha256": "aa409fe5c57b4560a257d42f02c24ee67eed04e02e11db140262dcd007da29fb"
+}

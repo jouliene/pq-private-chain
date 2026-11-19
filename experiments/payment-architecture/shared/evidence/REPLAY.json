@@ -1,0 +1,51 @@
+{
+  "alternative_direct_archive_B": 460952,
+  "archive_sha256": "067af20f58e04cdd6e95ff6fe0929b3e1bdf2072dfa8c258eaf9fb8b8cc0a973",
+  "canonical_core_B": [
+    254,
+    254
+  ],
+  "certificate_B": 247206,
+  "certificate_slots": 3,
+  "core_hex": [
+    "5051414e4e583031b03957c86c5378e46210fa0e26b5fc855383e97c64ae9758c662afbea9a1246f080000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb04000000b19a31128d46c39530376065e2a6cf54e38d66100a17593605d44a05c51a1f40670000000000000051e4ba9da545437410aadc2288be6f679423535351ae9b6f1da1c36a3f8fd2936278d714fbdfd1e8797e28dff645d0c69f75be2e9c831b11eaeafd8f4364bfa78709a9afa9913ec749e7854ba9fca9cb3629df773d40c40d02a703b15df465f101334a8ddcb7f743e38c53b7193d3c3eb5bb6cca376bd5576f40e3d795db2f37711300000000000000",
+    "5051414e4e583031b03957c86c5378e46210fa0e26b5fc855383e97c64ae9758c662afbea9a1246f0800a7417745b270af8c505205e218cbea38e2689afdc8a3b25103b8dc5bc6788005000000bcd5b20cbce67dd0c30ea8b653cf3b37e680a74d28ef439b7acf0fbc50931b3767000000000000007ce054f3eac259d5de480fc576970c6a51f3e0a68f67ddaf55639b964ab3a0fe69f67727497b5c3acf15529b3495df988836de4b0867271c0f03edad7048c719ca299cae4b875cc3a589d94851082c006a062404a46952cf0db032d1325307f501c153b1532bdfe4c28b88f2edd531c514c21de847fa7d04b7f1f6a1f6d48d6bd41c01000000000000"
+  ],
+  "detached_archive_B": 247742,
+  "expired_unspent_refusal": true,
+  "fallback_after_fork_H": 7,
+  "fees_in_new_two_blocks": 6,
+  "final_count": 11,
+  "final_root": "ca299cae4b875cc3a589d94851082c006a062404a46952cf0db032d1325307f5",
+  "fixture_bits": 8,
+  "fresh_aggregate_and_individual_replays_equal": true,
+  "missing_archive_evidence_rejected": true,
+  "modeled_submit_reply_B": [
+    120,
+    120
+  ],
+  "modeled_submit_request_B": [
+    230229,
+    230229
+  ],
+  "original_prefix_H": 3,
+  "original_prefix_tip": "0000036776a43e93ab55842eab833e5202617fe94a535ee24e245646ad15d9eb",
+  "poisoned_cores_resealed": true,
+  "proof_poison_rejected": true,
+  "raw_input_packets_B": [
+    230206,
+    230206
+  ],
+  "receipt_poison_rejected": true,
+  "spent_replay_rejected": true,
+  "standalone_validated_H": [
+    4,
+    5
+  ],
+  "true_work_fork_reselected": true,
+  "two_payment_final_tip": "00a03ea66c03ff454bac6f133a3ca31dba2733c2663713ca1d0dc47cc96fcb66",
+  "unaffiliated_certificate_slot_inert": true,
+  "used_slots": 2,
+  "wrong_anchor_same_effects_rejected": true,
+  "wrong_receipt_same_effects_rejected": true
+}

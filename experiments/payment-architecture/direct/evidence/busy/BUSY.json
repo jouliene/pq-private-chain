@@ -1,0 +1,270 @@
+{
+  "H9_controlled_grant_s": 2.002233939943835,
+  "H9_empty_and_unrelated": true,
+  "H9_search_cpu_s": 2.141432007,
+  "H9_wall_search_and_accept_s": 2.2836951550561935,
+  "H9_worker_lifecycle_relative_s": [
+    2.0073287578998134,
+    4.291023912956007
+  ],
+  "all_four_minimum_simultaneous_native_proof_s": 3.6126619859936824,
+  "all_selected_B_per_included": 143746.0,
+  "bank": "real 22-bit selected PoW",
+  "bulk_packet_B": 572748,
+  "common_H8_anchor": true,
+  "core_prefix_and_nonce_B": 222,
+  "empty_blocks": 9,
+  "format": "DLF1-BUSY-1",
+  "four_wallet_session_wall_s": 7.620334356906824,
+  "full_paid_block_B": 572986,
+  "full_selected_archive_B": 574984,
+  "independent_wallet_processes": 4,
+  "node_preinclusion_fetch_frames": {
+    "pending": {
+      "count": 1,
+      "reply_B": 298,
+      "request_B": 24,
+      "response_body_B": 0
+    },
+    "status": {
+      "count": 1,
+      "reply_B": 878,
+      "request_B": 23,
+      "response_body_B": 0
+    },
+    "tx": {
+      "count": 4,
+      "reply_B": 572872,
+      "request_B": 364,
+      "response_body_B": 572748
+    }
+  },
+  "node_selected_relay_frames": {
+    "block": {
+      "count": 2,
+      "reply_B": 573270,
+      "request_B": 188,
+      "response_body_B": 573208
+    },
+    "locate": {
+      "count": 1,
+      "reply_B": 164,
+      "request_B": 638,
+      "response_body_B": 0
+    },
+    "pending": {
+      "count": 1,
+      "reply_B": 31,
+      "request_B": 24,
+      "response_body_B": 0
+    },
+    "status": {
+      "count": 1,
+      "reply_B": 883,
+      "request_B": 23,
+      "response_body_B": 0
+    }
+  },
+  "packet_B": [
+    143187,
+    143187,
+    143187,
+    143187
+  ],
+  "packet_framing_B_per_payment": 9,
+  "paid_H10": true,
+  "paid_block_B_per_included": 143246.5,
+  "paid_block_single_fetch": {
+    "block_payload_B": 572986,
+    "reply_B": 573017,
+    "request_B": 94
+  },
+  "payment_proof_B": [
+    139594,
+    139594,
+    139594,
+    139594
+  ],
+  "payments": [
+    {
+      "K_enter_s": 0.17333991290070117,
+      "K_return_s": 7.163452712004073,
+      "fee": 3,
+      "minimum_proof_overlap_with_H9_worker_lifecycle_s": 1.8959981639519334,
+      "packet_B": 143187,
+      "proof_certain_interval_s": [
+        2.3950257490040734,
+        7.1628349929007005
+      ],
+      "real_inputs": 2,
+      "submit": {
+        "duplicate": false,
+        "outcome": "accepted",
+        "reply_B": 120,
+        "request_B": 143210
+      },
+      "tx": "835b89685cd7c7fabef87027cd534f24d5682cc8d9c943e57c6d4c5886b7bab1",
+      "wallet_call_wall_s": 7.261467327014543,
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.000203092,
+          "elapsed_s": 0.000203221,
+          "operation": "wallet_open",
+          "peak_rss_kib": 2968
+        },
+        {
+          "cpu_s": 4.222758809,
+          "elapsed_s": 2.221068117,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 200900
+        },
+        {
+          "cpu_s": 9.244663694,
+          "elapsed_s": 4.768426963,
+          "operation": "compact_prove",
+          "peak_rss_kib": 452244
+        }
+      ]
+    },
+    {
+      "K_enter_s": 0.18126484099775553,
+      "K_return_s": 6.008213136927225,
+      "fee": 3,
+      "minimum_proof_overlap_with_H9_worker_lifecycle_s": 2.2836951550561935,
+      "packet_B": 143187,
+      "proof_certain_interval_s": [
+        1.5656092429272244,
+        6.007687734997756
+      ],
+      "real_inputs": 2,
+      "submit": {
+        "duplicate": false,
+        "outcome": "accepted",
+        "reply_B": 120,
+        "request_B": 143210
+      },
+      "tx": "caabf5b0c6b7f2e62fd7abd05fb29b9007aab911251d510fdcf3d351845ff0a7",
+      "wallet_call_wall_s": 6.113035049056634,
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.000209453,
+          "elapsed_s": 0.000209658,
+          "operation": "wallet_open",
+          "peak_rss_kib": 2964
+        },
+        {
+          "cpu_s": 2.566873946,
+          "elapsed_s": 1.383819,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 200768
+        },
+        {
+          "cpu_s": 8.746158348,
+          "elapsed_s": 4.442603894,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451920
+        }
+      ]
+    },
+    {
+      "K_enter_s": 0.1798253459855914,
+      "K_return_s": 7.231709781917743,
+      "fee": 3,
+      "minimum_proof_overlap_with_H9_worker_lifecycle_s": 2.2836951550561935,
+      "packet_B": 143187,
+      "proof_certain_interval_s": [
+        1.8975243589177433,
+        7.231187816985591
+      ],
+      "real_inputs": 2,
+      "submit": {
+        "duplicate": false,
+        "outcome": "accepted",
+        "reply_B": 120,
+        "request_B": 143210
+      },
+      "tx": "d89e3d8a07ab621295cb73a0cf62255bc2464478954dcea542680a875cb97d6b",
+      "wallet_call_wall_s": 7.322224822011776,
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.000197238,
+          "elapsed_s": 0.000197418,
+          "operation": "wallet_open",
+          "peak_rss_kib": 3032
+        },
+        {
+          "cpu_s": 3.236784046,
+          "elapsed_s": 1.717177048,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 201028
+        },
+        {
+          "cpu_s": 10.506492405,
+          "elapsed_s": 5.334185423,
+          "operation": "compact_prove",
+          "peak_rss_kib": 452096
+        }
+      ]
+    },
+    {
+      "K_enter_s": 0.17394230794161558,
+      "K_return_s": 7.5239189609419554,
+      "fee": 3,
+      "minimum_proof_overlap_with_H9_worker_lifecycle_s": 2.2836951550561935,
+      "packet_B": 143187,
+      "proof_certain_interval_s": [
+        1.8979178129419552,
+        7.5234072599416155
+      ],
+      "real_inputs": 2,
+      "submit": {
+        "duplicate": false,
+        "outcome": "accepted",
+        "reply_B": 120,
+        "request_B": 143210
+      },
+      "tx": "ab03098fc7b863f377d2304b4fdbc50be2686a393cf439f9ddd9372e893f935f",
+      "wallet_call_wall_s": 7.619288751040585,
+      "wallet_metrics": [
+        {
+          "cpu_s": 0.00022934,
+          "elapsed_s": 0.000229513,
+          "operation": "wallet_open",
+          "peak_rss_kib": 2964
+        },
+        {
+          "cpu_s": 3.237387054,
+          "elapsed_s": 1.723463804,
+          "operation": "wallet_prover_setup",
+          "peak_rss_kib": 200776
+        },
+        {
+          "cpu_s": 11.101548616,
+          "elapsed_s": 5.626001148,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451784
+        }
+      ]
+    }
+  ],
+  "receipt_B_per_payment": 3584,
+  "scenario": "one controlled H9 opportunity, four independent concurrent direct senders, paid H10",
+  "selected": [
+    "0000024cae656d3c2bcc5d077bb65b987faa1843bfa17e1c335ac5e633150dca",
+    "0000030ec27c27f9a02bbf7e74f95a078c55d33ca7a589ca4b9b2c50ebd20643",
+    "0000022c260c8a33454f78888e3465216665aa01c1906376be3e9aac7b07634b",
+    "000003e742ebf8ca5a010f64c61fd1d6e683a12d2affc6b6272b237125f5fe32",
+    "00000209c61f4c7a4edc4719eb500df30b4af546c8d65b3e205fadfdb104ea1b",
+    "0000013c34ca786c8d9bda25314118e5334f4e38d185e7af0d0f6063b86db5bd",
+    "000003cec25a762c3a7579639c6b93b0f3bac042ebff96c144f0e533ebea735e",
+    "000002907a9eb2a24823adbeb98586844dc58fcb45991d0be26a97fb8af5f6f0",
+    "00000187687669b9e13a8fbf6febd509703b58b61fd4beedc32b0851cc90dd85",
+    "00000344474c89e1e7c0066ea79e6c20a3f7424ba11c5c932ca9068d6f9dad31"
+  ],
+  "wallet_txs": [
+    "835b89685cd7c7fabef87027cd534f24d5682cc8d9c943e57c6d4c5886b7bab1",
+    "caabf5b0c6b7f2e62fd7abd05fb29b9007aab911251d510fdcf3d351845ff0a7",
+    "d89e3d8a07ab621295cb73a0cf62255bc2464478954dcea542680a875cb97d6b",
+    "ab03098fc7b863f377d2304b4fdbc50be2686a393cf439f9ddd9372e893f935f"
+  ]
+}

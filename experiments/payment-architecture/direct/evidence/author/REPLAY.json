@@ -1,0 +1,89 @@
+{
+  "archived_forks_included_B": 718619,
+  "bank_blocks": 12,
+  "canonical_archive_B": 575206,
+  "canonical_payments": 4,
+  "competing_spend_shared_nullifiers": 2,
+  "external_vk_B": 1481,
+  "fees": 12,
+  "height": 11,
+  "issued": 1100,
+  "occupancy": {
+    "0": 8,
+    "1": 2,
+    "2": 1
+  },
+  "payment_ages": {
+    "7f7d70ef5554f057a12096e1b8f23b3a6903d87a5839009ce11616f42a55e77d": 2,
+    "8fd83ccad5071a17024491e160527132edc2cc10f9a6ff22113c4bc6e49b990c": 1,
+    "a92c3939f4b80937c65581c5e16067484061bf08a4b4b33d6005e9e608d7f36f": 1,
+    "be74c18b1a83ff96107f5405973a65d6fedfa600e9ae1ea6c6aae6bef253ceb9": 1
+  },
+  "projection_payload_all_branches_B": 22380,
+  "spent": 8,
+  "sqlite_full_B": 843776,
+  "sqlite_pages_by_object_B": {
+    "blocks": 729088,
+    "config": 4096,
+    "metrics": 4096,
+    "outs": 24576,
+    "outs_h": 4096,
+    "pool": 4096,
+    "sel": 4096,
+    "spent": 4096,
+    "spent_h": 4096,
+    "sqlite_autoindex_outs_1": 4096,
+    "sqlite_autoindex_pool_1": 4096,
+    "sqlite_autoindex_sel_1": 4096,
+    "sqlite_autoindex_wallet_history_v2_1": 4096,
+    "sqlite_schema": 4096,
+    "txloc": 4096,
+    "wallet_header_lookup": 4096,
+    "wallet_history_v2": 32768
+  },
+  "standalone_native_verify": [
+    {
+      "cpu_s": 0.025470324,
+      "elapsed_s": 0.02547077,
+      "operation": "public_verify",
+      "peak_rss_kib": 200576
+    },
+    {
+      "cpu_s": 0.013098802,
+      "elapsed_s": 0.013099557,
+      "operation": "public_verify",
+      "peak_rss_kib": 200576
+    },
+    {
+      "cpu_s": 0.009114115,
+      "elapsed_s": 0.009114339,
+      "operation": "public_verify",
+      "peak_rss_kib": 200576
+    },
+    {
+      "cpu_s": 0.007381042,
+      "elapsed_s": 0.007380883,
+      "operation": "public_verify",
+      "peak_rss_kib": 200576
+    },
+    {
+      "cpu_s": 0.006494435,
+      "elapsed_s": 0.006493931,
+      "operation": "public_verify",
+      "peak_rss_kib": 200576
+    }
+  ],
+  "standalone_verified_packets": 5,
+  "storage_only_pruned_two_heights_B": 270336,
+  "tip": "0000022d14651f7bd127e7fb0f0351b15a45be60d0d1eba03caab7e0ebb60736",
+  "verified_from_zero_premine": true,
+  "verifier_setup": [
+    {
+      "cpu_s": 2.413024921,
+      "elapsed_s": 1.302673919,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 200576
+    }
+  ],
+  "wall_with_setup_and_reverification_s": 1.5614140089601278
+}

@@ -1,0 +1,294 @@
+{
+  "actual_3_distinct_wallets_elapsed_s": 18.734346796,
+  "encoded_packet_B": [
+    230206,
+    233654,
+    247206,
+    250998
+  ],
+  "model_year_s": 31536000,
+  "observed_retained_side_branch": {
+    "blocks": 10,
+    "direct_fork_package_B": 232518,
+    "payments": 1
+  },
+  "observed_selected_work": {
+    "blocks": 15,
+    "captured_original_archive_B": 693960,
+    "empty_blocks": 13,
+    "hypothetical_detached_archive_B": 250712,
+    "hypothetical_direct_archive_B": 694132,
+    "payments": 3,
+    "simulated_schedule_from_observed_inclusions": {
+      "first_to_last_certificate_ready_s": 49.22919273376465,
+      "first_to_last_inclusion_span_s": 30.494845867156982,
+      "input_count": 3,
+      "max_wallet_admission_delay_from_background_build_s": 0,
+      "maximum_temporary_retention_s": 49.22919273376465,
+      "mean_temporary_retention_s": 28.899295488993328,
+      "packs": 1,
+      "peak_temporary_singletons": 3,
+      "uncompacted_tail": 0
+    }
+  },
+  "paced_12_actual_admission_times": {
+    "delayed_four_projection": {
+      "first_to_last_certificate_ready_s": 127.2219567267665,
+      "first_to_last_inclusion_span_s": 110.0271635230165,
+      "input_count": 12,
+      "max_wallet_admission_delay_from_background_build_s": 0,
+      "maximum_temporary_retention_s": 47.2329990597417,
+      "mean_temporary_retention_s": 32.204152418602646,
+      "packs": 3,
+      "peak_temporary_singletons": 5,
+      "uncompacted_tail": 0
+    },
+    "delayed_three_projection": {
+      "first_to_last_certificate_ready_s": 128.7615103190165,
+      "first_to_last_inclusion_span_s": 110.0271635230165,
+      "input_count": 12,
+      "max_wallet_admission_delay_from_background_build_s": 0,
+      "maximum_temporary_retention_s": 38.77825689903517,
+      "mean_temporary_retention_s": 28.742741035722595,
+      "packs": 4,
+      "peak_temporary_singletons": 4,
+      "uncompacted_tail": 0
+    },
+    "interval_s": 10.0,
+    "observed_empty_blocks": 48
+  },
+  "scenarios": [
+    {
+      "direct_block_admission_verify_cpu_s_per_s": 0.03217204147640791,
+      "direct_ingress_verify_cpu_s_per_s": 0.03217204147640791,
+      "full_initial_selected_archive_TB": 23.06155537191683,
+      "full_wallet_proving_cpu_s_per_s": 53.514473198091075,
+      "included": 100000000,
+      "mean_paid_width": 1.21,
+      "mix": "sparse",
+      "new_cert_archive": {
+        "cross_block_3": {
+          "archive_B_per_included": 82808.8870525016,
+          "archive_TB": 8.28088870525016,
+          "archive_days_per_5TB": 220.38697354342335,
+          "archive_days_per_TB": 44.07739470868467,
+          "background_builder_cpu_s_per_s": 38.48695212032809,
+          "background_builder_wall_s_per_s": 19.80207466176222,
+          "cold_certificate_verify_cpu_s_per_s": 0.011491014105572468,
+          "optional_new_certificate_distribution_one_copy_TB": 8.240333333333332
+        },
+        "cross_block_4": {
+          "archive_B_per_included": 63156.05371916826,
+          "archive_TB": 6.315605371916826,
+          "archive_days_per_5TB": 288.9667565543445,
+          "archive_days_per_TB": 57.79335131086891,
+          "background_builder_cpu_s_per_s": 26.43566060395262,
+          "background_builder_wall_s_per_s": 13.63108289236904,
+          "cold_certificate_verify_cpu_s_per_s": 0.008810647553589549,
+          "optional_new_certificate_distribution_one_copy_TB": 6.27505
+        },
+        "no_builder": {
+          "archive_B_per_included": 230615.55371916827,
+          "archive_TB": 23.06155537191683,
+          "archive_days_per_5TB": 79.13603269892155,
+          "archive_days_per_TB": 15.82720653978431,
+          "background_builder_cpu_s_per_s": 0.0,
+          "background_builder_wall_s_per_s": 0.0,
+          "cold_certificate_verify_cpu_s_per_s": 0.03217204147640791,
+          "optional_new_certificate_distribution_one_copy_TB": 0.0
+        },
+        "per_paid_block": {
+          "archive_B_per_included": 191680.52892577986,
+          "archive_TB": 19.168052892577986,
+          "archive_days_per_5TB": 95.21050522072869,
+          "archive_days_per_TB": 19.04210104414574,
+          "background_builder_cpu_s_per_s": 9.027845435997849,
+          "background_builder_wall_s_per_s": 4.651057864808054,
+          "cold_certificate_verify_cpu_s_per_s": 0.026700166496062744,
+          "optional_new_certificate_distribution_one_copy_TB": 2.9557206611570255
+        }
+      },
+      "offered": 100000000,
+      "one_initial_direct_block_fetch_edge_TB": 23.084861157024793,
+      "preinclusion_optional_extra_submit_edge_TB": 23.0349,
+      "selected_blocks": 165289256.19834712,
+      "wallet_ACKs_TB": 0.012,
+      "wallet_submit_requests_TB": 23.0229
+    },
+    {
+      "direct_block_admission_verify_cpu_s_per_s": 0.030563439402587517,
+      "direct_ingress_verify_cpu_s_per_s": 0.03217204147640791,
+      "full_initial_selected_archive_TB": 21.908477603321785,
+      "full_wallet_proving_cpu_s_per_s": 53.514473198091075,
+      "included": 95000000.0,
+      "mean_paid_width": 1.21,
+      "mix": "sparse",
+      "new_cert_archive": {
+        "cross_block_3": {
+          "archive_B_per_included": 82808.88705251002,
+          "archive_TB": 7.866844269988452,
+          "archive_days_per_5TB": 231.98628794042202,
+          "archive_days_per_TB": 46.3972575880844,
+          "background_builder_cpu_s_per_s": 36.56260451431169,
+          "background_builder_wall_s_per_s": 18.81197092867411,
+          "cold_certificate_verify_cpu_s_per_s": 0.010916463400293846,
+          "optional_new_certificate_distribution_one_copy_TB": 7.828316666666667
+        },
+        "cross_block_4": {
+          "archive_B_per_included": 63156.053719176685,
+          "archive_TB": 5.999825103321785,
+          "archive_days_per_5TB": 304.1755332150589,
+          "archive_days_per_TB": 60.835106643011784,
+          "background_builder_cpu_s_per_s": 25.11387757375499,
+          "background_builder_wall_s_per_s": 12.94952874775059,
+          "cold_certificate_verify_cpu_s_per_s": 0.008370115175910072,
+          "optional_new_certificate_distribution_one_copy_TB": 5.9612975
+        },
+        "no_builder": {
+          "archive_B_per_included": 230615.55371917668,
+          "archive_TB": 21.908477603321785,
+          "archive_days_per_5TB": 83.30108705149333,
+          "archive_days_per_TB": 16.660217410298667,
+          "background_builder_cpu_s_per_s": 0.0,
+          "background_builder_wall_s_per_s": 0.0,
+          "cold_certificate_verify_cpu_s_per_s": 0.030563439402587517,
+          "optional_new_certificate_distribution_one_copy_TB": 0.0
+        },
+        "per_paid_block": {
+          "archive_B_per_included": 191680.52892578824,
+          "archive_TB": 18.209650247949885,
+          "archive_days_per_5TB": 100.22158444286792,
+          "archive_days_per_TB": 20.044316888573583,
+          "background_builder_cpu_s_per_s": 8.576453164197954,
+          "background_builder_wall_s_per_s": 4.418504971567652,
+          "cold_certificate_verify_cpu_s_per_s": 0.025365158171259606,
+          "optional_new_certificate_distribution_one_copy_TB": 2.807934628099174
+        }
+      },
+      "offered": 100000000,
+      "one_initial_direct_block_fetch_edge_TB": 21.930618099173554,
+      "preinclusion_optional_extra_submit_edge_TB": 23.0349,
+      "selected_blocks": 157024793.38842976,
+      "wallet_ACKs_TB": 0.012,
+      "wallet_submit_requests_TB": 23.0229
+    },
+    {
+      "direct_block_admission_verify_cpu_s_per_s": 0.03217204147640791,
+      "direct_ingress_verify_cpu_s_per_s": 0.03217204147640791,
+      "full_initial_selected_archive_TB": 23.031374603190603,
+      "full_wallet_proving_cpu_s_per_s": 53.514473198091075,
+      "included": 100000000,
+      "mean_paid_width": 3.5,
+      "mix": "busy",
+      "new_cert_archive": {
+        "cross_block_3": {
+          "archive_B_per_included": 82507.07936523936,
+          "archive_TB": 8.250707936523936,
+          "archive_days_per_5TB": 221.19314052084619,
+          "archive_days_per_TB": 44.23862810416924,
+          "background_builder_cpu_s_per_s": 38.48695212032809,
+          "background_builder_wall_s_per_s": 19.80207466176222,
+          "cold_certificate_verify_cpu_s_per_s": 0.011491014105572468,
+          "optional_new_certificate_distribution_one_copy_TB": 8.240333333333332
+        },
+        "cross_block_4": {
+          "archive_B_per_included": 62854.246031906034,
+          "archive_TB": 6.285424603190603,
+          "archive_days_per_5TB": 290.3542903169333,
+          "archive_days_per_TB": 58.070858063386666,
+          "background_builder_cpu_s_per_s": 26.43566060395262,
+          "background_builder_wall_s_per_s": 13.63108289236904,
+          "cold_certificate_verify_cpu_s_per_s": 0.008810647553589549,
+          "optional_new_certificate_distribution_one_copy_TB": 6.27505
+        },
+        "no_builder": {
+          "archive_B_per_included": 230313.74603190602,
+          "archive_TB": 23.031374603190603,
+          "archive_days_per_5TB": 79.23973412108792,
+          "archive_days_per_TB": 15.847946824217583,
+          "background_builder_cpu_s_per_s": 0.0,
+          "background_builder_wall_s_per_s": 0.0,
+          "cold_certificate_verify_cpu_s_per_s": 0.03217204147640791,
+          "optional_new_certificate_distribution_one_copy_TB": 0.0
+        },
+        "per_paid_block": {
+          "archive_B_per_included": 70863.51746047747,
+          "archive_TB": 7.086351746047746,
+          "archive_days_per_5TB": 257.5373147427875,
+          "archive_days_per_TB": 51.507462948557496,
+          "background_builder_cpu_s_per_s": 27.596231555478543,
+          "background_builder_wall_s_per_s": 14.224072410782236,
+          "cold_certificate_verify_cpu_s_per_s": 0.009908282909101618,
+          "optional_new_certificate_distribution_one_copy_TB": 6.747105714285714
+        }
+      },
+      "offered": 100000000,
+      "one_initial_direct_block_fetch_edge_TB": 23.03585079365079,
+      "preinclusion_optional_extra_submit_edge_TB": 23.0349,
+      "selected_blocks": 31746031.746031746,
+      "wallet_ACKs_TB": 0.012,
+      "wallet_submit_requests_TB": 23.0229
+    },
+    {
+      "direct_block_admission_verify_cpu_s_per_s": 0.030563439402587517,
+      "direct_ingress_verify_cpu_s_per_s": 0.03217204147640791,
+      "full_initial_selected_archive_TB": 21.87980587303187,
+      "full_wallet_proving_cpu_s_per_s": 53.514473198091075,
+      "included": 95000000.0,
+      "mean_paid_width": 3.5,
+      "mix": "busy",
+      "new_cert_archive": {
+        "cross_block_3": {
+          "archive_B_per_included": 82507.07936524779,
+          "archive_TB": 7.83817253969854,
+          "archive_days_per_5TB": 232.8348847587617,
+          "archive_days_per_TB": 46.56697695175234,
+          "background_builder_cpu_s_per_s": 36.56260451431169,
+          "background_builder_wall_s_per_s": 18.81197092867411,
+          "cold_certificate_verify_cpu_s_per_s": 0.010916463400293846,
+          "optional_new_certificate_distribution_one_copy_TB": 7.828316666666667
+        },
+        "cross_block_4": {
+          "archive_B_per_included": 62854.24603191445,
+          "archive_TB": 5.971153373031873,
+          "archive_days_per_5TB": 305.6360950704152,
+          "archive_days_per_TB": 61.12721901408304,
+          "background_builder_cpu_s_per_s": 25.11387757375499,
+          "background_builder_wall_s_per_s": 12.94952874775059,
+          "cold_certificate_verify_cpu_s_per_s": 0.008370115175910072,
+          "optional_new_certificate_distribution_one_copy_TB": 5.9612975
+        },
+        "no_builder": {
+          "archive_B_per_included": 230313.74603191443,
+          "archive_TB": 21.87980587303187,
+          "archive_days_per_5TB": 83.41024644324739,
+          "archive_days_per_TB": 16.682049288649477,
+          "background_builder_cpu_s_per_s": 0.0,
+          "background_builder_wall_s_per_s": 0.0,
+          "cold_certificate_verify_cpu_s_per_s": 0.030563439402587517,
+          "optional_new_certificate_distribution_one_copy_TB": 0.0
+        },
+        "per_paid_block": {
+          "archive_B_per_included": 70863.51746048588,
+          "archive_TB": 6.732034158746158,
+          "archive_days_per_5TB": 271.09191025553355,
+          "archive_days_per_TB": 54.218382051106715,
+          "background_builder_cpu_s_per_s": 26.21641997770461,
+          "background_builder_wall_s_per_s": 13.512868790243123,
+          "cold_certificate_verify_cpu_s_per_s": 0.009412868763646534,
+          "optional_new_certificate_distribution_one_copy_TB": 6.409750428571428
+        }
+      },
+      "offered": 100000000,
+      "one_initial_direct_block_fetch_edge_TB": 21.884058253968252,
+      "preinclusion_optional_extra_submit_edge_TB": 23.0349,
+      "selected_blocks": 30158730.15873016,
+      "wallet_ACKs_TB": 0.012,
+      "wallet_submit_requests_TB": 23.0229
+    }
+  ],
+  "selected_block_request_B": 94,
+  "selected_block_response_frame_overhead_B": 31,
+  "serialized_ack_B": 120,
+  "serialized_submit_B": 230229
+}

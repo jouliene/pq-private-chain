@@ -1,0 +1,76 @@
+{
+  "altered_proof_rejected": true,
+  "architecture": "x86_64",
+  "budget_total_B": 74284,
+  "compiler": "13.3.0",
+  "distinct_funded_coin_row_intersections": 0,
+  "full_registered_budget_B": {
+    "anchor_B": 32,
+    "fee_u64_B": 8,
+    "profile_and_magic_B": 36,
+    "proof_B": 53728,
+    "ring_positions_u64_B": 160,
+    "two_public_accounts_B": 16128,
+    "two_receipts_B": 4128,
+    "two_serials_B": 64
+  },
+  "input_columns": 2,
+  "outputs": 2,
+  "packed_proof_B": 53728,
+  "proof_packing_fields_B": {
+    "alpha_bytes": 32,
+    "b": 5120,
+    "c_v": 4480,
+    "f1": 3872,
+    "output_accounts": 16128,
+    "ring": 161280,
+    "serial_bytes": 64,
+    "v1_i32": 1024,
+    "v2": 896,
+    "x": 64,
+    "z": 6144,
+    "z_out_z0_z1_z2": 26656,
+    "zb": 5440
+  },
+  "proofs_randomized": true,
+  "retry_row_intersection": 1,
+  "ring_rows": 10,
+  "ring_state_read_B": 161280,
+  "same_receiving_public_keys": true,
+  "same_serials_across_distinct_funding": true,
+  "sha_implementation": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "source_archive_sha256": "88c96feae3dafc513e2d2f15978730ee7000741840db0e7f83a09e302384587c",
+  "source_commit": "b24f3176d2db15ca55d91c8c9cbe1cef201c5d2d",
+  "three_proofs_and_setup": {
+    "cpu_system_s": 0.000995,
+    "cpu_user_s": 0.170299,
+    "peak_rss_KiB": 8064,
+    "wall_s": 0.17413560790009797
+  },
+  "three_public_verify": [
+    {
+      "cpu_system_s": 0.002026,
+      "cpu_user_s": 0.003039,
+      "peak_rss_KiB": 7424,
+      "wall_s": 0.006277207052335143
+    },
+    {
+      "cpu_system_s": 0.002064,
+      "cpu_user_s": 0.003096,
+      "peak_rss_KiB": 7424,
+      "wall_s": 0.006349449977278709
+    },
+    {
+      "cpu_system_s": 0.002034,
+      "cpu_user_s": 0.003051,
+      "peak_rss_KiB": 7424,
+      "wall_s": 0.006246604956686497
+    }
+  ],
+  "valid_in_fresh_process": [
+    true,
+    true,
+    true
+  ],
+  "wrong_statement_rejected": true
+}

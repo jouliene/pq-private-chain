@@ -1,0 +1,50 @@
+{
+  "approval_profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "builder": {
+    "from_role_B": 247219,
+    "meters": [
+      {
+        "cpu_s": 13.782721209,
+        "elapsed_s": 8.660934847,
+        "operation": "builder_setup",
+        "peak_rss_kib": 1030108
+      },
+      {
+        "cpu_s": 36.411735662,
+        "elapsed_s": 18.734346796,
+        "operation": "builder_aggregate",
+        "peak_rss_kib": 2105740
+      }
+    ],
+    "to_role_B": 690634
+  },
+  "certificate_B": 247206,
+  "certificate_sha256": "c8cf4b6391eb29f72a10e7c6bec65572024eb750413eca0729e5461679a5e631",
+  "checked_equal_ordered_slots": true,
+  "elapsed_after_ready_s": 18.735212223953567,
+  "individual_slots": [
+    {
+      "anchor_height": 2,
+      "height": 3,
+      "offset": 0,
+      "packet_B": 230206,
+      "packet_sha256": "cee6e22b1a977fb4fc0c1cd20fee4561c6debcb5a1083e5f1de44037af04c95e"
+    },
+    {
+      "anchor_height": 3,
+      "height": 4,
+      "offset": 0,
+      "packet_B": 230206,
+      "packet_sha256": "95ef36da6109c5ce8d27b19ede47285d4d3081b3bd61ab5b50698b90a1b4c2f3"
+    },
+    {
+      "anchor_height": 3,
+      "height": 4,
+      "offset": 1,
+      "packet_B": 230206,
+      "packet_sha256": "5c7955797cfb55b131ead3516b798aec39e05fbb76b7ee4b65d212f96f386f08"
+    }
+  ],
+  "installation_sha256": "a8234eb7f0e67dfa07df26c30317fd6f3590d6bb95e2449d56a5375caabd2a97",
+  "source_result_sha256": "367d81047b2a0aa126fdff682d342062121c15b2d54d3ee47a8ab4a77ed2f2cd"
+}

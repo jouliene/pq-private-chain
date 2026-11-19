@@ -15,6 +15,8 @@ The [advancing-chain payment experiment](experiments/advancing-payments/DECISION
 
 The [wallet-created payment decision](experiments/wallet-created/DECISION.md) reports six fresh full masked-WHIR payments, a default Qnero wallet comparison and one native two-owner aggregate, with separate pre-inclusion and archive costs. CP03 remains the executable reference.
 
+The next proof experiment selects a direct, one-stage hiding payment circuit on a separate PoW research network. Four independent wallets constructed complete 143,187-byte packets while another block was mined. The existing APV2 devnet remains runnable. [Architecture decision and resource limits](experiments/payment-architecture/DECISION.md) · [Fresh reproduction](experiments/payment-architecture/README.md)
+
 ## Build and reproduce
 
 Follow [BUILD.md](BUILD.md) for the exact Linux x86-64 prerequisites and commands.

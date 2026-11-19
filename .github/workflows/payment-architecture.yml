@@ -1,0 +1,44 @@
+name: Complete private payment architecture
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/payment-architecture/**'
+      - '.github/workflows/payment-architecture.yml'
+  pull_request:
+    paths:
+      - 'experiments/payment-architecture/**'
+      - '.github/workflows/payment-architecture.yml'
+permissions:
+  contents: read
+jobs:
+  direct:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Prepare locked toolchain and isolated native roles
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap build-essential git python3
+          rustup toolchain install 1.93.0 --profile minimal
+          bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --ro-bind / / -- /usr/bin/true
+      - name: Build the source-pinned verifier and run fresh private payments
+        run: |
+          /usr/bin/python3 -IB experiments/payment-architecture/reproduce.py "$RUNNER_TEMP/dlf"
+      - name: Preserve public acceptance evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: direct-payments-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/dlf/PUBLIC-REPLAY.json
+            ${{ runner.temp }}/dlf/public/RUN.json
+            ${{ runner.temp }}/dlf/public/blocks/*.bin
+            ${{ runner.temp }}/dlf/busy-public/*.json
+            ${{ runner.temp }}/dlf/busy-public/blocks/*.bin

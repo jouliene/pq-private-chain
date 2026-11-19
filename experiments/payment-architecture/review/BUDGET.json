@@ -1,0 +1,102 @@
+{
+  "maximum_direct_per_year_at_2s": 63072000,
+  "measured_selected_B": 693960,
+  "measured_singleton_proof_B": 226613,
+  "scenarios": {
+    "all_full": {
+      "allowable_singleton_proof_B_floor": [
+        6347,
+        46347
+      ],
+      "block_mix_0_to_4": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "full_singleton_archive_TB": 23.02655,
+      "mean_eight_opportunity_window_s": 10.09152,
+      "opportunity_interval_s_for_100M": 1.26144,
+      "payments_per_block": "4",
+      "payments_per_paid_block": "4"
+    },
+    "busy": {
+      "allowable_singleton_proof_B_floor": [
+        6332,
+        46332
+      ],
+      "block_mix_0_to_4": [
+        100,
+        45,
+        90,
+        135,
+        630
+      ],
+      "full_singleton_archive_TB": 23.028047619,
+      "mean_eight_opportunity_window_s": 7.947072,
+      "opportunity_interval_s_for_100M": 0.993384,
+      "payments_per_block": "63/20",
+      "payments_per_paid_block": "7/2"
+    },
+    "observed": {
+      "allowable_singleton_proof_B_floor": [
+        5293,
+        45293
+      ],
+      "block_mix_0_to_4": [
+        13,
+        1,
+        1,
+        0,
+        0
+      ],
+      "full_singleton_archive_TB": 23.132,
+      "mean_eight_opportunity_window_s": 0.504576,
+      "opportunity_interval_s_for_100M": 0.063072,
+      "payments_per_block": "1/5",
+      "payments_per_paid_block": "3/2"
+    },
+    "singleton": {
+      "allowable_singleton_proof_B_floor": [
+        6181,
+        46181
+      ],
+      "block_mix_0_to_4": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "full_singleton_archive_TB": 23.0432,
+      "mean_eight_opportunity_window_s": 2.52288,
+      "opportunity_interval_s_for_100M": 0.31536,
+      "payments_per_block": "1",
+      "payments_per_paid_block": "1"
+    },
+    "sparse": {
+      "allowable_singleton_proof_B_floor": [
+        6036,
+        46036
+      ],
+      "block_mix_0_to_4": [
+        100,
+        85,
+        10,
+        4,
+        1
+      ],
+      "full_singleton_archive_TB": 23.057694215,
+      "mean_eight_opportunity_window_s": 1.5263424,
+      "opportunity_interval_s_for_100M": 0.1907928,
+      "payments_per_block": "121/200",
+      "payments_per_paid_block": "121/100"
+    }
+  },
+  "submitted_B": 230206,
+  "synthetic_four_payment_one_packet_proof_budget_B": [
+    25429,
+    185429
+  ]
+}
