@@ -1,0 +1,259 @@
+{
+  "direct_wallet_bytes": 1145680,
+  "format": "D8-LIVE-1",
+  "network": "1f4843adb499cfc90da2e09fff3acb5f187b7a58afcec17519cd486ea2aad898",
+  "original": {
+    "anchor": "72bca15d9fde01e5f962d1ec8a9ab36ad23b3c8f81b64b90cc7b37bfd3827192",
+    "deep_replays": 0,
+    "errors": [],
+    "fees": 24,
+    "found": 36,
+    "genesis": "70dc3a9829935fc42302f0f068d22ad1b760af7daf4869bb8f0e4c3494aaa5ea",
+    "header": "8fe111d3000392d42b9303cb1d89842a7b39e08926127d0867b07e1de7b7954c380000001462aab51cae16a8338a1575605f8ce04700c3c371caa1c85f453d45f664c69d4089e1401e68361ce79ba63908d0fa32eaed8f59d2bc75dd266d9ac74115737fd4e3ea192080c3c024f91b41bdf8cfc6bcf784fc4f1c2d1d253656bb818296bb",
+    "height": 56,
+    "issued": 5600,
+    "mempool": 0,
+    "network": "1f4843adb499cfc90da2e09fff3acb5f187b7a58afcec17519cd486ea2aad898",
+    "node": "a",
+    "notes": 72,
+    "peers": [
+      43281
+    ],
+    "pid": 3136730,
+    "port": 40119,
+    "remaining": 0,
+    "spent": 16,
+    "spent_set_sha256": "8cebda0551fd5eea47119b69ce2ce814062b1c213d8fca1bc364ca6f676d4b4f",
+    "tip": "0000014f75a850f57133d57e6103e0d26a2f9ba5c2c181846405f9802d46ef99",
+    "work": 234881024
+  },
+  "original_selected": [
+    "0000031483586375e0e6e7c2189ea06f8283216688a1b5c5b14948bc939368e2",
+    "00000225245c555a09715b5d3f1fb4b202904e57732492d567cd8873f257686e",
+    "000000cfad8c93ca356c35ff3f2a145a2f28de25b9faa956d3afe73b467464c2",
+    "000003c2bb6857bec93740188ca6a36d99594a0921f7720ce4faa51bc851633c",
+    "0000026df98d8eceb3faf6c0b7e922ba89a98d4d1123972e6d328681afc8f5a9",
+    "0000027174090fddbf3a5b18138eb14ed97a96a2684a70b8db99cfa1fd631216",
+    "000000f0a3c70a275424085e0f2a3fd339e8aa0cf462e9cfe219c9596ec051d4",
+    "0000024ef67a8440d5f95424edff377fd146236b2d468a99da408924c56c2c3a",
+    "000001fe78ab191986262ba388c3898b36ca54c2a1a69f77d20f3380ac88ccc8",
+    "000001dfdcf32af3bcce54b513ce0a5792806b85039b5bd45c75a3a18892f3c2",
+    "0000009e34b6e692e116d34a806ab8336fd49577e6d0bb2ec7343ccf3f2d451b",
+    "000002d501fe3a696bbd44f2ecf1aa6af96f0a6a7f082b82a3214edf85867717",
+    "000002ef5b7574126eaa08233dcc7ff36dac22fa1a8dddad4f0d3ce09d65d596",
+    "0000002195e784fee061a9823332e6110708519c996705f270674514d6148a8b",
+    "000003dd38152f740e05e7c4e0af75a8e269b7ff7ba6d53df17b777805f94435",
+    "00000144381c88dceb0fc0dc4552aff0f1af43290661316cc309be5e6a29fdee",
+    "000001b6eba2bdbb8e2541e9275e7812e01f1374d51b4028d17f25e2e24be2fc",
+    "000000515c8e622f538321c3bd1c6a8b0b558fce37dd05ed0737263191e03ffe",
+    "000002ade86829af9974374bc970c9e1a0e740b2f27fd4f96ac56de87d1eb664",
+    "000001bf3b4f732a4c4c2b5ffa38229cfe4ea69df240043ffe0572bcf29b1bc1",
+    "000003fa27979d6509be17acab014136060722da278619b8a0d743a3b72576ec",
+    "00000382e4e8f9a7a6157031f81068b93e18eaec611a0ad3ea1fcb8057a231e4",
+    "00000127866ab6b86caf7e2e4058fde0d470a0dbd52ea2e730d28b8033d998b3",
+    "000000017225881ecef2ba9114730394c2bdce53728e55bcc2562d95cf917196",
+    "0000037e7e36e4004558e22cb65d0b6db3314652c792af2f620ef25aaedb201c",
+    "000003384fd11d7f7f769dad2bf3f8d16270e351dee38d6b7784c3e7e0ee254c",
+    "000000bc617a33fd4e2d0a772dbdf44c678ea658e5606e70ab4364a32ef71c79",
+    "0000018f9a1c2f8a8763bcccf65e9ef7690ba1e0a80c12ca8d411091982d1784",
+    "000001ac392be743b61fafe0010f2a21b45531fbb303eb63769e3e8a1694c7db",
+    "0000001175a4a45cdfcc60845e4e9e7071fd8c475decd409602df8973a710b4e",
+    "000002f7b12f1ac53632c25b8a3bb8952cb6ff29dd1dc567ff1876d6bae24522",
+    "000000100cb17df00c06214e2f1d36c0cddf921bb11c1a2e0d58d86e4af9066a",
+    "000003e91bfa266c6d2cc220131636ace741601df778cb40d6927aaae1937f24",
+    "000003b7bcee359a2f9f3af776e2790f8e3b3820d0827fec9ec6a14b8b51aa9d",
+    "0000003144856d0b2017fdfdc8a89230b0851d82a1720e5094d7aed9adca84d1",
+    "0000001039259aaf53cf6fe5255127cddce1684d77e50077b00ce39b2fa0b343",
+    "0000027b63cad08f1cd9f437e851fd93f36a570f5720c098b29d7623ebe6cb77",
+    "000003b80ddad3284cad8b6d0f6e1aaf52368b87a732c9ad1af37b769df83418",
+    "000002f1ba1a7ae15fab55371bc1976402aa0ff69a3101142764fb0bee43108a",
+    "000003880066df8e114a1c9935ab5c8246d24546fc62bf61e8f7f6397a841336",
+    "0000034311366eed01b0e2e4179cdbcd49a1f281ac18d4c024ee2af4684877da",
+    "000002449f4e4b954c97b58b42b01a8570934269a09acc3f6494ef3401ed93c8",
+    "00000316b5e85b7b1cfbc8464a1bed693ad99c90bf5b0970f663b84ffad41c02",
+    "00000111a9e14e63d87cbe2a13c090d569932f2b0257fc1352adba805f26d33f",
+    "00000275bcc74a68ddc0c54c10899f8ec0a47857f9d5805fdd9612da77ef1558",
+    "0000007f9c40dc93ec74244651a72b66f09a5ea0504920b94d8f28a14ad2e727",
+    "000002321332e28af10ea73ddec294f8e9984b5c693ba8101ecc71aeae6c0d8f",
+    "000003676720a8dc4f4951e64f267262b3e5ab2538a6395af58e95ffbb149aaa",
+    "00000056697cce2239658b855151bdd1d2b65dbc4679e341562cf5129ecabfaf",
+    "00000030878ef031b875ce924eebc3debecb70e4a9338a9f3eb83708c14cb39d",
+    "0000027bad1b39176992bdd20a2688e104d09974e38bc00e1f564fc4f68d1bf5",
+    "0000025bc741a8cdd5bc3c3cc86f7c28b462b8631b627043c7645e8294dae9a0",
+    "000003ce0ee0355f4824f520e8cf6fc3d0d1ad398437850ad55a0750c37b0799",
+    "0000003daf3aaf5174f8ed091ecd248466f9da00d25dad1187a5390291f67602",
+    "0000008b8e4760183e1a9856507e6186363c29de9550655d4b0b48bca7403270",
+    "0000014f75a850f57133d57e6103e0d26a2f9ba5c2c181846405f9802d46ef99"
+  ],
+  "payments": [
+    {
+      "amount": 150,
+      "anchor": 18,
+      "attempts": 1,
+      "block": "000003fa27979d6509be17acab014136060722da278619b8a0d743a3b72576ec",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 21,
+      "inputs": 2,
+      "online_to_observed_s": 6.366717650089413,
+      "prover_wall_s": 5.375272270990536,
+      "sid": "d08fd8c3ed68950f0c87ea19b9d240bd9f93065006a968761686a4bfb86d2258"
+    },
+    {
+      "amount": 150,
+      "anchor": 21,
+      "attempts": 1,
+      "block": "0000037e7e36e4004558e22cb65d0b6db3314652c792af2f620ef25aaedb201c",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 25,
+      "inputs": 2,
+      "online_to_observed_s": 8.451854325947352,
+      "prover_wall_s": 5.306500394945033,
+      "sid": "2a9da20d21de4b532408ce560bc192009435472b2483997ab8fb4cdc351328a4"
+    },
+    {
+      "amount": 150,
+      "anchor": 26,
+      "attempts": 1,
+      "block": "0000018f9a1c2f8a8763bcccf65e9ef7690ba1e0a80c12ca8d411091982d1784",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 28,
+      "inputs": 2,
+      "online_to_observed_s": 7.490901046083309,
+      "prover_wall_s": 5.069146591937169,
+      "sid": "24547244937f923d5e3a6c17a7d28b8303894dc707177c14ac29012424b41265"
+    },
+    {
+      "amount": 150,
+      "anchor": 28,
+      "attempts": 1,
+      "block": "000000100cb17df00c06214e2f1d36c0cddf921bb11c1a2e0d58d86e4af9066a",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 32,
+      "inputs": 2,
+      "online_to_observed_s": 7.411911488045007,
+      "prover_wall_s": 4.997844268102199,
+      "sid": "70e926a2e4bcfe9bb18fe7a08ffdd9223158d33ad4e8412248e274e91871ccc7"
+    },
+    {
+      "amount": 150,
+      "anchor": 32,
+      "attempts": 1,
+      "block": "000003880066df8e114a1c9935ab5c8246d24546fc62bf61e8f7f6397a841336",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 40,
+      "inputs": 2,
+      "online_to_observed_s": 8.136543610016815,
+      "prover_wall_s": 5.012273577041924,
+      "sid": "e969fe8d6b233cf758cd8c0e1b4619439636703c0c956a74e41c68b586cbec41"
+    },
+    {
+      "amount": 150,
+      "anchor": 40,
+      "attempts": 1,
+      "block": "00000316b5e85b7b1cfbc8464a1bed693ad99c90bf5b0970f663b84ffad41c02",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 43,
+      "inputs": 2,
+      "online_to_observed_s": 8.958851284929551,
+      "prover_wall_s": 5.125795652973466,
+      "sid": "f35237513f149ad3ac38d16a0cb8113c0ebe40fb4bb74cb452030c3cb8805df7"
+    },
+    {
+      "amount": 150,
+      "anchor": 44,
+      "attempts": 1,
+      "block": "00000030878ef031b875ce924eebc3debecb70e4a9338a9f3eb83708c14cb39d",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 50,
+      "inputs": 2,
+      "online_to_observed_s": 7.390998213086277,
+      "prover_wall_s": 4.956850813003257,
+      "sid": "6b86b6408756c726208f349988d249fdf3d8923967619fdcbce25e173c650b03"
+    },
+    {
+      "amount": 150,
+      "anchor": 50,
+      "attempts": 1,
+      "block": "0000014f75a850f57133d57e6103e0d26a2f9ba5c2c181846405f9802d46ef99",
+      "change": 47,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 56,
+      "inputs": 2,
+      "online_to_observed_s": 9.56434476794675,
+      "prover_wall_s": 5.035228190012276,
+      "sid": "33e0feb43b92e43229e2422c9581bfec0e5009e637f72df7b3b7f270d65b79db"
+    }
+  ],
+  "split": 50
+}

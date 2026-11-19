@@ -1,0 +1,108 @@
+{
+  "included_per_year": 100000000,
+  "mixes": {
+    "busy": {
+      "blocks_per_payment": "20/63",
+      "no_builder_direct_initial_archive_TB": 14.329474603,
+      "paid_mean_occupied_slots": "7/2",
+      "useful_slots_only": {
+        "2": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            -8892,
+            71107
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            12611,
+            92611
+          ]
+        },
+        "4": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            10900,
+            170900
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            25236,
+            185236
+          ]
+        },
+        "6": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            30692,
+            270692
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            37860,
+            277860
+          ]
+        },
+        "8": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            50485,
+            370485
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            50485,
+            370485
+          ]
+        }
+      }
+    },
+    "sparse": {
+      "blocks_per_payment": "200/121",
+      "no_builder_direct_initial_archive_TB": 14.359655372,
+      "paid_mean_occupied_slots": "121/100",
+      "useful_slots_only": {
+        "2": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            -9496,
+            70503
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            12007,
+            92007
+          ]
+        },
+        "4": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            9692,
+            169692
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            24028,
+            184028
+          ]
+        },
+        "6": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            28881,
+            268881
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            36049,
+            276049
+          ]
+        },
+        "8": {
+          "full_eight_with_orphaned_slots_proof_B_1_5TB": [
+            48070,
+            368070
+          ],
+          "underfilled_all_active_slots_useful_proof_B_1_5TB": [
+            48070,
+            368070
+          ]
+        }
+      }
+    }
+  },
+  "proof_B": null,
+  "service": {
+    "full_certificates_per_s": 0.3963724,
+    "interval_s_for_full_group": 2.52288,
+    "offers_per_s": 3.170979198,
+    "one_day_uncertified_original_packet_B": 39229315068.49315,
+    "total_sender_payload_TB": 14.3187
+  },
+  "year_s": 31536000
+}

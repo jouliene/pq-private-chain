@@ -1,0 +1,101 @@
+{
+  "endpoints": {
+    "a": {
+      "block": {
+        "body_B": 869802,
+        "count": 48,
+        "reply_B": 871290,
+        "request_B": 4512
+      },
+      "locate": {
+        "body_B": 0,
+        "count": 48,
+        "reply_B": 8542,
+        "request_B": 39803
+      },
+      "pending": {
+        "body_B": 0,
+        "count": 2141,
+        "reply_B": 86369,
+        "request_B": 51384
+      },
+      "status": {
+        "body_B": 0,
+        "count": 2141,
+        "reply_B": 1910830,
+        "request_B": 49243
+      },
+      "tx": {
+        "body_B": 1431870,
+        "count": 10,
+        "reply_B": 1432180,
+        "request_B": 910
+      }
+    },
+    "b": {
+      "block": {
+        "body_B": 1155962,
+        "count": 47,
+        "reply_B": 1157419,
+        "request_B": 4418
+      },
+      "locate": {
+        "body_B": 0,
+        "count": 47,
+        "reply_B": 7038,
+        "request_B": 43185
+      },
+      "pending": {
+        "body_B": 0,
+        "count": 2143,
+        "reply_B": 86101,
+        "request_B": 51432
+      },
+      "status": {
+        "body_B": 0,
+        "count": 2143,
+        "reply_B": 1911760,
+        "request_B": 49289
+      },
+      "tx": {
+        "body_B": 572748,
+        "count": 4,
+        "reply_B": 572872,
+        "request_B": 364
+      }
+    },
+    "c": {
+      "block": {
+        "body_B": 435345,
+        "count": 26,
+        "reply_B": 436151,
+        "request_B": 2444
+      },
+      "locate": {
+        "body_B": 0,
+        "count": 19,
+        "reply_B": 6734,
+        "request_B": 17080
+      },
+      "pending": {
+        "body_B": 0,
+        "count": 1995,
+        "reply_B": 80127,
+        "request_B": 47880
+      },
+      "status": {
+        "body_B": 0,
+        "count": 1995,
+        "reply_B": 1778580,
+        "request_B": 45885
+      },
+      "tx": {
+        "body_B": 286374,
+        "count": 2,
+        "reply_B": 286436,
+        "request_B": 182
+      }
+    }
+  },
+  "scope": "all three measured serving endpoints, both directions of peer polling through convergence; wallet submit billed separately"
+}

@@ -1,0 +1,99 @@
+{
+  "archive": {
+    "by_source": {
+      "D8C1": [
+        1,
+        208487
+      ],
+      "DLF1": [
+        1,
+        143187
+      ]
+    },
+    "cores": [
+      63,
+      14274
+    ],
+    "interchange_B": 366224,
+    "linked_sids": 9,
+    "sources": [
+      2,
+      351674
+    ],
+    "sqlite_B": 393216
+  },
+  "final": {
+    "fees": 27,
+    "header": "363c46da59db76f0d9fa8d80b1cbba8dc91fb63ba7255d6be1e00af8a49312d83e0000007044a8f6467f5b6554c8861d3bcfa033cd46525f02c05b5a1549198b12a7e4f395b1df30066d12f744351812cd8f68d065e3e2ac89173f05d8eaff1e4e645d276ba4c0fab625b4f4bfa2a028d0f918e78cd0045e38a3e51f40bafc15eaf2979c",
+    "height": 62,
+    "issued": 6200,
+    "spent": 18,
+    "spent_set_sha256": "f8d3a3eac38211e9a2f623371f9796354944067c2fc895c2a651c14475bb84a2",
+    "tip": "000000460cadab6fc3ec889a561d8bd736da1179c21c735e8d2c1a34508cde4d",
+    "work": 260046848
+  },
+  "format": "D8-PUBLIC-1",
+  "from_empty": {
+    "fallback_traffic": {},
+    "inspected_inventory": 63,
+    "missing_count": 0,
+    "newly_verified_sources": {
+      "direct": 1,
+      "outer": 1
+    },
+    "pending_evidence": null,
+    "reorgs": [
+      {
+        "attached": [
+          "0000017f58d7b044540dcaed3f1c64ed3fa3d6ba1db1573e81263aa5ace91240",
+          "0000023da651f874319c4223b2566bdf55fc7e1f3dd75bc72926e8e40bf5f7a8",
+          "0000023dce6ea416826327df8b4e68144afd7a6b0408540b330767598516d426",
+          "000000ce6d02f3c8265e80609b52978d5f20a695a03892c2a86ad82ac091074c",
+          "000000627abc2ec383a5824007c7be1847e6d8d246c79465c78fd254192c5693",
+          "00000023124c7780eb78c822dacf4f7f74feab6aae6d6c43407684cd08ad385a"
+        ],
+        "bid": "00000023124c7780eb78c822dacf4f7f74feab6aae6d6c43407684cd08ad385a",
+        "detached": [
+          "0000027bad1b39176992bdd20a2688e104d09974e38bc00e1f564fc4f68d1bf5",
+          "0000025bc741a8cdd5bc3c3cc86f7c28b462b8631b627043c7645e8294dae9a0",
+          "000003ce0ee0355f4824f520e8cf6fc3d0d1ad398437850ad55a0750c37b0799",
+          "0000003daf3aaf5174f8ed091ecd248466f9da00d25dad1187a5390291f67602",
+          "0000008b8e4760183e1a9856507e6186363c29de9550655d4b0b48bca7403270",
+          "0000014f75a850f57133d57e6103e0d26a2f9ba5c2c181846405f9802d46ef99"
+        ]
+      }
+    ],
+    "state": {
+      "anchor": "1e9ff34707454a4f995f5e2323f7ac3c712f472743d1f99bba82fe12c67366f3",
+      "deep_replays": 0,
+      "fees": 24,
+      "genesis": "70dc3a9829935fc42302f0f068d22ad1b760af7daf4869bb8f0e4c3494aaa5ea",
+      "header": "9cab2143a863145d5dce6c228de879b8471816a6f737066c55944f976a5cadd4390000008e912ae94fd76a68369ac937bce766d9a6ef2a33aa83f20a76b83d1e482f840b74214c327c83392e959533e5297f2914512e916b55df54dff959af7c833e4c54a27aa85395ab4fd550e2297dd197079b57e55236fb5a50911a5548aeafe1ca75",
+      "height": 57,
+      "issued": 5700,
+      "mempool": 0,
+      "network": "1f4843adb499cfc90da2e09fff3acb5f187b7a58afcec17519cd486ea2aad898",
+      "notes": 73,
+      "spent": 16,
+      "spent_set_sha256": "74347dc8adbd7f8040f5cba0a932179af7f34d329c61ed31f2f08231e387cac0",
+      "tip": "000003321069a3ee1df53c05ba641a6ab4e633dca47ac9943219e9545716a332",
+      "work": 239075328
+    },
+    "traffic": {
+      "core_body_B": 14274,
+      "core_requests": 63,
+      "inventory_body_B": 0,
+      "inventory_requests": 2,
+      "lookup_body_B": 0,
+      "lookup_requests": 2,
+      "proof_body_B": 351674,
+      "proof_requests": 2,
+      "reply_B": 372565,
+      "request_B": 6332,
+      "source_D8C1": 1,
+      "source_DLF1": 1
+    },
+    "verified_inventory": 63
+  },
+  "successor": "d813be55b3c9ac2f7221238b9734049c17861bbd5c941022adb089b8a401f0b7"
+}

@@ -17,6 +17,8 @@ The [wallet-created payment decision](experiments/wallet-created/DECISION.md) re
 
 The next proof experiment selects a direct, one-stage hiding payment circuit on a separate PoW research network. Four independent wallets constructed complete 143,187-byte packets while another block was mined. The existing APV2 devnet remains runnable. [Architecture decision and resource limits](experiments/payment-architecture/DECISION.md) · [Fresh reproduction](experiments/payment-architecture/README.md)
 
+An optional delayed certificate over eight independently admitted DLF1 payments permits a new PoW validator to replay compacted history through another peer. The published experiment measures archival bytes, independent verification, outages, forks and real wallet recovery. [Decision and limits](experiments/delayed-eight/DECISION.md) · [Run the experiment](experiments/delayed-eight/README.md)
+
 ## Build and reproduce
 
 Follow [BUILD.md](BUILD.md) for the exact Linux x86-64 prerequisites and commands.

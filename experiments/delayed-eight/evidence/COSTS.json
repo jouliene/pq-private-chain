@@ -1,0 +1,183 @@
+{
+  "builder": {
+    "cores_at_100M": 44.03020194143202,
+    "full_preparation_and_proving_CPU_s": 111.08291587400001,
+    "measured_full_plus_partial_CPU_s": 221.480206629,
+    "one_warm_builder_payments_per_s": 0.14114037211145639,
+    "original_backlog_payload_B_per_24h": 39229315068.49315,
+    "workers_at_100M": 22.466847372857888
+  },
+  "format": "D8-COSTS-1",
+  "independent_capacity": {
+    "fully_occupied_payments_per_year": 63072000.0,
+    "required_payments_per_s": 3.170979198376459,
+    "research_block_interval_s": 2,
+    "slots": 4
+  },
+  "measured": {
+    "acknowledgments_B": 1080,
+    "after_partial_all_B": 410020,
+    "all_retained": {
+      "blocks": 63,
+      "certified_placements": 8,
+      "core_B": 14274,
+      "retained_B": 366224,
+      "uncertified": 1
+    },
+    "backlog_after_first_install_original_branch": 0,
+    "backlog_after_partial": 0,
+    "backlog_after_reorganization_winner": 1,
+    "backlog_direct_original_branch": 8,
+    "before_all_B": 1303261,
+    "cold_runtime_B": {
+      "ledger_B": 286720,
+      "source_index_B": 393216
+    },
+    "direct_offers": 9,
+    "direct_original_bodies_all_B": 1302705,
+    "disk": 393216,
+    "lone_command_to_confirmed_s": 6.366717650089413,
+    "min_max_command_to_confirmed_s": [
+      6.366717650089413,
+      9.56434476794675
+    ],
+    "original_branch": {
+      "blocks": 56,
+      "certified_placements": 8,
+      "core_B": 12688,
+      "retained_B": 221419,
+      "uncertified": 0
+    },
+    "proof_attempts": 9,
+    "recovery": {
+      "blocks": 57,
+      "branch_changes": 0,
+      "catchup_heads": 1,
+      "complete": true,
+      "completed_prefixes": [
+        57,
+        57
+      ],
+      "controller_cpu_s": 0.015275253000000003,
+      "controller_peak_rss_KiB": 32572,
+      "deep_resets": 0,
+      "end_height": 57,
+      "frontier_B": 128,
+      "native_hash": {
+        "cpu_s": 0.0,
+        "from_role_B": 9720,
+        "peak_rss_KiB": 2968,
+        "to_role_B": 36158
+      },
+      "native_wallet": {
+        "cpu_s": 0.0,
+        "from_role_B": 904,
+        "peak_rss_KiB": 3168,
+        "to_role_B": 35477
+      },
+      "node_reads": {
+        "blocks": 57,
+        "metadata_B": 2632,
+        "metadata_queries": 17,
+        "metadata_rows": 70,
+        "nullifiers": 16,
+        "payload_B": 47337,
+        "payload_queries": 4,
+        "payload_rows": 57,
+        "receipts": 16,
+        "rewards": 57,
+        "sql_queries": 17,
+        "transactions": 8
+      },
+      "public_body_B": 47373,
+      "public_requests": 7,
+      "receipt_rows": 16,
+      "reply_B": 51971,
+      "request_B": 1784,
+      "requests_by_op": {
+        "history_check": {
+          "count": 1,
+          "reply_B": 314,
+          "request_B": 106
+        },
+        "history_head": {
+          "count": 2,
+          "reply_B": 2611,
+          "request_B": 872
+        },
+        "history_range": {
+          "count": 4,
+          "reply_B": 49046,
+          "request_B": 806
+        }
+      },
+      "rewound_blocks": 0,
+      "start_height": 0,
+      "target_height": 57,
+      "target_tip": "000003321069a3ee1df53c05ba641a6ab4e633dca47ac9943219e9545716a332",
+      "tree_hashes": 208,
+      "wall_s": 0.04661429498810321,
+      "wallet_db_B": 122880,
+      "witness_B": 3072,
+      "witness_updates": 232
+    },
+    "replacement_branch": {
+      "blocks": 57,
+      "certified_placements": 7,
+      "core_B": 12910,
+      "retained_B": 364836,
+      "uncertified": 1
+    },
+    "upload_B": 1288890,
+    "verified_full_slots": 8
+  },
+  "observed_peer_relay": null,
+  "scenarios": {
+    "busy": {
+      "ack_TB": 0.012,
+      "blocks_per_inclusion": 0.3174603174603175,
+      "capacity_at_two_s_mean": 49669200.0,
+      "cold_wallet_GB_before_paging": 384.0825396825397,
+      "compact_TB_by_actual_count": {
+        "1": 18.350674603190605,
+        "2": 9.359724603190603,
+        "3": 6.36274126985727,
+        "4": 4.864249603190602,
+        "5": 3.965154603190603,
+        "6": 3.3657579365239365,
+        "7": 2.9376174603334606,
+        "8": 2.616512103190603
+      },
+      "four_selected_in_full_eight_TB": 5.222649603190603,
+      "fraction_direct_allowed_at_5TB": 0.2034914648458404,
+      "mean_interval_needed_for_100M_s": 0.9933839999999998,
+      "one_raw_block_relay_body_TB": 14.32614761904762,
+      "raw_block_plus_one_extra_packet_edge_TB": 28.64484761904762,
+      "raw_full_wallet_source_TB": 14.3187,
+      "wallet_submit_TB": 14.321
+    },
+    "sparse": {
+      "ack_TB": 0.012,
+      "blocks_per_inclusion": 1.6528925619834711,
+      "capacity_at_two_s_mean": 9539639.999999998,
+      "cold_wallet_GB_before_paging": 424.81322314049584,
+      "compact_TB_by_actual_count": {
+        "1": 18.380855371916823,
+        "2": 9.389905371916827,
+        "3": 6.392922038583492,
+        "4": 4.894430371916826,
+        "5": 3.9953353719168265,
+        "6": 3.3959387052501597,
+        "7": 2.9677982290596834,
+        "8": 2.6466928719168266
+      },
+      "four_selected_in_full_eight_TB": 5.252830371916827,
+      "fraction_direct_allowed_at_5TB": 0.2009147667025463,
+      "mean_interval_needed_for_100M_s": 0.19079279999999998,
+      "one_raw_block_relay_body_TB": 14.355794214876033,
+      "raw_block_plus_one_extra_packet_edge_TB": 28.67449421487603,
+      "raw_full_wallet_source_TB": 14.3187,
+      "wallet_submit_TB": 14.321
+    }
+  }
+}

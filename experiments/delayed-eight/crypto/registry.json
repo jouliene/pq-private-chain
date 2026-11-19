@@ -1,0 +1,69 @@
+{
+  "binary_sha256": "17e5f485db8d5209dc57757f2a07d8755d12fa5c9ac2f06509c9cbcee918bca3",
+  "build_receipt_sha256": "c5e30f83acc4c7778542f0855a15c4fc52e60da12adfbb0a7114e00024f3ca53",
+  "dimensions": {
+    "degree_bits": 16,
+    "domain": 75008436142081,
+    "folds": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "inner_degree_bits": 12,
+    "inner_folds": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "outer_gates_before_blinding": 38272,
+    "public_inputs": 210
+  },
+  "format": "D8C1",
+  "key_B": {
+    "direct.vk": 1481,
+    "eight.vk": 1713
+  },
+  "key_sha256": {
+    "direct.vk": "5d6cfc6ccff5792e4899799124b2fb1e7dac50f727825c4886485dc01a564ce8",
+    "eight.vk": "9d280dfe7b0b35c2fb768e927239da4a8bdbc9c2ccdde27127a17fe9ae96bdcd"
+  },
+  "parameters": {
+    "active": [
+      1,
+      8
+    ],
+    "cap_height": 4,
+    "challenges": 2,
+    "configured_security_bits": 128,
+    "direct_fri_leaf_hiding": true,
+    "direct_row_blinding": true,
+    "extension_degree": 2,
+    "grinding": 0,
+    "outer_fri_leaf_hiding": false,
+    "outer_row_blinding": false,
+    "queries": 26,
+    "rate_bits": 5,
+    "reduction": [
+      2,
+      3
+    ],
+    "routed": 60,
+    "width": 8,
+    "wires": 135
+  },
+  "preregistration_sha256": "aae671f67dbc5c6d3171e2c41db2d905bca790fbda07e9ebb661dc978b870eca",
+  "registration_meters": [
+    {
+      "cpu_s": 46.790971035,
+      "elapsed_s": 25.483764752,
+      "operation": "registration",
+      "peak_rss_kib": 2717212
+    }
+  ]
+}

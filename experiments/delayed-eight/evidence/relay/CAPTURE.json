@@ -1,0 +1,266 @@
+{
+  "direct_wallet_bytes": 1145680,
+  "format": "D8-LIVE-1",
+  "network": "1f4843adb499cfc90da2e09fff3acb5f187b7a58afcec17519cd486ea2aad898",
+  "original": {
+    "anchor": "3d42addb19ecb49fdf476d1662b650ecd538cf4aa104288506e371bd3491ca95",
+    "deep_replays": 0,
+    "errors": [],
+    "fees": 24,
+    "found": 35,
+    "genesis": "70dc3a9829935fc42302f0f068d22ad1b760af7daf4869bb8f0e4c3494aaa5ea",
+    "header": "cfa43979ba59f4b05d3b15f84e92153a9ee93d86a50aa1c219c720b1dc4c640a370000003dde8fccebd8b2198cccb3e912e8b974c643a2486ec0500a14a6928318bb4472d7ff6e316eee13b8cba6b2e390fa7d50e5a6da83c5a8c4efc85f47e0fd032d44dd9a94524a3c46a22040e70bb98687ce2f3cad5e7c785414019e02361ca33f8e",
+    "height": 55,
+    "issued": 5500,
+    "mempool": 0,
+    "network": "1f4843adb499cfc90da2e09fff3acb5f187b7a58afcec17519cd486ea2aad898",
+    "node": "a",
+    "notes": 71,
+    "peers": [
+      41861
+    ],
+    "pid": 3145629,
+    "port": 37285,
+    "remaining": 0,
+    "spent": 16,
+    "spent_set_sha256": "fa7742d744163c317ed259668b686f97b05843e39db5d63fe441a09a6e2b19f5",
+    "tip": "000001b6f0b4f306164f090f12ceefb2c686aadde0521d58690d31bb1336cd7f",
+    "work": 230686720
+  },
+  "original_selected": [
+    "00000106b2da7825dc2512c027241c87c2cc375e55b3b092e4e98e699837721d",
+    "000000aa76ac6d639cfb69a0b5c3cdc74cfa6a68bbd0c56f9f9f883006572e69",
+    "000003a8a6eee32d2d2a43f8b68e84fe752eb268ca09115c304c6b98659dc89e",
+    "00000151e86a61b258437ac53ab9d96a63fc46d0a7e76a14f2d6a1113981b525",
+    "000001ee2f90fff7585d0f6cb0fab09d38d6d4b9ea9bd5de8e2019acc15bc94b",
+    "000002805be4175293bcf9407d08721d415fb7c1db9d3717b73c7355e4aa0d5f",
+    "00000071b275f65af62d321018251d9845f19547ae40eee30f1e076f3cdaf6f2",
+    "000000fd1b7e1d370e24a6c866d76c531d11681e28a4ee6a97cf31e3e0cb81c5",
+    "000001378ab60bf4c4681328f3f9ee347de0572b7e9cbc9f2512b3b65546e8f9",
+    "0000017332317d7495d44ea9ce47a9172fd0c733355e31b7afd19b8fcef7414a",
+    "00000323eab795f359fd48746311aad20a2ab9b1835448f783e2c1252a6fcd24",
+    "0000001fac6b2ef56527db0d09917a05c9aa096f2313e6aca20aae3158e96bda",
+    "00000268c2a51607e899fe994014b5791c486e27d1455b4ffe0d73c934ffee71",
+    "000000a8093b8d11913fe5566f6279f8751cf468f2e5c93dbdf85b8bde212c28",
+    "0000021c1601912c56a3d8865c9bd3175cf041ec791ab15629064570b4e87556",
+    "000001f193643006274bf57d55692b8e030f260415011df9781f032816092944",
+    "0000001c71dda6d02d314166df00d0a89624e3d3c109995e9879d80c2978019f",
+    "00000282b37d967e87c075c1a3cdc10725c202799467a45ee55b0ba005499231",
+    "000003efcd28aabb781597867d71e524687fcde14508c9f77acb8553e9199c2a",
+    "000002f949df28b31a62552e2e5d8046bc52ca222a4e5ec515cc62b12114d71e",
+    "0000038cf582804480abb836453d1d8a07f5fd4b58ceb7c8114e5a433d424b0d",
+    "000001910267b32c0c1d870d3fb7550232251ad8aa3358f45693561f0c504313",
+    "000000117f069a2fec828da1536a41b6b4d911b925f5a4e22d7f5563f5b420c2",
+    "000001893882c4f6f3d72794ea8d06a3784546917b2509f7366dfe80ea773a4e",
+    "0000006c843da9e03ac898d1438cecc97cc7c3ac741fdff98dad40105dc26be5",
+    "0000002da9ad3dafccf9c8434aee3b336d30e158c3c967ee4195e355d47b0155",
+    "0000031f63d3de667c74607bef6c6819c39b67cace76e1d2f1afa61575bc10a8",
+    "00000239c3ff50550a99893ded42e4710b5dad4f4ed6a8800176aa2c9bede9ca",
+    "00000030436961f4b9bbc52f5822d2d9b82dff493e34133ad86a2f8d37691677",
+    "0000002731b8074c2d485161d7aca11f40da7287c76a31b3c3178d03ac051e00",
+    "0000030b394d8187510b766fef7cde680b0cc99ec3916c86e2806d30df1c0a8d",
+    "0000009241a6455a3167bc53ab03114488ffd4f33b35f004822daa06cbed2e82",
+    "000002d0d94c1219754de72bf4ebae9828d67cea635c76b5804cbd9609fe289e",
+    "000000661f0ca58438688785a6fed9095ca6151db414b2f367c7560587dc9e4c",
+    "0000028f7f356e307993eed95fb829db1c1dab4be025b97b81b9c5017a88a6f6",
+    "0000000b3020f06bccb30e0825c2c79c19b80132414fce30fa9790c6e013bbf0",
+    "00000071e50e55a302a1f1ae6bcfaf4b8fde8e6e47a56bdbdffe0bc5f39d30c5",
+    "000003464d76880f155a3d1a3402f53bd6b905e88e7443cc3dd5817b37ef9e48",
+    "0000007f3624673e1403590f5700096392b26ddfa5d943da0a391ae94b3b554e",
+    "000001495a98190cf1f99ef250bfaa82b16c2fedeb189268477fc67ae66a9838",
+    "000001324e87fc75f193dd187627871252c40c89bac60a3f6f0aa7ad28587ac5",
+    "000002ed012c11a32cbf0f02fe2563e2e0987dddad1a4840cfc2350bd3422a36",
+    "0000028019515a6fce0a42060d72236bbcf15027e170d3f0534122b0ceda4dc0",
+    "0000024b68392905d4f1697445de8f60a2648d3978e866d283cae8d9dc8447b8",
+    "000000ce162db10d0dce9b371922a00b2122caec4f30b00b9630e211fa194b06",
+    "000003115ebff5c5c38ce39ee066a15cb58e6e1f3c84b2f048facc19c30407fb",
+    "000001547ada6dd72e990ec68b0ab0c4a5e844c84d1d68354aff21766ab6314c",
+    "000002781361d1ae6e7975615a4caec8a3889f5d9ac480965949290b476c5634",
+    "000001663aab848fa568477d44dd512e3ebfbb5877de34c3201df318c6acded6",
+    "000001192180665521a2f85cc0a414dff17ab31176afb1dc0212c5d7db534373",
+    "000003f85af035794a746fabc7902773ca2874fb753607f681f47e3680c25840",
+    "00000050b824b1b81c0e332e01cff155f338b3556eb18b9c06ca3d9ef2be5064",
+    "0000004a41f4919f2ffe1b62c28c4dbb8f24022b2e38b07a6f5edc9b3bee98ac",
+    "000001e1b9de714cda6e6742cf25b8252d31b3db93f83a51b9aeac0990eaae09",
+    "000001b6f0b4f306164f090f12ceefb2c686aadde0521d58690d31bb1336cd7f"
+  ],
+  "payments": [
+    {
+      "amount": 150,
+      "anchor": 18,
+      "attempts": 1,
+      "block": "0000038cf582804480abb836453d1d8a07f5fd4b58ceb7c8114e5a433d424b0d",
+      "change": 47,
+      "command_to_mined_s": 8.932795763015747,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 21,
+      "inputs": 2,
+      "online_to_observed_s": 9.583673645975068,
+      "prover_wall_s": 5.042182936100289,
+      "sid": "a379def5b667b0c67670a251a352849479c5100e36a83658fc65fbeea5520b93"
+    },
+    {
+      "amount": 150,
+      "anchor": 21,
+      "attempts": 1,
+      "block": "0000006c843da9e03ac898d1438cecc97cc7c3ac741fdff98dad40105dc26be5",
+      "change": 47,
+      "command_to_mined_s": 8.74860429763794,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 25,
+      "inputs": 2,
+      "online_to_observed_s": 9.576873587910086,
+      "prover_wall_s": 5.062644046032801,
+      "sid": "45825040779fbcdcd6e8ead3916cbe9b4d9b1d9a3d14db40fef24a655c5faa21"
+    },
+    {
+      "amount": 150,
+      "anchor": 25,
+      "attempts": 1,
+      "block": "00000030436961f4b9bbc52f5822d2d9b82dff493e34133ad86a2f8d37691677",
+      "change": 47,
+      "command_to_mined_s": 7.349846124649048,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 29,
+      "inputs": 2,
+      "online_to_observed_s": 7.487589581985958,
+      "prover_wall_s": 5.054290879052132,
+      "sid": "8c84a7bb3a6100ad3b523308fd7771897a48f262171817e4e15f6591b99c1575"
+    },
+    {
+      "amount": 150,
+      "anchor": 29,
+      "attempts": 1,
+      "block": "0000000b3020f06bccb30e0825c2c79c19b80132414fce30fa9790c6e013bbf0",
+      "change": 47,
+      "command_to_mined_s": 7.451126337051392,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 36,
+      "inputs": 2,
+      "online_to_observed_s": 8.178207927965559,
+      "prover_wall_s": 5.050223427009769,
+      "sid": "dfd7421293ff17511afa2748552b0d7379771513392fb8ecf7f0b69fce255130"
+    },
+    {
+      "amount": 150,
+      "anchor": 36,
+      "attempts": 1,
+      "block": "0000028019515a6fce0a42060d72236bbcf15027e170d3f0534122b0ceda4dc0",
+      "change": 47,
+      "command_to_mined_s": 7.5168776512146,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 43,
+      "inputs": 2,
+      "online_to_observed_s": 8.218955582007766,
+      "prover_wall_s": 5.113741846987978,
+      "sid": "1978025820f115233fa5479e4905b9b0074af549e45d6874ffb80a53720cc484"
+    },
+    {
+      "amount": 150,
+      "anchor": 44,
+      "attempts": 1,
+      "block": "000002781361d1ae6e7975615a4caec8a3889f5d9ac480965949290b476c5634",
+      "change": 47,
+      "command_to_mined_s": 6.943825006484985,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 48,
+      "inputs": 2,
+      "online_to_observed_s": 7.547690314007923,
+      "prover_wall_s": 5.117194943944924,
+      "sid": "d183fce9427519a8073d7f6d8da9b5570c77ad7e7a711f7223cb0c31d345684f"
+    },
+    {
+      "amount": 150,
+      "anchor": 48,
+      "attempts": 1,
+      "block": "0000004a41f4919f2ffe1b62c28c4dbb8f24022b2e38b07a6f5edc9b3bee98ac",
+      "change": 47,
+      "command_to_mined_s": 7.396389484405518,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 53,
+      "inputs": 2,
+      "online_to_observed_s": 7.546531141968444,
+      "prover_wall_s": 5.028405428980477,
+      "sid": "cfdbc468772e815df3e7e2da68c77c15b38dc222c3dd2c2641dcfa215b93a470"
+    },
+    {
+      "amount": 150,
+      "anchor": 53,
+      "attempts": 1,
+      "block": "000001b6f0b4f306164f090f12ceefb2c686aadde0521d58690d31bb1336cd7f",
+      "change": 47,
+      "command_to_mined_s": 8.472169637680054,
+      "fee": 3,
+      "frames": [
+        {
+          "duplicate": false,
+          "outcome": "accepted",
+          "reply_B": 120,
+          "request_B": 143210
+        }
+      ],
+      "height": 55,
+      "inputs": 2,
+      "online_to_observed_s": 8.753027117927559,
+      "prover_wall_s": 4.930516307009384,
+      "sid": "0b9d87bc333948b7399f3a9f09699617e00e712369b9a9d6fb84877bb407fa19"
+    }
+  ],
+  "split": 53
+}

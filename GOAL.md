@@ -1,3 +1,9 @@
+# Delayed DLF1 certificates for historical validation
+
+Evaluate a real certificate over up to eight independently funded DLF1 payments across multiple PoW blocks from baseline d9e4114967302916354a7f75787ada2b5e2d27fe. Retain unilateral admission. Compare complete archival liability, builder capacity and public verification against 1/5 TB scenarios per 100M payments. If viable, require a versioned statement-committing core, independent peer-only genesis verification after destructive pruning on disposable stores, missing-data pause/resume, atomic compaction, a boundary reorganization, offline seed recovery and a new spend. Publish a measured decision and independent reproduction. Global blockchain goal active.
+
+## Earlier milestone
+
 # Next complete payment-proof architecture
 
 From published wallet/devnet commit `6502ebe7c01e174bcc8b9718130d7cb5f5dd8e63`, decide whether a compact wallet proof or a shared-proof design materially reduces total payment costs with public verification, unilateral direct inclusion, moving anchors, offline receipt and seed-only recovery. Test primary compact and aggregation approaches, pivot after rejection, and exercise a surviving complete 2×2 construction with fresh independent senders, conflict, reorganization and restored recipient spending. Include full channel, archive, retention, CPU and verifier budgets for 100M included per year under sparse/busy load. Examine security, public linkability, the separate hybrid receipt question, and extension to native assets and indivisible swaps. Complete with published exact source, measurements, independently reproduced decision and actionable next experiment. Retain the APV2 wallet baseline. Global blockchain objective active.

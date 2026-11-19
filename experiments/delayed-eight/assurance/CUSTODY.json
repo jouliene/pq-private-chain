@@ -1,0 +1,89 @@
+{
+  "actual_loopback_frames_matched_both_ends": true,
+  "all_15_four_holder_choices_per_block": true,
+  "all_holders_B": 884706,
+  "all_shard_bytes": 862506,
+  "annual_100M_inclusions": {
+    "busy": {
+      "all_compulsory_wallet_uploads_TB": 14.3187,
+      "all_six_TB": 21.55978,
+      "blocks": 31746031.746031746,
+      "fresh_full_recovery_payload_TB": 14.337948571428571,
+      "fresh_full_recovery_wire_TB": 14.343821587301585,
+      "one_partial_custodian_TB": 3.5932966666666664,
+      "original_full_archive_TB": 14.32614761904762,
+      "repair_one_lost_holder_from_scratch_read_TB": 14.337948571428571,
+      "repair_one_lost_holder_from_scratch_write_TB": 3.5932966666666664
+    },
+    "sparse": {
+      "all_compulsory_wallet_uploads_TB": 14.3187,
+      "all_six_TB": 21.901204958677692,
+      "blocks": 165289256.19834712,
+      "fresh_full_recovery_payload_TB": 14.417332231404961,
+      "fresh_full_recovery_wire_TB": 14.447910743801653,
+      "one_partial_custodian_TB": 3.6502008264462815,
+      "original_full_archive_TB": 14.355794214876033,
+      "repair_one_lost_holder_from_scratch_read_TB": 14.417332231404961,
+      "repair_one_lost_holder_from_scratch_write_TB": 3.6502008264462815
+    }
+  },
+  "corrupt_manifest_alternative_recovered": true,
+  "data_pieces": 4,
+  "encoding_and_write_controller_cpu_s": 0.011955136000000005,
+  "files_per_holder": 20,
+  "format": "DLF-CUSTODY-MDS-1",
+  "fresh_public_recovery": {
+    "available": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "blocks": 10,
+    "custody_wire": {
+      "bad_fragment_checks": 0,
+      "failed_endpoints": 0,
+      "manifest_B": 3700,
+      "reply_B": 578904,
+      "request_B": 1650,
+      "requests": 50,
+      "shard_B": 575004
+    },
+    "native_replay_wall_s": 1.3419288889272138,
+    "payments": 4,
+    "reconstructed_B": 574984,
+    "state": {
+      "anchor": "91b0e842408a3e3d824d97669740a5c993734196431ce5f6b1c4b2b01f5ddd89",
+      "deep_replays": 0,
+      "fees": 12,
+      "genesis": "7bf2ab84b9a93462caa87f67d2dbba98e48a5fd295f5c484bbeae1d94e08db1f",
+      "header": "25fb5c12730d82996d39f004cdf965c8f9789c7039fb14dd9f585038dffc04160a0000006d530ab0b823c5e87c1254d2f5ef582ba68f18534a944dd3d38c4e5af5f43d5c3452a80b1764c0d6772425d44be9069a47b51685f292ec6b172374315631cc97320acbebf0b4d292fb9ab65de802d615dc3e58e215c85071d71d4db7c69eb992",
+      "height": 10,
+      "issued": 1000,
+      "mempool": 0,
+      "network": "f02e9a1681c2fea0e66938e08ffdee81047ebe606d5e672bd4ed57e96ac847b3",
+      "notes": 18,
+      "spent": 8,
+      "spent_set_sha256": "eb94e853402aaa088ba001fcf92bb647e3057b49adcc5e74e5059c69f1fd6e07",
+      "tip": "00000344474c89e1e7c0066ea79e6c20a3f7424ba11c5c932ca9068d6f9dad31",
+      "work": 41943040
+    }
+  },
+  "full_source_B": 574984,
+  "manifest_per_block_B": 370,
+  "one_bad_among_five_recovered": true,
+  "one_bad_among_four_rejected": true,
+  "per_holder_B": 147451,
+  "points": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source_public_sha256": "015fa226268e9508f6cc6c30a359531998800b361cc514517c2075adb979fc63",
+  "source_tip": "00000344474c89e1e7c0066ea79e6c20a3f7424ba11c5c932ca9068d6f9dad31",
+  "three_insufficient": true,
+  "unreachable_endpoint_skipped": true
+}

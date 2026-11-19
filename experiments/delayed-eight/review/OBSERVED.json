@@ -1,0 +1,103 @@
+{
+  "certificates": {
+    "2": {
+      "approved_slots": 2,
+      "certificate_B": 186983,
+      "certificate_native_sha256": "17e5f485db8d5209dc57757f2a07d8755d12fa5c9ac2f06509c9cbcee918bca3",
+      "certificate_sha256": "5f10a70f3326c57334d69cb7ea642aea0881eb20fbc623d2125efdb957570231",
+      "direct_native_sha256": "ff2dd9053bcaf5edc72611da8dc033e9af6bd75b262c22812bc5539949849a8b",
+      "independent_native_and_statement_order_agree": true,
+      "initialized_public_verifiers": 2,
+      "modified_proof_rejected": true,
+      "proof_B": 179806,
+      "swapped_whole_slot_receipts_rejected": true,
+      "warm_verification": {
+        "cpu_s": 0.009285675,
+        "elapsed_s": 0.009304078,
+        "operation": "certificate_verify",
+        "peak_rss_kib": 4356
+      }
+    },
+    "8": {
+      "approved_slots": 8,
+      "certificate_B": 208487,
+      "certificate_native_sha256": "17e5f485db8d5209dc57757f2a07d8755d12fa5c9ac2f06509c9cbcee918bca3",
+      "certificate_sha256": "d3d0cf176e49899a73bd49d49494da98913882fc1d6ecbd9244a3de66f3d5b04",
+      "direct_native_sha256": "ff2dd9053bcaf5edc72611da8dc033e9af6bd75b262c22812bc5539949849a8b",
+      "independent_native_and_statement_order_agree": true,
+      "initialized_public_verifiers": 2,
+      "modified_proof_rejected": true,
+      "proof_B": 179806,
+      "swapped_whole_slot_receipts_rejected": true,
+      "warm_verification": {
+        "cpu_s": 0.010288944,
+        "elapsed_s": 0.010289069,
+        "operation": "certificate_verify",
+        "peak_rss_kib": 4292
+      }
+    }
+  },
+  "independent_pristine_arithmetic_executables": {
+    "rewards": "77d1cbe36e09cd491245976cd77f253417091469fcfeae2c7ceca0f07705039b",
+    "roots": "d976950b9c54de09a3244d4b707dc2af563d0d5c2be5cb85286cebcf088863a1"
+  },
+  "outer_profile": {
+    "constraints": 123,
+    "degree_bits": 16,
+    "final_len": 4,
+    "folds": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "initial_oracle_words": [
+      65,
+      135,
+      16,
+      16
+    ],
+    "lde_points": 2097152,
+    "public_words": 210,
+    "vk_sha256": "9d280dfe7b0b35c2fb768e927239da4a8bdbc9c2ccdde27127a17fe9ae96bdcd"
+  },
+  "physical_public_source_blocks": 63,
+  "scope": "non-author checks of author-generated public material; independent fresh generation follows the freeze",
+  "two_branches": {
+    "original": {
+      "all_height_full_tree_roots_checked": 56,
+      "anchor": "72bca15d9fde01e5f962d1ec8a9ab36ad23b3c8f81b64b90cc7b37bfd3827192",
+      "core_B": 12688,
+      "fees": 24,
+      "funded": 72,
+      "height": 56,
+      "issued": 5600,
+      "raw_B": 1157960,
+      "root": "d4e3ea192080c3c024f91b41bdf8cfc6bcf784fc4f1c2d1d253656bb818296bb",
+      "spent": 16,
+      "spent_set_sha256": "8cebda0551fd5eea47119b69ce2ce814062b1c213d8fca1bc364ca6f676d4b4f",
+      "state": "1462aab51cae16a8338a1575605f8ce04700c3c371caa1c85f453d45f664c69d",
+      "tip": "0000014f75a850f57133d57e6103e0d26a2f9ba5c2c181846405f9802d46ef99",
+      "work": 234881024
+    },
+    "replacement": {
+      "all_height_full_tree_roots_checked": 57,
+      "anchor": "1e9ff34707454a4f995f5e2323f7ac3c712f472743d1f99bba82fe12c67366f3",
+      "core_B": 12910,
+      "fees": 24,
+      "funded": 73,
+      "height": 57,
+      "issued": 5700,
+      "raw_B": 1158182,
+      "root": "a27aa85395ab4fd550e2297dd197079b57e55236fb5a50911a5548aeafe1ca75",
+      "spent": 16,
+      "spent_set_sha256": "74347dc8adbd7f8040f5cba0a932179af7f34d329c61ed31f2f08231e387cac0",
+      "state": "8e912ae94fd76a68369ac937bce766d9a6ef2a33aa83f20a76b83d1e482f840b",
+      "tip": "000003321069a3ee1df53c05ba641a6ab4e633dca47ac9943219e9545716a332",
+      "work": 239075328
+    }
+  }
+}

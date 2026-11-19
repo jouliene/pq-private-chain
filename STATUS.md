@@ -1,3 +1,11 @@
+# Delayed DLF1 certificate decision
+
+Adopt D8C1 as optional experimental historical evidence on a versioned PoW network. A real eight-payment certificate is 208,487 B; the same circuit with two real active slots is 186,983 B. Sparse/busy one-copy projections for full groups are 2.647/2.617 TB per 100M. Full coverage costs roughly 44 continuously busy CPU cores before headroom. Nine genuine independent payers across two PoW branches, destructive pruning on a disposable replica, a stopped original service, missing-evidence resume, rollback across a certified boundary, fresh cold verification and seed-only receipt followed by a new 250-unit spend were exercised. Seven of eight winning payments remained covered by the original full certificate. The global chain project remains active, including the open PQ/availability obligations, private native assets and atomic multi-owner swaps.
+
+Start revision d9e4114967302916354a7f75787ada2b5e2d27fe. The single-command run, costs and decision are in [experiments/delayed-eight](experiments/delayed-eight/README.md). The [tagged release](https://github.com/jouliene/pq-private-chain/releases/tag/delayed-dlf1-eight-2026-11-19) records the exact public SHA, actual CI and clean non-author results. Use its attached readback to distinguish tests completed on that SHA from archived author measurements. Historical APV2 and DLF1 defaults are preserved.
+
+## Earlier milestone
+
 # Complete payment-proof architecture
 
 Select DLF1 for the next direct-wallet research iteration. Keep APV2 as the executable local devnet baseline. The direct path was registered before proving, built from pinned Qnero source and verified from zero premine. At 143,187 B per complete payment, DLF1 reduced APV2 by 37.80%. Three separate wallets made direct 2×2 payments, an initially offline receiver restored its seed and spent again, and an alternative genuine spend lost a work-selected reorganization. In a separate trial four independent proofs overlapped a real empty block and occupied one full H10 block. Both programs retain current fee, nullifier, receipt, PoW and inventory checks in a separate network. The 1/5 TB archive scenarios and formal end-to-end PQ/privacy assurance remain open. [Decision](experiments/payment-architecture/DECISION.md) · [Reproduce](experiments/payment-architecture/README.md)

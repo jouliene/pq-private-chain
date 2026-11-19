@@ -1,0 +1,31 @@
+{
+  "binary_sha256": "17e5f485db8d5209dc57757f2a07d8755d12fa5c9ac2f06509c9cbcee918bca3",
+  "build_driver_sha256": "1a009b257fa773844f04e6738a7e5a92544b73e6f962801304c094d78918dd41",
+  "cargo": [
+    "rustup",
+    "run",
+    "1.93.0",
+    "cargo",
+    "build",
+    "--locked",
+    "--offline",
+    "--release",
+    "-j2",
+    "-p",
+    "qnero-prover",
+    "--example",
+    "delayed_eight",
+    "--features",
+    "parallel,zk"
+  ],
+  "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "compiled_sources_sha256": {
+    "codec.rs": "da0d91ca98c27aa266be28579076b422d11e08858f1e43c7c8acce5c6316bf70",
+    "inner.rs": "7e57e8b71ab8efcd1a200bf30646d6d8206bf5987f9c27ee53895356f714a524",
+    "main.rs": "2b198c4651525a8ccaad7a40cfc4fd2d84b9bfcde191a2438e118173ed52228f"
+  },
+  "compiler": "rustc 1.93.0 (254b59607 2026-01-19)\nbinary: rustc\ncommit-hash: 254b59607d4417e9dffbc307138ae5c86280fe4c\ncommit-date: 2026-01-19\nhost: x86_64-unknown-linux-gnu\nrelease: 1.93.0\nLLVM version: 21.1.8",
+  "inner_build_driver_sha256": "8de56b221e00d604e4f90835355be7a3d25d05f84a7b4bce12bae0237d32b316",
+  "preregistration_sha256": "aae671f67dbc5c6d3171e2c41db2d905bca790fbda07e9ebb661dc978b870eca",
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+}
