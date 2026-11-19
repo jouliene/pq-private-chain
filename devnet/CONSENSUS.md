@@ -51,3 +51,34 @@ The positive H1 fixture spends no previous outputs and creates one 100-unit rewa
 
 
 The registered native public verifier accepted the historical 230,206-byte APV2 proof in the preceding research network. Admission on this devnet's empty genesis rejected the same payment's foreign anchor. A changed proof failed cryptographic verification. Neither invocation inserted an offer. Separately, the three independently resealed H1 bodies with an excess subsidy, wrong funded note denomination or incorrect funded root all met this network's 22-bit target and failed state reconstruction without adding any block or selected effect. This isolates the issuance/state rules from the earlier PoW gate.
+
+## Reward-spend observability
+
+The block reveals the miner spending key, gross reward, exact funded note, rho and r. Reusing a payout key links those mining receipts directly. For a real input the pinned Qnero relation instead computes the nullifier as Poseidon2 under the NF domain on `nk || rho || r`. Here `nk = Digest::hash_bytes(["qnero/nk", secret_seed])`, and the public key is the PK-domain hash of the private nk and the separately derived `ak=H(AK,ask)`, in the order `ak || nk`. The wallet uses its secret nk when comparing each reconstructed reward note to the public spent set. Knowing the public reward opening alone therefore leaves an unavailable input to that calculation under the key/hash assumptions. A full viewing key contains nk and permits exact retrospective matching without spending authority. Neither statement supplies general spend unlinkability. On an empty-funded chain, the first real payment after a single mining reward necessarily consumes that reward as a matter of observable funding history; timing, repeated addresses and small feasible input sets can give further attribution. Deducing that a reward was spent can still leave ambiguity about which of a payment's two published nullifiers corresponds to that real input. [Pinned nullifier and public-key circuit](https://github.com/DigitalGuards/qnero/blob/f04c91307837c0231668383bec76ba98d89d2652/crates/qnero-circuit/src/note_gadget.rs) · [pinned spending/viewing key derivation](https://github.com/DigitalGuards/qnero/blob/f04c91307837c0231668383bec76ba98d89d2652/crates/qnero-notes/src/keys.rs) · [devnet wallet matching](crypto/wallet.rs)
+
+## Author network archival replay
+
+The public author trace SHA-256 was `367d81047b2a0aa126fdff682d342062121c15b2d54d3ee47a8ab4a77ed2f2cd`. A fresh archive first accepted the old H14 and then received each of the 11 competing post-H4 bodies. The winning H15 triggered automatic genesis replay and detached all ten old post-H4 blocks. After reopening, its local deep-replay count was one. A second new archive accepted only the winning history and reported zero deep replays. The two runs used separate genuine verification/hash processes. Both reconstructed exactly the same selected rows, including full bodies, headers, frontiers, ordered receipt/reward rows, nullifier heights and empty pending queue. The first store retained ten additionally validated but unselected blocks, and rejected the displaced payment on anchor age. SQLite integrity and foreign-key checks passed.
+
+| Independently checked public result | Value |
+| --- | --- |
+| Winning PoW tip | `000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615` |
+| Winning AP anchor | `d0c468a919658103b47ba94c7e34a2b6963fa3e9745976887c18ec4ecf661b36` |
+| Work / complete body bytes | 62,914,560 / 693,960 |
+| Occupancy / genuine payment proofs | 13 empty blocks, one singleton, one pair of ordered singletons / 3 |
+| Verified ordinary ciphertext / total selected commitments | 10,752 bytes / 21 |
+| Gross reward / fee component / new supply | 1,509 / 9 / 1,500 |
+| Selected spent set | 6 nullifiers, sorted SHA-256 `011490595cd3a858426c507ada507c94959b8b9547267b8c374f60448d9f0b72` |
+
+The audit recomputed each body seal from the length-checked public bytes, each expected subsidy plus verified fees, and each public mining note via the registered native helper. An additional pass verified each selected payment and compared the entire ordered output list and sorted nullifiers against the reopened chain's paged view. Both stores produced `198a77e5f4c80049ca9f96c0558bdf65301d3f5f17f12d71787a6dfa2e803689` for a typed, length-framed hash of all selected block rows and `9bc449b3e66eea15ee978b35201b739c4263a330a7db43cacab642ea3b26b3fe` for all selected output/receipt/reward rows. These are replay comparisons for this trace; the live fork decision itself uses verified accumulated work and the PoW tip tie-break.
+
+For a separate process-death check, an archival writer began the actual winning H15 selection from the old H14 with the still-losing side history already stored. A test observer paused it immediately after the normal attachment method returned for alternate H5, following genuine revalidation of the paid common prefix through H4. The database was inside its write transaction and its 57,856-byte rollback journal had SQLite hot-journal magic. An external process sent SIGKILL. A brand-new process recovered the old H14 and the identical typed fingerprint of **all eight tables**, including known losing blocks, transaction lookup index and deep-replay counter: `257959f3494817453caa817250b445c50b0502c596563c165f85eed299349f34`. Retrying the identical H15 block committed the alternate branch and incremented the deep-replay counter once. This exercised local process termination and restart on the tested filesystem.
+
+The portable fault check takes an independently approved local devnet runtime and the public, pre-freeze author capture. It creates an isolated scratch archive, starts fresh public verifier processes and sends no mining or proving requests. Re-run after preparing the runtime from the repository root.
+
+```sh
+python3 -I -B devnet/check_replay_crash.py \
+  --runtime .work/devnet-runtime --evidence devnet/evidence/author
+```
+
+[Portable failure-injection test](check_replay_crash.py) · [executed public crash receipt](evidence/controls/CRASH_DEEP.json)

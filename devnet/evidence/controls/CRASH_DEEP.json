@@ -1,0 +1,27 @@
+{
+  "after": {
+    "deep_replays": 1,
+    "old_tip": "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2",
+    "recovered_logical_sha256": "257959f3494817453caa817250b445c50b0502c596563c165f85eed299349f34",
+    "retry_height": 15,
+    "sqlite_integrity": "ok",
+    "winner": "000002c4e45d2dfa2e1d698a725a8b54d01a506bfa08a5c8be4114338c1c6615"
+  },
+  "before": {
+    "height": 14,
+    "logical_sha256": "257959f3494817453caa817250b445c50b0502c596563c165f85eed299349f34",
+    "tip": "00000030508455adcb01808fa622c171435ba3d2c9dbe2c518315b0fa24d91f2"
+  },
+  "binary_sha256": "0d74f63ee0a201fd49f62f91b269fa959b5388a17b4665a14dbb77200f9b0634",
+  "evidence_sha256": "367d81047b2a0aa126fdff682d342062121c15b2d54d3ee47a8ab4a77ed2f2cd",
+  "interrupted": {
+    "height": 5,
+    "journal_B": 57856,
+    "journal_magic": "d9d505f920a163d7",
+    "logical_sha256": "9d28848ce488c60ad2771466a40f160b5dd093276248a21d73b0275bc3f2ba11",
+    "prefix_blocks_from_genesis": 5,
+    "tip": "00000392c631f86afc4f4c101c2b82dae646c77321023d52661c42f412f94beb"
+  },
+  "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "signal": "SIGKILL"
+}
