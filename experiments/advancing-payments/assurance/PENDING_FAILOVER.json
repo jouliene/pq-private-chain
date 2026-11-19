@@ -1,0 +1,76 @@
+{
+  "deliveries": [
+    [
+      {
+        "accepted": true,
+        "ack_bytes": 32,
+        "endpoint": "preferred",
+        "out_bytes": 230210
+      }
+    ],
+    [
+      {
+        "accepted": true,
+        "ack_bytes": 32,
+        "endpoint": "preferred",
+        "out_bytes": 230210
+      }
+    ],
+    [
+      {
+        "accepted": false,
+        "ack_bytes": 0,
+        "endpoint": "preferred",
+        "out_bytes": 0
+      },
+      {
+        "accepted": true,
+        "ack_bytes": 32,
+        "endpoint": "direct",
+        "out_bytes": 230210
+      }
+    ]
+  ],
+  "events": [
+    {
+      "block_sha256": "346e9fe8bcbb4b53e98cba425b863fdb3960f19700dfee70daa1149841ba3dff",
+      "fallback": "registered builder unavailable",
+      "height": 1,
+      "packet_sha256": "e855e01c9d9dc0de2859f3f4bf4fc534fe36c79e87baf9bed6044082a7c36483",
+      "remaining": 2,
+      "width": 1
+    },
+    {
+      "block_sha256": "1ae75d24f09bbdf827c2f1ffa3329095eee58de7ae33ee8681d436e3fba7a22f",
+      "fallback": null,
+      "height": 2,
+      "packet_sha256": "a5db07c906bb0c45c04ed6578d2dd6a53c26537f3404b279f974d4ff963b2c6f",
+      "remaining": 1,
+      "width": 1
+    },
+    {
+      "block_sha256": "4567f367abb8f4c0a40e4f1fa46e7fa7489cb7b3cb87b1a6e7ca1d44a424ffea",
+      "fallback": null,
+      "height": 3,
+      "packet_sha256": "4c5d32856b918cdd448862078c9910b23fb14bac2f7308316ca39298b7b3cdb0",
+      "remaining": 0,
+      "width": 1
+    }
+  ],
+  "final": {
+    "count": 102,
+    "fees": 9,
+    "frontier_sha256": "4e192da1fff50603fefb267d8958ae61e04b8f190ffb325740f69fa15f1d158b",
+    "header": "1b581ee5a038b6f4b4ae25ab0d63514821a104a8c41897fa48fa2bd1a1da3506030000007e46db90bf5bd5db11fea13d708f7f4c6ffaa929546c318cc0067441dcefdf0f324b25661fc0e0ae8a0d2e0a69feac4d8adfc1bec02893d1aafefb5738819673c27d53c6726c05e863f0a8d3387bff4e7a533b2b191cb98ff3a419fed5e8f4cf",
+    "height": 3,
+    "id": "740cbc8fa21f1b5751741432c865a4184b3e5fc14f7555bb66c7ea443123a88c",
+    "nullifier_set_sha256": "5a73a6a8a0766e7566fd7da4c1be5bd42503323b0342da2d7d99a83cb94cd5d7",
+    "ordered_commitments_sha256": "844cda2567db0fb9bb711316b3011d5c045fa292a2353ae9332f192c6cd66fdd",
+    "rollback_floor": 0,
+    "spent": 6
+  },
+  "genesis_sha256": "6456501cfd69a57a85ab4cb734ced5ef36d5b4b20c8e9cc6e05e9684981ae55e",
+  "profile_sha256": "af88a0ac0caa5f0aa27d38d687b6cc39495a0aa2659ed4a7e5e74653724cc1b1",
+  "queued_before_outage": 2,
+  "worker_scenario": "absent"
+}

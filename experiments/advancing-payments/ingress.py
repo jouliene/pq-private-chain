@@ -113,6 +113,28 @@ def upload(paths,packet):
     raise RuntimeError("all payment endpoints unavailable")
 
 
+def build_pending(selected, builders):
+    """When an optional worker is absent or its pipe closes, the original oldest authorization is usable."""
+    k = len(selected)
+    if k == 1:
+        return selected, selected[0][1], None
+    worker = builders.get(k)
+    if worker is None:
+        reason = "registered builder unavailable"
+    elif worker.closed or worker.proc.poll() is not None:
+        reason = "builder exited"
+    else:
+        try:
+            packet = worker.call(*(entry[1] for entry in selected))
+        except (BrokenPipeError, ConnectionResetError, EOFError):
+            reason = "builder transport disconnected"
+        else:
+            need(packet_width(packet) == k, "aggregate constructor")
+            return selected, packet, None
+    # Keep every other authorization in the durable FIFO. node.produce() rechecks the singleton.
+    return selected[:1], selected[0][1], reason
+
+
 def admit_queue(pool,node,builders,nonce):
     """One local producer opportunity. A direct endpoint can use the singleton verifier autonomously."""
     c=db(pool)
@@ -148,20 +170,19 @@ def admit_queue(pool,node,builders,nonce):
                 break
         if not selected:
             return None,dict(rejected=rejected,count=0)
-        k=len(selected)
         begin=time.monotonic()
-        if k==1:
-            packet=selected[0][1]
-        else:
-            packet=builders[k].call(*(x[1] for x in selected))
-            need(packet_width(packet)==k, "aggregate constructor")
+        selected,packet,fallback=build_pending(selected,builders)
+        k=len(selected)
         built=time.monotonic()
         block=node.produce(packet,nonce)
         end=time.monotonic()
         c.executemany("DELETE FROM pool WHERE seq=?",((x[0],) for x in selected))
-        return block,dict(count=k,rejected=rejected,packet_B=len(packet),block_B=len(block),
+        stats=dict(count=k,rejected=rejected,packet_B=len(packet),block_B=len(block),
                           wallet_packet_B=[len(r[1]) for r in selected],builder_call_s=built-begin,
                           state_admission_s=end-built,oldest_accepted_to_commit_s=end-selected[0][2]/1e9,
                           queue_delay_to_builder_s=begin-selected[0][2]/1e9)
+        if fallback:
+            stats["fallback"]=fallback
+        return block,stats
     finally:
         c.close()

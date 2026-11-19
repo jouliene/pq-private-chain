@@ -124,11 +124,13 @@ class Role:
 
     def get(self):
         hdr = self.proc.stdout.read(4)
-        need(len(hdr) == 4, "failed public frame from " + self.name)
+        if len(hdr) != 4:
+            raise EOFError("incomplete frame header from " + self.name)
         n, = struct.unpack("<I",hdr)
         need(n <= LIMIT, "local output limit")
         data = self.proc.stdout.read(n)
-        need(len(data) == n, "short " + self.name)
+        if len(data) != n:
+            raise EOFError("incomplete frame payload from " + self.name)
         self.sizes[1] += n+4
         return data
 
