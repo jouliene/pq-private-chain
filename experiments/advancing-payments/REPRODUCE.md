@@ -35,6 +35,7 @@ python3 -IB "$d/run.py" replay-direct "${deploy[@]}" --genesis-sha "$direct_gene
 python3 -IB "$d/incoming_only.py" replay "${deploy[@]}" --genesis-sha 8718d0efa7401164b837061bcaa91ed79a8c392b79afec865574471fa609745e \
   --evidence "$d/evidence/incoming" --work "$lab/public-incoming"
 python3 -IB "$d/assurance/extensions/controls.py"
+python3 -IB "$d/assurance/pending_failover.py" "${deploy[@]}" --main "$d/evidence/main" --genesis-sha "$main_genesis" --worker absent
 ```
 
 Run the measured campaigns in sequence on an otherwise idle host. Wallet secrets are freshly generated inside isolated processes with a private temporary backup mount. Published evidence consists of proofs, encrypted receipts, public funding commitments, block headers, selected states, public negative controls and resource counts. Fresh keys, fresh proof randomness and local clock variation necessarily change the exact funding, packet digests and timings.
@@ -60,5 +61,7 @@ python3 -IB "$d/aggregate_clock.py" trial "${deploy[@]}" --genesis-sha "$main_ge
 python3 -IB "$d/costs/roles.py" "$d/evidence/main" --replay "$d/evidence/PUBLIC_REPLAY.json" \
   --storage "$d/evidence/STORAGE.json" --direct "$d/evidence/direct/DIRECT.json" --clock "$d/evidence/clock/CLOCK.json"
 ```
+
+The same pending-failover command supports `exited`, `disconnect` and `healthy` with a real registered width-two builder. The disconnect case terminates it after it receives both honest input packets. The healthy case constructs a fresh outer proof.
 
 The non-author review includes the independent upstream full-tree/header oracle, all slot and ciphertext correspondences, verification and whole-chain reconstruction, negative admission cases, durable mid-switch interruption and receipt/ACK boundaries. See [independent review](review/REVIEW.md), [crash/retry checks](assurance/durability/) and [traffic and cost calculations](costs/ROLE_COSTS.md).
