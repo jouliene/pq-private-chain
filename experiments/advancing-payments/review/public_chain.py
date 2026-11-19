@@ -131,10 +131,37 @@ def check(genesis, approved, profile, blocks, exe, database=None):
             assert db.execute("SELECT pos,cm,h FROM outs ORDER BY pos").fetchall() == [
                 (i,cm,h) for i,(cm,h) in enumerate(positions)]
             assert dict(db.execute("SELECT nf,h FROM spent")) == spent
-            chain = db.execute("SELECT h,id,header,fees,n,body FROM blocks ORDER BY h").fetchall()
-            assert chain[0] == (0,ids[0],headers[0],0,initial_count,None) and len(chain) == 1+len(history)
-            for saved,expected in zip(chain[1:],history,strict=True):
-                assert saved[:5] == expected[:5] and (saved[5] is None or saved[5] == expected[5])
+            pruned, floor = db.execute("SELECT prune,floor FROM config").fetchone()
+            assert 0 <= floor <= len(blocks) and floor >= len(blocks)-8
+            chain = db.execute("SELECT h,id,header,fees,n,body,frontier FROM blocks ORDER BY h").fetchall()
+            genesis_row = (0,ids[0],headers[0],0,initial_count,None)
+            segment_roots = {}
+            for saved,expected in zip(chain,[genesis_row,*history],strict=True):
+                h, _, _, _, n, body = expected
+                assert saved[:5] == expected[:5]
+                if pruned and h < floor:
+                    assert saved[5:] == (None,None)
+                    continue
+                assert saved[5] == body
+                # Each base-four digit counts completed, adjacent perfect subtrees.
+                # Compute each from its actual leaf segment with the upstream full tree.
+                frontier = bytearray()
+                size = 1
+                while size <= n:
+                    first = n - n % (4*size)
+                    for j in range((n//size)%4):
+                        start = first+j*size
+                        if size == 1:
+                            part = leaves[start]
+                        else:
+                            key = (start,size)
+                            if key not in segment_roots:
+                                line, = reference(exe,[str(size)],b"".join(leaves[start:start+size]))
+                                segment_roots[key] = bytes.fromhex(line.split()[2])
+                            part = segment_roots[key]
+                        frontier.extend(part)
+                    size *= 4
+                assert bytes(frontier) == saved[6]
         finally:
             db.close()
     return {"blocks":len(blocks),"payments":sum(widths),"widths":widths,"anchor_ages":ages,
