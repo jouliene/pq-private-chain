@@ -1,0 +1,29 @@
+{
+  "blocks": 60,
+  "selected": {
+    "count": 48,
+    "fees": 36,
+    "frontier_sha256": "781e2b18e7938837030e6eae91e5d2345c93248396b5a5fad74cb9752e1fd374",
+    "header": "827e80d5f97e6e8a7ee05134fff408b9857340ccf4889841788db318e40262d53c0000006e026940e051e0db2e28f24a120194c86b220d53f37df897218371fbc5c9e343919193aefcf59db9449c3569e62d06171731433cc776af4ecc253abf8b07cd9e46b0806845f13106baadcedc397f9ac963d01e4674e132889abd32e8c3808253",
+    "height": 60,
+    "id": "2d5cb5a416bdd6d577d640766a4531708280cfe518bd7ac6a0f75009ebdcd79e",
+    "nullifier_set_sha256": "3f7067ba262a6ed8aec9d8fc67867f4b02dc509895dafc3e3a15c495fce66329",
+    "ordered_commitments_sha256": "597c0f341d4f893d1605fabae230bbd14fa6f3438ecdf5bf372cdac8f9ede20f",
+    "rollback_floor": 52,
+    "spent": 24
+  },
+  "verified_heights": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60
+  ]
+}

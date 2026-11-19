@@ -34,6 +34,8 @@ python3 -IB "$d/run.py" replay-direct "${deploy[@]}" --genesis-sha "$direct_gene
   --evidence "$d/evidence/direct" --work "$lab/public-direct"
 python3 -IB "$d/incoming_only.py" replay "${deploy[@]}" --genesis-sha 8718d0efa7401164b837061bcaa91ed79a8c392b79afec865574471fa609745e \
   --evidence "$d/evidence/incoming" --work "$lab/public-incoming"
+python3 -IB "$d/run.py" replay-paced "${deploy[@]}" --genesis-sha cb68420601e81d34b1e241732eca86cbff9ea9680a303ab6ba89283bfaf46435 \
+  --evidence "$d/evidence/paced" --work "$lab/public-paced"
 python3 -IB "$d/assurance/extensions/controls.py"
 python3 -IB "$d/assurance/pending_failover.py" "${deploy[@]}" --main "$d/evidence/main" --genesis-sha "$main_genesis" --worker absent
 ```
@@ -45,6 +47,8 @@ python3 -IB "$d/run.py" campaign "${deploy[@]}" \
   --evidence "$lab/fresh-main" --work "$lab/node"
 python3 -IB "$d/direct_live.py" "${deploy[@]}" \
   --evidence "$lab/fresh-direct" --work "$lab/direct-node"
+python3 -IB "$d/direct_live.py" --paced-twelve "${deploy[@]}" \
+  --evidence "$lab/fresh-paced" --work "$lab/paced-node"
 python3 -IB "$d/incoming_only.py" trial "${deploy[@]}" \
   --evidence "$lab/fresh-incoming" --work "$lab/incoming-node"
 python3 -IB "$d/storage.py" "$lab/node/selected.sqlite" "$lab/node/peer.sqlite" \
