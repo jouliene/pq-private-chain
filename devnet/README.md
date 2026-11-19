@@ -21,8 +21,8 @@ This launches A and B mining independently on ordinary CPUs and C validating. Th
 The send command displays the miner wallet's selected input total, amount, fixed three-unit fee, change, transaction ID and packet size. A 100-unit input yields 60 units of change. Submission places a pending transaction in validator C's own mempool. Run the balance command again after inclusion. Reading a balance scans the selected branch locally. The current devnet wallet can combine at most two positive-value inputs. A fork or expiry during proving may require a fresh balance scan and proof. An acknowledged payment is pending until it is included on the selected branch. Check its receipt before sending another payment.
 
 ```sh
-./pqd backup alice ./alice.seed
-./pqd restore alice-restored ./alice.seed
+./pqd backup alice "$HOME/alice-pqdev.seed"
+./pqd restore alice-restored "$HOME/alice-pqdev.seed"
 ./pqd balance alice-restored
 ./pqd send alice-restored miner-b 11
 ./pqd stop

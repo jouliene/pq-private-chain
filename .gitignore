@@ -14,6 +14,3 @@ core
 *.secret
 *.key
 *.pem
-
-# Local wallet recovery material
-*.seed
