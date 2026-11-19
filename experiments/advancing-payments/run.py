@@ -227,7 +227,7 @@ def replay(args,res):
     return values
 
 
-def replay_direct(args, res):
+def replay_direct(args, res, expected_count=4):
     directory = args.evidence
     trace = json.loads((directory/"TRACE.json").read_bytes())
     genesis = (directory/"genesis.bin").read_bytes()
@@ -247,7 +247,7 @@ def replay_direct(args, res):
                 need(packet_width(packet) == 1, "direct singleton required")
                 occupied.append(node.head()["h"])
         selected = snapshot(node)
-        need(len(occupied) == 4 and selected == trace["final"], "public direct replay")
+        need(len(occupied) == expected_count and selected == trace["final"], "public direct replay")
         return dict(verified_heights=occupied, blocks=len(trace["order"]), selected=selected)
     finally:
         node.close()
@@ -255,7 +255,7 @@ def replay_direct(args, res):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode",choices=["register","campaign","replay","replay-direct","roots"])
+    parser.add_argument("mode",choices=["register","campaign","replay","replay-direct","replay-paced","roots"])
     parser.add_argument("--binary",type=Path,required=True)
     parser.add_argument("--binary-sha",required=True)
     parser.add_argument("--keys",type=Path,required=True)
@@ -276,6 +276,7 @@ def main():
             output=campaign(args,res)
         elif args.mode=="replay": output=replay(args,res)
         elif args.mode=="replay-direct": output=replay_direct(args,res)
+        elif args.mode=="replay-paced": output=replay_direct(args,res,12)
         else: output=roots(res.h)
         print(json.dumps(output,sort_keys=True,indent=2))
     finally:

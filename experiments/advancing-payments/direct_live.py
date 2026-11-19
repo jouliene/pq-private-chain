@@ -17,13 +17,13 @@ from run import Resources, Records, payment, put, save, snapshot
 from state import Ledger
 from ingress import Endpoint, admit_queue, create_pool, upload
 
-# Hardware scenario declared before these runs. One fee-paying user, four real online intents.
-ARRIVALS=(0.,12.,24.,36.)
 BLOCK_PERIOD=2.
 WALL_BOUND=22.
 
 
 def live(a,res):
+    period, count = (10.,12) if a.paced_twelve else (12.,4)
+    arrivals = tuple(k*period for k in range(count))
     a.work.mkdir(parents=True,exist_ok=False)
     a.evidence.mkdir(parents=True,exist_ok=False)
     records=Records(a.evidence)
@@ -55,16 +55,17 @@ def live(a,res):
                 job = None
                 next_send = 0
                 tick = 0
-                while len(included) < len(ARRIVALS) or job is not None:
+                while len(included) < len(arrivals) or job is not None:
                     now = time.monotonic() - start
-                    need(now < ARRIVALS[-1] + WALL_BOUND + 8, "direct live completion")
+                    need(now < arrivals[-1] + WALL_BOUND + 8, "direct live completion")
                     if job is not None and job.done():
-                        k, raw, start_h, create_s, sent_at, attempts = job.result()
+                        k, raw, start_h, started_at, create_s, sent_at, attempts = job.result()
                         records.submission("live"+str(k), raw)
                         submitted[sha(raw)] = dict(payer=0, k=k, anchor_height=start_h, creation_s=create_s,
-                                                   offered_s=ARRIVALS[k], uploaded_s=sent_at, attempts=attempts)
+                                                   offered_s=arrivals[k], started_s=started_at, scheduling_lag_s=started_at-arrivals[k],
+                                                   uploaded_s=sent_at, attempts=attempts)
                         job = None
-                    if job is None and next_send < len(ARRIVALS) and now >= ARRIVALS[next_send]:
+                    if job is None and next_send < len(arrivals) and now >= arrivals[next_send]:
                         k = next_send
                         selected = node.head()
                         leaves = node.leaves()
@@ -73,7 +74,7 @@ def live(a,res):
                             raw = payment(sender, k, header, leaves, dest)
                             built = time.monotonic() - begin
                             attempts = upload([preferred, path], raw)
-                            return k, raw, h, built, time.monotonic()-start, attempts
+                            return k, raw, h, begin-start, built, time.monotonic()-start, attempts
                         job = worker.submit(make)
                         next_send += 1
                     if now < (tick+1)*BLOCK_PERIOD:
@@ -91,7 +92,7 @@ def live(a,res):
                         block = node.produce(b"",tick)
                     history.append(records.block(block))
                     metrics.append((time.monotonic()-start)-tick*BLOCK_PERIOD)
-            need(submitted.keys() == included.keys() and len(submitted) == len(ARRIVALS), "offered and admitted identities")
+            need(submitted.keys() == included.keys() and len(submitted) == len(arrivals), "offered and admitted identities")
             need(tap.execute("SELECT count(*) FROM pool").fetchone()[0] == 0, "direct queue drained")
             reports = []
             for packet_id, sample in sorted(submitted.items(), key=lambda item:item[1]["k"]):
@@ -104,11 +105,17 @@ def live(a,res):
                 reports.append(sample)
             final=snapshot(node)
             for name in list(res.roles):res.finish(name)
-            result=dict(profile_sha256=a.profile_sha,genesis_sha256=origin,offered_period_s=12,block_period_s=BLOCK_PERIOD,
-                        nominal_offered_payments_s=1/12,arrival_horizon_s=48,payments=reports,full_intent_bound_s=WALL_BOUND,
+            result=dict(profile_sha256=a.profile_sha,genesis_sha256=origin,offered_period_s=period,block_period_s=BLOCK_PERIOD,
+                        nominal_offered_payments_s=1/period,arrival_horizon_s=count*period,payments=reports,full_intent_bound_s=WALL_BOUND,
                         total_elapsed_s=time.monotonic()-start,last_confirmation_s=reports[-1]["included_s"],
-                        empty_blocks=len(history)-4,full_block_stream_B=sum(records.blocks[h]["size"]+4 for h in history),
+                        empty_blocks=len(history)-count,full_block_stream_B=sum(records.blocks[h]["size"]+4 for h in history),
                         block_finish_lateness_s=metrics,max_block_finish_lateness_s=max(metrics),final=final,roles=res.finished)
+            if a.paced_twelve:
+                maximum_lag = max(sample["scheduling_lag_s"] for sample in reports)
+                result["paced_service"] = dict(
+                    offered=count, included=len(reports), final_pending=0, max_creation_dispatch_lag_s=maximum_lag,
+                    last_commit_deadline_s=count*period+BLOCK_PERIOD,
+                    finite_service_pass=maximum_lag < BLOCK_PERIOD and reports[-1]["included_s"] <= count*period+BLOCK_PERIOD)
             save(a.evidence/"DIRECT.json",result)
             save(a.evidence/"TRACE.json",dict(genesis_sha256=origin,profile_sha256=a.profile_sha,blocks=records.blocks,order=history,final=final))
             return result
@@ -120,6 +127,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for flag in ["binary","keys","work","evidence"]:parser.add_argument("--"+flag,type=Path,required=True)
     for flag in ["binary-sha","profile-sha"]:parser.add_argument("--"+flag,required=True)
+    parser.add_argument("--paced-twelve",action="store_true",help="measure twelve online intents spaced ten seconds apart")
     a=parser.parse_args()
     resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     signal.alarm(240)
