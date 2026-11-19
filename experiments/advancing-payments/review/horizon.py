@@ -67,6 +67,20 @@ def test(exe):
                                     restored_tip=rebuilt["head_id"])
             finally:
                 ledger.close()
+            # Canonical-only late join has not observed the abandoned height 12.
+            late = Ledger(Path(root)/(name+"_canonical_prefix"),backend,genesis,approved,True,pruned)
+            try:
+                for raw in blocks[:4]:
+                    late.accept(raw)
+                assert late.head()["id"]==ids[4]
+                floor = late.db.execute("SELECT floor FROM config").fetchone()[0]
+                assert floor==0
+                later = attempt(lambda:late.switch(ids[1],[]))
+                assert later=="accepted" and late.head()["id"]==ids[1]
+                result[name]["canonical_only_height_four_floor"] = floor
+                result[name]["same_tip_canonical_only_four_to_one"] = later
+            finally:
+                late.close()
     assert result["archive"] == result["pruned"]
     return result
 
