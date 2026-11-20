@@ -1,0 +1,625 @@
+{
+  "author": {
+    "adverse_public_verifier_cases": {
+      "issuance_cap": "rejected",
+      "issuance_issue_id": "rejected",
+      "issuance_proof": "rejected",
+      "issuance_receipt": "rejected",
+      "ordinary_cap": "rejected",
+      "ordinary_issue_id": "rejected",
+      "ordinary_proof": "rejected",
+      "ordinary_receipt": "rejected"
+    },
+    "blocks": 121,
+    "branch_snapshots": {
+      "common": {
+        "fees": 18,
+        "height": 49,
+        "issued": 4900,
+        "tip": "000000014fcb19b28f64631a3fdfd304ed0e50b3e1d09f392d9c2c8e69fa654b"
+      },
+      "final": {
+        "fees": 36,
+        "height": 106,
+        "issued": 10600,
+        "tip": "000000c0a90168b81ab7f9ba8315f90a1949ea2f8e78a6deaf3dd9a27762095b"
+      },
+      "loser": {
+        "fees": 24,
+        "height": 64,
+        "issued": 6400,
+        "tip": "0000011e1ca738afe12caf03966b26defcea1b54bdf316f8f109a4e9491e70e7"
+      },
+      "winner": {
+        "fees": 18,
+        "height": 66,
+        "issued": 6600,
+        "tip": "00000319404b7ae71a6d42fde9e238b617effc4b787fef7bc7b2afd5e97a9627"
+      }
+    },
+    "database_comparisons": [
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 130,
+        "payments": 12,
+        "selected_height": 106
+      },
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 130,
+        "payments": 12,
+        "selected_height": 106
+      },
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 130,
+        "payments": 12,
+        "selected_height": 106
+      },
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 130,
+        "payments": 12,
+        "selected_height": 106
+      }
+    ],
+    "disclosed_final_wallets": {
+      "fork-miner": {
+        "assets": {},
+        "native": 0
+      },
+      "issuer-a": {
+        "assets": {
+          "a316d6ed67e57278ec09528d4eca8860e6196ee7f4679c0c0076dd0e6d439472": 110
+        },
+        "native": 44
+      },
+      "issuer-b": {
+        "assets": {
+          "7bbe7c4615b30b702b27742148d5421eac2f38cf73afd91f14db25e1be85d940": 200
+        },
+        "native": 49
+      },
+      "miner-a": {
+        "assets": {},
+        "native": 4942
+      },
+      "miner-b": {
+        "assets": {},
+        "native": 3837
+      },
+      "next-a": {
+        "assets": {
+          "a316d6ed67e57278ec09528d4eca8860e6196ee7f4679c0c0076dd0e6d439472": 32
+        },
+        "native": 2
+      },
+      "next-b": {
+        "assets": {
+          "7bbe7c4615b30b702b27742148d5421eac2f38cf73afd91f14db25e1be85d940": 26
+        },
+        "native": 2
+      },
+      "offline": {
+        "assets": {
+          "7bbe7c4615b30b702b27742148d5421eac2f38cf73afd91f14db25e1be85d940": 26,
+          "a316d6ed67e57278ec09528d4eca8860e6196ee7f4679c0c0076dd0e6d439472": 25
+        },
+        "native": 19
+      },
+      "sink-a": {
+        "assets": {
+          "a316d6ed67e57278ec09528d4eca8860e6196ee7f4679c0c0076dd0e6d439472": 13
+        },
+        "native": 4
+      },
+      "sink-b": {
+        "assets": {
+          "7bbe7c4615b30b702b27742148d5421eac2f38cf73afd91f14db25e1be85d940": 8
+        },
+        "native": 1
+      },
+      "winning-miner": {
+        "assets": {},
+        "native": 1700
+      }
+    },
+    "disclosed_offline_restore": {
+      "assets": {
+        "7bbe7c4615b30b702b27742148d5421eac2f38cf73afd91f14db25e1be85d940": 60,
+        "a316d6ed67e57278ec09528d4eca8860e6196ee7f4679c0c0076dd0e6d439472": 70
+      },
+      "native": 40
+    },
+    "full_public_proof_calls": 28,
+    "owned_row_comparisons": {
+      "distinct_issuer_spend_keys": 2,
+      "exact_owned_outputs_checked": 24,
+      "original_offline_store_absent": true,
+      "owned_inputs_checked_against_public_nullifiers": 16,
+      "seed_backup_bytes": 32,
+      "selected_payments": 12,
+      "wallet_inventories": 11
+    },
+    "public_manifests_sorted_path_lf_sha256": "4a644587953b3f73efc7421416dc664bf1cedacd31e1f7f7afce845b14854356",
+    "public_packets": 14,
+    "public_replay_elapsed": 1.94,
+    "replay_json_sha256": "6d1fc3fa2ef0b8fa9574146bc8427e9ba34d199c209472284b98792c610ce994",
+    "run_json_sha256": "5a918a0342d93a75ab10c579a76c987ae4089e6e1d96ce506f260faf8455740b",
+    "selected": {
+      "anchor": "a9c3a41439369ec142dee5ca219505e98b87fe7f0f4bfbf43a753d3d522337c4",
+      "fees": 36,
+      "height": 106,
+      "issued": 10600,
+      "miner_credits": 10636,
+      "notes": 130,
+      "payments": 12,
+      "registry": {
+        "7bbe7c4615b30b702b27742148d5421eac2f38cf73afd91f14db25e1be85d940": {
+          "cap": 260,
+          "height": 71,
+          "tx": "5ba4b77af83df45f15c5206eca04a16c5bb5ca6aaced46d41876c980db8917ad"
+        },
+        "a316d6ed67e57278ec09528d4eca8860e6196ee7f4679c0c0076dd0e6d439472": {
+          "cap": 180,
+          "height": 28,
+          "tx": "da717c593301a409747c8d5716e6b4785807cbe400b345749972f7b7732e5814"
+        }
+      },
+      "root": "cd4bc2b96a52aa0a50b15d81d49680842dc2d71f03a745dc49db7db62c4e52b1",
+      "spent": 24,
+      "spent_set_sha256": "ca86a8fa44174642316fba0c736c0d5aa27138c276245eceaeaeba9d2fd45ae2",
+      "tip": "000000c0a90168b81ab7f9ba8315f90a1949ea2f8e78a6deaf3dd9a27762095b",
+      "work": 444596224
+    }
+  },
+  "baseline_sha": "2bac7cc7e53fb4b5ddbe999d1e634224ba937900",
+  "candidate_sha": "a4939423ea0abe2b22e12339bd80f4134d16a267",
+  "cargo_lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "checkpoint_clean_before_and_after": true,
+  "clean": {
+    "adverse_public_verifier_cases": {
+      "issuance_cap": "rejected",
+      "issuance_issue_id": "rejected",
+      "issuance_proof": "rejected",
+      "issuance_receipt": "rejected",
+      "ordinary_cap": "rejected",
+      "ordinary_issue_id": "rejected",
+      "ordinary_proof": "rejected",
+      "ordinary_receipt": "rejected"
+    },
+    "blocks": 117,
+    "branch_snapshots": {
+      "common": {
+        "fees": 18,
+        "height": 43,
+        "issued": 4300,
+        "tip": "0000036393210f8b7c52336c52c53e9b47eb44ad99a64a2cd032ae1b8133a780"
+      },
+      "final": {
+        "fees": 36,
+        "height": 104,
+        "issued": 10400,
+        "tip": "00000282f3c05e322fc08f0307705e11454e98da5888bc5eba6ec9b64f5a2382"
+      },
+      "loser": {
+        "fees": 24,
+        "height": 56,
+        "issued": 5600,
+        "tip": "0000038ad29726f2737b8e10ca6378c28cfc5f817914980f289c922f2e489641"
+      },
+      "winner": {
+        "fees": 18,
+        "height": 59,
+        "issued": 5900,
+        "tip": "000002960c1c4214df5917ff35c7fd173b257c58bfa26a5ac53282fdda535fbd"
+      }
+    },
+    "database_comparisons": [
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 128,
+        "payments": 12,
+        "selected_height": 104
+      },
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 128,
+        "payments": 12,
+        "selected_height": 104
+      },
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 128,
+        "payments": 12,
+        "selected_height": 104
+      },
+      {
+        "asset_count": 2,
+        "integrity_check": "ok",
+        "outputs": 128,
+        "payments": 12,
+        "selected_height": 104
+      }
+    ],
+    "disclosed_final_wallets": {
+      "fork-miner": {
+        "assets": {},
+        "native": 0
+      },
+      "issuer-a": {
+        "assets": {
+          "28c57e9e64b670191b7a0d6301839135a9b6697b75fd9b01024ace3d11545b1b": 110
+        },
+        "native": 44
+      },
+      "issuer-b": {
+        "assets": {
+          "312e45ee84c9a214d8666d2fc02c8f2c035d8f1dbef83840f5bc7814d0f2e629": 200
+        },
+        "native": 49
+      },
+      "miner-a": {
+        "assets": {},
+        "native": 4442
+      },
+      "miner-b": {
+        "assets": {},
+        "native": 4237
+      },
+      "next-a": {
+        "assets": {
+          "28c57e9e64b670191b7a0d6301839135a9b6697b75fd9b01024ace3d11545b1b": 32
+        },
+        "native": 2
+      },
+      "next-b": {
+        "assets": {
+          "312e45ee84c9a214d8666d2fc02c8f2c035d8f1dbef83840f5bc7814d0f2e629": 26
+        },
+        "native": 2
+      },
+      "offline": {
+        "assets": {
+          "28c57e9e64b670191b7a0d6301839135a9b6697b75fd9b01024ace3d11545b1b": 25,
+          "312e45ee84c9a214d8666d2fc02c8f2c035d8f1dbef83840f5bc7814d0f2e629": 26
+        },
+        "native": 19
+      },
+      "sink-a": {
+        "assets": {
+          "28c57e9e64b670191b7a0d6301839135a9b6697b75fd9b01024ace3d11545b1b": 13
+        },
+        "native": 4
+      },
+      "sink-b": {
+        "assets": {
+          "312e45ee84c9a214d8666d2fc02c8f2c035d8f1dbef83840f5bc7814d0f2e629": 8
+        },
+        "native": 1
+      },
+      "winning-miner": {
+        "assets": {},
+        "native": 1600
+      }
+    },
+    "disclosed_offline_restore": {
+      "assets": {
+        "28c57e9e64b670191b7a0d6301839135a9b6697b75fd9b01024ace3d11545b1b": 70,
+        "312e45ee84c9a214d8666d2fc02c8f2c035d8f1dbef83840f5bc7814d0f2e629": 60
+      },
+      "native": 40
+    },
+    "full_public_proof_calls": 28,
+    "live_observations": {
+      "a": {
+        "changed_samples": 105,
+        "genesis_sample": 0,
+        "milestone_sample_indices": {
+          "common": 43,
+          "final": 104,
+          "loser": 57,
+          "winner": 59
+        },
+        "samples_matching_retained_blocks": 105
+      },
+      "b": {
+        "changed_samples": 107,
+        "genesis_sample": 0,
+        "milestone_sample_indices": {
+          "common": 43,
+          "final": 106,
+          "loser": null,
+          "winner": 60
+        },
+        "samples_matching_retained_blocks": 107
+      },
+      "c": {
+        "changed_samples": 106,
+        "genesis_sample": 0,
+        "milestone_sample_indices": {
+          "common": 43,
+          "final": 105,
+          "loser": null,
+          "winner": 60
+        },
+        "samples_matching_retained_blocks": 106
+      },
+      "d": {
+        "changed_samples": 55,
+        "genesis_sample": 0,
+        "milestone_sample_indices": {
+          "common": null,
+          "final": 54,
+          "loser": 5,
+          "winner": 8
+        },
+        "samples_matching_retained_blocks": 55
+      }
+    },
+    "owned_row_comparisons": {
+      "distinct_issuer_spend_keys": 2,
+      "exact_owned_outputs_checked": 24,
+      "original_offline_store_absent": true,
+      "owned_inputs_checked_against_public_nullifiers": 16,
+      "seed_backup_bytes": 32,
+      "selected_payments": 12,
+      "wallet_inventories": 11
+    },
+    "public_manifests_sorted_path_lf_sha256": "db33b1be9337150d1dd66606fa70c3c28793c3c7d2742fe381b95aaabae3ac51",
+    "public_packets": 14,
+    "public_replay_elapsed": 1.84,
+    "replay_json_sha256": "c4489ee2f9b8886c42b2af62b1ebe7689d692d13c88d44018f2e80a4d103d6c0",
+    "run_json_sha256": "d6df491cd3eacaa48341ced79c169a46f1c6a1f9e3cafcd96d7b2c485fb944ae",
+    "selected": {
+      "anchor": "d921d74b013823d92852bb0ab59268d0aa650e3ce28235c76279ffde63d0a269",
+      "fees": 36,
+      "height": 104,
+      "issued": 10400,
+      "miner_credits": 10436,
+      "notes": 128,
+      "payments": 12,
+      "registry": {
+        "28c57e9e64b670191b7a0d6301839135a9b6697b75fd9b01024ace3d11545b1b": {
+          "cap": 180,
+          "height": 22,
+          "tx": "40a21223d208bd448cd314b34d2aa474ce8fa2d9eb467ed57dac9cc61d5ff48e"
+        },
+        "312e45ee84c9a214d8666d2fc02c8f2c035d8f1dbef83840f5bc7814d0f2e629": {
+          "cap": 260,
+          "height": 64,
+          "tx": "549432e1e298110728bf5fa27148dcfdcb554bc4e4a7385d666d9dec89acf07b"
+        }
+      },
+      "root": "501c14982c68fab50e93242eaf0356367a456cbdefd7f7de0b4529a959997555",
+      "spent": 24,
+      "spent_set_sha256": "133d330a5a192fc3243a7d43e2bf041430f4ab5097dd0cb9a62d1671d2dfff2f",
+      "tip": "00000282f3c05e322fc08f0307705e11454e98da5888bc5eba6ec9b64f5a2382",
+      "work": 436207616
+    }
+  },
+  "clean_double_change": {
+    "spend-a": {
+      "block_length_prefix_B": 4,
+      "fee": 3,
+      "frame_B": 9,
+      "native_change": 11,
+      "native_sent": 9,
+      "native_wallet_meters": [
+        {
+          "cpu_s": 2.563471289,
+          "elapsed_s": 1.377376792,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201184
+        },
+        {
+          "cpu_s": 7.555676522,
+          "elapsed_s": 3.863632326,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451740
+        }
+      ],
+      "outputs": 2,
+      "packet_B": 143227,
+      "proof_B": 139634,
+      "public_verify_median_cpu_s": 0.00619629,
+      "real_inputs": 2,
+      "receipts_B": 3584,
+      "token_change": 25,
+      "token_sent": 45,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.374107174,
+          "elapsed_s": 1.281618932,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 201236
+        },
+        {
+          "cpu_s": 0.006349945,
+          "elapsed_s": 0.006349854,
+          "operation": "public_verify",
+          "peak_rss_kib": 201236
+        },
+        {
+          "cpu_s": 0.00619629,
+          "elapsed_s": 0.006196317,
+          "operation": "public_verify",
+          "peak_rss_kib": 201236
+        },
+        {
+          "cpu_s": 0.006169486,
+          "elapsed_s": 0.006171046,
+          "operation": "public_verify",
+          "peak_rss_kib": 201236
+        }
+      ],
+      "wallet_call_cpu_s": 10.12,
+      "wallet_call_wall_s": 5.243021237896755,
+      "wallet_role_peak_rss_KiB": 451740
+    },
+    "spend-b": {
+      "block_length_prefix_B": 4,
+      "fee": 3,
+      "frame_B": 9,
+      "native_change": 8,
+      "native_sent": 6,
+      "native_wallet_meters": [
+        {
+          "cpu_s": 2.428234485,
+          "elapsed_s": 1.291342976,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201060
+        },
+        {
+          "cpu_s": 7.314018221,
+          "elapsed_s": 3.726095122,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451680
+        }
+      ],
+      "outputs": 2,
+      "packet_B": 143227,
+      "proof_B": 139634,
+      "public_verify_median_cpu_s": 0.00621227,
+      "real_inputs": 2,
+      "receipts_B": 3584,
+      "token_change": 26,
+      "token_sent": 34,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.38084658,
+          "elapsed_s": 1.282447035,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.00621227,
+          "elapsed_s": 0.006230649,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006123095,
+          "elapsed_s": 0.006123136,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.007373132,
+          "elapsed_s": 0.007372956,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        }
+      ],
+      "wallet_call_cpu_s": 9.73,
+      "wallet_call_wall_s": 5.01927889091894,
+      "wallet_role_peak_rss_KiB": 451680
+    }
+  },
+  "clean_fifth_database_winner_only": {
+    "delivered_nonwinning_blocks": 0,
+    "fees": 36,
+    "final_assets": 2,
+    "final_native": 10400,
+    "genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+    "initial_assets": 0,
+    "initial_native": 0,
+    "registered_public_verifications": 12,
+    "selected_height": 104,
+    "selected_tip": "00000282f3c05e322fc08f0307705e11454e98da5888bc5eba6ec9b64f5a2382"
+  },
+  "clean_public_archive": {
+    "bytes": 4041857,
+    "name": "AST1-PoW-clean-public.tar.gz",
+    "regular_files": 139,
+    "sha256": "2809763f2658f85f988eaf866c624680b9476a14d0a824237248b4ec493fc2bb"
+  },
+  "cold_walkthrough_including_source_build": {
+    "exit": 0,
+    "max_rss_KiB": 405688,
+    "system_s": 11.36,
+    "user_s": 164.31,
+    "wall_s": 283.86
+  },
+  "fresh_distinct_issuer_spend_keys_across_runs": 4,
+  "reference_helpers_build": {
+    "exit": 0,
+    "max_rss_KiB": 390256,
+    "system_s": 6.09,
+    "user_s": 63.57,
+    "wall_s": 34.88
+  },
+  "registered_key": {
+    "bytes": 1481,
+    "common": {
+      "constant_polys": 4,
+      "gate_constraints": 123,
+      "partial_products": 7,
+      "pi": 31,
+      "quotient_factor": 8
+    },
+    "config": {
+      "config_constants": 2,
+      "configured_bits": 128,
+      "fri": {
+        "cap_height": 4,
+        "constant_arity_bits": [
+          2,
+          3
+        ],
+        "grinding": 0,
+        "queries": 26,
+        "rate_bits": 5
+      },
+      "max_quotient_factor": 8,
+      "plonk_repetitions": 2,
+      "routed": 60,
+      "row_blinding": 1,
+      "wires": 135
+    },
+    "folds_bits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "lde_points": 131072,
+    "leaf_hiding": 1,
+    "trace_rows": 4096
+  },
+  "relation_controls": {
+    "dummy_issuer_rejected": true,
+    "issuer_token_input_rejected": true,
+    "max_issue": true,
+    "mixed_id_rejected": true,
+    "oversize_rejected": true,
+    "unbalanced_rejected": true,
+    "valid_transfer": true
+  },
+  "relation_process_cost": {
+    "exit": 0,
+    "max_rss_KiB": 470660,
+    "system_s": 0.32,
+    "user_s": 18.08,
+    "wall_s": 9.56
+  },
+  "runtime": {
+    "cpu": "Intel Core i7-8700K 3.70 GHz",
+    "kernel": "6.8.0-149-generic",
+    "key_sha256": "99ed868d5bd0f8541bb6467a210bf75140ec696e49e53044f7bca011ed59438a",
+    "machine": "x86_64",
+    "native_rayon_threads": 2,
+    "native_sha256": "275a986ce52e97edde30859883f7fc5fd999552758e656ff139fc588ef02e21a",
+    "python": "3.12.3",
+    "rustc": "1.93.0 (254b59607 2026-01-19)"
+  },
+  "upstream_sha": "f04c91307837c0231668383bec76ba98d89d2652"
+}

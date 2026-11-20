@@ -2,6 +2,8 @@
 
 Deliver ordinary wallet issuance and private transfer of multiple user-created fixed-supply assets on the same live PoW devnet from 2bac7cc7e53fb4b5ddbe999d1e634224ba937900. Each user can issue by spending native fee funds under the same verifier. Verify seed-only recovery, both assets and native change, subsequent spending, uniqueness, branch-local issuance, cold replay and independently reconciled balances. Measure complete costs and publish the clean independent reproduction. Retain TKN1. The global blockchain objective remains active.
 
+The author and non-author both mined two branch-scoped issuances, ran offline recovery, paid both tags and re-spent the received outputs. The clean independent replay reconciled twelve selected payments and eleven wallet balances on a 104-block chain. Sources, public captures, separate verifier/prover costs and release readback are linked in the [research result](experiments/user-assets/README.md). Atomic swaps remain a separate milestone.
+
 ## Earlier milestone
 
 # Live private-token PoW devnet

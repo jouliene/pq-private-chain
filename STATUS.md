@@ -1,6 +1,10 @@
 # Permissionless user assets on the PoW network
 
-Active from 2bac7cc7e53fb4b5ddbe999d1e634224ba937900. The shared AST1 registered circuit and its positive and negative witness controls passed. The native, wallet and node integration is staged. Three separate nodes started from empty asset and native state. The orchestrator owns node policy, live walkthrough and publication. The construction specialist owns the Rust circuit, wallet role and design comparison. The wallet specialist owns asset inventory and selection. The non-author reviewer owns the separate public branch oracle and fresh deployment. Current author run: .work/ast1-live01. Complete the actual payments, compare both branches, measure, independently rebuild using fresh issuers, and deliver the final public SHA. The original TKN1 code and its evidence are retained.
+AST1 implements ordinary wallet issuance and transfer for independent fixed-supply assets under one verifier. Starting point `2bac7cc7e53fb4b5ddbe999d1e634224ba937900`. Author and independent fresh-issuer runs reached heights 106 and 104. Both recovered 70 A, 60 B and 40 native from a 32-byte seed. Both spent each asset with positive change, accepted both recipients’ onward payments, detached B and its dependent transfer while keeping A, and reconciled the final 180 A, 260 B and native supply.
+
+A clean public fetch of implementation `a4939423ea0abe2b22e12339bd80f4134d16a267` reproduced the registered verifier and native binary. A separate public reader verified all packets and both PoW graphs. A fifth empty node database validated only the 104 winning blocks, independently verifying all twelve selected proofs. The reviewer compared eleven local wallets with disclosed amounts and public commitments. The two public evidence archives, exact final SHA, clean final readback and CI link belong to the [versioned release](https://github.com/jouliene/pq-private-chain/releases/tag/live-user-assets-2026-11-20). [Operator commands and measured costs](experiments/user-assets/README.md)
+
+Atomic exchange, multi-asset archival economics, quantitative end-to-end post-quantum assurance and network-level privacy remain open. The global blockchain project stays active.
 
 ## Earlier milestone
 

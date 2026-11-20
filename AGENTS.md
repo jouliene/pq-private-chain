@@ -1,3 +1,7 @@
+# Permissionless user assets
+
+Run `./pqd assets --home NEW_PRIVATE_HOME walkthrough` for the AST1 local PoW network. Start from its empty genesis. The common registered verifier covers native-only payments, private asset transfers and public one-time issuance. Each role installation must match the registered AST1 key. Keep per-asset supply and canonical ID checks inside the same branch transition as fees, nullifiers and funded notes. Preserve the earlier TKN1 commands. Use the [operator and public evidence guide](experiments/user-assets/README.md) for clean setup, offline recovery, monetary reconciliation and measurements. Publish only public packets, blocks and explicitly disclosed test aggregates.
+
 # Live fixed-token devnet
 
 Use `./pqd token --home NEW_PRIVATE_HOME walkthrough` for the mined TKN1 network. Keep each lab's operator-approved founding digest and registered verifier separate from native-only devnets. The public capture contains the founding record, full blocks and packets, and disclosed numerical fixture results. Publish only allowlisted public evidence. A new home creates a new founding wallet and network identity. Verify existing captures with the independent monetary and cryptographic readers in [the operator guide](experiments/token-devnet/README.md). Changes to the bootstrapping path require a clean clone and new upstream build target.
