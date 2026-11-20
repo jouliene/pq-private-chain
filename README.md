@@ -2,6 +2,8 @@
 
 An independent blockchain research project with private payments and a post-quantum security objective. Run `./pqd start` to launch the first local proof-of-work network with two CPU miners and three validating peers. Follow the [short wallet walkthrough and reproduction instructions](devnet/README.md) to make a payment, restore a wallet from seed and test a deep reorganization. End-to-end PQ security, network privacy and production economics remain open.
 
+A wallet with tokens and zero native coins can trade for its first native balance. Run `./pqd swap --home "$(mktemp -d)/network" native-walkthrough` to sell 20 managed dollars for 8 native units, restore the seller from seed and spend those 8 as a payment of 5 plus a fee of 3. [Walkthrough and public replay](experiments/atomic-swap/NATIVE_CURRENCY.md)
+
 The funded spend-proof review retains MNG1/SWP1 on the local devnet. The wider-hash challenger verified the same fixed-for-managed exchange, but its complete payments exceeded the existing frame limit after compression. Both profiles have open end-to-end quantum knowledge and privacy obligations. [Decision and measurements](experiments/spend-proof-decision/DECISION.md) · [Build and reproduce](experiments/spend-proof-decision/README.md)
 
 Run `./pqd swap --home "$(mktemp -d)/network" walkthrough` for a private same-chain exchange of 7 fixed units for 30 managed dollars. Separate wallets verify and authorize both sides, paying one native fee. The local walkthrough mines competing branches, restores both wallets and spends both received outputs. [Swap protocol, visibility and reproduction](experiments/atomic-swap/README.md)

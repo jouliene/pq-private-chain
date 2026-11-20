@@ -1,6 +1,8 @@
-# Native currency swap in progress
+# First native balance from a private swap
 
-Baseline 998b39809b4464a9901161530d60f670b9bfaa7a. A fresh isolated proof made by the released SLG1 runtime spent an 11-unit native test note into an 8-unit private receipt with fee 3 and zero change. The approved public verifier and the recipient's opening both passed. This is a component test. Integration owns CLI routing, compatibility, publication and CI. The wallet specialist owns versioned terms, selection and pre-sign checks. The walkthrough specialist owns a live reorg and seed-only 5+3 spend. The non-author owns independent replay and clean reproduction. The chain's public frame, circuit and key registrations remain the baseline under test. Next run the new wallet commands on a disposable mined PoW home and reconcile the exact received note and fees.
+Public implementation freeze `19ab038415951aaae5dfc14cf8724bda2c408967` extends private wallet policy at baseline `998b39809b4464a9901161530d60f670b9bfaa7a`. Three real PoW peers completed the author walkthrough. A fourth replayed from genesis to height 21. The seller started with 100 managed and zero native, received 8 native, restored from the original seed and sent 5 with fee 3. Its final balance was 80 managed and zero native. The old public verifier accepted both legs and both signatures. A heavier conflicting branch removed the swap and ordinary payment before the winning branch restored both. Setup fees were 15 and winning fees 21. Two complete rejected offers delivered 7 native or 8 units of the wrong asset. Neither received seller authorization.
+
+The clean reviewer is independently generating a new exchange from the published implementation, replaying all public branches using the old software and joining the restored spend to the acquired commitment locally. Once those checks finish, publish both allowlisted captures, independent receipts, final revision and CI. [Current operator instructions and evidence](experiments/atomic-swap/NATIVE_CURRENCY.md)
 
 ## Earlier milestone
 

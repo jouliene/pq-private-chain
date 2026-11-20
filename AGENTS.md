@@ -1,5 +1,7 @@
 # Native private atomic swaps
 
+Use `./pqd swap --home NEW_PRIVATE_HOME native-walkthrough` for the token-for-native scenario. Load private agreement and wallet policy from the running checkout, and load public node rules, approved binaries and registered keys from the selected deployment. Preserve both the SWPTER01 commitment for legacy agreements and the released SLG1 verifier identity. [Instructions and fee accounting](experiments/atomic-swap/NATIVE_CURRENCY.md)
+
 Run `./pqd swap --home NEW_PRIVATE_HOME walkthrough` for the SWP1 network. A swap occupies two adjacent bounded physical frames in the existing four-slot AST1 PoW format. Keep group admission, relay, fee credit and reorg handling atomic. Check the incoming note under its recipient spending key before either final authorization and keep wallet journals, private agreements and signing nonces out of published data. The historical MNG1, AST1 and ordinary transfer paths retain their approved verifiers. [Swap operator and validation guide](experiments/atomic-swap/README.md)
 
 # Managed assets and redemption
