@@ -1,0 +1,670 @@
+{
+  "funded_capture": "funded-whir-2026-11-20/independent-public.tar.gz",
+  "observed_mined_swap_block_B": 321122,
+  "block_fixed_B": 222,
+  "live_MNG1_SLG1": {
+    "basis": "captured packet sizes; annual counts projected",
+    "transfer_B": 143233,
+    "swap_submission_B": 320905,
+    "swap_frame_B": [
+      160446,
+      160446
+    ],
+    "RPC_submit_overhead_B": 23,
+    "occupied_slot_bytes": {
+      "ordinary": 143237,
+      "swap": 320900
+    },
+    "scenarios": [
+      {
+        "operations": 10000000,
+        "swap_percent": 0,
+        "minimum_blocks": 2500000,
+        "packed_mean_block_interval_ceiling_s": 12.6144,
+        "one_final_submission_each_RPC_B": 1432560000000,
+        "pending_bodies_B": 1432330000000,
+        "packed_archive_B": 1432925000000,
+        "one_operation_per_block_archive_B": 1434590000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 2865255000000,
+        "two_downstream_pending_and_chain_egress_B": 5730510000000,
+        "mean_egress_Mbit_s_two_downstream": 1.45371
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 0,
+        "minimum_blocks": 7500000,
+        "packed_mean_block_interval_ceiling_s": 4.2048,
+        "one_final_submission_each_RPC_B": 4297680000000,
+        "pending_bodies_B": 4296990000000,
+        "packed_archive_B": 4298775000000,
+        "one_operation_per_block_archive_B": 4303770000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 8595765000000,
+        "two_downstream_pending_and_chain_egress_B": 17191530000000,
+        "mean_egress_Mbit_s_two_downstream": 4.36112
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 0,
+        "minimum_blocks": 25000000,
+        "packed_mean_block_interval_ceiling_s": 1.26144,
+        "one_final_submission_each_RPC_B": 14325600000000,
+        "pending_bodies_B": 14323300000000,
+        "packed_archive_B": 14329250000000,
+        "one_operation_per_block_archive_B": 14345900000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 28652550000000,
+        "two_downstream_pending_and_chain_egress_B": 57305100000000,
+        "mean_egress_Mbit_s_two_downstream": 14.53706
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 10,
+        "minimum_blocks": 2750000,
+        "packed_mean_block_interval_ceiling_s": 11.46764,
+        "one_final_submission_each_RPC_B": 1610232000000,
+        "pending_bodies_B": 1610002000000,
+        "packed_archive_B": 1610643500000,
+        "one_operation_per_block_archive_B": 1612253000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 3220645500000,
+        "two_downstream_pending_and_chain_egress_B": 6441291000000,
+        "mean_egress_Mbit_s_two_downstream": 1.63402
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 10,
+        "minimum_blocks": 8250000,
+        "packed_mean_block_interval_ceiling_s": 3.82255,
+        "one_final_submission_each_RPC_B": 4830696000000,
+        "pending_bodies_B": 4830006000000,
+        "packed_archive_B": 4831930500000,
+        "one_operation_per_block_archive_B": 4836759000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 9661936500000,
+        "two_downstream_pending_and_chain_egress_B": 19323873000000,
+        "mean_egress_Mbit_s_two_downstream": 4.90205
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 10,
+        "minimum_blocks": 27500000,
+        "packed_mean_block_interval_ceiling_s": 1.14676,
+        "one_final_submission_each_RPC_B": 16102320000000,
+        "pending_bodies_B": 16100020000000,
+        "packed_archive_B": 16106435000000,
+        "one_operation_per_block_archive_B": 16122530000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 32206455000000,
+        "two_downstream_pending_and_chain_egress_B": 64412910000000,
+        "mean_egress_Mbit_s_two_downstream": 16.34016
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 100,
+        "minimum_blocks": 5000000,
+        "packed_mean_block_interval_ceiling_s": 6.3072,
+        "one_final_submission_each_RPC_B": 3209280000000,
+        "pending_bodies_B": 3209050000000,
+        "packed_archive_B": 3210110000000,
+        "one_operation_per_block_archive_B": 3211220000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 6419160000000,
+        "two_downstream_pending_and_chain_egress_B": 12838320000000,
+        "mean_egress_Mbit_s_two_downstream": 3.2568
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 100,
+        "minimum_blocks": 15000000,
+        "packed_mean_block_interval_ceiling_s": 2.1024,
+        "one_final_submission_each_RPC_B": 9627840000000,
+        "pending_bodies_B": 9627150000000,
+        "packed_archive_B": 9630330000000,
+        "one_operation_per_block_archive_B": 9633660000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 19257480000000,
+        "two_downstream_pending_and_chain_egress_B": 38514960000000,
+        "mean_egress_Mbit_s_two_downstream": 9.77041
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 100,
+        "minimum_blocks": 50000000,
+        "packed_mean_block_interval_ceiling_s": 0.63072,
+        "one_final_submission_each_RPC_B": 32092800000000,
+        "pending_bodies_B": 32090500000000,
+        "packed_archive_B": 32101100000000,
+        "one_operation_per_block_archive_B": 32112200000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 64191600000000,
+        "two_downstream_pending_and_chain_egress_B": 128383200000000,
+        "mean_egress_Mbit_s_two_downstream": 32.56804
+      }
+    ]
+  },
+  "previous_WHIR_research_encoding": {
+    "basis": "captured prior WHIR packets; hypothetical chain archive",
+    "transfer_B": 239233,
+    "swap_submission_B": 514005,
+    "swap_frame_B": [
+      256516,
+      257476
+    ],
+    "RPC_submit_overhead_B": 23,
+    "occupied_slot_bytes": {
+      "ordinary": 239237,
+      "swap": 514000
+    },
+    "scenarios": [
+      {
+        "operations": 10000000,
+        "swap_percent": 0,
+        "minimum_blocks": 2500000,
+        "packed_mean_block_interval_ceiling_s": 12.6144,
+        "one_final_submission_each_RPC_B": 2392560000000,
+        "pending_bodies_B": 2392330000000,
+        "packed_archive_B": 2392925000000,
+        "one_operation_per_block_archive_B": 2394590000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 4785255000000,
+        "two_downstream_pending_and_chain_egress_B": 9570510000000,
+        "mean_egress_Mbit_s_two_downstream": 2.42783
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 0,
+        "minimum_blocks": 7500000,
+        "packed_mean_block_interval_ceiling_s": 4.2048,
+        "one_final_submission_each_RPC_B": 7177680000000,
+        "pending_bodies_B": 7176990000000,
+        "packed_archive_B": 7178775000000,
+        "one_operation_per_block_archive_B": 7183770000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 14355765000000,
+        "two_downstream_pending_and_chain_egress_B": 28711530000000,
+        "mean_egress_Mbit_s_two_downstream": 7.28349
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 0,
+        "minimum_blocks": 25000000,
+        "packed_mean_block_interval_ceiling_s": 1.26144,
+        "one_final_submission_each_RPC_B": 23925600000000,
+        "pending_bodies_B": 23923300000000,
+        "packed_archive_B": 23929250000000,
+        "one_operation_per_block_archive_B": 23945900000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 47852550000000,
+        "two_downstream_pending_and_chain_egress_B": 95705100000000,
+        "mean_egress_Mbit_s_two_downstream": 24.27831
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 10,
+        "minimum_blocks": 2750000,
+        "packed_mean_block_interval_ceiling_s": 11.46764,
+        "one_final_submission_each_RPC_B": 2667332000000,
+        "pending_bodies_B": 2667102000000,
+        "packed_archive_B": 2667743500000,
+        "one_operation_per_block_archive_B": 2669353000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 5334845500000,
+        "two_downstream_pending_and_chain_egress_B": 10669691000000,
+        "mean_egress_Mbit_s_two_downstream": 2.70667
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 10,
+        "minimum_blocks": 8250000,
+        "packed_mean_block_interval_ceiling_s": 3.82255,
+        "one_final_submission_each_RPC_B": 8001996000000,
+        "pending_bodies_B": 8001306000000,
+        "packed_archive_B": 8003230500000,
+        "one_operation_per_block_archive_B": 8008059000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 16004536500000,
+        "two_downstream_pending_and_chain_egress_B": 32009073000000,
+        "mean_egress_Mbit_s_two_downstream": 8.12001
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 10,
+        "minimum_blocks": 27500000,
+        "packed_mean_block_interval_ceiling_s": 1.14676,
+        "one_final_submission_each_RPC_B": 26673320000000,
+        "pending_bodies_B": 26671020000000,
+        "packed_archive_B": 26677435000000,
+        "one_operation_per_block_archive_B": 26693530000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 53348455000000,
+        "two_downstream_pending_and_chain_egress_B": 106696910000000,
+        "mean_egress_Mbit_s_two_downstream": 27.06669
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 100,
+        "minimum_blocks": 5000000,
+        "packed_mean_block_interval_ceiling_s": 6.3072,
+        "one_final_submission_each_RPC_B": 5140280000000,
+        "pending_bodies_B": 5140050000000,
+        "packed_archive_B": 5141110000000,
+        "one_operation_per_block_archive_B": 5142220000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 10281160000000,
+        "two_downstream_pending_and_chain_egress_B": 20562320000000,
+        "mean_egress_Mbit_s_two_downstream": 5.21622
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 100,
+        "minimum_blocks": 15000000,
+        "packed_mean_block_interval_ceiling_s": 2.1024,
+        "one_final_submission_each_RPC_B": 15420840000000,
+        "pending_bodies_B": 15420150000000,
+        "packed_archive_B": 15423330000000,
+        "one_operation_per_block_archive_B": 15426660000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 30843480000000,
+        "two_downstream_pending_and_chain_egress_B": 61686960000000,
+        "mean_egress_Mbit_s_two_downstream": 15.64865
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 100,
+        "minimum_blocks": 50000000,
+        "packed_mean_block_interval_ceiling_s": 0.63072,
+        "one_final_submission_each_RPC_B": 51402800000000,
+        "pending_bodies_B": 51400500000000,
+        "packed_archive_B": 51411100000000,
+        "one_operation_per_block_archive_B": 51422200000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 102811600000000,
+        "two_downstream_pending_and_chain_egress_B": 205623200000000,
+        "mean_egress_Mbit_s_two_downstream": 52.16215
+      }
+    ]
+  },
+  "CFW_projected_mean": {
+    "basis": "ideal independent uniform queries; mean rounded down by <1 B per proof; over-cap",
+    "transfer_B": 1129218,
+    "swap_submission_B": 2292887,
+    "swap_frame_B": [
+      1146437,
+      1146437
+    ],
+    "RPC_submit_overhead_B": 23,
+    "occupied_slot_bytes": {
+      "ordinary": 1129222,
+      "swap": 2292882
+    },
+    "scenarios": [
+      {
+        "operations": 10000000,
+        "swap_percent": 0,
+        "minimum_blocks": 2500000,
+        "packed_mean_block_interval_ceiling_s": 12.6144,
+        "one_final_submission_each_RPC_B": 11292410000000,
+        "pending_bodies_B": 11292180000000,
+        "packed_archive_B": 11292775000000,
+        "one_operation_per_block_archive_B": 11294440000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 22584955000000,
+        "two_downstream_pending_and_chain_egress_B": 45169910000000,
+        "mean_egress_Mbit_s_two_downstream": 11.45863
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 0,
+        "minimum_blocks": 7500000,
+        "packed_mean_block_interval_ceiling_s": 4.2048,
+        "one_final_submission_each_RPC_B": 33877230000000,
+        "pending_bodies_B": 33876540000000,
+        "packed_archive_B": 33878325000000,
+        "one_operation_per_block_archive_B": 33883320000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 67754865000000,
+        "two_downstream_pending_and_chain_egress_B": 135509730000000,
+        "mean_egress_Mbit_s_two_downstream": 34.37588
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 0,
+        "minimum_blocks": 25000000,
+        "packed_mean_block_interval_ceiling_s": 1.26144,
+        "one_final_submission_each_RPC_B": 112924100000000,
+        "pending_bodies_B": 112921800000000,
+        "packed_archive_B": 112927750000000,
+        "one_operation_per_block_archive_B": 112944400000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 225849550000000,
+        "two_downstream_pending_and_chain_egress_B": 451699100000000,
+        "mean_egress_Mbit_s_two_downstream": 114.58628
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 10,
+        "minimum_blocks": 2750000,
+        "packed_mean_block_interval_ceiling_s": 11.46764,
+        "one_final_submission_each_RPC_B": 12456079000000,
+        "pending_bodies_B": 12455849000000,
+        "packed_archive_B": 12456490500000,
+        "one_operation_per_block_archive_B": 12458100000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 24912339500000,
+        "two_downstream_pending_and_chain_egress_B": 49824679000000,
+        "mean_egress_Mbit_s_two_downstream": 12.63944
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 10,
+        "minimum_blocks": 8250000,
+        "packed_mean_block_interval_ceiling_s": 3.82255,
+        "one_final_submission_each_RPC_B": 37368237000000,
+        "pending_bodies_B": 37367547000000,
+        "packed_archive_B": 37369471500000,
+        "one_operation_per_block_archive_B": 37374300000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 74737018500000,
+        "two_downstream_pending_and_chain_egress_B": 149474037000000,
+        "mean_egress_Mbit_s_two_downstream": 37.91832
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 10,
+        "minimum_blocks": 27500000,
+        "packed_mean_block_interval_ceiling_s": 1.14676,
+        "one_final_submission_each_RPC_B": 124560790000000,
+        "pending_bodies_B": 124558490000000,
+        "packed_archive_B": 124564905000000,
+        "one_operation_per_block_archive_B": 124581000000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 249123395000000,
+        "two_downstream_pending_and_chain_egress_B": 498246790000000,
+        "mean_egress_Mbit_s_two_downstream": 126.39442
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 100,
+        "minimum_blocks": 5000000,
+        "packed_mean_block_interval_ceiling_s": 6.3072,
+        "one_final_submission_each_RPC_B": 22929100000000,
+        "pending_bodies_B": 22928870000000,
+        "packed_archive_B": 22929930000000,
+        "one_operation_per_block_archive_B": 22931040000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 45858800000000,
+        "two_downstream_pending_and_chain_egress_B": 91717600000000,
+        "mean_egress_Mbit_s_two_downstream": 23.26677
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 100,
+        "minimum_blocks": 15000000,
+        "packed_mean_block_interval_ceiling_s": 2.1024,
+        "one_final_submission_each_RPC_B": 68787300000000,
+        "pending_bodies_B": 68786610000000,
+        "packed_archive_B": 68789790000000,
+        "one_operation_per_block_archive_B": 68793120000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 137576400000000,
+        "two_downstream_pending_and_chain_egress_B": 275152800000000,
+        "mean_egress_Mbit_s_two_downstream": 69.8003
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 100,
+        "minimum_blocks": 50000000,
+        "packed_mean_block_interval_ceiling_s": 0.63072,
+        "one_final_submission_each_RPC_B": 229291000000000,
+        "pending_bodies_B": 229288700000000,
+        "packed_archive_B": 229299300000000,
+        "one_operation_per_block_archive_B": 229310400000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 458588000000000,
+        "two_downstream_pending_and_chain_egress_B": 917176000000000,
+        "mean_egress_Mbit_s_two_downstream": 232.66768
+      }
+    ]
+  },
+  "CFW_geometry_maximum": {
+    "basis": "geometry worst case for every proof simultaneously; over-cap",
+    "transfer_B": 1175929,
+    "swap_submission_B": 2386309,
+    "swap_frame_B": [
+      1193148,
+      1193148
+    ],
+    "RPC_submit_overhead_B": 23,
+    "occupied_slot_bytes": {
+      "ordinary": 1175933,
+      "swap": 2386304
+    },
+    "scenarios": [
+      {
+        "operations": 10000000,
+        "swap_percent": 0,
+        "minimum_blocks": 2500000,
+        "packed_mean_block_interval_ceiling_s": 12.6144,
+        "one_final_submission_each_RPC_B": 11759520000000,
+        "pending_bodies_B": 11759290000000,
+        "packed_archive_B": 11759885000000,
+        "one_operation_per_block_archive_B": 11761550000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 23519175000000,
+        "two_downstream_pending_and_chain_egress_B": 47038350000000,
+        "mean_egress_Mbit_s_two_downstream": 11.93261
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 0,
+        "minimum_blocks": 7500000,
+        "packed_mean_block_interval_ceiling_s": 4.2048,
+        "one_final_submission_each_RPC_B": 35278560000000,
+        "pending_bodies_B": 35277870000000,
+        "packed_archive_B": 35279655000000,
+        "one_operation_per_block_archive_B": 35284650000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 70557525000000,
+        "two_downstream_pending_and_chain_egress_B": 141115050000000,
+        "mean_egress_Mbit_s_two_downstream": 35.79783
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 0,
+        "minimum_blocks": 25000000,
+        "packed_mean_block_interval_ceiling_s": 1.26144,
+        "one_final_submission_each_RPC_B": 117595200000000,
+        "pending_bodies_B": 117592900000000,
+        "packed_archive_B": 117598850000000,
+        "one_operation_per_block_archive_B": 117615500000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 235191750000000,
+        "two_downstream_pending_and_chain_egress_B": 470383500000000,
+        "mean_egress_Mbit_s_two_downstream": 119.3261
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 10,
+        "minimum_blocks": 2750000,
+        "packed_mean_block_interval_ceiling_s": 11.46764,
+        "one_final_submission_each_RPC_B": 12969900000000,
+        "pending_bodies_B": 12969670000000,
+        "packed_archive_B": 12970311500000,
+        "one_operation_per_block_archive_B": 12971921000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 25939981500000,
+        "two_downstream_pending_and_chain_egress_B": 51879963000000,
+        "mean_egress_Mbit_s_two_downstream": 13.16082
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 10,
+        "minimum_blocks": 8250000,
+        "packed_mean_block_interval_ceiling_s": 3.82255,
+        "one_final_submission_each_RPC_B": 38909700000000,
+        "pending_bodies_B": 38909010000000,
+        "packed_archive_B": 38910934500000,
+        "one_operation_per_block_archive_B": 38915763000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 77819944500000,
+        "two_downstream_pending_and_chain_egress_B": 155639889000000,
+        "mean_egress_Mbit_s_two_downstream": 39.48247
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 10,
+        "minimum_blocks": 27500000,
+        "packed_mean_block_interval_ceiling_s": 1.14676,
+        "one_final_submission_each_RPC_B": 129699000000000,
+        "pending_bodies_B": 129696700000000,
+        "packed_archive_B": 129703115000000,
+        "one_operation_per_block_archive_B": 129719210000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 259399815000000,
+        "two_downstream_pending_and_chain_egress_B": 518799630000000,
+        "mean_egress_Mbit_s_two_downstream": 131.60823
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 100,
+        "minimum_blocks": 5000000,
+        "packed_mean_block_interval_ceiling_s": 6.3072,
+        "one_final_submission_each_RPC_B": 23863320000000,
+        "pending_bodies_B": 23863090000000,
+        "packed_archive_B": 23864150000000,
+        "one_operation_per_block_archive_B": 23865260000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 47727240000000,
+        "two_downstream_pending_and_chain_egress_B": 95454480000000,
+        "mean_egress_Mbit_s_two_downstream": 24.21473
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 100,
+        "minimum_blocks": 15000000,
+        "packed_mean_block_interval_ceiling_s": 2.1024,
+        "one_final_submission_each_RPC_B": 71589960000000,
+        "pending_bodies_B": 71589270000000,
+        "packed_archive_B": 71592450000000,
+        "one_operation_per_block_archive_B": 71595780000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 143181720000000,
+        "two_downstream_pending_and_chain_egress_B": 286363440000000,
+        "mean_egress_Mbit_s_two_downstream": 72.6442
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 100,
+        "minimum_blocks": 50000000,
+        "packed_mean_block_interval_ceiling_s": 0.63072,
+        "one_final_submission_each_RPC_B": 238633200000000,
+        "pending_bodies_B": 238630900000000,
+        "packed_archive_B": 238641500000000,
+        "one_operation_per_block_archive_B": 238652600000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 477272400000000,
+        "two_downstream_pending_and_chain_egress_B": 954544800000000,
+        "mean_egress_Mbit_s_two_downstream": 242.14734
+      }
+    ]
+  },
+  "KKW_compiler_floor": {
+    "basis": "lower bound for the selected Boolean lowering; online AND partials only plus same public and receipt framing; over-cap",
+    "transfer_B": 1314656001,
+    "swap_submission_B": 2695079061,
+    "swap_frame_B": [
+      1347539524,
+      1347539524
+    ],
+    "RPC_submit_overhead_B": 23,
+    "occupied_slot_bytes": {
+      "ordinary": 1314656005,
+      "swap": 2695079056
+    },
+    "scenarios": [
+      {
+        "operations": 10000000,
+        "swap_percent": 0,
+        "minimum_blocks": 2500000,
+        "packed_mean_block_interval_ceiling_s": 12.6144,
+        "one_final_submission_each_RPC_B": 13146560240000000,
+        "pending_bodies_B": 13146560010000000,
+        "packed_archive_B": 13146560605000000,
+        "one_operation_per_block_archive_B": 13146562270000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 26293120615000000,
+        "two_downstream_pending_and_chain_egress_B": 52586241230000000,
+        "mean_egress_Mbit_s_two_downstream": 13339.99016
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 0,
+        "minimum_blocks": 7500000,
+        "packed_mean_block_interval_ceiling_s": 4.2048,
+        "one_final_submission_each_RPC_B": 39439680720000000,
+        "pending_bodies_B": 39439680030000000,
+        "packed_archive_B": 39439681815000000,
+        "one_operation_per_block_archive_B": 39439686810000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 78879361845000000,
+        "two_downstream_pending_and_chain_egress_B": 157758723690000000,
+        "mean_egress_Mbit_s_two_downstream": 40019.97049
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 0,
+        "minimum_blocks": 25000000,
+        "packed_mean_block_interval_ceiling_s": 1.26144,
+        "one_final_submission_each_RPC_B": 131465602400000000,
+        "pending_bodies_B": 131465600100000000,
+        "packed_archive_B": 131465606050000000,
+        "one_operation_per_block_archive_B": 131465622700000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 262931206150000000,
+        "two_downstream_pending_and_chain_egress_B": 525862412300000000,
+        "mean_egress_Mbit_s_two_downstream": 133399.90165
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 10,
+        "minimum_blocks": 2750000,
+        "packed_mean_block_interval_ceiling_s": 11.46764,
+        "one_final_submission_each_RPC_B": 14526983300000000,
+        "pending_bodies_B": 14526983070000000,
+        "packed_archive_B": 14526983711500000,
+        "one_operation_per_block_archive_B": 14526985321000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 29053966781500000,
+        "two_downstream_pending_and_chain_egress_B": 58107933563000000,
+        "mean_egress_Mbit_s_two_downstream": 14740.72389
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 10,
+        "minimum_blocks": 8250000,
+        "packed_mean_block_interval_ceiling_s": 3.82255,
+        "one_final_submission_each_RPC_B": 43580949900000000,
+        "pending_bodies_B": 43580949210000000,
+        "packed_archive_B": 43580951134500000,
+        "one_operation_per_block_archive_B": 43580955963000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 87161900344500000,
+        "two_downstream_pending_and_chain_egress_B": 174323800689000000,
+        "mean_egress_Mbit_s_two_downstream": 44222.17166
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 10,
+        "minimum_blocks": 27500000,
+        "packed_mean_block_interval_ceiling_s": 1.14676,
+        "one_final_submission_each_RPC_B": 145269833000000000,
+        "pending_bodies_B": 145269830700000000,
+        "packed_archive_B": 145269837115000000,
+        "one_operation_per_block_archive_B": 145269853210000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 290539667815000000,
+        "two_downstream_pending_and_chain_egress_B": 581079335630000000,
+        "mean_egress_Mbit_s_two_downstream": 147407.23887
+      },
+      {
+        "operations": 10000000,
+        "swap_percent": 100,
+        "minimum_blocks": 5000000,
+        "packed_mean_block_interval_ceiling_s": 6.3072,
+        "one_final_submission_each_RPC_B": 26950790840000000,
+        "pending_bodies_B": 26950790610000000,
+        "packed_archive_B": 26950791670000000,
+        "one_operation_per_block_archive_B": 26950792780000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 53901582280000000,
+        "two_downstream_pending_and_chain_egress_B": 107803164560000000,
+        "mean_egress_Mbit_s_two_downstream": 27347.32739
+      },
+      {
+        "operations": 30000000,
+        "swap_percent": 100,
+        "minimum_blocks": 15000000,
+        "packed_mean_block_interval_ceiling_s": 2.1024,
+        "one_final_submission_each_RPC_B": 80852372520000000,
+        "pending_bodies_B": 80852371830000000,
+        "packed_archive_B": 80852375010000000,
+        "one_operation_per_block_archive_B": 80852378340000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 161704746840000000,
+        "two_downstream_pending_and_chain_egress_B": 323409493680000000,
+        "mean_egress_Mbit_s_two_downstream": 82041.98216
+      },
+      {
+        "operations": 100000000,
+        "swap_percent": 100,
+        "minimum_blocks": 50000000,
+        "packed_mean_block_interval_ceiling_s": 0.63072,
+        "one_final_submission_each_RPC_B": 269507908400000000,
+        "pending_bodies_B": 269507906100000000,
+        "packed_archive_B": 269507916700000000,
+        "one_operation_per_block_archive_B": 269507927800000000,
+        "one_pending_and_one_packed_chain_copy_ingress_B": 539015822800000000,
+        "two_downstream_pending_and_chain_egress_B": 1078031645600000000,
+        "mean_egress_Mbit_s_two_downstream": 273473.27387
+      }
+    ]
+  }
+}

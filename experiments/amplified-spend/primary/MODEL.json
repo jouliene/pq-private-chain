@@ -1,0 +1,339 @@
+{
+  "concrete_queries": {
+    "actual_distinct": 495,
+    "actual_leaf_value_bytes": 316800,
+    "actual_query_list_packed_u32_sha256": "428e71a7deb1381e81fd006a9a628794795ea101bc29684fc908738d3ddc0a0b",
+    "bit_reversal_distinct_base_neighbors": 3960,
+    "bit_reversal_distinct_right_tuples": 495,
+    "honest_draws_all_distinct_probability_lower_bound": 0.9416995048522949,
+    "public_xof_seed_sha3_512": "cecbb788173ce56696b9b8880e4ec187b641e5cf483da3297ac73e129ca637a1149109273ce6d12ae375433fe3fcedd56e2d9ab83d2061c8f7284fa2658af168"
+  },
+  "format": "AMPLIFIED-FUNDED-PRIMARY-01",
+  "mixed_tail_grid_minimum": {
+    "eligible_at_260_bits": 81,
+    "grid_profiles": 81,
+    "guard_coins": 7,
+    "interactive_bits": 267.21746814042814,
+    "max_domain_log2": 21,
+    "maximum_B": 1129744,
+    "queries": [
+      495,
+      72,
+      60,
+      53,
+      51
+    ],
+    "tail_log_n": [
+      21,
+      19,
+      18,
+      19
+    ],
+    "terminal_coefficient_count": 147
+  },
+  "primary": {
+    "aggregate_field_bits": 267.9947883866839,
+    "aggregate_miss_bits": 271.5225770722874,
+    "all_committed_scalar_payload_B": 1814036480,
+    "authenticated_leaf_reads": 849,
+    "cap_B": 241084,
+    "commitments": 6,
+    "excess_B": 931004,
+    "guard_bits": 321.9999999976487,
+    "ideal_quadratic_crossover_log2_queries": 133.9374159180001,
+    "ideal_union_100M_per_instance_queries_crossover_log2": 120.64970353845067,
+    "interactive_bits": 267.8748318360002,
+    "maximum_proof_B": 1172088,
+    "merkle_commit_hash_calls": 6160378,
+    "merkle_sibling_hashes_total": 9903,
+    "merkle_verify_hash_calls_max": 11595,
+    "outer_direct_B": 4776,
+    "salted_tree_hash_cubic_crossover_log2_queries": 170.66666666666666,
+    "single_tree_oracle_values_B": 1808793600,
+    "stages": [
+      {
+        "amplified_code_agreement": 0.04910565323117074,
+        "aux": 64,
+        "base_reads": 3960,
+        "bytes": {
+          "direct": 200,
+          "roots": 64,
+          "salts": 31680,
+          "siblings": 381248,
+          "values": 316800
+        },
+        "d": 8,
+        "decoding_agreement": 0.6830353736877441,
+        "degree": 135098,
+        "fold_fresh_sigma": 4,
+        "hash_proof_nodes_per_tree": 5957,
+        "list_bound": 1,
+        "log_n": 21,
+        "main": 131072,
+        "maximum_B": 729992,
+        "mca_numerator": 664724,
+        "miss_bits": 272.23406039099376,
+        "ood_pad": 5,
+        "per_row_private_query_capacity": 3960,
+        "queries": 495,
+        "radius_mode": "one-third",
+        "root_agreement_exact": "135098/2097152",
+        "seed": 3961,
+        "spare": 2,
+        "stage": 0,
+        "width": 2
+      },
+      {
+        "amplified_code_agreement": 0.016290664672851562,
+        "aux": 252,
+        "base_reads": 95,
+        "bytes": {
+          "direct": 560,
+          "roots": 64,
+          "salts": 6080,
+          "siblings": 75072,
+          "values": 60800
+        },
+        "d": 1,
+        "decoding_agreement": 0.13546233106262662,
+        "degree": 8541,
+        "fold_fresh_sigma": 10,
+        "hash_proof_nodes_per_tree": 1173,
+        "list_bound": 478,
+        "log_n": 19,
+        "main": 8192,
+        "maximum_B": 142576,
+        "mca_numerator": 275905776667316,
+        "miss_bits": 273.98345492404775,
+        "ood_pad": 2,
+        "per_row_private_query_capacity": 95,
+        "queries": 95,
+        "radius_mode": "RS-Johnson",
+        "root_agreement_exact": "8541/524288",
+        "seed": 96,
+        "spare": 2,
+        "stage": 1,
+        "width": 16
+      },
+      {
+        "amplified_code_agreement": 0.0046539306640625,
+        "aux": 22,
+        "base_reads": 74,
+        "bytes": {
+          "direct": 560,
+          "roots": 64,
+          "salts": 4736,
+          "siblings": 50816,
+          "values": 47360
+        },
+        "d": 1,
+        "decoding_agreement": 0.07614396751796448,
+        "degree": 610,
+        "fold_fresh_sigma": 10,
+        "hash_proof_nodes_per_tree": 794,
+        "list_bound": 871,
+        "log_n": 17,
+        "main": 512,
+        "maximum_B": 103536,
+        "mca_numerator": 21296448013187,
+        "miss_bits": 274.9193569743014,
+        "ood_pad": 13,
+        "per_row_private_query_capacity": 74,
+        "queries": 74,
+        "radius_mode": "RS-Johnson",
+        "root_agreement_exact": "610/131072",
+        "seed": 75,
+        "spare": 2,
+        "stage": 2,
+        "width": 16
+      },
+      {
+        "amplified_code_agreement": 0.0015869140625,
+        "aux": 7,
+        "base_reads": 63,
+        "bytes": {
+          "direct": 560,
+          "roots": 64,
+          "salts": 4032,
+          "siblings": 40384,
+          "values": 40320
+        },
+        "d": 1,
+        "decoding_agreement": 0.04802980523891165,
+        "degree": 104,
+        "fold_fresh_sigma": 10,
+        "hash_proof_nodes_per_tree": 631,
+        "list_bound": 1387,
+        "log_n": 16,
+        "main": 32,
+        "maximum_B": 85360,
+        "mca_numerator": 3478348413328,
+        "miss_bits": 275.93535257333514,
+        "ood_pad": 1,
+        "per_row_private_query_capacity": 63,
+        "queries": 63,
+        "radius_mode": "RS-Johnson",
+        "root_agreement_exact": "104/65536",
+        "seed": 64,
+        "spare": 2,
+        "stage": 3,
+        "width": 16
+      },
+      {
+        "amplified_code_agreement": 0.00127410888671875,
+        "aux": 74,
+        "base_reads": 61,
+        "bytes": {
+          "direct": 6760,
+          "roots": 128,
+          "salts": 7808,
+          "siblings": 86272,
+          "values": 4880
+        },
+        "d": 1,
+        "decoding_agreement": 0.04372026623241254,
+        "degree": 167,
+        "fold_fresh_sigma": 0,
+        "hash_proof_nodes_per_tree": 674,
+        "list_bound": 1567,
+        "log_n": 17,
+        "main": 32,
+        "maximum_B": 105848,
+        "mca_numerator": 9669926316200,
+        "miss_bits": 275.4487942145742,
+        "ood_pad": 0,
+        "per_row_private_query_capacity": 61,
+        "queries": 61,
+        "radius_mode": "RS-Johnson",
+        "root_agreement_exact": "167/131072",
+        "seed": 62,
+        "spare": 0,
+        "stage": 4,
+        "width": 1
+      }
+    ],
+    "target_miss_bits_per_stage": 272,
+    "total_leaves_committed": 3080192,
+    "total_query_draws": 788,
+    "total_scalar_values": 11754
+  },
+  "sensitivity": {
+    "all_plain_same_widths": {
+      "interactive_bits": 266.97263489649407,
+      "max_final_coefficient_count": 166,
+      "maximum_B": 582376,
+      "queries": [
+        140,
+        94,
+        73,
+        62,
+        61
+      ],
+      "seeds": [
+        141,
+        95,
+        74,
+        63,
+        62
+      ]
+    },
+    "domain_8_to_6": {
+      "interactive_bits": 267.8751715964734,
+      "max_final_coefficient_count": 168,
+      "maximum_B": 1500920,
+      "queries": [
+        862,
+        95,
+        74,
+        63,
+        61
+      ],
+      "seeds": [
+        6897,
+        96,
+        75,
+        64,
+        62
+      ]
+    },
+    "first_width_four": {
+      "interactive_bits": 268.6609033281985,
+      "max_final_coefficient_count": 169,
+      "maximum_B": 1427808,
+      "queries": [
+        480,
+        95,
+        74,
+        63,
+        61
+      ],
+      "seeds": [
+        3841,
+        96,
+        75,
+        64,
+        62
+      ]
+    },
+    "last_switch_only": {
+      "interactive_bits": 267.1541777431106,
+      "max_final_coefficient_count": 4455,
+      "maximum_B": 1243200,
+      "queries": [
+        112,
+        82,
+        472,
+        115
+      ],
+      "seeds": [
+        113,
+        83,
+        3777,
+        116
+      ]
+    },
+    "optimistic_tuple_Johnson": {
+      "interactive_bits": null,
+      "max_final_coefficient_count": 166,
+      "maximum_B": 643112,
+      "queries": [
+        128,
+        94,
+        73,
+        62,
+        61
+      ],
+      "seeds": [
+        1025,
+        95,
+        74,
+        63,
+        62
+      ]
+    },
+    "single_instance_128_statistical": {
+      "interactive_bits": 131.228432342806,
+      "max_final_coefficient_count": 98,
+      "maximum_B": 595320,
+      "queries": [
+        240,
+        46,
+        36,
+        29,
+        28
+      ],
+      "seeds": [
+        1921,
+        47,
+        37,
+        30,
+        29
+      ]
+    }
+  },
+  "universal_for_selected_profile": {
+    "attainable_first_tree_leaf_values_B": 280320,
+    "best_possible_one_third_miss_queries": 438,
+    "scope": "one Appendix A.1 stage, interleave at least two, degree at least eight, explicit tuple leaves, n>=q"
+  }
+}

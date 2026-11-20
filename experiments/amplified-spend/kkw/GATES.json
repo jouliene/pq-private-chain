@@ -1,0 +1,30 @@
+{
+  "profile": "Picnic3_L5",
+  "executions": 601,
+  "parties": 16,
+  "online_openings": 68,
+  "tested_field_pairs": 40,
+  "tested_seventh_powers": 40,
+  "generic_mod_mul_ANDs": 24704,
+  "x7_ANDs": 98816,
+  "non_square_partial_ANDs_per_x7": 8192,
+  "four_x7_online_B_floor": 278528,
+  "explicit_two_path_masked_input_B_per_opening": 3840,
+  "explicit_two_path_masked_input_B": 261120,
+  "suites": {
+    "MNG1": {
+      "permutations": 160,
+      "sboxes": 18880,
+      "floor_partial_ANDs": 154664960,
+      "online_B_floor": 1314652160,
+      "online_B_full_sbox_network": 15857991680
+    },
+    "SLG1": {
+      "permutations": 164,
+      "sboxes": 19352,
+      "floor_partial_ANDs": 158531584,
+      "online_B_floor": 1347518464,
+      "online_B_full_sbox_network": 16254441472
+    }
+  }
+}

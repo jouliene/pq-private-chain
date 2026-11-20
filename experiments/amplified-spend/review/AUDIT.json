@@ -1,0 +1,75 @@
+{
+  "best_one_third_first_leaf_values_B": 280320,
+  "best_one_third_queries": 438,
+  "first_stage": {
+    "degree": 135098,
+    "distinct_endpoints": 3960,
+    "distinct_evaluations_per_row": 3960,
+    "queries": 495,
+    "radius": 664723,
+    "seed_elements_per_row": 3961,
+    "siblings": 5957,
+    "tuple_values_B": 316800,
+    "with_roots_salts_and_direct_B": 729992
+  },
+  "first_stage_free_suffix": {
+    "stages": [
+      {
+        "leaf_trees_B": 136384,
+        "q": 91,
+        "siblings": 1129
+      },
+      {
+        "leaf_trees_B": 95296,
+        "q": 68,
+        "siblings": 740
+      },
+      {
+        "leaf_trees_B": 68160,
+        "q": 50,
+        "siblings": 514
+      },
+      {
+        "leaf_trees_B": 76768,
+        "q": 46,
+        "siblings": 524
+      }
+    ],
+    "total_B": 376608
+  },
+  "frozen_envelope": {
+    "ordinary_B": 1175929,
+    "proof_B": 1172088,
+    "scalar_values": 11754,
+    "signed_leg_B": 1193148,
+    "stages": 5
+  },
+  "graph_gram_eigenvalue_multiplicities": {
+    "0": 720601,
+    "8": 823536,
+    "16": 411796,
+    "24": 117600,
+    "32": 21070,
+    "40": 2352,
+    "48": 196,
+    "64": 1
+  },
+  "registered_kkw_network": {
+    "four_seventh_power_broadcast_B": 278528,
+    "full_domain_box_third_derivative": "0x9ac50",
+    "max_ANDs_at_cap_with_68_broadcasts": 28360,
+    "online_openings": 68,
+    "suites": {
+      "MNG1": {
+        "broadcast_B_floor": 1314652160,
+        "partial_product_ANDs": 154664960,
+        "separately_evaluated_full_domain_boxes_B_floor": 320960
+      },
+      "SLG1": {
+        "broadcast_B_floor": 1347518464,
+        "partial_product_ANDs": 158531584,
+        "separately_evaluated_full_domain_boxes_B_floor": 328984
+      }
+    }
+  }
+}

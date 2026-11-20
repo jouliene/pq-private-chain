@@ -1,0 +1,17 @@
+{
+  "draws": 495,
+  "positions": 2097152,
+  "distinct_value_bytes": 640,
+  "maximum_distinct_allowed_ignoring_everything_else": 376,
+  "minimum_repeated_draws_necessary": 119,
+  "ideal_uniform_probability_fits_at_most_two_to_minus": 1044,
+  "component_samples": 256,
+  "distinct_leaf_counts": {
+    "494": 17,
+    "495": 239
+  },
+  "opening_B_min": 696768,
+  "opening_B_max": 706624,
+  "includes_one_root": true,
+  "scope": "Public SHAKE256 seed expansion only. No witness, funded proof, proof-generation timing or fiat-shamir grinding experiment."
+}
