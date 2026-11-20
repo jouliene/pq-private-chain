@@ -178,7 +178,7 @@ class Node:
         gen=self.generation
         async def request(op,**kw):
             reply=await asyncio.wait_for(peer_request(p,dict(op=op,**kw)),15)
-            if self.generation!=gen or p not in self.peers:
+            if self.shutdown.is_set() or self.generation!=gen or p not in self.peers:
                 raise ConnectionError("peer topology changed")
             return reply
         theirs,_=await request("status")
@@ -215,8 +215,10 @@ class Node:
                         raise
 
     async def sync(self):
-        while True:
+        while not self.shutdown.is_set():
             for p in sorted(self.peers):
+                if self.shutdown.is_set():
+                    return
                 try:
                     await self.sync_peer(p)
                 except (ConnectionError, OSError, asyncio.TimeoutError, asyncio.IncompleteReadError):
@@ -226,7 +228,7 @@ class Node:
             await asyncio.sleep(.12)
 
     async def miner(self):
-        while True:
+        while not self.shutdown.is_set():
             if self.remaining==0:
                 await asyncio.sleep(.08)
                 continue
@@ -242,6 +244,8 @@ class Node:
             try:
                 while not task.done():
                     await asyncio.wait([task],timeout=.12)
+                    if self.shutdown.is_set():
+                        return
                     if (self.job!=job or parent!=self.db.status()["tip"]) and worker.returncode is None:
                         worker.terminate()
                 data,_=task.result()
@@ -281,6 +285,7 @@ class Node:
             for t in finished:
                 t.result()
         finally:
+            self.shutdown.set()
             tcp.close()
             unix.close()
             for task in tasks:

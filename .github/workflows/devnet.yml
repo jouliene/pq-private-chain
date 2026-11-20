@@ -39,6 +39,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 -IB devnet/check_shutdown.py
           test ! -e .work/devnet-runtime
           test ! -e "$RUNNER_TEMP/pq-devnet"
           ./pqd --home "$RUNNER_TEMP/pq-devnet" walkthrough > /dev/null

@@ -6,6 +6,8 @@ After the simulated bank paid 200 at three confirmations, each run detached the 
 
 Starting revision `006b8fb8d91a3e61dfb97b666e7bb6ca5748412d`. The cold clean run exercised public candidate `79b7ff184de560c7112b21d6359c0ce9ada9f7c0`. Follow-up `47ae22b5927116a6836d7aa2392d4093ddb5680e` guards existing live peers from a walkthrough on an occupied home. The versioned release records the exact public SHA, final public checkout and CI. The test bank, local hard fork, cryptographic security qualifications, archive economics and future two-owner swaps are separate. The global blockchain objective remains active. [Measured walkthrough](experiments/managed-assets/README.md) · [Independent review](experiments/managed-assets/review/CLEAN.md) · [Release and public captures](https://github.com/jouliene/pq-private-chain/releases/tag/managed-supply-redemption-2026-11-20)
 
+The managed CI and independent final-checkout walkthrough at `3913f10a067eb276ffac1ca5b852614ff15dc5bc` passed. Two runs of the inherited APV2 workflow at that revision timed out in shutdown, first waiting for A's control socket and then for B's. The shared node now checks its shutdown event when a pending peer reply completes, before starting the next peer and inside the miner loop. Its socket remains in place until the background tasks finish. A focused lifecycle regression is part of the ordinary devnet CI. The [release readback](https://github.com/jouliene/pq-private-chain/releases/tag/managed-supply-redemption-2026-11-20) records results for the exact corrected revision and preserves both earlier failures.
+
 ## Earlier milestone
 
 # Permissionless user assets on the PoW network
