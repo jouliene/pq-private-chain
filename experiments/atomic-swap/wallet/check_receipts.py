@@ -22,8 +22,10 @@ def main():
     args = p.parse_args()
     home = args.home.resolve()
     sys.path[:0] = [str(Path(__file__).resolve().parent), str(home/"deployment/devnet")]
-    from cli import Lab
+    # The deployed CLI puts its home first on sys.path. Load the checkout wallet first,
+    # as pqd does, so an older validator home can still exercise the new wallet policy.
     from swap_wallet import MAX_LEG, actor, check_pair, opened, read_file, term_file, verify, wallet_address
+    from cli import Lab
     lab = Lab(home,home/"deployment/runtime")
     terms = term_file(args.terms)
     files = [read_file(path,MAX_LEG) for path in (args.leg_a,args.leg_b)]

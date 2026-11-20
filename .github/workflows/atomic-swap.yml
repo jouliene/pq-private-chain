@@ -48,3 +48,4 @@ jobs:
             --managed-build "$b/roles" --managed-sha "$(sha256sum "$b/roles/native" | cut -d' ' -f1)" \
             --swap-build "$b/swap" --swap-sha "$(sha256sum "$b/swap/native" | cut -d' ' -f1)" \
             native-walkthrough
+          python3 -IB experiments/atomic-swap/wallet/check_receipts.py "$h" "$h/negotiation/accepted.terms" "$h/negotiation/a.leg" "$h/negotiation/b.leg" alice bob
