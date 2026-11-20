@@ -1,0 +1,1 @@
+{"fees": [3, 0], "leg_bytes": [143251, 143251], "legs": 2, "ordinary_respend_bytes": 143227, "ordinary_respend_same_received_nullifier": true, "proof_bytes": [139658, 139658], "reciprocal_receipts_and_change_opened_by_both_profiles": true, "standalone_raw_and_retagged_legs_rejected": true, "two_signatures_verified": true, "wrong_key_and_expiry_rejected": true}

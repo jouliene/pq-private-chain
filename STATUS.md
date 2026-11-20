@@ -1,3 +1,9 @@
+# Private atomic swap on the live PoW network
+
+SWP1 starts at MNG1 `f65a8b3c51fdc8aebdc2138552c45e81f91f5e70`. The first author run completed the exchange, ordinary conflict, expiry, two branch changes and restored spending. Source-funded native controls and public replay retain the complete proof boundary. Each SWF1 frame is 160,446 bytes. A complete submission uses 320,905 bytes and two of four block slots. The initial direct operator launch exposed a missing isolated-Python import path, corrected before network startup. Current acceptance is the fresh candidate with bounded three-payment packing, public historical lookup of both legs, the independent cold checkout and final publication. [Walkthrough](experiments/atomic-swap/README.md)
+
+## Earlier milestone
+
 # Managed supply and voluntary redemption
 
 The managed PoW devnet extends the original AST1 genesis. An original fixed-asset wallet created 17 units and the upgraded wallet spent an already funded note. In both the author and clean non-author runs, a persistent SLH-DSA-SHAKE-128f issuer registered 1,000 and minted another 300 with different fee funding. An offline wallet restored 400 from seed, voluntarily returned 200 to treasury and kept 200. Burning the exact return reduced outstanding to 1,100. The fresh validators reached H64 (author) and H70 (reviewer), with 24 native fees in each selected history.

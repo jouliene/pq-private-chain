@@ -1,0 +1,40 @@
+name: Native same-chain private atomic swap
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/atomic-swap/**'
+      - 'experiments/managed-assets/**'
+      - 'experiments/user-assets/**'
+      - 'devnet/**'
+      - 'pqd'
+      - '.github/workflows/atomic-swap.yml'
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  live-swap:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Prepare the locked compiler and isolated role runtime
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap git build-essential
+          rustup toolchain install 1.93.0 --profile minimal
+          bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --ro-bind / / -- /usr/bin/true
+      - name: Mine, negotiate, recover and replay both assets
+        run: |
+          set -eu
+          h="$RUNNER_TEMP/swap"
+          python3 -IB experiments/atomic-swap/wallet/check.py
+          ./pqd swap --home "$h" walkthrough
+          python3 -IB experiments/atomic-swap/controls.py "$h/deployment" "$h/public/SWAP.bin"
+          python3 -IB experiments/atomic-swap/wallet/check_receipts.py "$h" "$h/negotiation/accepted.terms" "$h/negotiation/a.leg" "$h/negotiation/b.leg" alice bob
+          python3 -IB experiments/atomic-swap/check_admission.py "$h"

@@ -1,3 +1,9 @@
+# Native same-chain private atomic swap
+
+Two independent wallets exchange 7 fixed units for 30 managed units and pay one agreed native fee. Both check exact incoming spendable receipts before release and bind the same complete joint terms to both leg authorizations. Exercise incomplete offers, changed terms, expiry, conflicting ordinary spend, reorg and restored respend under real PoW. Measure both wallets, wire, block and verifier, then publish a fresh independent reproduction. The global blockchain objective remains active.
+
+## Earlier milestone
+
 # Managed supply and voluntary redemption
 
 Starting at AST1 revision 006b8fb8d91a3e61dfb97b666e7bb6ca5748412d, deliver a live native managed asset while retaining existing funded fixed assets and private wallet transfers. Register 1,000 under a permanent issuer, mint 300 with different fee funding, privately pay and restore an offline holder, voluntarily return 200 to treasury and spend the returned note to burn it. Validate outstanding 1,100 from genesis. Require independent clean reproduction, negative monetary controls, reorganization across the burn, durable at-most-once simulated cash payout and an explicit account of outstanding obligations after a deep fork. Publish source, raw public evidence, measurements and reproduction commands. Swaps are deferred. The broader blockchain project remains active.

@@ -1,3 +1,7 @@
+# Native private atomic swaps
+
+Run `./pqd swap --home NEW_PRIVATE_HOME walkthrough` for the SWP1 network. A swap occupies two adjacent bounded physical frames in the existing four-slot AST1 PoW format. Keep group admission, relay, fee credit and reorg handling atomic. Check the incoming note under its recipient spending key before either final authorization and keep wallet journals, private agreements and signing nonces out of published data. The historical MNG1, AST1 and ordinary transfer paths retain their approved verifiers. [Swap operator and validation guide](experiments/atomic-swap/README.md)
+
 # Managed assets and redemption
 
 Use a fresh private home and `./pqd managed --home HOME walkthrough`. The original AST1 software mines a funded prefix first. Upgraded validators must independently replay those same blocks and authorize new MNG1 transactions with their pinned verifier. Preserve canonical AST1 history bytes, fixed policy, native fees and current note domains. A managed registration pins its perpetual issuer key. Confirmations are a local simulated bank policy. Keep the bank and coordinator databases private and test ambiguous external payout outcomes with the bank ledger preserved. [Managed protocol and reproduction](experiments/managed-assets/README.md)

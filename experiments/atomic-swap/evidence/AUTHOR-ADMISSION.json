@@ -1,0 +1,34 @@
+{
+  "common_blocks_replayed": 16,
+  "common_height": 16,
+  "common_tip": "00000084e6a56dd8cc30aebc844a2949f82ca0bc468c2272de90cfb0e5164a26",
+  "fifo_three_then_pair": {
+    "eligible_ordinary_candidates": 1,
+    "executed": false,
+    "reason": "Capture contains no three simultaneously queueable ordinary payments ahead of the genuine swap at its common prefix."
+  },
+  "invalid_blocks_mined": 0,
+  "original_pow_block": {
+    "fee_delta": 3,
+    "funded_leaf_delta": 5,
+    "height": 17,
+    "spent_delta": 4,
+    "tip": "0000025be1e3ac76cc74f7b8a99dbed273fa163b0fc1a049aa042903c73bd0fa"
+  },
+  "preseal_candidates": {
+    "cross_reference": "unmatched atomic swap",
+    "interrupted": "swap frame length or version",
+    "isolated_a": "incomplete atomic swap",
+    "isolated_b": "incomplete atomic swap",
+    "reversed": "unmatched atomic swap",
+    "signature_role_0": "invalid swap authorization",
+    "signature_role_1": "invalid swap authorization"
+  },
+  "second_leg_refresh": {
+    "selected_fee_delta": 0,
+    "status": "passed",
+    "stranded_groups": 0,
+    "stranded_rows": 0,
+    "surviving_ordinary": "e66af7f5f63506c63932fbe18e3a40242dc9f02a98806b3b7dad1b9cce10b12e"
+  }
+}

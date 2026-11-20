@@ -1,0 +1,58 @@
+{
+  "both_native_signatures_rejected_by_changed_field": {
+    "expiry": [
+      true,
+      true
+    ],
+    "leg0_digest": [
+      true,
+      true
+    ],
+    "leg1_digest": [
+      true,
+      true
+    ],
+    "network": [
+      true,
+      true
+    ],
+    "ordered_legs": [
+      true,
+      true
+    ],
+    "payer": [
+      true,
+      true
+    ],
+    "terms": [
+      true,
+      true
+    ]
+  },
+  "bundle_sha256": "6a2968c288bdacac0acd8c4e3bc3bc639892f164901262270713de5282c27d88",
+  "node_and_wire": {
+    "duplicated_frame": "unmatched atomic swap",
+    "expired": "swap expired",
+    "fee_payer": "swap fee payer",
+    "missing_frame": "incomplete atomic swap",
+    "network": "wrong swap network",
+    "ordinary_extraction_0_AST1": "cryptographic payment rejection",
+    "ordinary_extraction_0_MNG1": "cryptographic payment rejection",
+    "ordinary_extraction_0_raw": "managed packet",
+    "ordinary_extraction_1_AST1": "cryptographic payment rejection",
+    "ordinary_extraction_1_MNG1": "cryptographic payment rejection",
+    "ordinary_extraction_1_raw": "managed packet",
+    "out_of_order": "unmatched atomic swap",
+    "proof_0_changed": "invalid swap leg proof",
+    "proof_1_changed": "invalid swap authorization",
+    "receipts_0_exchanged": "invalid swap leg proof",
+    "receipts_1_exchanged": "invalid swap authorization",
+    "signature_0_changed": "invalid swap authorization",
+    "signature_1_changed": "invalid swap authorization",
+    "swapped_owner_signatures": "invalid swap authorization",
+    "terms": "invalid swap authorization",
+    "trailing_bytes": "trailing atomic swap bytes",
+    "truncated": "incomplete atomic swap",
+    "verified_original": true
+  }
+}

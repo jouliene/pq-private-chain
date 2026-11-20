@@ -1,0 +1,1 @@
+PASS: both genuine legs, both spend-key-owned incoming openings; changed ciphertexts, transplanted receipts, wrong owner, wrong role, wrong asset, wrong native or token amounts and counterparty change refused
