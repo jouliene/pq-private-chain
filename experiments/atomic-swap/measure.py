@@ -103,9 +103,12 @@ def run_samples(ledger, wire, data, expected_network, count):
             "parent_process_peak_rss_KiB":resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}
 
 
-def sizes(chain, wire, data, frames):
+def sizes(chain, wire, data, frames, private_terms_bytes=None):
     from transport import frame as rpc_frame
-    from swap_terms import SIZE as private_terms_size
+    from swap_terms import SIZE as legacy_terms_bytes
+    private_terms_size = legacy_terms_bytes if private_terms_bytes is None else private_terms_bytes
+    if private_terms_size <= 0:
+        raise ValueError("private agreement width must be positive")
     parts = wire.pair(frames)
     proofs = [int.from_bytes(p.leg[5:9],"little") for p in parts]
     legs = [len(p.leg) for p in parts]
@@ -127,13 +130,15 @@ def sizes(chain, wire, data, frames):
                  whole_two_frame_block_B=213+len(block_vector)+8,
                  rpc_submit_request_B=len(rpc_frame({"op":"submit"},data)),
                  aggregate_fee_native_units=3, physical_payment_slots=2,
+                 private_terms_size_basis=("assumed SWPTER01" if private_terms_bytes is None
+                                           else "supplied out-of-band schema width"),
                  negotiation_files_B={"private_terms_schema_only":private_terms_size,
                                       "two_preoffers":sum(legs), "two_authorizations":2*wire.SIG},
                  one_copy_each_negotiation_file_B=private_terms_size+sum(legs)+2*wire.SIG)
     return sizes
 
 
-def measure(deployment, blob):
+def measure(deployment, blob, private_terms_bytes=None):
     chain,ledger,wire = load_public(deployment)
     data,frames = read_bundle(wire,blob)
     cold = run_samples(ledger,wire,data,chain.NETWORK,1)
@@ -141,7 +146,7 @@ def measure(deployment, blob):
     def median(field):
         return statistics.median(x[field] for x in warm["calls"][1:])
     return {"bundle_sha256":sha256(data).hexdigest(), "machine":platform.machine(),
-            "system":platform.platform(), "native_threads":2, "wire":sizes(chain,wire,data,frames),
+            "system":platform.platform(), "native_threads":2, "wire":sizes(chain,wire,data,frames,private_terms_bytes),
             "swap_verifier_key_sha256":sha256((deployment/"swap-keys/swap.vk").read_bytes()).hexdigest(),
             "approved_binary_sha256":(deployment/"devnet/approved-swap-native.sha256").read_text().strip(),
             "cold":cold, "warm_process_including_one_warmup":warm,
@@ -154,5 +159,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("deployment",type=Path)
     parser.add_argument("public_bundle",type=Path)
+    parser.add_argument("--private-terms-bytes", type=int,
+                        help="known private agreement width; defaults to legacy SWPTER01")
     args=parser.parse_args()
-    print(json.dumps(measure(args.deployment.resolve(),args.public_bundle),indent=2,sort_keys=True))
+    print(json.dumps(measure(args.deployment.resolve(),args.public_bundle,args.private_terms_bytes),indent=2,sort_keys=True))

@@ -1,3 +1,9 @@
+# Pay a first native fee with the proceeds of a private swap
+
+Start at 998b39809b4464a9901161530d60f670b9bfaa7a. A seller with 100 managed dollars and zero native exchanges 20 dollars for 8 native, with a single fee of 3 paid by the counterparty. Recover the seller from its 32-byte seed and send 5 native plus the ordinary fee of 3 from precisely that received note. Verify 80 managed and zero native, both fees and rollback. Exercise underpayment and currency substitution before consent, the published SLG1 verifier, and legacy token-for-token swaps. Publish a wallet walkthrough, public replay and independent clean reproduction. Offer discovery and the separate WHIR frontend remain queued.
+
+## Earlier milestone
+
 # Decide the spend-proof profile for funded payments and swaps
 
 Evaluate the MNG1 and SWP1 spend proofs from 3f08bff0089096d7fb27279bc0d444006e9147ce. Reproduce a funded ordinary transfer and a two-owner swap, audit the implemented transcript, receipts and monetary relation, then compare decision-relevant alternatives under the preregistered [quantum target](experiments/spend-proof-decision/TARGET.md). Publish independently checked evidence, complete costs, funded-note implications, the decision and the next experiment. Token-for-native swaps are next in the product queue. The global blockchain objective remains active.

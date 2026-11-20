@@ -1,3 +1,9 @@
+# Native currency swap in progress
+
+Baseline 998b39809b4464a9901161530d60f670b9bfaa7a. A fresh isolated proof made by the released SLG1 runtime spent an 11-unit native test note into an 8-unit private receipt with fee 3 and zero change. The approved public verifier and the recipient's opening both passed. This is a component test. Integration owns CLI routing, compatibility, publication and CI. The wallet specialist owns versioned terms, selection and pre-sign checks. The walkthrough specialist owns a live reorg and seed-only 5+3 spend. The non-author owns independent replay and clean reproduction. The chain's public frame, circuit and key registrations remain the baseline under test. Next run the new wallet commands on a disposable mined PoW home and reconcile the exact received note and fees.
+
+## Earlier milestone
+
 # Funded spend-proof decision
 
 Retain the active MNG1/SLG1 proofs for the research network. Starting at 3f08bff0089096d7fb27279bc0d444006e9147ce, a non-author reproduced the funded live baseline and fresh candidate revision 2a3a4c4671af54dd7d1171c77b826339d12d8cbf. Independent wallets exchanged 7 fixed units for 30 managed units, restored and spent their incoming funds. The primary and compressed K384 designs exceeded the 262,144-byte frame cap. The separate WHIR frontend test reproduced the funded parent hash in 2,536 Goldilocks constraints. Complete compiled proof knowledge, transcript hiding, recipient privacy and previously funded-note assumptions remain open. The next proof experiment is a complete typed WHIR frontend and target-matched round-by-round analysis. Token-for-native swaps remain the next product work. The global blockchain objective remains active. [Decision](experiments/spend-proof-decision/DECISION.md) · [Reproduction](experiments/spend-proof-decision/README.md) · [Published public artifacts](https://github.com/jouliene/pq-private-chain/releases/tag/funded-spend-proof-2026-11-20)

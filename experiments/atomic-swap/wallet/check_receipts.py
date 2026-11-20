@@ -1,5 +1,6 @@
 """Run local acceptance negatives against both actual swap proofs and both genuine spend-key roles."""
 import argparse
+from dataclasses import replace
 from pathlib import Path
 import sys
 
@@ -20,7 +21,7 @@ def main():
     p.add_argument("wallet_b")
     args = p.parse_args()
     home = args.home.resolve()
-    sys.path.insert(0,str(home/"deployment/devnet"))
+    sys.path[:0] = [str(Path(__file__).resolve().parent), str(home/"deployment/devnet")]
     from cli import Lab
     from swap_wallet import MAX_LEG, actor, check_pair, opened, read_file, term_file, verify, wallet_address
     lab = Lab(home,home/"deployment/runtime")
@@ -28,7 +29,8 @@ def main():
     files = [read_file(path,MAX_LEG) for path in (args.leg_a,args.leg_b)]
     with actor("verify") as public:
         effects = [verify(public,raw) for raw in files]
-        check_pair(effects)
+        check_pair(effects,terms)
+        rejected(check_pair,effects,replace(terms,payer=1-terms.payer))
         for i,raw in enumerate(files):
             modified = bytearray(raw)
             modified[-1] ^= 1
@@ -41,12 +43,17 @@ def main():
             wallet_address(wallet,owner)
             terms.confirm(i,owner.address,own.give,own.qty,other.give,other.qty)
             rejected(terms.confirm,i,other.address,own.give,own.qty,other.give,other.qty)
-            opened(wallet,effects[1-i],0,0,other.give,other.qty)
-            rejected(opened,wallet,effects[1-i],0,0,other.give,other.qty-1)
-            rejected(opened,wallet,effects[1-i],0,0,own.give,other.qty)
-            rejected(opened,wallet,effects[1-i],0,1,other.give,other.qty)
-            rejected(opened,wallet,effects[i],0,0,own.give,own.qty)
-            rejected(opened,wallet,effects[1-i],1,0,other.give,other.qty)
+            opened(wallet,effects[1-i],0,other.native,other.give,other.token)
+            # Exact per-currency output, including the empty lane. Both wrong recipients and wrong slots must fail.
+            rejected(opened,wallet,effects[1-i],0,other.native+1,other.give,other.token)
+            rejected(opened,wallet,effects[1-i],0,other.native,other.give,other.token+1)
+            if other.token:
+                different_id = next(v for v in (bytes([1])*32, bytes([2])*32) if v != other.give)
+                rejected(opened,wallet,effects[1-i],0,other.native,different_id,other.token)
+            else:
+                rejected(opened,wallet,effects[1-i],0,0,own.give,other.qty)
+            rejected(opened,wallet,effects[i],0,own.native,own.give,own.token)
+            rejected(opened,wallet,effects[1-i],1,other.native,other.give,other.token)
     print("PASS: both genuine legs, both spend-key-owned incoming openings; changed ciphertexts, transplanted "
           "receipts, wrong owner, wrong role, wrong asset, wrong native or token amounts and counterparty change refused")
 

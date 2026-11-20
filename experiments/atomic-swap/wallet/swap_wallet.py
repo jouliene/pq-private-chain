@@ -13,10 +13,8 @@ import struct
 import tempfile
 import time
 
-from swap_terms import LIMIT, SIZE, ZERO, Party, Terms, asset_id, need, side_num
+from terms import LIMIT, SIZE_V2, ZERO, Party, Terms, asset_id, need, side_num
 
-DEPLOY = Path(__file__).resolve().parent.parent
-FEES = (3, 0)
 CT = 1792
 SIGNATURE = 17088
 MAX_LEG = 262144
@@ -53,12 +51,14 @@ def emit(path, data):
 
 def role(mode, private=None):
     from wallet import _wire
-    key = DEPLOY/"swap-keys/swap.vk"
+    import wallet as installed_wallet
+    deploy = Path(installed_wallet.__file__).resolve().parent.parent
+    key = deploy/"swap-keys/swap.vk"
     need(not key.is_symlink() and not key.parent.is_symlink() and {p.name for p in key.parent.iterdir()} == {"swap.vk"}
-         and key.read_bytes() == (DEPLOY/"devnet/swap.vk").read_bytes(), "unapproved swap verifier")
-    pin = (DEPLOY/"devnet/approved-swap-native.sha256").read_text().strip()
+         and key.read_bytes() == (deploy/"devnet/swap.vk").read_bytes(), "unapproved swap verifier")
+    pin = (deploy/"devnet/approved-swap-native.sha256").read_text().strip()
     args = ["wallet","/keys","/private/seed","restore"] if mode == "wallet" else ["verify","/keys"]
-    return _wire.Role(DEPLOY/"swap-runtime/native", pin, args, keys=key.parent, private=private)
+    return _wire.Role(deploy/"swap-runtime/native", pin, args, keys=key.parent, private=private)
 
 
 @contextmanager
@@ -82,8 +82,8 @@ def choose(state, book, participant, fee):
     eligible = [r for r in rows if not book.reserved(r["cm"].hex(), "")]
     for width in (1, 2):
         for sources in combinations(eligible, width):
-            native = sum(r["amount"] for r in sources)-fee
-            token = sum(r["token"] for r in sources)-participant.qty
+            native = sum(r["amount"] for r in sources) - participant.native - fee
+            token = sum(r["token"] for r in sources) - participant.token
             if 0 <= native <= LIMIT and 0 <= token <= LIMIT:
                 return sources, native, token
     raise ValueError("insufficient compatible unreserved swap funding within two inputs")
@@ -91,7 +91,7 @@ def choose(state, book, participant, fee):
 
 def prove(worker, nonce, fee, hdr, me, other, sources):
     from wallet_sync import path_rows
-    data = bytearray(b"P"+nonce+bytes([fee])+hdr+struct.pack("<QQ",0,me.qty)+me.give+other.address+bytes([len(sources)]))
+    data = bytearray(b"P"+nonce+bytes([fee])+hdr+struct.pack("<QQ",me.native,me.token)+me.give+other.address+bytes([len(sources)]))
     for r in sources:
         levels = path_rows(r["path"])
         origin = r["origin"]
@@ -137,8 +137,8 @@ def verify(worker, leg):
     return result
 
 
-def check_pair(effects):
-    need(tuple(e.fee for e in effects) == FEES and len({e.public for e in effects}) == 2
+def check_pair(effects, terms):
+    need(tuple(e.fee for e in effects) == (terms.fee(0), terms.fee(1)) and len({e.public for e in effects}) == 2
          and len({w for e in effects for w in e.nfs}) == len({w for e in effects for w in e.cms}) == 4,
          "swap roles, fees, commitments or nullifiers disagree")
 
@@ -153,10 +153,10 @@ def eligible(state, terms, effects):
 
 
 def opened(worker, effect, index, native, asset, amount):
-    expected_id = asset if amount else ZERO
+    need((amount == 0) == (asset == ZERO), "expected receipt currency and token value disagree")
     raw = worker.call(b"D"+effect.cms[index]+effect.cts[index])
-    need(len(raw) == 84 and raw[:3] == b"HIT" and raw[3:35] != ZERO and
-         struct.unpack_from("<QQ32s", raw, 35) == (native, amount, expected_id),
+    need(len(raw) == 84 and raw[:3] == b"HIT" and raw[3:35] != ZERO and raw[-1] == (2 if index == 0 else 3) and
+         struct.unpack_from("<QQ32s", raw, 35) == (native, amount, asset),
          "wallet cannot open the committed output under its spending keys for the agreed amounts")
     # This native D operation recomputes cm using the local spend pk and derives nf with the local nk.
     return True
@@ -168,7 +168,7 @@ def get_session(book, key, side):
 
 def term_file(path):
     from chain import NETWORK
-    terms = Terms.decode(read_file(path, SIZE, private=True))
+    terms = Terms.decode(read_file(path, SIZE_V2, private=True))
     need(terms.network == NETWORK, "wrong network in swap agreement")
     return terms
 
@@ -179,9 +179,10 @@ def make_leg(lab, args):
     terms = term_file(args.terms)
     side = side_num(args.side)
     me, other = terms.parties[side], terms.parties[1-side]
+    fee = terms.fee(side)
     terms.confirm(side, lab.address(args.wallet), asset_id(args.give_id), args.give_qty, asset_id(args.take_id), args.take_qty)
     need(args.counterparty.startswith("@") and lab.destination(args.counterparty) == other.address and
-         args.expiry == terms.expiry and args.fee == FEES[side], "counterparty, expiry or local fee differs from instructions")
+         args.expiry == terms.expiry and args.fee == fee, "counterparty, expiry or local fee differs from instructions")
     key = terms.commitment()
     with lab.locked_wallet(args.wallet) as directory, Outbox(directory) as book:
         old = get_session(book,key,side)
@@ -193,22 +194,22 @@ def make_leg(lab, args):
             with lab.wallet(args.wallet) as normal, synced_wallet(lab,args.node,normal,directory) as (state,_), actor("wallet",directory) as worker:
                 wallet_address(worker,normal)
                 need(state.height+1 <= terms.expiry, "swap deadline passed")
-                sources, native_change, token_change = choose(state,book,me,FEES[side])
+                sources, native_change, token_change = choose(state,book,me,fee)
                 nonce = secrets.token_bytes(32)
                 public = worker.call(b"E"+nonce)
                 need(len(public) == 32 and public != ZERO, "native swap key generation failed")
                 before = role_sample(worker)
                 start = time.perf_counter()
-                packet = prove(worker,nonce,FEES[side],state.header,me,other,sources)
+                packet = prove(worker,nonce,fee,state.header,me,other,sources)
                 after = role_sample(worker)
                 metrics = dict(proving_wall_s=time.perf_counter()-start, prover_cpu_s=after[0]-before[0],
-                               prover_role_peak_rss_KiB=after[1], real_inputs=len(sources), fee=FEES[side],
+                               prover_role_peak_rss_KiB=after[1], real_inputs=len(sources), fee=fee,
                                native_change=native_change, token_change=token_change, packet_B=len(packet))
                 with actor("verify") as verifier:
                     effect = verify(verifier,packet)
-                need(effect.public == public and effect.fee == FEES[side] and
+                need(effect.public == public and effect.fee == fee and
                      tuple(r["nf"] for r in sources) == effect.nfs[:len(sources)], "own proof differs from pinned inputs, fee or swap key")
-                opened(worker,effect,1,native_change,me.give,token_change)
+                opened(worker,effect,1,native_change,me.give if token_change else ZERO,token_change)
                 pins = [r["cm"].hex() for r in sources]
                 with book.db:
                     book.db.execute("INSERT INTO swap_sessions VALUES(?,?,?,?,?,?,?,?,?,NULL,NULL)",
@@ -226,7 +227,7 @@ def permit(lab, args):
     terms, side = term_file(args.terms), side_num(args.side)
     key = terms.commitment()
     legs = read_file(args.leg_a,MAX_LEG), read_file(args.leg_b,MAX_LEG)
-    joint = digest(terms.network,key,terms.expiry,0,legs)
+    joint = digest(terms.network,key,terms.expiry,terms.payer,legs)
     me, other = terms.parties[side], terms.parties[1-side]
     with lab.locked_wallet(args.wallet) as directory, Outbox(directory) as book:
         saved = get_session(book,key,side)
@@ -240,12 +241,12 @@ def permit(lab, args):
             with lab.wallet(args.wallet) as normal, synced_wallet(lab,args.node,normal,directory) as (state,_), actor("wallet",directory) as w, actor("verify") as verifier:
                 wallet_address(w,normal)
                 effects = tuple(verify(verifier,leg) for leg in legs)
-                check_pair(effects)
+                check_pair(effects,terms)
                 need(effects[side].public == saved["public"] == w.call(b"E"+saved["nonce"]),
                      "own verified swap key differs from reserved negotiation")
                 native_change, token_change = json.loads(saved["changes"])
-                opened(w,effects[side],1,native_change,me.give,token_change)
-                opened(w,effects[1-side],0,0,other.give,other.qty)
+                opened(w,effects[side],1,native_change,me.give if token_change else ZERO,token_change)
+                opened(w,effects[1-side],0,other.native,other.give,other.token)
                 state.synchronize(lab,args.node)
                 eligible(state,terms,effects)
                 need(all(v == "unspent" for v in state.input_status(json.loads(saved["pins"])).values()),
@@ -288,14 +289,14 @@ def combine(args):
     terms = term_file(args.terms)
     legs = read_file(args.leg_a,MAX_LEG), read_file(args.leg_b,MAX_LEG)
     signatures = read_file(args.sig_a,SIGNATURE), read_file(args.sig_b,SIGNATURE)
-    joint = digest(terms.network,terms.commitment(),terms.expiry,0,legs)
+    joint = digest(terms.network,terms.commitment(),terms.expiry,terms.payer,legs)
     with actor("verify") as public:
         effects = tuple(verify(public,leg) for leg in legs)
-        check_pair(effects)
+        check_pair(effects,terms)
         for effect,sig in zip(effects,signatures,strict=True):
             need(len(sig) == SIGNATURE and public.call(b"V"+effect.public+joint+sig) == b"1",
                  "proposal lacks the correct final signature from both owners")
-    raw = assemble(terms.network,terms.commitment(),terms.expiry,0,legs,signatures)
+    raw = assemble(terms.network,terms.commitment(),terms.expiry,terms.payer,legs,signatures)
     emit(args.output,raw)
     return dict(digest=joint.hex(),bundle_sha256=sha256(raw).hexdigest(),
                 frame_ids=[sha256(f).hexdigest() for f in split(raw)],packet_B=len(raw))
@@ -319,6 +320,7 @@ def main(home, command, args):
         p.add_argument("take_id"); p.add_argument("take_qty",type=int)
     if command == "terms":
         p.add_argument("expiry",type=int)
+        p.add_argument("--payer",choices=("a","b"),help="fee-paying side, default native sender or a for token/token")
     if command == "leg":
         p.add_argument("--counterparty",required=True); p.add_argument("--expiry",required=True,type=int)
         p.add_argument("--fee",required=True,type=int)
@@ -339,9 +341,10 @@ def main(home, command, args):
         need(parsed.counterparty.startswith("@"), "supply the independently exported public address")
         mine = Party(lab.address(parsed.wallet),asset_id(parsed.give_id),parsed.give_qty)
         other = Party(lab.destination(parsed.counterparty),asset_id(parsed.take_id),parsed.take_qty)
-        terms = Terms.fresh(NETWORK,parsed.expiry,(mine,other))
+        payer = None if parsed.payer is None else side_num(parsed.payer)
+        terms = Terms.fresh(NETWORK,parsed.expiry,(mine,other),payer)
         emit(parsed.output,terms.encode())
-        result = dict(terms_commitment=terms.commitment().hex(),expiry=terms.expiry,payer="a")
+        result = dict(terms_commitment=terms.commitment().hex(),expiry=terms.expiry,payer=("a","b")[terms.payer])
     elif command == "leg":
         result = make_leg(lab,parsed)
     elif command == "authorize":

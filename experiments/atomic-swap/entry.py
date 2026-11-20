@@ -20,7 +20,8 @@ def main():
         p.add_argument("--"+suite+"-sha")
     ordinary=("start","stop","status","create","export-address","backup","restore","balance","issue","register","mint","burn","send","resume","intents","mine")
     negotiation=("terms","leg","authorize","combine","abort")
-    p.add_argument("command",choices=ordinary+negotiation+("list","submit","walkthrough"))
+    walkthroughs = {"walkthrough": "walkthrough.py", "native-walkthrough": "native_currency_walkthrough.py"}
+    p.add_argument("command",choices=ordinary+negotiation+("list","submit",*walkthroughs))
     p.add_argument("args",nargs=argparse.REMAINDER)
     a=p.parse_args()
     home=a.home.resolve()
@@ -34,7 +35,7 @@ def main():
     with (home/".installation.lock").open("a") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX)
         if not dev.exists():
-            if a.command not in ("start","walkthrough"):
+            if a.command != "start" and a.command not in walkthroughs:
                 p.error("start a swap network first")
             install(home,*(pins if all(pins) else build(home)))
         if not (dev/"swap.vk").is_file():
@@ -42,12 +43,12 @@ def main():
         if all(pins) and ((dev/"approved-native.sha256").read_text().strip()!=a.managed_sha or
                           (dev/"approved-swap-native.sha256").read_text().strip()!=a.swap_sha):
             p.error("deployment approval mismatch")
-    if a.command=="walkthrough":
+    if a.command in walkthroughs:
         if a.args:
-            p.error("walkthrough takes no additional arguments")
-        args=[HERE/"walkthrough.py",home]
+            p.error(f"{a.command} takes no additional arguments")
+        args=[HERE/walkthroughs[a.command],home]
     elif a.command in negotiation:
-        sys.path.insert(0,str(dev))
+        sys.path[:0] = [str(HERE/"wallet"), str(dev)]
         import swap_wallet
         swap_wallet.main(home,a.command,a.args)
         return

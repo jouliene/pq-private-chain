@@ -7,7 +7,9 @@ HERE = Path(__file__).resolve().parent
 
 def stage_wallet(dev):
     dev = Path(dev)
-    shutil.copyfile(HERE/"terms.py",dev/"swap_terms.py")
+    shutil.copyfile(HERE/"terms.py",dev/"terms.py")
+    # Keep the historical module name available to measurements and deployed tooling.
+    (dev/"swap_terms.py").write_text("from terms import LIMIT, MAGIC, SIZE, ZERO, Party, Terms, asset_id, need, side_num\n")
     shutil.copyfile(HERE/"swap_wallet.py",dev/"swap_wallet.py")
     path = dev/"intents.py"
     source = path.read_text()
