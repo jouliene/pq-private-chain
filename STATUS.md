@@ -1,6 +1,8 @@
-# Packed TCitH delivery — LOCAL
+# Packed TCitH — verified public decision
 
-Baseline `d92de79fe1fce97a33d88f706996e6cdd8ec188f`. The funded quadratic and seventh-power encodings, exact size certificates, calibrated calculator, full-size commitment component, role measurements and independent mathematical review are ready. Retain the live MNG1/SLG1 registrations. From the repository root use `bash experiments/packed-tcith/reproduce.sh`. After publishing this source commit, the independent reviewer must run the public check in an anonymous HTTPS clone and repeat the funded role checks with its separate wallet lab. Check the actual workflow head SHAs before marking this bounded decision verified. [Decision](experiments/packed-tcith/DECISION.md) · [Public reproduction](experiments/packed-tcith/README.md)
+The independent reviewer reproduced tested revision `f198a4dce12ac27d1d6215e612fa68825d0cd694` from an empty, anonymous HTTPS checkout, including the estimator, exact bounds, 12-block replay, four newly proved reference spends in its own funding lab and the full-size TCitH commitment. Its 6,241,124,352-byte field-share run took 117.14 s and reproduced the same public artifact. Both automatic runs below passed on that exact research revision. The handoff adds the independent receipt, its measurements and delivery documentation. Retain MNG1/SLG1. The broader permissionless private PoW blockchain objective remains open.
+
+Run `bash experiments/packed-tcith/reproduce.sh` on the published checkout. The next proposed decision tests whether two hidden SIS accumulator memberships and their same-note binding fit 33,676 bytes at the lower-work geometry. [Decision](experiments/packed-tcith/DECISION.md) · [Independent public verification](experiments/packed-tcith/review/CLEAN.md) · [Smoke CI](https://github.com/jouliene/pq-private-chain/actions/runs/44804528172) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/44804528251)
 
 # Public handoff for the amplified spend decision
 

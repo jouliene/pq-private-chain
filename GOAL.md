@@ -2,7 +2,7 @@
 
 Start from `d92de79fe1fce97a33d88f706996e6cdd8ec188f`. Compare the registered Goldilocks constraints with a degree-seven Poseidon2 encoding under one packed TCitH security and cost profile. Exercise funded membership, preserve the full tree, monetary rules and receipts, compare the signed-leg budget and role costs, and qualify the exact quantum-knowledge and joint-privacy assumptions. Prove a funded cycle for a qualifying construction, or reproduce the decisive exclusions and propose a specific membership or note change. Public independent reproduction and CI precede completion. Keep deployed MNG1/SLG1 operational.
 
-The local decision retains the live verifier and defers packed TCitH. The direct profile fits the frame but increases archive and wallet costs, with quantum extraction and joint receipt privacy still open. Public checkout and CI verification are pending. [Decision](experiments/packed-tcith/DECISION.md)
+The bounded decision retains the live verifier and defers packed TCitH. The direct profile fits the frame but increases archive and wallet costs, with quantum extraction and joint receipt privacy still open. The source was independently reproduced from its published revision and both automatic checks passed. [Decision](experiments/packed-tcith/DECISION.md) · [Independent verification](experiments/packed-tcith/review/CLEAN.md)
 
 ## Earlier milestone
 
