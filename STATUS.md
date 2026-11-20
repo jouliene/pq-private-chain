@@ -1,6 +1,6 @@
 # WHIR for funded transfers and swap legs — active
 
-Baseline f1a513207f73ee84c3034938a00dba1d68cd7b3b. The relation owner implements the 31/34-word typed constraints, the wallet owner captures funded witnesses via private memory, the non-author reviews the protocol and performs clean reproduction, and the orchestrator integrates the proof backend, packet checks and decision. Start with the fixed research geometry in experiments/funded-whir/PROFILE.md; the global blockchain objective remains active.
+Baseline f1a513207f73ee84c3034938a00dba1d68cd7b3b. Both registered matrices and genuine proving are running. A preliminary 130-word comparison passed on an older staged wallet policy. The independent clean walkthrough exposed a zero-token receipt check in the fixture adapter at review revision 98bed4230b988ead25841b73d9ca23afdb80dcaa. Keep the strict check and correct the fixture: use the canonical zero asset for native-only receipts and respect ordinary randomized output roles. Both accepted runs must use the current checkout policy, fresh proofs and the isolated backup-only restart. Resume with experiments/funded-whir/README.md; author funding is in .work/funded-whir-live01. The global blockchain objective remains active.
 
 ## Earlier milestone
 

@@ -251,6 +251,16 @@ def prove_source(name,suite,worker,request,fifo,rows,out,constants,validate,matr
         released_prove=dict(wall_s=round(released_wall,4),cpu_s=round(post_cpu[0]-pre_cpu[0],4),max_rss_KiB=post_cpu[1]),released_warm_verify_wall_s=round(released_verify_wall,4),released_packet_B=len(packet),released_packet_sha256=sha256(packet).hexdigest(),capture_and_frontend_wall_s=round(released_and_frontend,3),frontend_wall_s=round(frontend_wall,4),private_matrix_control=control)
 
 
+def swap_policy():
+    """Always use this checkout's authorization and terms policy with the installed verifier."""
+    trusted=(HERE.parents[1]/"atomic-swap/wallet").resolve(strict=True)
+    sys.path.insert(0,str(trusted))
+    import swap_wallet,terms
+    for module in (swap_wallet,terms):
+        need(Path(module.__file__).resolve()==trusted/(module.__name__+".py"),"wrong swap wallet policy module")
+    return swap_wallet
+
+
 def start_owner(name,env,a,params,output,workspace):
     """Give the process one seed, registered code, shared read-only public exchange and its own output."""
     seed=(a.home/"wallets/miner-a/seed" if name=="ordinary" else
@@ -263,6 +273,7 @@ def start_owner(name,env,a,params,output,workspace):
                HERE.parent/"relation":"/src/experiments/funded-whir/relation",
                HERE.parent/"packet.py":"/src/experiments/funded-whir/packet.py",
                HERE.parents[1]/"spend-proof-decision/whir_port.py":"/src/experiments/spend-proof-decision/whir_port.py",
+               HERE.parents[1]/"atomic-swap/wallet":"/src/experiments/atomic-swap/wallet",
                HERE.parents[1]/"atomic-swap/swap_wire.py":"/src/experiments/atomic-swap/swap_wire.py",
                a.home/"deployment":"/deploy",a.home/"public/blocks":"/origin/public/blocks",seed:"/owner/seed",params:"/peers",output:"/exchange",
                a.role:"/candidate",a.matrix/"MNG1.r1cs":"/matrix/MNG1.r1cs",a.matrix/"SLG1.r1cs":"/matrix/SLG1.r1cs",
@@ -297,7 +308,8 @@ def run(a):
     out.mkdir(mode=0o700,parents=True,exist_ok=False)
     deploy=a.home/"deployment"
     sys.path.insert(0,str(deploy/"devnet"))
-    import chain,history,managed_ops,runtime,swap_wallet,swap_wire
+    import chain,history,managed_ops,runtime,swap_wire
+    swap_wallet=swap_policy()
     from run import Resources
     sys.path.insert(0,str(HERE.parent))
     import packet
@@ -323,7 +335,9 @@ def run(a):
         for i,page in enumerate(pages):
             (out/f"funded-{i:04}.history").write_bytes(page)
         stable=dict(network=network.hex(),common=common,terms=terms.hex(),expiry=expiry,payer=1,
-                    source_blocks=common["height"],profiles={},ordinary_and_swap_parallel_alternatives=True,
+                    source_blocks=common["height"],profiles={},
+                    swap_wallet_policy_sha256=sha256(Path(swap_wallet.__file__).read_bytes()).hexdigest(),
+                    private_terms_policy_sha256=sha256((Path(swap_wallet.__file__).parent/"terms.py").read_bytes()).hexdigest(),ordinary_and_swap_parallel_alternatives=True,
                     disposable_fixture_agreement=dict(token_asset=asset.hex(),token_paid_by="a",token_quantity=20,
                     native_paid_by="b",native_quantity=8,fee_paid_by="b",fee=3))
         def save():

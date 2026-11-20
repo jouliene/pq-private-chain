@@ -7,19 +7,29 @@ import secrets
 from hashlib import sha256
 import struct
 import sys
-import time
+from types import SimpleNamespace
 
 HERE=Path(__file__).resolve().parent
 sys.path[:0]=[str(HERE),"/deploy/devnet",str(HERE.parent/"relation")]
 from fixtures import (CT,ZERO,Inventory,actor,candidate,commitment,compact,inputs,metered,need,prove_source,
-                      selected_blocks,tail_statement)
+                      selected_blocks,swap_policy,tail_statement)
 import chain
 import history
 import managed_ops
 import runtime
-import swap_wallet
+swap_wallet=swap_policy()
 import swap_wire
 from run import Resources
+from asset_wallet import AssetWallet
+
+
+def ordinary_receipt(holder,effect,kind,native,asset,quantity):
+    """MNG1 shuffles outputs. Ask the ordinary wallet for the authenticated memo role."""
+    wallet=SimpleNamespace(role=holder)
+    opened=[AssetWallet.open_row(wallet,cm+ct) for cm,ct in zip(effect.cms,effect.cts,strict=True)]
+    mine=[hit for hit in opened if hit is not None]
+    need(len(mine)==1 and mine[0][0]!=ZERO and mine[0][1:]==(native,asset,quantity,kind),
+         "ordinary receipt ownership, amount, currency or authenticated role differs")
 
 
 def step(command):
@@ -78,10 +88,11 @@ def run(name,suite):
             need(address==roster[owner],"instrumented role controls a different spending address")
             raw,z,effect,metric=prove_source(name,suite,wallet,data,fifo,rows,own,Path("/constants.rs"),verify,
                                             Path("/matrix")/(suite+".r1cs"))
-        own_index=1
-        if not side and holder.call(b"D"+effect.cms[0]+effect.cts[0])[:3]==b"HIT":
-            own_index=0
-        swap_wallet.opened(holder,effect,own_index,native_change,asset,token_change)
+        change_asset=asset if token_change else ZERO
+        if side:
+            swap_wallet.opened(holder,effect,1,native_change,change_asset,token_change)
+        else:
+            ordinary_receipt(holder,effect,"change",native_change,change_asset,token_change)
         need(effect.anchor==anchor and effect.height==common["height"] and effect.fee==fee,"funding anchor or fee")
         pkt,work=candidate(Path("/candidate"),Path("/matrix")/(suite+".r1cs"),suite,own/(name+".statement"),
                            own/(name+".receipts"),own/(name+".candidate"),z)
@@ -112,8 +123,8 @@ def run(name,suite):
         need(common["height"]+1<=expiry and all(ledger.db.execute("SELECT 1 FROM spent WHERE nf=?",(nf,)).fetchone() is None
              for effect in effects for nf in effect.nfs),"funding already spent at the selected tip or swap expired")
         incoming=effects[2-side]
-        swap_wallet.opened(holder,incoming,0,8 if side==1 else 0,asset,0 if side==1 else 20)
-        swap_wallet.opened(holder,effects[side-1],1,native_change,asset,token_change)
+        swap_wallet.opened(holder,incoming,0,8 if side==1 else 0,ZERO if side==1 else asset,0 if side==1 else 20)
+        swap_wallet.opened(holder,effects[side-1],1,native_change,change_asset,token_change)
         if side==1:
             ordinary=(source/"ordinary.released").read_bytes()
             oe,=roles.backend.verify(managed_ops.wrap(ordinary,"transfer",network))
@@ -122,8 +133,7 @@ def run(name,suite):
             qty=header_info.get("profiles",{}).get("ordinary",{}).get("ordinary_token_quantity")
             need(qty in (0,10) and other[9:9+31*8]==tail_statement(ordinary,"MNG1") and
                  other[-2*CT:]==b"".join(oe.cts),"ordinary public statement mismatch")
-            receive_index=0 if holder.call(b"D"+oe.cms[0]+oe.cts[0])[:3]==b"HIT" else 1
-            swap_wallet.opened(holder,oe,receive_index,5,asset,qty)
+            ordinary_receipt(holder,oe,"incoming",5,asset if qty else ZERO,qty)
         with actor(swap_binary,swap_keys,own_seed) as (signer,address):
             need(address==roster[owner] and signer.call(b"E"+nonce)==effects[side-1].public,"proof-bound signing authority")
             for kind,legs in (("released",released),("candidate",proposed)):
