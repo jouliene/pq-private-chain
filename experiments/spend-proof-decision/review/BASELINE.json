@@ -1,0 +1,162 @@
+{
+  "actual_receipts": {
+    "distinct_restored_owners": true,
+    "exact_external_swap_outputs_consumed": 2,
+    "ordinary_after_swap_consumed_exact_incoming": true
+  },
+  "baseline": "3f08bff0089096d7fb27279bc0d444006e9147ce",
+  "cold_processes": 3,
+  "cpu": "Intel Core i7-8700K",
+  "independent_public_inspection": {
+    "bounded_262144_each": [
+      true,
+      true,
+      true
+    ],
+    "changed_authorizations_rejected": 18,
+    "independent_receipt_pair_checks": 3,
+    "profile": "baseline",
+    "public_inputs": [
+      {
+        "anchor_height": 25,
+        "encrypted_receipt_pair_B": 3584,
+        "fee": 3,
+        "nullifier_count": 2,
+        "output_count": 2,
+        "registered_public_inputs": 31
+      },
+      {
+        "anchor_height": 15,
+        "encrypted_receipt_pair_B": 3584,
+        "fee": 3,
+        "nullifier_count": 2,
+        "output_count": 2,
+        "registered_public_inputs": 34
+      },
+      {
+        "anchor_height": 15,
+        "encrypted_receipt_pair_B": 3584,
+        "fee": 0,
+        "nullifier_count": 2,
+        "output_count": 2,
+        "registered_public_inputs": 34
+      }
+    ],
+    "valid_openssl_authorizations": 2,
+    "wire_sizes": [
+      143233,
+      160446,
+      160446
+    ]
+  },
+  "native_threads": 2,
+  "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+  "ordinary": {
+    "public": {
+      "binary_sha256": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+      "block_incremental_B": 143237,
+      "final_authorizations_B": 0,
+      "packet_sha256": "4a0fbd343976e6c9608e5d7866eaa80918ee46f4a068da494efc4932ca527d81",
+      "physical_frame_B": [
+        143233
+      ],
+      "proof_B": [
+        139634
+      ],
+      "receipts_B": 3584,
+      "summary": {
+        "cold_native_process_peak_KiB": 201100,
+        "cold_observed_cpu_to_verdict_s": 2.4035229840000003,
+        "cold_processes": 3,
+        "cold_to_verdict_wall_s": 1.311522366013378,
+        "warm_check_cpu_s": 0.006274775,
+        "warm_check_wall_s": 0.006412238115444779,
+        "warm_checks": 5,
+        "warm_native_peak_KiB": 201104
+      },
+      "verifier_key_sha256": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+      "whole_public_submission_B": 143233
+    },
+    "sha256": "4a0fbd343976e6c9608e5d7866eaa80918ee46f4a068da494efc4932ca527d81",
+    "subset_of_branch": {
+      "height": 26
+    },
+    "wallet": {
+      "fee": 3,
+      "prover_cpu_s": 9.38,
+      "prover_role_peak_rss_KiB": 451940,
+      "proving_wall_s": 4.8346366381738335,
+      "real_inputs": 2
+    }
+  },
+  "pow_replay": {
+    "blocks": 38,
+    "matched_database_count": 4,
+    "selected": {
+      "atomic_swaps": 1,
+      "fees": 36,
+      "height": 27,
+      "issued": 2700,
+      "logical_payments": 12,
+      "notes": 53,
+      "spent": 26,
+      "tip": "0000039a9b3ec3a7be2fb6cc3641dbf85b82052a3746203b693394a0565227a3"
+    }
+  },
+  "proof_attachment": {
+    "bytes": 461798,
+    "files": 8,
+    "name": "SPEND-baseline-public.tar.gz",
+    "sha256": "7efdf6c3d679422af39b0c042b9d82808ddb43515b70f6103128a9e1be5048a7"
+  },
+  "swap": {
+    "included_height": 17,
+    "public": {
+      "binary_sha256": "46ee4c569abe6eea973843713444a759075534de169fa3a6177f0f869973cc1a",
+      "block_incremental_B": 320900,
+      "final_authorizations_B": 34176,
+      "packet_sha256": "130d0d5f4ee36727a49724b4947236a334c3b8136fdffdb409a7c2dddc658183",
+      "physical_frame_B": [
+        160446,
+        160446
+      ],
+      "proof_B": [
+        139658,
+        139658
+      ],
+      "receipts_B": 7168,
+      "summary": {
+        "cold_native_process_peak_KiB": 201132,
+        "cold_observed_cpu_to_verdict_s": 2.404834074,
+        "cold_processes": 3,
+        "cold_to_verdict_wall_s": 1.3244619658216834,
+        "warm_check_cpu_s": 0.023083038999999993,
+        "warm_check_wall_s": 0.023528017103672028,
+        "warm_checks": 5,
+        "warm_native_peak_KiB": 201136
+      },
+      "verifier_key_sha256": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837",
+      "whole_public_submission_B": 320905
+    },
+    "sha256": "130d0d5f4ee36727a49724b4947236a334c3b8136fdffdb409a7c2dddc658183",
+    "wallets": [
+      {
+        "fee": 3,
+        "prover_cpu_s": 9.4,
+        "prover_role_peak_rss_KiB": 452196,
+        "proving_wall_s": 4.8544104502070695,
+        "real_inputs": 1
+      },
+      {
+        "fee": 0,
+        "prover_cpu_s": 9.45,
+        "prover_role_peak_rss_KiB": 451936,
+        "proving_wall_s": 4.866436923155561,
+        "real_inputs": 1
+      }
+    ]
+  },
+  "walkthrough_wall_s": 233.58,
+  "warm_samples": 5,
+  "warmup": 1
+}

@@ -21,7 +21,7 @@ def check(pub,baseline,node,roots,approval):
     try:
         r=Reader(role,roots,NETWORK,node)
         prior={}; seen=set(); events=[]
-        for idx,(name,op,delta,stock) in enumerate((('issue0',1,70,70),('issue1',2,300,300),('mint',3,40,340),('burn',4,BURN+10,330))):
+        for name,op,delta,stock in (('issue0',1,70,70),('issue1',2,300,300),('mint',3,40,340),('burn',4,BURN+10,330)):
             raw=(pub/(name+'.bin')).read_bytes()
             e=r.packet(raw)
             assert e.op==op and e.delta==delta and e.fee==3 and not set(e.nullifiers)&seen
@@ -47,12 +47,20 @@ def check(pub,baseline,node,roots,approval):
         sample=trial['meters'][k+'_prove']
         prove,=[m for m in sample['native'] if m['operation']=='compact_prove']
         assert sample['call_wall_s'][-1]>0 and prove['cpu_s']>0 and prove['peak_rss_kib']>0
-        metrics[k]=dict(positive_real_inputs=real,prove_rpc_wall_s=sample['call_wall_s'][-1],prove_native_cpu_s=prove['cpu_s'],
+        setup,=[m for m in sample['native'] if m['operation']=='wallet_setup']
+        metrics[k]=dict(positive_real_inputs=real,prove_rpc_wall_s=sample['call_wall_s'][-1],
+                        first_proof_metered_native_cpu_s=setup['cpu_s']+prove['cpu_s'],
+                        setup_only_cpu_s=setup['cpu_s'],proof_only_cpu_s=prove['cpu_s'],proof_only_wall_s=prove['elapsed_s'],
                         peak_process_KiB=prove['peak_rss_kib'],process_including_setup_and_teardown_wall_s=sample['complete_process_wall_s'])
+    signers=[]
+    for side in (0,1):
+        sample=trial['meters']['sign'+str(side)]
+        sig,=[m for m in sample['native'] if m['operation']=='swap_sign']
+        signers.append(dict(side=side,call_wall_s=sample['call_wall_s'][-1],cpu_s=sig['cpu_s'],peak_process_KiB=sig['peak_rss_kib']))
     return dict(independent_registered_funding_proofs=4,independent_issuer_signatures=checks['valid_public_signatures'],
                 changed_issuer_authorizations_rejected=len(checks['mutated_binding_rejections']),authenticated_funding_events=events,
                 declared_private_fixture=dict(real_inputs=[2,1,1],backups_forwarded=[7,30],old_verifier_onward_B=trial['old_managed_onward_B']),
-                prover_roles=metrics,isolated_network=NETWORK.hex(),synthetic_height=1)
+                prover_roles=metrics,swap_final_authorizations=signers,isolated_network=NETWORK.hex(),synthetic_height=1)
 
 
 if __name__=='__main__':

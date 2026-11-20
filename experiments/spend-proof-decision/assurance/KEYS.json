@@ -1,0 +1,224 @@
+{
+  "MNG1": {
+    "builder_capped_screen": 128,
+    "builder_query_screen": 130,
+    "bytes": 1481,
+    "circuit_digest": [
+      2453376603771519599,
+      7652552955717652860,
+      10938475148012908151,
+      2685576491656535976
+    ],
+    "common": {
+      "constant_polys": 4,
+      "gate_constraints": 123,
+      "partial_products": 7,
+      "pi": 31,
+      "quotient_factor": 8
+    },
+    "config": {
+      "config_constants": 2,
+      "configured_bits": 128,
+      "fri": {
+        "cap_height": 4,
+        "constant_arity_bits": [
+          2,
+          3
+        ],
+        "grinding": 0,
+        "queries": 26,
+        "rate_bits": 5
+      },
+      "max_quotient_factor": 8,
+      "plonk_repetitions": 2,
+      "routed": 60,
+      "row_blinding": 1,
+      "wires": 135
+    },
+    "final_extension_coefficients": 4,
+    "folds_bits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "gates": [
+      {
+        "arguments": [],
+        "name": "Noop"
+      },
+      {
+        "arguments": [
+          2
+        ],
+        "name": "Constant"
+      },
+      {
+        "arguments": [],
+        "name": "PublicInput"
+      },
+      {
+        "arguments": [
+          59
+        ],
+        "name": "BaseSum2"
+      },
+      {
+        "arguments": [
+          15
+        ],
+        "name": "Arithmetic"
+      },
+      {
+        "arguments": [],
+        "name": "Poseidon2"
+      },
+      {
+        "arguments": [],
+        "name": "Poseidon"
+      }
+    ],
+    "gates_before_blinding": 489,
+    "hypothetical_fixed_agreement_query_bits": {
+      "one_half": 26.0,
+      "one_quarter": 52.0,
+      "rate": 130.0
+    },
+    "lde_points": 131072,
+    "leaf_hiding": 1,
+    "query_input_remainder": 1,
+    "selector_groups": [
+      [
+        0,
+        5
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "selector_indices": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "sha256": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+    "trace_rows": 4096
+  },
+  "SLG1": {
+    "builder_capped_screen": 128,
+    "builder_query_screen": 130,
+    "bytes": 1481,
+    "circuit_digest": [
+      4095036196093171016,
+      58821858133318695,
+      578283452414345192,
+      9082856931546733610
+    ],
+    "common": {
+      "constant_polys": 4,
+      "gate_constraints": 123,
+      "partial_products": 7,
+      "pi": 34,
+      "quotient_factor": 8
+    },
+    "config": {
+      "config_constants": 2,
+      "configured_bits": 128,
+      "fri": {
+        "cap_height": 4,
+        "constant_arity_bits": [
+          2,
+          3
+        ],
+        "grinding": 0,
+        "queries": 26,
+        "rate_bits": 5
+      },
+      "max_quotient_factor": 8,
+      "plonk_repetitions": 2,
+      "routed": 60,
+      "row_blinding": 1,
+      "wires": 135
+    },
+    "final_extension_coefficients": 4,
+    "folds_bits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "gates": [
+      {
+        "arguments": [],
+        "name": "Noop"
+      },
+      {
+        "arguments": [
+          2
+        ],
+        "name": "Constant"
+      },
+      {
+        "arguments": [],
+        "name": "PublicInput"
+      },
+      {
+        "arguments": [
+          59
+        ],
+        "name": "BaseSum2"
+      },
+      {
+        "arguments": [
+          15
+        ],
+        "name": "Arithmetic"
+      },
+      {
+        "arguments": [],
+        "name": "Poseidon2"
+      },
+      {
+        "arguments": [],
+        "name": "Poseidon"
+      }
+    ],
+    "gates_before_blinding": 499,
+    "hypothetical_fixed_agreement_query_bits": {
+      "one_half": 26.0,
+      "one_quarter": 52.0,
+      "rate": 130.0
+    },
+    "lde_points": 131072,
+    "leaf_hiding": 1,
+    "query_input_remainder": 1,
+    "selector_groups": [
+      [
+        0,
+        5
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "selector_indices": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "sha256": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837",
+    "trace_rows": 4096
+  }
+}

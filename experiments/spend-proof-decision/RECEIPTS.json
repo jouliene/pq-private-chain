@@ -1,0 +1,41 @@
+{
+  "distinct_complete_receipts": 6,
+  "distinct_kem_note_memo_fields": [
+    6,
+    6,
+    6
+  ],
+  "distinct_public_version_suite_diversifier": [
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "ordinary_nullifiers_matching_swap_commitments_by_equality": 0,
+  "ordinary_nullifiers_matching_swap_input_nullifiers_by_equality": 0,
+  "ordinary_proof_public_words": 31,
+  "ordinary_public_supply_delta_and_id_all_zero": true,
+  "receipt_count": 6,
+  "serialized_field_widths_B": [
+    1568,
+    128,
+    77
+  ],
+  "source_sha256": [
+    "4a0fbd343976e6c9608e5d7866eaa80918ee46f4a068da494efc4932ca527d81",
+    "130d0d5f4ee36727a49724b4947236a334c3b8136fdffdb409a7c2dddc658183"
+  ],
+  "swap_anchors_equal": true,
+  "swap_distinct_public_authorization_keys": true,
+  "swap_leg_public_words_each": 34,
+  "swap_public_leg_fees": [
+    3,
+    0
+  ],
+  "swap_shared_public_terms_digest": true,
+  "swap_visible_positions": [
+    "side 0 counterparty then change",
+    "side 1 counterparty then change"
+  ]
+}

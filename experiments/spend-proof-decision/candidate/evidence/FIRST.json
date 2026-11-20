@@ -1,0 +1,35 @@
+{
+  "backup_respend_MNG1_B": 143227,
+  "binary_sha256": {
+    "leg": "dbdba9e5a65cc1b4147502a2414c4df69885f4f1afd7a63efe0f8a147f3e6683",
+    "old": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+    "ordinary": "bd55f93da08ca4f64e676d09893607df928c3c4c484741071322803b2b5be74e"
+  },
+  "both_altered_authorizations_rejected": true,
+  "four_receipts_checked_before_signatures": true,
+  "inputs_ordinary_and_both_legs": [
+    2,
+    2,
+    2
+  ],
+  "legs_B": [
+    495993,
+    495993
+  ],
+  "live_bound_B": 262144,
+  "old_verifier_rejected_retagged_candidate": true,
+  "ordinary_B": 495975,
+  "ordinary_inner_B": 495969,
+  "ordinary_proof_B": 492376,
+  "packets_sha256": {
+    "ordinary.bin": "09be8d32fe74768cd5e511058945dd5888feb7c138092ff8c1305a28fd863bec",
+    "swap.bin": "9070eb13564a3f7c4ac2c9fe18a797824f9e8ab4b0c09add206f2b21c5813347"
+  },
+  "scope": "Exploratory 7/11 exchange of two fixed assets; old-role native respend and new proof acceptance.",
+  "swap_B": 1026389,
+  "swap_physical_frame_B": [
+    513188,
+    513188
+  ],
+  "tampered_receipt_rejected": true
+}

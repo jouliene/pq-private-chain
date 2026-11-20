@@ -1,0 +1,360 @@
+{
+  "assurance": "Finite wallet, wire, and verification measurements. No QROM knowledge extraction, zero-knowledge or recipient-privacy reduction for the funded composition.",
+  "baseline_revision": "3f08bff0089096d7fb27279bc0d444006e9147ce",
+  "candidate_binary_sha256": {
+    "leg": "dbdba9e5a65cc1b4147502a2414c4df69885f4f1afd7a63efe0f8a147f3e6683",
+    "ordinary": "bd55f93da08ca4f64e676d09893607df928c3c4c484741071322803b2b5be74e"
+  },
+  "changed_issuer_authorizations_rejected": 26,
+  "compact": {
+    "actual_compact_sha256": [
+      "29cbe95b441182fc1d38484770b009dfc715f25141c415ea68f37d98428f2d66",
+      "d931a662307f6d4c9b370eceae6b8ef9b5de3bcefdf0bc23a30a7ebe0493f9d7"
+    ],
+    "compact_binary_sha256": "e1467c79240978f8365a973bbb2a8aaf1a56ba4b4f5ed05b5785d760bbd577dc",
+    "compact_joint_all_existing_fields_B": 840419,
+    "compact_ordinary_all_existing_fields_B": 399768,
+    "complete_expanded_payments_passed_registered_verifiers": true,
+    "independent_signatures_and_receipts": {
+      "bounded_262144_each": [
+        false,
+        false,
+        false
+      ],
+      "changed_authorizations_rejected": 18,
+      "independent_receipt_pair_checks": 3,
+      "profile": "k384",
+      "public_inputs": [
+        {
+          "anchor_height": 1,
+          "encrypted_receipt_pair_B": 3584,
+          "fee": 3,
+          "nullifier_count": 2,
+          "output_count": 2,
+          "registered_public_inputs": 31
+        },
+        {
+          "anchor_height": 1,
+          "encrypted_receipt_pair_B": 3584,
+          "fee": 3,
+          "nullifier_count": 2,
+          "output_count": 2,
+          "registered_public_inputs": 34
+        },
+        {
+          "anchor_height": 1,
+          "encrypted_receipt_pair_B": 3584,
+          "fee": 0,
+          "nullifier_count": 2,
+          "output_count": 2,
+          "registered_public_inputs": 34
+        }
+      ],
+      "valid_openssl_authorizations": 2,
+      "wire_sizes": [
+        495975,
+        513188,
+        513188
+      ]
+    },
+    "proofs": [
+      {
+        "compact_B_with_all_existing_frame_fields": 399768,
+        "compact_proof_B": 396169,
+        "compact_sha256": "91b4c0ed4e3702a261f8a9dab94e4c3bf27648b0e7a7eb66e9b58af5d930c85d",
+        "decode_and_verify": {
+          "cpu_s": 0.01,
+          "peak_process_KiB": 5920,
+          "wall_s": 0.03190270997583866
+        },
+        "encode_and_verify": {
+          "cpu_s": 0.01,
+          "peak_process_KiB": 5816,
+          "wall_s": 0.03188194101676345
+        },
+        "full_proof_B": 492376,
+        "full_proof_sha256": "3fac0357d31fdf440565af741b49bc8672fa5a03b72a9898e32d11268ba52c4a",
+        "which": "ordinary",
+        "within_live_262144_size": false
+      },
+      {
+        "compact_B_with_all_existing_frame_fields": 421307,
+        "compact_proof_B": 400519,
+        "compact_sha256": "94fd677689284429b5f3296e0a4591fd6ec71f3230057c69cfc24fa7f8f09b59",
+        "decode_and_verify": {
+          "cpu_s": 0.01,
+          "peak_process_KiB": 5932,
+          "wall_s": 0.03188853315077722
+        },
+        "encode_and_verify": {
+          "cpu_s": 0.01,
+          "peak_process_KiB": 5816,
+          "wall_s": 0.03188932198099792
+        },
+        "full_proof_B": 492400,
+        "full_proof_sha256": "d3badc084b1b389682f80a96b71d939cf4e5898fd5226d9e5cade4f1dbbb6018",
+        "which": "leg_a",
+        "within_live_262144_size": false
+      },
+      {
+        "compact_B_with_all_existing_frame_fields": 419099,
+        "compact_proof_B": 398311,
+        "compact_sha256": "989dde72cdeac6ce26bfad8f2bdeff74c7d9c702876b42e0dd57ad6900d93185",
+        "decode_and_verify": {
+          "cpu_s": 0.01,
+          "peak_process_KiB": 5932,
+          "wall_s": 0.031842544907703996
+        },
+        "encode_and_verify": {
+          "cpu_s": 0.01,
+          "peak_process_KiB": 5816,
+          "wall_s": 0.031717220088467
+        },
+        "full_proof_B": 492400,
+        "full_proof_sha256": "0298d47a36fe9dc9ae306f6a25b8c0dd1d726e1afd50365235b6cd959c4c9761",
+        "which": "leg_b",
+        "within_live_262144_size": false
+      }
+    ],
+    "public_reconstructed_ordinary_sha256": "e950fe7e8e87308f0e219ceee13c90e2a4ac79bde04d26ab4e9170feb6cddb1b",
+    "public_reconstructed_swap_sha256": "21147a29e5cd2ab45fa3b0cdf90bfb480d92e6f328facbe62f3cdcb436bbacf9",
+    "reconstructed_bytes_match": true
+  },
+  "final_signatures": [
+    {
+      "cpu_s": 0.08967797,
+      "peak_process_KiB": 3228,
+      "side": 0,
+      "wall_s": 0.08985022478736937
+    },
+    {
+      "cpu_s": 0.088410486,
+      "peak_process_KiB": 3168,
+      "side": 1,
+      "wall_s": 0.08860537293367088
+    }
+  ],
+  "host": "Intel Core i7-8700K, Linux x86_64, RAYON_NUM_THREADS=2",
+  "issuer_signatures": 2,
+  "public_attachments": [
+    {
+      "bytes": 461798,
+      "files": 8,
+      "name": "SPEND-baseline-public.tar.gz",
+      "sha256": "7efdf6c3d679422af39b0c042b9d82808ddb43515b70f6103128a9e1be5048a7"
+    },
+    {
+      "bytes": 5936434,
+      "name": "SPEND-baseline-PoW-public.tar.gz",
+      "public_files": 61,
+      "sha256": "142e5eeaa33cdd273739e0972db06fd1fdddddef4051656b23aeca5b56bdaf5a"
+    },
+    {
+      "allowlist": [
+        "RESULT.json",
+        "SHA256SUMS",
+        "build/codec.json",
+        "build/leg-registration.json",
+        "build/leg.json",
+        "build/ordinary-registration.json",
+        "build/ordinary.json",
+        "burn.bin",
+        "issue0.bin",
+        "issue1.bin",
+        "mint.bin",
+        "ordinary.bin",
+        "ordinary.compact",
+        "review/canonical-codec.json",
+        "review/funding-audit.json",
+        "review/measure.json",
+        "review/roundtrip.json",
+        "review/timeline.json",
+        "review/whir.json",
+        "swap.bin",
+        "swap.compact"
+      ],
+      "bytes": 3362801,
+      "name": "SPEND-K384-independent-public.tar.gz",
+      "regular_files": 21,
+      "sha256": "4a6a4141c522e2488cb262163f6c693d27730428fbdd5de42e21fa85b3461e90"
+    }
+  ],
+  "public_candidate_revision": "2a3a4c4671af54dd7d1171c77b826339d12d8cbf",
+  "public_only_measurements": {
+    "ordinary": {
+      "binary_sha256": "bd55f93da08ca4f64e676d09893607df928c3c4c484741071322803b2b5be74e",
+      "block_incremental_B": 495979,
+      "existing_per_frame_limit_B": 262144,
+      "final_authorizations_B": 0,
+      "network": "55c4bb5002896d5c9f32735094868a550410979286589ea75913085d3366f100",
+      "packet_sha256": "e950fe7e8e87308f0e219ceee13c90e2a4ac79bde04d26ab4e9170feb6cddb1b",
+      "physical_frame_B": [
+        495975
+      ],
+      "proof_B": [
+        492376
+      ],
+      "receipts_B": 3584,
+      "summary": {
+        "cold_native_process_peak_KiB": 685116,
+        "cold_observed_cpu_to_verdict_s": 4.024075839,
+        "cold_processes": 3,
+        "cold_to_verdict_wall_s": 2.48703403188847,
+        "warm_check_cpu_s": 0.008507602999999992,
+        "warm_check_wall_s": 0.008809647988528013,
+        "warm_checks": 5,
+        "warm_native_peak_KiB": 684892
+      },
+      "verifier_key_sha256": "3b95354b7e56303c636901e1fbb99d85598eb099445ba7e7203b22777764fefb",
+      "verifier_profile": "k384",
+      "whole_public_submission_B": 495975,
+      "within_existing_per_frame_limit": false
+    },
+    "swap": {
+      "binary_sha256": "dbdba9e5a65cc1b4147502a2414c4df69885f4f1afd7a63efe0f8a147f3e6683",
+      "block_incremental_B": 1026384,
+      "existing_per_frame_limit_B": 262144,
+      "final_authorizations_B": 34176,
+      "network": "55c4bb5002896d5c9f32735094868a550410979286589ea75913085d3366f100",
+      "packet_sha256": "21147a29e5cd2ab45fa3b0cdf90bfb480d92e6f328facbe62f3cdcb436bbacf9",
+      "physical_frame_B": [
+        513188,
+        513188
+      ],
+      "proof_B": [
+        492400,
+        492400
+      ],
+      "receipts_B": 7168,
+      "summary": {
+        "cold_native_process_peak_KiB": 685008,
+        "cold_observed_cpu_to_verdict_s": 4.056578698,
+        "cold_processes": 3,
+        "cold_to_verdict_wall_s": 2.4902358499821275,
+        "warm_check_cpu_s": 0.028821031999999993,
+        "warm_check_wall_s": 0.02973157214000821,
+        "warm_checks": 5,
+        "warm_native_peak_KiB": 685004
+      },
+      "verifier_key_sha256": "5815e098dec35adf6b75b8d636a5e2b7800b15dff4884ac3d3b5338e02cf761a",
+      "verifier_profile": "k384",
+      "whole_public_submission_B": 1026389,
+      "within_existing_per_frame_limit": false
+    }
+  },
+  "registration_sha256": {
+    "leg": "5815e098dec35adf6b75b8d636a5e2b7800b15dff4884ac3d3b5338e02cf761a",
+    "ordinary": "3b95354b7e56303c636901e1fbb99d85598eb099445ba7e7203b22777764fefb"
+  },
+  "restored_onward": {
+    "backups_forwarded": [
+      7,
+      30
+    ],
+    "old_verifier_onward_B": 143227,
+    "real_inputs": [
+      2,
+      1,
+      1
+    ]
+  },
+  "timeline": {
+    "baseline_wall_s": 233.58,
+    "candidate_end_to_end_fixture_wall_s": 112.74,
+    "candidate_native_build_wall_s": 90.89,
+    "host": "Intel Core i7-8700K, Linux x86_64, RAYON_NUM_THREADS=2",
+    "utc_completion_times": {
+      "baseline_both_selected": "2026-11-20T06:30:48+00:00",
+      "baseline_public_meter": "2026-11-20T06:31:24+00:00",
+      "baseline_public_pack": "2026-11-20T06:33:38+00:00",
+      "both_fresh_registrations": "2026-11-20T06:43:55+00:00",
+      "candidate_clean_native_build": "2026-11-20T06:43:50+00:00",
+      "codec_build": "2026-11-20T06:45:58+00:00",
+      "compact_verification": "2026-11-20T06:46:24+00:00",
+      "fresh_candidate_funding_and_spends": "2026-11-20T06:45:48+00:00",
+      "independent_funding_and_issuer_signatures": "2026-11-20T06:46:26+00:00",
+      "public_verifier_series": "2026-11-20T06:46:18+00:00",
+      "reference_encoder_crosscheck": "2026-11-20T06:46:24+00:00"
+    },
+    "wall_clock_source": "UTC filesystem completion times; durations use monotonic instrumentation"
+  },
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652",
+  "verified_historical_funding_events": [
+    {
+      "asset": "04e3d324ebc6840415368072e0926f73b5dfb3d9b42951314d76f8c10fcd232e",
+      "label": "issue0",
+      "outstanding": 70,
+      "revision": 1,
+      "txid": "c78834874a6dc6758a86cefa0a72cb512c54b68a346b25580d8d960b222d6038"
+    },
+    {
+      "asset": "31af35e126731e42fc84d19febe0cf43b15882863a0c731ca7bcc1cbba5b083b",
+      "label": "issue1",
+      "outstanding": 300,
+      "revision": 1,
+      "txid": "f5e86db7d92969547a9af5fe729228924d804b3232bb5fc4e5418dad3e45694c"
+    },
+    {
+      "asset": "31af35e126731e42fc84d19febe0cf43b15882863a0c731ca7bcc1cbba5b083b",
+      "label": "mint",
+      "outstanding": 340,
+      "revision": 2,
+      "txid": "78e675ca002856d6abecabe49ead8320c8e28857dbe06f3c5be7ace883e97f20"
+    },
+    {
+      "asset": "31af35e126731e42fc84d19febe0cf43b15882863a0c731ca7bcc1cbba5b083b",
+      "label": "burn",
+      "outstanding": 330,
+      "revision": 3,
+      "txid": "dfefe9e0bf0ff8a16052cc660e065101bee62955202b000d394790c2850f262f"
+    }
+  ],
+  "wallet_costs": {
+    "leg0": {
+      "peak_process_KiB": 1837184,
+      "proof_only_cpu_s": 9.630842032,
+      "proof_only_wall_s": 5.040091958,
+      "proving_including_lazy_setup_metered_native_cpu_s": 13.527462778,
+      "proving_rpc_wall_s": 7.377834430895746,
+      "real_inputs": 1,
+      "setup_cpu_s": 3.896620746
+    },
+    "leg1": {
+      "peak_process_KiB": 1837048,
+      "proof_only_cpu_s": 9.485471539,
+      "proof_only_wall_s": 4.963290224,
+      "proving_including_lazy_setup_metered_native_cpu_s": 13.429607509,
+      "proving_rpc_wall_s": 7.328165227081627,
+      "real_inputs": 1,
+      "setup_cpu_s": 3.94413597
+    },
+    "ordinary": {
+      "peak_process_KiB": 1837064,
+      "proof_only_cpu_s": 9.613046179,
+      "proof_only_wall_s": 5.026505596,
+      "proving_including_lazy_setup_metered_native_cpu_s": 13.479843746,
+      "proving_rpc_wall_s": 7.344402594957501,
+      "real_inputs": 2,
+      "setup_cpu_s": 3.866797567
+    }
+  },
+  "whir": {
+    "altered_public_root_rejected": true,
+    "checked_public_parents": 1,
+    "matrix_nonzero_coefficients": [
+      15226,
+      3244,
+      2536
+    ],
+    "matrix_or_public_equality_rows": 1120,
+    "native_reference_root": "1d3b3b3252140caedbf442666ab7dfd1845b250ffb8f627f0dd5995ca6653707",
+    "parameter_source_sha256": "54604af022354364c45fbdde106be3f223775992d6fa5685e77c75e66fd970f6",
+    "permutations": 3,
+    "public_swap_sha256": "130d0d5f4ee36727a49724b4947236a334c3b8136fdffdb409a7c2dddc658183",
+    "sbox_multiplication_rows": 1416,
+    "sboxes_per_permutation": 118,
+    "total_rows": 2536,
+    "two_max_depth20_paths_hash_rows_with_intermediate_parent_wires": 101280,
+    "witness_columns_including_private_children": 2548
+  }
+}

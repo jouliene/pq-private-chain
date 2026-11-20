@@ -1,0 +1,19 @@
+{
+  "altered_public_root_rejected": true,
+  "checked_public_parents": 1,
+  "matrix_nonzero_coefficients": [
+    15226,
+    3244,
+    2536
+  ],
+  "matrix_or_public_equality_rows": 1120,
+  "native_reference_root": "1d3b3b3252140caedbf442666ab7dfd1845b250ffb8f627f0dd5995ca6653707",
+  "parameter_source_sha256": "54604af022354364c45fbdde106be3f223775992d6fa5685e77c75e66fd970f6",
+  "permutations": 3,
+  "public_swap_sha256": "130d0d5f4ee36727a49724b4947236a334c3b8136fdffdb409a7c2dddc658183",
+  "sbox_multiplication_rows": 1416,
+  "sboxes_per_permutation": 118,
+  "total_rows": 2536,
+  "two_max_depth20_paths_hash_rows_with_intermediate_parent_wires": 101280,
+  "witness_columns_including_private_children": 2548
+}

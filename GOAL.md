@@ -2,6 +2,8 @@
 
 Evaluate the MNG1 and SWP1 spend proofs from 3f08bff0089096d7fb27279bc0d444006e9147ce. Reproduce a funded ordinary transfer and a two-owner swap, audit the implemented transcript, receipts and monetary relation, then compare decision-relevant alternatives under the preregistered [quantum target](experiments/spend-proof-decision/TARGET.md). Publish independently checked evidence, complete costs, funded-note implications, the decision and the next experiment. Token-for-native swaps are next in the product queue. The global blockchain objective remains active.
 
+The bounded evaluation concludes with a retain decision for the live devnet. Both the signed K384 comparison and compact transport were independently reproduced. A limited WHIR frontend port established unchanged legacy parent-hash compatibility. Production selection remains open. [Final decision](experiments/spend-proof-decision/DECISION.md) · [Independent review](experiments/spend-proof-decision/review/REVIEW.md)
+
 ## Earlier milestone
 
 # Native same-chain private atomic swap

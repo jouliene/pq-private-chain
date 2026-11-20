@@ -1,0 +1,91 @@
+{
+  "canonical_sha256": [
+    "44d7bb93cc64548180505eb1d4dfe2093c6ef8f55e6d224025de5036322525d1",
+    "b8c3afe265c07a532bb250df7188ae7490031ec5a049ffe237442d0349cb3e1e"
+  ],
+  "codec_meters": [
+    {
+      "cpu_system_s": 0.0,
+      "cpu_user_s": 0.01,
+      "elapsed_s": 0.02130731288343668,
+      "input_proof_B": 492376,
+      "kind": "ordinary",
+      "max_rss_KiB": 5944,
+      "mode": "encode",
+      "output_proof_B": 388773
+    },
+    {
+      "cpu_system_s": 0.0,
+      "cpu_user_s": 0.01,
+      "elapsed_s": 0.021372137125581503,
+      "input_proof_B": 492400,
+      "kind": "leg",
+      "max_rss_KiB": 5816,
+      "mode": "encode",
+      "output_proof_B": 398068
+    },
+    {
+      "cpu_system_s": 0.0,
+      "cpu_user_s": 0.01,
+      "elapsed_s": 0.02188654593192041,
+      "input_proof_B": 492400,
+      "kind": "leg",
+      "max_rss_KiB": 5816,
+      "mode": "encode",
+      "output_proof_B": 400710
+    },
+    {
+      "cpu_system_s": 0.0,
+      "cpu_user_s": 0.01,
+      "elapsed_s": 0.021129652857780457,
+      "input_proof_B": 388773,
+      "kind": "ordinary",
+      "max_rss_KiB": 6040,
+      "mode": "decode",
+      "output_proof_B": 492376
+    },
+    {
+      "cpu_system_s": 0.0,
+      "cpu_user_s": 0.01,
+      "elapsed_s": 0.022494745906442404,
+      "input_proof_B": 398068,
+      "kind": "leg",
+      "max_rss_KiB": 5932,
+      "mode": "decode",
+      "output_proof_B": 492400
+    },
+    {
+      "cpu_system_s": 0.0,
+      "cpu_user_s": 0.01,
+      "elapsed_s": 0.021817884175106883,
+      "input_proof_B": 400710,
+      "kind": "leg",
+      "max_rss_KiB": 5936,
+      "mode": "decode",
+      "output_proof_B": 492400
+    }
+  ],
+  "compact_B": [
+    392372,
+    840367
+  ],
+  "compact_swap_frames_B": [
+    418856,
+    421498
+  ],
+  "encoded_sha256": [
+    "d0b62db655f5fbc8d13152342591f981091bfe1093c8af3170631ff62288c90c",
+    "faa6807097ed6bde692c2ec1dce37bc3695a52052cfae59627f6c80fecefd698"
+  ],
+  "full_B": [
+    495975,
+    1026389
+  ],
+  "max_live_frame_B": 262144,
+  "same_expanded_proofs_receipts_and_signatures": true,
+  "within_size_bound": [
+    false,
+    false,
+    false
+  ]
+}
