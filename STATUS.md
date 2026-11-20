@@ -1,3 +1,9 @@
+# Spend-proof architecture decision in progress
+
+The baseline is public revision 3f08bff0089096d7fb27279bc0d444006e9147ce. A non-author is running the live funded ordinary spend and two-wallet swap from a detached public clone. A separate reviewer is tracing the verifier, evidence and cryptographic results. The candidate workstream is registering K384 with unchanged monetary and receipt semantics, wider argument commitments and a different challenger. Integration owns the public-receipt comparison, cost fallback and decision. [Target and adversary](experiments/spend-proof-decision/TARGET.md) · [Candidate registration](experiments/spend-proof-decision/candidate/REGISTER.md)
+
+## Earlier milestone
+
 # Native private atomic swap on the live PoW network
 
 From MNG1 `f65a8b3c51fdc8aebdc2138552c45e81f91f5e70`, two independent wallets exchanged 7 fixed units for 30 managed dollars. Both restored and spent the actual incoming notes. One eligible SWB1 bundle is 320,905 bytes, covers two 160,446-byte adjacent physical frames and pays one native fee of 3. Unilateral proposals, wrong amounts, changed signed terms, expiry and ordinary conflicts leave no swap debits or fees. The fresh validating node replayed 70 fixed units, 330 managed units, 2,700 mined native units and 36 total fees at height 27.

@@ -1,3 +1,9 @@
+# Decide the spend-proof profile for funded payments and swaps
+
+Evaluate the MNG1 and SWP1 spend proofs from 3f08bff0089096d7fb27279bc0d444006e9147ce. Reproduce a funded ordinary transfer and a two-owner swap, audit the implemented transcript, receipts and monetary relation, then compare decision-relevant alternatives under the preregistered [quantum target](experiments/spend-proof-decision/TARGET.md). Publish independently checked evidence, complete costs, funded-note implications, the decision and the next experiment. Token-for-native swaps are next in the product queue. The global blockchain objective remains active.
+
+## Earlier milestone
+
 # Native same-chain private atomic swap
 
 Two independent wallets exchange 7 fixed units for 30 managed units and pay one agreed native fee. Both check exact incoming spendable receipts before release and bind the same complete joint terms to both leg authorizations. Exercise incomplete offers, changed terms, expiry, conflicting ordinary spend, reorg and restored respend under real PoW. Measure both wallets, wire, block and verifier, then publish a fresh independent reproduction. The global blockchain objective remains active.
