@@ -45,7 +45,7 @@ def private_terms(q,request,ad):
 
 def check(home,swap,seller_backup,adverts):
     raw=swap.read_bytes();frames=decode_pair(raw);selected_terms=frames[0][43:75]
-    inputs={};makers={};matched=[];n_quotes=0; signatures=0;private_values=[]
+    inputs={};makers={};matched=[];n_quotes=0; signatures=0;private_values=[];actual={}
     taker=home/'participants/taker'; deployment=home/'deployment'
     ad_rows=[json.loads(x.read_bytes()) for x in adverts];ad_ids={sha256(canonical(v)).hexdigest() for v in ad_rows}
     assert len(ad_ids)==2
@@ -62,6 +62,7 @@ def check(home,swap,seller_backup,adverts):
             q,req,ad=st['firm'],st['req'],st['ad']
             assert q['advert'] in ad_ids and q['request']==folder.name and bytes.fromhex(q['taker'])==a_address
             terms,commit=private_terms(q,req,ad)
+            actual[q['native']]=(q,req,ad)
             assert terms==(folder/'terms').read_bytes()
             peer_home,alias=('maker','maker') if q['native']==8 else ('other','other')
             peer=home/'participants'/peer_home;mf=peer/'stranger-private'/alias/'maker'/q['request']
@@ -108,7 +109,22 @@ def check(home,swap,seller_backup,adverts):
         for role,addr in makers.values():
             role.close()
         verifier.close();a.close()
-    assert n_quotes>=2 and set(inputs)==ad_ids and signatures==1
+    assert n_quotes==3 and set(inputs)==ad_ids and signatures==1
+    assert sorted((r['price_native'],r['taker_final_state'],r['maker_signed']) for r in matched)==[
+        (7,'cancelled',False),(7,'cancelled',False),(8,'complete',True)]
+    # Supply the other funded maker's actual firm across each live quote's original request.
+    # Exercise the shipped verifier on copies, before any monetary operation.
+    sys.path.insert(0,str(HERE.parent))
+    from negotiation import quote_terms
+    cross_denials=0
+    for price,other in ((7,8),(8,7)):
+        q,req,ad=actual[price]
+        assert quote_terms(q,ad,req).encode()==private_terms(q,req,ad)[0]
+        try:
+            quote_terms(actual[other][0],ad,req)
+        except ValueError:
+            cross_denials+=1
+    assert cross_denials==2
     first,second=inputs.values()
     assert first.isdisjoint(second) and {r['price_native'] for r in matched}=={7,8}
     # Check the actual published advert encodings. Fixed schema and parsing give the strongest field-level test.
@@ -118,6 +134,7 @@ def check(home,swap,seller_backup,adverts):
                    for x in private_values)
     return dict(authenticated_local_firm_quote_count=n_quotes,distinct_funded_makers=2,
                 all_MLDSA_service_identities_matched=True,distinct_native_source_notes_across_makers=True,
+                crossed_real_firm_quotes_rejected_by_wallet=cross_denials,
                 recomputed_terms_and_matched_selected_signature_pair=True,consenting_seller_seed_opened_each_native_offer=True,
                 no_full_quote_capability_nonce_private_address_or_leg_in_advert=True,checks=matched)
 

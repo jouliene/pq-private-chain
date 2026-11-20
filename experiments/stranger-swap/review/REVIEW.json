@@ -1,0 +1,685 @@
+{
+  "independent": {
+    "adverts": {
+      "adverts": [
+        {
+          "SPKI_B": 1974,
+          "TTL_s": 600,
+          "advert_canonical_B": 7343,
+          "id": "0f01623bcc6cb8a3cd1edaa63da69fdba75250019645b63ef644c516c1044d68",
+          "signature_B": 3309,
+          "valid_fips204": true
+        },
+        {
+          "SPKI_B": 1974,
+          "TTL_s": 600,
+          "advert_canonical_B": 7343,
+          "id": "fa47d816c8480bc86a4143e185bbf9b74052a5d6b0ca9f0b788047bb2e4f4395",
+          "signature_B": 3309,
+          "valid_fips204": true
+        }
+      ],
+      "independent_verifier": "dilithium-py 1.4.0",
+      "modified_signatures_keys_or_fields_rejected": 20,
+      "selected_schema": [
+        "cert_sha256",
+        "endpoint",
+        "expires",
+        "identity",
+        "issued",
+        "network",
+        "service",
+        "signature",
+        "version"
+      ],
+      "verification_context": "FIPS 204 pure ML-DSA-65, empty context, application domain in message",
+      "verifier_wheel_sha256": "dda3ae43e6e3d212ae1fe1b30d5b6dffe5e25a1f389d1fea26faad4afdc33ff8"
+    },
+    "ledger": {
+      "independent_signatures": {
+        "changed_authorizations_rejected": 50,
+        "provider": "Node 24.22.1 / OpenSSL 3.5.9",
+        "tested_changes": [
+          "expiry",
+          "leg_0_anchor",
+          "leg_0_fee",
+          "leg_0_first_commitment",
+          "leg_0_first_nullifier",
+          "leg_0_first_receipt",
+          "leg_0_one_time_key",
+          "leg_0_proof",
+          "leg_0_second_commitment",
+          "leg_0_second_receipt",
+          "leg_1_anchor",
+          "leg_1_fee",
+          "leg_1_first_commitment",
+          "leg_1_first_nullifier",
+          "leg_1_first_receipt",
+          "leg_1_one_time_key",
+          "leg_1_proof",
+          "leg_1_second_commitment",
+          "leg_1_second_receipt",
+          "network",
+          "order",
+          "partner_key",
+          "payer",
+          "signature",
+          "terms"
+        ],
+        "valid_distinct": 2
+      },
+      "old_approved_verification_roles": [
+        {
+          "approved_binary": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+          "registered_vk": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+          "role": "MNG1"
+        },
+        {
+          "approved_binary": "46ee4c569abe6eea973843713444a759075534de169fa3a6177f0f869973cc1a",
+          "registered_vk": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837",
+          "role": "SLG1"
+        }
+      ],
+      "ordinary": {
+        "bytes": 143233,
+        "fee": 3,
+        "height": 12,
+        "tx": "e084307ea63176927186bad513c51b9f59213ed76035b3a69bd2aadc97d8efcd"
+      },
+      "previous_ELFs_byte_identical": true,
+      "recorded_blocks": 12,
+      "selected": {
+        "anchor": "35ce3d9b9c3e08151cb05378803ec00b127a12d30b30faa2a84f19ddfc198992",
+        "atomic_swaps": 1,
+        "fees": 18,
+        "funded_root": "41baae28d5f0c3fc59de30489caac1296ba9b498d9232e306d411dc679f0ed56",
+        "height": 12,
+        "issued": 1200,
+        "logical_payments": 6,
+        "miner_credits": 1218,
+        "notes": 26,
+        "physical_payments_and_legs": 7,
+        "registry": {
+          "bf5825f4a04b5745827f389283679634a2bfee85cb0ff2710af57cdc1b37d35e": {
+            "authority": "3eb2a15efb11a61e68df6199df56b2ed7683ce706bc952a031c5d73360638f7e",
+            "height": 4,
+            "id": "bf5825f4a04b5745827f389283679634a2bfee85cb0ff2710af57cdc1b37d35e",
+            "mode": "managed",
+            "sequence": 1,
+            "supply": 100,
+            "tx": "c8eb890133b353778221abd0d50049682f789e8dd3dfbab7d8c2472cd5d24e24"
+          }
+        },
+        "spent": 14,
+        "spent_set_sha256": "8dcbb6bdc1fbdd8f68a3bf13c581e8d1f55e003f8ceee54b86f13ea3c4360137",
+        "tip": "000000205731564dc022d6fc43d4d934e64f1b461e7485a7df974cfa190f007a",
+        "total_supply_events": 1,
+        "work": 50331648
+      },
+      "swap": {
+        "block_frame_B": [
+          160446,
+          160446
+        ],
+        "complete_in_block_B": 320900,
+        "complete_upload_B": 320905,
+        "expiry": 17,
+        "fee_by_leg": [
+          0,
+          3
+        ],
+        "id": "2d0778a2d47309f99b1136676c6ebfad9e891557a78dacdd366d5b9247a181f8",
+        "leg_B": [
+          143251,
+          143251
+        ],
+        "leg_txids": [
+          "56dbf97f3b685b5ed8c1637114086e7b459d2961161c91689d5f0da15db61bd9",
+          "aae424b97bbf0e42b03240dafa9c938ca5f932d592c359086afb7c76f0ed9ff4"
+        ],
+        "payer": 1,
+        "proof_B": [
+          139658,
+          139658
+        ],
+        "receipt_B": 7168,
+        "signature_B": 34176
+      },
+      "swap_height": 11
+    },
+    "quotes": {
+      "all_MLDSA_service_identities_matched": true,
+      "authenticated_local_firm_quote_count": 3,
+      "checks": [
+        {
+          "actual_funded_input_count": 1,
+          "maker_final_state": "signed",
+          "maker_signed": true,
+          "offered_tokens": 20,
+          "price_native": 8,
+          "privately_opened_correct_native_output": true,
+          "selected": true,
+          "taker_final_state": "complete"
+        },
+        {
+          "actual_funded_input_count": 1,
+          "maker_final_state": "quoted",
+          "maker_signed": false,
+          "offered_tokens": 20,
+          "price_native": 7,
+          "privately_opened_correct_native_output": true,
+          "selected": false,
+          "taker_final_state": "cancelled"
+        },
+        {
+          "actual_funded_input_count": 1,
+          "maker_final_state": "expired",
+          "maker_signed": false,
+          "offered_tokens": 20,
+          "price_native": 7,
+          "privately_opened_correct_native_output": true,
+          "selected": false,
+          "taker_final_state": "cancelled"
+        }
+      ],
+      "consenting_seller_seed_opened_each_native_offer": true,
+      "crossed_real_firm_quotes_rejected_by_wallet": 2,
+      "distinct_funded_makers": 2,
+      "distinct_native_source_notes_across_makers": true,
+      "no_full_quote_capability_nonce_private_address_or_leg_in_advert": true,
+      "recomputed_terms_and_matched_selected_signature_pair": true
+    },
+    "three_node_databases_matched": true,
+    "traffic": {
+      "abandonment_checked_wallet_RPC_prefix_rows": 39,
+      "block_bytes": 321122,
+      "confirmed_empty_mempools": {
+        "a": 0,
+        "b": 0,
+        "c": 0
+      },
+      "directory_reply_B": 15059,
+      "directory_request_B": 29603,
+      "failed_session_observations": [
+        {
+          "client": [
+            1486,
+            1874
+          ],
+          "forwarder": [
+            1486,
+            5391
+          ],
+          "operation": "substituted-endpoint"
+        },
+        {
+          "client": [
+            1406,
+            0
+          ],
+          "forwarder": [
+            1406,
+            0
+          ],
+          "operation": "maker-disconnect"
+        }
+      ],
+      "forwarder_TCP_received_B": 650598,
+      "forwarder_TCP_sent_B": 235927,
+      "gateway_submit_rows": [
+        {
+          "id": "2d0778a2d47309f99b1136676c6ebfad9e891557a78dacdd366d5b9247a181f8",
+          "op": "submit",
+          "packet_B": 320905,
+          "reply_B": 120,
+          "request_B": 320928
+        },
+        {
+          "id": "e084307ea63176927186bad513c51b9f59213ed76035b3a69bd2aadc97d8efcd",
+          "op": "submit",
+          "packet_B": 143233,
+          "reply_B": 120,
+          "request_B": 143256
+        }
+      ],
+      "hybrid_TLS_TCP_received_B": 647081,
+      "hybrid_TLS_TCP_sent_B": 235927,
+      "logical_private_JSON_received_B": 617303,
+      "logical_private_JSON_sent_B": 225069,
+      "matching_authenticated_TCP_sessions": 5,
+      "operation_counters": {
+        "after-disconnect": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "cancel-unsigned": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "expired-approval": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "expired-cancel": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "firm-0": {
+          "private_requests": 1,
+          "reply_B": 198098,
+          "request_B": 3542,
+          "wire_reply_B": 203779,
+          "wire_request_B": 5078
+        },
+        "firm-1": {
+          "private_requests": 1,
+          "reply_B": 198098,
+          "request_B": 3542,
+          "wire_reply_B": 203780,
+          "wire_request_B": 5078
+        },
+        "maker-disconnect": {
+          "private_requests": 1,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 1406
+        },
+        "prepare-disconnect": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "selected-settlement": {
+          "private_requests": 2,
+          "reply_B": 23010,
+          "request_B": 214443,
+          "wire_reply_B": 33869,
+          "wire_request_B": 217801
+        },
+        "stale-firm": {
+          "private_requests": 1,
+          "reply_B": 198097,
+          "request_B": 3542,
+          "wire_reply_B": 203779,
+          "wire_request_B": 5078
+        },
+        "substituted-endpoint": {
+          "private_requests": 1,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 1874,
+          "wire_request_B": 1486
+        }
+      },
+      "reachable_relays_during_discovery": 1,
+      "selected_terms": [
+        20,
+        8,
+        3
+      ],
+      "selection_to_observed_inclusion_s": 26.331829563947394,
+      "settlement_incremental_block_B": 320900,
+      "simultaneous_compare_prices": [
+        7,
+        8
+      ],
+      "submit_to_observed_inclusion_s": 12.552505923,
+      "successfully_registered_to_relays": 4,
+      "two_user_fees": 6,
+      "zero_frames_in_abandoned_blocks": 2
+    },
+    "wallet": {
+      "actual_spent_native_receipt": 8,
+      "buyer_received_managed": 20,
+      "checked_swap_outputs": 4,
+      "maker_native_change": 14,
+      "onward_receipt_position": 1,
+      "onward_receiver_reopened": true,
+      "ordinary_native_delivered": 5,
+      "ordinary_native_fee": 3,
+      "regenerated_seed_owners": 3,
+      "restored_positive_native_change": 0,
+      "restored_real_sources": 1,
+      "seller_managed_change": 80,
+      "wrong_owners_missed": 2
+    }
+  },
+  "independent_archive": {
+    "bytes": 2429870,
+    "name": "independent-public.tar.gz",
+    "regular_members": 30,
+    "sha256": "3ed5e666b36884a1b5e549a7e3580bf5ccbbfdddbd70fadb76f63e500451158e"
+  },
+  "previous_release_SHA": "ccf62bf7b271f49f96efdc0cc49cab19e972fb44",
+  "review_sources_sha256": {
+    "adverts.py": "5a9f0e4edd87368a2d58080bffdc59caa6b5b4ec1a9c69cf29580affff473ef6",
+    "package.py": "5f98bd951397576c2aadf9f1a6cb90fc605a7967151b5a832e4625786192fafb",
+    "quotes.py": "1cfa432c0d38d182063e9f6f8ca21942660ad9dad7b42c42b6779041644ae203",
+    "settlement.py": "ac9290d7dad1cf1f8ca99a858b80e7a9403a4363c1eb81b075a82d1b8418f7c2",
+    "tls_bytes.py": "a4a997906c29d53a7e511dd61b38cbb019fcff7fcd66ab9dd6dfd2227c8b5b66",
+    "traffic.py": "9cb16b993f12612161f12280b80f076339f35a15995012aedf4fdcee5c46d62b",
+    "verify.py": "6035657d6b2c84889416603436b5b9464e9403c8b34af639309799041c77f546",
+    "wallet.py": "d706345dc3fb9158ec9432bb6f85f7e8c85577f823509e029c66d83a748404aa"
+  },
+  "scope": "fresh single-host private and public; independent public replay of separately generated author two-host capture",
+  "tested_public_SHA": "9bb62eab924bf85b35ad04884eb85b5548ffea9a",
+  "two_host_author_public_replay": {
+    "adverts": {
+      "adverts": [
+        {
+          "SPKI_B": 1974,
+          "TTL_s": 600,
+          "advert_canonical_B": 7343,
+          "id": "0895296c0be34a98fefff0ac48636c4ebbbb06d1171a2df0ed54ee6d2b5b3488",
+          "signature_B": 3309,
+          "valid_fips204": true
+        },
+        {
+          "SPKI_B": 1974,
+          "TTL_s": 600,
+          "advert_canonical_B": 7343,
+          "id": "d10cf9f5316a7af7389e5d9071abbf09531aabe922426f093fef5ebfd4f7e600",
+          "signature_B": 3309,
+          "valid_fips204": true
+        }
+      ],
+      "independent_verifier": "dilithium-py 1.4.0",
+      "modified_signatures_keys_or_fields_rejected": 20,
+      "selected_schema": [
+        "cert_sha256",
+        "endpoint",
+        "expires",
+        "identity",
+        "issued",
+        "network",
+        "service",
+        "signature",
+        "version"
+      ],
+      "verification_context": "FIPS 204 pure ML-DSA-65, empty context, application domain in message",
+      "verifier_wheel_sha256": "dda3ae43e6e3d212ae1fe1b30d5b6dffe5e25a1f389d1fea26faad4afdc33ff8"
+    },
+    "ledger": {
+      "independent_signatures": {
+        "changed_authorizations_rejected": 50,
+        "provider": "Node 24.22.1 / OpenSSL 3.5.9",
+        "tested_changes": [
+          "expiry",
+          "leg_0_anchor",
+          "leg_0_fee",
+          "leg_0_first_commitment",
+          "leg_0_first_nullifier",
+          "leg_0_first_receipt",
+          "leg_0_one_time_key",
+          "leg_0_proof",
+          "leg_0_second_commitment",
+          "leg_0_second_receipt",
+          "leg_1_anchor",
+          "leg_1_fee",
+          "leg_1_first_commitment",
+          "leg_1_first_nullifier",
+          "leg_1_first_receipt",
+          "leg_1_one_time_key",
+          "leg_1_proof",
+          "leg_1_second_commitment",
+          "leg_1_second_receipt",
+          "network",
+          "order",
+          "partner_key",
+          "payer",
+          "signature",
+          "terms"
+        ],
+        "valid_distinct": 2
+      },
+      "old_approved_verification_roles": [
+        {
+          "approved_binary": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+          "registered_vk": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+          "role": "MNG1"
+        },
+        {
+          "approved_binary": "46ee4c569abe6eea973843713444a759075534de169fa3a6177f0f869973cc1a",
+          "registered_vk": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837",
+          "role": "SLG1"
+        }
+      ],
+      "ordinary": {
+        "bytes": 143233,
+        "fee": 3,
+        "height": 12,
+        "tx": "5d53a054dd5c496c356390aefdc908b942b3253e57df56e732cd6ddc78283566"
+      },
+      "previous_ELFs_byte_identical": true,
+      "recorded_blocks": 12,
+      "selected": {
+        "anchor": "eca263c0f5a5f8127f8fd18d40e05b3403969ad860a941f9156754dace4b1712",
+        "atomic_swaps": 1,
+        "fees": 18,
+        "funded_root": "2a83e69a5264e746e7dc18d1390d516ef5ff80499c95a55584e74acd46005971",
+        "height": 12,
+        "issued": 1200,
+        "logical_payments": 6,
+        "miner_credits": 1218,
+        "notes": 26,
+        "physical_payments_and_legs": 7,
+        "registry": {
+          "4c2ad7af790b457724e014b10041564f66e762dfad5d487bdb147ccb9c5bb829": {
+            "authority": "dd1bd9e9c4a437df84991cfb620ac221a98500fa498f26f3daf519fa1574e317",
+            "height": 4,
+            "id": "4c2ad7af790b457724e014b10041564f66e762dfad5d487bdb147ccb9c5bb829",
+            "mode": "managed",
+            "sequence": 1,
+            "supply": 100,
+            "tx": "3d6a989f67b1314f22ecfec425a47084e5147fbde645ed2347518d96e73b0877"
+          }
+        },
+        "spent": 14,
+        "spent_set_sha256": "5905ffa6ef492a70219be35a77c313d558cd97687db9ec93350db201c5691f6e",
+        "tip": "000000578ba9f0e47c2441fe3196bdaa128b632228d419dee2c8a4eda0edaf0f",
+        "total_supply_events": 1,
+        "work": 50331648
+      },
+      "swap": {
+        "block_frame_B": [
+          160446,
+          160446
+        ],
+        "complete_in_block_B": 320900,
+        "complete_upload_B": 320905,
+        "expiry": 17,
+        "fee_by_leg": [
+          0,
+          3
+        ],
+        "id": "baeb7d884bf104afb960a47322f40b879de69978c6f1a93500cf914bb6a2aa25",
+        "leg_B": [
+          143251,
+          143251
+        ],
+        "leg_txids": [
+          "79a34c86bc6882241d4a4094a9188256641a6752fea23f3c9c9373471194820f",
+          "efb9023ba6c359021c8371e298db3562fbef1b19d5c52058aba7da6249652976"
+        ],
+        "payer": 1,
+        "proof_B": [
+          139658,
+          139658
+        ],
+        "receipt_B": 7168,
+        "signature_B": 34176
+      },
+      "swap_height": 11
+    },
+    "three_node_databases_matched": true,
+    "traffic": {
+      "abandonment_checked_wallet_RPC_prefix_rows": 39,
+      "block_bytes": 321122,
+      "confirmed_empty_mempools": {
+        "a": 0,
+        "b": 0,
+        "c": 0
+      },
+      "directory_reply_B": 15059,
+      "directory_request_B": 29603,
+      "failed_session_observations": [
+        {
+          "client": [
+            1486,
+            1873
+          ],
+          "forwarder": [
+            1486,
+            5390
+          ],
+          "operation": "substituted-endpoint"
+        },
+        {
+          "client": [
+            1406,
+            0
+          ],
+          "forwarder": [
+            1406,
+            0
+          ],
+          "operation": "maker-disconnect"
+        }
+      ],
+      "forwarder_TCP_received_B": 650592,
+      "forwarder_TCP_sent_B": 235927,
+      "gateway_submit_rows": [
+        {
+          "id": "baeb7d884bf104afb960a47322f40b879de69978c6f1a93500cf914bb6a2aa25",
+          "op": "submit",
+          "packet_B": 320905,
+          "reply_B": 120,
+          "request_B": 320928
+        },
+        {
+          "id": "5d53a054dd5c496c356390aefdc908b942b3253e57df56e732cd6ddc78283566",
+          "op": "submit",
+          "packet_B": 143233,
+          "reply_B": 120,
+          "request_B": 143256
+        }
+      ],
+      "hybrid_TLS_TCP_received_B": 647075,
+      "hybrid_TLS_TCP_sent_B": 235927,
+      "logical_private_JSON_received_B": 617303,
+      "logical_private_JSON_sent_B": 225069,
+      "matching_authenticated_TCP_sessions": 5,
+      "operation_counters": {
+        "after-disconnect": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "cancel-unsigned": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "expired-approval": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "expired-cancel": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "firm-0": {
+          "private_requests": 1,
+          "reply_B": 198098,
+          "request_B": 3542,
+          "wire_reply_B": 203778,
+          "wire_request_B": 5078
+        },
+        "firm-1": {
+          "private_requests": 1,
+          "reply_B": 198098,
+          "request_B": 3542,
+          "wire_reply_B": 203779,
+          "wire_request_B": 5078
+        },
+        "maker-disconnect": {
+          "private_requests": 1,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 1406
+        },
+        "prepare-disconnect": {
+          "private_requests": 0,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 0,
+          "wire_request_B": 0
+        },
+        "selected-settlement": {
+          "private_requests": 2,
+          "reply_B": 23010,
+          "request_B": 214443,
+          "wire_reply_B": 33866,
+          "wire_request_B": 217801
+        },
+        "stale-firm": {
+          "private_requests": 1,
+          "reply_B": 198097,
+          "request_B": 3542,
+          "wire_reply_B": 203779,
+          "wire_request_B": 5078
+        },
+        "substituted-endpoint": {
+          "private_requests": 1,
+          "reply_B": 0,
+          "request_B": 0,
+          "wire_reply_B": 1873,
+          "wire_request_B": 1486
+        }
+      },
+      "reachable_relays_during_discovery": 1,
+      "selected_terms": [
+        20,
+        8,
+        3
+      ],
+      "selection_to_observed_inclusion_s": 26.851572359912097,
+      "settlement_incremental_block_B": 320900,
+      "simultaneous_compare_prices": [
+        7,
+        8
+      ],
+      "submit_to_observed_inclusion_s": 7.750443845,
+      "successfully_registered_to_relays": 4,
+      "two_user_fees": 6,
+      "zero_frames_in_abandoned_blocks": 2
+    }
+  },
+  "walkthrough_elapsed_s": 120.82
+}

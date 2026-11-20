@@ -1,3 +1,7 @@
+# Private maker discovery and exchange
+
+Use `./pqd market --home NEW_HOME walkthrough`. Wallets receive only public network bootstrap and keep separate private stores. Retain the short-lived signed advertisement allowlist, strict hybrid TLS group, live exporter signature, original SLG1 verifiers and SWP1 consensus. Measure failed handshakes at each observer; working authenticated transfers must match the encrypted-link byte counts. Publish only allowlisted public data and aggregate review results. [Operator guide](experiments/stranger-swap/README.md)
+
 # Native private atomic swaps
 
 Use `./pqd swap --home NEW_PRIVATE_HOME native-walkthrough` for the token-for-native scenario. Load private agreement and wallet policy from the running checkout, and load public node rules, approved binaries and registered keys from the selected deployment. Preserve both the SWPTER01 commitment for legacy agreements and the released SLG1 verifier identity. [Instructions and fee accounting](experiments/atomic-swap/NATIVE_CURRENCY.md)

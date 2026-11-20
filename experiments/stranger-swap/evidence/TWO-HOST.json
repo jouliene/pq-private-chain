@@ -1,0 +1,29 @@
+{
+  "local_kernel": "6.8.0-149-generic",
+  "prior_public_replay": {
+    "abandoned_payment_frames": 0,
+    "blocks": 12,
+    "fees": 18,
+    "issued": 1200,
+    "logical_payments": 6,
+    "previous_registered_keys": {
+      "keys/managed.vk": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+      "swap-keys/swap.vk": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837"
+    },
+    "tip": "000000578ba9f0e47c2441fe3196bdaa128b632228d419dee2c8a4eda0edaf0f",
+    "user_fees": [
+      3,
+      3
+    ]
+  },
+  "public_bundle_sha256": "baeb7d884bf104afb960a47322f40b879de69978c6f1a93500cf914bb6a2aa25",
+  "remote_kernel": "7.0.0-43-generic",
+  "remote_machine": "x86_64",
+  "remote_maker_issued_winning_leg_and_signature": true,
+  "remote_node": "v24.22.1 OpenSSL 3.5.9",
+  "remote_python": "3.14.4",
+  "remote_selected_inventory": {
+    "managed": 20,
+    "native": 14
+  }
+}

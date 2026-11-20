@@ -56,3 +56,38 @@ python3 -IB experiments/stranger-swap/wallet_check.py
 ~~~
 
 The walkthrough uses separate wallet homes, fresh funds and actual PoW. A transparent forwarding observer counts encrypted TCP payloads. A second observer counts the wallet-to-node RPCs, including every submission. The release capture contains only public blocks, packets, signed advertisements and disclosed counters. Seeds, private quote handles and messages, individual wallet databases and private negotiation artifacts belong to the wallet operators.
+
+## Two-host result
+
+Three local PoW nodes validated the original SWP1 rules. One physical host ran the taker, the competing 7-unit maker and the relay that was taken offline. A second physical host ran the winning 8-unit maker and the surviving relay. They had separate wallet stores and temporary identities. Both hosts were controlled by the research operator. Two service instances and two independently funded wallets simulate separate operators; this demonstration makes no claim about unrelated real-world operators or anonymous routing. A second check on the remote machine matched the actual mined leg and signature to that maker's private journal and found its 20 managed units and 14 native change. The remote validator reconstructed the winning monetary state from the public capture. [Host and public replay evidence](evidence/TWO-HOST.json)
+
+| Author capture, one swap | Sent bytes | Received bytes |
+| --- | ---: | ---: |
+| Both makers register with both relays, combined | 29,480 | 348 |
+| Taker discovers both makers with one relay down | 123 | 14,711 |
+| Private TLS traffic across all scenarios, measured at the taker | 235,927 | 647,075 |
+| Public SWP1 submission to the validating node | 320,928 | 120 |
+| Subsequent fetch of both confirmed frames, combined | 182 | 320,954 |
+
+The two current quotes plus the selected private settlement used 669,380 TCP payload bytes in both directions combined. The 883,002-byte private traffic total also includes the deliberately expired quote, the disconnected maker and the substituted endpoint. These counts include TLS handshakes and record framing. They exclude TCP/IP headers, acknowledgements and the lab SSH wrapper. The independent forwarding counters matched on every authenticated exchange. During the deliberate certificate mismatch the forwarder read 5,390 bytes from the wrong server, while only 1,873 reached the taker before it closed the connection. Neither side received a private quote request in this case. The two measurements describe distinct endpoints of a failing connection.
+
+The complete public settlement bundle was 320,905 bytes. Its two frames increased the mined block by 320,900 bytes over an empty block, to 321,122 bytes. Settlement traffic in the table describes the submit and the observed reads. Other gossip fanout and wallet history sync depend on the topology. The author capture records the wallet-node RPC sizes separately. With one real nonce search triggered every 12 seconds independent of the mempool, the operator observed inclusion 7.75 s after submission and 26.85 s after the taker selected the quote. These are one-run timings. They do not set a confirmation or throughput target.
+
+At heights 7 and 9, before and after the abandoned negotiations, the chain showed the same spent set and 12 setup fees. Both intervening blocks had empty payment vectors. All three peers had empty mempools, and there were zero submissions in the 39 observed wallet RPCs preceding settlement. The winning swap was in block 11 and the onward ordinary payment in block 12. The two user fees brought the total to 18; 1,200 native units were issued. The recovered wallet's only input to the onward payment was the newly acquired 8-unit output.
+
+The first remote launch stopped before wallet trading because the SSH child was already a process-group leader. The operator wrapper now uses the existing group or creates its own. The next funded run exposed an overly strict comparison of counts across a terminated TLS connection. The retained run instruments each operation at both boundaries and enforces equality for authenticated exchanges. Both refusal paths must send zero private application bytes.
+
+The [release](https://github.com/jouliene/pq-private-chain/releases/tag/private-stranger-swap-2026-11-20) provides author and non-author public captures. To replay the author evidence from an empty ledger, start in the release checkout with the `$lab/net/deployment` created above.
+
+~~~sh
+out=$(mktemp -d)
+gh release download private-stranger-swap-2026-11-20 -R jouliene/pq-private-chain \
+  -p author-public.tar.gz --dir "$out"
+(cd "$out" && echo '051eebb355848186f9d2870bd5926a450ad155ca1a5f0581b627b5e27776deff  author-public.tar.gz' | sha256sum -c - \
+  && tar -xzf author-public.tar.gz && sha256sum --quiet -c SHA256SUMS)
+python3 -IB experiments/stranger-swap/replay.py "$lab/net/deployment" "$out/public"
+~~~
+
+Public replay uses the registered node verifiers and the captured blocks. The mapping of the 8-unit private receipt to the onward payment requires a holder's independently restored wallet. The raw private opening and spending key stay on that holder's host.
+
+A non-author fetched the implementation at `9bb62eab924bf85b35ad04884eb85b5548ffea9a` and exercised independent wallets, fresh notes, two new identities, two relays and a different 12-block history. The independent taker saw inclusion 12.55 seconds after submission. It privately reopened each funded quote, verified the onward recipient and seller after a fresh restore, and matched the final public block graph. [Clean reproduction and limitations](review/REVIEW.md)

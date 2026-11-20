@@ -105,6 +105,12 @@ def check(public,settlement):
     assert empty==abandoned['height']-funded['height'] and empty>0
     assert funded['fees']==abandoned['fees']==12 and funded['spent_set_sha256']==abandoned['spent_set_sha256']
     assert ledger['selected']['fees']==18 and ledger['selected']['logical_payments']==6
+    asset=run['asset'];registry=ledger['selected']['registry']
+    assert list(registry)==[asset] and (registry[asset]['mode'],registry[asset]['supply'],registry[asset]['tx'])==(
+        'managed',100,run['ordinary']['managed']['tx'])
+    assert run['wallets']==dict(funded=dict(native=0,assets={asset:100}),after_restore=dict(native=8,assets={asset:80}),
+                                final_taker=dict(native=0,assets={asset:80}),maker_settled=dict(native=14,assets={asset:20}),
+                                forward=dict(native=5,assets={}))
     assert run['branch']['final']['tip']==ledger['selected']['tip']
     return dict(directory_request_B=dir_tx,directory_reply_B=dir_rx,hybrid_TLS_TCP_sent_B=sent,hybrid_TLS_TCP_received_B=received,
                 logical_private_JSON_sent_B=sum(r['request_B'] for r in counters.values()),

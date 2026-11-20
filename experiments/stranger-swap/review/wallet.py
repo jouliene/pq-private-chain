@@ -48,7 +48,14 @@ def attribution(swap,ordinary,seller_seed,maker_seed,restored,recipient,dep):
         assert cash[1:]==(8,0,ZERO,2)
         assert cash_change and cash_change[1]>=0 and cash_change[2:]==(0,ZERO,3)
         assert open_note(a,seller,0) is None and open_note(b,maker,0) is None
-        a.close();b.close()
+        forward,addr_forward=restore_role(stack,recipient/'seed',dep)
+        assert len({addr_a,addr_b,addr_forward})==3
+        # Ordinary outputs may appear in either position. Identify the recipient with its actual receipt.
+        received=[(i,v) for i in range(2) if (v:=open_note(forward,payment,i)) is not None]
+        (recipient_index,onward_note),=received
+        assert onward_note[1:]==(5,0,ZERO,2)
+        assert open_note(a,payment,recipient_index) is None
+        forward.close();a.close();b.close()
     with dbread(restored/'mng1-wallet-state.sqlite') as inv:
         sources=inv.execute('SELECT cm,nf,amount,token,asset,kind,creator FROM owned WHERE spender=?',(tx,)).fetchall()
         assert sources==[(effects(maker)[1][0],cash[0],8,0,ZERO,'incoming',maker_tx)]
@@ -61,11 +68,11 @@ def attribution(swap,ordinary,seller_seed,maker_seed,restored,recipient,dep):
         assert json.loads(row[1])==[effects(maker)[1][0].hex()]
         assert (metrics['input_total'],metrics['real_inputs'],metrics['amount'],metrics['fee'],metrics['change'])==(8,1,5,3,0)
     with dbread(recipient/'mng1-wallet-state.sqlite') as inv:
-        row,=inv.execute('SELECT amount,token,asset,kind,creator FROM owned WHERE cm=?',(effects(payment)[1][0],)).fetchall()
+        row,=inv.execute('SELECT amount,token,asset,kind,creator FROM owned WHERE cm=?',(effects(payment)[1][recipient_index],)).fetchall()
         assert row==(5,0,ZERO,'incoming',tx)
-    return dict(regenerated_seed_owners=2,checked_swap_outputs=4,wrong_owners_missed=2,actual_spent_native_receipt=8,
+    return dict(regenerated_seed_owners=3,checked_swap_outputs=4,wrong_owners_missed=2,actual_spent_native_receipt=8,
                 restored_real_sources=1,ordinary_native_delivered=5,ordinary_native_fee=3,restored_positive_native_change=0,
-                seller_managed_change=80,buyer_received_managed=20,maker_native_change=cash_change[1])
+                seller_managed_change=80,onward_receipt_position=recipient_index,onward_receiver_reopened=True,buyer_received_managed=20,maker_native_change=cash_change[1])
 
 
 if __name__=='__main__':

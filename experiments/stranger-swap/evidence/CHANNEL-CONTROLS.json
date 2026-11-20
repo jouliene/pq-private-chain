@@ -1,0 +1,76 @@
+{
+  "changed_signed_endpoint": {
+    "authenticated": false,
+    "cert_pinned": false,
+    "cipher": null,
+    "failure": "before-connect",
+    "group": null,
+    "protocol": null,
+    "reply_B": 0,
+    "request_B": 0,
+    "wire_reply_B": 0,
+    "wire_request_B": 0
+  },
+  "classical_only_server": {
+    "authenticated": false,
+    "cert_pinned": false,
+    "cipher": null,
+    "failure": "handshake",
+    "group": null,
+    "protocol": null,
+    "reply_B": 0,
+    "request_B": 0,
+    "wire_reply_B": 7,
+    "wire_request_B": 1406
+  },
+  "oversize_before_connect": {
+    "authenticated": false,
+    "cert_pinned": false,
+    "cipher": null,
+    "failure": "before-connect",
+    "group": null,
+    "protocol": null,
+    "reply_B": 0,
+    "request_B": 0,
+    "wire_reply_B": 0,
+    "wire_request_B": 0
+  },
+  "registered_channel": {
+    "authenticated": true,
+    "cert_pinned": true,
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "failure": null,
+    "group": "X25519MLKEM768",
+    "independent_counts_match": true,
+    "protocol": "TLSv1.3",
+    "reply_B": 200080,
+    "request_B": 200059,
+    "server_hello_named_group": 4588,
+    "wire_reply_B": 205763,
+    "wire_request_B": 201859
+  },
+  "wrong_certificate": {
+    "authenticated": false,
+    "cert_pinned": false,
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "failure": "certificate-pin",
+    "group": "X25519MLKEM768",
+    "protocol": "TLSv1.3",
+    "reply_B": 0,
+    "request_B": 0,
+    "wire_reply_B": 1876,
+    "wire_request_B": 1486
+  },
+  "wrong_live_exporter_signer": {
+    "authenticated": false,
+    "cert_pinned": true,
+    "cipher": "TLS_AES_256_GCM_SHA384",
+    "failure": "exporter-signature",
+    "group": "X25519MLKEM768",
+    "protocol": "TLSv1.3",
+    "reply_B": 0,
+    "request_B": 0,
+    "wire_reply_B": 5369,
+    "wire_request_B": 1486
+  }
+}

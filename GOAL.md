@@ -2,6 +2,8 @@
 
 Start from ccf62bf7b271f49f96efdc0cc49cab19e972fb44. A taker who has only 100 managed test dollars and network bootstrap information discovers two unrelated makers, privately obtains firm quotes, trades 20 dollars for 8 native with the maker paying 3, restores from seed and pays 5 plus the ordinary fee of 3. Use two independent short-lived advertisement relays, authenticated encrypted wallet transport, the original SWP1 consensus, separate observers and actual mined admission. Demonstrate loss of one relay, stale quote, identity substitution and maker disconnect. Account for discovery, negotiation, settlement, inclusion time and the absence of abandoned sessions from consensus history. Publish independent clean reproduction, topology and residual privacy and quantum assumptions.
 
+Both the two-host author exchange and the non-author clean run settled the funded quotes. A restored wallet spent the winning 8-unit note alone. Both runs retained public history and separate traffic evidence. [Results and commands](experiments/stranger-swap/README.md) · [Independent verification](experiments/stranger-swap/review/REVIEW.md)
+
 ## Earlier milestone
 
 # Pay a first native fee with the proceeds of a private swap
