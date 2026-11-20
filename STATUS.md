@@ -1,3 +1,11 @@
+# Wallet-created amplified spend proof decision
+
+**Retain MNG1 transfers and SLG1 swaps on the local PoW devnet.** From baseline `a7aeff63a4bd89da5831723f8610f28b9bd86833`, the deterministic CFW §13 graph yields a projected 1,172,088-byte worst-case proof against the signed leg's 241,084-byte allowance. One first-stage tree already costs 316,800 value bytes for 495 distinct queries. The compressed Picnic3-style alternative requires at least 328,984 bytes in hidden-party broadcasts when every funded swap S-box is separately evaluated over its full domain. Its pinned C verifier accepted and exactly reserialized three stock reference vectors.
+
+The independent reviewer reproduced the construction model, circuit counts, real Picnic component, network projections and extremal/sampled openings in a clean clone of `14df7c9ad4e104a8da845e81a126bbfa4cf62add`. The existing deployed verifier again accepted the captured ordinary onward payment and signed pair. No candidate passed the proving gate. The broader blockchain goal remains active. The next decision is whether a packed arithmetic TCitH construction avoids the measured opening costs for the full funded relation. [Decision](experiments/amplified-spend/DECISION.md) · [Reproduction](experiments/amplified-spend/README.md) · [Independent evidence](experiments/amplified-spend/review/CLEAN.json)
+
+## Earlier milestone
+
 # Funded WHIR proof decision
 
 Retain MNG1 and SLG1 on the local PoW devnet. Two independent fresh runs at `ad0998099afae89ec544640f6fda6af5fd14e1d6` verified the complete ordinary transfer, both signed swap legs and the seed-restored onward spend. Both runs matched 130 public fields and eight ciphertexts. The independent ordinary packet grew from 143,233 to 239,233 bytes; the full swap grew from 320,905 to 514,005 bytes. The live PoW chain admitted the released encoding. The candidate verifier and the unchanged funded-note rules established compatibility. End-to-end quantum knowledge and joint privacy remain open. The next proof experiment is a target-priced masked small-interleave code switch; the global blockchain objective remains active. [Architecture decision](experiments/funded-whir/DECISION.md) · [Commands and public evidence](experiments/funded-whir/README.md) · [Independent review](experiments/funded-whir/review/REVIEW.md)

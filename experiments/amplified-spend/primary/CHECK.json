@@ -1,0 +1,19 @@
+{
+  "all_stage_base_subgroup_orders_verified": true,
+  "full_proof_maximum_B": 1172088,
+  "graph": {
+    "all_integer_eigenvectors_checked": 64,
+    "degree_six_witness_coefficients_low_first": [
+      0,
+      7,
+      3,
+      1,
+      5,
+      1,
+      1
+    ],
+    "selected_second_squared_normalized": "6/8",
+    "small_second_squared_normalized": "1/8"
+  },
+  "primary_rows_checked": 5
+}

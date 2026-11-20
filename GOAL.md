@@ -1,3 +1,11 @@
+# Test wallet-created proofs for existing funded private transfers and swaps
+
+Start from `a7aeff63a4bd89da5831723f8610f28b9bd86833`. Price CFW §13 distance amplification for both funded relations, including privacy randomness, all commitments and terminal openings, against a maximum of 241,084 proof bytes per signed leg. Evaluate the exact noninteractive knowledge and receipt privacy obligations at a target of 128 bits of quantum work. Proceed with a new funded cycle only for a viable construction. Otherwise run a materially different decisive component test. Deliver the reviewed relative ranking, reproducible calculation and implications at 10M, 30M and 100M operations per year. Keep the deployed verifiers operational.
+
+The bounded decision is complete. Both tested constructions exceed the frame under their explicit assumptions. Keep the live reference, and preserve the global permissionless private PoW research objective. [Determination and next experiment](experiments/amplified-spend/DECISION.md) · [Independent reproduction](experiments/amplified-spend/review/REVIEW.md)
+
+## Earlier milestone
+
 # Determine whether WHIR can verify existing funded transfers and swap legs
 
 Starting at f1a513207f73ee84c3034938a00dba1d68cd7b3b, implement the complete zero-supply MNG1 transfer and both separately authorized SLG1 legs, preserve the funded notes and live devnet, compare all public fields and receipt bytes, prove and verify the two-owner exchange, restore from seed and spend, and determine the parameters' assurance and full packet cost. Preserve mint and burn through MNG1. Independently reproduce and publish the comparison.

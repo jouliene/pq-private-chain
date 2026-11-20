@@ -1,0 +1,48 @@
+{
+  "candidate": "14df7c9ad4e104a8da845e81a126bbfa4cf62add",
+  "clone": "fresh local clone with --no-local; detached clean before and after tests",
+  "picnic_reference": {
+    "commit": "c56abd3baf6629c1f1c122929ebbaac8a9baec15",
+    "source_tar_sha256": "f2b3611ce215a4903091836f60df2b3ddf10a7b1bcd3e3433b72d4a258d0c2e8",
+    "fresh_clang_build": true,
+    "verified_and_reserialized": {
+      "Picnic3_L1": 12200,
+      "Picnic3_L3": 27080,
+      "Picnic3_L5": 49024
+    }
+  },
+  "released_public_archive": {
+    "tag": "funded-whir-2026-11-20",
+    "name": "independent-public.tar.gz",
+    "bytes": 2648535,
+    "sha256": "06c6e392a7896aa8670c365e3895e3d673f676e75919b143be36c823851d4673",
+    "verified_manifest_entries": 25
+  },
+  "reproduced_receipts_sha256": {
+    "MODEL.json": "e1cebdd1ed4ea6c40de5acd89b90d5b39550c81e3da36581815cda472b36a1b1",
+    "AUDIT.json": "9afb1f5075a45d76989317198f8fb30b710fcce3d8762dc9aa7ded33b23046c0",
+    "GATES.json": "08eeeb29ac44339077c7443704d8c0f60e189a5b8e1e9525eb04ed932160ef2d",
+    "KAT.json": "9b7aed2973f187af54bdcc5ebd06820b46392c510010862d6cd5e38d971f4a70",
+    "TRAFFIC.json": "1ab4c532fc4672ee6acdba463463b963867e96773f1d3038ff3c798b300bd406",
+    "OPENINGS.json": "1b15a9f067a0f1fffd58e59f8a3a3b9a4b9076425a655e3c50e804034809d69b"
+  },
+  "registered_frontend": {
+    "checked_rows": {
+      "MNG1": 136975,
+      "SLG1": 140619
+    },
+    "checked_permutations": {
+      "MNG1": 160,
+      "SLG1": 164
+    },
+    "poseidon2_source_sha256": "54604af022354364c45fbdde106be3f223775992d6fa5685e77c75e66fd970f6"
+  },
+  "graph_subgroup_component_output_sha256": "a9faf859ab16ba6690d4b90355d2faca6932a3ed7b867eb5be0442ba865194cf",
+  "historical_public_controls": {
+    "accepted": 4,
+    "rejected": 20,
+    "result_sha256": "6cdc157ca0f191587762379dbb4be9902cbd214f8c2080d1f60475ec319cdc8d",
+    "previously_independently_built_verifier_sha256": "da5a86a62d1ec4b2bcf4465de3d24acc76e23e53f081bb1d48a3d9b9dad185dc"
+  },
+  "scope": "Primary transcript model and public geometry, fallback C serializer and arithmetic component, historical funded packets. Capacity and annual volumes for the excluded routes are projections."
+}
