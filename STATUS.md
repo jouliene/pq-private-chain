@@ -1,3 +1,13 @@
+# Public handoff for the amplified spend decision
+
+An independent reviewer cloned the public HTTPS repository into an empty directory with credentials and local Git object sources disabled. Public `origin/main` resolved to the [report commit `8b0c1f634783db6a9d3c5e24cb22f8d27f136992`](https://github.com/jouliene/pq-private-chain/commit/8b0c1f634783db6a9d3c5e24cb22f8d27f136992). Its direct parent is the [tested commit `14df7c9ad4e104a8da845e81a126bbfa4cf62add`](https://github.com/jouliene/pq-private-chain/commit/14df7c9ad4e104a8da845e81a126bbfa4cf62add). Both were published with their original IDs.
+
+Seven regenerated public outputs matched the report byte for byte. They covered the CFW model and graph checks, the independent audit, the opening probe, Picnic3 gate and reference-vector checks, and the traffic projection. The CFW maximum was 1,172,088 bytes against a 241,084-byte proof allowance. The Picnic3 swap-leg broadcast floor was 328,984 bytes under separate full-domain S-box evaluation. A fresh build of the pinned Picnic C verifier accepted and exactly reserialized the L1/L3/L5 signatures at 12,200, 27,080 and 49,024 bytes. [Decision](experiments/amplified-spend/DECISION.md) · [Reproduction commands](experiments/amplified-spend/README.md)
+
+The push to `8b0c1f63` triggered [Research payment smoke](https://github.com/jouliene/pq-private-chain/actions/runs/44799082790) and [Local proof-of-work devnet](https://github.com/jouliene/pq-private-chain/actions/runs/44799083121). Those runs identify the report SHA. The subsequent publication-policy commit updates only this status, AGENTS.md and the [delivery procedure](docs/DELIVERY.md#publication-and-completion-for-every-milestone). Development awaits the owner's next goal.
+
+## Earlier milestone
+
 # Wallet-created amplified spend proof decision
 
 **Retain MNG1 transfers and SLG1 swaps on the local PoW devnet.** From baseline `a7aeff63a4bd89da5831723f8610f28b9bd86833`, the deterministic CFW §13 graph yields a projected 1,172,088-byte worst-case proof against the signed leg's 241,084-byte allowance. One first-stage tree already costs 316,800 value bytes for 495 distinct queries. The compressed Picnic3-style alternative requires at least 328,984 bytes in hidden-party broadcasts when every funded swap S-box is separately evaluated over its full domain. Its pinned C verifier accepted and exactly reserialized three stock reference vectors.

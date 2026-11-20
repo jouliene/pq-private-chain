@@ -14,31 +14,48 @@ installation workspaces for checks. Do not edit generated .work copies or manual
 maintain a diverging implementation in the old research workspace. Research
 journals may reference public immutable commits without becoming dependencies.
 
-## Every completed development milestone
+## Publication and completion for every milestone
 
-1. Make coherent source/specification changes with the relevant tests. Preserve
-   invariants, failures, dependency pins/licenses and any changed assurance limits.
-2. Execute the appropriate focused checks against the exact candidate. Record
-   actual outcome and scope; an unexecuted CI job or source review is not a pass.
-3. Commit and push the reviewed revision without force-pushing, rewriting public
-   history or moving old milestone tags. A later correction is a new commit.
-4. Verify the public SHA and compare it with the tested revision. For dependency/
-   build/installation changes repeat a clean public-URL clone with no research
-   fallback. Do not silently test one revision and hand off another.
-5. Give the owner the repository URL, full immutable commit SHA and commit URL,
-   previous milestone SHA/compare URL, exact setup/build/test commands, outcomes,
-   limits and changes in unverified claims. Update brief STATUS.md.
+The owner authorizes the orchestrator to commit and publish reviewed work to
+[jouliene/pq-private-chain](https://github.com/jouliene/pq-private-chain) on a
+standing basis. This rule covers implementations, research-only decisions and
+rejected candidates. Subagents may implement or review. The orchestrator owns
+Git integration and publication.
 
-An external reviewer reads the specified revision when the owner supplies the
-handoff. Public read access suffices; no write access or automatic monitoring/
-approval is assumed. Publication or AI review does not confer an audit/security/
-production designation.
-
-Large optional public artifacts may be generated from included code or attached
-to an immutable versioned release with hashes and a fetch command. A hash or
-review summary never replaces a required runnable source, fixture or test oracle.
-Private material, credentials, wallet databases and old secret-bearing history
-must never be staged. Inspect the complete history before an initial publication.
+1. **LOCAL.** Pin the exact tested commit. Include the reviewed source, relevant
+   tests or calculators, dependency revisions, checksums and licenses, a concise decision,
+   exact reproduction commands and the minimum public evidence needed to check
+   the result. For a rejected design, include the decisive calculation or
+   component test and say which later experiments were omitted.
+2. Fetch `origin`, confirm the push destination, check the ancestry against
+   `origin/main` and inspect every outgoing commit, including intermediate
+   blobs. Preserve unrelated local changes. Keep spending seeds, private
+   witnesses, credentials, wallet databases and internal audit logs private.
+   Place large required public fixtures in a versioned GitHub Release with
+   a checksum and a pinned download command. If a local commit contains private
+   material, preserve it locally and prepare a clean equivalent from public
+   history. Document the SHA mapping and repeat affected checks before publishing.
+3. **PUBLISHED, VERIFICATION PENDING.** Publish through the permitted branch
+   path and confirm that the exact intended commits are reachable from public
+   `main`. Respect branch protection and required PR checks. Use an ordinary
+   fast-forward when allowed. Never force-push or move an existing milestone
+   tag. Publish corrections as new commits.
+4. **Public verification.** Have a non-author clone the public HTTPS URL into
+   an empty directory without credentials, Git object alternates or local-source
+   fallback. Record the clone's `origin/main`, check each reported SHA with
+   `git merge-base --is-ancestor`, and check out the named revision. Run the
+   decisive published checks there with their pinned public inputs. Compare
+   regenerated outputs to the stated evidence and decision. Inspect applicable
+   GitHub Actions and record the run URL, conclusion and actual head SHA for
+   each. If the handoff adds a later evidence or documentation commit, verify
+   its public reachability and what changed from the tested commit.
+5. **VERIFIED.** Update `STATUS.md` with the observed public result. The native
+   Goal can be marked COMPLETE once the decisive checks succeed from the public
+   revision and applicable CI has passed. Provide the full tested and final
+   SHAs, commit/compare/decision and CI links, one copy-paste reproduction
+   command and the reviewer's actual scope. If delivery stalls, keep the
+   milestone incomplete and report the exact blocker and last publicly verified
+   SHA.
 
 ## Initial delivery record (historical)
 

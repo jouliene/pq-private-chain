@@ -104,8 +104,17 @@ set. Label researcher scenarios, measured results, projections and untested clai
 Functional smoke, role resource viability, formal PQ/privacy composition and
 production readiness are separate conclusions.
 
-At a completed development milestone follow docs/DELIVERY.md: exact reviewed
-commit, relevant actual tests, public push without force/history rewrite, public
-revision verification and full SHA/compare/command handoff. Do not claim secure,
-audited or production-ready merely from publication or agent review. Keep current
-STATUS accurate and brief; no old internal conversation/log export.
+The owner gives the orchestrator standing authorization to commit and publish
+reviewed work to `jouliene/pq-private-chain`. This covers implementation,
+research-only milestones and rejected candidates. Subagents may implement and
+review. The orchestrator owns Git integration and publication. Respect branch
+protection and preserve public history and existing tags.
+
+Use `LOCAL` for a local commit and `PUBLISHED, VERIFICATION PENDING` after
+publication. Complete the native Goal only after an independent anonymous
+public HTTPS clone reproduces the decisive checks from the published revision
+and applicable CI passes. Keep `STATUS.md` current. Record exact SHAs,
+evidence, reproduction commands and CI links under the
+[delivery procedure](docs/DELIVERY.md#publication-and-completion-for-every-milestone).
+Describe cryptographic assurance, external audit and production readiness only
+to the extent established by their own evidence.
