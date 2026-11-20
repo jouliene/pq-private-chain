@@ -1,3 +1,7 @@
+# Packed TCitH delivery — LOCAL
+
+Baseline `d92de79fe1fce97a33d88f706996e6cdd8ec188f`. The funded quadratic and seventh-power encodings, exact size certificates, calibrated calculator, full-size commitment component, role measurements and independent mathematical review are ready. Retain the live MNG1/SLG1 registrations. From the repository root use `bash experiments/packed-tcith/reproduce.sh`. After publishing this source commit, the independent reviewer must run the public check in an anonymous HTTPS clone and repeat the funded role checks with its separate wallet lab. Check the actual workflow head SHAs before marking this bounded decision verified. [Decision](experiments/packed-tcith/DECISION.md) · [Public reproduction](experiments/packed-tcith/README.md)
+
 # Public handoff for the amplified spend decision
 
 An independent reviewer cloned the public HTTPS repository into an empty directory with credentials and local Git object sources disabled. Public `origin/main` resolved to the [report commit `8b0c1f634783db6a9d3c5e24cb22f8d27f136992`](https://github.com/jouliene/pq-private-chain/commit/8b0c1f634783db6a9d3c5e24cb22f8d27f136992). Its direct parent is the [tested commit `14df7c9ad4e104a8da845e81a126bbfa4cf62add`](https://github.com/jouliene/pq-private-chain/commit/14df7c9ad4e104a8da845e81a126bbfa4cf62add). Both were published with their original IDs.

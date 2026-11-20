@@ -1,3 +1,11 @@
+# Packed arithmetic TCitH for funded private spends
+
+Start from `d92de79fe1fce97a33d88f706996e6cdd8ec188f`. Compare the registered Goldilocks constraints with a degree-seven Poseidon2 encoding under one packed TCitH security and cost profile. Exercise funded membership, preserve the full tree, monetary rules and receipts, compare the signed-leg budget and role costs, and qualify the exact quantum-knowledge and joint-privacy assumptions. Prove a funded cycle for a qualifying construction, or reproduce the decisive exclusions and propose a specific membership or note change. Public independent reproduction and CI precede completion. Keep deployed MNG1/SLG1 operational.
+
+The local decision retains the live verifier and defers packed TCitH. The direct profile fits the frame but increases archive and wallet costs, with quantum extraction and joint receipt privacy still open. Public checkout and CI verification are pending. [Decision](experiments/packed-tcith/DECISION.md)
+
+## Earlier milestone
+
 # Test wallet-created proofs for existing funded private transfers and swaps
 
 Start from `a7aeff63a4bd89da5831723f8610f28b9bd86833`. Price CFW §13 distance amplification for both funded relations, including privacy randomness, all commitments and terminal openings, against a maximum of 241,084 proof bytes per signed leg. Evaluate the exact noninteractive knowledge and receipt privacy obligations at a target of 128 bits of quantum work. Proceed with a new funded cycle only for a viable construction. Otherwise run a materially different decisive component test. Deliver the reviewed relative ranking, reproducible calculation and implications at 10M, 30M and 100M operations per year. Keep the deployed verifiers operational.

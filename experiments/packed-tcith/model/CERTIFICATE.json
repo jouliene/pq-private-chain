@@ -1,0 +1,91 @@
+{
+  "all_N_floor": {
+    "MNG1": {
+      "quadratic_stage256_B": 243061,
+      "direct7_stage768_B": 241624
+    },
+    "SLG1": {
+      "quadratic_stage256_B": 247031,
+      "direct7_stage768_B": 245818
+    }
+  },
+  "signed_minimum_power_height": {
+    "max_height": 19,
+    "threshold_B": 241084,
+    "cheap_bound_survivors": 40,
+    "fit_count": 0,
+    "fits": []
+  },
+  "best_signed_through_2^20": {
+    "max_height": 20,
+    "threshold_B": 238904,
+    "cheap_bound_survivors": 155,
+    "fit_count": 1,
+    "fits": [
+      [
+        20,
+        101,
+        25,
+        238904
+      ]
+    ]
+  },
+  "smaller_than_live_through_2^40": {
+    "max_height": 40,
+    "threshold_B": 139386,
+    "cheap_bound_survivors": 14,
+    "fit_count": 0,
+    "fits": []
+  },
+  "smaller_than_live_at_2^41": {
+    "profile": {
+      "stage_target_bits": 256,
+      "digest_B": 64,
+      "N": 2199023255552,
+      "s": 65,
+      "ell": 8,
+      "tau": 1,
+      "rho": 5,
+      "eta": 46,
+      "degree": 7,
+      "witness_packs": 1027,
+      "hint_packs_per_mpc": 9,
+      "leaf_words": 1118,
+      "max_frontier_hashes_per_tree": 304
+    },
+    "components_B": {
+      "opened_witness": 65728,
+      "opened_hints": 2880,
+      "opened_mask": 2944,
+      "degree_tail": 23920,
+      "polynomial_tail": 17280,
+      "linear_tail": 5120,
+      "fs_digests": 192,
+      "salts": 256,
+      "frontier": 19456
+    },
+    "proof_B": 137776,
+    "proof_plus_fixed_frame_B": 158836,
+    "work": {
+      "padding_zero_rows": 216,
+      "committed_leaf_words": 2458507999707136,
+      "leaf_share_payload_B": 19668063997657088,
+      "leaf_hash_calls": 2199023255552,
+      "internal_hash_calls": 2199023255551,
+      "opened_leaf_words": 8944,
+      "prover_degree_matrix_macs": 3599776,
+      "verifier_degree_matrix_macs": 394496,
+      "verifier_linear_dot_macs": 41080,
+      "verifier_public_pack_eval_macs_schoolbook": 2670200,
+      "verifier_quadratic_block_evaluations": 1320,
+      "verifier_degree7_block_evaluations": 11920,
+      "linear_constraint_rows": 45319,
+      "nonlinear_block_polynomials": 331,
+      "shared_gamma_random_words": 277562,
+      "public_sparse_row_weight_macs": 2032330,
+      "public_rhs_projection_terms": 21113,
+      "public_rhs_batch_macs": 103600,
+      "prover_broadcast_points_upper_per_tree": 505
+    }
+  }
+}

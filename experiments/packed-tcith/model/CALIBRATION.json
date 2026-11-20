@@ -1,0 +1,66 @@
+{
+  "Toy1": {
+    "packed_witness_columns": 128,
+    "field_word_count": 8183,
+    "reference_B": 38081,
+    "Eq18_literal_B": 39121.46,
+    "exact_mean_frontier_pricing_B": 38072.357,
+    "mean_minus_reference_B": -8.643
+  },
+  "Toy2": {
+    "packed_witness_columns": 100,
+    "field_word_count": 6786,
+    "reference_B": 57409,
+    "Eq18_literal_B": 58525.148,
+    "exact_mean_frontier_pricing_B": 57388.114,
+    "mean_minus_reference_B": -20.886
+  },
+  "Kyber512": {
+    "packed_witness_columns": 162,
+    "field_word_count": 11158,
+    "reference_B": 21185,
+    "Eq18_literal_B": 22087.8,
+    "exact_mean_frontier_pricing_B": 21173.84,
+    "mean_minus_reference_B": -11.16
+  },
+  "Kyber768": {
+    "packed_witness_columns": 201,
+    "field_word_count": 13619,
+    "reference_B": 24938,
+    "Eq18_literal_B": 25899.092,
+    "exact_mean_frontier_pricing_B": 24939.642,
+    "mean_minus_reference_B": 1.642
+  },
+  "Kyber1024": {
+    "packed_witness_columns": 228,
+    "field_word_count": 15768,
+    "reference_B": 28241,
+    "Eq18_literal_B": 29249.313,
+    "exact_mean_frontier_pricing_B": 28244.818,
+    "mean_minus_reference_B": 3.818
+  },
+  "Dilithium2": {
+    "packed_witness_columns": 192,
+    "field_word_count": 12087,
+    "reference_B": 40100,
+    "Eq18_literal_B": 41137.455,
+    "exact_mean_frontier_pricing_B": 40088.353,
+    "mean_minus_reference_B": -11.647
+  },
+  "Dilithium3": {
+    "packed_witness_columns": 308,
+    "field_word_count": 18096,
+    "reference_B": 57526,
+    "Eq18_literal_B": 58610.543,
+    "exact_mean_frontier_pricing_B": 57517.263,
+    "mean_minus_reference_B": -8.737
+  },
+  "Dilithium5": {
+    "packed_witness_columns": 312,
+    "field_word_count": 18276,
+    "reference_B": 58088,
+    "Eq18_literal_B": 59128.012,
+    "exact_mean_frontier_pricing_B": 58034.732,
+    "mean_minus_reference_B": -53.268
+  }
+}

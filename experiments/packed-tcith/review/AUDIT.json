@@ -1,0 +1,128 @@
+{
+  "degree_seven_any_N_stronger_screen": {
+    "MNG1": {
+      "all_power_of_two_party_counts_B_floor": 241624,
+      "degree": 7,
+      "tangent": 60,
+      "target": 768,
+      "witness_words": 64088
+    },
+    "SLG1": {
+      "all_power_of_two_party_counts_B_floor": 245818,
+      "degree": 7,
+      "tangent": 61,
+      "target": 768,
+      "witness_words": 66539
+    }
+  },
+  "degree_seven_example": {
+    "MNG1": {
+      "bits_per_screen": 256,
+      "degree_mask_columns": 33,
+      "ell": 25,
+      "eta": 33,
+      "hint_columns": 50,
+      "packed_witness_columns": 637,
+      "parties": 1048576,
+      "proof_B": 234104,
+      "rho": 5,
+      "s": 101,
+      "single_commitment_leaf_field_payload_B": 6039797760,
+      "tau": 1,
+      "terms_B": {
+        "hashes": 192,
+        "hints": 10000,
+        "linear": 8000,
+        "masked_degree": 33264,
+        "nonlinear": 30000,
+        "opening_salts": 800,
+        "siblings": 24448,
+        "witness": 127400
+      },
+      "worst_siblings_per_tree": 382
+    },
+    "SLG1": {
+      "bits_per_screen": 256,
+      "degree_mask_columns": 33,
+      "ell": 25,
+      "eta": 33,
+      "hint_columns": 50,
+      "packed_witness_columns": 661,
+      "parties": 1048576,
+      "proof_B": 238904,
+      "rho": 5,
+      "s": 101,
+      "single_commitment_leaf_field_payload_B": 6241124352,
+      "tau": 1,
+      "terms_B": {
+        "hashes": 192,
+        "hints": 10000,
+        "linear": 8000,
+        "masked_degree": 33264,
+        "nonlinear": 30000,
+        "opening_salts": 800,
+        "siblings": 24448,
+        "witness": 132200
+      },
+      "worst_siblings_per_tree": 382
+    }
+  },
+  "dfm_seven_move_sensitivity": {
+    "challenge_rounds": 3,
+    "ideal_common_hash_range_bits": 512,
+    "log2_additive_only_upper_contribution": 262.0,
+    "log2_loss": 771.415037,
+    "minimum_integer_common_hash_range_bits_for_individual_term_below_one": 775,
+    "minimum_integer_interactive_bits_for_individual_term_below_one": 772
+  },
+  "linear_broadcast_control": {
+    "broadcast_degree": 3,
+    "deterministic_pivot": 1,
+    "first_pivot_coefficient": 0,
+    "opened_parties": 1,
+    "reconstruction_equal": true,
+    "secret_slots": 2,
+    "words_sent": 2
+  },
+  "near_cap_at_272": {
+    "bits_per_screen": 272,
+    "degree_mask_columns": 38,
+    "ell": 24,
+    "eta": 38,
+    "hint_columns": 50,
+    "packed_witness_columns": 636,
+    "parties": 4194304,
+    "proof_B": 237552,
+    "rho": 5,
+    "s": 105,
+    "single_commitment_leaf_field_payload_B": 24293408768,
+    "tau": 1,
+    "terms_B": {
+      "hashes": 192,
+      "hints": 9600,
+      "linear": 8320,
+      "masked_degree": 39216,
+      "nonlinear": 30720,
+      "opening_salts": 768,
+      "siblings": 26624,
+      "witness": 122112
+    },
+    "worst_siblings_per_tree": 416
+  },
+  "quadratic_any_N": {
+    "MNG1": {
+      "all_power_of_two_party_counts_B_floor": 243061,
+      "degree": 2,
+      "tangent": 101,
+      "target": 256,
+      "witness_words": 369050
+    },
+    "SLG1": {
+      "all_power_of_two_party_counts_B_floor": 247031,
+      "degree": 2,
+      "tangent": 102,
+      "target": 256,
+      "witness_words": 379125
+    }
+  }
+}

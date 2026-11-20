@@ -1,0 +1,1190 @@
+{
+  "MNG1_r1cs": {
+    "up_to_2^12": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 4096,
+        "s": 385,
+        "ell": 123,
+        "tau": 1,
+        "rho": 5,
+        "eta": 39,
+        "degree": 2,
+        "witness_packs": 959,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1018,
+        "max_frontier_hashes_per_tree": 620
+      },
+      "proof_B": 1216640
+    },
+    "up_to_2^16": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 65536,
+        "s": 316,
+        "ell": 39,
+        "tau": 1,
+        "rho": 5,
+        "eta": 54,
+        "degree": 2,
+        "witness_packs": 1169,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1243,
+        "max_frontier_hashes_per_tree": 415
+      },
+      "proof_B": 591688
+    },
+    "up_to_2^19": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 524288,
+        "s": 266,
+        "ell": 26,
+        "tau": 1,
+        "rho": 5,
+        "eta": 60,
+        "degree": 2,
+        "witness_packs": 1388,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1468,
+        "max_frontier_hashes_per_tree": 370
+      },
+      "proof_B": 490568
+    },
+    "up_to_2^20": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 217,
+        "ell": 23,
+        "tau": 1,
+        "rho": 5,
+        "eta": 55,
+        "degree": 2,
+        "witness_packs": 1703,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1778,
+        "max_frontier_hashes_per_tree": 354
+      },
+      "proof_B": 473056
+    },
+    "up_to_2^24": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 16777216,
+        "s": 215,
+        "ell": 17,
+        "tau": 1,
+        "rho": 5,
+        "eta": 68,
+        "degree": 2,
+        "witness_packs": 1718,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1806,
+        "max_frontier_hashes_per_tree": 338
+      },
+      "proof_B": 411304
+    },
+    "up_to_2^32": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 4294967296,
+        "s": 163,
+        "ell": 11,
+        "tau": 1,
+        "rho": 5,
+        "eta": 75,
+        "degree": 2,
+        "witness_packs": 2266,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 2361,
+        "max_frontier_hashes_per_tree": 313
+      },
+      "proof_B": 346024
+    },
+    "up_to_2^48": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 35184372088832,
+        "s": 122,
+        "ell": 7,
+        "tau": 1,
+        "rho": 5,
+        "eta": 84,
+        "degree": 2,
+        "witness_packs": 3028,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 3132,
+        "max_frontier_hashes_per_tree": 295
+      },
+      "proof_B": 291472
+    },
+    "up_to_2^63": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 576460752303423488,
+        "s": 100,
+        "ell": 5,
+        "tau": 1,
+        "rho": 5,
+        "eta": 93,
+        "degree": 2,
+        "witness_packs": 3692,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 3805,
+        "max_frontier_hashes_per_tree": 283
+      },
+      "proof_B": 257144
+    },
+    "practical_2^20_components": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 217,
+        "ell": 23,
+        "tau": 1,
+        "rho": 5,
+        "eta": 55,
+        "degree": 2,
+        "witness_packs": 1703,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1778,
+        "max_frontier_hashes_per_tree": 354
+      },
+      "components_B": {
+        "opened_witness": 313352,
+        "opened_hints": 3680,
+        "opened_mask": 10120,
+        "degree_tail": 95480,
+        "polynomial_tail": 9560,
+        "linear_tail": 17280,
+        "fs_digests": 192,
+        "salts": 736,
+        "frontier": 22656
+      },
+      "proof_B": 473056,
+      "proof_plus_fixed_frame_B": 476897,
+      "work": {
+        "padding_zero_rows": 501,
+        "committed_leaf_words": 1864368128,
+        "leaf_share_payload_B": 14914945024,
+        "leaf_hash_calls": 1048576,
+        "internal_hash_calls": 1048575,
+        "opened_leaf_words": 40894,
+        "prover_degree_matrix_macs": 22743600,
+        "verifier_degree_matrix_macs": 2179595,
+        "verifier_linear_dot_macs": 195845,
+        "verifier_public_pack_eval_macs_schoolbook": 42498365,
+        "verifier_quadratic_block_evaluations": 41055,
+        "verifier_degree7_block_evaluations": 0,
+        "linear_constraint_rows": 292200,
+        "nonlinear_block_polynomials": 357,
+        "shared_gamma_random_words": 1557550,
+        "public_sparse_row_weight_macs": 6238235,
+        "public_rhs_projection_terms": 58841,
+        "public_rhs_batch_macs": 293200,
+        "prover_broadcast_points_upper_per_tree": 479
+      }
+    },
+    "first_grid_height_under_signed_proof_cap": null
+  },
+  "MNG1_degree7": {
+    "up_to_2^12": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 4096,
+        "s": 88,
+        "ell": 27,
+        "tau": 4,
+        "rho": 5,
+        "eta": 16,
+        "degree": 7,
+        "witness_packs": 730,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 796,
+        "max_frontier_hashes_per_tree": 194
+      },
+      "proof_B": 923392
+    },
+    "up_to_2^16": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 65536,
+        "s": 140,
+        "ell": 45,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 461,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 544,
+        "max_frontier_hashes_per_tree": 469
+      },
+      "proof_B": 319728
+    },
+    "up_to_2^19": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 524288,
+        "s": 137,
+        "ell": 29,
+        "tau": 1,
+        "rho": 5,
+        "eta": 38,
+        "degree": 7,
+        "witness_packs": 470,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 558,
+        "max_frontier_hashes_per_tree": 409
+      },
+      "proof_B": 248880
+    },
+    "up_to_2^20": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 637,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 720,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "proof_B": 234104
+    },
+    "up_to_2^24": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 16777216,
+        "s": 102,
+        "ell": 18,
+        "tau": 1,
+        "rho": 5,
+        "eta": 39,
+        "degree": 7,
+        "witness_packs": 633,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 717,
+        "max_frontier_hashes_per_tree": 356
+      },
+      "proof_B": 195264
+    },
+    "up_to_2^32": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 2147483648,
+        "s": 81,
+        "ell": 12,
+        "tau": 1,
+        "rho": 5,
+        "eta": 42,
+        "degree": 7,
+        "witness_packs": 794,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 881,
+        "max_frontier_hashes_per_tree": 328
+      },
+      "proof_B": 161840
+    },
+    "up_to_2^48": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 70368744177664,
+        "s": 60,
+        "ell": 7,
+        "tau": 1,
+        "rho": 5,
+        "eta": 48,
+        "degree": 7,
+        "witness_packs": 1070,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 1163,
+        "max_frontier_hashes_per_tree": 302
+      },
+      "proof_B": 128472
+    },
+    "up_to_2^63": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1152921504606846976,
+        "s": 48,
+        "ell": 5,
+        "tau": 1,
+        "rho": 5,
+        "eta": 51,
+        "degree": 7,
+        "witness_packs": 1339,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 1435,
+        "max_frontier_hashes_per_tree": 288
+      },
+      "proof_B": 112008
+    },
+    "practical_2^20_components": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 637,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 720,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "components_B": {
+        "opened_witness": 127400,
+        "opened_hints": 10000,
+        "opened_mask": 6600,
+        "degree_tail": 26664,
+        "polynomial_tail": 30000,
+        "linear_tail": 8000,
+        "fs_digests": 192,
+        "salts": 800,
+        "frontier": 24448
+      },
+      "proof_B": 234104,
+      "proof_plus_fixed_frame_B": 237945,
+      "work": {
+        "padding_zero_rows": 249,
+        "committed_leaf_words": 754974720,
+        "leaf_share_payload_B": 6039797760,
+        "leaf_hash_calls": 1048576,
+        "internal_hash_calls": 1048575,
+        "opened_leaf_words": 18000,
+        "prover_degree_matrix_macs": 2856546,
+        "verifier_degree_matrix_macs": 566775,
+        "verifier_linear_dot_macs": 79625,
+        "verifier_public_pack_eval_macs_schoolbook": 8042125,
+        "verifier_quadratic_block_evaluations": 2375,
+        "verifier_degree7_block_evaluations": 23375,
+        "linear_constraint_rows": 43626,
+        "nonlinear_block_polynomials": 206,
+        "shared_gamma_random_words": 241831,
+        "public_sparse_row_weight_macs": 1978015,
+        "public_rhs_projection_terms": 20181,
+        "public_rhs_batch_macs": 99900,
+        "prover_broadcast_points_upper_per_tree": 876
+      }
+    },
+    "first_grid_height_under_signed_proof_cap": 20
+  },
+  "SLG1_r1cs": {
+    "up_to_2^12": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 4096,
+        "s": 390,
+        "ell": 124,
+        "tau": 1,
+        "rho": 5,
+        "eta": 39,
+        "degree": 2,
+        "witness_packs": 973,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1032,
+        "max_frontier_hashes_per_tree": 624
+      },
+      "proof_B": 1241160
+    },
+    "up_to_2^16": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 65536,
+        "s": 317,
+        "ell": 39,
+        "tau": 1,
+        "rho": 5,
+        "eta": 54,
+        "degree": 2,
+        "witness_packs": 1197,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1271,
+        "max_frontier_hashes_per_tree": 415
+      },
+      "proof_B": 600976
+    },
+    "up_to_2^19": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 524288,
+        "s": 266,
+        "ell": 26,
+        "tau": 1,
+        "rho": 5,
+        "eta": 60,
+        "degree": 2,
+        "witness_packs": 1426,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1506,
+        "max_frontier_hashes_per_tree": 370
+      },
+      "proof_B": 498472
+    },
+    "up_to_2^20": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 217,
+        "ell": 23,
+        "tau": 1,
+        "rho": 5,
+        "eta": 55,
+        "degree": 2,
+        "witness_packs": 1749,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1824,
+        "max_frontier_hashes_per_tree": 354
+      },
+      "proof_B": 481520
+    },
+    "up_to_2^24": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 16777216,
+        "s": 215,
+        "ell": 17,
+        "tau": 1,
+        "rho": 5,
+        "eta": 68,
+        "degree": 2,
+        "witness_packs": 1764,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1852,
+        "max_frontier_hashes_per_tree": 338
+      },
+      "proof_B": 417560
+    },
+    "up_to_2^32": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 4294967296,
+        "s": 163,
+        "ell": 11,
+        "tau": 1,
+        "rho": 5,
+        "eta": 75,
+        "degree": 2,
+        "witness_packs": 2327,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 2422,
+        "max_frontier_hashes_per_tree": 313
+      },
+      "proof_B": 351392
+    },
+    "up_to_2^48": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 35184372088832,
+        "s": 122,
+        "ell": 7,
+        "tau": 1,
+        "rho": 5,
+        "eta": 84,
+        "degree": 2,
+        "witness_packs": 3109,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 3213,
+        "max_frontier_hashes_per_tree": 295
+      },
+      "proof_B": 296008
+    },
+    "up_to_2^63": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 576460752303423488,
+        "s": 100,
+        "ell": 5,
+        "tau": 1,
+        "rho": 5,
+        "eta": 93,
+        "degree": 2,
+        "witness_packs": 3795,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 3908,
+        "max_frontier_hashes_per_tree": 283
+      },
+      "proof_B": 261264
+    },
+    "practical_2^20_components": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 217,
+        "ell": 23,
+        "tau": 1,
+        "rho": 5,
+        "eta": 55,
+        "degree": 2,
+        "witness_packs": 1749,
+        "hint_packs_per_mpc": 4,
+        "leaf_words": 1824,
+        "max_frontier_hashes_per_tree": 354
+      },
+      "components_B": {
+        "opened_witness": 321816,
+        "opened_hints": 3680,
+        "opened_mask": 10120,
+        "degree_tail": 95480,
+        "polynomial_tail": 9560,
+        "linear_tail": 17280,
+        "fs_digests": 192,
+        "salts": 736,
+        "frontier": 22656
+      },
+      "proof_B": 481520,
+      "proof_plus_fixed_frame_B": 502580,
+      "work": {
+        "padding_zero_rows": 408,
+        "committed_leaf_words": 1912602624,
+        "leaf_share_payload_B": 15300820992,
+        "leaf_hash_calls": 1048576,
+        "internal_hash_calls": 1048575,
+        "opened_leaf_words": 41952,
+        "prover_degree_matrix_macs": 23350800,
+        "verifier_degree_matrix_macs": 2237785,
+        "verifier_linear_dot_macs": 201135,
+        "verifier_public_pack_eval_macs_schoolbook": 43646295,
+        "verifier_quadratic_block_evaluations": 42205,
+        "verifier_degree7_block_evaluations": 0,
+        "linear_constraint_rows": 300041,
+        "nonlinear_block_polynomials": 367,
+        "shared_gamma_random_words": 1599335,
+        "public_sparse_row_weight_macs": 6397910,
+        "public_rhs_projection_terms": 60765,
+        "public_rhs_batch_macs": 301860,
+        "prover_broadcast_points_upper_per_tree": 479
+      }
+    },
+    "first_grid_height_under_signed_proof_cap": null
+  },
+  "SLG1_degree7": {
+    "up_to_2^12": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 4096,
+        "s": 88,
+        "ell": 27,
+        "tau": 4,
+        "rho": 5,
+        "eta": 16,
+        "degree": 7,
+        "witness_packs": 757,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 823,
+        "max_frontier_hashes_per_tree": 194
+      },
+      "proof_B": 946720
+    },
+    "up_to_2^16": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 65536,
+        "s": 140,
+        "ell": 45,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 477,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 560,
+        "max_frontier_hashes_per_tree": 469
+      },
+      "proof_B": 325488
+    },
+    "up_to_2^19": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 524288,
+        "s": 126,
+        "ell": 29,
+        "tau": 1,
+        "rho": 5,
+        "eta": 36,
+        "degree": 7,
+        "witness_packs": 530,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 616,
+        "max_frontier_hashes_per_tree": 409
+      },
+      "proof_B": 253456
+    },
+    "up_to_2^20": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 661,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 744,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "proof_B": 238904
+    },
+    "up_to_2^24": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 16777216,
+        "s": 102,
+        "ell": 18,
+        "tau": 1,
+        "rho": 5,
+        "eta": 39,
+        "degree": 7,
+        "witness_packs": 655,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 739,
+        "max_frontier_hashes_per_tree": 356
+      },
+      "proof_B": 198432
+    },
+    "up_to_2^32": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 2147483648,
+        "s": 81,
+        "ell": 12,
+        "tau": 1,
+        "rho": 5,
+        "eta": 42,
+        "degree": 7,
+        "witness_packs": 822,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 909,
+        "max_frontier_hashes_per_tree": 328
+      },
+      "proof_B": 164528
+    },
+    "up_to_2^48": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 70368744177664,
+        "s": 60,
+        "ell": 7,
+        "tau": 1,
+        "rho": 5,
+        "eta": 48,
+        "degree": 7,
+        "witness_packs": 1110,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 1203,
+        "max_frontier_hashes_per_tree": 302
+      },
+      "proof_B": 130712
+    },
+    "up_to_2^63": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1152921504606846976,
+        "s": 49,
+        "ell": 5,
+        "tau": 1,
+        "rho": 5,
+        "eta": 52,
+        "degree": 7,
+        "witness_packs": 1359,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 1456,
+        "max_frontier_hashes_per_tree": 288
+      },
+      "proof_B": 113968
+    },
+    "practical_2^20_components": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 661,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 744,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "components_B": {
+        "opened_witness": 132200,
+        "opened_hints": 10000,
+        "opened_mask": 6600,
+        "degree_tail": 26664,
+        "polynomial_tail": 30000,
+        "linear_tail": 8000,
+        "fs_digests": 192,
+        "salts": 800,
+        "frontier": 24448
+      },
+      "proof_B": 238904,
+      "proof_plus_fixed_frame_B": 259964,
+      "work": {
+        "padding_zero_rows": 222,
+        "committed_leaf_words": 780140544,
+        "leaf_share_payload_B": 6241124352,
+        "leaf_hash_calls": 1048576,
+        "internal_hash_calls": 1048575,
+        "opened_leaf_words": 18600,
+        "prover_degree_matrix_macs": 2956338,
+        "verifier_degree_matrix_macs": 586575,
+        "verifier_linear_dot_macs": 82625,
+        "verifier_public_pack_eval_macs_schoolbook": 8345125,
+        "verifier_quadratic_block_evaluations": 2625,
+        "verifier_degree7_block_evaluations": 24000,
+        "linear_constraint_rows": 45325,
+        "nonlinear_block_polynomials": 213,
+        "shared_gamma_random_words": 251153,
+        "public_sparse_row_weight_macs": 2032360,
+        "public_rhs_projection_terms": 21113,
+        "public_rhs_batch_macs": 103600,
+        "prover_broadcast_points_upper_per_tree": 876
+      }
+    },
+    "first_grid_height_under_signed_proof_cap": 20
+  },
+  "shared_s101_ell25_N2^20": {
+    "MNG1": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 637,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 720,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "components_B": {
+        "opened_witness": 127400,
+        "opened_hints": 10000,
+        "opened_mask": 6600,
+        "degree_tail": 26664,
+        "polynomial_tail": 30000,
+        "linear_tail": 8000,
+        "fs_digests": 192,
+        "salts": 800,
+        "frontier": 24448
+      },
+      "proof_B": 234104,
+      "proof_plus_fixed_frame_B": 237945,
+      "work": {
+        "padding_zero_rows": 249,
+        "committed_leaf_words": 754974720,
+        "leaf_share_payload_B": 6039797760,
+        "leaf_hash_calls": 1048576,
+        "internal_hash_calls": 1048575,
+        "opened_leaf_words": 18000,
+        "prover_degree_matrix_macs": 2856546,
+        "verifier_degree_matrix_macs": 566775,
+        "verifier_linear_dot_macs": 79625,
+        "verifier_public_pack_eval_macs_schoolbook": 8042125,
+        "verifier_quadratic_block_evaluations": 2375,
+        "verifier_degree7_block_evaluations": 23375,
+        "linear_constraint_rows": 43626,
+        "nonlinear_block_polynomials": 206,
+        "shared_gamma_random_words": 241831,
+        "public_sparse_row_weight_macs": 1978015,
+        "public_rhs_projection_terms": 20181,
+        "public_rhs_batch_macs": 99900,
+        "prover_broadcast_points_upper_per_tree": 876
+      }
+    },
+    "SLG1": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 661,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 744,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "components_B": {
+        "opened_witness": 132200,
+        "opened_hints": 10000,
+        "opened_mask": 6600,
+        "degree_tail": 26664,
+        "polynomial_tail": 30000,
+        "linear_tail": 8000,
+        "fs_digests": 192,
+        "salts": 800,
+        "frontier": 24448
+      },
+      "proof_B": 238904,
+      "proof_plus_fixed_frame_B": 259964,
+      "work": {
+        "padding_zero_rows": 222,
+        "committed_leaf_words": 780140544,
+        "leaf_share_payload_B": 6241124352,
+        "leaf_hash_calls": 1048576,
+        "internal_hash_calls": 1048575,
+        "opened_leaf_words": 18600,
+        "prover_degree_matrix_macs": 2956338,
+        "verifier_degree_matrix_macs": 586575,
+        "verifier_linear_dot_macs": 82625,
+        "verifier_public_pack_eval_macs_schoolbook": 8345125,
+        "verifier_quadratic_block_evaluations": 2625,
+        "verifier_degree7_block_evaluations": 24000,
+        "linear_constraint_rows": 45325,
+        "nonlinear_block_polynomials": 213,
+        "shared_gamma_random_words": 251153,
+        "public_sparse_row_weight_macs": 2032360,
+        "public_rhs_projection_terms": 21113,
+        "public_rhs_batch_macs": 103600,
+        "prover_broadcast_points_upper_per_tree": 876
+      }
+    }
+  },
+  "sha3_384": {
+    "up_to_2^12": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 4096,
+        "s": 100,
+        "ell": 29,
+        "tau": 4,
+        "rho": 5,
+        "eta": 17,
+        "degree": 7,
+        "witness_packs": 667,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 734,
+        "max_frontier_hashes_per_tree": 206
+      },
+      "proof_B": 933520
+    },
+    "up_to_2^16": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 65536,
+        "s": 140,
+        "ell": 45,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 477,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 560,
+        "max_frontier_hashes_per_tree": 469
+      },
+      "proof_B": 317936
+    },
+    "up_to_2^19": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 524288,
+        "s": 126,
+        "ell": 29,
+        "tau": 1,
+        "rho": 5,
+        "eta": 36,
+        "degree": 7,
+        "witness_packs": 530,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 616,
+        "max_frontier_hashes_per_tree": 409
+      },
+      "proof_B": 246864
+    },
+    "up_to_2^20": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 1048576,
+        "s": 101,
+        "ell": 25,
+        "tau": 1,
+        "rho": 5,
+        "eta": 33,
+        "degree": 7,
+        "witness_packs": 661,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 744,
+        "max_frontier_hashes_per_tree": 382
+      },
+      "proof_B": 232744
+    },
+    "up_to_2^24": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 16777216,
+        "s": 102,
+        "ell": 18,
+        "tau": 1,
+        "rho": 5,
+        "eta": 39,
+        "degree": 7,
+        "witness_packs": 655,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 739,
+        "max_frontier_hashes_per_tree": 356
+      },
+      "proof_B": 192688
+    },
+    "up_to_2^32": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 2147483648,
+        "s": 81,
+        "ell": 12,
+        "tau": 1,
+        "rho": 5,
+        "eta": 42,
+        "degree": 7,
+        "witness_packs": 822,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 909,
+        "max_frontier_hashes_per_tree": 328
+      },
+      "proof_B": 159232
+    },
+    "up_to_2^48": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 70368744177664,
+        "s": 60,
+        "ell": 7,
+        "tau": 1,
+        "rho": 5,
+        "eta": 48,
+        "degree": 7,
+        "witness_packs": 1110,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 1203,
+        "max_frontier_hashes_per_tree": 302
+      },
+      "proof_B": 125832
+    },
+    "up_to_2^63": {
+      "profile": {
+        "stage_target_bits": 256,
+        "digest_B": 48,
+        "N": 1152921504606846976,
+        "s": 49,
+        "ell": 5,
+        "tau": 1,
+        "rho": 5,
+        "eta": 52,
+        "degree": 7,
+        "witness_packs": 1359,
+        "hint_packs_per_mpc": 9,
+        "leaf_words": 1456,
+        "max_frontier_hashes_per_tree": 288
+      },
+      "proof_B": 109312
+    }
+  },
+  "stage768": {
+    "up_to_2^12": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 4096,
+        "s": 80,
+        "ell": 36,
+        "tau": 9,
+        "rho": 13,
+        "eta": 24,
+        "degree": 7,
+        "witness_packs": 835,
+        "hint_packs_per_mpc": 11,
+        "leaf_words": 1002,
+        "max_frontier_hashes_per_tree": 244
+      },
+      "proof_B": 3680256
+    },
+    "up_to_2^16": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 65536,
+        "s": 144,
+        "ell": 70,
+        "tau": 2,
+        "rho": 13,
+        "eta": 45,
+        "degree": 7,
+        "witness_packs": 465,
+        "hint_packs_per_mpc": 11,
+        "leaf_words": 653,
+        "max_frontier_hashes_per_tree": 688
+      },
+      "proof_B": 1253088
+    },
+    "up_to_2^19": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 524288,
+        "s": 145,
+        "ell": 92,
+        "tau": 1,
+        "rho": 13,
+        "eta": 59,
+        "degree": 7,
+        "witness_packs": 462,
+        "hint_packs_per_mpc": 12,
+        "leaf_words": 677,
+        "max_frontier_hashes_per_tree": 1140
+      },
+      "proof_B": 820024
+    },
+    "up_to_2^20": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 1048576,
+        "s": 167,
+        "ell": 83,
+        "tau": 1,
+        "rho": 13,
+        "eta": 65,
+        "degree": 7,
+        "witness_packs": 400,
+        "hint_packs_per_mpc": 11,
+        "leaf_words": 608,
+        "max_frontier_hashes_per_tree": 1124
+      },
+      "proof_B": 755240
+    },
+    "up_to_2^24": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 16777216,
+        "s": 125,
+        "ell": 56,
+        "tau": 1,
+        "rho": 13,
+        "eta": 63,
+        "degree": 7,
+        "witness_packs": 534,
+        "hint_packs_per_mpc": 11,
+        "leaf_words": 740,
+        "max_frontier_hashes_per_tree": 1016
+      },
+      "proof_B": 599640
+    },
+    "up_to_2^32": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 4294967296,
+        "s": 105,
+        "ell": 35,
+        "tau": 1,
+        "rho": 13,
+        "eta": 70,
+        "degree": 7,
+        "witness_packs": 636,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 836,
+        "max_frontier_hashes_per_tree": 939
+      },
+      "proof_B": 462656
+    },
+    "up_to_2^48": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 281474976710656,
+        "s": 76,
+        "ell": 20,
+        "tau": 1,
+        "rho": 13,
+        "eta": 77,
+        "degree": 7,
+        "witness_packs": 878,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 1085,
+        "max_frontier_hashes_per_tree": 872
+      },
+      "proof_B": 351936
+    },
+    "up_to_2^63": {
+      "profile": {
+        "stage_target_bits": 768,
+        "digest_B": 64,
+        "N": 2305843009213693952,
+        "s": 65,
+        "ell": 15,
+        "tau": 1,
+        "rho": 13,
+        "eta": 83,
+        "degree": 7,
+        "witness_packs": 1027,
+        "hint_packs_per_mpc": 10,
+        "leaf_words": 1240,
+        "max_frontier_hashes_per_tree": 856
+      },
+      "proof_B": 310024
+    }
+  }
+}

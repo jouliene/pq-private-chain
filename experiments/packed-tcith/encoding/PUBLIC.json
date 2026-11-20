@@ -1,0 +1,50 @@
+{
+  "synthetic": {
+    "MNG1": {
+      "public_words": 31,
+      "packing_width": 101,
+      "both_frozen_shapes_identical_to_registration": true,
+      "both_accept_all_full_witness_rows": true,
+      "all_real_paths_match_authenticated_root": true,
+      "direct_and_quadratic_all_path_roots_equal": true,
+      "both_packed_global_maps_checked": true,
+      "coherent_local_port_substitution_rejected": true,
+      "nonzero_padded_word_rejected": true,
+      "ordered_receipt_hash_matches": true,
+      "changed_receipt_rejected": true,
+      "negative_controls": 10,
+      "swapped_receipts_rejected": true
+    },
+    "SLG1": {
+      "public_words": 34,
+      "packing_width": 101,
+      "both_frozen_shapes_identical_to_registration": true,
+      "both_accept_all_full_witness_rows": true,
+      "all_real_paths_match_authenticated_root": true,
+      "direct_and_quadratic_all_path_roots_equal": true,
+      "both_packed_global_maps_checked": true,
+      "coherent_local_port_substitution_rejected": true,
+      "nonzero_padded_word_rejected": true,
+      "ordered_receipt_hash_matches": true,
+      "changed_receipt_rejected": true,
+      "negative_controls": 10,
+      "swapped_receipts_rejected": true
+    }
+  },
+  "public_funded_path": {
+    "common_tip": "000002199e08d8eed9254dc699686679ddf074a1f053e25696db67d652bdc3b5",
+    "pow_blocks": 12,
+    "full_depth_slots_evaluated": 20,
+    "published_public_vectors_compared": [
+      31,
+      34,
+      34,
+      31
+    ],
+    "all_historical_funded_roots_match": true,
+    "both_path_encodings_match_selected_public_root": true,
+    "positive_mined_reward_path": true,
+    "both_refuse_changed_sibling": true,
+    "ordered_receipt_hashes_match": true
+  }
+}

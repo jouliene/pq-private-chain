@@ -1,0 +1,47 @@
+{
+  "shape": "SLG1 degree7, 2^20 parties, 101 slots, 25 openings, 33 masks",
+  "component_sha256": "ac94fc61e0e9f3041edd474d68258351391ec53bb297d03e36c4c810f988286a",
+  "public_result": {
+    "root": "42d4c912e2873ddde7959025c05b3f625580fcd8cfce578e772372a962eb868a9564f43c21ece4c9929c8b29f024bec41db87c90cb326b1404620b777884826b",
+    "leaves": 1048576,
+    "leaf_words": 744,
+    "opened": 25,
+    "degree_checks": 825,
+    "frontier_hashes": 371,
+    "component_transcript_B": 206672
+  },
+  "altered_components": {
+    "opened_share": "masked degree opening mismatch",
+    "frontier": "Merkle root mismatch or trailing data"
+  },
+  "wallet_component": {
+    "elapsed_s": 120.27,
+    "user_cpu_s": 120.22,
+    "system_cpu_s": 0.05,
+    "peak_KiB": 173888
+  },
+  "native_verifier_component": {
+    "elapsed_s": 0.14,
+    "user_cpu_s": 0.13,
+    "system_cpu_s": 0.0,
+    "peak_KiB": 8068,
+    "warm_wall_s": [
+      0.0242786,
+      0.0242358,
+      0.0235859,
+      0.0263715,
+      0.0211848
+    ]
+  },
+  "python_verifier_component": {
+    "elapsed_s": 0.11,
+    "user_cpu_s": 0.11,
+    "system_cpu_s": 0.0,
+    "peak_KiB": 18072
+  },
+  "kernel_timer": "share_table_and_merkle_elapsed_seconds=119.987",
+  "platform": "Linux-6.8.0-149-generic-x86_64-with-glibc2.39",
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "python": "3.12.3"
+}
