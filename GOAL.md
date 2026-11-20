@@ -2,6 +2,8 @@
 
 Starting at AST1 revision 006b8fb8d91a3e61dfb97b666e7bb6ca5748412d, deliver a live native managed asset while retaining existing funded fixed assets and private wallet transfers. Register 1,000 under a permanent issuer, mint 300 with different fee funding, privately pay and restore an offline holder, voluntarily return 200 to treasury and spend the returned note to burn it. Validate outstanding 1,100 from genesis. Require independent clean reproduction, negative monetary controls, reorganization across the burn, durable at-most-once simulated cash payout and an explicit account of outstanding obligations after a deep fork. Publish source, raw public evidence, measurements and reproduction commands. Swaps are deferred. The broader blockchain project remains active.
 
+The author and independent reviewer reproduced the mined upgrade, supply changes, recovery, return, burn, deep reorganization and recovery of the simulated liability. Fresh-node replay agreed with the final supply and native fees. [Acceptance evidence](experiments/managed-assets/README.md) · [Independent results](experiments/managed-assets/review/CLEAN.md)
+
 ## Earlier milestone
 
 # Permissionless fixed-supply user assets

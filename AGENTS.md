@@ -1,3 +1,7 @@
+# Managed assets and redemption
+
+Use a fresh private home and `./pqd managed --home HOME walkthrough`. The original AST1 software mines a funded prefix first. Upgraded validators must independently replay those same blocks and authorize new MNG1 transactions with their pinned verifier. Preserve canonical AST1 history bytes, fixed policy, native fees and current note domains. A managed registration pins its perpetual issuer key. Confirmations are a local simulated bank policy. Keep the bank and coordinator databases private and test ambiguous external payout outcomes with the bank ledger preserved. [Managed protocol and reproduction](experiments/managed-assets/README.md)
+
 # Permissionless user assets
 
 Run `./pqd assets --home NEW_PRIVATE_HOME walkthrough` for the AST1 local PoW network. Start from its empty genesis. The common registered verifier covers native-only payments, private asset transfers and public one-time issuance. Each role installation must match the registered AST1 key. Keep per-asset supply and canonical ID checks inside the same branch transition as fees, nullifiers and funded notes. Preserve the earlier TKN1 commands. Use the [operator and public evidence guide](experiments/user-assets/README.md) for clean setup, offline recovery, monetary reconciliation and measurements. Publish only public packets, blocks and explicitly disclosed test aggregates.

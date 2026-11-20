@@ -1,0 +1,1473 @@
+{
+  "author": {
+    "branch_tips": {
+      "common": {
+        "fees": 21,
+        "height": 46,
+        "issued": 4600,
+        "tip": "000003b235f74ef0a925f2114ca60bd928f355d29d0f53dc44e470ed4059759b"
+      },
+      "final": {
+        "fees": 24,
+        "height": 64,
+        "issued": 6400,
+        "tip": "000002ddbc184c2aec3ec07c0b1df03812cb57187af7fe37226a065d14e30d28"
+      },
+      "loser": {
+        "fees": 24,
+        "height": 56,
+        "issued": 5600,
+        "tip": "000003fb7975cf7bd10b0f3a9454051dd2d84140b447398bd2fac66a106373b9"
+      },
+      "upgrade": {
+        "fees": 3,
+        "height": 5,
+        "issued": 500,
+        "tip": "000000189e7ec530142e7edccf872243711ce814a6bbc2eeef5fd08318993179"
+      },
+      "winner": {
+        "fees": 21,
+        "height": 58,
+        "issued": 5800,
+        "tip": "00000398c69a8ae68189d4d3018592fd433b262a25080b5e29bff529c50bfc99"
+      }
+    },
+    "captured_blocks": 74,
+    "captured_distinct_accepted_packets": 9,
+    "deep_replays": {
+      "a": 1,
+      "d": 0
+    },
+    "final_disclosed_balances": {
+      "fixed-user": {
+        "assets": {
+          "978faf96881881187be98dcf03c39a6fb0319dc2508ec716d1da4055df3a8308": 5
+        },
+        "native": 0
+      },
+      "fork-miner": {
+        "assets": {},
+        "native": 0
+      },
+      "miner-a": {
+        "assets": {
+          "978faf96881881187be98dcf03c39a6fb0319dc2508ec716d1da4055df3a8308": 12
+        },
+        "native": 2782
+      },
+      "miner-b": {
+        "assets": {},
+        "native": 2403
+      },
+      "recovered": {
+        "assets": {
+          "f2500132d8134e0265835b787ff08c4f6ecabc665327a90489dda4639353da52": 200
+        },
+        "native": 6
+      },
+      "treasury": {
+        "assets": {
+          "f2500132d8134e0265835b787ff08c4f6ecabc665327a90489dda4639353da52": 900
+        },
+        "native": 9
+      },
+      "winning-miner": {
+        "assets": {},
+        "native": 1200
+      }
+    },
+    "full_database_comparisons": [
+      {
+        "height": 64,
+        "outputs": 80,
+        "payments": 8,
+        "supply_events": 4
+      },
+      {
+        "height": 64,
+        "outputs": 80,
+        "payments": 8,
+        "supply_events": 4
+      },
+      {
+        "height": 64,
+        "outputs": 80,
+        "payments": 8,
+        "supply_events": 4
+      },
+      {
+        "height": 64,
+        "outputs": 80,
+        "payments": 8,
+        "supply_events": 4
+      }
+    ],
+    "independent_slh": {
+      "independent_provider": "Node 24.22.1 / OpenSSL 3.5.9, SLH-DSA-SHAKE-128f, empty context",
+      "mutated_binding_rejections": [
+        [
+          3,
+          "proof"
+        ],
+        [
+          3,
+          "first_output"
+        ],
+        [
+          3,
+          "second_output"
+        ],
+        [
+          3,
+          "asset"
+        ],
+        [
+          3,
+          "quantity"
+        ],
+        [
+          3,
+          "first_receipt"
+        ],
+        [
+          3,
+          "second_receipt"
+        ],
+        [
+          3,
+          "network"
+        ],
+        [
+          3,
+          "opcode"
+        ],
+        [
+          3,
+          "authority"
+        ],
+        [
+          3,
+          "predecessor"
+        ],
+        [
+          3,
+          "sequence"
+        ],
+        [
+          3,
+          "signature"
+        ],
+        [
+          2,
+          "proof"
+        ],
+        [
+          2,
+          "first_output"
+        ],
+        [
+          2,
+          "second_output"
+        ],
+        [
+          2,
+          "asset"
+        ],
+        [
+          2,
+          "quantity"
+        ],
+        [
+          2,
+          "first_receipt"
+        ],
+        [
+          2,
+          "second_receipt"
+        ],
+        [
+          2,
+          "network"
+        ],
+        [
+          2,
+          "opcode"
+        ],
+        [
+          2,
+          "authority"
+        ],
+        [
+          2,
+          "predecessor"
+        ],
+        [
+          2,
+          "sequence"
+        ],
+        [
+          2,
+          "signature"
+        ]
+      ],
+      "valid_public_signatures": 7
+    },
+    "native_calls": {
+      "legacy_proof": 2,
+      "proof": 20,
+      "signature": 7
+    },
+    "policy_controls": {
+      "duplicate-burn": {
+        "checked_branch": "loser",
+        "independent_reason": "spent nullifier",
+        "positive_inner_proof": true,
+        "public_signature_checked": false,
+        "tx": "adc0fc2873da5c5262ea6f23cb44d49f38fa2225fd0de97847317c657ae0a49c"
+      },
+      "duplicate-mint": {
+        "checked_branch": "common",
+        "independent_reason": "stale issuer state",
+        "positive_inner_proof": true,
+        "public_signature_checked": true,
+        "tx": "56a7af79169a7ac42f7525885a39699861b42030b1044c8e3a566fd3e021e664"
+      },
+      "mint-fixed": {
+        "checked_branch": "common",
+        "independent_reason": "immutable fixed supply",
+        "positive_inner_proof": true,
+        "public_signature_checked": true,
+        "tx": "8009ff07d2c065215990112ffb84bc45b6851572fa17d6ee0c2b66af194d8ccc"
+      },
+      "unregistered-authority": {
+        "checked_branch": "common",
+        "independent_reason": "wrong issuer authority",
+        "positive_inner_proof": true,
+        "public_signature_checked": true,
+        "tx": "c0a3260fd5a701bc47c44b6396fce15cf0d552832c5ab32d395fb3f2278365b8"
+      }
+    },
+    "private_counts": {
+      "checked_final_inventories": 7,
+      "durable_simulated_settlement": {
+        "durable_bank_payments": 1,
+        "durable_mock_fiat_units": 200,
+        "matches_return_and_registered_business_terms": true,
+        "receipt_matches_coordinator_acknowledgment": true,
+        "recorded_burn_attempts": 2,
+        "retained_requests": 1
+      },
+      "matched_external_return_commitments": 1,
+      "matched_first_public_nullifiers_across_both_burns": 2,
+      "old_fixed_outputs_spent_by_upgraded_proof": 1,
+      "real_inputs_with_positive_asset": 1,
+      "returned_and_consumed_units": 200,
+      "winning_burn_real_inputs": 1
+    },
+    "public_replay_sha256": "dedcaeb7b46b6441f127e6c77b6e3466fcc67f833f462ae63a4aecf4987c798e",
+    "public_run_sha256": "86f33c050519286b55b3336fe76bfcfe573c8f3f661991b8fec954eeb181c8db",
+    "redemption": {
+      "after_reorg": {
+        "attempts": 1,
+        "confirmations": 0,
+        "exposure": 200,
+        "height": 58,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "00000398c69a8ae68189d4d3018592fd433b262a25080b5e29bff529c50bfc99"
+      },
+      "enrolled": {
+        "attempts": 0,
+        "confirmations": 0,
+        "exposure": 0,
+        "height": 46,
+        "owed": 200,
+        "paid": 0,
+        "payout_count": 0,
+        "tip": "000003b235f74ef0a925f2114ca60bd928f355d29d0f53dc44e470ed4059759b"
+      },
+      "one_confirmation": {
+        "attempts": 1,
+        "confirmations": 1,
+        "exposure": 0,
+        "height": 48,
+        "owed": 200,
+        "paid": 0,
+        "payout_count": 0,
+        "tip": "0000015f0aaf437f7147080cfeb5f47716c687add81933307fe33e15f61393dc"
+      },
+      "paid": {
+        "attempts": 1,
+        "confirmations": 3,
+        "exposure": 0,
+        "height": 50,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "00000111003e6e82aa50d24307e9ca91c0ef8c88834bd2701e7444f3d3f27459"
+      },
+      "recovered": {
+        "attempts": 2,
+        "confirmations": 3,
+        "exposure": 0,
+        "height": 64,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "000002ddbc184c2aec3ec07c0b1df03812cb57187af7fe37226a065d14e30d28"
+      },
+      "retried": {
+        "attempts": 1,
+        "confirmations": 3,
+        "exposure": 0,
+        "height": 50,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "00000111003e6e82aa50d24307e9ca91c0ef8c88834bd2701e7444f3d3f27459"
+      },
+      "same_receipt_at_all_paid_observations": true
+    },
+    "selected": {
+      "anchor": "7560cd7a429ca0e72e3c18fa275b6d7a3c0b0dc0afe1b24991cfd6e9bea159b2",
+      "fees": 24,
+      "funded_root": "45501f36365e9226c91fbe6e66fb571e81de96ec83e448eb1a458f1e36b2a6b0",
+      "height": 64,
+      "issued": 6400,
+      "miner_credits": 6424,
+      "notes": 80,
+      "payments": 8,
+      "registry": {
+        "978faf96881881187be98dcf03c39a6fb0319dc2508ec716d1da4055df3a8308": {
+          "authority": "",
+          "height": 3,
+          "id": "978faf96881881187be98dcf03c39a6fb0319dc2508ec716d1da4055df3a8308",
+          "mode": "fixed",
+          "sequence": 1,
+          "supply": 17,
+          "tx": "c83111d10be85e4b54bccd71a3484b2d83b991460b049ec344a8d3123c22d1b4"
+        },
+        "f2500132d8134e0265835b787ff08c4f6ecabc665327a90489dda4639353da52": {
+          "authority": "a8a91f09ae75aa9c8ace4ab75484e8a80ce417eba4e0b38f93fdbe901de8a8b8",
+          "height": 62,
+          "id": "f2500132d8134e0265835b787ff08c4f6ecabc665327a90489dda4639353da52",
+          "mode": "managed",
+          "sequence": 3,
+          "supply": 1100,
+          "tx": "9676bb7ec46088868a840358bc2e881224118f2d7961fdd9ca1df712a3e10117"
+        }
+      },
+      "spent": 16,
+      "spent_set_sha256": "73f45c5a4cb1c0b64c98e37e8e3d6970868f5c1613562f284fe0114ee1916279",
+      "tip": "000002ddbc184c2aec3ec07c0b1df03812cb57187af7fe37226a065d14e30d28",
+      "total_supply_events": 4,
+      "work": 268435456
+    },
+    "wallet_restore": {
+      "assets": {
+        "f2500132d8134e0265835b787ff08c4f6ecabc665327a90489dda4639353da52": 400
+      },
+      "native": 12
+    }
+  },
+  "baseline": "006b8fb8d91a3e61dfb97b666e7bb6ca5748412d",
+  "clean": {
+    "branch_tips": {
+      "common": {
+        "fees": 21,
+        "height": 47,
+        "issued": 4700,
+        "tip": "00000310fe23dbea8e70671aef015f1a16e65ce8209f2f655826f82acf1bea79"
+      },
+      "final": {
+        "fees": 24,
+        "height": 70,
+        "issued": 7000,
+        "tip": "0000022cc411a472b1d1ebfb388663db499cd09d92adfb66e00a92b0dff4220b"
+      },
+      "loser": {
+        "fees": 24,
+        "height": 57,
+        "issued": 5700,
+        "tip": "00000070cd9ff81ac9b1fb71947f64a29866a132b154e16311e9ae2be5b5350c"
+      },
+      "upgrade": {
+        "fees": 3,
+        "height": 5,
+        "issued": 500,
+        "tip": "0000020537d27b01182a9d1e06241e473b051a6c4cf30da62cd781d7ad93a698"
+      },
+      "winner": {
+        "fees": 21,
+        "height": 64,
+        "issued": 6400,
+        "tip": "000000337e268f870e2c5cc98327599233e7f0716e9d2b8ca932ae4ec874e9a3"
+      }
+    },
+    "captured_blocks": 80,
+    "captured_distinct_accepted_packets": 9,
+    "deep_replays": {
+      "a": 1,
+      "d": 0
+    },
+    "final_disclosed_balances": {
+      "fixed-user": {
+        "assets": {
+          "ac1102b6c3bc237a9cae4951f8623f1ad4e2c442260c1c77fe45a364292de43e": 5
+        },
+        "native": 0
+      },
+      "fork-miner": {
+        "assets": {},
+        "native": 0
+      },
+      "miner-a": {
+        "assets": {
+          "ac1102b6c3bc237a9cae4951f8623f1ad4e2c442260c1c77fe45a364292de43e": 12
+        },
+        "native": 2773
+      },
+      "miner-b": {
+        "assets": {},
+        "native": 2512
+      },
+      "recovered": {
+        "assets": {
+          "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776": 200
+        },
+        "native": 6
+      },
+      "treasury": {
+        "assets": {
+          "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776": 900
+        },
+        "native": 9
+      },
+      "winning-miner": {
+        "assets": {},
+        "native": 1700
+      }
+    },
+    "full_database_comparisons": [
+      {
+        "height": 70,
+        "outputs": 86,
+        "payments": 8,
+        "supply_events": 4
+      },
+      {
+        "height": 70,
+        "outputs": 86,
+        "payments": 8,
+        "supply_events": 4
+      },
+      {
+        "height": 70,
+        "outputs": 86,
+        "payments": 8,
+        "supply_events": 4
+      },
+      {
+        "height": 70,
+        "outputs": 86,
+        "payments": 8,
+        "supply_events": 4
+      }
+    ],
+    "independent_slh": {
+      "independent_provider": "Node 24.22.1 / OpenSSL 3.5.9, SLH-DSA-SHAKE-128f, empty context",
+      "mutated_binding_rejections": [
+        [
+          3,
+          "proof"
+        ],
+        [
+          3,
+          "first_output"
+        ],
+        [
+          3,
+          "second_output"
+        ],
+        [
+          3,
+          "asset"
+        ],
+        [
+          3,
+          "quantity"
+        ],
+        [
+          3,
+          "first_receipt"
+        ],
+        [
+          3,
+          "second_receipt"
+        ],
+        [
+          3,
+          "network"
+        ],
+        [
+          3,
+          "opcode"
+        ],
+        [
+          3,
+          "authority"
+        ],
+        [
+          3,
+          "predecessor"
+        ],
+        [
+          3,
+          "sequence"
+        ],
+        [
+          3,
+          "signature"
+        ],
+        [
+          2,
+          "proof"
+        ],
+        [
+          2,
+          "first_output"
+        ],
+        [
+          2,
+          "second_output"
+        ],
+        [
+          2,
+          "asset"
+        ],
+        [
+          2,
+          "quantity"
+        ],
+        [
+          2,
+          "first_receipt"
+        ],
+        [
+          2,
+          "second_receipt"
+        ],
+        [
+          2,
+          "network"
+        ],
+        [
+          2,
+          "opcode"
+        ],
+        [
+          2,
+          "authority"
+        ],
+        [
+          2,
+          "predecessor"
+        ],
+        [
+          2,
+          "sequence"
+        ],
+        [
+          2,
+          "signature"
+        ]
+      ],
+      "valid_public_signatures": 7
+    },
+    "live_peer_samples": {
+      "a": {
+        "compared_to_retained_history": 64,
+        "genesis": 0,
+        "samples": 64,
+        "tips": {
+          "common": 44,
+          "final": 63,
+          "loser": 54,
+          "upgrade": 2,
+          "winner": 57
+        }
+      },
+      "b": {
+        "compared_to_retained_history": 68,
+        "genesis": 0,
+        "samples": 68,
+        "tips": {
+          "common": 44,
+          "final": 67,
+          "loser": null,
+          "upgrade": 2,
+          "winner": 61
+        }
+      },
+      "c": {
+        "compared_to_retained_history": 67,
+        "genesis": null,
+        "samples": 67,
+        "tips": {
+          "common": 43,
+          "final": 66,
+          "loser": null,
+          "upgrade": 1,
+          "winner": 60
+        }
+      },
+      "d": {
+        "compared_to_retained_history": 14,
+        "genesis": 0,
+        "samples": 14,
+        "tips": {
+          "common": null,
+          "final": 13,
+          "loser": null,
+          "upgrade": null,
+          "winner": 11
+        }
+      }
+    },
+    "native_calls": {
+      "legacy_proof": 2,
+      "proof": 20,
+      "signature": 7
+    },
+    "policy_controls": {
+      "duplicate-burn": {
+        "checked_branch": "loser",
+        "independent_reason": "spent nullifier",
+        "positive_inner_proof": true,
+        "public_signature_checked": false,
+        "tx": "a8ecdc0bad0abe6f805e0d346b85256c5a73db5b9b453338d79e81ae373ca728"
+      },
+      "duplicate-mint": {
+        "checked_branch": "common",
+        "independent_reason": "stale issuer state",
+        "positive_inner_proof": true,
+        "public_signature_checked": true,
+        "tx": "8e146cbbab826d6b9b54e70e8952d231917467008acb3313992f871e3ef5c2d6"
+      },
+      "mint-fixed": {
+        "checked_branch": "common",
+        "independent_reason": "immutable fixed supply",
+        "positive_inner_proof": true,
+        "public_signature_checked": true,
+        "tx": "c8bf3d8a236074a64e9ac47d3db2f81b3cfa283526115a5a62d7f051c8748b4f"
+      },
+      "unregistered-authority": {
+        "checked_branch": "common",
+        "independent_reason": "wrong issuer authority",
+        "positive_inner_proof": true,
+        "public_signature_checked": true,
+        "tx": "eaea8455514c06af717549564298416a51273f585cd426684f4fabffb94f4d92"
+      }
+    },
+    "private_counts": {
+      "checked_final_inventories": 7,
+      "durable_simulated_settlement": {
+        "durable_bank_payments": 1,
+        "durable_mock_fiat_units": 200,
+        "matches_return_and_registered_business_terms": true,
+        "receipt_matches_coordinator_acknowledgment": true,
+        "recorded_burn_attempts": 2,
+        "retained_requests": 1
+      },
+      "matched_external_return_commitments": 1,
+      "matched_first_public_nullifiers_across_both_burns": 2,
+      "old_fixed_outputs_spent_by_upgraded_proof": 1,
+      "real_inputs_with_positive_asset": 1,
+      "returned_and_consumed_units": 200,
+      "winning_burn_real_inputs": 1
+    },
+    "public_replay_sha256": "ae307eadc31c078c2123aa5aadde9bdbf43ebe4dd7eb00dda46e5c04f099f2a1",
+    "public_run_sha256": "f60048ae23d96693aeb02aa22134c5224aa891a1079148d33c0a557a370d8e64",
+    "redemption": {
+      "after_reorg": {
+        "attempts": 1,
+        "confirmations": 0,
+        "exposure": 200,
+        "height": 64,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "000000337e268f870e2c5cc98327599233e7f0716e9d2b8ca932ae4ec874e9a3"
+      },
+      "enrolled": {
+        "attempts": 0,
+        "confirmations": 0,
+        "exposure": 0,
+        "height": 47,
+        "owed": 200,
+        "paid": 0,
+        "payout_count": 0,
+        "tip": "00000310fe23dbea8e70671aef015f1a16e65ce8209f2f655826f82acf1bea79"
+      },
+      "independent_journal_samples": [
+        {
+          "counts": {
+            "acknowledged": 0,
+            "attempts": 0,
+            "bank_rows": 0,
+            "paid": 0,
+            "requests": 0
+          },
+          "elapsed_s": 259.4287
+        },
+        {
+          "counts": {
+            "acknowledged": 0,
+            "attempts": 0,
+            "bank_rows": 0,
+            "paid": 0,
+            "requests": 1
+          },
+          "elapsed_s": 259.5012
+        },
+        {
+          "counts": {
+            "acknowledged": 0,
+            "attempts": 1,
+            "bank_rows": 0,
+            "paid": 0,
+            "requests": 1
+          },
+          "elapsed_s": 278.5642
+        },
+        {
+          "counts": {
+            "acknowledged": 0,
+            "attempts": 1,
+            "bank_rows": 1,
+            "paid": 200,
+            "requests": 1
+          },
+          "elapsed_s": 293.7906
+        },
+        {
+          "counts": {
+            "acknowledged": 1,
+            "attempts": 1,
+            "bank_rows": 1,
+            "paid": 200,
+            "requests": 1
+          },
+          "elapsed_s": 293.9355
+        },
+        {
+          "counts": {
+            "acknowledged": 1,
+            "attempts": 2,
+            "bank_rows": 1,
+            "paid": 200,
+            "requests": 1
+          },
+          "elapsed_s": 325.9437
+        }
+      ],
+      "observed_bank_commit_before_ack": true,
+      "one_confirmation": {
+        "attempts": 1,
+        "confirmations": 1,
+        "exposure": 0,
+        "height": 49,
+        "owed": 200,
+        "paid": 0,
+        "payout_count": 0,
+        "tip": "000003356b81d51be1bac94cdc83e6ab02bd2a71816258ee5b997296d59b6b04"
+      },
+      "paid": {
+        "attempts": 1,
+        "confirmations": 3,
+        "exposure": 0,
+        "height": 51,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "00000230de8ec45290784fda5ef255c5161a715635ec1e449babc87dba934b55"
+      },
+      "recovered": {
+        "attempts": 2,
+        "confirmations": 3,
+        "exposure": 0,
+        "height": 70,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "0000022cc411a472b1d1ebfb388663db499cd09d92adfb66e00a92b0dff4220b"
+      },
+      "retried": {
+        "attempts": 1,
+        "confirmations": 3,
+        "exposure": 0,
+        "height": 51,
+        "owed": 0,
+        "paid": 200,
+        "payout_count": 1,
+        "tip": "00000230de8ec45290784fda5ef255c5161a715635ec1e449babc87dba934b55"
+      },
+      "same_receipt_at_all_paid_observations": true
+    },
+    "selected": {
+      "anchor": "b039418b93cdc4cf8272cdf3f97a10f04b6c08c828fd325b3c9bbc11c058b3ce",
+      "fees": 24,
+      "funded_root": "6e753a29dc9bb0b51c4e6329da4d3826396ccb2b1831de92857acac068524b0a",
+      "height": 70,
+      "issued": 7000,
+      "miner_credits": 7024,
+      "notes": 86,
+      "payments": 8,
+      "registry": {
+        "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776": {
+          "authority": "fff725c0a6bf5933eeae3f1da5fd13d530a18a52274029609cb06b00dcbb2d1d",
+          "height": 68,
+          "id": "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776",
+          "mode": "managed",
+          "sequence": 3,
+          "supply": 1100,
+          "tx": "947630c5311a5b81e6f37c6d030c6256e2212a1b979ce6f5f83fdeadf27be0b7"
+        },
+        "ac1102b6c3bc237a9cae4951f8623f1ad4e2c442260c1c77fe45a364292de43e": {
+          "authority": "",
+          "height": 3,
+          "id": "ac1102b6c3bc237a9cae4951f8623f1ad4e2c442260c1c77fe45a364292de43e",
+          "mode": "fixed",
+          "sequence": 1,
+          "supply": 17,
+          "tx": "7e3748d47f9c5c143c1df6c1899b3184a2a49a1abff33d8031b2b9c849521c60"
+        }
+      },
+      "spent": 16,
+      "spent_set_sha256": "bc2e1eb6dc8680a7dfa9307aebbb631db7a6dfdd9c0855538a8b0cad971574d6",
+      "tip": "0000022cc411a472b1d1ebfb388663db499cd09d92adfb66e00a92b0dff4220b",
+      "total_supply_events": 4,
+      "work": 293601280
+    },
+    "wallet_restore": {
+      "assets": {
+        "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776": 400
+      },
+      "native": 12
+    }
+  },
+  "clean_packet_measurements": {
+    "branch-burn": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 6,
+      "full_packet_B": 143233,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.006694938987493515,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.374131835,
+          "elapsed_s": 1.278179882,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006188311,
+          "elapsed_s": 0.006188167,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.007288501,
+          "elapsed_s": 0.007288425,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006144565,
+          "elapsed_s": 0.006144501,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006144713,
+          "elapsed_s": 0.006144668,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        }
+      ],
+      "wallet_cpu_s": 9.41,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.375577746,
+          "elapsed_s": 1.264644763,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201312
+        },
+        {
+          "cpu_s": 7.042977088,
+          "elapsed_s": 3.586601935,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451932
+        }
+      ],
+      "wallet_role_peak_KiB": 451932,
+      "wallet_wall_s": 4.852854843949899
+    },
+    "burn": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 6,
+      "full_packet_B": 143233,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.0068710180930793285,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.354742593,
+          "elapsed_s": 1.268446237,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006283514,
+          "elapsed_s": 0.006283399,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006333283,
+          "elapsed_s": 0.006338273,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006257302,
+          "elapsed_s": 0.006257273,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        },
+        {
+          "cpu_s": 0.006192283,
+          "elapsed_s": 0.006192301,
+          "operation": "public_verify",
+          "peak_rss_kib": 201108
+        }
+      ],
+      "wallet_cpu_s": 9.75,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.650650561,
+          "elapsed_s": 1.416595589,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201056
+        },
+        {
+          "cpu_s": 7.111366561,
+          "elapsed_s": 3.619704666,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451736
+        }
+      ],
+      "wallet_role_peak_KiB": 451736,
+      "wallet_wall_s": 5.038036241894588
+    },
+    "deliver": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 6,
+      "full_packet_B": 143233,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.006740818964317441,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.359469386,
+          "elapsed_s": 1.270762803,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006316073,
+          "elapsed_s": 0.006316066,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.00620141,
+          "elapsed_s": 0.006201419,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006143728,
+          "elapsed_s": 0.006143681,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006208247,
+          "elapsed_s": 0.006208237,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        }
+      ],
+      "wallet_cpu_s": 9.54,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.445275599,
+          "elapsed_s": 1.299683227,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201320
+        },
+        {
+          "cpu_s": 7.102567913,
+          "elapsed_s": 3.615191934,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451940
+        }
+      ],
+      "wallet_role_peak_KiB": 451940,
+      "wallet_wall_s": 4.916865350911394
+    },
+    "fixed": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 0,
+      "full_packet_B": 143227,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.006426404928788543,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.361504977,
+          "elapsed_s": 1.268995771,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006292431,
+          "elapsed_s": 0.006292185,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006212126,
+          "elapsed_s": 0.006212099,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006142572,
+          "elapsed_s": 0.006142573,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006126679,
+          "elapsed_s": 0.006126476,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        }
+      ],
+      "wallet_cpu_s": 9.19,
+      "wallet_native_meters": [],
+      "wallet_role_peak_KiB": 451928,
+      "wallet_wall_s": 4.741916744969785
+    },
+    "fixed-pay": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 6,
+      "full_packet_B": 143233,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.006663609063252807,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.353455832,
+          "elapsed_s": 1.266064988,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 201100
+        },
+        {
+          "cpu_s": 0.006245836,
+          "elapsed_s": 0.006245765,
+          "operation": "public_verify",
+          "peak_rss_kib": 201100
+        },
+        {
+          "cpu_s": 0.006184516,
+          "elapsed_s": 0.006184507,
+          "operation": "public_verify",
+          "peak_rss_kib": 201100
+        },
+        {
+          "cpu_s": 0.006140842,
+          "elapsed_s": 0.006140778,
+          "operation": "public_verify",
+          "peak_rss_kib": 201100
+        },
+        {
+          "cpu_s": 0.006144369,
+          "elapsed_s": 0.006144333,
+          "operation": "public_verify",
+          "peak_rss_kib": 201100
+        }
+      ],
+      "wallet_cpu_s": 9.5,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.402432417,
+          "elapsed_s": 1.279472543,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201316
+        },
+        {
+          "cpu_s": 7.098972026,
+          "elapsed_s": 3.607780095,
+          "operation": "compact_prove",
+          "peak_rss_kib": 452192
+        }
+      ],
+      "wallet_role_peak_KiB": 452192,
+      "wallet_wall_s": 4.889275663997978
+    },
+    "mint": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 17166,
+      "full_packet_B": 160393,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.011831082170829177,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.343049468,
+          "elapsed_s": 1.259445182,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006226134,
+          "elapsed_s": 0.006226092,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.004755587,
+          "elapsed_s": 0.004755677,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006142278,
+          "elapsed_s": 0.006142292,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.00472592,
+          "elapsed_s": 0.004726004,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006430589,
+          "elapsed_s": 0.006430517,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.004722301,
+          "elapsed_s": 0.004722282,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.006148734,
+          "elapsed_s": 0.006148692,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        },
+        {
+          "cpu_s": 0.004723087,
+          "elapsed_s": 0.004723029,
+          "operation": "public_verify",
+          "peak_rss_kib": 200976
+        }
+      ],
+      "wallet_cpu_s": 9.52,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.419424095,
+          "elapsed_s": 1.289984565,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201308
+        },
+        {
+          "cpu_s": 7.106061138,
+          "elapsed_s": 3.622992642,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451928
+        }
+      ],
+      "wallet_role_peak_KiB": 451928,
+      "wallet_wall_s": 5.00920009217225
+    },
+    "register": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 17166,
+      "full_packet_B": 160393,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.011814245954155922,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.344493879,
+          "elapsed_s": 1.262906724,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006208715,
+          "elapsed_s": 0.006208969,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.005663704,
+          "elapsed_s": 0.005663662,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006199987,
+          "elapsed_s": 0.006199869,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.00481029,
+          "elapsed_s": 0.004810317,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006193001,
+          "elapsed_s": 0.006192911,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.00473235,
+          "elapsed_s": 0.004732318,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.006145012,
+          "elapsed_s": 0.006144784,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        },
+        {
+          "cpu_s": 0.004712015,
+          "elapsed_s": 0.004711848,
+          "operation": "public_verify",
+          "peak_rss_kib": 201104
+        }
+      ],
+      "wallet_cpu_s": 9.67,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.447266647,
+          "elapsed_s": 1.306521658,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201312
+        },
+        {
+          "cpu_s": 7.230039075,
+          "elapsed_s": 3.686198831,
+          "operation": "compact_prove",
+          "peak_rss_kib": 451804
+        }
+      ],
+      "wallet_role_peak_KiB": 451804,
+      "wallet_wall_s": 5.088160051964223
+    },
+    "return": {
+      "block_length_prefix_B": 4,
+      "ciphertext_pair_B": 3584,
+      "envelope_B": 6,
+      "full_packet_B": 143233,
+      "inner_proof_B": 139634,
+      "public_verify_wall_s_median": 0.006720908917486668,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.346430352,
+          "elapsed_s": 1.262603142,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 200852
+        },
+        {
+          "cpu_s": 0.006319341,
+          "elapsed_s": 0.006319137,
+          "operation": "public_verify",
+          "peak_rss_kib": 200852
+        },
+        {
+          "cpu_s": 0.006178048,
+          "elapsed_s": 0.006178083,
+          "operation": "public_verify",
+          "peak_rss_kib": 200852
+        },
+        {
+          "cpu_s": 0.006174441,
+          "elapsed_s": 0.006174444,
+          "operation": "public_verify",
+          "peak_rss_kib": 200852
+        },
+        {
+          "cpu_s": 0.006182444,
+          "elapsed_s": 0.006182444,
+          "operation": "public_verify",
+          "peak_rss_kib": 200852
+        }
+      ],
+      "wallet_cpu_s": 9.82,
+      "wallet_native_meters": [
+        {
+          "cpu_s": 2.62383573,
+          "elapsed_s": 1.398343426,
+          "operation": "wallet_setup",
+          "peak_rss_kib": 201308
+        },
+        {
+          "cpu_s": 7.202561777,
+          "elapsed_s": 3.665453001,
+          "operation": "compact_prove",
+          "peak_rss_kib": 452056
+        }
+      ],
+      "wallet_role_peak_KiB": 452056,
+      "wallet_wall_s": 5.0656849020160735
+    }
+  },
+  "clean_tested_candidate": "79b7ff184de560c7112b21d6359c0ce9ada9f7c0",
+  "cold_builds_plus_walkthrough": {
+    "exit": 0,
+    "max_rss_KiB": 405320,
+    "system_s": 18.95,
+    "user_s": 294.96,
+    "wall_s": 330.18
+  },
+  "distinct_managed_authorities_across_runs": 2,
+  "host": {
+    "arch": "x86_64",
+    "cpu": "Intel Core i7-8700K 3.70 GHz",
+    "kernel": "6.8.0-149-generic",
+    "python": "3.12.3",
+    "rayon_threads": 2,
+    "rustc": "1.93.0 (254b59607 2026-01-19)"
+  },
+  "independent_primitive_helpers_build": {
+    "exit": 0,
+    "max_rss_KiB": 390012,
+    "system_s": 5.99,
+    "user_s": 62.91,
+    "wall_s": 34.49
+  },
+  "issuer": {
+    "changed_signature": false,
+    "public_key_bytes": 32,
+    "public_verify": true,
+    "repeat_same_signature": true,
+    "restore_same_key": true,
+    "scheme": "SLH-DSA-SHAKE-128f",
+    "short_request": false,
+    "signature_bytes": 17088,
+    "trailing_byte": false,
+    "wrong_key": false,
+    "wrong_network_digest": false
+  },
+  "managed_elf": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+  "managed_vk": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+  "new_winner_only_database": {
+    "delivered_only_winning_blocks": 70,
+    "empty_genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+    "fees": 24,
+    "final_height": 70,
+    "final_native": 7000,
+    "final_tip": "0000022cc411a472b1d1ebfb388663db499cd09d92adfb66e00a92b0dff4220b",
+    "native_operation_counts": {
+      "public_verify": 10,
+      "verifier_setup": 1
+    },
+    "registry": {
+      "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776": {
+        "authority": "fff725c0a6bf5933eeae3f1da5fd13d530a18a52274029609cb06b00dcbb2d1d",
+        "height": 68,
+        "id": "09a7f884e49aa42f9f0c082973036e1770844ff0c85d17367e0d9db855f1e776",
+        "mode": "managed",
+        "sequence": 3,
+        "supply": 1100,
+        "tx": "947630c5311a5b81e6f37c6d030c6256e2212a1b979ce6f5f83fdeadf27be0b7"
+      },
+      "ac1102b6c3bc237a9cae4951f8623f1ad4e2c442260c1c77fe45a364292de43e": {
+        "authority": "",
+        "height": 3,
+        "id": "ac1102b6c3bc237a9cae4951f8623f1ad4e2c442260c1c77fe45a364292de43e",
+        "mode": "fixed",
+        "sequence": 1,
+        "supply": 17,
+        "tx": "7e3748d47f9c5c143c1df6c1899b3184a2a49a1abff33d8031b2b9c849521c60"
+      }
+    },
+    "same_as_AST1": true
+  },
+  "openssl_provider": {
+    "executable_sha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+    "node": "24.22.1",
+    "openssl": "3.5.9"
+  },
+  "original_elf": "275a986ce52e97edde30859883f7fc5fd999552758e656ff139fc588ef02e21a",
+  "original_vk": "99ed868d5bd0f8541bb6467a210bf75140ec696e49e53044f7bca011ed59438a",
+  "public_capture_asset": {
+    "bytes": 3300832,
+    "name": "MNG1-redemption-clean-public.tar.gz",
+    "regular_files": 103,
+    "sha256": "58060f2e8cbaf5fb8ac5a3585d26f674d9fb7c0785bcef9186aa0cc6c8fbe3e5"
+  },
+  "relation": {
+    "burn_different_asset": false,
+    "dummy_burn": false,
+    "dummy_first_mint": false,
+    "entire_maximum_burn": true,
+    "foreign_burn": false,
+    "maximum_mint": true,
+    "overburn": false,
+    "partial_burn": true,
+    "reserved_high_bit": false,
+    "token_funded_mint": false,
+    "transfer": true,
+    "unbalanced_transfer": false,
+    "zero_burn": false
+  },
+  "relation_process": {
+    "exit": 0,
+    "max_rss_KiB": 470776,
+    "system_s": 0.4,
+    "user_s": 31.79,
+    "wall_s": 16.62
+  },
+  "service_control": "PASS: immutable enrollment, exact return binding, confirmation threshold, real post-commit process crash, orphan exposure, replacement reconciliation and concurrent bank idempotency",
+  "source_and_upstreams_clean": true,
+  "upstreams": {
+    "legacy": {
+      "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+      "rev": "f04c91307837c0231668383bec76ba98d89d2652"
+    },
+    "managed": {
+      "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+      "rev": "f04c91307837c0231668383bec76ba98d89d2652"
+    }
+  },
+  "wallet_control": "PASS: exact external return, change exclusion, local-input exclusion, fee selection, missing, spent and ambiguous returns\nPASS: ordinary staged CLI, managed/fixed intent separation, persisted authorization parent, return context and burn/fee equations"
+}

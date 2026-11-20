@@ -1,5 +1,9 @@
 # Current architecture and implementation boundary
 
+## Managed supply and voluntary redemption
+
+On the local PoW chain, policies are permanent at registration. Fixed assets retain their historic AST1 IDs, spend paths and supply. Managed assets share the MNG1 wallet proof and require an SLH-DSA-SHAKE-128f issuer authorization for each positive supply change. The versioned signature binds the complete payment, network and prior public event. Any owner can burn their own managed holdings with a valid funded spend proof. Redemption uses a separate durable payout request and checks that the matching burn consumed the specific returned note. The test bank pays once after three confirmations. A deeper fork can restore outstanding tokens after cash has left. The operator then carries that uncovered amount until the returned tokens are burned again or otherwise reconciled. [Live results, costs and protocol](../experiments/managed-assets/README.md) · [Payout model](../experiments/managed-assets/REDEMPTION.md)
+
 ## User-created fixed-supply assets on the local PoW network
 
 AST1 uses one registered two-input, two-output relation and a branch-local issuance registry. A funded wallet selects a cap and issues without a network upgrade. The initial ID and cap are public. Later payments commit privately to one asset ID and to separately conserved native and token quantities. A native-only input covers the fee when the token note has no native value. A two-lane change note handles both surpluses. The complete ordinary packet is 143,227 bytes. The tested profile cannot exchange two different token IDs in one payment. Atomic two-owner exchange requires a subsequent version. TKN1 remains the executable fixed-token reference. Formal end-to-end PQ security, privacy under network observation and affordable annual archival storage remain open. [Protocol, measurements and public reproduction](../experiments/user-assets/README.md)
