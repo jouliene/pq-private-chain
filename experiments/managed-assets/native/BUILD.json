@@ -1,0 +1,18 @@
+{
+  "binary_sha256": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+  "generated_sources": {
+    "crates/qnero-notes/src/encrypt.rs": "9016ae1c57d517390bdf104d935d971281dfa275fb9bb7683885e2572c316ede",
+    "crates/qnero-pqcrypto/src/note_encryption.rs": "b7f11268f850eb2f545a76afd6d7d4243c71f8a73d4b2a0db904d6b8efe37fe4",
+    "crates/qnero-prover/examples/managed_spend/checks.inc": "bba1a55acb0b6647d99bd8436372d7955477109847cd08f00d436965c172f542",
+    "crates/qnero-prover/examples/managed_spend/codec.rs": "034cd527b8b17d6f1a5088da1cc14f0eaa900419025233014e1f7b8d80dbab3d",
+    "crates/qnero-prover/examples/managed_spend/legacy.rs": "33a0ee37cd7dc81138ce159b1cce264820db6b9ebc8368c258784174bcfe43bb",
+    "crates/qnero-prover/examples/managed_spend/legacy_ast1.vk": "99ed868d5bd0f8541bb6467a210bf75140ec696e49e53044f7bca011ed59438a",
+    "crates/qnero-prover/examples/managed_spend/main.rs": "d5e5e3f4de9e9305a9018e44eb82dc9ff28f92c5e0920eff8b18852aaed2e7dc",
+    "crates/qnero-prover/examples/managed_spend/registry.rs": "ca2864ddac5b5a3eec74e7324b6dc4821291c7412ba9e2c66d5a63adbfcac51e",
+    "crates/qnero-prover/examples/managed_spend/seed.inc": "985813e3eab0a6d0f91b76750ccb63406a1629b57b34ff0a3fc97890411126e5",
+    "crates/qnero-prover/examples/managed_spend/wallet.rs": "219251660c6d928fb5b64053894aff99edf7a5edbddb74d54727380548b6c668"
+  },
+  "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+  "registration_design_sha256": "f43b5995947807a2bfb75e13bff191c690da50457c381ff7c8d8ab7932f84c00",
+  "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+}

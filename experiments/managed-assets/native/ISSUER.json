@@ -1,0 +1,1 @@
+{"changed_signature": false, "public_key_bytes": 32, "public_verify": true, "repeat_same_signature": true, "restore_same_key": true, "scheme": "SLH-DSA-SHAKE-128f", "short_request": false, "signature_bytes": 17088, "trailing_byte": false, "wrong_key": false, "wrong_network_digest": false}

@@ -1,3 +1,9 @@
+# Managed supply and voluntary redemption
+
+Active from AST1 006b8fb8d91a3e61dfb97b666e7bb6ca5748412d. Upgraded nodes retain the AST1 network, genesis, native rewards, prior funded asset notes and the pinned historical verifier. New MSP1 payments use the registered MNG1 proof and SLH-DSA-SHAKE-128f managed authorization. The original and upgraded verifier independently accepted fourteen archived AST1 packets with identical effects. The native MNG1 relation and issuer controls passed. A separate simulated bank passed crash/retry and concurrent request checks. Author live home is .work/mng1-author01. Orchestrator owns consensus, wire, live acceptance and publication. Specialists own the proof roles, ordinary wallet/settlement and independent clean-clone verification. The completed author run extended an H5 funded AST1 history, restored 400 test dollars from seed, and reached H64 with 1,100 managed, 17 fixed, 6,400 native and 24 fees. A confirmed burn and its 200-unit simulated payout separated across a ten-block rollback. Spending the returned note again restored supply without a second payout. The clean independent build, public review and publication are next. No swaps are in scope.
+
+## Earlier milestone
+
 # Permissionless user assets on the PoW network
 
 AST1 implements ordinary wallet issuance and transfer for independent fixed-supply assets under one verifier. Starting point `2bac7cc7e53fb4b5ddbe999d1e634224ba937900`. Author and independent fresh-issuer runs reached heights 106 and 104. Both recovered 70 A, 60 B and 40 native from a 32-byte seed. Both spent each asset with positive change, accepted both recipients’ onward payments, detached B and its dependent transfer while keeping A, and reconciled the final 180 A, 260 B and native supply.

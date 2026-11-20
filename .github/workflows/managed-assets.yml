@@ -1,0 +1,41 @@
+name: Managed supply and voluntary redemption
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/managed-assets/**'
+      - 'experiments/user-assets/**'
+      - 'experiments/token-profile/candidate/**'
+      - 'experiments/payment-architecture/direct/**'
+      - 'experiments/advancing-payments/**'
+      - 'devnet/**'
+      - 'pqd'
+      - '.github/workflows/managed-assets.yml'
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  mined-redemption:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install the pinned compiler and check process isolation
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap build-essential git
+          rustup toolchain install 1.93.0 --profile minimal
+          bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --ro-bind / / -- /usr/bin/true
+      - name: Replay original fixed assets and settle a managed burn across a PoW reorganization
+        run: |
+          set -eu
+          python3 -IB experiments/managed-assets/wallet/check.py
+          python3 -IB experiments/managed-assets/check_redeem_service.py
+          h="$RUNNER_TEMP/managed"
+          ./pqd managed --home "$h" walkthrough
+          RAYON_NUM_THREADS=2 "$h/deployment/runtime/native" check-relation "$h/deployment/keys" | cmp - experiments/managed-assets/native/CHECK.json

@@ -1,3 +1,9 @@
+# Managed supply and voluntary redemption
+
+Starting at AST1 revision 006b8fb8d91a3e61dfb97b666e7bb6ca5748412d, deliver a live native managed asset while retaining existing funded fixed assets and private wallet transfers. Register 1,000 under a permanent issuer, mint 300 with different fee funding, privately pay and restore an offline holder, voluntarily return 200 to treasury and spend the returned note to burn it. Validate outstanding 1,100 from genesis. Require independent clean reproduction, negative monetary controls, reorganization across the burn, durable at-most-once simulated cash payout and an explicit account of outstanding obligations after a deep fork. Publish source, raw public evidence, measurements and reproduction commands. Swaps are deferred. The broader blockchain project remains active.
+
+## Earlier milestone
+
 # Permissionless fixed-supply user assets
 
 Deliver ordinary wallet issuance and private transfer of multiple user-created fixed-supply assets on the same live PoW devnet from 2bac7cc7e53fb4b5ddbe999d1e634224ba937900. Each user can issue by spending native fee funds under the same verifier. Verify seed-only recovery, both assets and native change, subsequent spending, uniqueness, branch-local issuance, cold replay and independently reconciled balances. Measure complete costs and publish the clean independent reproduction. Retain TKN1. The global blockchain objective remains active.

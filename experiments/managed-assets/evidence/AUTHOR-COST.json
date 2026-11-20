@@ -1,0 +1,493 @@
+{
+  "branch-burn": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 6,
+    "full_packet_B": 143233,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.006572011159732938,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.366059592,
+        "elapsed_s": 1.27326983,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006101191,
+        "elapsed_s": 0.006101124,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006019378,
+        "elapsed_s": 0.006019449,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006350755,
+        "elapsed_s": 0.006350707,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006191573,
+        "elapsed_s": 0.006191474,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      }
+    ],
+    "wallet_cpu_s": 9.48,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.387154372,
+        "elapsed_s": 1.27179178,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201184
+      },
+      {
+        "cpu_s": 7.101485307,
+        "elapsed_s": 3.613783035,
+        "operation": "compact_prove",
+        "peak_rss_kib": 451676
+      }
+    ],
+    "wallet_role_peak_KiB": 451676,
+    "wallet_wall_s": 4.887094791047275
+  },
+  "burn": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 6,
+    "full_packet_B": 143233,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.0067214882001280785,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.357727768,
+        "elapsed_s": 1.270652561,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006189154,
+        "elapsed_s": 0.006189546,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006204163,
+        "elapsed_s": 0.006204194,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006139237,
+        "elapsed_s": 0.006139217,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006136246,
+        "elapsed_s": 0.006136253,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      }
+    ],
+    "wallet_cpu_s": 9.46,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.4025837,
+        "elapsed_s": 1.287619981,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201312
+      },
+      {
+        "cpu_s": 7.068643191,
+        "elapsed_s": 3.596668355,
+        "operation": "compact_prove",
+        "peak_rss_kib": 451932
+      }
+    ],
+    "wallet_role_peak_KiB": 451932,
+    "wallet_wall_s": 4.885915130143985
+  },
+  "deliver": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 6,
+    "full_packet_B": 143233,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.006875588092952967,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.370659871,
+        "elapsed_s": 1.274363528,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006450876,
+        "elapsed_s": 0.006450718,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006286532,
+        "elapsed_s": 0.006286505,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006296797,
+        "elapsed_s": 0.006296755,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      },
+      {
+        "cpu_s": 0.006326241,
+        "elapsed_s": 0.006335979,
+        "operation": "public_verify",
+        "peak_rss_kib": 201104
+      }
+    ],
+    "wallet_cpu_s": 9.58,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.473205122,
+        "elapsed_s": 1.315912006,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201312
+      },
+      {
+        "cpu_s": 7.111010429,
+        "elapsed_s": 3.620748477,
+        "operation": "compact_prove",
+        "peak_rss_kib": 451932
+      }
+    ],
+    "wallet_role_peak_KiB": 451932,
+    "wallet_wall_s": 4.938770428998396
+  },
+  "fixed": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 0,
+    "full_packet_B": 143227,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.006515592103824019,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.36227891,
+        "elapsed_s": 1.270347554,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006374506,
+        "elapsed_s": 0.006374564,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006278891,
+        "elapsed_s": 0.006278853,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006218499,
+        "elapsed_s": 0.006218551,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006149597,
+        "elapsed_s": 0.006149348,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      }
+    ],
+    "wallet_cpu_s": 9.56,
+    "wallet_native_meters": [],
+    "wallet_role_peak_KiB": 452028,
+    "wallet_wall_s": 4.947949681198224
+  },
+  "fixed-pay": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 6,
+    "full_packet_B": 143233,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.006803239928558469,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.382260155,
+        "elapsed_s": 1.282304798,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006333744,
+        "elapsed_s": 0.006333799,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006272141,
+        "elapsed_s": 0.006272136,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.006271225,
+        "elapsed_s": 0.00627113,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      },
+      {
+        "cpu_s": 0.00628405,
+        "elapsed_s": 0.006284075,
+        "operation": "public_verify",
+        "peak_rss_kib": 201100
+      }
+    ],
+    "wallet_cpu_s": 9.47,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.423716429,
+        "elapsed_s": 1.289819325,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201188
+      },
+      {
+        "cpu_s": 7.059630712,
+        "elapsed_s": 3.592180379,
+        "operation": "compact_prove",
+        "peak_rss_kib": 451808
+      }
+    ],
+    "wallet_role_peak_KiB": 451808,
+    "wallet_wall_s": 4.883870099205524
+  },
+  "mint": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 17166,
+    "full_packet_B": 160393,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.012116615194827318,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.375853486,
+        "elapsed_s": 1.278255763,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006201917,
+        "elapsed_s": 0.006201905,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.005042922,
+        "elapsed_s": 0.00504297,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006165407,
+        "elapsed_s": 0.006165307,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.005029037,
+        "elapsed_s": 0.005029047,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006147499,
+        "elapsed_s": 0.006147429,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.005052954,
+        "elapsed_s": 0.005052836,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006148165,
+        "elapsed_s": 0.006148135,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.005016124,
+        "elapsed_s": 0.00501621,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      }
+    ],
+    "wallet_cpu_s": 9.51,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.433580966,
+        "elapsed_s": 1.302285468,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201308
+      },
+      {
+        "cpu_s": 7.079327633,
+        "elapsed_s": 3.599442479,
+        "operation": "compact_prove",
+        "peak_rss_kib": 452056
+      }
+    ],
+    "wallet_role_peak_KiB": 452056,
+    "wallet_wall_s": 4.997105370974168
+  },
+  "register": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 17166,
+    "full_packet_B": 160393,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.01201210799627006,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.364710908,
+        "elapsed_s": 1.271191838,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.006304281,
+        "elapsed_s": 0.006304255,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.004901544,
+        "elapsed_s": 0.004901545,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.006161668,
+        "elapsed_s": 0.006161666,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.004850391,
+        "elapsed_s": 0.004850452,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.006187743,
+        "elapsed_s": 0.006187726,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.004872413,
+        "elapsed_s": 0.004872326,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.00621458,
+        "elapsed_s": 0.006214476,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      },
+      {
+        "cpu_s": 0.004838158,
+        "elapsed_s": 0.00483809,
+        "operation": "public_verify",
+        "peak_rss_kib": 200976
+      }
+    ],
+    "wallet_cpu_s": 9.55,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.375974744,
+        "elapsed_s": 1.265782426,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201312
+      },
+      {
+        "cpu_s": 7.176989568,
+        "elapsed_s": 3.651354957,
+        "operation": "compact_prove",
+        "peak_rss_kib": 452060
+      }
+    ],
+    "wallet_role_peak_KiB": 452060,
+    "wallet_wall_s": 5.015562882879749
+  },
+  "return": {
+    "block_length_prefix_B": 4,
+    "ciphertext_pair_B": 3584,
+    "envelope_B": 6,
+    "full_packet_B": 143233,
+    "inner_proof_B": 139634,
+    "public_verify_wall_s_median": 0.006700650090351701,
+    "verifier_meters": [
+      {
+        "cpu_s": 2.376674781,
+        "elapsed_s": 1.27846311,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006254911,
+        "elapsed_s": 0.006255,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006142447,
+        "elapsed_s": 0.006142436,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006143434,
+        "elapsed_s": 0.006143402,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      },
+      {
+        "cpu_s": 0.006181449,
+        "elapsed_s": 0.00618147,
+        "operation": "public_verify",
+        "peak_rss_kib": 201108
+      }
+    ],
+    "wallet_cpu_s": 9.5,
+    "wallet_native_meters": [
+      {
+        "cpu_s": 2.445271407,
+        "elapsed_s": 1.30296508,
+        "operation": "wallet_setup",
+        "peak_rss_kib": 201180
+      },
+      {
+        "cpu_s": 7.069001283,
+        "elapsed_s": 3.607186328,
+        "operation": "compact_prove",
+        "peak_rss_kib": 451800
+      }
+    ],
+    "wallet_role_peak_KiB": 451800,
+    "wallet_wall_s": 4.911912404932082
+  }
+}
