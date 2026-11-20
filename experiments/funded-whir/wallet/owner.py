@@ -109,6 +109,8 @@ def run(name,suite):
             effects.append(e)
         need(len({e.public for e in effects})==2 and len({nf for e in effects for nf in e.nfs})==4 and
              len({cm for e in effects for cm in e.cms})==4,"duplicate key/nullifier/output across final owners")
+        need(common["height"]+1<=expiry and all(ledger.db.execute("SELECT 1 FROM spent WHERE nf=?",(nf,)).fetchone() is None
+             for effect in effects for nf in effect.nfs),"funding already spent at the selected tip or swap expired")
         incoming=effects[2-side]
         swap_wallet.opened(holder,incoming,0,8 if side==1 else 0,asset,0 if side==1 else 20)
         swap_wallet.opened(holder,effects[side-1],1,native_change,asset,token_change)
