@@ -11,10 +11,13 @@ import tarfile
 
 def package(public,observations,costs,receipt,destination):
     paths={name:public/name for name in ('RUN.json','SWAP.bin')}
-    for folder in ('blocks','packets','controls'):
+    for folder in ('blocks','packets','controls','capacity'):
         files=list((public/folder).iterdir())
         assert files
         pattern=r'[0-9a-f]{64}\.bin' if folder!='controls' else r'(incomplete|changed-terms|expired|ordinary-conflict)\.bin'
+        if folder=='capacity':
+            assert {p.name for p in files}=={'0.bin','1.bin','2.bin'}
+            pattern=r'[012]\.bin'
         for p in files:
             assert p.is_file() and not p.is_symlink() and re.fullmatch(pattern,p.name)
             paths[folder+'/'+p.name]=p

@@ -1,0 +1,40 @@
+{
+  "common_blocks_replayed": 16,
+  "common_height": 16,
+  "common_tip": "000000b45aa5f9f01c6a5821127f1decc08a260310ff0bd1295812fc9fd9049d",
+  "fifo_three_then_pair": {
+    "executed": true,
+    "ordinary_ids": [
+      "a8ea29f5e970178e93b208da8a901d42d7d76c81871ac7b81c72b1f586b386c9",
+      "73ba2e1698ff38a359f023852f7a0f28364a98f3fc7de4c67bf56cedf2e3aaed",
+      "30be246c6efbdf5b29cf363bab01875ead72291b3b9de7f2e3ae707ade176786"
+    ],
+    "slots": 3,
+    "subsequent_queue_template_slots": 2,
+    "swap_deferred_in_full": true
+  },
+  "invalid_blocks_mined": 0,
+  "original_pow_block": {
+    "fee_delta": 3,
+    "funded_leaf_delta": 5,
+    "height": 17,
+    "spent_delta": 4,
+    "tip": "0000005c7e853453484acbb9c163297333f122ba68fde2b2b63d787fa057ccd5"
+  },
+  "preseal_candidates": {
+    "cross_reference": "unmatched atomic swap",
+    "interrupted": "swap frame length or version",
+    "isolated_a": "incomplete atomic swap",
+    "isolated_b": "incomplete atomic swap",
+    "reversed": "unmatched atomic swap",
+    "signature_role_0": "invalid swap authorization",
+    "signature_role_1": "invalid swap authorization"
+  },
+  "second_leg_refresh": {
+    "selected_fee_delta": 0,
+    "status": "passed",
+    "stranded_groups": 0,
+    "stranded_rows": 0,
+    "surviving_ordinary": "e20f26f26f5ee15c785f00fa03352580568bd593a7a4e51174e947cae01a12f0"
+  }
+}

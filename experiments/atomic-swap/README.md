@@ -15,7 +15,7 @@ python3 -IB experiments/atomic-swap/controls.py "$lab/net/deployment" "$lab/net/
 python3 -IB experiments/atomic-swap/check_admission.py "$lab/net"
 ~~~
 
-The first command using the new home builds the original MNG1 suite and the separate registered SLG1 spend verifier. Keep the directory private. The operator walkthrough generates disposable seeds, separate wallet databases, three peer processes and a fourth empty node. Each private proving role mounts only its own seed directory. The local test harness shares a Unix account and simulates exchange of messages using private files. For the manual two-party command sequence see the [wallet guide](wallet/README.md).
+The first command using the new home builds the original MNG1 suite and the separate registered SLG1 spend verifier. Keep the directory private. The operator walkthrough generates disposable seeds, separate wallet databases, three peer processes and a fourth empty node. Each private proving role mounts only its own seed directory. The local test harness shares a Unix account and simulates exchange of messages using private files. Each owner has a private backup directory separate from the negotiated messages. The proving sandbox receives no counterparty wallet or backup mount. For the manual two-party command sequence see the [wallet guide](wallet/README.md).
 
 ## Before final authorization
 

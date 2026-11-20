@@ -11,6 +11,7 @@ ROOT=HERE.parents[1]
 HOME=Path(sys.argv[1]).resolve()
 PUBLIC=HOME/"public"
 N=HOME/"negotiation"
+BACKUPS=HOME/"owner-backups"
 sys.path.insert(0,str(HOME/"deployment/devnet"))
 from chain import GENESIS, NETWORK, PROFILE, block_id, decode_block
 from cli import Lab, wait
@@ -160,8 +161,10 @@ def run():
         cmd("create",name)
     for name in ("alice","bob"):
         cmd("export-address",name,N/(name+".addr"))
-        cmd("backup",name,N/(name+".seed"))
-        expect((N/(name+".seed")).stat().st_size==32,"backup size")
+        owner_backup=BACKUPS/name
+        owner_backup.mkdir(mode=0o700,parents=True)
+        cmd("backup",name,owner_backup/"seed")
+        expect((owner_backup/"seed").stat().st_size==32,"backup size")
     for n in "ab":
         lab.mine(n,3)
         agree("abc")
@@ -180,7 +183,7 @@ def run():
     initial=snapshot("funded","c")
     expect(r["balances"]["funded"]=={"alice":dict(native=29,assets={f:15}),"bob":dict(native=27,assets={u:80})},"funding mismatch")
     expect(r["registries"]["funded"][u]["supply"]==330,"managed historical mint/burn")
-    cmd("restore","bob-rival",N/"bob.seed")
+    cmd("restore","bob-rival",BACKUPS/"bob"/"seed")
     expiry=initial["height"]+5
     t=terms("accepted",expiry,f,u)
     # Pre-approval abort genuinely releases the real input for the subsequent agreement.
@@ -278,7 +281,7 @@ def run():
     for name in ("alice","bob"):
         dest=name+"-restored"
         expect(not lab.walletdir(dest).exists(),"warm restore")
-        q=cmd("restore",dest,N/(name+".seed"))
+        q=cmd("restore",dest,BACKUPS/name/"seed")
         expect(dict(native=q["balance"],assets=q["assets"])==r["balances"]["swap_restored"][name],"cold restore mismatch")
     ordinary("respend-a",("send","alice-restored","forward",0,u,30))
     ordinary("respend-b",("send","bob-restored","forward",0,f,7),"b")
@@ -308,7 +311,7 @@ def run():
 if __name__=="__main__":
     with (HOME/".walkthrough.lock").open("a") as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        expect(not any((HOME/k).exists() for k in ("nodes","network.json","public","negotiation")),"walkthrough needs unused node stores")
+        expect(not any((HOME/k).exists() for k in ("nodes","network.json","public","negotiation","owner-backups")),"walkthrough needs unused node stores")
         N.mkdir()
         for s in ("blocks","packets","controls"):
             (PUBLIC/s).mkdir(parents=True)

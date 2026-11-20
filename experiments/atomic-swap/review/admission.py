@@ -71,10 +71,21 @@ def exercise(dep,public,replay,dest):
                         rejected(ledger,lambda:ledger.template(pk,[left,right,left,right,left]),'block capacity')
                         template=ledger.template(pk,[left,right])
                         assert template[213]==2 and int.from_bytes(template[109:117],'little')==103
+                        prefix=[]
+                        for item in doc.get('capacity_fixture',[]):
+                            packet=(public/'capacity'/item['file']).read_bytes()
+                            actual=ledger.offer(packet)
+                            assert actual['id']==sha256(packet).hexdigest()==item['sha256'] and not actual['duplicate']
+                            prefix.append(packet)
+                        assert not prefix or len(prefix)==3
                         assert ledger.offer(raw)['duplicate'] is False
                         assert ledger.offer(raw)['duplicate'] is True
                         rejected(ledger,lambda:ledger.offer(ordinary),'pool conflict')
-                        assert ledger.pending()==[sha256(raw).hexdigest()]
+                        assert ledger.pending()==[sha256(x).hexdigest() for x in (*prefix,raw)]
+                        if prefix:
+                            assert chain.decode_block(ledger.template(pk)+bytes(8)).packets==tuple(prefix)
+                            results['three_ordinary_then_pair']=dict(queued_physical_slots=5,proposed_slots=3,
+                                                                    held_together_until_next_block=True)
                     if name=='expiry' and live['tip']==common:
                         assert ledger.offer(ordinary)['id']==event
                         rejected(ledger,lambda:ledger.offer(raw),'pool conflict')
