@@ -1,0 +1,41 @@
+name: Permissionless private user assets
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/user-assets/**'
+      - 'experiments/advancing-payments/**'
+      - 'experiments/payment-architecture/direct/**'
+      - 'experiments/token-profile/candidate/**'
+      - 'experiments/wallet-created/wallet/**'
+      - 'devnet/**'
+      - 'pqd'
+      - '.github/workflows/user-assets.yml'
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Prepare native isolation and the pinned compiler
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap build-essential git
+          rustup toolchain install 1.93.0 --profile minimal
+          bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --ro-bind / / -- /usr/bin/true
+      - name: Mine, issue two assets, recover and spend across competing branches
+        run: |
+          set -eu
+          h="$RUNNER_TEMP/assets"
+          python3 -IB experiments/user-assets/wallet/check.py
+          ./pqd assets --home "$h" walkthrough
+          RAYON_NUM_THREADS=2 "$h/deployment/runtime/native" check-relation "$h/deployment/keys" > "$RUNNER_TEMP/relation-check.json"
+          cmp "$RUNNER_TEMP/relation-check.json" experiments/user-assets/native/CHECK.json

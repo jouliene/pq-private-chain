@@ -1,3 +1,9 @@
+# Permissionless fixed-supply user assets
+
+Deliver ordinary wallet issuance and private transfer of multiple user-created fixed-supply assets on the same live PoW devnet from 2bac7cc7e53fb4b5ddbe999d1e634224ba937900. Each user can issue by spending native fee funds under the same verifier. Verify seed-only recovery, both assets and native change, subsequent spending, uniqueness, branch-local issuance, cold replay and independently reconciled balances. Measure complete costs and publish the clean independent reproduction. Retain TKN1. The global blockchain objective remains active.
+
+## Earlier milestone
+
 # Live private-token PoW devnet
 
 Deliver live TKN1 token-only receipt, separate mined native funding, seed recovery and subsequent spending on a separately identified local PoW network. Check fork selection, reward rollback, duplicate/retry linkage and monetary reconciliation. Compare a stronger complete proof profile on the same relation. Publish an independently reproduced decision.

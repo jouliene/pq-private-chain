@@ -1,3 +1,9 @@
+# Permissionless user assets on the PoW network
+
+Active from 2bac7cc7e53fb4b5ddbe999d1e634224ba937900. The shared AST1 registered circuit and its positive and negative witness controls passed. The native, wallet and node integration is staged. Three separate nodes started from empty asset and native state. The orchestrator owns node policy, live walkthrough and publication. The construction specialist owns the Rust circuit, wallet role and design comparison. The wallet specialist owns asset inventory and selection. The non-author reviewer owns the separate public branch oracle and fresh deployment. Current author run: .work/ast1-live01. Complete the actual payments, compare both branches, measure, independently rebuild using fresh issuers, and deliver the final public SHA. The original TKN1 code and its evidence are retained.
+
+## Earlier milestone
+
 # Live private-token PoW devnet
 
 The separately identified TKN1 devnet supports live token-only receipt, seed recovery, independent native funding from mined rewards and a two-input private payment. The author selected H31, five payments, 3,100 native issuance and 240 tokens. Four orphan rewards totalling 403 disappeared at reconnection. A clean public clone of c78053fabf7e9944a27921a348cad6c3804284bd reproduced the wallet and fork at H44 with 4,400 native, 240 tokens, 15 fees and 603 detached native rewards removed. The earlier 3041fe96 clean build exposed a missing parent directory in the pristine upstream example tree. The corrected build creates the directory before compiling. All six full payments from each capture verified independently, including one shared-nullifier retry per run.

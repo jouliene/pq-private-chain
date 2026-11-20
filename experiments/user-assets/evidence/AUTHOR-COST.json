@@ -1,0 +1,95 @@
+{
+  "measurements": {
+    "spend-a": {
+      "block_length_prefix_B": 4,
+      "fee": 3,
+      "frame_B": 9,
+      "native_change": 11,
+      "native_sent": 9,
+      "native_wallet_meters": [],
+      "outputs": 2,
+      "packet_B": 143227,
+      "proof_B": 139634,
+      "public_verify_median_cpu_s": 0.00639283,
+      "real_inputs": 2,
+      "receipts_B": 3584,
+      "token_change": 25,
+      "token_sent": 45,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.412045571,
+          "elapsed_s": 1.301163988,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 200980
+        },
+        {
+          "cpu_s": 0.008687163,
+          "elapsed_s": 0.008686105,
+          "operation": "public_verify",
+          "peak_rss_kib": 200980
+        },
+        {
+          "cpu_s": 0.00639283,
+          "elapsed_s": 0.006392589,
+          "operation": "public_verify",
+          "peak_rss_kib": 200980
+        },
+        {
+          "cpu_s": 0.006362703,
+          "elapsed_s": 0.006362253,
+          "operation": "public_verify",
+          "peak_rss_kib": 200980
+        }
+      ],
+      "wallet_call_cpu_s": 9.68,
+      "wallet_call_wall_s": 4.997001792071387,
+      "wallet_role_peak_rss_KiB": 451936
+    },
+    "spend-b": {
+      "block_length_prefix_B": 4,
+      "fee": 3,
+      "frame_B": 9,
+      "native_change": 8,
+      "native_sent": 6,
+      "native_wallet_meters": [],
+      "outputs": 2,
+      "packet_B": 143227,
+      "proof_B": 139634,
+      "public_verify_median_cpu_s": 0.006313312,
+      "real_inputs": 2,
+      "receipts_B": 3584,
+      "token_change": 26,
+      "token_sent": 34,
+      "verifier_meters": [
+        {
+          "cpu_s": 2.379012508,
+          "elapsed_s": 1.281465653,
+          "operation": "verifier_setup",
+          "peak_rss_kib": 200980
+        },
+        {
+          "cpu_s": 0.006362357,
+          "elapsed_s": 0.006362215,
+          "operation": "public_verify",
+          "peak_rss_kib": 200980
+        },
+        {
+          "cpu_s": 0.006313312,
+          "elapsed_s": 0.0063132,
+          "operation": "public_verify",
+          "peak_rss_kib": 200980
+        },
+        {
+          "cpu_s": 0.006288855,
+          "elapsed_s": 0.006288724,
+          "operation": "public_verify",
+          "peak_rss_kib": 200980
+        }
+      ],
+      "wallet_call_cpu_s": 9.69,
+      "wallet_call_wall_s": 5.012471924070269,
+      "wallet_role_peak_rss_KiB": 451940
+    }
+  },
+  "shared_vk_sha256": "99ed868d5bd0f8541bb6467a210bf75140ec696e49e53044f7bca011ed59438a"
+}
