@@ -1,0 +1,42 @@
+name: Private stranger swap on the PoW devnet
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/stranger-swap/**'
+      - 'experiments/atomic-swap/**'
+      - 'pqd'
+      - '.github/workflows/stranger-swap.yml'
+  pull_request:
+    paths:
+      - 'experiments/stranger-swap/**'
+      - 'pqd'
+      - '.github/workflows/stranger-swap.yml'
+permissions:
+  contents: read
+jobs:
+  two-makers:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Prepare pinned runtime and proof compiler
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap git build-essential
+          rustup toolchain install 1.93.0 --profile minimal
+          mkdir -p .tools
+          curl -fsSL https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz -o .tools/node.tar.xz
+          echo '6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6  .tools/node.tar.xz' | sha256sum -c -
+          tar -xf .tools/node.tar.xz -C .tools
+      - name: Exercise wallet identity and hybrid transport
+        run: |
+          set -eu
+          python3 -IB experiments/stranger-swap/transport_check.py
+          python3 -IB experiments/stranger-swap/wallet_check.py
+      - name: Discover two makers with one relay down and spend the proceeds
+        run: ./pqd market --home "$RUNNER_TEMP/stranger" walkthrough

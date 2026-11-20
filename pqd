@@ -1,5 +1,9 @@
 #!/bin/sh
 set -eu
+if [ "${1:-}" = market ]; then
+    shift
+    exec python3 -IB "$(dirname "$0")/experiments/stranger-swap/entry.py" "$@"
+fi
 if [ "${1:-}" = swap ]; then
     shift
     exec python3 -IB "$(dirname "$0")/experiments/atomic-swap/entry.py" "$@"

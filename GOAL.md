@@ -1,3 +1,9 @@
+# Stranger token-for-native exchange
+
+Start from ccf62bf7b271f49f96efdc0cc49cab19e972fb44. A taker who has only 100 managed test dollars and network bootstrap information discovers two unrelated makers, privately obtains firm quotes, trades 20 dollars for 8 native with the maker paying 3, restores from seed and pays 5 plus the ordinary fee of 3. Use two independent short-lived advertisement relays, authenticated encrypted wallet transport, the original SWP1 consensus, separate observers and actual mined admission. Demonstrate loss of one relay, stale quote, identity substitution and maker disconnect. Account for discovery, negotiation, settlement, inclusion time and the absence of abandoned sessions from consensus history. Publish independent clean reproduction, topology and residual privacy and quantum assumptions.
+
+## Earlier milestone
+
 # Pay a first native fee with the proceeds of a private swap
 
 Start at 998b39809b4464a9901161530d60f670b9bfaa7a. A seller with 100 managed dollars and zero native exchanges 20 dollars for 8 native, with a single fee of 3 paid by the counterparty. Recover the seller from its 32-byte seed and send 5 native plus the ordinary fee of 3 from precisely that received note. Verify 80 managed and zero native, both fees and rollback. Exercise underpayment and currency substitution before consent, the published SLG1 verifier, and legacy token-for-token swaps. Publish a wallet walkthrough, public replay and independent clean reproduction. Offer discovery and the separate WHIR frontend remain queued.
