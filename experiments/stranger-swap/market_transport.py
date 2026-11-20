@@ -1,7 +1,6 @@
 """Bounded hybrid TLS and ML-DSA authenticated requests for ephemeral maker adverts."""
 from base64 import b64decode, b64encode
 from hashlib import sha256
-import hashlib
 import ipaddress
 import json
 import os
@@ -86,7 +85,10 @@ def _command(op):
     token = (path, st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns)
     if token != _node_cache:
         with path.open("rb") as f:
-            _need(hashlib.file_digest(f, "sha256").hexdigest() == NODE_SHA256,
+            digest = sha256()
+            for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                digest.update(chunk)
+            _need(digest.hexdigest() == NODE_SHA256,
                   "expected approved Node 24.22.1 Linux x64 binary (set STRANGER_NODE)")
         _node_cache = token
     return [str(path), str(HERE / "transport.mjs"), op]
