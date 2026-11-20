@@ -1,5 +1,6 @@
 """Exercise old funded notes, private managed supply and an irreversible simulated payout on real PoW forks."""
 from hashlib import sha256
+import fcntl
 import json
 from pathlib import Path
 import sqlite3
@@ -276,9 +277,22 @@ class Trial:
         return dict(outstanding=1100,paid=200,fees=final["fees"],height=final["height"],public=str(PUBLIC))
 
 
+def main():
+    with (HOME/".walkthrough.lock").open("a") as lock:
+        try:
+            fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError:
+            sys.exit("a walkthrough is already running in this home")
+        if (HOME/"nodes").exists() or (HOME/"network.json").exists():
+            sys.exit("walkthrough needs unused managed node stores")
+        if PUBLIC.exists() and not (HOME/"legacy-prefix.json").is_file():
+            sys.exit("existing public capture requires a validated legacy prefix")
+        try:
+            print(json.dumps(Trial().run(),indent=2))
+        finally:
+            if (HOME/"network.json").exists():
+                LAB.stop()
+
+
 if __name__=="__main__":
-    try:
-        print(json.dumps(Trial().run(),indent=2))
-    finally:
-        if (HOME/"network.json").exists():
-            LAB.stop()
+    main()
