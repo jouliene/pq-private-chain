@@ -2,6 +2,8 @@
 
 Two independent wallets exchange 7 fixed units for 30 managed units and pay one agreed native fee. Both check exact incoming spendable receipts before release and bind the same complete joint terms to both leg authorizations. Exercise incomplete offers, changed terms, expiry, conflicting ordinary spend, reorg and restored respend under real PoW. Measure both wallets, wire, block and verifier, then publish a fresh independent reproduction. The global blockchain objective remains active.
 
+The clean independent build and mined two-wallet exercise have run. The [operator guide](experiments/atomic-swap/README.md), [non-author audit](experiments/atomic-swap/review/CLEAN.md) and [release readback](https://github.com/jouliene/pq-private-chain/releases/tag/private-atomic-swap-2026-11-20) record the bounded milestone and its verification boundary.
+
 ## Earlier milestone
 
 # Managed supply and voluntary redemption

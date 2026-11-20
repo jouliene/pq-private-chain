@@ -9,7 +9,7 @@ import sys
 
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
-from swaps import ZERO, hash_bytes
+from swaps import ZERO, hash_bytes, decode_pair, joint
 
 
 def dbread(path):
@@ -45,6 +45,40 @@ def effects(raw):
     return (pi[40:72],pi[72:104]),(pi[104:136],pi[136:168])
 
 
+def private_agreement(home,network,asset_ids):
+    private=home/'negotiation'
+    terms=(private/'accepted.terms').read_bytes()
+    assert len(terms)==3358 and terms[:40]==b'SWPTER01'+network and terms[40:72]!=ZERO
+    expiry=struct.unpack_from('<I',terms,72)[0]
+    raw=(home/'public/SWAP.bin').read_bytes()
+    frames=decode_pair(raw)
+    commit=hash_bytes(b'SWP1/private-terms/v1\0'+terms)
+    legs=[f[17195:] for f in frames]
+    signature_message=joint(network,commit,expiry,0,legs)
+    assert all(f[43:75]==commit for f in frames)
+    for i,(name,mode,qty) in enumerate([('alice','fixed',7),('bob','managed',30)]):
+        pos=76+1641*i
+        address=(private/(name+'.addr')).read_bytes()
+        assert len(address)==1673 and address[:40]==b'PQDADDR1'+network and hash_bytes(address[:-32])==address[-32:]
+        assert terms[pos:pos+1601]==address[40:-32]
+        assert terms[pos+1601:pos+1633]==asset_ids[mode] and struct.unpack_from('<Q',terms,pos+1633)==(qty,)
+        signature=frames[i][107:17195]
+        with dbread(home/'wallets'/name/'mng1-intents.sqlite') as db:
+            row=db.execute("SELECT public,joint,signature,leg,state,pins FROM swap_sessions WHERE terms=? AND side=?",
+                           (commit,i)).fetchone()
+            assert row is not None and row[1:4]==(signature_message,signature,legs[i])
+            assert row[4] in ('released','released-unlocked') and 1<=len(json.loads(row[5]))<=2
+            pi=legs[i][-3584-272:-3584]
+            assert row[0]==struct.pack('<8I',*struct.unpack_from('<8Q',pi,208))
+    # Salt, private negotiation addresses and full agreement are absent as byte strings from emitted public artifacts.
+    for p in (home/'public').rglob('*'):
+        if p.is_file():
+            data=p.read_bytes()
+            assert terms[40:72] not in data and all(terms[76+i*1641:76+i*1641+1601] not in data for i in (0,1))
+    return dict(local_authorizations_match_published_signatures=2,actual_incoming_terms_checked=2,
+                public_capture_excludes_private_salt_and_full_addresses=True)
+
+
 def check(home,summary):
     report=json.loads(summary.read_bytes())
     winner=report['selected']
@@ -63,6 +97,7 @@ def check(home,summary):
     swap=groups[0]
     registry={r['mode']:bytes.fromhex(x) for x,r in winner['registry'].items()}
     assert set(registry)=={'fixed','managed'}
+    approvals=private_agreement(home,bytes.fromhex(report['network']),registry)
     paths=sorted((home/'wallets').glob('*/mng1-wallet-state.sqlite'))
     assert paths
     detail=[]
@@ -104,7 +139,7 @@ def check(home,summary):
                      received_and_respent_tokens=quantity,native_change=change_native,token_change=change,
                      received_native=0,ordinary_inputs=2,ordinary_native_only_fee_inputs=1)))
     assert detail[0][0]!=detail[1][0]
-    return dict(two_distinct_restored_wallet_owners=True,winning_bundle=swap['id'],
+    return dict(two_distinct_restored_wallet_owners=True,winning_bundle=swap['id'],private_approvals=approvals,
                 exact_external_swap_outputs_consumed=2,exact_own_change_outputs_matched=2,
                 wallets=[case for _,case in detail])
 

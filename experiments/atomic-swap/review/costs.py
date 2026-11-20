@@ -42,7 +42,9 @@ def check(public,audit,measure):
             assert c['pair_wall_s']>0 and c['native_verification_cpu_s']>0
             assert c['ipc_to_verifier_B']==sum(legs)+2*(1+32+32+17088)+16
             assert c['ipc_from_verifier_B']==2*(3789+1)+16
-        assert group['total_cpu_through_shutdown_s']>=group['parent_cpu_through_shutdown_s']
+        observed=sum(row['cpu_s'] for row in group['live_sandbox_process_cpu_at_last_verdict'])
+        assert group['parent_and_all_observed_process_cpu_to_last_verdict_s']>=observed+group['completed_setup_helpers_cpu_s']
+        assert group['native_high_resolution_metered_cpu_s']>=sum(t['native_verification_cpu_s'] for t in group['calls'])
     warm=measured['warm_process_including_one_warmup']['calls'][1:]
     assert measured['warm_measured_pairs']==len(warm)==5
     assert measured['warm_median_pair_wall_s']==statistics.median(t['pair_wall_s'] for t in warm)

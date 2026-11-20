@@ -1,0 +1,453 @@
+{
+  "cold": {
+    "audit_boundary_checks": {
+      "both_orders_of_pool_conflict": true,
+      "first_rejected_candidate_height": 21,
+      "four_slot_ceiling": true,
+      "inclusive_expiry_height": 20,
+      "isolated_and_reordered_frames_rejected": true,
+      "replays": {
+        "expiry": {
+          "blocks": 20,
+          "fees": 27,
+          "tip": "0000001a177a228df154d844c0c810ced3e7ef77e2265f3d10f713ec8c8d568e"
+        },
+        "three_ordinary_then_pair": {
+          "held_together_until_next_block": true,
+          "proposed_slots": 3,
+          "queued_physical_slots": 5
+        },
+        "winning": {
+          "blocks": 27,
+          "fees": 36,
+          "tip": "000000283478d2bb1fc52d54563196f8ffbcf735000a5cc73fb78723a4b67d48"
+        }
+      },
+      "unchanged_state_and_mempool_on_rejections": true
+    },
+    "blocks": 38,
+    "branch_salt_is_private": true,
+    "branch_tips": {
+      "before_reorg": {
+        "fees": 30,
+        "height": 21,
+        "tip": "000003cb39554c3986fdf118d41917f4882ce3c006c156c858da4edc7ac5e080"
+      },
+      "common": {
+        "fees": 27,
+        "height": 16,
+        "tip": "0000000bfa5af12f72bac025308670aec4cff5a738b0d97956ea0846ec08c3e6"
+      },
+      "expiry_branch": {
+        "fees": 27,
+        "height": 20,
+        "tip": "0000001a177a228df154d844c0c810ced3e7ef77e2265f3d10f713ec8c8d568e"
+      },
+      "final": {
+        "fees": 36,
+        "height": 27,
+        "tip": "000000283478d2bb1fc52d54563196f8ffbcf735000a5cc73fb78723a4b67d48"
+      },
+      "funded": {
+        "fees": 27,
+        "height": 15,
+        "tip": "000003becdcb95ed7f96b4251a4ccb1af286f851c3cd864b48251c4274cfacf8"
+      },
+      "swap_detached": {
+        "fees": 30,
+        "height": 23,
+        "tip": "000002b17affec4bb83ae5e6f501996781731234e9de4bea79211d700faafecc"
+      },
+      "swap_included": {
+        "fees": 30,
+        "height": 17,
+        "tip": "00000175e21420e79ef958d2368fb528628671c6bacb3e2839dfa855074de64d"
+      },
+      "swap_restored": {
+        "fees": 30,
+        "height": 25,
+        "tip": "000002a707f00d7749b48bfaa1946ad04a81febd5a3f7d4c74c1a2d827f8e199"
+      }
+    },
+    "charges": {
+      "block_incremental_B": 320900,
+      "checked_negotiation_one_copy_B": 324036,
+      "fresh_verifier_process_wall_s": 1.3435458280146122,
+      "physical_frame_B": [
+        160446,
+        160446
+      ],
+      "proof_B": [
+        139658,
+        139658
+      ],
+      "receipt_B": 7168,
+      "rpc_upload_B": 320928,
+      "signatures_B": 34176,
+      "upload_B": 320905,
+      "wallets": {
+        "wallet_A": {
+          "fee": 3,
+          "prover_cpu_s": 9.44,
+          "prover_role_peak_rss_KiB": 452116,
+          "proving_wall_s": 4.86664734990336,
+          "real_inputs": 1
+        },
+        "wallet_B": {
+          "fee": 0,
+          "prover_cpu_s": 9.5,
+          "prover_role_peak_rss_KiB": 451680,
+          "proving_wall_s": 4.89296896988526,
+          "real_inputs": 1
+        }
+      },
+      "warm_median_joint_parent_and_native_cpu_s": 0.02606413300000001,
+      "warm_median_joint_verification_wall_s": 0.02667015604674816,
+      "warm_peak_native_KiB": 201132,
+      "whole_mined_block_B": 321122
+    },
+    "checkout": "anonymous detached public HTTPS, fresh upstream checkout and starting Cargo target, MNG1 then SLG1 in one release target",
+    "clean_funded_original_commitments_spent_by_ordinary_transfers": true,
+    "cold_observed_walkthrough": {
+      "exit_code": 0.0,
+      "peak_process_KiB": 405544.0,
+      "system_s": 11.75,
+      "user_s": 184.3,
+      "wall_s": 341.01
+    },
+    "consensus_final": {
+      "atomic_swaps": 1,
+      "fees": 36,
+      "height": 27,
+      "issued": 2700,
+      "logical_payments": 12,
+      "miner_credits": 2736,
+      "notes": 53,
+      "physical_payments_and_legs": 13,
+      "spent": 26
+    },
+    "consensus_policy_controls": {
+      "changed-terms": "invalid swap authorization",
+      "expired": "swap expired",
+      "incomplete": "incomplete atomic swap",
+      "ordinary-conflict": "spent nullifier"
+    },
+    "final_holdings": {
+      "alice": {
+        "assets": {
+          "ee98a37e58284d31f937d5f4157ff573af9d75d2765c24180ff6c3a05d98157c": 8
+        },
+        "native": 23
+      },
+      "bob": {
+        "assets": {
+          "87eb7ed606d41c5bff0f8bdca8e1d269222269264b180768951b21a5611ad12b": 50
+        },
+        "native": 24
+      },
+      "burner": {
+        "assets": {},
+        "native": 0
+      },
+      "forward": {
+        "assets": {
+          "87eb7ed606d41c5bff0f8bdca8e1d269222269264b180768951b21a5611ad12b": 30,
+          "ee98a37e58284d31f937d5f4157ff573af9d75d2765c24180ff6c3a05d98157c": 7
+        },
+        "native": 0
+      },
+      "miner-a": {
+        "assets": {
+          "ee98a37e58284d31f937d5f4157ff573af9d75d2765c24180ff6c3a05d98157c": 55
+        },
+        "native": 1771
+      },
+      "miner-b": {
+        "assets": {
+          "87eb7ed606d41c5bff0f8bdca8e1d269222269264b180768951b21a5611ad12b": 250
+        },
+        "native": 882
+      },
+      "rival": {
+        "assets": {},
+        "native": 0
+      }
+    },
+    "final_tip": "000000283478d2bb1fc52d54563196f8ffbcf735000a5cc73fb78723a4b67d48",
+    "genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+    "immutable_fixed_supply": 70,
+    "implementation_revision": "7cb00ba285193213d7c18996d5b6a95bc83822f6",
+    "independent_review": "Replayed public blocks, recomputed monetary and authorization statements, and reconciled participant-disclosed fixture economics against local wallet commitments and public evidence.",
+    "managed_supply": 330,
+    "native_role_controls": {
+      "fees": [
+        3,
+        0
+      ],
+      "leg_bytes": [
+        143251,
+        143251
+      ],
+      "legs": 2,
+      "ordinary_respend_bytes": 143227,
+      "ordinary_respend_same_received_nullifier": true,
+      "proof_bytes": [
+        139658,
+        139658
+      ],
+      "reciprocal_receipts_and_change_opened_by_both_profiles": true,
+      "standalone_raw_and_retagged_legs_rejected": true,
+      "two_signatures_verified": true,
+      "wrong_key_and_expiry_rejected": true
+    },
+    "negative_signature_fields": [
+      "expiry",
+      "leg0_digest",
+      "leg1_digest",
+      "network",
+      "ordered_legs",
+      "payer",
+      "terms"
+    ],
+    "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+    "peer_observations": {
+      "a": {
+        "changes_observed": 42,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 42,
+        "observed_final": true
+      },
+      "b": {
+        "changes_observed": 43,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 43,
+        "observed_final": true
+      },
+      "c": {
+        "changes_observed": 43,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 43,
+        "observed_final": true
+      },
+      "d": {
+        "changes_observed": 6,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 6,
+        "observed_final": true
+      }
+    },
+    "private_fixture": {
+      "exact_external_swap_outputs_consumed": 2,
+      "exact_own_change_outputs_matched": 2,
+      "private_approvals": {
+        "actual_incoming_terms_checked": 2,
+        "local_authorizations_match_published_signatures": 2,
+        "public_capture_excludes_private_salt_and_full_addresses": true
+      },
+      "two_distinct_restored_wallet_owners": true,
+      "wallets": [
+        {
+          "gave_asset_mode": "fixed",
+          "gave_tokens": 7,
+          "native_change": 17,
+          "ordinary_inputs": 2,
+          "ordinary_native_only_fee_inputs": 1,
+          "received_and_respent_tokens": 30,
+          "received_asset_mode": "managed",
+          "received_native": 0,
+          "token_change": 8
+        },
+        {
+          "gave_asset_mode": "managed",
+          "gave_tokens": 30,
+          "native_change": 18,
+          "ordinary_inputs": 2,
+          "ordinary_native_only_fee_inputs": 1,
+          "received_and_respent_tokens": 7,
+          "received_asset_mode": "fixed",
+          "received_native": 0,
+          "token_change": 50
+        }
+      ],
+      "winning_bundle": "15299a6f87860533c6f4d189525bb443f51c5d8c7c80416bf0841e6699d6fe45"
+    },
+    "private_statistics": {
+      "final_authorizations": 2,
+      "proofs": 2,
+      "terms_file_B": 3358
+    },
+    "production_admission_checks": {
+      "executed": true,
+      "ordinary_ids": [
+        "973be6cad42416931544f62e4805d9ec15730e484a1776d0c48debaff58e5b31",
+        "ef144077f00f2cd130beec39609f7dd195f3197c388bbb4a3b0d6ae9101ccfcc",
+        "29805acfa209132966eb7d9a617222992a705c14cbcff7e2bffbf96f91773267"
+      ],
+      "slots": 3,
+      "subsequent_queue_template_slots": 2,
+      "swap_deferred_in_full": true
+    },
+    "proofs_and_signatures": {
+      "legacy_independent_signatures": 2,
+      "managed_calls": {
+        "legacy_proof": 0,
+        "proof": 12,
+        "signature": 2
+      },
+      "swap_independent_checks": {
+        "changed_authorizations_rejected": 50,
+        "provider": "Node 24.22.1 / OpenSSL 3.5.9",
+        "tested_changes": [
+          "expiry",
+          "leg_0_anchor",
+          "leg_0_fee",
+          "leg_0_first_commitment",
+          "leg_0_first_nullifier",
+          "leg_0_first_receipt",
+          "leg_0_one_time_key",
+          "leg_0_proof",
+          "leg_0_second_commitment",
+          "leg_0_second_receipt",
+          "leg_1_anchor",
+          "leg_1_fee",
+          "leg_1_first_commitment",
+          "leg_1_first_nullifier",
+          "leg_1_first_receipt",
+          "leg_1_one_time_key",
+          "leg_1_proof",
+          "leg_1_second_commitment",
+          "leg_1_second_receipt",
+          "network",
+          "order",
+          "partner_key",
+          "payer",
+          "signature",
+          "terms"
+        ],
+        "valid_distinct": 2
+      },
+      "swap_leg_proof_calls": 2
+    },
+    "public_selected_db_count": 4,
+    "registered_relation_controls": {
+      "different_token": false,
+      "fee_one": false,
+      "fee_three": true,
+      "fee_zero": true,
+      "token_inflation": false,
+      "wrong_ephemeral_key": false
+    },
+    "registered_roles": [
+      {
+        "approved_binary": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+        "registered_vk": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+        "role": "MNG1"
+      },
+      {
+        "approved_binary": "46ee4c569abe6eea973843713444a759075534de169fa3a6177f0f869973cc1a",
+        "registered_vk": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837",
+        "role": "SLG1"
+      }
+    ],
+    "toolchain": "rustc 1.93.0; RAYON_NUM_THREADS=2; Intel Core i7-8700K",
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652",
+    "wire_control_verdict_count": 23
+  },
+  "public_archive": {
+    "archive": "SWP1-clean-public.tar.gz",
+    "bytes": 5991937,
+    "extracted_and_sha256sum_checked": true,
+    "public_only_replay_matches_all_semantic_fields": true,
+    "regular_files": 65,
+    "sha256": "5a95bd5c8281c2c8f3f425055951bd4a12cb94db77b04c6509cc63f8950da9ab"
+  },
+  "separate_author_capture": {
+    "all_public_blocks": 38,
+    "checked_node_databases": 4,
+    "costs": {
+      "block_incremental_B": 320900,
+      "checked_negotiation_one_copy_B": 324036,
+      "fresh_verifier_process_wall_s": 1.362695466959849,
+      "physical_frame_B": [
+        160446,
+        160446
+      ],
+      "proof_B": [
+        139658,
+        139658
+      ],
+      "receipt_B": 7168,
+      "rpc_upload_B": 320928,
+      "signatures_B": 34176,
+      "upload_B": 320905,
+      "wallets": {
+        "wallet_A": {
+          "fee": 3,
+          "prover_cpu_s": 9.47,
+          "prover_role_peak_rss_KiB": 451940,
+          "proving_wall_s": 4.881233913823962,
+          "real_inputs": 1
+        },
+        "wallet_B": {
+          "fee": 0,
+          "prover_cpu_s": 9.45,
+          "prover_role_peak_rss_KiB": 451944,
+          "proving_wall_s": 4.875641095917672,
+          "real_inputs": 1
+        }
+      },
+      "warm_median_joint_parent_and_native_cpu_s": 0.02449971800000001,
+      "warm_median_joint_verification_wall_s": 0.025114507880061865,
+      "warm_peak_native_KiB": 201004,
+      "whole_mined_block_B": 321122
+    },
+    "final": {
+      "atomic_swaps": 1,
+      "fees": 36,
+      "height": 27,
+      "issued": 2700,
+      "logical_payments": 12,
+      "miner_credits": 2736,
+      "notes": 53,
+      "physical_payments_and_legs": 13,
+      "spent": 26
+    },
+    "final_tip": "0000019b6a0400f66a401ab95b1bd9b11e411a5a75efad0beaee216ada19024b",
+    "private_joins": {
+      "exact_external_swap_outputs_consumed": 2,
+      "exact_own_change_outputs_matched": 2,
+      "private_approvals": {
+        "actual_incoming_terms_checked": 2,
+        "local_authorizations_match_published_signatures": 2,
+        "public_capture_excludes_private_salt_and_full_addresses": true
+      },
+      "two_distinct_restored_wallet_owners": true,
+      "wallets": [
+        {
+          "gave_asset_mode": "fixed",
+          "gave_tokens": 7,
+          "native_change": 17,
+          "ordinary_inputs": 2,
+          "ordinary_native_only_fee_inputs": 1,
+          "received_and_respent_tokens": 30,
+          "received_asset_mode": "managed",
+          "received_native": 0,
+          "token_change": 8
+        },
+        {
+          "gave_asset_mode": "managed",
+          "gave_tokens": 30,
+          "native_change": 18,
+          "ordinary_inputs": 2,
+          "ordinary_native_only_fee_inputs": 1,
+          "received_and_respent_tokens": 7,
+          "received_asset_mode": "fixed",
+          "received_native": 0,
+          "token_change": 50
+        }
+      ],
+      "winning_bundle": "426dede34f211a92cc439766fd87b14dc0dbd7a5bd635ab868c7020d03483e6c"
+    },
+    "winning_swap": "426dede34f211a92cc439766fd87b14dc0dbd7a5bd635ab868c7020d03483e6c"
+  }
+}
