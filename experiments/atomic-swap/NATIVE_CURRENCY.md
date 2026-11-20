@@ -51,8 +51,11 @@ Implementation revision `19ab038415951aaae5dfc14cf8724bda2c408967` produced the 
 | Private agreement + two offers + two signatures, one copy each | 324,039 bytes |
 | Seller prover, wall / CPU / peak RSS | 4.793 s / 9.30 s / 451,936 KiB |
 | Buyer prover, wall / CPU / peak RSS | 4.809 s / 9.32 s / 452,064 KiB |
+| Full public verifier after warmup, median wall / CPU / peak process RSS | 24.89 ms / 24.33 ms / 201,012 KiB |
 
-The proof timings cover fresh leg creation. They exclude builds, seed recovery, mining and file transfer. The private agreement width increased by three bytes. Its version is hidden from a verifier with just the opaque terms commitment. Supply 3,361 to the measurement command when the private agreement version is known.
+The public verifier measured five pairs after one warmup. The wallet timings cover fresh leg creation. [Raw verifier samples](evidence/NATIVE-CURRENCY-COST.json)
+
+These times exclude builds, seed recovery, mining and file transfer. The private agreement width increased by three bytes. Its version is hidden from a verifier with just the opaque terms commitment. Supply 3,361 to the measurement command when the private agreement version is known.
 
 ## Replay the published exchange
 
@@ -69,3 +72,5 @@ python3 -IB experiments/atomic-swap/review/native_currency_prior.py \
 ~~~
 
 The public check can establish valid spends, both fee credits and fork handling. Establishing that the ordinary payment consumed precisely the seller's acquired note requires a local opening under that holder's spending key. Freshly generate that private check from the local walkthrough and follow the independent review. Public releases exclude the private terms, offer salt, seeds, note openings and negotiation journals.
+
+A non-author also reconciled four peer databases against a second mined graph and opened both genuine rejected offers with the seller’s independently restored key. The independent archive contains the public replay and aggregate wallet findings. [Independent results and reproduction](review/NATIVE-CURRENCY.md) · [Machine receipt](review/NATIVE-CURRENCY.json)

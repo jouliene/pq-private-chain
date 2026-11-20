@@ -116,6 +116,9 @@ def local(home, report):
         stack.callback(verifier.abort)
         for name,expected in [('short',(7,0,ZERO)),('substitute',(0,8,bytes.fromhex(run['asset_ids']['substitute'])))]:
             rejected = (home/'negotiation'/(name+'.leg')).read_bytes()
+            observed=run['checks'][name]
+            assert observed['genuine_proved_offer'] and not observed['final_signature_released'] and not observed['submitted']
+            assert observed['error'].startswith('wallet cannot open') and not (home/'negotiation'/(name+'.sig')).exists()
             assert rejected[:5] == b'SLG1\x01' and rejected != legs[1]
             fx = verifier.call(rejected)
             assert len(fx) == 3789 and fx[0:1] == b'1' and int.from_bytes(fx[165:173],'little') == 3

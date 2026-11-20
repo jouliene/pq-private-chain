@@ -2,6 +2,8 @@
 
 Start at 998b39809b4464a9901161530d60f670b9bfaa7a. A seller with 100 managed dollars and zero native exchanges 20 dollars for 8 native, with a single fee of 3 paid by the counterparty. Recover the seller from its 32-byte seed and send 5 native plus the ordinary fee of 3 from precisely that received note. Verify 80 managed and zero native, both fees and rollback. Exercise underpayment and currency substitution before consent, the published SLG1 verifier, and legacy token-for-token swaps. Publish a wallet walkthrough, public replay and independent clean reproduction. Offer discovery and the separate WHIR frontend remain queued.
 
+The author and a non-implementing reviewer completed the scenario independently, including the exact note-to-spend check, old public verifier and reversal of both fees. [Walkthrough](experiments/atomic-swap/NATIVE_CURRENCY.md) · [Independent run](experiments/atomic-swap/review/NATIVE-CURRENCY.md)
+
 ## Earlier milestone
 
 # Decide the spend-proof profile for funded payments and swaps

@@ -1,0 +1,293 @@
+{
+  "audit_freeze_sha": "f9d2cd2d7f389f8ac696ea035e5c3005041390c9",
+  "audit_source_sha256": {
+    "native_currency_audit.py": "5a889cfdf51c426bf9e3f4d6fd2a5d946d3b13d649bfb89b8b87603cf5c1e6b3",
+    "native_currency_legacy.py": "1809c8efdc320849e888d1a909d3fe2f6145b1ab144a3f0906affa2f2e19a6e9",
+    "native_currency_observe.py": "d43f68337e36877e766ae46fac175a7c9f0b4d1cbc9a36b7833c3864aceb33b0",
+    "native_currency_package.py": "403ce961ca1553890dfbfcbf5efce222ad62e0af895e8e02522e9c97a2d957c7",
+    "native_currency_prior.py": "c2d1831560f65c537002402ed53f5c8589487a8a7d9db7b29e574de7cbcdb197",
+    "native_currency_wallet.py": "d1649066f2469e26ff2377dae4b3193abdc323028b61019e17ffdf64636b85da"
+  },
+  "author_crosscheck": {
+    "all_public_blocks": 32,
+    "bundle": "99e1c6a66cf8f97a866b126c66b3f51f4deb51a2435a6be037db2832a2e67025",
+    "independent_private_joins_agree": true,
+    "reconciled_databases": 4,
+    "selected_fees": 21,
+    "selected_tip": "000000bcf5153aae077e8ed2939b939d614b66162d1dbcb3be543edbcf208765"
+  },
+  "implementation_sha": "19ab038415951aaae5dfc14cf8724bda2c408967",
+  "independent_run": {
+    "all_public_blocks": 32,
+    "branch_tips": 3,
+    "cold_wall_launch_through_shutdown_s": 1.3206498129293323,
+    "crypto_roles": [
+      {
+        "approved_binary": "360fa89587ec7dd6d349516ad26ccc29178c32e82f583568fc38c9520f59d8f5",
+        "registered_vk": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+        "role": "MNG1"
+      },
+      {
+        "approved_binary": "46ee4c569abe6eea973843713444a759075534de169fa3a6177f0f869973cc1a",
+        "registered_vk": "0527447637fa2f34d9585606501c4a55883c0ceaf58adb2d3e9834c66ab19837",
+        "role": "SLG1"
+      }
+    ],
+    "historical_ELFs_byte_identical": true,
+    "independent_joint_signatures": 2,
+    "legacy_token_for_token": {
+      "authenticated_v1_preimage_and_expiry_matched": true,
+      "complete_B": 320905,
+      "fee_by_leg": [
+        3,
+        0
+      ],
+      "final_authorizations_verified": 2,
+      "local_prior_party_amounts": [
+        7,
+        30
+      ],
+      "old_complete_bundle_sha256": "130d0d5f4ee36727a49724b4947236a334c3b8136fdffdb409a7c2dddc658183",
+      "payer": 0,
+      "public_proofs_verified": 2
+    },
+    "mutated_messages_or_signatures_rejected": 50,
+    "negotiation_one_copy_each_B": 324039,
+    "negotiation_size_method": "Direct local stat of five actual files and wire reconstruction with that agreement width; independent public verifier times preserved.",
+    "observed_private_terms_B": 3361,
+    "old_node_unchanged": true,
+    "ordinary_tx": "073e2400f2f3299dfe0751f1deb1fb96250353a2b4ccdcb9b2ff96e461665773",
+    "peer_observation_counts": {
+      "a": {
+        "changes_observed": 33,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 33,
+        "observed_final": true
+      },
+      "b": {
+        "changes_observed": 31,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 31,
+        "observed_final": true
+      },
+      "c": {
+        "changes_observed": 31,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 31,
+        "observed_final": true
+      },
+      "d": {
+        "changes_observed": 5,
+        "daemon_pids": 1,
+        "matched_to_captured_graph": 5,
+        "observed_final": true
+      }
+    },
+    "positive_reversed_order_rejected": true,
+    "prior_node_public_rejection_controls": [
+      "incomplete",
+      "missing-first",
+      "changed-terms",
+      "changed-payer",
+      "expired",
+      "ordinary-conflict"
+    ],
+    "reconciled_databases": 4,
+    "selected_logical_payments": 7,
+    "selected_miner_credits": 2121,
+    "selected_native_issued": 2100,
+    "selected_registry_supply_by_mode": {
+      "fixed": 8,
+      "managed": 100
+    },
+    "snapshots": {
+      "before_reorg": {
+        "buyer_native": 14,
+        "fees": 21,
+        "height": 17,
+        "ordinary_recipient_native": 5,
+        "seller_managed": 80,
+        "seller_native": 0
+      },
+      "common": {
+        "buyer_native": 25,
+        "fees": 15,
+        "height": 12,
+        "ordinary_recipient_native": 0,
+        "seller_managed": 100,
+        "seller_native": 0
+      },
+      "expiry_branch": {
+        "buyer_native": 25,
+        "fees": 15,
+        "height": 16,
+        "ordinary_recipient_native": 0,
+        "seller_managed": 100,
+        "seller_native": 0
+      },
+      "final": {
+        "buyer_native": 14,
+        "fees": 21,
+        "height": 21,
+        "ordinary_recipient_native": 5,
+        "seller_managed": 80,
+        "seller_native": 0
+      },
+      "funded": {
+        "buyer_native": 25,
+        "fees": 15,
+        "height": 11,
+        "ordinary_recipient_native": 0,
+        "seller_managed": 100,
+        "seller_native": 0
+      },
+      "native_respent": {
+        "buyer_native": 14,
+        "fees": 21,
+        "height": 14,
+        "ordinary_recipient_native": 5,
+        "seller_managed": 80,
+        "seller_native": 0
+      },
+      "swap_detached": {
+        "buyer_native": 20,
+        "fees": 18,
+        "height": 19,
+        "ordinary_recipient_native": 0,
+        "seller_managed": 100,
+        "seller_native": 0
+      },
+      "swap_included": {
+        "buyer_native": 14,
+        "fees": 18,
+        "height": 13,
+        "ordinary_recipient_native": 0,
+        "seller_managed": 80,
+        "seller_native": 8
+      },
+      "swap_restored": {
+        "buyer_native": 14,
+        "fees": 21,
+        "height": 21,
+        "ordinary_recipient_native": 5,
+        "seller_managed": 80,
+        "seller_native": 0
+      }
+    },
+    "swap": {
+      "block_frame_B": [
+        160446,
+        160446
+      ],
+      "complete_in_block_B": 320900,
+      "complete_upload_B": 320905,
+      "expiry": 16,
+      "fee_by_leg": [
+        0,
+        3
+      ],
+      "id": "8f30a0068d7ee98e9ea8a32cedb5a7f8800ff07c2cc026d94e40662950936ba1",
+      "leg_B": [
+        143251,
+        143251
+      ],
+      "leg_txids": [
+        "608e113184305fadeee5403ce27843779071af94e25cc8173e24105edcb0a825",
+        "884f3f69fc7f86234b54bb0c81ac5d821f1e90f79884187162d521877224c675"
+      ],
+      "payer": 1,
+      "proof_B": [
+        139658,
+        139658
+      ],
+      "receipt_B": 7168,
+      "signature_B": 34176
+    },
+    "tip": "000000d3e924143ee527a143dcb927c128dd6435f642ad5e164b230f4d1f7fd7",
+    "wall_walkthrough_and_sampler_s": 193.82,
+    "wallet_controls": {
+      "alternate_offers": [
+        {
+          "candidate": "short",
+          "previously_released_leg_verifier_accepted": true,
+          "seller_backup_opened_payment": true,
+          "unsigned_offer_aborted": true
+        },
+        {
+          "candidate": "substitute",
+          "previously_released_leg_verifier_accepted": true,
+          "seller_backup_opened_payment": true,
+          "unsigned_offer_aborted": true
+        }
+      ],
+      "buyer_native_change": 14,
+      "historical_managed_verifier_key": "1895505caa69ce3cf55adcde8ce2e60c03ac0d7d4d8551888d71a8176e8b946d",
+      "historical_managed_x86_64_binary_matched": true,
+      "independent_local_agreements_and_signatures": 2,
+      "ordinary_consumed_exact_acquired_native_output": true,
+      "ordinary_fee": 3,
+      "ordinary_payment": 5,
+      "ordinary_real_inputs": 1,
+      "reference_ordinary_wallet_recovered_seeds": 2,
+      "seller_incoming_native": 8,
+      "seller_initial": {
+        "native": 0,
+        "token": 100
+      },
+      "seller_selected_final": {
+        "native": 0,
+        "token": 80
+      },
+      "seller_swap_change": {
+        "native": 0,
+        "token": 80
+      },
+      "swap_input_count_each": [
+        1,
+        1
+      ],
+      "verified_spendable_ordered_swap_outputs": 4,
+      "wrong_owner_misses": 2
+    },
+    "wallets": {
+      "wallet_A": {
+        "fee": 0,
+        "prover_cpu_s": 9.39,
+        "prover_role_peak_rss_KiB": 451940,
+        "proving_wall_s": 4.836273994995281,
+        "real_inputs": 1
+      },
+      "wallet_B": {
+        "fee": 3,
+        "prover_cpu_s": 9.44,
+        "prover_role_peak_rss_KiB": 452072,
+        "proving_wall_s": 4.86792644392699,
+        "real_inputs": 1
+      }
+    },
+    "warm_cpu_s": 0.024037484999999997,
+    "warm_native_peak_KiB": 201140,
+    "warm_wall_s": 0.024532923009246588
+  },
+  "preceding_public_sha": "998b39809b4464a9901161530d60f670b9bfaa7a",
+  "previous_consensus_runtime": {
+    "chain.py": "029afef113db8691053910afe6af5fce4282914eb243480c4c5ccb79f46c92ca",
+    "managed_ledger.py": "0dc97699a13057b9d1a940e7571dfc4153a3868d572084640a320e28fd55611f",
+    "managed_ops.py": "c80f8d1c99ec3272d79bcc97256fa16fc6d13ddd7e270a3d97021229047b367d",
+    "swap_ledger.py": "3b4f47a46e92df3ba8ed4d1150a69f54ca37e65e4973027707b541c54ea23535",
+    "swap_wire.py": "0c1fdd12aaeda2613d21e83cee772507fb8d38db2c5f38a5b66fccacbe24c66f"
+  },
+  "public_archive": {
+    "bytes": 4549717,
+    "regular_files": 57,
+    "release_filename": "independent-public.tar.gz",
+    "sha256": "c32a4cece791e16a7e3af8360ae467900478733179be03d3ed2bf00b2fa07ef5"
+  },
+  "receipt_diagnostic": {
+    "deployment_revision": "998b39809b4464a9901161530d60f670b9bfaa7a",
+    "passed": true,
+    "restored_wallets": 2,
+    "tested_checkout": "d99750538c75f259dc3a3a6fc74ff67b9e76fa22"
+  },
+  "status": "independent matched"
+}
