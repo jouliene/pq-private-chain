@@ -9,6 +9,8 @@ import tempfile
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent/"wallet-created/wallet"))
 from bridge import libraries
+sys.path.insert(0, str(HERE))
+from packet import split
 
 
 def sandbox(binary):
@@ -24,8 +26,11 @@ def run(binary, directory, matrices):
     results = []
     with tempfile.TemporaryDirectory() as tmp:
         path = Path(tmp)/"packet"
-        for name, suite, n in (("ordinary","MNG1",31), ("leg-a","SLG1",34), ("leg-b","SLG1",34)):
-            original = (directory/f"{name}.candidate").read_bytes()
+        a, b = split((directory/"candidate.swap").read_bytes())
+        specimens = [("ordinary","MNG1",31,(directory/"ordinary.candidate").read_bytes()),
+                     ("leg-a","SLG1",34,a.leg), ("leg-b","SLG1",34,b.leg),
+                     ("onward","MNG1",31,(directory/"onward.candidate").read_bytes())]
+        for name, suite, n, original in specimens:
             proof_start = 9+8*n
             proof_end = len(original)-3584
             matrix = matrices/f"{suite}.r1cs"
