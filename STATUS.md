@@ -1,6 +1,6 @@
-# WHIR for funded transfers and swap legs — active
+# Funded WHIR proof decision
 
-Baseline f1a513207f73ee84c3034938a00dba1d68cd7b3b. Both registered matrices and genuine proving are running. A preliminary 130-word comparison passed on an older staged wallet policy. The independent clean walkthrough exposed a zero-token receipt check in the fixture adapter at review revision 98bed4230b988ead25841b73d9ca23afdb80dcaa. Keep the strict check and correct the fixture: use the canonical zero asset for native-only receipts and respect ordinary randomized output roles. Both accepted runs must use the current checkout policy, fresh proofs and the isolated backup-only restart. Resume with experiments/funded-whir/README.md; author funding is in .work/funded-whir-live01. The global blockchain objective remains active.
+Retain MNG1 and SLG1 on the local PoW devnet. Two independent fresh runs at `ad0998099afae89ec544640f6fda6af5fd14e1d6` verified the complete ordinary transfer, both signed swap legs and the seed-restored onward spend. Both runs matched 130 public fields and eight ciphertexts. The independent ordinary packet grew from 143,233 to 239,233 bytes; the full swap grew from 320,905 to 514,005 bytes. The live PoW chain admitted the released encoding. The candidate verifier and the unchanged funded-note rules established compatibility. End-to-end quantum knowledge and joint privacy remain open. The next proof experiment is a target-priced masked small-interleave code switch; the global blockchain objective remains active. [Architecture decision](experiments/funded-whir/DECISION.md) · [Commands and public evidence](experiments/funded-whir/README.md) · [Independent review](experiments/funded-whir/review/REVIEW.md)
 
 ## Earlier milestone
 

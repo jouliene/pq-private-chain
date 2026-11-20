@@ -2,6 +2,8 @@
 
 An independent blockchain research project with private payments and a post-quantum security objective. Run `./pqd start` to launch the first local proof-of-work network with two CPU miners and three validating peers. Follow the [short wallet walkthrough and reproduction instructions](devnet/README.md) to make a payment, restore a wallet from seed and test a deep reorganization. End-to-end PQ security, network privacy and production economics remain open.
 
+The funded WHIR comparison builds full private transfers and signed native-for-token swaps on the same MNG1/SLG1 notes. The two profiles produce the same public effects and encrypted receipts. The local network retains MNG1 and SLG1. [Proof costs and decision](experiments/funded-whir/DECISION.md) · [Verify the public packets or create fresh proofs](experiments/funded-whir/README.md)
+
 Run `./pqd market --home "$(mktemp -d)/net" walkthrough` to discover two makers, request private funded quotes with one discovery relay unavailable, swap 20 managed dollars for 8 native coins, and spend the acquired note after seed recovery. The same walkthrough can put the winning maker and surviving relay on a second host. [User commands, costs and privacy](experiments/stranger-swap/README.md)
 
 A wallet with tokens and zero native coins can trade for its first native balance. Run `./pqd swap --home "$(mktemp -d)/network" native-walkthrough` to sell 20 managed dollars for 8 native units, restore the seller from seed and spend those 8 as a payment of 5 plus a fee of 3. [Walkthrough and public replay](experiments/atomic-swap/NATIVE_CURRENCY.md)

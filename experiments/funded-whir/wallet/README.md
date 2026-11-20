@@ -16,7 +16,10 @@ git init -q "$lab/qnero"
 git -C "$lab/qnero" fetch --depth=1 https://github.com/DigitalGuards/qnero.git f04c91307837c0231668383bec76ba98d89d2652
 git -C "$lab/qnero" checkout --detach FETCH_HEAD
 python3 -IB experiments/funded-whir/wallet/build.py "$lab/capture" "$lab/qnero" "$lab/cargo-target"
-constants=$(find "${CARGO_HOME:-$HOME/.cargo}/registry/src" -path '*/qp-poseidon-core-3.1.0/src/poseidon2.rs' -print -quit)
+matrix_dir="$lab/whir"
+python3 -IB experiments/funded-whir/prepare.py "$matrix_dir" > "$lab/whir-tools.json"
+funded_whir_binary="$matrix_dir/build/release/funded-whir"
+constants=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["constants"])' "$lab/whir-tools.json")
 python3 -IB experiments/funded-whir/wallet/fixtures.py "$lab/net" "$lab/capture" \
     "$constants" "$matrix_dir" "$funded_whir_binary" "$lab/public-comparison"
 ~~~

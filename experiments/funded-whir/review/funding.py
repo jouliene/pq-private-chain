@@ -91,7 +91,7 @@ def check(events,blocks,deployment,helpers,node,home=None,write_prefix=None):
                         native,token,asset=struct.unpack_from('<QQ32s',op,35)
                         assert native+token>0
                         found.append(dict(native=native,token=token,asset='native' if asset==ZERO else 'managed'))
-                        assert asset==ZERO or asset.hex() in common.supply()
+                        assert asset==ZERO or common.supply()[asset.hex()]['mode']=='managed'
                 opened_inputs.append(found)
             assert [len(v) for v in opened_inputs]==[2,1,1]
             assert opened_inputs[1]==[dict(native=0,token=100,asset='managed')]
@@ -111,7 +111,14 @@ def check(events,blocks,deployment,helpers,node,home=None,write_prefix=None):
                         assert op[3:35] in onward.nullifiers
                     seen.append((native,token))
             assert seen==[(0,20),(0,80),(8,0),(14,0)]
-            payouts=[]
+            live_matches=[]
+            for cm,_,ct,reward in settled.outs:
+                origin=cm+ct if ct else reward[:72]+bytes(8)+reward[72:]
+                op=seller.call(b'D'+origin)
+                if op[:3]==b'HIT' and op[3:35] in onward.nullifiers and op[3:35] not in settled.spent:
+                    live_matches.append((cm,*struct.unpack_from('<QQ32s',op,35)))
+            assert live_matches==[(fx[1].commitments[0],8,0,ZERO)]
+            payouts=[];changes=[]
             for j,cm in enumerate(onward.commitments):
                 origin=cm+onward.receipts[j*1792:(j+1)*1792]
                 op=buyer.call(b'D'+origin)
@@ -119,10 +126,15 @@ def check(events,blocks,deployment,helpers,node,home=None,write_prefix=None):
                     native,token,asset=struct.unpack_from('<QQ32s',op,35)
                     assert (native,token,asset)==(5,0,ZERO)
                     payouts.append(j)
-            assert len(payouts)==1
+                own=seller.call(b'D'+origin)
+                if own[:3]==b'HIT':
+                    assert struct.unpack_from('<QQ32s',own,35)==(0,0,ZERO)
+                    changes.append(j)
+            assert len(payouts)==len(changes)==1 and payouts!=changes
             results.update(real_funded_source_counts=[len(v) for v in opened_inputs],funded_private_checks=opened_inputs,
                            exact_swap_outputs_native_and_token=seen,restored_source8_matched_onward_public_nullifier=True,
-                           actual_beneficiary_opened5=True,ordinary_fee=onward.fee)
+                           actual_beneficiary_opened5=True,exact_live_recovered_funded_source_count=len(live_matches),
+                           restored_change_native_and_token=[0,0],ordinary_fee=onward.fee)
             for role in owners:
                 role.close()
         m.close();s.close()

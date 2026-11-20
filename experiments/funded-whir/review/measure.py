@@ -55,7 +55,11 @@ def measure(events,dep,role,matrices):
                        'old_verifier_setup':session['setup'],
                        'candidate_full_check_fresh_processes':current,
                        'candidate_median_wall_s':median(r['wall_s'] for r in current)}
+    companion=json.loads(subprocess.check_output([sys.executable,'-IB',HERE.parent/'node_cost.py',dep,role,matrices,
+                                                   events/'candidate.swap']))
     return dict(public_verifier=result,prover_and_per_instance_process_measurements=source['profiles'],
+                candidate_pair_with_persistent_signature_service=companion,
+                CPU_boundary='The standalone sampler sums Python CPU and reaped-child accounting. The companion separately samples the live signature service and includes its observed CPU.',
                 candidate_scope='Three standalone processes with locally cached files; swap launches a fresh historical signature verifier and two fresh CFW verifiers for each full check. No persistent CFW verifier interface in this revision.',
                 source='Wallet per-proof measurements come from the fresh owner-run source trace. Full public packet checks above are separate reviewer runs.')
 

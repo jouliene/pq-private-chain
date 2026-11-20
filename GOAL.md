@@ -1,6 +1,8 @@
-# WHIR for funded transfers and native-for-token swaps
+# Determine whether WHIR can verify existing funded transfers and swap legs
 
-Compare every released public word on identical funded openings, verify both new swap legs and a two-input transfer, reacquire both signatures, and test recipient recovery and spending. Price the security and resource profile before selecting retain, revise or replace. The live MNG1/SWP1 devnet remains the reference.
+Starting at f1a513207f73ee84c3034938a00dba1d68cd7b3b, implement the complete zero-supply MNG1 transfer and both separately authorized SLG1 legs, preserve the funded notes and live devnet, compare all public fields and receipt bytes, prove and verify the two-owner exchange, restore from seed and spend, and determine the parameters' assurance and full packet cost. Preserve mint and burn through MNG1. Independently reproduce and publish the comparison.
+
+Both runs produced four genuine WHIR proofs and authorized their new bytes. The bounded architecture decision retains the live verifier registrations. Both sampled signed frame pairs fit, the research profile has a larger combinatorial maximum, and the stronger profile already exceeds the frame budget in expectation. The decision, conditional security bounds and next experiment are in the [funded proof comparison](experiments/funded-whir/DECISION.md). The broader blockchain research objective remains active.
 
 ## Earlier milestone
 

@@ -1,0 +1,310 @@
+{
+  "accepted_public_packets": 4,
+  "audit_source_hashes": {
+    "funding.py": "abb0bd7d5f1151155bc4023bc152b0656013babaa0eaee9dee6ab25c9cd2b94f",
+    "measure.py": "8860546454183cdda6d0dab91aa871d9daa6bfc03ff3fea6fdf9d25144ad27c9",
+    "package.py": "97f07883b9378945f3d36678b0222e6147e8483717180ad64d487a54277b074f",
+    "profile.py": "cd5cbb1dfedd6635e9ea536caddd5656d5082c9401b53deba1788fab5c7d13e0",
+    "public.py": "cce88d064a0cc24d0d84f65340809ce78d49b06d96de657de62b04fac0807d7c",
+    "tape.py": "a21eb25b5b372eb94518087176c0948cefd5eb5cc42f3ce5b1e87e019657dd75"
+  },
+  "byte_identical_proof_build_SHA": "98bed4230b988ead25841b73d9ca23afdb80dcaa",
+  "candidate_pair_with_live_signature_role": {
+    "bytes": 514005,
+    "largest_exited_child_peak_KiB": 60256,
+    "live_signature_service_cpu_s": 0.009999999999999787,
+    "pair_wall_s": 0.298384313005954,
+    "parent_cpu_s": 0.004862778999999998,
+    "parent_peak_KiB": 26972,
+    "proof_processes_cpu_s": 0.283416,
+    "scope": "pair layout, two fresh full WHIR checks with registered matrix reads, two SLH-DSA verifications, fee and uniqueness checks; excludes selected-chain database and PoW",
+    "signature_cpu_tick_s": 0.01,
+    "signature_service_startup_and_negative_control_s": 1.3369466948788613,
+    "total_pair_cpu_s": 0.29827877899999977
+  },
+  "decision": "retain live MNG1/SLG1 and revise WHIR as a research candidate",
+  "first_clean_attempt": "wallet adapter supplied nonzero managed tag for an ordinary receipt with zero token value; current deployed wallet rejected it before authorization. Corrected code rerun with same new funding, fresh proofs and signatures.",
+  "funded_source_SHA": "f1a513207f73ee84c3034938a00dba1d68cd7b3b",
+  "funds": {
+    "actual_beneficiary_opened5": true,
+    "ancestor_blocks_from_genesis": 12,
+    "common_tip": "000002199e08d8eed9254dc699686679ddf074a1f053e25696db67d652bdc3b5",
+    "exact_live_recovered_funded_source_count": 1,
+    "exact_swap_outputs_native_and_token": [
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        80
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        14,
+        0
+      ]
+    ],
+    "funded_private_checks": [
+      [
+        {
+          "asset": "native",
+          "native": 97,
+          "token": 0
+        },
+        {
+          "asset": "native",
+          "native": 103,
+          "token": 0
+        }
+      ],
+      [
+        {
+          "asset": "managed",
+          "native": 0,
+          "token": 100
+        }
+      ],
+      [
+        {
+          "asset": "native",
+          "native": 25,
+          "token": 0
+        }
+      ]
+    ],
+    "independently_verified_native_spend_from_swap_anchor": "4656b924b663ed9d261f7eece227824f18005de46f242c1ca0db774bee5164e4",
+    "independently_verified_release_extension": "000001494f04f1970c4c6a031325a0c0bd67b31cf5dab69d15ceebbe2bc057ba",
+    "inherited_anchor": "0cc6e8c6d0a830b6d3473cbb1b79fb09f64f4e4bb70507ec1117edf1f0b8b4ec",
+    "managed_funded_supplies": {
+      "0390588497051b2f1dc1b711a3d2397ef503e42de124bc5c7b69b84298e57901": {
+        "authority": "",
+        "height": 8,
+        "id": "0390588497051b2f1dc1b711a3d2397ef503e42de124bc5c7b69b84298e57901",
+        "mode": "fixed",
+        "sequence": 1,
+        "supply": 8,
+        "tx": "0f9fbac99ee9619ffcfdd4cf4bf67396253fb763f0d24271f892ca06d8fd0124"
+      },
+      "a798275777e9d2465efb1426ed81292d8f9795325df5eb2844a8a02290915e4e": {
+        "authority": "133c206537003d3981fde0589808126a1e204f075dd6a822bc88cbf56863dce7",
+        "height": 7,
+        "id": "a798275777e9d2465efb1426ed81292d8f9795325df5eb2844a8a02290915e4e",
+        "mode": "managed",
+        "sequence": 1,
+        "supply": 100,
+        "tx": "d7e98eef91097a4868d9707a3ad41730b0b71754c25ecb24c94c6570f4134b75"
+      }
+    },
+    "onward_recorded_as": "verified and admitted to old mempool by fixture",
+    "ordinary_fee": 3,
+    "real_funded_source_counts": [
+      2,
+      1,
+      1
+    ],
+    "restored_change_native_and_token": [
+      0,
+      0
+    ],
+    "restored_source8_matched_onward_public_nullifier": true,
+    "selected_released_swap_inclusion_height": 13,
+    "settled_extension_publicly_verified": true,
+    "swap_fee_and_credit": [
+      3,
+      103
+    ]
+  },
+  "independent_archive": {
+    "compressed_B": 2648535,
+    "members": 26,
+    "name": "independent-public.tar.gz",
+    "sha256": "06c6e392a7896aa8670c365e3895e3d673f676e75919b143be36c823851d4673"
+  },
+  "negative_controls_rejected": 20,
+  "paid_work": {
+    "leg-a": {
+      "frontend_wall_s": 0.5818,
+      "old_prove": {
+        "cpu_s": 9.19,
+        "max_rss_KiB": 451920,
+        "wall_s": 4.7425
+      },
+      "real_inputs": 1,
+      "whir_prove": {
+        "max_rss_KiB": 593628,
+        "system_s": 0.22,
+        "user_s": 6.59,
+        "wall_s": 6.8296
+      },
+      "whir_verify_fresh": {
+        "max_rss_KiB": 60244,
+        "system_s": 0.02,
+        "user_s": 0.11,
+        "wall_s": 0.1399
+      }
+    },
+    "leg-b": {
+      "frontend_wall_s": 0.5755,
+      "old_prove": {
+        "cpu_s": 9.08,
+        "max_rss_KiB": 451796,
+        "wall_s": 4.6856
+      },
+      "real_inputs": 1,
+      "whir_prove": {
+        "max_rss_KiB": 593620,
+        "system_s": 0.21,
+        "user_s": 6.57,
+        "wall_s": 6.7967
+      },
+      "whir_verify_fresh": {
+        "max_rss_KiB": 60244,
+        "system_s": 0.02,
+        "user_s": 0.11,
+        "wall_s": 0.14
+      }
+    },
+    "onward": {
+      "frontend_wall_s": 0.5617,
+      "old_prove": {
+        "cpu_s": 9.39,
+        "max_rss_KiB": 451808,
+        "wall_s": 4.8333
+      },
+      "real_inputs": 1,
+      "whir_prove": {
+        "max_rss_KiB": 592956,
+        "system_s": 0.24,
+        "user_s": 6.53,
+        "wall_s": 6.7812
+      },
+      "whir_verify_fresh": {
+        "max_rss_KiB": 59576,
+        "system_s": 0.02,
+        "user_s": 0.11,
+        "wall_s": 0.1366
+      }
+    },
+    "ordinary": {
+      "frontend_wall_s": 0.557,
+      "old_prove": {
+        "cpu_s": 9.31,
+        "max_rss_KiB": 452064,
+        "wall_s": 4.8081
+      },
+      "real_inputs": 2,
+      "whir_prove": {
+        "max_rss_KiB": 592956,
+        "system_s": 0.23,
+        "user_s": 6.58,
+        "wall_s": 6.8172
+      },
+      "whir_verify_fresh": {
+        "max_rss_KiB": 59576,
+        "system_s": 0.02,
+        "user_s": 0.11,
+        "wall_s": 0.1416
+      }
+    }
+  },
+  "pins": {
+    "MNG1.r1cs": "a1cfa119fe582ecd935734ac51db5d1e6c91af9e0019af737d79791dd688cb9c",
+    "SLG1.r1cs": "2bc9e336428462084efd673d31da240992e25a289e7fa6ab88237f2d568f6f3e",
+    "funded-whir": "da5a86a62d1ec4b2bcf4465de3d24acc76e23e53f081bb1d48a3d9b9dad185dc"
+  },
+  "pristine_qnero_SHA": "f04c91307837c0231668383bec76ba98d89d2652",
+  "public_check": {
+    "ordinary": {
+      "candidate_fresh_process_median_s": 0.137804,
+      "old_cold_s": 1.304716815939173,
+      "old_persistent_median_s": 0.006540181115269661
+    },
+    "swap": {
+      "candidate_fresh_process_median_s": 1.474046,
+      "old_cold_s": 1.3293901230208576,
+      "old_persistent_median_s": 0.02559149800799787
+    }
+  },
+  "public_fields_and_wire": {
+    "bundle_SHA256": "4342db81a230a82c8f9a3d156ecf4b80f710b7e41858adbf68300f0b364db2c6",
+    "complete_frame_B": [
+      256516,
+      257476
+    ],
+    "cross_wrapper_old_and_new_signatures_rejected": 4,
+    "identical_ordered_ciphertexts": 8,
+    "local_262144B_frame_admission": true,
+    "matched_public_field_count": 130,
+    "old_and_new_signatures_verified": 4,
+    "onward_candidate_B": 240321,
+    "onward_reference_B": 143233,
+    "ordinary_candidate_bytes": 239233,
+    "ordinary_legacy_inner_B": 143227,
+    "ordinary_plus_swap_field_count": 99,
+    "ordinary_reference_bytes": 143233,
+    "proof_reader_scope": "all outer sums, adjacent inner sums, Merkle openings and terminal RS combinations; full statement verification is separate",
+    "swap_candidate_bytes": 514005,
+    "swap_reference_bytes": 320905
+  },
+  "tested_public_SHA": "ad0998099afae89ec544640f6fda6af5fd14e1d6",
+  "timing_s": {
+    "capture_build": 89.43,
+    "funding": 195.14,
+    "prepare_and_register": 11.06,
+    "split_owner_four_proof_cycle": 72.27
+  },
+  "transcripts": [
+    {
+      "inner_adjacent_sumchecks": 9,
+      "outer_sumchecks": 19,
+      "packet_B": 239233,
+      "packet_sha256": "fefc5bd937c6e0a9cc6ca3093501ea450547a4c4934cdc91b8b7a05b5df594fa",
+      "proof_B": 235392,
+      "public_words": 31,
+      "root_count": 5,
+      "same_positions_terminal_checks": 31,
+      "suite": "FWT1",
+      "terminal_coefficients": 133
+    },
+    {
+      "inner_adjacent_sumchecks": 9,
+      "outer_sumchecks": 19,
+      "packet_B": 239321,
+      "packet_sha256": "af5e6697bde73d2841562be55722b40d534c8268267b56f18a13b17b18b96575",
+      "proof_B": 235456,
+      "public_words": 34,
+      "root_count": 5,
+      "same_positions_terminal_checks": 31,
+      "suite": "FWL1",
+      "terminal_coefficients": 133
+    },
+    {
+      "inner_adjacent_sumchecks": 9,
+      "outer_sumchecks": 19,
+      "packet_B": 240281,
+      "packet_sha256": "892a1f4339e8899ca3841a16dbed282206071e6c5e1a9737a737561d3708c2b8",
+      "proof_B": 236416,
+      "public_words": 34,
+      "root_count": 5,
+      "same_positions_terminal_checks": 31,
+      "suite": "FWL1",
+      "terminal_coefficients": 133
+    },
+    {
+      "inner_adjacent_sumchecks": 9,
+      "outer_sumchecks": 19,
+      "packet_B": 240321,
+      "packet_sha256": "2407b059d905b22e2e7f132def62101cbed71245fb6c2352f289ab2477315376",
+      "proof_B": 236480,
+      "public_words": 31,
+      "root_count": 5,
+      "same_positions_terminal_checks": 31,
+      "suite": "FWT1",
+      "terminal_coefficients": 133
+    }
+  ]
+}

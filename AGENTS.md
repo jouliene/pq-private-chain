@@ -1,3 +1,7 @@
+# Funded proof comparison
+
+Run the [funded WHIR reproduction](experiments/funded-whir/README.md) for changes to these relation and proof roles. Test policy from the current checkout even when the funding branch was mined using an earlier staged deployment. The registered roles authenticate receipt ownership and amount. Ordinary outputs shuffle, while swap legs assign recipient and change to fixed slots. Each proof-producing wallet gets exactly one seed and builds its private assignment locally. A clean recovery process receives its own backup and public history. Publish the allowlisted public packets and measurements only.
+
 # Private maker discovery and exchange
 
 Use `./pqd market --home NEW_HOME walkthrough`. Wallets receive only public network bootstrap and keep separate private stores. Retain the short-lived signed advertisement allowlist, strict hybrid TLS group, live exporter signature, original SLG1 verifiers and SWP1 consensus. Measure failed handshakes at each observer; working authenticated transfers must match the encrypted-link byte counts. Publish only allowlisted public data and aggregate review results. [Operator guide](experiments/stranger-swap/README.md)
