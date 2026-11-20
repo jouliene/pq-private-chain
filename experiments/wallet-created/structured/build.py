@@ -47,7 +47,7 @@ def main():
         source=source.replace('"private":assigned.len()-public.len()-1','"private":private_count')
         (tmp/"main.rs").write_text(source+(HERE/"app.rs").read_text())
         (tmp/"matrix.rs").write_text((DIMS/"matrix.rs").read_text()+(HERE/"plan.rs").read_text()+(HERE/"sparse.rs").read_text())
-        for f in ("outer.rs","oracle.rs","pcs.rs","tape.rs"):
+        for f in ("outer.rs","oracle.rs","pcs.rs","tape.rs","algebra.rs"):
             (tmp/f).write_bytes((HERE/f).read_bytes())
         (tmp/"fft.rs").write_bytes((DIMS/"fft.rs").read_bytes())
         if a.audit:

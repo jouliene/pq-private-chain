@@ -1,6 +1,6 @@
 use super::*;
 use tape::Draw;
-const K: usize = 21;
+const K: usize = OUTER_ROUNDS;
 
 // Sum U on all Boolean extensions of prefix, including a zero-length suffix.
 pub fn mask_sum(sigma: &[E], prefix: &[E], k: usize, d: usize) -> E {
@@ -83,6 +83,7 @@ fn values_at_points(rows: &[Vec<E>; 3], basis: &[E], terminal: &[E], last: bool)
 }
 
 pub struct Secret {
+    guard_words: usize,
     pub msg: Vec<E>,
     pub aux: Vec<E>,
     pub inner: Vec<E>,
@@ -90,10 +91,15 @@ pub struct Secret {
     pub blind: Vec<F>,
 }
 impl Secret {
-    pub fn new(assigned: &[F], rng: &mut Draw) -> Self {
-        assert_eq!(assigned.len(), 50 + 612532);
-        let mut msg: Vec<E> = assigned[50..].iter().copied().map(E::from).collect();
-        msg.resize(1 << 20, E::ZERO);
+    pub fn new(assigned: &[F], public_len: usize, guard_words: usize, rng: &mut Draw) -> Self {
+        assert!(public_len <= assigned.len() && assigned.len() - public_len <= MAIN_WORDS);
+        assert!(guard_words <= assigned.len() - public_len);
+        let mut msg: Vec<E> = assigned[public_len..]
+            .iter()
+            .copied()
+            .map(E::from)
+            .collect();
+        msg.resize(MAIN_WORDS, E::ZERO);
         let inner = rng.fields(3);
         let outer = rng.fields(5 * (K + 1));
         let blind: Vec<_> = (0..4).map(|_| rng.base()).collect();
@@ -105,6 +111,7 @@ impl Secret {
             msg,
             aux,
             inner,
+            guard_words,
             outer,
             blind,
         }
@@ -133,7 +140,7 @@ pub fn execute(
     let bytes = s.map(|z| {
         let mut bytes = Vec::new();
         for (j, &b) in beta.iter().enumerate() {
-            let y = assigned[50..50 + 296448]
+            let y = assigned[public.len()..public.len() + z.guard_words]
                 .iter()
                 .rev()
                 .fold(F::ZERO, |v, &w| v * b + w)
@@ -217,14 +224,18 @@ pub fn execute(
     // structured verifier computes its public coefficients. The prover also
     // needs the unfolded private form for its inner sumcheck.
     let mut public_charge = None;
-    let dense = s.map(|_| {
+    let dense = s.map(|z| {
         let mut all = matrix.dense_form(&alpha, rho);
-        let public_dot: E = all[..50].iter().zip(public).map(|(&x, &p)| x * p).sum();
-        let mut form = all.split_off(50);
-        form.resize(1 << 20, E::ZERO);
+        let public_dot: E = all[..public.len()]
+            .iter()
+            .zip(public)
+            .map(|(&x, &p)| x * p)
+            .sum();
+        let mut form = all.split_off(public.len());
+        form.resize(MAIN_WORDS, E::ZERO);
         for (j, &b) in beta.iter().enumerate() {
             let mut p = b;
-            for dst in &mut form[..296448] {
+            for dst in &mut form[..z.guard_words] {
                 *dst += mix[4 + j] * p;
                 p *= b;
             }

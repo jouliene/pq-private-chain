@@ -1,0 +1,170 @@
+{
+  "larger_queries_only_at_historical_slack": {
+    "aggregate_field_bits": 242.935252,
+    "aggregate_miss_bits": 267.457356,
+    "conditional_interactive_bits": 242.935252,
+    "conditional_quadratic_order_one_log2_t": 121.4676,
+    "expected_proof_payload_B": 452235.449,
+    "guard_bits": 308.614407,
+    "guard_coins": 7,
+    "johnson_additive_slack_denominator": 4096,
+    "max_guard_degree": 262144,
+    "maximum_proof_payload_B": 472744,
+    "merkle_term_order_one_log2_t": 170.6667,
+    "q": [
+      108,
+      78,
+      63,
+      65
+    ],
+    "stages": [
+      {
+        "agreement": 0.17766703045587132,
+        "aux": 8,
+        "encoded_coefficients": 16503,
+        "fresh_pad": 9,
+        "list_bound": 10702,
+        "miss_bits": 269.217228,
+        "q": 108
+      },
+      {
+        "agreement": 0.09243495094692146,
+        "aux": 8,
+        "encoded_coefficients": 1113,
+        "fresh_pad": 7,
+        "list_bound": 16434,
+        "miss_bits": 267.962583,
+        "q": 78
+      },
+      {
+        "agreement": 0.04596562465124854,
+        "aux": 6,
+        "encoded_coefficients": 136,
+        "fresh_pad": 1,
+        "list_bound": 18864,
+        "miss_bits": 279.927953,
+        "q": 63
+      },
+      {
+        "agreement": 0.039695331790476865,
+        "aux": 73,
+        "encoded_coefficients": 203,
+        "list_bound": 28873,
+        "miss_bits": 302.567644,
+        "q": 65
+      }
+    ]
+  },
+  "research": {
+    "aggregate_field_bits": 242.950419,
+    "aggregate_miss_bits": 130.896578,
+    "conditional_interactive_bits": 130.896578,
+    "conditional_quadratic_order_one_log2_t": 65.4483,
+    "expected_proof_payload_B": 236241.244,
+    "guard_bits": 170.611983,
+    "guard_coins": 4,
+    "johnson_additive_slack_denominator": 4096,
+    "max_guard_degree": 262144,
+    "maximum_proof_payload_B": 245952,
+    "merkle_term_order_one_log2_t": 170.6667,
+    "q": [
+      53,
+      38,
+      30,
+      31
+    ],
+    "stages": [
+      {
+        "agreement": 0.17737115059562197,
+        "aux": 8,
+        "encoded_coefficients": 16448,
+        "fresh_pad": 16,
+        "list_bound": 10720,
+        "miss_bits": 132.243306,
+        "q": 53
+      },
+      {
+        "agreement": 0.09063817551098542,
+        "aux": 5,
+        "encoded_coefficients": 1070,
+        "fresh_pad": 2,
+        "list_bound": 16682,
+        "miss_bits": 131.62202,
+        "q": 38
+      },
+      {
+        "agreement": 0.039501467270003476,
+        "aux": 3,
+        "encoded_coefficients": 100,
+        "fresh_pad": 1,
+        "list_bound": 20072,
+        "miss_bits": 139.858498,
+        "q": 30
+      },
+      {
+        "agreement": 0.03221817489012676,
+        "aux": 37,
+        "encoded_coefficients": 133,
+        "list_bound": 32298,
+        "miss_bits": 153.635424,
+        "q": 31
+      }
+    ]
+  },
+  "same_domain_stronger_screen": {
+    "aggregate_field_bits": 267.298713,
+    "aggregate_miss_bits": 272.428704,
+    "conditional_interactive_bits": 267.25809,
+    "conditional_quadratic_order_one_log2_t": 133.629,
+    "expected_proof_payload_B": 486870.648,
+    "guard_bits": 313.582147,
+    "guard_coins": 7,
+    "johnson_additive_slack_denominator": 128,
+    "max_guard_degree": 262144,
+    "maximum_proof_payload_B": 508712,
+    "merkle_term_order_one_log2_t": 170.6667,
+    "q": [
+      112,
+      86,
+      70,
+      73
+    ],
+    "stages": [
+      {
+        "agreement": 0.18525688912084187,
+        "aux": 8,
+        "encoded_coefficients": 16507,
+        "fresh_pad": 5,
+        "list_bound": 342,
+        "miss_bits": 272.428901,
+        "q": 112
+      },
+      {
+        "agreement": 0.10033374439317977,
+        "aux": 8,
+        "encoded_coefficients": 1121,
+        "fresh_pad": 15,
+        "list_bound": 652,
+        "miss_bits": 285.272423,
+        "q": 86
+      },
+      {
+        "agreement": 0.054849978823407405,
+        "aux": 7,
+        "encoded_coefficients": 144,
+        "fresh_pad": 1,
+        "list_bound": 1208,
+        "miss_bits": 293.185559,
+        "q": 70
+      },
+      {
+        "agreement": 0.048781595631646545,
+        "aux": 81,
+        "encoded_coefficients": 219,
+        "list_bound": 1394,
+        "miss_bits": 318.098905,
+        "q": 73
+      }
+    ]
+  }
+}

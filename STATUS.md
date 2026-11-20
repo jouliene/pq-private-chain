@@ -1,3 +1,9 @@
+# WHIR for funded transfers and swap legs — active
+
+Baseline f1a513207f73ee84c3034938a00dba1d68cd7b3b. The relation owner implements the 31/34-word typed constraints, the wallet owner captures funded witnesses via private memory, the non-author reviews the protocol and performs clean reproduction, and the orchestrator integrates the proof backend, packet checks and decision. Start with the fixed research geometry in experiments/funded-whir/PROFILE.md; the global blockchain objective remains active.
+
+## Earlier milestone
+
 # Stranger discovery and private exchange
 
 From `ccf62bf7b271f49f96efdc0cc49cab19e972fb44`, implementation freeze `9bb62eab924bf85b35ad04884eb85b5548ffea9a` has completed a funded clean-clone exchange. In the author run the winning maker and surviving relay ran on a separate physical host. The taker discovered two makers after loss of the first relay and requested private executable quotes of 7 and 8 native units for its 20 managed units. The previously registered SLG1 and MNG1 verifiers checked the mined pair and onward ordinary payment. The seller recovered its only 8-unit native note from seed and spent 5 plus fee 3. Its final balance was 80 managed and zero native. The winning maker paid the swap fee of 3 and kept 14 native change. Both sides had fresh wallet stores. No abandoned quote added payment bytes to history. The author's 12-block chain and all three of its peer databases were independently reconciled; a non-author also generated a second 12-block history from fresh wallets and confirmations. [Procedure, observer scopes and measurements](experiments/stranger-swap/README.md)

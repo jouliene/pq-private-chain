@@ -2,7 +2,6 @@ use super::*;
 use tiny_keccak::{Hasher, Sha3, Shake, Xof};
 
 pub type Digest = [u8; 64];
-const DOMAIN:&[u8]=b"PQPC-CFW-2x2-v1/Goldilocks-EF5-X5-3/R1CS-614387-612532/guard4/radix16/21-19-17-17/q53-38-30-31/separate-salted-trees";
 
 pub fn hash(label: &[u8], parts: &[&[u8]]) -> Digest {
     let mut h = Sha3::v512();
@@ -90,7 +89,10 @@ pub struct Tape {
 impl Tape {
     pub fn new(statement: &[u8], program: &Digest, proof: Option<Vec<u8>>) -> Self {
         Self {
-            state: hash(b"registered-statement", &[DOMAIN, program, statement]),
+            state: hash(
+                b"registered-statement",
+                &[TRANSCRIPT_DOMAIN, program, statement],
+            ),
             proving: proof.is_none(),
             data: proof.unwrap_or_default(),
             pos: 0,

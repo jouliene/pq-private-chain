@@ -3,8 +3,8 @@ use crate::oracle::{Oracle, commit, open};
 use tape::Draw;
 
 const Q: [usize; 4] = [53, 38, 30, 31];
-const N: [usize; 4] = [1 << 21, 1 << 19, 1 << 17, 1 << 17];
-const MAIN: [usize; 4] = [65536, 4096, 256, 256];
+const N: [usize; 4] = PCS_DOMAINS;
+const MAIN: [usize; 4] = PCS_MAIN;
 const AUX: [usize; 4] = [8, 5, 3, 37];
 
 fn fold_rows(values: &mut Vec<E>, width: usize, g: E) {
@@ -291,7 +291,7 @@ pub fn execute(
     }
     let mut form = main_form;
     form.extend_from_slice(&aux_form);
-    assert_eq!(form.len(), 293);
+    assert_eq!(form.len(), MAIN[3] + AUX[3]);
     let fresh = if t.proving {
         let rand = rng.as_mut().unwrap();
         let b = rand.fields(form.len());

@@ -8,65 +8,13 @@ use std::time::Instant;
 use tape::Tape;
 type E = BinomialExtensionField<F, 5>;
 
-fn eq(xs: &[E]) -> Vec<E> {
-    let mut v = vec![E::ONE];
-    for &x in xs {
-        let n = v.len();
-        v.resize(2 * n, E::ZERO);
-        for i in 0..n {
-            let y = v[i] * x;
-            v[i] -= y;
-            v[n + i] = y;
-        }
-    }
-    v
-}
-fn powers(x: E, n: usize) -> Vec<E> {
-    let mut v = vec![E::ONE; n];
-    for i in 1..n {
-        v[i] = v[i - 1] * x;
-    }
-    v
-}
-fn horner(c: &[E], x: E) -> E {
-    c.iter().rev().fold(E::ZERO, |v, &a| v * x + a)
-}
-fn dot(a: &[E], b: &[E]) -> E {
-    assert_eq!(a.len(), b.len());
-    a.iter().zip(b).map(|(&x, &y)| x * y).sum()
-}
-fn interpolate(input: &[E]) -> Vec<E> {
-    let mut ds = input.to_vec();
-    let mut form = vec![F::ONE];
-    let mut out = vec![E::ZERO; ds.len()];
-    for i in 0..input.len() {
-        for (j, &c) in form.iter().enumerate() {
-            out[j] += ds[0] * c;
-        }
-        for j in 1..ds.len() {
-            ds[j - 1] = ds[j] - ds[j - 1];
-        }
-        ds.pop();
-        let mut next = vec![F::ZERO; form.len() + 1];
-        for (j, &c) in form.iter().enumerate() {
-            next[j] -= c * F::from_usize(i);
-            next[j + 1] += c;
-        }
-        let inv = F::from_usize(i + 1).inverse();
-        for c in &mut next {
-            *c *= inv;
-        }
-        form = next;
-    }
-    out
-}
-fn fold_adjacent(v: &mut Vec<E>, x: E) {
-    for i in 0..v.len() / 2 {
-        let lo = v[2 * i];
-        v[i] = lo + (v[2 * i + 1] - lo) * x;
-    }
-    v.truncate(v.len() / 2);
-}
+mod algebra;
+use algebra::*;
+const OUTER_ROUNDS: usize = 21;
+const MAIN_WORDS: usize = 1 << 20;
+const PCS_MAIN: [usize; 4] = [65536, 4096, 256, 256];
+const PCS_DOMAINS: [usize; 4] = [1 << 21, 1 << 19, 1 << 17, 1 << 17];
+const TRANSCRIPT_DOMAIN: &[u8] = b"PQPC-CFW-2x2-v1/Goldilocks-EF5-X5-3/R1CS-614387-612532/guard4/radix16/21-19-17-17/q53-38-30-31/separate-salted-trees";
 
 fn main() {
     // Private parser/assertion errors must never dump the input.
@@ -190,7 +138,7 @@ fn main() {
     let cpu = matrix::cpu_time();
     let t = Instant::now();
     let mut rng = Some(tape::Draw::random());
-    let secret = outer::Secret::new(&assignment, rng.as_mut().unwrap());
+    let secret = outer::Secret::new(&assignment, 50, 296448, rng.as_mut().unwrap());
     let initial = pcs::start(&mut tape, Some(&secret), &mut rng);
     let start_s = t.elapsed().as_secs_f64();
     let claim = outer::execute(&mut tape, &matrix, &assignment, &public, Some(&secret));

@@ -1,3 +1,9 @@
+# WHIR for funded transfers and native-for-token swaps
+
+Compare every released public word on identical funded openings, verify both new swap legs and a two-input transfer, reacquire both signatures, and test recipient recovery and spending. Price the security and resource profile before selecting retain, revise or replace. The live MNG1/SWP1 devnet remains the reference.
+
+## Earlier milestone
+
 # Stranger token-for-native exchange
 
 Start from ccf62bf7b271f49f96efdc0cc49cab19e972fb44. A taker who has only 100 managed test dollars and network bootstrap information discovers two unrelated makers, privately obtains firm quotes, trades 20 dollars for 8 native with the maker paying 3, restores from seed and pays 5 plus the ordinary fee of 3. Use two independent short-lived advertisement relays, authenticated encrypted wallet transport, the original SWP1 consensus, separate observers and actual mined admission. Demonstrate loss of one relay, stale quote, identity substitution and maker disconnect. Account for discovery, negotiation, settlement, inclusion time and the absence of abandoned sessions from consensus history. Publish independent clean reproduction, topology and residual privacy and quantum assumptions.
