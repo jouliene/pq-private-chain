@@ -1,3 +1,7 @@
+# Funded membership
+
+Use [the funded-membership walkthrough](experiments/funded-membership/README.md) for changes to the prospective H25 rules. Preserve historical A/B replay, the real funded nullifier and every supply route. Test the signed leg and ordinary registered depth at the eligible ancestor when the head has crossed a quaternary depth boundary. Keep the sorted tree's set membership distinct from positional membership. Run the ownership oracle separately from public-only verification.
+
 # Funded proof upgrades
 
 For changes to height-dependent MNG1/SLG1 and MNG2/SLG2 admission, run the [funded upgrade reproduction](experiments/funded-upgrade/README.md). Verify both eras on the same genesis, single nullifier set and issuance registry. Count fees once per logical transaction. Preserve the released A installation for prefix funding and the independent public replay of both branches.

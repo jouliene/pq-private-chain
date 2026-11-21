@@ -1,0 +1,39 @@
+--- a/crates/qnero-circuit/src/circuit.rs
++++ b/crates/qnero-circuit/src/circuit.rs
+@@ -202,8 +202,12 @@
+         let commitment = note_commitment(builder, inner, input.value);
+ 
+         // The tree leaf is the commitment itself, so the path starts here.
+-        let root = merkle_root_from_path(builder, commitment, &input.path, &active_levels);
+         let is_real = builder.not(input.is_dummy);
++        let root = merkle_root_from_path(builder, commitment, &input.path, &active_levels, is_real);
++        // A real input at an eligible nonempty anchor must finish at an occupied root.
++        let root_empty = digests_are_equal(builder, root.elements, [zero; 4]);
++        let empty_real_root = builder.and(is_real, root_empty);
++        builder.connect(empty_real_root.target, zero);
+         for limb in 0..4 {
+             let difference = builder.sub(
+                 root.elements[limb],
+--- a/crates/qnero-circuit/src/merkle.rs
++++ b/crates/qnero-circuit/src/merkle.rs
+@@ -549,6 +549,7 @@
+     leaf_hash: HashOutTarget,
+     path: &MerklePathTargets,
+     active_levels: &[BoolTarget; MAX_DEPTH],
++    is_real: BoolTarget,
+ ) -> HashOutTarget {
+     let zero = builder.zero();
+     let one = builder.one();
+@@ -558,6 +559,12 @@
+     let mut current = leaf_hash;
+ 
+     for (level, is_active) in active_levels.iter().enumerate() {
++        // Zero stands for an absent child. Check the selected child before
++        // each active compression, including the input note at level zero.
++        let empty = crate::gadgets::digests_are_equal(builder, current.elements, [zero; 4]);
++        let selected = builder.and(is_real, *is_active);
++        let absent = builder.and(selected, empty);
++        builder.connect(absent.target, zero);
+         let siblings = &path.siblings[level];
+         let position = path.positions[level];
+ 

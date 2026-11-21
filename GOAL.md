@@ -1,3 +1,7 @@
+# Funded A/B spend authority
+
+Determine the exact entitlement to funded money under the selected branch, authorized commitment opening and one shared spent set. Starting at 415280581a07d3d246a5408ad32b7e3e922041e7, compare the released variable-depth path with N7P2 and exercise the smallest hardening that binds the branch depth and excludes padding while preserving old notes, keys and nullifiers. Require genuine funded transfer, jointly authorized swap, recovered spending, fresh public replay, role costs and independent public-clone acceptance.
+
 # Recover funded A/B money after loss of the original archive
 
 Starting from f8ef595cc9ed898c5975b238d019cafaecd174de, recover the existing funded two-era network from independently validated archival copies. Demonstrate an unavailable historical interval and resumption, actual body pruning and restart, a deeper competing chain, and a confirmed two-era spend by an offline recipient restored from the original seed. Charge the complete disk and transfer obligations to their roles, independently reconcile the full histories, and reproduce fresh funding from public main. Consensus and monetary rules stay fixed. The global blockchain objective remains active.

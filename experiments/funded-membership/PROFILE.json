@@ -1,0 +1,78 @@
+{
+  "MNG3": {
+    "additional_proof_B": 8,
+    "configuration": {
+      "config_constants": 2,
+      "configured_bits": 128,
+      "fri": {
+        "cap_height": 4,
+        "constant_arity_bits": [
+          2,
+          3
+        ],
+        "grinding": 0,
+        "queries": 32,
+        "rate_bits": 5
+      },
+      "max_quotient_factor": 8,
+      "plonk_repetitions": 2,
+      "routed": 60,
+      "row_blinding": 1,
+      "wires": 135
+    },
+    "folds": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "inner_B": 182857,
+    "leaf_hiding": 1,
+    "ordinary_frame_B": 182863,
+    "proof_B": 179264,
+    "sha256": "6cb89745c94ec7b2ff97173ec0819b8567ae5672991b2fdbbe3cbe5810ebadf2",
+    "signed_supply_frame_B": 200023,
+    "statement_words": 32,
+    "trace_rows": 8192,
+    "verifier_B": 1481
+  },
+  "SLG3": {
+    "additional_proof_B": 8,
+    "complete_swap_B": 400165,
+    "configuration": {
+      "config_constants": 2,
+      "configured_bits": 128,
+      "fri": {
+        "cap_height": 4,
+        "constant_arity_bits": [
+          2,
+          3
+        ],
+        "grinding": 0,
+        "queries": 32,
+        "rate_bits": 5
+      },
+      "max_quotient_factor": 8,
+      "plonk_repetitions": 2,
+      "routed": 60,
+      "row_blinding": 1,
+      "wires": 135
+    },
+    "folds": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "inner_B": 182881,
+    "leaf_hiding": 1,
+    "proof_B": 179288,
+    "sha256": "7acd892eb041260a90efe30fc19771922da2be083707dec4116f8b3af9765c4a",
+    "statement_words": 35,
+    "swap_frame_B": 200076,
+    "trace_rows": 8192,
+    "verifier_B": 1481
+  }
+}

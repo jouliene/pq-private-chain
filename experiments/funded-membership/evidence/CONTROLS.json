@@ -1,0 +1,26 @@
+{
+  "boundary_levels": 20,
+  "detached_root": {
+    "proof_valid": true,
+    "rejection": "anchor branch",
+    "selected_state_and_pool_preserved": true,
+    "wrong_branch_height": 25
+  },
+  "historical_MSP1_operation_codes_in_graph": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "legacy_dispatch_selectors": 9,
+  "native_transcript_controls": {
+    "managed": {
+      "rejected_canonical_depth": 1,
+      "verified_depth": 3
+    },
+    "swap": {
+      "rejected_canonical_depth": 1,
+      "verified_depth": 3
+    }
+  }
+}

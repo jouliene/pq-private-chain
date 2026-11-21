@@ -1,0 +1,88 @@
+{
+  "depth_boundaries": {
+    "0": 0,
+    "1": 1,
+    "1099511627775": 20,
+    "1099511627776": 20,
+    "16": 2,
+    "17": 3,
+    "3": 1,
+    "4": 1,
+    "5": 2
+  },
+  "negative_controls": {
+    "absent_funding": "opening differs from selected funding",
+    "already_spent": "nullifier unavailable",
+    "asset_without_quantity": "asset quantity and ID disagree",
+    "different_amount": "opening differs from selected funding",
+    "different_asset": "published nullifier mismatch",
+    "different_nullifier": "published nullifier mismatch",
+    "different_opening": "opening differs from selected funding",
+    "different_rho": "opening differs from selected funding",
+    "dummy_first_swap": "swap first input must be real",
+    "dummy_has_value": "dummy carries value or occurrence",
+    "duplicate_funding": "duplicate funding commitment",
+    "expired_anchor": "anchor outside spend window",
+    "funding_zero": "zero funding commitment",
+    "missing_path_level": "path differs from selected funding",
+    "negative_amount": "unsigned 62-bit integer required",
+    "noncanonical_digest": "noncanonical field digest",
+    "orphan_anchor": "anchor absent from selected branch",
+    "other_key_opening": "spend authority mismatch",
+    "other_owner": "spend authority mismatch",
+    "oversize_asset_limb": "asset limb range",
+    "oversize_token": "unsigned 62-bit integer required",
+    "padded_leaf": "funding index outside selected history",
+    "quantity_without_asset": "asset quantity and ID disagree",
+    "rank_out_of_range": "path step shape",
+    "same_input_twice": "duplicate nullifier within transaction",
+    "spent_after_anchor": "nullifier unavailable",
+    "tree_capacity": "tree capacity",
+    "two_dummies": "two slots and real funding required",
+    "wrong_depth": "funded path depth or leaf"
+  },
+  "profile": "funded-membership-oracle-v1",
+  "public_effects": {
+    "dummy": {
+      "commitment": "d32107c582e83578845269ef72b69b541a78fb2024c8d51d16e17182ec044f62",
+      "nullifier": "4bcc32e8d20bc94a3fea0e3351df016c4ac3708928f329e2eaffc08854df7eda",
+      "occurrence": null,
+      "pk": "53e04c4842a5a4c75bb8d19a46b72b9bcea82b48da1039e13e3e94248ebc13b8",
+      "sorted_positions": []
+    },
+    "managed": {
+      "commitment": "fee30604c2a4c3b98f479e4b948df1912cdd06494914e7a72f38d44674de89bf",
+      "nullifier": "e321e154d6f5b238419a8c38c162f83e7132902765673df91a9315225632339b",
+      "occurrence": 4,
+      "pk": "53e04c4842a5a4c75bb8d19a46b72b9bcea82b48da1039e13e3e94248ebc13b8",
+      "sorted_positions": [
+        3,
+        3
+      ]
+    },
+    "reward": {
+      "commitment": "1a17c083d3dc81127c41b3144e4c09921d2a21ea74d31af345a68f877245450b",
+      "nullifier": "fc3188adb7a28b93a1b1e576ebd44c4e24d85a4ac2254efb6d20a4f70869f237",
+      "occurrence": 0,
+      "pk": "53e04c4842a5a4c75bb8d19a46b72b9bcea82b48da1039e13e3e94248ebc13b8",
+      "sorted_positions": [
+        0,
+        2
+      ]
+    },
+    "swap": {
+      "commitment": "dcf2153e9e0cf9579617e038ddfe1b054074740d0e2f460f35c405536b7ee504",
+      "nullifier": "21504be1ca9ff930b3fb7a22b5addc1e8f4478b3a0cb8d87e67140d08d3fe655",
+      "occurrence": 13,
+      "pk": "be81f64002c00373278ef0f6e86134edba6056b2d3b3d85dac1be2fa4e57a813",
+      "sorted_positions": [
+        3,
+        1
+      ]
+    }
+  },
+  "schedule": "test-only digest(i) = concatenate u64LE(731*i+j+1) for j=0,1,2,3",
+  "selected_count": 14,
+  "selected_root": "17796e34e0ee286fcd8c83c8b9c208dc8a2c3631015a2d7c66ee816ab4a21765",
+  "upstream_prefix_roots_checked": 14
+}

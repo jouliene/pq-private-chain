@@ -1,0 +1,30 @@
+{
+  "backup_B_per_role": 32,
+  "funded_real_inputs_in_each_of_three_distinct_payments": 2,
+  "historical_note_amounts": [
+    [
+      20,
+      12
+    ],
+    [
+      14,
+      16
+    ]
+  ],
+  "payer_remaining": [
+    3,
+    3
+  ],
+  "recipient_final_change": [
+    1,
+    8
+  ],
+  "recipient_first_note": [
+    28,
+    25
+  ],
+  "recipient_subsequent_real_spend_heights": [
+    26,
+    33
+  ]
+}

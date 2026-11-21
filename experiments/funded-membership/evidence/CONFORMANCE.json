@@ -1,0 +1,35 @@
+{
+  "funded_ABC": {
+    "block_roots": 34,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "occupied_values_checked_across_snapshots": 1579,
+    "owned_mining_reward_inputs_matched": 7,
+    "payment_proof_fields": {
+      "MNG1": 7,
+      "MNG2": 1,
+      "MNG3": 8,
+      "SLG2": 2,
+      "SLG3": 2
+    }
+  },
+  "published_AB": {
+    "block_roots": 27,
+    "depths": [
+      1,
+      2,
+      3
+    ],
+    "occupied_values_checked_across_snapshots": 829,
+    "owned_mining_reward_inputs_matched": null,
+    "payment_proof_fields": {
+      "MNG1": 7,
+      "MNG2": 3,
+      "SLG2": 2
+    }
+  }
+}

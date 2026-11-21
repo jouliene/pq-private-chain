@@ -1,0 +1,74 @@
+{
+  "managed": {
+    "author_binary_sha256": "ab02a61391d741ed3eaaae1058c86d028e0b98ee7eb0c5624f012a873c36e676",
+    "base_role_description_sha256": "f43b5995947807a2bfb75e13bff191c690da50457c381ff7c8d8ab7932f84c00",
+    "generated_sources": {
+      "crates/qnero-circuit/src/circuit.rs": "187cb0c7e97cd3db38bf6126e09e587ddff0c50a942a458e4b8006f670f783e0",
+      "crates/qnero-circuit/src/merkle.rs": "6c4481c3fcb63d0a6ef1e6f7ce861e87b67840abe54925c51c6377f49eb2c170",
+      "crates/qnero-notes/src/encrypt.rs": "9016ae1c57d517390bdf104d935d971281dfa275fb9bb7683885e2572c316ede",
+      "crates/qnero-pqcrypto/src/note_encryption.rs": "b7f11268f850eb2f545a76afd6d7d4243c71f8a73d4b2a0db904d6b8efe37fe4",
+      "crates/qnero-prover/examples/managed_spend/checks.inc": "bba1a55acb0b6647d99bd8436372d7955477109847cd08f00d436965c172f542",
+      "crates/qnero-prover/examples/managed_spend/codec.rs": "c67a6d0c9d676ab187517851c61e6d84674f665f5c47b767dae9fa9bfe2124e8",
+      "crates/qnero-prover/examples/managed_spend/legacy.rs": "33a0ee37cd7dc81138ce159b1cce264820db6b9ebc8368c258784174bcfe43bb",
+      "crates/qnero-prover/examples/managed_spend/legacy_ast1.vk": "99ed868d5bd0f8541bb6467a210bf75140ec696e49e53044f7bca011ed59438a",
+      "crates/qnero-prover/examples/managed_spend/main.rs": "c68768aafd24049a80b5e95b9afd450251f91c92135150c61a33e261f33044e8",
+      "crates/qnero-prover/examples/managed_spend/registry.rs": "f9e2c5e16523578fa607775c0d5eabbc43e9896bbc0bba4abc848caa4af3f694",
+      "crates/qnero-prover/examples/managed_spend/seed.inc": "985813e3eab0a6d0f91b76750ccb63406a1629b57b34ff0a3fc97890411126e5",
+      "crates/qnero-prover/examples/managed_spend/wallet.rs": "219251660c6d928fb5b64053894aff99edf7a5edbddb74d54727380548b6c668"
+    },
+    "hardening_patch_sha256": "720b400c7ae5bc0ecd78f111fbc80cb73d0be5787987d7ccc8eae749de7aa55f",
+    "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "registration": {
+      "degree_bits": 13,
+      "folds": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "gates_before_blinding": 548,
+      "public_inputs": 32,
+      "suite": "MNG3"
+    },
+    "registration_bytes": 1481,
+    "registration_sha256": "6cb89745c94ec7b2ff97173ec0819b8567ae5672991b2fdbbe3cbe5810ebadf2",
+    "role": "MNG3",
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+  },
+  "swap": {
+    "author_binary_sha256": "38f9ac3c0327a5d2ba1dd2d9faed899eb95d264ba442ecc72697bf8c0a075f0b",
+    "base_role_description_sha256": "d80dc3a7d84b44c633819369333a003ef8d4c0831b2ab47848a96a23be2d73be",
+    "generated_sources": {
+      "crates/qnero-circuit/src/circuit.rs": "187cb0c7e97cd3db38bf6126e09e587ddff0c50a942a458e4b8006f670f783e0",
+      "crates/qnero-circuit/src/merkle.rs": "6c4481c3fcb63d0a6ef1e6f7ce861e87b67840abe54925c51c6377f49eb2c170",
+      "crates/qnero-notes/src/encrypt.rs": "4e5ca385d96449a3136855f90e4f41f9234a040eea205aa093142a472015ddf4",
+      "crates/qnero-pqcrypto/src/note_encryption.rs": "b7f11268f850eb2f545a76afd6d7d4243c71f8a73d4b2a0db904d6b8efe37fe4",
+      "crates/qnero-prover/examples/swap_leg/checks.inc": "e3ce7d6354772857f7a1e6bcda141ee61eb4a2cec5998b82f0c1bbf89bd1ae73",
+      "crates/qnero-prover/examples/swap_leg/codec.rs": "ba35d68ba6e9e7066cffc12df447defeefcbc1813bd3bcfcb8ecadc6eeb00e41",
+      "crates/qnero-prover/examples/swap_leg/main.rs": "7e7982ab1a05a68ad676adbd5228f4eaa6218098f79bbd19dac64802da996d60",
+      "crates/qnero-prover/examples/swap_leg/registry.rs": "fd6d1d45c16a65d100f1f91353aa6145607ef6e364ea51efdfff386392e40081",
+      "crates/qnero-prover/examples/swap_leg/seed.inc": "985813e3eab0a6d0f91b76750ccb63406a1629b57b34ff0a3fc97890411126e5",
+      "crates/qnero-prover/examples/swap_leg/wallet.rs": "f9def3e574bf945f4b47be40c473a9241e71e601ea056386f8632cf393951c77"
+    },
+    "hardening_patch_sha256": "720b400c7ae5bc0ecd78f111fbc80cb73d0be5787987d7ccc8eae749de7aa55f",
+    "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "registration": {
+      "degree_bits": 13,
+      "folds": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "gates_before_blinding": 558,
+      "public_inputs": 35,
+      "suite": "SLG3"
+    },
+    "registration_bytes": 1481,
+    "registration_sha256": "7acd892eb041260a90efe30fc19771922da2be083707dec4116f8b3af9765c4a",
+    "role": "SLG3",
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+  }
+}

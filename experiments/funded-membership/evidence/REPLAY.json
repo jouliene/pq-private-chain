@@ -1,0 +1,874 @@
+{
+  "branches": [
+    {
+      "anchor": "49269b64e88de4ecdb464acf9de4677fd4674e8c1b89e3d047e491697375d71f",
+      "atomic_swaps": 1,
+      "fees": 30,
+      "funded_root": "1e179266ad994c829e3d45a4b3df6e1b587ea30c92d5b92e5f5e5d3a949dda7e",
+      "height": 25,
+      "issued": 2500,
+      "logical_payments": 10,
+      "miner_credits": 2530,
+      "notes": 47,
+      "physical_payments_and_legs": 11,
+      "registry": {
+        "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": {
+          "authority": "",
+          "height": 7,
+          "id": "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f",
+          "mode": "fixed",
+          "sequence": 1,
+          "supply": 80,
+          "tx": "af8da7b5570fa422c04c11e9b1e09ba50bfd526f2aa1fc42b905775e0987b71f"
+        },
+        "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": {
+          "authority": "492b23019b8aed8f20d320af2b62220863d84fbdf837b5ee59919527856b7284",
+          "height": 15,
+          "id": "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536",
+          "mode": "managed",
+          "sequence": 2,
+          "supply": 107,
+          "tx": "dc5e4d39c1d7f03e5adcbca9ba40f13978113131298baf1bf20bf020f40d54d2"
+        }
+      },
+      "spent": 22,
+      "spent_set_sha256": "107b0e92dfe082b65d3584f5e2238d62ac51d32d81464feb9b8a3b84ee6b76e5",
+      "tip": "00000070a11b13ce746c203c3e8167fd3db23e94a8ab48da160ca42dafc59cba",
+      "total_supply_events": 3,
+      "work": 104857600
+    },
+    {
+      "anchor": "9489ab7402018f96c2c8d20dde74e0565fa1b2f13d5da67b25de6d80cfe88d0b",
+      "atomic_swaps": 2,
+      "fees": 51,
+      "funded_root": "dd6fe45df996d1c65c51ab1302dc0f10b969fc0dfb51aa5f780f596d1385c2ac",
+      "height": 33,
+      "issued": 3300,
+      "logical_payments": 17,
+      "miner_credits": 3351,
+      "notes": 71,
+      "physical_payments_and_legs": 19,
+      "registry": {
+        "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": {
+          "authority": "",
+          "height": 7,
+          "id": "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f",
+          "mode": "fixed",
+          "sequence": 1,
+          "supply": 80,
+          "tx": "af8da7b5570fa422c04c11e9b1e09ba50bfd526f2aa1fc42b905775e0987b71f"
+        },
+        "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574": {
+          "authority": "a9b0871f4cf1454e665b9a43787e7fb088e8af65d6fa8c23909c3961e1d106a7",
+          "height": 30,
+          "id": "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574",
+          "mode": "managed",
+          "sequence": 1,
+          "supply": 15,
+          "tx": "386846d77fdea7d8d36c19e6bd4bc4381b1161b06682bb06cf8d0aeee93d453e"
+        },
+        "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": {
+          "authority": "",
+          "height": 29,
+          "id": "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a",
+          "mode": "fixed",
+          "sequence": 1,
+          "supply": 13,
+          "tx": "24f6df797d9c8561678c0c083ef53af72900da704623ce98bf0399780a50042f"
+        },
+        "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": {
+          "authority": "492b23019b8aed8f20d320af2b62220863d84fbdf837b5ee59919527856b7284",
+          "height": 32,
+          "id": "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536",
+          "mode": "managed",
+          "sequence": 4,
+          "supply": 97,
+          "tx": "08be29d6ac6fb1e47cd495c753c2179bab2d60ec31c8485308294a33dc48ebdb"
+        }
+      },
+      "spent": 38,
+      "spent_set_sha256": "2da862119209a39f74f9b106f0dd3e94c43bfd50b3873980170d652ee8a8892f",
+      "tip": "000003b3161779eafe382ebf82daa4a23769d92dfcb3c104d646313f52320f16",
+      "total_supply_events": 7,
+      "work": 138412032
+    }
+  ],
+  "c_depths": [
+    {
+      "anchor_count": 44,
+      "anchor_height": 24,
+      "block": "00000070a11b13ce746c203c3e8167fd3db23e94a8ab48da160ca42dafc59cba",
+      "height": 25,
+      "parent_count": 44,
+      "proved_depth": 3,
+      "tx": "b88e186033530463b99d7edb77a0288939620a60f812330f22a63fc5d4fc87ea"
+    },
+    {
+      "anchor_count": 44,
+      "anchor_height": 24,
+      "block": "0000019c59d8c250bd834396eee35bb8a098c6e6c2aa67d97211136d20cf64a8",
+      "height": 25,
+      "parent_count": 44,
+      "proved_depth": 3,
+      "tx": "96599833fcd217a37dc07ae078c72bca18ef89bf8b507f545413643f3fc551e3"
+    },
+    {
+      "anchor_count": 47,
+      "anchor_height": 25,
+      "block": "000001e863cffe3bbf85cdba4a1f538cb8d0683ae4af3497d4f2fca0ce1461d4",
+      "height": 26,
+      "parent_count": 47,
+      "proved_depth": 3,
+      "tx": "fa3a09002c2d4268fc8d2b7239cb47e2e8fc070624b334b5221147bde03383fe"
+    },
+    {
+      "anchor_count": 50,
+      "anchor_height": 26,
+      "block": "00000289da3b19a7c373a595f76e33a8d17d3ec848e5aba9c3e00932e0178f97",
+      "height": 27,
+      "parent_count": 50,
+      "proved_depth": 3,
+      "tx": "58b12d82b2054c0e8f77906eece9dfa31a7c4317571648f6850666be44c95164"
+    },
+    {
+      "anchor_count": 50,
+      "anchor_height": 26,
+      "block": "00000289da3b19a7c373a595f76e33a8d17d3ec848e5aba9c3e00932e0178f97",
+      "height": 27,
+      "parent_count": 50,
+      "proved_depth": 3,
+      "tx": "5aeef5bce91d9188c7be55f3bdd9186233d37356ca5f38a8b8faa988f12a2b0c"
+    },
+    {
+      "anchor_count": 55,
+      "anchor_height": 27,
+      "block": "00000216acc20aa9a07d350cc1e9faf0f5b27d852d42537450d34a2e6367be5c",
+      "height": 28,
+      "parent_count": 55,
+      "proved_depth": 3,
+      "tx": "b1faa6a0afeea73a4acf352c1e026ed19f02876ded54f7346d8da0c3cf2d6b00"
+    },
+    {
+      "anchor_count": 58,
+      "anchor_height": 28,
+      "block": "000001f29daaf4a847c7ba95e4d4a7588876bbf3281b893a736149f2238583af",
+      "height": 29,
+      "parent_count": 58,
+      "proved_depth": 3,
+      "tx": "24f6df797d9c8561678c0c083ef53af72900da704623ce98bf0399780a50042f"
+    },
+    {
+      "anchor_count": 61,
+      "anchor_height": 29,
+      "block": "000002a3057aec280a10bb5d6ece4f11e6d69be057001eb39a05c51797edac50",
+      "height": 30,
+      "parent_count": 61,
+      "proved_depth": 3,
+      "tx": "386846d77fdea7d8d36c19e6bd4bc4381b1161b06682bb06cf8d0aeee93d453e"
+    },
+    {
+      "anchor_count": 64,
+      "anchor_height": 30,
+      "block": "000002974a5556d490e6066876d17657b871c47b57f08e2f4c9f5773c7697cef",
+      "height": 32,
+      "parent_count": 65,
+      "proved_depth": 3,
+      "tx": "08be29d6ac6fb1e47cd495c753c2179bab2d60ec31c8485308294a33dc48ebdb"
+    },
+    {
+      "anchor_count": 68,
+      "anchor_height": 32,
+      "block": "000003b3161779eafe382ebf82daa4a23769d92dfcb3c104d646313f52320f16",
+      "height": 33,
+      "parent_count": 68,
+      "proved_depth": 4,
+      "tx": "ee10bf62fb4cbfc16643af74e8c31ab7071fd94f34ffd004ce5518e94d60891b"
+    }
+  ],
+  "captured_blocks": 34,
+  "disclosed_fixture": {
+    "alternate": {
+      "fees": 30,
+      "native": 2500,
+      "spent": 22,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 31
+          },
+          "native": 27
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1440
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 948
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 4
+          },
+          "native": 4
+        },
+        "recipient": {
+          "assets": {},
+          "native": 0
+        }
+      }
+    },
+    "burn": {
+      "fees": 48,
+      "native": 3200,
+      "spent": 36,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 13
+          },
+          "native": 17
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50,
+            "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574": 15,
+            "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": 13
+          },
+          "native": 2255
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 842
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    },
+    "crossed": {
+      "fees": 45,
+      "native": 3100,
+      "spent": 34,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 29
+          },
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50,
+            "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574": 15,
+            "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": 13
+          },
+          "native": 2152
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 842
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    },
+    "final": {
+      "fees": 51,
+      "native": 3300,
+      "spent": 38,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 14
+          },
+          "native": 18
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50,
+            "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574": 15,
+            "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": 13
+          },
+          "native": 2358
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 842
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 8
+          },
+          "native": 1
+        }
+      }
+    },
+    "fixed": {
+      "fees": 42,
+      "native": 2900,
+      "spent": 32,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 29
+          },
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50,
+            "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": 13
+          },
+          "native": 1952
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 842
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    },
+    "mint": {
+      "fees": 39,
+      "native": 2800,
+      "spent": 30,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 29
+          },
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1852
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 842
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    },
+    "onward": {
+      "fees": 33,
+      "native": 2600,
+      "spent": 24,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 23
+          },
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1646
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 845
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    },
+    "paid": {
+      "fees": 30,
+      "native": 2500,
+      "spent": 22,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 7
+          },
+          "native": 0
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1543
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 845
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 25
+          },
+          "native": 28
+        }
+      }
+    },
+    "prefix": {
+      "fees": 27,
+      "native": 2400,
+      "spent": 20,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 7
+          },
+          "native": 0
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1440
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 845
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 28
+          },
+          "native": 34
+        },
+        "recipient": {
+          "assets": {},
+          "native": 0
+        }
+      }
+    },
+    "register": {
+      "fees": 45,
+      "native": 3000,
+      "spent": 34,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 29
+          },
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50,
+            "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574": 15,
+            "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": 13
+          },
+          "native": 2052
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 842
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    },
+    "swap": {
+      "fees": 36,
+      "native": 2700,
+      "spent": 28,
+      "wallets_checked": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 21,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 34
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 9,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 23
+          },
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1749
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 845
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        },
+        "recipient": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 5
+        }
+      }
+    }
+  },
+  "distinct_signatures": 8,
+  "genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+  "legacy_comparison": {
+    "fee_total": 30,
+    "height": 25,
+    "present_in_c_graph": false,
+    "shared_public_nullifiers": 2,
+    "txid": "90c9814df71810e91e0844308a89930ab4b7b2ca9bcb5f1f078e3c6af9096356",
+    "valid_under_previous_rules": true
+  },
+  "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+  "public_proof_calls": {
+    "MNG1": 7,
+    "MNG2": 1,
+    "MNG3": 8,
+    "SLG2": 2,
+    "SLG3": 2
+  },
+  "selected": {
+    "anchor": "9489ab7402018f96c2c8d20dde74e0565fa1b2f13d5da67b25de6d80cfe88d0b",
+    "atomic_swaps": 2,
+    "fees": 51,
+    "funded_root": "dd6fe45df996d1c65c51ab1302dc0f10b969fc0dfb51aa5f780f596d1385c2ac",
+    "height": 33,
+    "issued": 3300,
+    "logical_payments": 17,
+    "miner_credits": 3351,
+    "notes": 71,
+    "physical_payments_and_legs": 19,
+    "registry": {
+      "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": {
+        "authority": "",
+        "height": 7,
+        "id": "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f",
+        "mode": "fixed",
+        "sequence": 1,
+        "supply": 80,
+        "tx": "af8da7b5570fa422c04c11e9b1e09ba50bfd526f2aa1fc42b905775e0987b71f"
+      },
+      "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574": {
+        "authority": "a9b0871f4cf1454e665b9a43787e7fb088e8af65d6fa8c23909c3961e1d106a7",
+        "height": 30,
+        "id": "70210808baa40f309d39f98d04b24f0a3398bf3bd41210532a4a1e6b8f03d574",
+        "mode": "managed",
+        "sequence": 1,
+        "supply": 15,
+        "tx": "386846d77fdea7d8d36c19e6bd4bc4381b1161b06682bb06cf8d0aeee93d453e"
+      },
+      "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a": {
+        "authority": "",
+        "height": 29,
+        "id": "972e2b8e40d36b312ee584c667a2b424ec2799cdaa49cc3227e714a0149bc07a",
+        "mode": "fixed",
+        "sequence": 1,
+        "supply": 13,
+        "tx": "24f6df797d9c8561678c0c083ef53af72900da704623ce98bf0399780a50042f"
+      },
+      "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": {
+        "authority": "492b23019b8aed8f20d320af2b62220863d84fbdf837b5ee59919527856b7284",
+        "height": 32,
+        "id": "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536",
+        "mode": "managed",
+        "sequence": 4,
+        "supply": 97,
+        "tx": "08be29d6ac6fb1e47cd495c753c2179bab2d60ec31c8485308294a33dc48ebdb"
+      }
+    },
+    "spent": 38,
+    "spent_set_sha256": "2da862119209a39f74f9b106f0dd3e94c43bfd50b3873980170d652ee8a8892f",
+    "tip": "000003b3161779eafe382ebf82daa4a23769d92dfcb3c104d646313f52320f16",
+    "total_supply_events": 7,
+    "work": 138412032
+  }
+}
