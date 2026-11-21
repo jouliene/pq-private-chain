@@ -2,6 +2,8 @@
 
 Evaluate an isolated fresh genesis and two complete note designs starting at public ceab1e4fd786e8f9ac0a99cc9a805423fe4a3b73. Compare a SHA3-384 reference with a note/proof jointly designed for the arithmetic backend, correct historical size accounting and audit the live funded verifier. Preserve the existing funded roles and close the milestone only after independent anonymous public reproduction and an explicit decision. Global permissionless blockchain development remains ACTIVE.
 
+The bounded experiment produced four funded proofs and an independent clean-clone cycle with four new proofs. Keep the deployed funding rules, reject the priced SHA3 Boolean codec and retain N7P1 on separate genesis. The next decision concerns a static key with 49 public rows. [Architecture decision](experiments/new-note/DECISION.md) · [Independent reproduction](experiments/new-note/review/CLEAN.md)
+
 # Evaluate a complete funded fixed-parent TCitH swap leg
 
 Start from public 33bc626c66ba6a83e8ee496e8b6f44b7e207333f. Build and verify the entire 2^18-party proof, owner approval and branch-eligible ledger admission. Compare it with live SLG1 and assess any concrete funded security improvement. Gate subsequent product operations on both security and engineering. Independently reproduce the decision from public main. The global chain objective remains active.
