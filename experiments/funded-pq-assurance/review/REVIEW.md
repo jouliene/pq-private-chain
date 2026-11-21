@@ -324,6 +324,8 @@ sockets and may require the normal sandbox approval. The optional
 checksum-matching public assets; they are not private dependencies.
 The replay also requires `bubblewrap` (`bwrap`) to enforce the same isolated
 wallet-role execution used when the evidence was created. The reproduction
-script fails closed before building if that executable is absent. The pinned
-Ubuntu CI job installs the distribution package and records its version before
-the full release audit; the verifier does not fall back to an unsandboxed role.
+script fails closed before building if the executable or required user
+namespaces are unavailable. The Ubuntu 22.04 CI job pins the official amd64
+package `0.6.1-1ubuntu0.3`, records its version and exercises the namespace
+capability before the full release audit. The verifier does not fall back to
+an unsandboxed role.
