@@ -1,0 +1,382 @@
+{
+  "checked_project_sources": {
+    "experiments/atomic-swap/native/profile.rs": "c68345ed71d868145297bf8f968502c801ad75f32150169e5a193f9c1d7ba139",
+    "experiments/funded-membership/build_c.py": "e3e322d7aa61662d645000eab00c4293ca02a6b0f5ffea01d71c0dc88c9ee8a7",
+    "experiments/funded-membership/hardening.patch": "720b400c7ae5bc0ecd78f111fbc80cb73d0be5787987d7ccc8eae749de7aa55f",
+    "experiments/managed-assets/native/profile.rs": "ca2864ddac5b5a3eec74e7324b6dc4821291c7412ba9e2c66d5a63adbfcac51e"
+  },
+  "claim_boundary": "Exact key/geometry/serialization calculations and conditional screens; no end-to-end soundness, knowledge, zero-knowledge, or post-quantum claim.",
+  "comparison": {
+    "S64_ordinary_excess_bytes": 129407,
+    "fft_scale_units_ratio": 2.313373253493014,
+    "fri_fold_values_ratio": 2.4,
+    "initial_commitment_cells_ratio": 2.17877094972067,
+    "merkle_sibling_hashes_ratio": 2.25,
+    "physical_frame_limit_bytes": 262144,
+    "proof_bytes_ratio": 2.1641378079257407,
+    "status": "calculated_not_benchmarked",
+    "trace_rows_ratio": 2.0
+  },
+  "field_prime": 18446744069414584321,
+  "keys": {
+    "MNG3": {
+      "bytes": 1481,
+      "circuit_digest": [
+        12506747794040179225,
+        15517120205601633546,
+        16461419357440957906,
+        5462923815520472060
+      ],
+      "decoded": {
+        "challenges": 2,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "pi": 32,
+        "queries": 32,
+        "trace_rows": 8192
+      },
+      "sha256": "6cb89745c94ec7b2ff97173ec0819b8567ae5672991b2fdbbe3cbe5810ebadf2"
+    },
+    "SLG3": {
+      "bytes": 1481,
+      "circuit_digest": [
+        17477970102056484515,
+        12739924158267392744,
+        7996841224285012482,
+        2274105909567426162
+      ],
+      "decoded": {
+        "challenges": 2,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "pi": 35,
+        "queries": 32,
+        "trace_rows": 8192
+      },
+      "sha256": "7acd892eb041260a90efe30fc19771922da2be083707dec4116f8b3af9765c4a"
+    }
+  },
+  "profiles": {
+    "proof_only_S64": {
+      "MNG3": {
+        "cap_height": 4,
+        "conditional_fixed_set_bits": {
+          "one_half": 64.0,
+          "one_quarter": 128.0,
+          "rate_1_over_32": 320.0
+        },
+        "degree_bits": 14,
+        "extension_degree": 2,
+        "fft_scale_units": 1822949376.0,
+        "final_extension_coefficients": 4,
+        "fixed_proof_bytes": 8944,
+        "folded_committed_base_words": 1397760,
+        "folded_query_bytes": 1926,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "fri_fold_extension_values": 1536,
+        "fri_openings_per_polynomial": 2880,
+        "fri_queries": 64,
+        "illustrative_oplonky_terms": {
+          "gate_batching_term_negative_log2": 170.25621745866152,
+          "minimum_individual_term_negative_log2": 110.83007499788589,
+          "permutation_term_negative_log2": 126.98272397307781,
+          "single_extension_point_term_negative_log2": 110.83007499788589,
+          "status": "illustrative_unproved_source_mapping"
+        },
+        "initial_committed_base_words": 102236160,
+        "initial_query_bytes": 3996,
+        "lde_points": 524288,
+        "merkle_sibling_hashes": 6912,
+        "oracle_leaf_widths_base_words": {
+          "constants_and_sigmas": 64,
+          "quotient_chunks": 24,
+          "wires": 135,
+          "z_and_partials": 24
+        },
+        "ordinary_or_leg_frame_bytes": 391551,
+        "padding_rows": 7186,
+        "plonk_challenges": 3,
+        "proof_bytes": 387952,
+        "query_index_remainder": 1,
+        "rate_bits": 5,
+        "regular_blinding_rows": 2882,
+        "rows_before_padding": 9198,
+        "signed_supply_frame_bytes": 408711,
+        "total_blinding_rows": 8650,
+        "trace_rows": 16384,
+        "transcript_config_prefix": [
+          5,
+          4,
+          0,
+          1,
+          2,
+          3,
+          64,
+          1,
+          14,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "z_blinding_pairs": 2884
+      },
+      "SLG3": {
+        "cap_height": 4,
+        "complete_two_leg_swap_bytes": 817541,
+        "conditional_fixed_set_bits": {
+          "one_half": 64.0,
+          "one_quarter": 128.0,
+          "rate_1_over_32": 320.0
+        },
+        "degree_bits": 14,
+        "extension_degree": 2,
+        "fft_scale_units": 1822949376.0,
+        "final_extension_coefficients": 4,
+        "fixed_proof_bytes": 8968,
+        "folded_committed_base_words": 1397760,
+        "folded_query_bytes": 1926,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "fri_fold_extension_values": 1536,
+        "fri_openings_per_polynomial": 2880,
+        "fri_queries": 64,
+        "illustrative_oplonky_terms": {
+          "gate_batching_term_negative_log2": 170.25621745866152,
+          "minimum_individual_term_negative_log2": 110.83007499788589,
+          "permutation_term_negative_log2": 126.98272397307781,
+          "single_extension_point_term_negative_log2": 110.83007499788589,
+          "status": "illustrative_unproved_source_mapping"
+        },
+        "initial_committed_base_words": 102236160,
+        "initial_query_bytes": 3996,
+        "lde_points": 524288,
+        "merkle_sibling_hashes": 6912,
+        "oracle_leaf_widths_base_words": {
+          "constants_and_sigmas": 64,
+          "quotient_chunks": 24,
+          "wires": 135,
+          "z_and_partials": 24
+        },
+        "ordinary_or_leg_frame_bytes": 408764,
+        "padding_rows": 7176,
+        "plonk_challenges": 3,
+        "proof_bytes": 387976,
+        "query_index_remainder": 1,
+        "rate_bits": 5,
+        "regular_blinding_rows": 2882,
+        "rows_before_padding": 9208,
+        "total_blinding_rows": 8650,
+        "trace_rows": 16384,
+        "transcript_config_prefix": [
+          5,
+          4,
+          0,
+          1,
+          2,
+          3,
+          64,
+          1,
+          14,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "z_blinding_pairs": 2884
+      }
+    },
+    "registered_C": {
+      "MNG3": {
+        "cap_height": 4,
+        "conditional_fixed_set_bits": {
+          "one_half": 32.0,
+          "one_quarter": 64.0,
+          "rate_1_over_32": 160.0
+        },
+        "degree_bits": 13,
+        "extension_degree": 2,
+        "fft_scale_units": 788004864.0,
+        "final_extension_coefficients": 8,
+        "fixed_proof_bytes": 8224,
+        "folded_committed_base_words": 698368,
+        "folded_query_bytes": 1605,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "fri_fold_extension_values": 640,
+        "fri_openings_per_polynomial": 1504,
+        "fri_queries": 32,
+        "illustrative_oplonky_terms": {
+          "gate_batching_term_negative_log2": 113.70050576031883,
+          "minimum_individual_term_negative_log2": 86.6551493153852,
+          "permutation_term_negative_log2": 86.6551493153852,
+          "single_extension_point_term_negative_log2": 111.83007499788589,
+          "status": "illustrative_unproved_source_mapping"
+        },
+        "initial_committed_base_words": 46923776,
+        "initial_query_bytes": 3740,
+        "lde_points": 262144,
+        "merkle_sibling_hashes": 3072,
+        "oracle_leaf_widths_base_words": {
+          "constants_and_sigmas": 64,
+          "quotient_chunks": 16,
+          "wires": 135,
+          "z_and_partials": 16
+        },
+        "ordinary_or_leg_frame_bytes": 182863,
+        "padding_rows": 3122,
+        "plonk_challenges": 2,
+        "proof_bytes": 179264,
+        "query_index_remainder": 1,
+        "rate_bits": 5,
+        "regular_blinding_rows": 1506,
+        "rows_before_padding": 5070,
+        "signed_supply_frame_bytes": 200023,
+        "total_blinding_rows": 4522,
+        "trace_rows": 8192,
+        "transcript_config_prefix": [
+          5,
+          4,
+          0,
+          1,
+          2,
+          3,
+          32,
+          1,
+          13,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "z_blinding_pairs": 1508
+      },
+      "SLG3": {
+        "cap_height": 4,
+        "complete_two_leg_swap_bytes": 400165,
+        "conditional_fixed_set_bits": {
+          "one_half": 32.0,
+          "one_quarter": 64.0,
+          "rate_1_over_32": 160.0
+        },
+        "degree_bits": 13,
+        "extension_degree": 2,
+        "fft_scale_units": 788004864.0,
+        "final_extension_coefficients": 8,
+        "fixed_proof_bytes": 8248,
+        "folded_committed_base_words": 698368,
+        "folded_query_bytes": 1605,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "fri_fold_extension_values": 640,
+        "fri_openings_per_polynomial": 1504,
+        "fri_queries": 32,
+        "illustrative_oplonky_terms": {
+          "gate_batching_term_negative_log2": 113.70050576031883,
+          "minimum_individual_term_negative_log2": 86.6551493153852,
+          "permutation_term_negative_log2": 86.6551493153852,
+          "single_extension_point_term_negative_log2": 111.83007499788589,
+          "status": "illustrative_unproved_source_mapping"
+        },
+        "initial_committed_base_words": 46923776,
+        "initial_query_bytes": 3740,
+        "lde_points": 262144,
+        "merkle_sibling_hashes": 3072,
+        "oracle_leaf_widths_base_words": {
+          "constants_and_sigmas": 64,
+          "quotient_chunks": 16,
+          "wires": 135,
+          "z_and_partials": 16
+        },
+        "ordinary_or_leg_frame_bytes": 200076,
+        "padding_rows": 3112,
+        "plonk_challenges": 2,
+        "proof_bytes": 179288,
+        "query_index_remainder": 1,
+        "rate_bits": 5,
+        "regular_blinding_rows": 1506,
+        "rows_before_padding": 5080,
+        "total_blinding_rows": 4522,
+        "trace_rows": 8192,
+        "transcript_config_prefix": [
+          5,
+          4,
+          0,
+          1,
+          2,
+          3,
+          32,
+          1,
+          13,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "z_blinding_pairs": 1508
+      }
+    }
+  },
+  "qp_plonky2": {
+    "crate_version": "1.5.5",
+    "identity_check": "not_performed; version and revision are project-declared pins, not hashes verified by this calculator",
+    "vcs_revision": "632f23ca07712bfa5bc8ed082bc05c41c5929dfb"
+  },
+  "registered_C_measured_resources": {
+    "machine": {
+      "cpu": "Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz",
+      "kernel": "6.8.0-151-generic",
+      "logical_cpus_available": 12,
+      "machine": "x86_64",
+      "python": "3.12.3"
+    },
+    "prover_cpu_median_s": 19.09,
+    "prover_peak_rss_median_KiB": 887112.0,
+    "proving_samples": 6,
+    "proving_wall_median_s": 9.852123084499908,
+    "source": "experiments/funded-membership/evidence/COSTS.json",
+    "warm_transfer_native_cpu_median_s": 0.008131332,
+    "warm_transfer_verification_samples": 3,
+    "warm_transfer_wall_median_s": 0.00877831
+  },
+  "schema": "funded-pq-proof-parameters-v1"
+}

@@ -1,3 +1,55 @@
+# Funded profile C post-quantum assurance — active
+
+Baseline `e55b35e04cf353bb1e1c6e51c07a33b81ddd937c` is preserved and clean in the isolated milestone checkout. Three independent workstreams own funded-note/ownership binding, the exact noninteractive proof, and joint receipt/privacy composition. Root owns game definitions, architecture comparison, integration, publication and acceptance. C remains executable. Existing funded-membership, K384, WHIR and N7P2 evidence is reused without rerunning closed campaigns absent a new discriminating question.
+
+The first decision is whether the four-word funded note/tree hash, the Plonky2/FRI proof, or both prevent the 128-bit claim. If a wider note/tree is selected, the milestone must measure a complete candidate and demonstrate atomic old-to-new migration followed by backup restoration and a genuine spend. A separate non-author reviewer will challenge the frozen synthesis and reproduce the decisive calculations from a public clone. Production assurance is not inferred from finite executions.
+
+## Current assurance checkpoint
+
+The architecture decision is frozen locally: keep C executable as the funded
+research/devnet reference and conditional legacy authorization, but do not make
+a 128-bit post-quantum monetary-security or whole-payment privacy claim.  Both
+binding and proof correspondence block that claim.  The exact C profile uses
+four-word Goldilocks commitments, two PLONK challenge repetitions, 32 FRI
+queries, rate 1/32 and no grinding.  No source-matched result currently supplies
+the needed adaptive quantum knowledge reduction, concrete FRI/list bound, QROM
+loss and complete HVZK simulator.  The calculated S64 change would use a
+391,551-byte ordinary frame and still would not supply those results.
+
+For the explicitly researcher-defined 4.4-billion-target scenario, the
+four-word ideal multi-target screen is about 111.98 query bits.  The chosen
+cross-value-claw monetary game has an ideal BHT screen of about 85.33 query bits
+and a separate no-qRAM CNS screen of soft-O(2^102.4).  These are not attacks on
+the instantiated Poseidon2 permutation, but they cannot justify the target.
+Seven whole Goldilocks words are the first checked width above 128 BHT-claw query
+bits; that is an engineering screen, not a security theorem or universal
+minimum.  Even a true per-attempt 2^-128 bound union-bounded over 4.4 billion
+attempts would be only about 2^-95.97 lifetime.
+
+Author attempt 05 completed a real funded C-to-N7 compatibility experiment.  A
+fresh 182,863-byte MNG3 authorization and a 225,660-byte equality proof consumed
+the two legacy nullifiers, created only two wider commitments, charged the
+three-unit fee once, rejected both C/bridge conflict orders and rolled back and
+re-applied atomically.  A fresh process used only the original 32-byte backup
+plus authenticated public history, rediscovered both successor receipts and
+admitted a new 234,646-byte N7P2 spend.  Equality proving measured 7.65 s and
+1,853,652 KiB peak RSS; successor proving measured 7.84 s and 1,866,336 KiB.
+
+This is an out-of-band migration-ledger result, not an integrated PoW-block
+upgrade.  The canonical bridge bundle is 412,886 bytes, 150,742 bytes above the
+current 262,144-byte packet limit, and no current `devnet/chain.py` codec admits
+it.  A production activation needs a versioned migration frame/block rule and
+new relay/resource measurements.  Public verification is seed-free; exact proof
+regeneration still requires the historical backup and witnesses.
+
+Independent review found that the migration used the prior milestone's clean-
+reproducer H25 tip `0000028c...`, not the older author H25 tip `0000019c...`.
+The older published archive therefore cannot replay the migration branch.  The
+exact secret-free migration lineage and matching C deployment have now been
+packaged separately with checksums for the milestone release.  Local review and
+publication are still in progress; the native Goal remains ACTIVE until an
+anonymous public clone and applicable CI reproduce the published revision.
+
 # Funded note membership — independently verified
 
 Starting from `415280581a07d3d246a5408ad32b7e3e922041e7`, the released A/B rules checked the branch header and spent set but accepted a private path depth without an equality to the anchor's funded tree depth. The research decision is to retain the funded note, issuer identities, backup and nullifier, and enforce MNG3/SLG3 on every debit at H25. The three-node test, both public readers, backup-only checks and the independent reference exercised old money, two-owner settlement, all five ordinary operation types and the 64-to-65 boundary. No unauthorized historical payment was demonstrated. The conditional funded-set argument and the remaining quantum and joint-privacy obligations are in the [decision](experiments/funded-membership/DECISION.md).

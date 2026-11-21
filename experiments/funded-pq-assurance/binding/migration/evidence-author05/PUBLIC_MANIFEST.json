@@ -1,0 +1,38 @@
+{
+  "files": {
+    "ACTIVATION.json": {
+      "bytes": 729,
+      "sha256": "ba006296b41b8dd0a806465dbfe8c82a699914c264a980e15b4dfa955f07dc1a"
+    },
+    "RUN.json": {
+      "bytes": 10850,
+      "sha256": "57adbc3189b4159cd3e3fd19dfce58d9027d65d01e8f2a65dc9172bb6a34fa7f"
+    },
+    "bridge-parent-H26.bin": {
+      "bytes": 222,
+      "sha256": "94db922eb9643ce6bc24ce85e5b5c38a3f90104fd1a06d96581149c8a9383a25"
+    },
+    "bridge.bundle": {
+      "bytes": 412886,
+      "sha256": "495e19bd08bfdcfcc9ece25bec99ab8808a7a87fc3da087811102e1f67592326"
+    },
+    "onward.n7p2": {
+      "bytes": 234646,
+      "sha256": "1e479b79dccee7d487c9fc95fb01bd7e8b10d5a11ad7c3d8d44741005b5f9d7b"
+    },
+    "onward.proof": {
+      "bytes": 230805,
+      "sha256": "1f0bc569390b8d6020f2c2993ffdd87d64fcf762774f5df7bb92023ba58c125c"
+    },
+    "onward.receipts": {
+      "bytes": 3488,
+      "sha256": "cf6762ff88a68b6011dfbaa87d44ebe67ffdded14bb77ae6a939dc8c322b3ad0"
+    },
+    "onward.statement.json": {
+      "bytes": 1288,
+      "sha256": "b05947bf31209d8936adedaa85e53b4e9c2c40e0275547c12ff27bdd6aa027fe"
+    }
+  },
+  "private_inputs": 0,
+  "schema": 1
+}

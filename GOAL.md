@@ -1,3 +1,7 @@
+# Funded profile C post-quantum assurance — active
+
+Starting from published `e55b35e04cf353bb1e1c6e51c07a33b81ddd937c`, determine whether funded profile C can support a defensible 128-bit post-quantum monetary-security claim. Define unauthorized spending, cross-version double spending and inflation games against the actual ledger and proof code. Quantify fixed-target, collision and lifetime multi-user scenarios; assess the exact noninteractive proof and joint receipt privacy. Compare the smallest credible wider note/tree and proof alternatives. Preserve C as the executable reference and publish an independently reproduced retain/change decision under `docs/DELIVERY.md`. The global blockchain objective remains active.
+
 # Funded A/B spend authority — verified
 
 Determine the exact entitlement to funded money under the selected branch, authorized commitment opening and one shared spent set. Starting at 415280581a07d3d246a5408ad32b7e3e922041e7, compare the released variable-depth path with N7P2 and exercise the smallest hardening that binds the branch depth and excludes padding while preserving old notes, keys and nullifiers. Require genuine funded transfer, jointly authorized swap, recovered spending, fresh public replay, role costs and independent public-clone acceptance.

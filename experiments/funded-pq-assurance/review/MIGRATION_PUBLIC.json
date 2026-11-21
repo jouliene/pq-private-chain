@@ -1,0 +1,143 @@
+{
+  "artifact_identity": {
+    "activation_id_sha3_384": "26df9fc9d22dcc74c82281bb0b92573268a941dd4603c1856c40eaae48feffd699d2882a497554eded6a3c7f9071e297",
+    "bridge_proof_sha3_384": "d2565da842ac1a7dfc3d02d02be34bb7fb60daa33d2e1313686949b634da6c29706d8a96d4af39cfca74931aff7ae364",
+    "bundle_id_sha3_384": "c0c7ab3f58e26250fc2ab4582ae6c2d0035f0108677b39ba00aebfd3fc23aec0325d624fc323e7c6acdc906b6590e647",
+    "bundle_sha256": "495e19bd08bfdcfcc9ece25bec99ab8808a7a87fc3da087811102e1f67592326",
+    "c_packet_sha256": "c279f16c830fa8684f53d5a4be7f54e6e8082c10a5b7aca11b23adb471aafee0",
+    "onward_packet_sha3_384": "46de8def7e07ae26565c90f684366cff57312a6eb361d0cff62400838a8fab03026b7dcc2b44425b6287787491c470e4",
+    "onward_proof_sha3_384": "3420ebe56127c0290730dc284dee1aabc0b6b8683dd8ae16e495f47d0b24d1ed92c0d6e92d80be25fc0cf78dd8e17ba6"
+  },
+  "bridge": {
+    "c_public_verification": true,
+    "component_sizes": {
+      "c_packet_including_c_receipts": 182863,
+      "canonical_bundle": 412886,
+      "derived_c_receipt_index": 16,
+      "equality_proof": 225660,
+      "framing": 28,
+      "statement": 847,
+      "successor_receipts": 3488
+    },
+    "context_recomputed": true,
+    "fresh_c_packet_absent_from_selected_public_archive": true,
+    "input_nullifiers_unspent_at_parent": true,
+    "legacy_input_nullifiers_preserved": true,
+    "prototype_ledger_exercise": {
+      "admitted": {
+        "blocks": 1,
+        "c_packets": 1,
+        "embedded_c_receipts": 2,
+        "equality_proofs": 1,
+        "fees": 3,
+        "legacy_spent": 2,
+        "successor_outputs": 2,
+        "successor_receipts": 2
+      },
+      "before": {
+        "blocks": 0,
+        "c_packets": 0,
+        "embedded_c_receipts": 0,
+        "equality_proofs": 0,
+        "fees": 0,
+        "legacy_spent": 0,
+        "successor_outputs": 0,
+        "successor_receipts": 0
+      },
+      "bridge_then_standalone_c_rejected": true,
+      "changed_successor_receipt_rejected_atomically": true,
+      "ordinary_c_then_bridge_rejected": true,
+      "replay_rejected_without_state_change": true,
+      "rollback_and_byte_identical_reinclusion": true,
+      "transient_c_outputs_inserted": false
+    },
+    "public_verification": true,
+    "selected_branch": {
+      "lineage_blocks": 25,
+      "parent_empty": true,
+      "parent_height": 26,
+      "parent_tip": "00000005494f8b6e52ec5211964b6cb18cb19db20f120613acb6d4bd8b510210",
+      "selected_anchor": "9b00806ddd5d38cb5965e3511d86e5fa0d3b604347d7a6a60f733fe0cff29928",
+      "selected_count": 47,
+      "selected_depth": 3
+    },
+    "selected_parent_spent_entries": 22,
+    "successor_root": [
+      3040451549283666105,
+      9401656413426336029,
+      10725907411970487725,
+      10227531074017185160,
+      1547466354169271148,
+      3553969480603565219,
+      18076087707027757399
+    ],
+    "transient_c_outputs_bound_but_not_inserted": true
+  },
+  "input_boundary": {
+    "accepted_inputs": [
+      "nine-file evidence-author05 public directory including its manifest",
+      "public funded-membership replay tree matching the selected tip",
+      "public C deployment/verifier and key",
+      "public bridge and N7 verifier binaries plus exact registered VK files"
+    ],
+    "c_deployment_archive_bytes": 7557294,
+    "c_deployment_archive_sha256": "682ed92c510c0b73ddf21ed7c50c048c4430bb8b06c5e6fc28db1e63e8c5d942",
+    "c_deployment_regular_files": 63,
+    "exact_c_deployment_archive_tree": true,
+    "exact_membership_archive_tree": true,
+    "membership_archive_bytes": 7701082,
+    "membership_archive_sha256": "50008712589106a8a934040dd4fa8465d1eb269f0ca7232f18ffbb2999662b6d",
+    "membership_regular_files": 59,
+    "private_inputs_read": 0
+  },
+  "limits": [
+    "public verification does not establish proof-system knowledge or zero knowledge",
+    "the public release cannot reproduce the private backup-only discovery claim",
+    "recorded prover time and peak RSS are manifest observations, not rerun measurements"
+  ],
+  "mutations": {
+    "bridge_changed_c_commitment_rejected": true,
+    "bridge_changed_context_rejected": true,
+    "bridge_changed_n7_commitment_rejected": true,
+    "bridge_corrupted_proof_rejected": true,
+    "onward_changed_output_rejected": true,
+    "onward_changed_root_rejected": true,
+    "onward_corrupted_proof_rejected": true
+  },
+  "onward": {
+    "activation_recomputed": true,
+    "count": 2,
+    "fee": 3,
+    "network_recomputed": true,
+    "packet_bytes": 234646,
+    "proof_bytes": 230805,
+    "public_verification": true,
+    "receipt_bytes_in_packet": 3488,
+    "root_recomputed_from_bridge_outputs": true,
+    "statement_recomputed_from_packet": true
+  },
+  "schema": "funded-pq-public-migration-review-v2",
+  "verifier_registration": {
+    "acceptance_rule": "exact generated/registered VK identity plus successful public verification; rebuilt executable hashes are excluded because they are build-path dependent",
+    "author_run_binary_sha256_provenance_only": {
+      "bridge": "7a46b37478d193c39db34a3e5561640add46e8fec32a043b4638886834e45cfd",
+      "c_verifier": "881128195a079fab2f97c0a32c02fdf390b08fe0f168b77d6f5f739a5e523ef6",
+      "n7": "ae2a29c9763c4647f18d50653c1479c7be2d1775597a40bac0ca20a531449cc7"
+    },
+    "bridge": {
+      "generated_matches_registered": true,
+      "proof_accepted": true,
+      "registered_vk_sha3_384": "ee397091cbcdd691ad04bbef82dcdc532d720c731e9d02adfcf9ce6bce79de58e9cd7ae5b52d4abc8f5927d6d012cca4"
+    },
+    "c": {
+      "proof_accepted": true,
+      "registered_vk_sha3_384": "c8d5416523d410134d29e7b1b3f54717f6b85fb6384e8e7982939d67deb5d924ab67296cb81a418ecb1a5e509fa287c1",
+      "verifier_from_pinned_deployment_archive": true
+    },
+    "n7": {
+      "generated_matches_registered": true,
+      "proof_accepted": true,
+      "registered_vk_sha3_384": "6512fef3faf2e077592284053014091d952dc1194849722d2d42272d8638d44470fbe37a93eda9f0c6f9b1e4a7b202bc"
+    }
+  }
+}

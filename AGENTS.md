@@ -1,3 +1,7 @@
+# Funded profile C assurance
+
+For changes under `experiments/funded-pq-assurance`, preserve profile C and all published funded-membership evidence as the executable baseline. Keep arbitrary hash collisions, fixed-target openings, unauthorized monetary outcomes, proof knowledge and joint receipt privacy as distinct games. Report quantum queries, classical time, memory, target counts and lifetime aggregation assumptions separately. Reuse K384, WHIR and N7P2 evidence where it answers the exact question. Any migration experiment must consume an old funded identity atomically and demonstrate backup-restored spending of the successor note. Never present a configured security flag, a FRI query count or an ideal primitive width as an end-to-end guarantee.
+
 # Funded membership
 
 Use [the funded-membership walkthrough](experiments/funded-membership/README.md) for changes to the prospective H25 rules. Preserve historical A/B replay, the real funded nullifier and every supply route. Test the signed leg and ordinary registered depth at the eligible ancestor when the head has crossed a quaternary depth boundary. Keep the sorted tree's set membership distinct from positional membership. Run the ownership oracle separately from public-only verification.

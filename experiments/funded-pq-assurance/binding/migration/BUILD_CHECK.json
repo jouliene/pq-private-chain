@@ -1,0 +1,57 @@
+{
+  "build": {
+    "cache_reused": true,
+    "cargo_elapsed_s": 15.28,
+    "cpu_percent": 187,
+    "exit_status": 0,
+    "max_rss_kib": 393448,
+    "system_cpu_s": 0.4,
+    "user_cpu_s": 28.33,
+    "wall_s": 15.29
+  },
+  "command_model": {
+    "cargo_home": "/tmp/funded-pq-cargo-home2",
+    "cargo_jobs": 2,
+    "locked": true,
+    "offline": true,
+    "profile": "release",
+    "rayon_threads": 2,
+    "rust_toolchain": "1.93.0",
+    "target_dir": "/tmp/funded-pq-bridge-target"
+  },
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 15,
+    "warnings_scope": "dead code from selectively included N7 modules and one unused local helper"
+  },
+  "registered_vk_fresh_target_rebuild": {
+    "build": {
+      "cpu_percent": 194,
+      "exit_status": 0,
+      "max_rss_kib": 411784,
+      "system_cpu_s": 4.33,
+      "user_cpu_s": 66.02,
+      "wall_s": 36.23
+    },
+    "target_dir": "/tmp/funded-pq-bridge-registered-target",
+    "tests": {
+      "cpu_percent": 129,
+      "failed": 0,
+      "max_rss_kib": 219352,
+      "passed": 2,
+      "system_cpu_s": 0.1,
+      "user_cpu_s": 0.73,
+      "wall_s": 0.64
+    }
+  },
+  "scope": "compile and unit-test checkpoint only; no verifier-key generation, proving, seed access or private witness operation",
+  "tests": {
+    "cpu_percent": 125,
+    "failed": 0,
+    "max_rss_kib": 219788,
+    "passed": 2,
+    "system_cpu_s": 0.11,
+    "user_cpu_s": 0.72,
+    "wall_s": 0.66
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "24fc62066d1c43b46e33152d83ee642b4d077aed7d9030ce3ffa2b31b5ceea87",
+  "blocks": 34,
+  "distinct_receipt_components": {
+    "complete": 42,
+    "kem": 42,
+    "memo": 42,
+    "note": 42
+  },
+  "graph_packets": 20,
+  "graph_receipts": 40,
+  "input_boundary": "all analyzed bytes read directly from the pinned regular-file-only tar archive",
+  "legacy_control_receipts": 2,
+  "regular_members": 59,
+  "schema": "funded-pq-independent-archive-audit-v1"
+}

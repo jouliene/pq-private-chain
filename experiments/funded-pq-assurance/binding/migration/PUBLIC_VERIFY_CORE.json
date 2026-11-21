@@ -1,0 +1,16 @@
+{
+  "bridge": {
+    "accepted": true,
+    "bytes": 225660,
+    "changed_statement_rejected": true
+  },
+  "c": null,
+  "manifest_files": 8,
+  "n7": {
+    "accepted": true,
+    "corrupted_proof_rejected": true,
+    "packet_bytes": 234646
+  },
+  "parent": null,
+  "private_inputs": 0
+}

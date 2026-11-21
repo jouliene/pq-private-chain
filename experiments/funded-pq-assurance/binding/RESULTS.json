@@ -1,0 +1,2139 @@
+{
+  "field": {
+    "name": "Goldilocks",
+    "order": 18446744069414584321,
+    "order_expression": "2^64 - 2^32 + 1"
+  },
+  "model": {
+    "arbitrary_collision": "original BHT ideal query/time exponent log2(|range|)/3 with at least |range|^(1/3) list entries",
+    "honest_pair_collision": "union bound C(T,2)/|range|",
+    "lifetime_composition": "R*epsilon union bound requires a conditional epsilon after every prior adaptive transcript and does not convert a query exponent into such an epsilon",
+    "multi_target_preimage": "ideal constant-success Grover/Boyer query scale (log2(|range|/T))/2; probability rows use min(1,(2q+1)^2*T/|range|) as an upper envelope and show the same expression as a small-angle estimate only at <=0.01",
+    "no_qram_collision_screen": "CNS 2017 ideal soft-O query/time 2n/5, polynomial O(n) quantum memory and classical memory exponent n/5; n is instantiated as log2(|range|)",
+    "physical_runtime": "illustrative serial conversion at 1000000000000 ideal oracle queries/second; not a hardware or Poseidon2 runtime estimate",
+    "qualification": "generic ideal-function query benchmarks only; not a reduction, Poseidon2 analysis, proof-system bound or monetary-security claim",
+    "target_membership": "multi-target query exponents assume unit-cost coherent membership in a complete usable-target table; raw bytes are reported but qRAM construction is not"
+  },
+  "representative_query_counts": [
+    "2^64",
+    "2^96",
+    "2^112",
+    "2^128"
+  ],
+  "researcher_lifetime_attempt_example": {
+    "any_failure_probability_upper_bound": "5.877471754111E-30",
+    "attempts": 2000000000,
+    "per_attempt_failure_bound": "2^-128",
+    "remaining_negative_log2_bound": "97.102648",
+    "requires_each_attempt_bound_conditioned_on_complete_prior_transcript": true
+  },
+  "scenarios": [
+    {
+      "id": "one_target_per_offered_payment_20y",
+      "lifetime_union_bound_if_one_attempt_per_usable_target": {
+        "any_failure_probability_upper_bound": "5.877471754111E-30",
+        "attempts": 2000000000,
+        "per_attempt_failure_bound": "2^-128",
+        "remaining_negative_log2_bound": "97.102648",
+        "requires_each_attempt_bound_conditioned_on_complete_prior_transcript": true
+      },
+      "minimum_goldilocks_limbs_for_128_bit_quantum_arbitrary_collision": 7,
+      "minimum_goldilocks_limbs_for_128_bit_quantum_multi_target_preimage": 5,
+      "owner_inputs": {
+        "offered_payments_per_year": 100000000
+      },
+      "profiles": [
+        {
+          "bht_original": {
+            "list_entries_at_least": 48740834797473129885942069,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "85.333334",
+            "raw_digest_list_bytes_at_least": 1559706713519140156350146208,
+            "raw_digest_list_bytes_log2": "90.333334",
+            "time_exponent_log2_in_unit_cost_oracle_model": "85.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "128.000000",
+            "one_fifth_memory_bits": "51.200000",
+            "one_fifth_memory_query_bits": "102.400000",
+            "optimal_bht_memory_and_query_bits": "85.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "225.102648",
+          "classical_single_target_preimage_query_bits": "256.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "51.200000",
+            "nominal_range_bits_n": "256.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "102.400000",
+            "rough_linear_qubit_scale_without_hidden_constant": 256,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "102.400000"
+          },
+          "encoded_bytes": 32,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494351917E-38",
+                  "success_probability_upper_bound": "1.175494351917E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404346990E-19",
+                  "success_probability_upper_bound": "2.168404346990E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.313225754828E-10",
+                  "success_probability_upper_bound": "9.313225754828E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.350988703834E-29",
+                  "success_probability_upper_bound": "2.350988703834E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "4.336808693981E-10",
+                  "success_probability_upper_bound": "4.336808693981E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 2000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-195.205294",
+          "ideal_range_log2": "256.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "20.558713",
+              "years_scientific": "1.544503853191E+6"
+            },
+            "multi_target_preimage": {
+              "log2_years": "47.776703",
+              "years_scientific": "2.411129184809E+14"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 4,
+          "quantum_arbitrary_collision_query_bits": "85.333334",
+          "quantum_multi_target_preimage_query_bits": "112.551324",
+          "quantum_single_target_preimage_query_bits": "128.000000",
+          "usable_target_table": {
+            "entries": 2000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 64000000000,
+            "raw_digest_gib": "5.960464477539E+1"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 128785273315171030106272675523088,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "106.666667",
+            "raw_digest_list_bytes_at_least": 5151410932606841204250907020923520,
+            "raw_digest_list_bytes_log2": "111.988595",
+            "time_exponent_log2_in_unit_cost_oracle_model": "106.666667"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "160.000000",
+            "one_fifth_memory_bits": "64.000000",
+            "one_fifth_memory_query_bits": "128.000000",
+            "optimal_bht_memory_and_query_bits": "106.666667",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "289.102648",
+          "classical_single_target_preimage_query_bits": "320.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "64.000000",
+            "nominal_range_bits_n": "320.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "128.000000",
+            "rough_linear_qubit_scale_without_hidden_constant": 320,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "128.000000"
+          },
+          "encoded_bytes": 40,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367651948E-58",
+                  "success_probability_upper_bound": "6.372367651948E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352191E-38",
+                  "success_probability_upper_bound": "1.175494352191E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.048709799292E-29",
+                  "success_probability_upper_bound": "5.048709799292E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404347495E-19",
+                  "success_probability_upper_bound": "2.168404347495E-19",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.274473530390E-48",
+                  "success_probability_upper_bound": "1.274473530390E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.350988704381E-29",
+                  "success_probability_upper_bound": "2.350988704381E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.009741959858E-19",
+                  "success_probability_upper_bound": "1.009741959858E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "4.336808694991E-10",
+                  "success_probability_upper_bound": "4.336808694991E-10",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 2000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-259.205294",
+          "ideal_range_log2": "320.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "41.892046",
+              "years_scientific": "4.080959049965E+12"
+            },
+            "multi_target_preimage": {
+              "log2_years": "79.776703",
+              "years_scientific": "1.035572099398E+24"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 5,
+          "quantum_arbitrary_collision_query_bits": "106.666667",
+          "quantum_multi_target_preimage_query_bits": "144.551324",
+          "quantum_single_target_preimage_query_bits": "160.000000",
+          "usable_target_table": {
+            "entries": 2000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 80000000000,
+            "raw_digest_gib": "7.450580596924E+1"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 340282366762482138490186164457219031041,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "128.000000",
+            "raw_digest_list_bytes_at_least": 16333553604599142647528935893946513489968,
+            "raw_digest_list_bytes_log2": "133.584963",
+            "time_exponent_log2_in_unit_cost_oracle_model": "128.000000"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "192.000000",
+            "one_fifth_memory_bits": "76.800000",
+            "one_fifth_memory_query_bits": "153.600000",
+            "optimal_bht_memory_and_query_bits": "128.000000",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "353.102648",
+          "classical_single_target_preimage_query_bits": "384.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "76.800000",
+            "nominal_range_bits_n": "384.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "153.600000",
+            "rough_linear_qubit_scale_without_hidden_constant": 384,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "153.600000"
+          },
+          "encoded_bytes": 48,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467426864E-77",
+                  "success_probability_upper_bound": "3.454467426864E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367653432E-58",
+                  "success_probability_upper_bound": "6.372367653432E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.736911066958E-48",
+                  "success_probability_upper_bound": "2.736911066958E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352464E-38",
+                  "success_probability_upper_bound": "1.175494352464E-38",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.908934853727E-68",
+                  "success_probability_upper_bound": "6.908934853727E-68",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.274473530686E-48",
+                  "success_probability_upper_bound": "1.274473530686E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.473822133916E-39",
+                  "success_probability_upper_bound": "5.473822133916E-39",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.350988704929E-29",
+                  "success_probability_upper_bound": "2.350988704929E-29",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 2000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-323.205294",
+          "ideal_range_log2": "384.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "63.225379",
+              "years_scientific": "1.078289751954E+19"
+            },
+            "multi_target_preimage": {
+              "log2_years": "111.776703",
+              "years_scientific": "4.447748299048E+33"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 6,
+          "quantum_arbitrary_collision_query_bits": "128.000000",
+          "quantum_multi_target_preimage_query_bits": "176.551324",
+          "quantum_single_target_preimage_query_bits": "192.000000",
+          "usable_target_table": {
+            "entries": 2000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 96000000000,
+            "raw_digest_gib": "8.940696716309E+1"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 899109705238603460809852075951383214434011906,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "149.333334",
+            "raw_digest_list_bytes_at_least": 50350143493361793805351716253277460008304666736,
+            "raw_digest_list_bytes_log2": "155.140689",
+            "time_exponent_log2_in_unit_cost_oracle_model": "149.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "224.000000",
+            "one_fifth_memory_bits": "89.600000",
+            "one_fifth_memory_query_bits": "179.200000",
+            "optimal_bht_memory_and_query_bits": "149.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "417.102648",
+          "classical_single_target_preimage_query_bits": "448.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "89.600000",
+            "nominal_range_bits_n": "448.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "179.200000",
+            "rough_linear_qubit_scale_without_hidden_constant": 448,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "179.200000"
+          },
+          "encoded_bytes": 56,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.872670544929E-96",
+                  "success_probability_upper_bound": "1.872670544929E-96",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467427668E-77",
+                  "success_probability_upper_bound": "3.454467427668E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.483682462693E-67",
+                  "success_probability_upper_bound": "1.483682462693E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367654916E-58",
+                  "success_probability_upper_bound": "6.372367654916E-58",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.745341089858E-87",
+                  "success_probability_upper_bound": "3.745341089858E-87",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.908934855336E-68",
+                  "success_probability_upper_bound": "6.908934855336E-68",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.967364925386E-58",
+                  "success_probability_upper_bound": "2.967364925386E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.274473530983E-48",
+                  "success_probability_upper_bound": "1.274473530983E-48",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 2000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-387.205294",
+          "ideal_range_log2": "448.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "84.558713",
+              "years_scientific": "2.849106729405E+25"
+            },
+            "multi_target_preimage": {
+              "log2_years": "143.776703",
+              "years_scientific": "1.910293348303E+43"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 7,
+          "quantum_arbitrary_collision_query_bits": "149.333334",
+          "quantum_multi_target_preimage_query_bits": "208.551324",
+          "quantum_single_target_preimage_query_bits": "224.000000",
+          "usable_target_table": {
+            "entries": 2000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 112000000000,
+            "raw_digest_gib": "1.043081283569E+2"
+          }
+        }
+      ],
+      "researcher_assumptions": {
+        "accepted_fraction": "1/1",
+        "reward_targets": 0,
+        "usable_targets_per_offered_payment": 1,
+        "years": 20
+      },
+      "target_log2": "30.897353",
+      "targets": 2000000000
+    },
+    {
+      "id": "mixed_outputs_20y_100pct",
+      "lifetime_union_bound_if_one_attempt_per_usable_target": {
+        "any_failure_probability_upper_bound": "1.293043785905E-29",
+        "attempts": 4400000000,
+        "per_attempt_failure_bound": "2^-128",
+        "remaining_negative_log2_bound": "95.965144",
+        "requires_each_attempt_bound_conditioned_on_complete_prior_transcript": true
+      },
+      "minimum_goldilocks_limbs_for_128_bit_quantum_arbitrary_collision": 7,
+      "minimum_goldilocks_limbs_for_128_bit_quantum_multi_target_preimage": 5,
+      "owner_inputs": {
+        "offered_payments_per_year": 100000000
+      },
+      "profiles": [
+        {
+          "bht_original": {
+            "list_entries_at_least": 48740834797473129885942069,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "85.333334",
+            "raw_digest_list_bytes_at_least": 1559706713519140156350146208,
+            "raw_digest_list_bytes_log2": "90.333334",
+            "time_exponent_log2_in_unit_cost_oracle_model": "85.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "128.000000",
+            "one_fifth_memory_bits": "51.200000",
+            "one_fifth_memory_query_bits": "102.400000",
+            "optimal_bht_memory_and_query_bits": "85.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "223.965144",
+          "classical_single_target_preimage_query_bits": "256.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "51.200000",
+            "nominal_range_bits_n": "256.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "102.400000",
+            "rough_linear_qubit_scale_without_hidden_constant": 256,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "102.400000"
+          },
+          "encoded_bytes": 32,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494351917E-38",
+                  "success_probability_upper_bound": "1.175494351917E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404346990E-19",
+                  "success_probability_upper_bound": "2.168404346990E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.313225754828E-10",
+                  "success_probability_upper_bound": "9.313225754828E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.172175148435E-29",
+                  "success_probability_upper_bound": "5.172175148435E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.540979126758E-10",
+                  "success_probability_upper_bound": "9.540979126758E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4400000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-192.930287",
+          "ideal_range_log2": "256.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "20.558713",
+              "years_scientific": "1.544503853191E+6"
+            },
+            "multi_target_preimage": {
+              "log2_years": "47.207951",
+              "years_scientific": "1.625582964780E+14"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 4,
+          "quantum_arbitrary_collision_query_bits": "85.333334",
+          "quantum_multi_target_preimage_query_bits": "111.982572",
+          "quantum_single_target_preimage_query_bits": "128.000000",
+          "usable_target_table": {
+            "entries": 4400000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 140800000000,
+            "raw_digest_gib": "1.311302185059E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 128785273315171030106272675523088,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "106.666667",
+            "raw_digest_list_bytes_at_least": 5151410932606841204250907020923520,
+            "raw_digest_list_bytes_log2": "111.988595",
+            "time_exponent_log2_in_unit_cost_oracle_model": "106.666667"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "160.000000",
+            "one_fifth_memory_bits": "64.000000",
+            "one_fifth_memory_query_bits": "128.000000",
+            "optimal_bht_memory_and_query_bits": "106.666667",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "287.965144",
+          "classical_single_target_preimage_query_bits": "320.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "64.000000",
+            "nominal_range_bits_n": "320.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "128.000000",
+            "rough_linear_qubit_scale_without_hidden_constant": 320,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "128.000000"
+          },
+          "encoded_bytes": 40,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367651948E-58",
+                  "success_probability_upper_bound": "6.372367651948E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352191E-38",
+                  "success_probability_upper_bound": "1.175494352191E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.048709799292E-29",
+                  "success_probability_upper_bound": "5.048709799292E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404347495E-19",
+                  "success_probability_upper_bound": "2.168404347495E-19",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.803841766857E-48",
+                  "success_probability_upper_bound": "2.803841766857E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.172175149639E-29",
+                  "success_probability_upper_bound": "5.172175149639E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.221432311688E-19",
+                  "success_probability_upper_bound": "2.221432311688E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.540979128980E-10",
+                  "success_probability_upper_bound": "9.540979128980E-10",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4400000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-256.930287",
+          "ideal_range_log2": "320.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "41.892046",
+              "years_scientific": "4.080959049965E+12"
+            },
+            "multi_target_preimage": {
+              "log2_years": "79.207951",
+              "years_scientific": "6.981825669850E+23"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 5,
+          "quantum_arbitrary_collision_query_bits": "106.666667",
+          "quantum_multi_target_preimage_query_bits": "143.982572",
+          "quantum_single_target_preimage_query_bits": "160.000000",
+          "usable_target_table": {
+            "entries": 4400000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 176000000000,
+            "raw_digest_gib": "1.639127731323E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 340282366762482138490186164457219031041,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "128.000000",
+            "raw_digest_list_bytes_at_least": 16333553604599142647528935893946513489968,
+            "raw_digest_list_bytes_log2": "133.584963",
+            "time_exponent_log2_in_unit_cost_oracle_model": "128.000000"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "192.000000",
+            "one_fifth_memory_bits": "76.800000",
+            "one_fifth_memory_query_bits": "153.600000",
+            "optimal_bht_memory_and_query_bits": "128.000000",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "351.965144",
+          "classical_single_target_preimage_query_bits": "384.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "76.800000",
+            "nominal_range_bits_n": "384.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "153.600000",
+            "rough_linear_qubit_scale_without_hidden_constant": 384,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "153.600000"
+          },
+          "encoded_bytes": 48,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467426864E-77",
+                  "success_probability_upper_bound": "3.454467426864E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367653432E-58",
+                  "success_probability_upper_bound": "6.372367653432E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.736911066958E-48",
+                  "success_probability_upper_bound": "2.736911066958E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352464E-38",
+                  "success_probability_upper_bound": "1.175494352464E-38",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.519965667820E-67",
+                  "success_probability_upper_bound": "1.519965667820E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.803841767510E-48",
+                  "success_probability_upper_bound": "2.803841767510E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.204240869461E-38",
+                  "success_probability_upper_bound": "1.204240869461E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.172175150844E-29",
+                  "success_probability_upper_bound": "5.172175150844E-29",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4400000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-320.930287",
+          "ideal_range_log2": "384.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "63.225379",
+              "years_scientific": "1.078289751954E+19"
+            },
+            "multi_target_preimage": {
+              "log2_years": "111.207951",
+              "years_scientific": "2.998671291489E+33"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 6,
+          "quantum_arbitrary_collision_query_bits": "128.000000",
+          "quantum_multi_target_preimage_query_bits": "175.982572",
+          "quantum_single_target_preimage_query_bits": "192.000000",
+          "usable_target_table": {
+            "entries": 4400000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 211200000000,
+            "raw_digest_gib": "1.966953277588E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 899109705238603460809852075951383214434011906,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "149.333334",
+            "raw_digest_list_bytes_at_least": 50350143493361793805351716253277460008304666736,
+            "raw_digest_list_bytes_log2": "155.140689",
+            "time_exponent_log2_in_unit_cost_oracle_model": "149.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "224.000000",
+            "one_fifth_memory_bits": "89.600000",
+            "one_fifth_memory_query_bits": "179.200000",
+            "optimal_bht_memory_and_query_bits": "149.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "415.965144",
+          "classical_single_target_preimage_query_bits": "448.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "89.600000",
+            "nominal_range_bits_n": "448.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "179.200000",
+            "rough_linear_qubit_scale_without_hidden_constant": 448,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "179.200000"
+          },
+          "encoded_bytes": 56,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.872670544929E-96",
+                  "success_probability_upper_bound": "1.872670544929E-96",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467427668E-77",
+                  "success_probability_upper_bound": "3.454467427668E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.483682462693E-67",
+                  "success_probability_upper_bound": "1.483682462693E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367654916E-58",
+                  "success_probability_upper_bound": "6.372367654916E-58",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "8.239750397688E-87",
+                  "success_probability_upper_bound": "8.239750397688E-87",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.519965668174E-67",
+                  "success_probability_upper_bound": "1.519965668174E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.528202835850E-58",
+                  "success_probability_upper_bound": "6.528202835850E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.803841768163E-48",
+                  "success_probability_upper_bound": "2.803841768163E-48",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4400000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-384.930287",
+          "ideal_range_log2": "448.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "84.558713",
+              "years_scientific": "2.849106729405E+25"
+            },
+            "multi_target_preimage": {
+              "log2_years": "143.207951",
+              "years_scientific": "1.287919512690E+43"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 7,
+          "quantum_arbitrary_collision_query_bits": "149.333334",
+          "quantum_multi_target_preimage_query_bits": "207.982572",
+          "quantum_single_target_preimage_query_bits": "224.000000",
+          "usable_target_table": {
+            "entries": 4400000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 246400000000,
+            "raw_digest_gib": "2.294778823853E+2"
+          }
+        }
+      ],
+      "researcher_assumptions": {
+        "accepted_fraction": "1/1",
+        "ordinary_fraction": "9/10",
+        "ordinary_outputs": 2,
+        "reward_targets": 0,
+        "swap_fraction": "1/10",
+        "swap_outputs": 4,
+        "years": 20
+      },
+      "target_log2": "32.034857",
+      "targets": 4400000000
+    },
+    {
+      "id": "mixed_outputs_20y_95pct",
+      "lifetime_union_bound_if_one_attempt_per_usable_target": {
+        "any_failure_probability_upper_bound": "1.228391596609E-29",
+        "attempts": 4180000000,
+        "per_attempt_failure_bound": "2^-128",
+        "remaining_negative_log2_bound": "96.039145",
+        "requires_each_attempt_bound_conditioned_on_complete_prior_transcript": true
+      },
+      "minimum_goldilocks_limbs_for_128_bit_quantum_arbitrary_collision": 7,
+      "minimum_goldilocks_limbs_for_128_bit_quantum_multi_target_preimage": 5,
+      "owner_inputs": {
+        "offered_payments_per_year": 100000000
+      },
+      "profiles": [
+        {
+          "bht_original": {
+            "list_entries_at_least": 48740834797473129885942069,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "85.333334",
+            "raw_digest_list_bytes_at_least": 1559706713519140156350146208,
+            "raw_digest_list_bytes_log2": "90.333334",
+            "time_exponent_log2_in_unit_cost_oracle_model": "85.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "128.000000",
+            "one_fifth_memory_bits": "51.200000",
+            "one_fifth_memory_query_bits": "102.400000",
+            "optimal_bht_memory_and_query_bits": "85.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "224.039145",
+          "classical_single_target_preimage_query_bits": "256.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "51.200000",
+            "nominal_range_bits_n": "256.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "102.400000",
+            "rough_linear_qubit_scale_without_hidden_constant": 256,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "102.400000"
+          },
+          "encoded_bytes": 32,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494351917E-38",
+                  "success_probability_upper_bound": "1.175494351917E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404346990E-19",
+                  "success_probability_upper_bound": "2.168404346990E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.313225754828E-10",
+                  "success_probability_upper_bound": "9.313225754828E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "4.913566391013E-29",
+                  "success_probability_upper_bound": "4.913566391013E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.063930170420E-10",
+                  "success_probability_upper_bound": "9.063930170420E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4180000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-193.078288",
+          "ideal_range_log2": "256.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "20.558713",
+              "years_scientific": "1.544503853191E+6"
+            },
+            "multi_target_preimage": {
+              "log2_years": "47.244951",
+              "years_scientific": "1.667812931382E+14"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 4,
+          "quantum_arbitrary_collision_query_bits": "85.333334",
+          "quantum_multi_target_preimage_query_bits": "112.019573",
+          "quantum_single_target_preimage_query_bits": "128.000000",
+          "usable_target_table": {
+            "entries": 4180000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 133760000000,
+            "raw_digest_gib": "1.245737075806E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 128785273315171030106272675523088,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "106.666667",
+            "raw_digest_list_bytes_at_least": 5151410932606841204250907020923520,
+            "raw_digest_list_bytes_log2": "111.988595",
+            "time_exponent_log2_in_unit_cost_oracle_model": "106.666667"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "160.000000",
+            "one_fifth_memory_bits": "64.000000",
+            "one_fifth_memory_query_bits": "128.000000",
+            "optimal_bht_memory_and_query_bits": "106.666667",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "288.039145",
+          "classical_single_target_preimage_query_bits": "320.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "64.000000",
+            "nominal_range_bits_n": "320.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "128.000000",
+            "rough_linear_qubit_scale_without_hidden_constant": 320,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "128.000000"
+          },
+          "encoded_bytes": 40,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367651948E-58",
+                  "success_probability_upper_bound": "6.372367651948E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352191E-38",
+                  "success_probability_upper_bound": "1.175494352191E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.048709799292E-29",
+                  "success_probability_upper_bound": "5.048709799292E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404347495E-19",
+                  "success_probability_upper_bound": "2.168404347495E-19",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.663649678514E-48",
+                  "success_probability_upper_bound": "2.663649678514E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "4.913566392157E-29",
+                  "success_probability_upper_bound": "4.913566392157E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.110360696104E-19",
+                  "success_probability_upper_bound": "2.110360696104E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.063930172531E-10",
+                  "success_probability_upper_bound": "9.063930172531E-10",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4180000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-257.078288",
+          "ideal_range_log2": "320.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "41.892046",
+              "years_scientific": "4.080959049965E+12"
+            },
+            "multi_target_preimage": {
+              "log2_years": "79.244951",
+              "years_scientific": "7.163201995299E+23"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 5,
+          "quantum_arbitrary_collision_query_bits": "106.666667",
+          "quantum_multi_target_preimage_query_bits": "144.019573",
+          "quantum_single_target_preimage_query_bits": "160.000000",
+          "usable_target_table": {
+            "entries": 4180000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 167200000000,
+            "raw_digest_gib": "1.557171344757E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 340282366762482138490186164457219031041,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "128.000000",
+            "raw_digest_list_bytes_at_least": 16333553604599142647528935893946513489968,
+            "raw_digest_list_bytes_log2": "133.584963",
+            "time_exponent_log2_in_unit_cost_oracle_model": "128.000000"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "192.000000",
+            "one_fifth_memory_bits": "76.800000",
+            "one_fifth_memory_query_bits": "153.600000",
+            "optimal_bht_memory_and_query_bits": "128.000000",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "352.039145",
+          "classical_single_target_preimage_query_bits": "384.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "76.800000",
+            "nominal_range_bits_n": "384.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "153.600000",
+            "rough_linear_qubit_scale_without_hidden_constant": 384,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "153.600000"
+          },
+          "encoded_bytes": 48,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467426864E-77",
+                  "success_probability_upper_bound": "3.454467426864E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367653432E-58",
+                  "success_probability_upper_bound": "6.372367653432E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.736911066958E-48",
+                  "success_probability_upper_bound": "2.736911066958E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352464E-38",
+                  "success_probability_upper_bound": "1.175494352464E-38",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.443967384429E-67",
+                  "success_probability_upper_bound": "1.443967384429E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.663649679135E-48",
+                  "success_probability_upper_bound": "2.663649679135E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.144028825988E-38",
+                  "success_probability_upper_bound": "1.144028825988E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "4.913566393301E-29",
+                  "success_probability_upper_bound": "4.913566393301E-29",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4180000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-321.078288",
+          "ideal_range_log2": "384.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "63.225379",
+              "years_scientific": "1.078289751954E+19"
+            },
+            "multi_target_preimage": {
+              "log2_years": "111.244951",
+              "years_scientific": "3.076571830087E+33"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 6,
+          "quantum_arbitrary_collision_query_bits": "128.000000",
+          "quantum_multi_target_preimage_query_bits": "176.019573",
+          "quantum_single_target_preimage_query_bits": "192.000000",
+          "usable_target_table": {
+            "entries": 4180000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 200640000000,
+            "raw_digest_gib": "1.868605613708E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 899109705238603460809852075951383214434011906,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "149.333334",
+            "raw_digest_list_bytes_at_least": 50350143493361793805351716253277460008304666736,
+            "raw_digest_list_bytes_log2": "155.140689",
+            "time_exponent_log2_in_unit_cost_oracle_model": "149.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "224.000000",
+            "one_fifth_memory_bits": "89.600000",
+            "one_fifth_memory_query_bits": "179.200000",
+            "optimal_bht_memory_and_query_bits": "149.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "416.039145",
+          "classical_single_target_preimage_query_bits": "448.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "89.600000",
+            "nominal_range_bits_n": "448.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "179.200000",
+            "rough_linear_qubit_scale_without_hidden_constant": 448,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "179.200000"
+          },
+          "encoded_bytes": 56,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.872670544929E-96",
+                  "success_probability_upper_bound": "1.872670544929E-96",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467427668E-77",
+                  "success_probability_upper_bound": "3.454467427668E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.483682462693E-67",
+                  "success_probability_upper_bound": "1.483682462693E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367654916E-58",
+                  "success_probability_upper_bound": "6.372367654916E-58",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "7.827762877803E-87",
+                  "success_probability_upper_bound": "7.827762877803E-87",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.443967384765E-67",
+                  "success_probability_upper_bound": "1.443967384765E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.201792694057E-58",
+                  "success_probability_upper_bound": "6.201792694057E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.663649679755E-48",
+                  "success_probability_upper_bound": "2.663649679755E-48",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 4180000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-385.078288",
+          "ideal_range_log2": "448.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "84.558713",
+              "years_scientific": "2.849106729405E+25"
+            },
+            "multi_target_preimage": {
+              "log2_years": "143.244951",
+              "years_scientific": "1.321377539248E+43"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 7,
+          "quantum_arbitrary_collision_query_bits": "149.333334",
+          "quantum_multi_target_preimage_query_bits": "208.019573",
+          "quantum_single_target_preimage_query_bits": "224.000000",
+          "usable_target_table": {
+            "entries": 4180000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 234080000000,
+            "raw_digest_gib": "2.180039882660E+2"
+          }
+        }
+      ],
+      "researcher_assumptions": {
+        "accepted_fraction": "19/20",
+        "ordinary_fraction": "9/10",
+        "ordinary_outputs": 2,
+        "reward_targets": 0,
+        "swap_fraction": "1/10",
+        "swap_outputs": 4,
+        "years": 20
+      },
+      "target_log2": "31.960856",
+      "targets": 4180000000
+    },
+    {
+      "id": "four_outputs_per_offer_20y",
+      "lifetime_union_bound_if_one_attempt_per_usable_target": {
+        "any_failure_probability_upper_bound": "2.350988701645E-29",
+        "attempts": 8000000000,
+        "per_attempt_failure_bound": "2^-128",
+        "remaining_negative_log2_bound": "95.102648",
+        "requires_each_attempt_bound_conditioned_on_complete_prior_transcript": true
+      },
+      "minimum_goldilocks_limbs_for_128_bit_quantum_arbitrary_collision": 7,
+      "minimum_goldilocks_limbs_for_128_bit_quantum_multi_target_preimage": 5,
+      "owner_inputs": {
+        "offered_payments_per_year": 100000000
+      },
+      "profiles": [
+        {
+          "bht_original": {
+            "list_entries_at_least": 48740834797473129885942069,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "85.333334",
+            "raw_digest_list_bytes_at_least": 1559706713519140156350146208,
+            "raw_digest_list_bytes_log2": "90.333334",
+            "time_exponent_log2_in_unit_cost_oracle_model": "85.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "128.000000",
+            "one_fifth_memory_bits": "51.200000",
+            "one_fifth_memory_query_bits": "102.400000",
+            "optimal_bht_memory_and_query_bits": "85.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "223.102648",
+          "classical_single_target_preimage_query_bits": "256.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "51.200000",
+            "nominal_range_bits_n": "256.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "102.400000",
+            "rough_linear_qubit_scale_without_hidden_constant": 256,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "102.400000"
+          },
+          "encoded_bytes": 32,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494351917E-38",
+                  "success_probability_upper_bound": "1.175494351917E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404346990E-19",
+                  "success_probability_upper_bound": "2.168404346990E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.313225754828E-10",
+                  "success_probability_upper_bound": "9.313225754828E-10",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.403954815336E-29",
+                  "success_probability_upper_bound": "9.403954815336E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.734723477592E-9",
+                  "success_probability_upper_bound": "1.734723477592E-9",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                },
+                {
+                  "q": "2^128",
+                  "regime": "bound-saturated-or-post-first-peak",
+                  "small_angle_success_estimate": null,
+                  "success_probability_upper_bound": "1.000000000000E+0",
+                  "upper_bound_capped_at_one": true
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 8000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-191.205294",
+          "ideal_range_log2": "256.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "20.558713",
+              "years_scientific": "1.544503853191E+6"
+            },
+            "multi_target_preimage": {
+              "log2_years": "46.776703",
+              "years_scientific": "1.205564592405E+14"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 4,
+          "quantum_arbitrary_collision_query_bits": "85.333334",
+          "quantum_multi_target_preimage_query_bits": "111.551324",
+          "quantum_single_target_preimage_query_bits": "128.000000",
+          "usable_target_table": {
+            "entries": 8000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 256000000000,
+            "raw_digest_gib": "2.384185791016E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 128785273315171030106272675523088,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "106.666667",
+            "raw_digest_list_bytes_at_least": 5151410932606841204250907020923520,
+            "raw_digest_list_bytes_log2": "111.988595",
+            "time_exponent_log2_in_unit_cost_oracle_model": "106.666667"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "160.000000",
+            "one_fifth_memory_bits": "64.000000",
+            "one_fifth_memory_query_bits": "128.000000",
+            "optimal_bht_memory_and_query_bits": "106.666667",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "287.102648",
+          "classical_single_target_preimage_query_bits": "320.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "64.000000",
+            "nominal_range_bits_n": "320.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "128.000000",
+            "rough_linear_qubit_scale_without_hidden_constant": 320,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "128.000000"
+          },
+          "encoded_bytes": 40,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367651948E-58",
+                  "success_probability_upper_bound": "6.372367651948E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352191E-38",
+                  "success_probability_upper_bound": "1.175494352191E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.048709799292E-29",
+                  "success_probability_upper_bound": "5.048709799292E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.168404347495E-19",
+                  "success_probability_upper_bound": "2.168404347495E-19",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.097894121559E-48",
+                  "success_probability_upper_bound": "5.097894121559E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.403954817526E-29",
+                  "success_probability_upper_bound": "9.403954817526E-29",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "4.038967839434E-19",
+                  "success_probability_upper_bound": "4.038967839434E-19",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.734723477996E-9",
+                  "success_probability_upper_bound": "1.734723477996E-9",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 8000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-255.205294",
+          "ideal_range_log2": "320.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "41.892046",
+              "years_scientific": "4.080959049965E+12"
+            },
+            "multi_target_preimage": {
+              "log2_years": "78.776703",
+              "years_scientific": "5.177860496991E+23"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 5,
+          "quantum_arbitrary_collision_query_bits": "106.666667",
+          "quantum_multi_target_preimage_query_bits": "143.551324",
+          "quantum_single_target_preimage_query_bits": "160.000000",
+          "usable_target_table": {
+            "entries": 8000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 320000000000,
+            "raw_digest_gib": "2.980232238770E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 340282366762482138490186164457219031041,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "128.000000",
+            "raw_digest_list_bytes_at_least": 16333553604599142647528935893946513489968,
+            "raw_digest_list_bytes_log2": "133.584963",
+            "time_exponent_log2_in_unit_cost_oracle_model": "128.000000"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "192.000000",
+            "one_fifth_memory_bits": "76.800000",
+            "one_fifth_memory_query_bits": "153.600000",
+            "optimal_bht_memory_and_query_bits": "128.000000",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "351.102648",
+          "classical_single_target_preimage_query_bits": "384.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "76.800000",
+            "nominal_range_bits_n": "384.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "153.600000",
+            "rough_linear_qubit_scale_without_hidden_constant": 384,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "153.600000"
+          },
+          "encoded_bytes": 48,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467426864E-77",
+                  "success_probability_upper_bound": "3.454467426864E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367653432E-58",
+                  "success_probability_upper_bound": "6.372367653432E-58",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.736911066958E-48",
+                  "success_probability_upper_bound": "2.736911066958E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.175494352464E-38",
+                  "success_probability_upper_bound": "1.175494352464E-38",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.763573941491E-67",
+                  "success_probability_upper_bound": "2.763573941491E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.097894122746E-48",
+                  "success_probability_upper_bound": "5.097894122746E-48",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.189528853566E-38",
+                  "success_probability_upper_bound": "2.189528853566E-38",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "9.403954819715E-29",
+                  "success_probability_upper_bound": "9.403954819715E-29",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 8000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-319.205294",
+          "ideal_range_log2": "384.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "63.225379",
+              "years_scientific": "1.078289751954E+19"
+            },
+            "multi_target_preimage": {
+              "log2_years": "110.776703",
+              "years_scientific": "2.223874149524E+33"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 6,
+          "quantum_arbitrary_collision_query_bits": "128.000000",
+          "quantum_multi_target_preimage_query_bits": "175.551324",
+          "quantum_single_target_preimage_query_bits": "192.000000",
+          "usable_target_table": {
+            "entries": 8000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 384000000000,
+            "raw_digest_gib": "3.576278686523E+2"
+          }
+        },
+        {
+          "bht_original": {
+            "list_entries_at_least": 899109705238603460809852075951383214434011906,
+            "qualification": "original sampled-list plus Grover construction; storage excludes indices, reversible lookup circuitry and fault tolerance",
+            "query_exponent_log2": "149.333334",
+            "raw_digest_list_bytes_at_least": 50350143493361793805351716253277460008304666736,
+            "raw_digest_list_bytes_log2": "155.140689",
+            "time_exponent_log2_in_unit_cost_oracle_model": "149.333334"
+          },
+          "bht_sampled_list_tradeoff": {
+            "constant_memory_endpoint_query_bits": "224.000000",
+            "one_fifth_memory_bits": "89.600000",
+            "one_fifth_memory_query_bits": "179.200000",
+            "optimal_bht_memory_and_query_bits": "149.333334",
+            "parameter": "for list memory M=|range|^s, setup M and Grover search sqrt(|range|/M) give query/time exponent max(s,(1-s)/2)",
+            "qualification": "conservative parameterization of the original BHT construction, not a physical low-memory implementation"
+          },
+          "classical_multi_target_preimage_query_bits": "415.102648",
+          "classical_single_target_preimage_query_bits": "448.000000",
+          "cns_no_qram_collision_screen": {
+            "classical_memory_exponent_log2_soft_O": "89.600000",
+            "nominal_range_bits_n": "448.000000",
+            "qualification": "ideal random-function soft-O screen without qRAM; nominal exponents substitute log2(p^limbs) for n and do not establish Poseidon2 or monetary security",
+            "quantum_memory": "O(n) qubits",
+            "query_exponent_log2_soft_O": "179.200000",
+            "rough_linear_qubit_scale_without_hidden_constant": 448,
+            "source": "Chailloux-Naya-Plasencia-Schrottenloher, IACR ePrint 2017/847",
+            "time_exponent_log2_soft_O_single_processor": "179.200000"
+          },
+          "encoded_bytes": 56,
+          "grover_probability_examples": [
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.872670544929E-96",
+                  "success_probability_upper_bound": "1.872670544929E-96",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "3.454467427668E-77",
+                  "success_probability_upper_bound": "3.454467427668E-77",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.483682462693E-67",
+                  "success_probability_upper_bound": "1.483682462693E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "6.372367654916E-58",
+                  "success_probability_upper_bound": "6.372367654916E-58",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "single_target",
+              "usable_targets": 1
+            },
+            {
+              "queries": [
+                {
+                  "q": "2^64",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.498136435943E-86",
+                  "success_probability_upper_bound": "1.498136435943E-86",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^96",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "2.763573942134E-67",
+                  "success_probability_upper_bound": "2.763573942134E-67",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^112",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "1.186945970154E-57",
+                  "success_probability_upper_bound": "1.186945970154E-57",
+                  "upper_bound_capped_at_one": false
+                },
+                {
+                  "q": "2^128",
+                  "regime": "small-angle",
+                  "small_angle_success_estimate": "5.097894123932E-48",
+                  "success_probability_upper_bound": "5.097894123932E-48",
+                  "upper_bound_capped_at_one": false
+                }
+              ],
+              "target_set": "scenario_targets",
+              "usable_targets": 8000000000
+            }
+          ],
+          "honest_pair_collision_union_bound_log2": "-383.205294",
+          "ideal_range_log2": "448.000000",
+          "illustrative_serial_unit_cost_runtime": {
+            "arbitrary_collision_bht": {
+              "log2_years": "84.558713",
+              "years_scientific": "2.849106729405E+25"
+            },
+            "multi_target_preimage": {
+              "log2_years": "142.776703",
+              "years_scientific": "9.551466741513E+42"
+            },
+            "oracle_queries_per_second": 1000000000000,
+            "qualification": "query-model conversion only; one oracle query is not one CPU operation and no reversible Poseidon2/qRAM cost is included"
+          },
+          "limbs": 7,
+          "quantum_arbitrary_collision_query_bits": "149.333334",
+          "quantum_multi_target_preimage_query_bits": "207.551324",
+          "quantum_single_target_preimage_query_bits": "224.000000",
+          "usable_target_table": {
+            "entries": 8000000000,
+            "lookup_assumption": "unit-cost coherent membership over all entries (qRAM/oracle); excludes addressing, loading, error correction and circuit gates",
+            "raw_digest_bytes": 448000000000,
+            "raw_digest_gib": "4.172325134277E+2"
+          }
+        }
+      ],
+      "researcher_assumptions": {
+        "accepted_fraction": "1/1",
+        "reward_targets": 0,
+        "usable_targets_per_offered_payment": 4,
+        "years": 20
+      },
+      "target_log2": "32.897353",
+      "targets": 8000000000
+    }
+  ],
+  "schema": "funded-binding-lifetime-v2"
+}

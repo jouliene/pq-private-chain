@@ -1,0 +1,187 @@
+{
+  "ideal_attack_resource_models": {
+    "four_word_ideal_BHT_collision": {
+      "not_priced": [
+        "qRAM construction",
+        "coherent memory faults",
+        "parallel depth",
+        "non-qRAM lookup time"
+      ],
+      "query_exponent": 85.33333333288546,
+      "success_convention": "Theta estimate for unspecified constant success; constants omitted",
+      "textbook_table_entries_exponent": 85.33333333288546,
+      "textbook_table_raw_bytes_exponent": 90.33333333288546,
+      "unit_cost_assumption": "coherent lookup in the stored collision table"
+    },
+    "four_word_ideal_multi_target_search": {
+      "not_priced": [
+        "reversible lookup circuit",
+        "qRAM or non-qRAM lookup time",
+        "oracle construction"
+      ],
+      "query_exponent": 111.9825718104601,
+      "success_convention": "Theta estimate for unspecified constant success; constants omitted",
+      "target_table_raw_bytes": 140800000000,
+      "unit_cost_assumption": "one coherent membership-oracle call per query"
+    },
+    "scenario": {
+      "status": "researcher_defined_20y_100pct_mixed_output_scenario",
+      "targets": 4400000000
+    },
+    "scope": "query exponents are not total time, memory, energy, or monetary attack costs"
+  },
+  "keys": {
+    "MNG3": {
+      "bytes": 1481,
+      "circuit_digest": [
+        12506747794040179225,
+        15517120205601633546,
+        16461419357440957906,
+        5462923815520472060
+      ],
+      "filtered_gate_degrees": [
+        8,
+        9
+      ],
+      "folds": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "fri_queries": 32,
+      "maximum_gate_constraint_vector": 123,
+      "partial_products_per_repetition": 7,
+      "plonk_repetitions": 2,
+      "public_inputs": 32,
+      "quotient_factor": 8,
+      "routed_wires": 60,
+      "selector_groups": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "sha256": "6cb89745c94ec7b2ff97173ec0819b8567ae5672991b2fdbbe3cbe5810ebadf2",
+      "trace_rows": 8192
+    },
+    "SLG3": {
+      "bytes": 1481,
+      "circuit_digest": [
+        17477970102056484515,
+        12739924158267392744,
+        7996841224285012482,
+        2274105909567426162
+      ],
+      "filtered_gate_degrees": [
+        8,
+        9
+      ],
+      "folds": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "fri_queries": 32,
+      "maximum_gate_constraint_vector": 123,
+      "partial_products_per_repetition": 7,
+      "plonk_repetitions": 2,
+      "public_inputs": 35,
+      "quotient_factor": 8,
+      "routed_wires": 60,
+      "selector_groups": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "sha256": "7acd892eb041260a90efe30fc19771922da2be083707dec4116f8b3af9765c4a",
+      "trace_rows": 8192
+    }
+  },
+  "profiles": {
+    "S64_model": {
+      "fri_masks_per_polynomial": 2880,
+      "lde_points": 524288,
+      "oplonky_parameter_analogy": {
+        "epsilon3_denominator": "|K\\D| = p^2 - 16384",
+        "invalid_conclusion": "the actual construction has fewer than 128 bits of security",
+        "minimum_term_negative_log2": 110.83007499788589,
+        "status": "arithmetic_reproduced_but_source_to_theorem_mapping_unproved",
+        "substitution": {
+          "d": 9,
+          "k": 123,
+          "r_prime": 60,
+          "s": 8,
+          "u": 8
+        },
+        "terms": {
+          "epsilon1_negative_log2": 126.98272397307781,
+          "epsilon2_negative_log2": 170.25621745866152,
+          "epsilon3_negative_log2": 110.83007499788589
+        },
+        "valid_conclusion": "this analogy does not certify 128-bit security"
+      },
+      "proof_and_frame_bytes": {
+        "MNG3": {
+          "frame": 391551,
+          "proof": 387952
+        },
+        "SLG3": {
+          "frame": 408764,
+          "proof": 387976
+        }
+      },
+      "total_blinding_rows": 8650,
+      "trace_rows": 16384
+    },
+    "registered_C": {
+      "fri_masks_per_polynomial": 1504,
+      "lde_points": 262144,
+      "oplonky_parameter_analogy": {
+        "epsilon3_denominator": "|K\\D| = p^2 - 8192",
+        "invalid_conclusion": "the actual construction has fewer than 128 bits of security",
+        "minimum_term_negative_log2": 86.6551493153852,
+        "status": "arithmetic_reproduced_but_source_to_theorem_mapping_unproved",
+        "substitution": {
+          "d": 9,
+          "k": 123,
+          "r_prime": 60,
+          "s": 8,
+          "u": 8
+        },
+        "terms": {
+          "epsilon1_negative_log2": 86.6551493153852,
+          "epsilon2_negative_log2": 113.70050576031883,
+          "epsilon3_negative_log2": 111.83007499788589
+        },
+        "valid_conclusion": "this analogy does not certify 128-bit security"
+      },
+      "proof_and_frame_bytes": {
+        "MNG3": {
+          "frame": 182863,
+          "proof": 179264
+        },
+        "SLG3": {
+          "frame": 200076,
+          "proof": 179288
+        }
+      },
+      "total_blinding_rows": 4522,
+      "trace_rows": 8192
+    }
+  },
+  "review_boundary": "Exact key parsing and arithmetic reproduction only. The OPlonky mapping, proof security, Poseidon security, and monetary composition are not established.",
+  "schema": "funded-pq-independent-review-v1"
+}

@@ -1,0 +1,182 @@
+{
+  "encrypted_receipts": {
+    "component_widths_B": [
+      1568,
+      128,
+      77
+    ],
+    "distinct_complete": 42,
+    "distinct_kem": 42,
+    "distinct_memo": 42,
+    "distinct_note": 42,
+    "graph_packet_count": 40,
+    "headers": [
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "including_legacy_control_count": 42
+  },
+  "format": "FUNDED-PQ-PRIVACY-PUBLIC-OBSERVATIONS-v3",
+  "inputs": {
+    "archive_public_files": 59,
+    "archive_sha256": "24fc62066d1c43b46e33152d83ee642b4d077aed7d9030ce3ffa2b31b5ceea87",
+    "exact_archive_tree": true,
+    "packet_files": 20,
+    "run_sha256": "60f8ec18e81381ed5886ccab18cb2082d9bcc74fcaff1f32bf82728b7243186a",
+    "secret_inputs": 0
+  },
+  "later_spend_public_equality": {
+    "onward__final": {
+      "public_fixture_labels_are_not_a_cryptographic_link": true,
+      "source_commitment_equals_later_nullifier": 0,
+      "source_receipt_equals_later_receipt": 0
+    },
+    "paid__onward": {
+      "public_fixture_labels_are_not_a_cryptographic_link": true,
+      "source_commitment_equals_later_nullifier": 0,
+      "source_receipt_equals_later_receipt": 0
+    }
+  },
+  "proof_and_operation_metadata": {
+    "fees": [
+      0,
+      3
+    ],
+    "operation_labels": [
+      "alternate",
+      "burn",
+      "final",
+      "fixed",
+      "mint",
+      "onward",
+      "paid",
+      "register",
+      "swap"
+    ],
+    "packet_sizes_B": [
+      143233,
+      160393,
+      182855,
+      182863,
+      200023,
+      200068,
+      200076
+    ],
+    "profile_packet_counts": {
+      "MNG1": 7,
+      "MNG2": 1,
+      "MNG3": 8,
+      "SLG2": 2,
+      "SLG3": 2
+    },
+    "public_word_widths": [
+      31,
+      32,
+      34,
+      35
+    ]
+  },
+  "retry_and_fork_equality": {
+    "comparison_packets": {
+      "alternate_C": {
+        "anchor": "a9c38d05be8bf53d4febd8ae0fbd18952841fd185bb89cdb9c5c24bde63ed1851800000000000000",
+        "commitments": [
+          "ff9b103ac9798523f70a7c03a12b5b0ccf1bb3ca1c8c0e34a48d7ef83c46b4b5",
+          "8874ee08db314452f91d15a0b3fdd58dee1bc5986c4cfbc3eb8498751ecd3c3f"
+        ],
+        "nullifiers": [
+          "f2abbfd2d15b44cd8791e938d8e0fe2b3a01ab069e3b385fb4056035db3add97",
+          "18becfc0eb0d140a3126a88189de2359e8b3bd4d1a7fba2f2bc4aff3985beb8b"
+        ],
+        "packet_B": 182863,
+        "packet_sha256": "b88e186033530463b99d7edb77a0288939620a60f812330f22a63fc5d4fc87ea",
+        "profile": "MNG3"
+      },
+      "legacy_B": {
+        "anchor": "a9c38d05be8bf53d4febd8ae0fbd18952841fd185bb89cdb9c5c24bde63ed1851800000000000000",
+        "commitments": [
+          "f7acaf0d38d5b6027f4230e38383d5b2940026daff25860669ff8332b0ee270b",
+          "069254a194e52e1d5a2595b37902c8331f2c27a1fb0bd4ed6d752003581db6c4"
+        ],
+        "nullifiers": [
+          "f2abbfd2d15b44cd8791e938d8e0fe2b3a01ab069e3b385fb4056035db3add97",
+          "18becfc0eb0d140a3126a88189de2359e8b3bd4d1a7fba2f2bc4aff3985beb8b"
+        ],
+        "packet_B": 182855,
+        "packet_sha256": "90c9814df71810e91e0844308a89930ab4b7b2ca9bcb5f1f078e3c6af9096356",
+        "profile": "MNG2"
+      },
+      "paid_C": {
+        "anchor": "a9c38d05be8bf53d4febd8ae0fbd18952841fd185bb89cdb9c5c24bde63ed1851800000000000000",
+        "commitments": [
+          "c46eb3b7b334b98368329f5c0ab684349ad4b62c8e5ae8259665c43be1f7a1e1",
+          "773ca07d1cf2e94b8f69130a1e7fe66063c0065aa88f95b273ae2380e2073b07"
+        ],
+        "nullifiers": [
+          "f2abbfd2d15b44cd8791e938d8e0fe2b3a01ab069e3b385fb4056035db3add97",
+          "18becfc0eb0d140a3126a88189de2359e8b3bd4d1a7fba2f2bc4aff3985beb8b"
+        ],
+        "packet_B": 182863,
+        "packet_sha256": "96599833fcd217a37dc07ae078c72bca18ef89bf8b507f545413643f3fc551e3",
+        "profile": "MNG3"
+      }
+    },
+    "competing_C_block_ids_distinct": true,
+    "legacy_packet_absent_from_C_graph": true,
+    "pairwise": {
+      "alternate_C__paid_C": {
+        "anchor_equal": true,
+        "shared_commitments": 0,
+        "shared_complete_receipts": 0,
+        "shared_kem_ciphertexts": 0,
+        "shared_nullifiers": 2
+      },
+      "legacy_B__alternate_C": {
+        "anchor_equal": true,
+        "shared_commitments": 0,
+        "shared_complete_receipts": 0,
+        "shared_kem_ciphertexts": 0,
+        "shared_nullifiers": 2
+      },
+      "legacy_B__paid_C": {
+        "anchor_equal": true,
+        "shared_commitments": 0,
+        "shared_complete_receipts": 0,
+        "shared_kem_ciphertexts": 0,
+        "shared_nullifiers": 2
+      }
+    },
+    "same_height_competing_C_blocks": true
+  },
+  "scope": {
+    "does_not_test": [
+      "recipient identification advantage",
+      "proof zero knowledge or knowledge soundness",
+      "KEM key privacy or cross-key robustness",
+      "wallet error/timing or network metadata",
+      "post-compromise secrecy"
+    ],
+    "observes": "released public packets, RUN projection, byte equality and framing"
+  },
+  "swap_metadata": {
+    "expiry": 34,
+    "fees_by_side": [
+      3,
+      0
+    ],
+    "fixed_output_roles": [
+      "counterparty payment",
+      "change"
+    ],
+    "frame_sides": [
+      0,
+      1
+    ],
+    "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+    "payer": 0,
+    "shared_terms_commitment": true
+  }
+}

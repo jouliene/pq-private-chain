@@ -1,0 +1,110 @@
+name: Funded profile C assurance
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/funded-pq-assurance/**'
+      - 'experiments/funded-membership/**'
+      - 'experiments/advancing-note/proof/**'
+      - '.github/workflows/funded-pq-assurance.yml'
+  pull_request:
+    paths:
+      - 'experiments/funded-pq-assurance/**'
+      - 'experiments/funded-membership/**'
+      - 'experiments/advancing-note/proof/**'
+      - '.github/workflows/funded-pq-assurance.yml'
+permissions:
+  contents: read
+jobs:
+  assurance:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    env:
+      CARGO_HOME: ${{ runner.temp }}/funded-pq-cargo
+      CARGO_TARGET_DIR: ${{ runner.temp }}/funded-pq-target
+      RAYON_NUM_THREADS: 2
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Reproduce monetary and proof calculations
+        run: |
+          set -eu
+          python3 -IB experiments/funded-pq-assurance/binding/lifetime_security.py \
+            --check experiments/funded-pq-assurance/binding/RESULTS.json
+          python3 -IB -m unittest discover \
+            -s experiments/funded-pq-assurance/binding -p 'test_*.py'
+          python3 -IB -m unittest discover \
+            -s experiments/funded-pq-assurance/binding/migration -p 'test_*.py'
+          python3 -IB experiments/funded-pq-assurance/proof/check.py
+          python3 -IB experiments/funded-pq-assurance/review/independent_check.py \
+            --check experiments/funded-pq-assurance/review/INDEPENDENT.json
+      - name: Reproduce pinned public privacy observations
+        run: |
+          set -eu
+          work="$RUNNER_TEMP/funded-membership-public"
+          mkdir -p "$work"
+          curl -fLsS \
+            https://github.com/jouliene/pq-private-chain/releases/download/funded-membership-2026-11-21/funded-membership-public.tar.gz \
+            -o "$work/funded-membership-public.tar.gz"
+          (cd "$work" && sha256sum -c "$GITHUB_WORKSPACE/experiments/funded-membership/RELEASE.sha256")
+          tar -xzf "$work/funded-membership-public.tar.gz" -C "$work"
+          python3 -IB experiments/funded-pq-assurance/review/archive_audit.py \
+            "$work/funded-membership-public.tar.gz" \
+            --check experiments/funded-pq-assurance/review/ARCHIVE.json
+          python3 -IB experiments/funded-pq-assurance/privacy/analyze.py \
+            "$work/public" --archive "$work/funded-membership-public.tar.gz" \
+            --output "$work/privacy.json"
+          cmp "$work/privacy.json" experiments/funded-pq-assurance/privacy/RESULTS.json
+      - name: Build and test registered migration and successor relations
+        run: |
+          set -eu
+          rustup toolchain install 1.93.0 --profile minimal
+          rustup run 1.93.0 cargo test --locked --release -j2 \
+            --manifest-path experiments/funded-pq-assurance/binding/migration/bridge/Cargo.toml
+          rustup run 1.93.0 cargo build --locked --release -j2 \
+            --manifest-path experiments/funded-pq-assurance/binding/migration/bridge/Cargo.toml
+          rustup run 1.93.0 cargo test --locked --release -j2 \
+            --manifest-path experiments/advancing-note/proof/Cargo.toml
+          rustup run 1.93.0 cargo build --locked --release -j2 \
+            --manifest-path experiments/advancing-note/proof/Cargo.toml
+          "$CARGO_TARGET_DIR/release/c2n7-bridge" generate-vk "$RUNNER_TEMP/bridge.vk"
+          "$CARGO_TARGET_DIR/release/n7p2" generate-vk "$RUNNER_TEMP/n7.vk"
+          cmp "$RUNNER_TEMP/bridge.vk" \
+            experiments/funded-pq-assurance/binding/migration/bridge/registered.vk
+          cmp "$RUNNER_TEMP/n7.vk" experiments/advancing-note/proof/registered.vk
+          python3 -IB experiments/funded-pq-assurance/binding/migration/verify_public.py \
+            experiments/funded-pq-assurance/binding/migration/evidence-author05 \
+            --bridge "$CARGO_TARGET_DIR/release/c2n7-bridge" \
+            --n7 "$CARGO_TARGET_DIR/release/n7p2" \
+            > "$RUNNER_TEMP/public-core.json"
+          cmp "$RUNNER_TEMP/public-core.json" \
+            experiments/funded-pq-assurance/binding/migration/PUBLIC_VERIFY_CORE.json
+      - name: Reproduce full public migration audit after release
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          set -eu
+          work="$RUNNER_TEMP/funded-pq-c-review"
+          mkdir -p "$work"
+          curl -fLsS \
+            https://github.com/jouliene/pq-private-chain/releases/download/funded-pq-assurance-2026-11-21/funded-pq-assurance-c-deployment.tar.gz \
+            -o "$work/funded-pq-assurance-c-deployment.tar.gz"
+          (cd "$work" && sha256sum -c "$GITHUB_WORKSPACE/experiments/funded-pq-assurance/C_DEPLOYMENT.sha256")
+          tar -xzf "$work/funded-pq-assurance-c-deployment.tar.gz" -C "$work"
+          curl -fLsS \
+            https://github.com/jouliene/pq-private-chain/releases/download/funded-pq-assurance-2026-11-21/funded-pq-assurance-migration-public.tar.gz \
+            -o "$work/funded-pq-assurance-migration-public.tar.gz"
+          (cd "$work" && sha256sum -c "$GITHUB_WORKSPACE/experiments/funded-pq-assurance/MIGRATION_PUBLIC.sha256")
+          tar -xzf "$work/funded-pq-assurance-migration-public.tar.gz" -C "$work"
+          python3 -IB experiments/funded-pq-assurance/review/migration_public_audit.py \
+            experiments/funded-pq-assurance/binding/migration/evidence-author05 \
+            --archive "$work/membership" \
+            --membership-archive "$work/funded-pq-assurance-migration-public.tar.gz" \
+            --c-deployment "$work/deployment" \
+            --c-deployment-archive "$work/funded-pq-assurance-c-deployment.tar.gz" \
+            --bridge-binary "$CARGO_TARGET_DIR/release/c2n7-bridge" \
+            --n7-binary "$CARGO_TARGET_DIR/release/n7p2" \
+            --bridge-vk experiments/funded-pq-assurance/binding/migration/bridge/registered.vk \
+            --n7-vk experiments/advancing-note/proof/registered.vk \
+            --check experiments/funded-pq-assurance/review/MIGRATION_PUBLIC.json

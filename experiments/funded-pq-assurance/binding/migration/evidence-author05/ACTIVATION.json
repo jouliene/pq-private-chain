@@ -1,0 +1,14 @@
+{
+  "activation_anchor": "9b00806ddd5d38cb5965e3511d86e5fa0d3b604347d7a6a60f733fe0cff29928",
+  "activation_height": 27,
+  "c_network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+  "n7_network": "a50af98b583a33ed3be0318913ce00fd54fccc098482216138b95830bd16479e64dc6e3b37b310ab58ef78b4d0c5e418",
+  "n7_scope": "003e259ea7722cd11d912508a210f8baf2e8470416181882d5fc04244505a2a14824b99845a9afb5d4de9ab67bdd02b8",
+  "parent_height": 26,
+  "parent_tip": "00000005494f8b6e52ec5211964b6cb18cb19db20f120613acb6d4bd8b510210",
+  "selected_funded_count": 47,
+  "selected_funded_depth": 3,
+  "selected_height": 25,
+  "selected_tip": "0000028c3cad0215cd56a0c25c88ecd5caf71e28e693bdd2e54f5263ab49274f",
+  "version": 1
+}
