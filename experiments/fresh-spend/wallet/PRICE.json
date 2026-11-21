@@ -1,0 +1,347 @@
+{
+  "relation_permutations": 99,
+  "relation_and_gates": 3854992,
+  "one_packed_and_trace_bytes": 481874,
+  "witness_bytes": 6155,
+  "stock_lowmc_l5_signature_bytes": 209506,
+  "max_ands_under_ordinary_frame_at_438_rounds_even_ignoring_other_bytes": 2352,
+  "max_ands_under_signed_frame_at_438_rounds_even_ignoring_other_bytes": 2080,
+  "comparison_profiles": [
+    {
+      "repetitions": 438,
+      "seed_bytes": 32,
+      "proof_bytes": 424887736,
+      "ordinary_bytes": 424891726,
+      "signed_leg_bytes": 424921654,
+      "swap_bytes": 849843328,
+      "signed_leg_excess_over_262144": 424659510,
+      "bad_challenge_log2_upper_at_2pow128_ideal_queries": 0.8932,
+      "work": {
+        "prover": {
+          "permutation_calls": 86724,
+          "tape_xof_bytes": 1277148432,
+          "view_hash_bytes": 641355516,
+          "g_absorb_bytes": 849754164,
+          "g_squeeze_bytes": 849691092,
+          "challenge_absorb_bytes": 636004908,
+          "planned_buffers_bytes": 3517664
+        },
+        "verifier": {
+          "permutation_calls": 43362,
+          "tape_xof_bytes": 427513404,
+          "view_hash_bytes": 427570344,
+          "g_absorb_bytes": 424877082,
+          "g_squeeze_bytes": 424845546,
+          "challenge_absorb_bytes": 636004908,
+          "planned_buffers_bytes": 2993742
+        }
+      },
+      "modeled_kernel_cpu_s_by_sample": {
+        "prover": [
+          9.2,
+          9.362,
+          9.306
+        ],
+        "verifier": [
+          4.992,
+          5.081,
+          5.063
+        ]
+      },
+      "traffic": {
+        "one_archive_or_one_relay_copy_bytes_per_year": 46738688620000000,
+        "mean_ingest_Gbps": 11.848,
+        "twenty_year_archive_bytes": 934773772400000000,
+        "ordinary_wallet_upload_s_at_20Mbps": 169.957,
+        "ordinary_node_download_s_at_100Mbps": 33.991,
+        "whole_swap_upload_s_at_20Mbps": 339.937,
+        "legs_per_year": 110000000
+      },
+      "mean_cores_verification_subtotal": [
+        17.4,
+        17.71,
+        17.65
+      ]
+    },
+    {
+      "repetitions": 438,
+      "seed_bytes": 64,
+      "proof_bytes": 424929784,
+      "ordinary_bytes": 424933774,
+      "signed_leg_bytes": 424963702,
+      "swap_bytes": 849927424,
+      "signed_leg_excess_over_262144": 424701558,
+      "bad_challenge_log2_upper_at_2pow128_ideal_queries": 0.8932,
+      "work": {
+        "prover": {
+          "permutation_calls": 86724,
+          "tape_xof_bytes": 1277148432,
+          "view_hash_bytes": 641355516,
+          "g_absorb_bytes": 849754164,
+          "g_squeeze_bytes": 849747156,
+          "challenge_absorb_bytes": 636046956,
+          "planned_buffers_bytes": 3559744
+        },
+        "verifier": {
+          "permutation_calls": 43362,
+          "tape_xof_bytes": 427513404,
+          "view_hash_bytes": 427570344,
+          "g_absorb_bytes": 424877082,
+          "g_squeeze_bytes": 424873578,
+          "challenge_absorb_bytes": 636046956,
+          "planned_buffers_bytes": 2993774
+        }
+      },
+      "modeled_kernel_cpu_s_by_sample": {
+        "prover": [
+          9.2,
+          9.363,
+          9.306
+        ],
+        "verifier": [
+          4.993,
+          5.082,
+          5.063
+        ]
+      },
+      "traffic": {
+        "one_archive_or_one_relay_copy_bytes_per_year": 46743313900000000,
+        "mean_ingest_Gbps": 11.85,
+        "twenty_year_archive_bytes": 934866278000000000,
+        "ordinary_wallet_upload_s_at_20Mbps": 169.974,
+        "ordinary_node_download_s_at_100Mbps": 33.995,
+        "whole_swap_upload_s_at_20Mbps": 339.971,
+        "legs_per_year": 110000000
+      },
+      "mean_cores_verification_subtotal": [
+        17.4,
+        17.71,
+        17.65
+      ]
+    },
+    {
+      "repetitions": 560,
+      "seed_bytes": 64,
+      "proof_bytes": 543289212,
+      "ordinary_bytes": 543293202,
+      "signed_leg_bytes": 543323130,
+      "swap_bytes": 1086646280,
+      "signed_leg_excess_over_262144": 543060986,
+      "bad_challenge_log2_upper_at_2pow128_ideal_queries": -34.7895,
+      "work": {
+        "prover": {
+          "permutation_calls": 110880,
+          "tape_xof_bytes": 1632883840,
+          "view_hash_bytes": 819997920,
+          "g_absorb_bytes": 1086443680,
+          "g_squeeze_bytes": 1086434720,
+          "challenge_absorb_bytes": 813210720,
+          "planned_buffers_bytes": 3583168
+        },
+        "verifier": {
+          "permutation_calls": 55440,
+          "tape_xof_bytes": 546592480,
+          "view_hash_bytes": 546665280,
+          "g_absorb_bytes": 543221840,
+          "g_squeeze_bytes": 543217360,
+          "challenge_absorb_bytes": 813210720,
+          "planned_buffers_bytes": 2993774
+        }
+      },
+      "modeled_kernel_cpu_s_by_sample": {
+        "prover": [
+          11.763,
+          11.97,
+          11.898
+        ],
+        "verifier": [
+          6.383,
+          6.497,
+          6.473
+        ]
+      },
+      "traffic": {
+        "one_archive_or_one_relay_copy_bytes_per_year": 59762850980000000,
+        "mean_ingest_Gbps": 15.15,
+        "twenty_year_archive_bytes": 1195257019600000000,
+        "ordinary_wallet_upload_s_at_20Mbps": 217.317,
+        "ordinary_node_download_s_at_100Mbps": 43.463,
+        "whole_swap_upload_s_at_20Mbps": 434.659,
+        "legs_per_year": 110000000
+      },
+      "mean_cores_verification_subtotal": [
+        22.25,
+        22.65,
+        22.56
+      ]
+    },
+    {
+      "repetitions": 660,
+      "seed_bytes": 64,
+      "proof_bytes": 640305137,
+      "ordinary_bytes": 640309127,
+      "signed_leg_bytes": 640339055,
+      "swap_bytes": 1280678130,
+      "signed_leg_excess_over_262144": 640076911,
+      "bad_challenge_log2_upper_at_2pow128_ideal_queries": -64.0376,
+      "work": {
+        "prover": {
+          "permutation_calls": 130680,
+          "tape_xof_bytes": 1924470240,
+          "view_hash_bytes": 966426120,
+          "g_absorb_bytes": 1280451480,
+          "g_squeeze_bytes": 1280440920,
+          "challenge_absorb_bytes": 958426920,
+          "planned_buffers_bytes": 3602368
+        },
+        "verifier": {
+          "permutation_calls": 65340,
+          "tape_xof_bytes": 644198280,
+          "view_hash_bytes": 644284080,
+          "g_absorb_bytes": 640225740,
+          "g_squeeze_bytes": 640220460,
+          "challenge_absorb_bytes": 958426920,
+          "planned_buffers_bytes": 2993774
+        }
+      },
+      "modeled_kernel_cpu_s_by_sample": {
+        "prover": [
+          13.863,
+          14.108,
+          14.023
+        ],
+        "verifier": [
+          7.523,
+          7.657,
+          7.629
+        ]
+      },
+      "traffic": {
+        "one_archive_or_one_relay_copy_bytes_per_year": 70434602730000000,
+        "mean_ingest_Gbps": 17.856,
+        "twenty_year_archive_bytes": 1408692054600000000,
+        "ordinary_wallet_upload_s_at_20Mbps": 256.124,
+        "ordinary_node_download_s_at_100Mbps": 51.225,
+        "whole_swap_upload_s_at_20Mbps": 512.271,
+        "legs_per_year": 110000000
+      },
+      "mean_cores_verification_subtotal": [
+        26.22,
+        26.69,
+        26.59
+      ]
+    },
+    {
+      "repetitions": 797,
+      "seed_bytes": 64,
+      "proof_bytes": 773216955,
+      "ordinary_bytes": 773220945,
+      "signed_leg_bytes": 773250873,
+      "swap_bytes": 1546501766,
+      "signed_leg_excess_over_262144": 772988729,
+      "bad_challenge_log2_upper_at_2pow128_ideal_queries": -104.1076,
+      "work": {
+        "prover": {
+          "permutation_calls": 157806,
+          "tape_xof_bytes": 2323943608,
+          "view_hash_bytes": 1167032754,
+          "g_absorb_bytes": 1546242166,
+          "g_squeeze_bytes": 1546229414,
+          "challenge_absorb_bytes": 1157373114,
+          "planned_buffers_bytes": 3628672
+        },
+        "verifier": {
+          "permutation_calls": 78903,
+          "tape_xof_bytes": 777918226,
+          "view_hash_bytes": 778021836,
+          "g_absorb_bytes": 773121083,
+          "g_squeeze_bytes": 773114707,
+          "challenge_absorb_bytes": 1157373114,
+          "planned_buffers_bytes": 2993774
+        }
+      },
+      "modeled_kernel_cpu_s_by_sample": {
+        "prover": [
+          16.741,
+          17.037,
+          16.933
+        ],
+        "verifier": [
+          9.085,
+          9.247,
+          9.213
+        ]
+      },
+      "traffic": {
+        "one_archive_or_one_relay_copy_bytes_per_year": 85054902710000000,
+        "mean_ingest_Gbps": 21.562,
+        "twenty_year_archive_bytes": 1701098054200000000,
+        "ordinary_wallet_upload_s_at_20Mbps": 309.288,
+        "ordinary_node_download_s_at_100Mbps": 61.858,
+        "whole_swap_upload_s_at_20Mbps": 618.601,
+        "legs_per_year": 110000000
+      },
+      "mean_cores_verification_subtotal": [
+        31.67,
+        32.23,
+        32.11
+      ]
+    },
+    {
+      "repetitions": 879,
+      "seed_bytes": 64,
+      "proof_bytes": 852770013,
+      "ordinary_bytes": 852774003,
+      "signed_leg_bytes": 852803931,
+      "swap_bytes": 1705607882,
+      "signed_leg_excess_over_262144": 852541787,
+      "bad_challenge_log2_upper_at_2pow128_ideal_queries": -128.091,
+      "work": {
+        "prover": {
+          "permutation_calls": 174042,
+          "tape_xof_bytes": 2563044456,
+          "view_hash_bytes": 1287103878,
+          "g_absorb_bytes": 1705328562,
+          "g_squeeze_bytes": 1705314498,
+          "challenge_absorb_bytes": 1276450398,
+          "planned_buffers_bytes": 3644416
+        },
+        "verifier": {
+          "permutation_calls": 87021,
+          "tape_xof_bytes": 857954982,
+          "view_hash_bytes": 858069252,
+          "g_absorb_bytes": 852664281,
+          "g_squeeze_bytes": 852657249,
+          "challenge_absorb_bytes": 1276450398,
+          "planned_buffers_bytes": 2993774
+        }
+      },
+      "modeled_kernel_cpu_s_by_sample": {
+        "prover": [
+          18.463,
+          18.789,
+          18.676
+        ],
+        "verifier": [
+          10.019,
+          10.198,
+          10.161
+        ]
+      },
+      "traffic": {
+        "one_archive_or_one_relay_copy_bytes_per_year": 93805739090000000,
+        "mean_ingest_Gbps": 23.78,
+        "twenty_year_archive_bytes": 1876114781800000000,
+        "ordinary_wallet_upload_s_at_20Mbps": 341.11,
+        "ordinary_node_download_s_at_100Mbps": 68.222,
+        "whole_swap_upload_s_at_20Mbps": 682.243,
+        "legs_per_year": 110000000
+      },
+      "mean_cores_verification_subtotal": [
+        34.92,
+        35.55,
+        35.42
+      ]
+    }
+  ]
+}

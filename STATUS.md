@@ -1,3 +1,16 @@
+# Fresh-genesis private spend selection — LOCAL
+
+The public starting revision is `7d5887842ba513c254128bbb5818bbd6617ce3fc`.
+Two proof geometries have been screened for the same wide SHAKE monetary
+relation. The orchestrator rebuilt both pinned libraries from their public
+archives, checked fresh leaf proofs and stock signatures and ran funding,
+receipt recovery and onward clear-witness checks. The ordinary payment
+projections are 10,751,268 B and 424,891,726 B. Private membership dominates
+both. Complete FS01 proof integration stopped at the preintegration gate.
+Independent source review and public-clone reproduction determine acceptance.
+Run `bash experiments/fresh-spend/reproduce.sh NEW_SCRATCH_DIRECTORY`.
+[Architecture decision](experiments/fresh-spend/DECISION.md)
+
 # Funded profile C post-quantum assurance — independently verified
 
 Starting baseline `e55b35e04cf353bb1e1c6e51c07a33b81ddd937c`

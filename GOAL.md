@@ -1,4 +1,15 @@
-# Funded profile C post-quantum assurance — active
+# Select a fresh-genesis private spend design
+
+Evaluate two independently verifiable private two-input payment designs at
+public base `7d5887842ba513c254128bbb5818bbd6617ce3fc`. Qualify the exact
+noninteractive proof, wide note and asset binding, complete resources and joint
+wallet privacy. Carry a qualifying design through fresh private funding,
+recovery, onward spend and a two-owner swap. The alternative completion
+condition requires decisive preintegration evidence for both paths, public
+independent reproduction and a specific decision-changing experiment. Keep C,
+N7P2 and their upgrade regression available. The global project stays active.
+
+# Funded profile C post-quantum assurance — verified
 
 Starting from published `e55b35e04cf353bb1e1c6e51c07a33b81ddd937c`, determine whether funded profile C can support a defensible 128-bit post-quantum monetary-security claim. Define unauthorized spending, cross-version double spending and inflation games against the actual ledger and proof code. Quantify fixed-target, collision and lifetime multi-user scenarios; assess the exact noninteractive proof and joint receipt privacy. Compare the smallest credible wider note/tree and proof alternatives. Preserve C as the executable reference and publish an independently reproduced retain/change decision under `docs/DELIVERY.md`. The global blockchain objective remains active.
 

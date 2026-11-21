@@ -1,0 +1,26 @@
+name: Fresh spend qualification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/fresh-spend/**'
+      - 'experiments/new-note/sha3/calibrate.c'
+      - '.github/workflows/fresh-spend.yml'
+  pull_request:
+    paths:
+      - 'experiments/fresh-spend/**'
+      - 'experiments/new-note/sha3/calibrate.c'
+      - '.github/workflows/fresh-spend.yml'
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Build the pinned components and reproduce the exclusion tests
+        run: bash experiments/fresh-spend/reproduce.sh "$RUNNER_TEMP/fresh-spend"

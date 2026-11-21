@@ -1,0 +1,66 @@
+{
+  "256s": {
+    "and_count": 3854992,
+    "witness_bits": 49233,
+    "ell": 3904225,
+    "ellhat_bytes": 488127,
+    "sections": {
+      "header": 48,
+      "corrections": 10250667,
+      "vole_hash": 34,
+      "masked_assignment": 488029,
+      "qs_coefficients": 64,
+      "opening": 8384,
+      "last_challenge": 32,
+      "iv": 16,
+      "counter": 4
+    },
+    "proof_bytes": 10747278,
+    "byte_size_from_upstream": 10747278,
+    "ordinary": 10751268,
+    "signed_leg": 10781196,
+    "paired_swap": 21562412,
+    "source_buffer_bytes": {
+      "one_worker_butterfly": 3998736384,
+      "retained_vole_matrix": 124960512,
+      "transposed_matrix": 124951584,
+      "wire_tags_lower_bound": 124935200
+    },
+    "concurrent_prover_allocation_lower_bound_bytes": 4373583680,
+    "prover_leaf_prg_payload_bytes": 29990522880,
+    "verifier_leaf_prg_payload_bytes": 29979784086,
+    "one_copy_ordinary_bytes_at_100m": 1075126800000000
+  },
+  "256f": {
+    "and_count": 3854992,
+    "witness_bits": 49233,
+    "ell": 3904225,
+    "ellhat_bytes": 488127,
+    "sections": {
+      "header": 48,
+      "corrections": 15131937,
+      "vole_hash": 34,
+      "masked_assignment": 488029,
+      "qs_coefficients": 64,
+      "opening": 9536,
+      "last_challenge": 32,
+      "iv": 16,
+      "counter": 4
+    },
+    "proof_bytes": 15629700,
+    "byte_size_from_upstream": 15629700,
+    "ordinary": 15633690,
+    "signed_leg": 15663618,
+    "paired_swap": 31327256,
+    "source_buffer_bytes": {
+      "one_worker_butterfly": 249921024,
+      "retained_vole_matrix": 124960512,
+      "transposed_matrix": 124951584,
+      "wire_tags_lower_bound": 124935200
+    },
+    "concurrent_prover_allocation_lower_bound_bytes": 624768320,
+    "prover_leaf_prg_payload_bytes": 3498894336,
+    "verifier_leaf_prg_payload_bytes": 3483274272,
+    "one_copy_ordinary_bytes_at_100m": 1563369000000000
+  }
+}

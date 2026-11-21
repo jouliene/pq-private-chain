@@ -1,0 +1,47 @@
+{
+  "source_commit": "192cc046744a04d884a99940f92cfe443fda6081",
+  "source_archive_sha256": "368d3f2e85eff045a08214da25928f79a47bbf6a1e3bd027a7fec5f1aa1f0fc0",
+  "reference_spec_sha256": "34b0f7524a790ba9c5f139df30126f1ecbacfa4a01f217cc38258268bf0b7636",
+  "reference_design_sha256": "5ba33a8a45c92d6dbe69a97629f39e6393dad8cc006e40784f7708bf18193e7e",
+  "host": "x86_64 Intel Core i7-8700K; Ubuntu GCC 13.3.0; OpenSSL 3.0.13",
+  "lowmc_l5_ur": {
+    "signature_bytes": 209506,
+    "public_key_bytes_including_suite": 65,
+    "trials": 3,
+    "sign_cpu_ms": [231.411, 226.238, 228.709],
+    "verify_cpu_ms": [154.756, 153.583, 153.028],
+    "sign_peak_kib": 3628,
+    "verify_peak_kib": 3400,
+    "sign_process_wall_s": 0.68,
+    "verify_process_wall_s_including_two_negatives": 0.76,
+    "changed_message_rejected": true,
+    "changed_commitment_rejected": true,
+    "upstream_kats_exit": 0
+  },
+  "calibration": [
+    {
+      "prover_cpu_ns_per_keccak_f": 2232.29,
+      "verifier_cpu_ns_per_keccak_f": 1228.84,
+      "shake256_tape_B_per_cpu_s": 454314409.47,
+      "sha3_512_view_B_per_cpu_s": 254595436.26,
+      "shake256_absorb_B_per_cpu_s": 478265108.20,
+      "shake256_squeeze_B_per_cpu_s": 466529756.64
+    },
+    {
+      "prover_cpu_ns_per_keccak_f": 2301.04,
+      "verifier_cpu_ns_per_keccak_f": 1192.67,
+      "shake256_tape_B_per_cpu_s": 456562167.34,
+      "sha3_512_view_B_per_cpu_s": 246886041.45,
+      "shake256_absorb_B_per_cpu_s": 468462217.80,
+      "shake256_squeeze_B_per_cpu_s": 460135785.40
+    },
+    {
+      "prover_cpu_ns_per_keccak_f": 2210.56,
+      "verifier_cpu_ns_per_keccak_f": 1179.15,
+      "shake256_tape_B_per_cpu_s": 459830737.76,
+      "sha3_512_view_B_per_cpu_s": 251220049.43,
+      "shake256_absorb_B_per_cpu_s": 467913436.74,
+      "shake256_squeeze_B_per_cpu_s": 465587333.56
+    }
+  ]
+}
