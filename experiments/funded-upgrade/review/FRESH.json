@@ -1,0 +1,374 @@
+{
+  "accounting": {
+    "a_overlap": {
+      "fees": 21,
+      "height": 13,
+      "issued": 1300,
+      "notes": 27,
+      "spent": 14,
+      "tip": "00000390a03490435cfaab0beded19632908243785b0cc59f84d7e8042aaa6c2"
+    },
+    "a_selected": {
+      "fees": 21,
+      "height": 13,
+      "issued": 1300,
+      "notes": 27,
+      "spent": 14,
+      "tip": "00000390a03490435cfaab0beded19632908243785b0cc59f84d7e8042aaa6c2"
+    },
+    "b_detached": {
+      "fees": 21,
+      "height": 19,
+      "issued": 1900,
+      "notes": 33,
+      "spent": 14,
+      "tip": "000002f59a1dadccf00d2055921fd61049f2fe9cef7ce1e1bdf3f14359a0ca66"
+    },
+    "b_overlap": {
+      "fees": 21,
+      "height": 13,
+      "issued": 1300,
+      "notes": 27,
+      "spent": 14,
+      "tip": "000001dae175d8fdb44e881b0d115490fc51ac36e953df20d3f547b46f732d4c"
+    },
+    "b_selected": {
+      "fees": 21,
+      "height": 15,
+      "issued": 1500,
+      "notes": 29,
+      "spent": 14,
+      "tip": "00000143963d67294c29ec157969f34cd0a709317c35e5744c11d4a04798f808"
+    },
+    "b_settled": {
+      "fees": 30,
+      "height": 18,
+      "issued": 1800,
+      "notes": 40,
+      "spent": 22,
+      "tip": "0000002aa4acb6f2a50f49f471dc03a012add77a5cb9b21fdd6c12e5127ec119"
+    },
+    "common": {
+      "fees": 18,
+      "height": 12,
+      "issued": 1200,
+      "notes": 24,
+      "spent": 12,
+      "tip": "0000039351044e4872350d55766f2cf4ca67aff44bd16dd67274a9367451290d"
+    },
+    "final": {
+      "fees": 30,
+      "height": 20,
+      "issued": 2000,
+      "notes": 42,
+      "spent": 22,
+      "tip": "000000550a8dc6cac58c3d0da47bd43d1c6761bf27b428333796272311648006"
+    }
+  },
+  "baseline": "4a9a315da451c47ddddd9c235b451a194e67c436",
+  "branch_boundaries": {
+    "early_funded_transfer": {
+      "accepted_block": "0000025fc57ead9dda26a889e92bf72c4f4067caf363a43fe016da9ed5e6753c",
+      "accepted_height": 13,
+      "anchor": 11,
+      "fee": 3,
+      "refused_candidate": 12,
+      "spent_increase": 2,
+      "tx": "a89b0bd6106bcc6934ab2bbcc9be12de9a0f89d87c2c1b4e169f85af0f770853"
+    },
+    "premature_B_anchor": 12,
+    "premature_block": "00000091ab541020b856901b58974ffa1699901e556311cafdc07e4e30c0baa8",
+    "premature_height": 12,
+    "premature_reason": "inactive proof suite",
+    "rejected_nonzero_B_public_delta_mutation": true,
+    "rejected_transfer_as_issue": true,
+    "rejected_version_relabel": true,
+    "retained_issuance": {
+      "anchor": 7,
+      "asset": "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d",
+      "block": "0000000ba9a26b675a8375596aea5d2ca8dcaaab9210d0cc63051e7473695e21",
+      "fee": 3,
+      "height": 15,
+      "subsidy": 100,
+      "supply": 100,
+      "tx": "87569025f63423fa004581957b5af44928bd2a4d86f5c6e6b27dc2c1b29b43db"
+    },
+    "retired_A_anchor": 12,
+    "retired_block": "000001990054d5402a78110212f9f2d46a229dabdce13581ed81296348cd2dff",
+    "retired_height": 15,
+    "retired_reason": "inactive proof suite",
+    "same_block_accepted_by_original_A": true,
+    "stale_A_database_reopen": "inactive proof suite"
+  },
+  "captured_block_bytes": 1974534,
+  "disclosed_final_balances": {
+    "alice": {
+      "assets": {
+        "3c5b71d4a432596bc4f9f433a0a83237c4e61b51f249600a919be585db2b225f": 23,
+        "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d": 9
+      },
+      "native": 37
+    },
+    "bob": {
+      "assets": {
+        "3c5b71d4a432596bc4f9f433a0a83237c4e61b51f249600a919be585db2b225f": 7,
+        "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d": 41
+      },
+      "native": 24
+    },
+    "conflict": {
+      "assets": {},
+      "native": 8
+    },
+    "forward": {
+      "assets": {
+        "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d": 2
+      },
+      "native": 4
+    },
+    "miner-a": {
+      "assets": {
+        "3c5b71d4a432596bc4f9f433a0a83237c4e61b51f249600a919be585db2b225f": 50
+      },
+      "native": 540
+    },
+    "miner-b": {
+      "assets": {
+        "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d": 38
+      },
+      "native": 1368
+    },
+    "offline-restored": {
+      "assets": {
+        "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d": 4
+      },
+      "native": 5
+    },
+    "recipient": {
+      "assets": {
+        "a24a078e1c028a6802bfcaceaee83468f5ba66857db86a3c8cfa2e8c6bd0300d": 6
+      },
+      "native": 14
+    },
+    "rival": {
+      "assets": {},
+      "native": 0
+    }
+  },
+  "extra_boundary_blocks": 1,
+  "fresh_issuer_and_asset_ids": true,
+  "fresh_peer": {
+    "final_height": 20,
+    "initial_height": 0,
+    "own_wallets": 0,
+    "seconds": 7.53562969099994,
+    "sqlite_B": 2072576,
+    "winning_tip": "000000550a8dc6cac58c3d0da47bd43d1c6761bf27b428333796272311648006"
+  },
+  "funded_ordinary_wallet": {
+    "a-conflict": {
+      "fee": 3,
+      "packet_B": 143233,
+      "prover_cpu_s": 9.76,
+      "prover_role_peak_rss_KiB": 451808,
+      "proving_wall_s": 5.065093237000156,
+      "real_inputs": 1
+    },
+    "b-conflict": {
+      "fee": 3,
+      "packet_B": 182855,
+      "prover_cpu_s": 19.11,
+      "prover_role_peak_rss_KiB": 886900,
+      "proving_wall_s": 9.860400614000127,
+      "real_inputs": 1
+    },
+    "b-to-b": {
+      "fee": 3,
+      "packet_B": 182855,
+      "prover_cpu_s": 19.38,
+      "prover_role_peak_rss_KiB": 886760,
+      "proving_wall_s": 9.994689600999891,
+      "real_inputs": 1
+    },
+    "restored-a-to-b": {
+      "fee": 3,
+      "packet_B": 182855,
+      "prover_cpu_s": 19.51,
+      "prover_role_peak_rss_KiB": 886688,
+      "proving_wall_s": 10.066636844999948,
+      "real_inputs": 1
+    }
+  },
+  "funded_swap_wallet": [
+    {
+      "fee": 3,
+      "packet_B": 182873,
+      "prover_cpu_s": 19.82,
+      "prover_role_peak_rss_KiB": 886640,
+      "proving_wall_s": 10.225750575999882,
+      "real_inputs": 1
+    },
+    {
+      "fee": 0,
+      "packet_B": 182873,
+      "prover_cpu_s": 19.48,
+      "prover_role_peak_rss_KiB": 886392,
+      "proving_wall_s": 10.075822105000043,
+      "real_inputs": 1
+    }
+  ],
+  "independent_release_asset": "funded-upgrade-independent.tar.gz",
+  "independent_release_bytes": 2525342,
+  "independent_release_sha256": "6a5f8e762ed7ffeb7717f30d7bf55327984194ebfb9ebb62cf0270c6b5cbde09",
+  "main_graph_blocks": 27,
+  "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+  "openssl_signatures": 3,
+  "original_backup_and_spend_checks": {
+    "recipient_onward": {
+      "actual_funded_inputs": 1,
+      "source_and_spend_matched": true,
+      "source_native": 12,
+      "source_tokens": 8
+    },
+    "seed_and_selected_public_history": {
+      "conflict": {
+        "accepted_roles": 2,
+        "exact_spends_checked": 2,
+        "matching_owned_positive_notes": 1,
+        "original_backup_B": 32,
+        "source_native": 20,
+        "source_tokens": 0
+      },
+      "offline": {
+        "accepted_roles": 2,
+        "exact_spends_checked": 1,
+        "matching_owned_positive_notes": 1,
+        "original_backup_B": 32,
+        "source_native": 20,
+        "source_tokens": 12
+      }
+    }
+  },
+  "original_genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+  "public_main_at_clone": "0ec22fafdaab0f168ac6de1e7348215bdc5e2612",
+  "public_proof_calls": {
+    "MNG1": 7,
+    "MNG2": 3,
+    "SLG2": 2
+  },
+  "release_oracle_sha256": "f4251132aacab6beb135ad5c7c4138c921b369939c718702bf830ef942b581ca",
+  "selected_block_count": 20,
+  "selected_frame_bytes": 1825259,
+  "selected_spent_set_sha256": "a958fa5a7b897ba6b408b1063dd89f85555dfad5675967396b0762df357c025d",
+  "signed_swaps": {
+    "61847a2bad2fdd9a0999eddb9035c1ef5a6fc5a8642de8b9130e26cf09776b14": {
+      "complete_B": 400149,
+      "fee_by_leg": [
+        3,
+        0
+      ],
+      "frame_B": [
+        200068,
+        200068
+      ],
+      "frames": [
+        "bf0df53b45c47cd34643adc71bb9a00832c0fd2642d85c03923d6a291305c75c",
+        "1f33f7c50208d7bbe9aa50e42817886e284d75bc72b13feaaa2abd7e0c5f3995"
+      ]
+    }
+  },
+  "tested_sha": "0ec22fafdaab0f168ac6de1e7348215bdc5e2612",
+  "wallet_recovery_sync": {
+    "blocks": 15,
+    "end_height": 15,
+    "public_body_B": 31079,
+    "reply_B": 34424,
+    "request_B": 1176,
+    "wall_s": 0.019599775999949998,
+    "wallet_db_B": 57344
+  },
+  "warm_and_cold_public_roles": {
+    "MNG1": {
+      "altered_public_root_rejected": true,
+      "cold_launch_through_first_verdict_wall_s": 1.4785675139996783,
+      "native_peak_RSS_KiB": 200984,
+      "proof_B": 139634,
+      "retagged_other_proofs_rejected": 1,
+      "sample_sha256": [
+        "1a26d3daf4225ec60eb1f3e3c2dd7df11ba25bc104a0c656e3093e3aab0afa85"
+      ],
+      "setup": {
+        "cpu_s": 2.626350402,
+        "elapsed_s": 1.450371523,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 200984
+      },
+      "wallet_submission_B": 143233,
+      "warm_complete_calls": 3,
+      "warm_crypto_median_wall_s": 0.006720177000261174,
+      "warm_native_median_cpu_s": 0.006538797
+    },
+    "MNG2": {
+      "altered_public_root_rejected": true,
+      "cold_launch_through_first_verdict_wall_s": 2.853086680999695,
+      "native_peak_RSS_KiB": 351280,
+      "proof_B": 179256,
+      "retagged_other_proofs_rejected": 1,
+      "sample_sha256": [
+        "bf442069bf3eb076d67b4ef4c1ab006cdf773369033ab71751cabe849d45cff3"
+      ],
+      "setup": {
+        "cpu_s": 5.16062436,
+        "elapsed_s": 2.823815174,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 351280
+      },
+      "wallet_submission_B": 182855,
+      "warm_complete_calls": 3,
+      "warm_crypto_median_wall_s": 0.009366956000121718,
+      "warm_native_median_cpu_s": 0.009117244
+    },
+    "SLG1": {
+      "altered_public_root_rejected": true,
+      "cold_launch_through_first_verdict_wall_s": 1.3624892170000749,
+      "native_peak_RSS_KiB": 201128,
+      "proof_B": 139658,
+      "retagged_other_proofs_rejected": 2,
+      "sample_sha256": [
+        "fa9b8a6a6c866e6182fb9b0f2e9d9cb724bf864a12b3878d03ab67d758504b3a",
+        "af24c5667400fdbc0853c00d13ca542b03b964dec4d744571ddf56bfa3695fa0"
+      ],
+      "setup": {
+        "cpu_s": 2.450684704,
+        "elapsed_s": 1.321376972,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 201128
+      },
+      "wallet_submission_B": 320905,
+      "warm_complete_calls": 3,
+      "warm_crypto_median_wall_s": 0.023812091999843688,
+      "warm_native_median_cpu_s": 0.023088198
+    },
+    "SLG2": {
+      "altered_public_root_rejected": true,
+      "cold_launch_through_first_verdict_wall_s": 2.8017164590000903,
+      "native_peak_RSS_KiB": 351428,
+      "proof_B": 179280,
+      "retagged_other_proofs_rejected": 2,
+      "sample_sha256": [
+        "297c68101bdff8397f75fae2982170c95aa19a10569dd1ce3aae3da9585b174b",
+        "3e1f3305e5dd4d624957b5b775064f939ed2c261263257a5511d7ac7cce110d5"
+      ],
+      "setup": {
+        "cpu_s": 5.050145441,
+        "elapsed_s": 2.754587936,
+        "operation": "verifier_setup",
+        "peak_rss_kib": 351428
+      },
+      "wallet_submission_B": 400149,
+      "warm_complete_calls": 3,
+      "warm_crypto_median_wall_s": 0.02788526299991645,
+      "warm_native_median_cpu_s": 0.027223589
+    }
+  }
+}
