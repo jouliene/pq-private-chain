@@ -1,0 +1,128 @@
+{
+  "schema": "funded-pq-public-clone-receipt-v2",
+  "observed_utc": "2026-11-21T14:46:29Z",
+  "supersedes_interim_receipt_sha256": "b66cd86c47298f70aab60fa9833f91f1fae3fe4ad1c6752ad4f81d546da20920",
+  "clone": {
+    "url": "https://github.com/jouliene/pq-private-chain.git",
+    "credential_helper_disabled": true,
+    "terminal_prompt_disabled": true,
+    "global_and_system_git_config_disabled": true,
+    "no_local_clone_or_fetch_fallback": true,
+    "object_alternates_present": false,
+    "origin_main": "c4bc9411751728660ae14af509f0b3eb35187530",
+    "detached_checkout": "c4bc9411751728660ae14af509f0b3eb35187530",
+    "source_checkout_clean_after_reproduction": true
+  },
+  "reachability": {
+    "4b7b798d3fc3e9bd8bcde9119811708282972618_is_ancestor_of_0f60ec389d4f4e7d40d7d5e7f538b11d153461cf": true,
+    "0f60ec389d4f4e7d40d7d5e7f538b11d153461cf_is_ancestor_of_c4bc9411751728660ae14af509f0b3eb35187530": true,
+    "correction_commits": [
+      "6abbb7255c80321eba72f70462c1e674c5a8c594",
+      "c4bc9411751728660ae14af509f0b3eb35187530"
+    ],
+    "c4bc9411751728660ae14af509f0b3eb35187530_equals_origin_main": true
+  },
+  "correction_diff": {
+    "base": "0f60ec389d4f4e7d40d7d5e7f538b11d153461cf",
+    "head": "c4bc9411751728660ae14af509f0b3eb35187530",
+    "files": [
+      ".github/workflows/funded-pq-assurance.yml",
+      "experiments/funded-pq-assurance/reproduce.sh",
+      "experiments/funded-pq-assurance/review/REVIEW.md"
+    ],
+    "insertions": 35,
+    "deletions": 0,
+    "diff_check_passed": true,
+    "scope_confirmed": "fail-closed bubblewrap install/pin/capability probe and matching documentation only",
+    "workflow_bubblewrap_deb_version": "0.6.1-1ubuntu0.3",
+    "workflow_runner": "ubuntu-22.04",
+    "unsandboxed_role_fallback_added": false,
+    "verifier_proof_vk_or_frozen_result_code_changed": false,
+    "unchanged_artifact_blobs": {
+      "decision": "dc9b4494f0c414320de7729a7bef784f06fa42ab",
+      "migration_result": "b798c79f8d18f0d5cbae00f500c791d0374108bb",
+      "migration_public_audit": "f6f225bcc88f941a200822fb032cd3865030899c",
+      "migration_public_receipt": "b0c4efd94d0bfa2a79629eedb5b0f3909720e3e0"
+    },
+    "final_changed_blobs": {
+      "workflow": "1fdb5a7fa880780258bce86c8ce6c4401e3e637d",
+      "reproducer": "3ef010551ce357dc23067266ed91b59aa247c713",
+      "review": "0ccbe64c0e14919c9508d72a0fd54dff47c22bb7"
+    }
+  },
+  "environment": {
+    "kernel": "Linux 6.8.0-151-generic x86_64",
+    "git": "2.43.0",
+    "rustc": "1.93.0 (254b59607 2026-01-19)",
+    "cargo": "1.93.0 (083ac5135 2025-12-15)",
+    "local_bubblewrap": "0.9.0",
+    "bubblewrap_namespace_probe_passed": true
+  },
+  "reproduction": {
+    "command": "bash experiments/funded-pq-assurance/reproduce.sh /tmp/funded-pq-assurance-reproduction",
+    "literal_published_command_used": true,
+    "result_directory_was_absent_before_run": true,
+    "exit_code": 0,
+    "local_asset_overrides_used": false,
+    "local_cargo_cache_override_used": false,
+    "cargo_home_and_target_created_inside_fresh_result_directory": true,
+    "binding_tests_passed": 7,
+    "migration_tests_passed": 13,
+    "bridge_rust_tests_passed": 2,
+    "n7_rust_tests_passed": 1,
+    "proof_and_key_calculators_matched": true,
+    "privacy_result_matched": true,
+    "generated_bridge_vk_matched_registered": true,
+    "generated_n7_vk_matched_registered": true,
+    "public_core_result_matched": true,
+    "full_public_migration_receipt_matched": true,
+    "final_message": "Funded profile C calculations and public migration evidence matched."
+  },
+  "public_release_assets": {
+    "funded-membership-public.tar.gz": {
+      "bytes": 7707797,
+      "sha256": "24fc62066d1c43b46e33152d83ee642b4d077aed7d9030ce3ffa2b31b5ceea87"
+    },
+    "funded-pq-assurance-migration-public.tar.gz": {
+      "bytes": 7701082,
+      "sha256": "50008712589106a8a934040dd4fa8465d1eb269f0ca7232f18ffbb2999662b6d"
+    },
+    "funded-pq-assurance-c-deployment.tar.gz": {
+      "bytes": 7557294,
+      "sha256": "682ed92c510c0b73ddf21ed7c50c048c4430bb8b06c5e6fc28db1e63e8c5d942"
+    }
+  },
+  "result_identity": {
+    "privacy_json_sha256": "24f9486b4d28d05c1a6e8d149fdc864deee4877cdffba22e998b8909e30fc016",
+    "public_core_json_sha256": "5b03cd9b9dce56331b0adaba89f8441c9fab25e163b25246b2447f3262bc7954",
+    "bridge_vk_sha256": "9a6a10308d73523ab61de895ccfcbf5fa527c0daa4b663c836c95a10eb5426b6",
+    "n7_vk_sha256": "ed35976fea28625614ffa95e1866467c4a95482307a02bcf17a9c6e9c1de4423",
+    "fresh_bridge_binary_sha256_observation_only": "2eda13aafa72f3e062afe4686869fa5f6eb787880a4867583de59710cfa43d89",
+    "fresh_n7_binary_sha256_observation_only": "3af7d12942583e28584243688cdc0bd3e2ddd43c94b13f018e5fac940fafcfd6"
+  },
+  "github_actions_public_api": {
+    "head_sha": "c4bc9411751728660ae14af509f0b3eb35187530",
+    "push_assurance_run": {
+      "id": 44915102891,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44915102891"
+    },
+    "manual_dispatch_assurance_run": {
+      "id": 44915116674,
+      "status": "completed",
+      "conclusion": "success",
+      "job_id": 136878968986,
+      "isolated_role_runtime_step": "success",
+      "full_public_migration_audit_step": "success",
+      "url": "https://github.com/jouliene/pq-private-chain/actions/runs/44915116674"
+    }
+  },
+  "claim_boundary": {
+    "decision_result_review_consistent": true,
+    "no_128_bit_post_quantum_or_production_qualification": true,
+    "migration_remains_out_of_band_not_current_consensus": true,
+    "exact_private_proof_regeneration_not_publicly_reproduced": true
+  },
+  "disposition": "accepted as final public reproduction of the bounded funded-profile C assurance result"
+}

@@ -57,6 +57,39 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Funded profile C assurance
+
+Starting public baseline:
+`e55b35e04cf353bb1e1c6e51c07a33b81ddd937c`. The architecture decision and
+measured C-to-N7 migration were introduced by
+`4b7b798d3fc3e9bd8bcde9119811708282972618`; the exact tested and publicly
+reproduced source is `c4bc9411751728660ae14af509f0b3eb35187530`.
+
+The result retains C only as an executable research/devnet reference and
+conditional legacy migration authorization. It does not establish 128-bit
+post-quantum monetary security, complete-payment privacy, production readiness
+or an integrated PoW migration. The 412,886-byte out-of-band bridge exceeds the
+current ordinary packet limit by 150,742 bytes. The binding and proof changes
+required before mainnet are recorded in the
+[decision](../experiments/funded-pq-assurance/DECISION.md).
+
+The public release pins the distinct migration branch and secret-free C
+deployment with checksums. A non-author reproduced the literal command below
+from an anonymous HTTPS clone with public downloads only; the exact
+[receipt](../experiments/funded-pq-assurance/review/PUBLIC_CLONE.json) records
+the checkout, asset identities, regenerated verifier keys, tests and claim
+boundary. Both the [push CI](https://github.com/jouliene/pq-private-chain/actions/runs/44915102891)
+and [full release audit](https://github.com/jouliene/pq-private-chain/actions/runs/44915116674)
+passed on the tested SHA. An earlier dispatch failed closed because the hosted
+runner lacked `bwrap`; the published correction pins and capability-checks the
+runtime rather than bypassing wallet-role isolation.
+
+```sh
+bash experiments/funded-pq-assurance/reproduce.sh /tmp/funded-pq-assurance-reproduction
+```
+
+[Release assets](https://github.com/jouliene/pq-private-chain/releases/tag/funded-pq-assurance-2026-11-21)
+
 ## Lattice spend architecture decision
 
 The anonymous public checkout of research revision `ebb732a94640c5be3a9d60ea4b14bb0e2580dd10` reproduced the two architecture screens, the public and newly generated membership proofs, the four funded reference roles, and the cost and migration checks. The existing payment and PoW workflows passed on that revision. The later handoff carries only reports and measurements. [Decision](../experiments/lattice-spend/DECISION.md) · [Commands](../experiments/lattice-spend/README.md) · [Independent receipt](../experiments/lattice-spend/review/CLEAN.md) · [Smoke CI](https://github.com/jouliene/pq-private-chain/actions/runs/44853578935) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/44853579029)

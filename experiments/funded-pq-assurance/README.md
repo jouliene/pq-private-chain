@@ -23,8 +23,11 @@ From an anonymous HTTPS clone of the published revision, run:
 bash experiments/funded-pq-assurance/reproduce.sh /tmp/funded-pq-assurance-reproduction
 ```
 
-The destination must not already contain files.  The script uses Python 3,
-`curl`, `tar`, `sha256sum`, Rustup and the pinned Rust 1.93.0 toolchain.  It:
+The destination must not already contain files. The script uses Python 3,
+`curl`, `tar`, `sha256sum`, Rustup, the pinned Rust 1.93.0 toolchain and a
+working `bubblewrap` (`bwrap`) user-namespace runtime. The accepted Ubuntu
+22.04 CI pins package `0.6.1-1ubuntu0.3`. The script tests the namespace
+capability before building and has no unsandboxed wallet-role fallback. It:
 
 1. regenerates the binding and proof calculations and runs the light state
    tests;
@@ -73,6 +76,7 @@ release contains no backup and cannot independently repeat that private action.
   [migration design](binding/migration/DESIGN.md) and
   [measured result](binding/migration/RESULTS.md)
 - [Independent challenge](review/REVIEW.md)
+- [Anonymous public-clone and CI receipt](review/PUBLIC_CLONE.json)
 
 The migration evidence is under
 `binding/migration/evidence-author05/` and is below 1 MiB.  Large prior public

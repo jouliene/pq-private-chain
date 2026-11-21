@@ -1,8 +1,19 @@
-# Funded profile C post-quantum assurance — active
+# Funded profile C post-quantum assurance — independently verified
 
-Baseline `e55b35e04cf353bb1e1c6e51c07a33b81ddd937c` is preserved and clean in the isolated milestone checkout. Three independent workstreams own funded-note/ownership binding, the exact noninteractive proof, and joint receipt/privacy composition. Root owns game definitions, architecture comparison, integration, publication and acceptance. C remains executable. Existing funded-membership, K384, WHIR and N7P2 evidence is reused without rerunning closed campaigns absent a new discriminating question.
+Starting baseline `e55b35e04cf353bb1e1c6e51c07a33b81ddd937c`
+is preserved. The exact tested public revision is
+`c4bc9411751728660ae14af509f0b3eb35187530`. Independent workstreams covered
+funded-note/ownership binding, the registered noninteractive proof, joint
+receipt/privacy composition and adversarial review. C remains executable and
+the prior funded-membership, K384, WHIR and N7P2 evidence remains preserved.
 
-The first decision is whether the four-word funded note/tree hash, the Plonky2/FRI proof, or both prevent the 128-bit claim. If a wider note/tree is selected, the milestone must measure a complete candidate and demonstrate atomic old-to-new migration followed by backup restoration and a genuine spend. A separate non-author reviewer will challenge the frozen synthesis and reproduce the decisive calculations from a public clone. Production assurance is not inferred from finite executions.
+The decision is to retain C as a funded research/devnet reference and
+conditional legacy migration authorization, but not to claim 128-bit
+post-quantum monetary security or whole-payment privacy. Both the four-word
+binding layer and the proof correspondence prevent that claim. A coherent
+seven-word successor and atomic old-to-new migration were measured; finite
+execution does not qualify either proof system or establish production
+assurance.
 
 ## Current assurance checkpoint
 
@@ -44,11 +55,20 @@ regeneration still requires the historical backup and witnesses.
 
 Independent review found that the migration used the prior milestone's clean-
 reproducer H25 tip `0000028c...`, not the older author H25 tip `0000019c...`.
-The older published archive therefore cannot replay the migration branch.  The
-exact secret-free migration lineage and matching C deployment have now been
-packaged separately with checksums for the milestone release.  Local review and
-publication are still in progress; the native Goal remains ACTIVE until an
-anonymous public clone and applicable CI reproduce the published revision.
+The older published archive therefore cannot replay the migration branch. The
+exact secret-free migration lineage and matching C deployment are published as
+checksum-pinned release assets. A non-author cloned the anonymous public HTTPS
+repository without credentials, local-object fallback or alternates, checked
+out `c4bc9411751728660ae14af509f0b3eb35187530`, and ran the literal one-command
+reproduction with public downloads only. All 7 binding tests, 13 migration
+tests, 3 Rust tests, privacy/proof calculations, regenerated verifier keys,
+public proof verification and mutation controls passed; the checkout remained
+clean. The exact [public receipt](experiments/funded-pq-assurance/review/PUBLIC_CLONE.json)
+has SHA-256 `59d32a76cb4037fdfc34fb8b9a8867a66d97205eb6503c8a2f4e3bb888d6788c`.
+Both the [push CI](https://github.com/jouliene/pq-private-chain/actions/runs/44915102891)
+and the [full release audit](https://github.com/jouliene/pq-private-chain/actions/runs/44915116674)
+passed on that exact SHA. The bounded milestone is verified. The global private
+blockchain objective remains active.
 
 # Funded note membership — independently verified
 
