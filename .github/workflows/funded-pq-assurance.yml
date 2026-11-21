@@ -82,6 +82,13 @@ jobs:
             > "$RUNNER_TEMP/public-core.json"
           cmp "$RUNNER_TEMP/public-core.json" \
             experiments/funded-pq-assurance/binding/migration/PUBLIC_VERIFY_CORE.json
+      - name: Install isolated-role runtime for full audit
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          set -eu
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends bubblewrap
+          bwrap --version
       - name: Reproduce full public migration audit after release
         if: github.event_name == 'workflow_dispatch'
         run: |

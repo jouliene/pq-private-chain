@@ -322,3 +322,8 @@ sockets and may require the normal sandbox approval. The optional
 `FUNDED_PQ_MEMBERSHIP_ARCHIVE`, `FUNDED_PQ_MIGRATION_ARCHIVE` and
 `FUNDED_PQ_C_DEPLOYMENT_ARCHIVE` variables may point to already downloaded
 checksum-matching public assets; they are not private dependencies.
+The replay also requires `bubblewrap` (`bwrap`) to enforce the same isolated
+wallet-role execution used when the evidence was created. The reproduction
+script fails closed before building if that executable is absent. The pinned
+Ubuntu CI job installs the distribution package and records its version before
+the full release audit; the verifier does not fall back to an unsandboxed role.

@@ -21,6 +21,12 @@ fi
 out=$(cd -- "$destination" && pwd -P)
 here=$(cd -- "$(dirname -- "$0")" && pwd -P)
 root=$(cd -- "$here/../.." && pwd -P)
+
+if ! command -v bwrap >/dev/null 2>&1; then
+    echo "bubblewrap (bwrap) is required for isolated wallet-role replay" >&2
+    exit 2
+fi
+
 export CARGO_HOME="${FUNDED_PQ_CARGO_HOME:-$out/cargo-home}"
 export CARGO_TARGET_DIR="$out/target"
 export RAYON_NUM_THREADS=2
