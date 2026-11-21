@@ -57,6 +57,10 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Lattice spend architecture decision
+
+The anonymous public checkout of research revision `ebb732a94640c5be3a9d60ea4b14bb0e2580dd10` reproduced the two architecture screens, the public and newly generated membership proofs, the four funded reference roles, and the cost and migration checks. The existing payment and PoW workflows passed on that revision. The later handoff carries only reports and measurements. [Decision](../experiments/lattice-spend/DECISION.md) · [Commands](../experiments/lattice-spend/README.md) · [Independent receipt](../experiments/lattice-spend/review/CLEAN.md) · [Smoke CI](https://github.com/jouliene/pq-private-chain/actions/runs/44853578935) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/44853579029)
+
 ## Initial delivery record (historical)
 
 This was the first public milestone; no earlier public milestone SHA/compare URL

@@ -1,0 +1,156 @@
+{
+  "public_main": "ebb732a94640c5be3a9d60ea4b14bb0e2580dd10",
+  "tested_parent": "10cbb07909a62b6293518cbe70aba4213e0faa4c",
+  "clean_checkout": true,
+  "public_wrapper": {
+    "wall_s": 46.09,
+    "user_cpu_s": 45.26,
+    "system_cpu_s": 0.25,
+    "peak_RSS_KiB": 81268
+  },
+  "build": {
+    "wall_s": 39.41,
+    "user_cpu_s": 48.01,
+    "system_cpu_s": 3.69,
+    "peak_RSS_KiB": 385960
+  },
+  "planner": {
+    "wall_s": 41.81,
+    "published_output_sha256": "75576a246b89f6761314f169721a48329709ff2a36a03b9464d6ef07bd88fa5c"
+  },
+  "funded": {
+    "report_sha256": "616530baf35b3ab9f2e160c220bce43f83f3d8d593d87ea8e9eb098a24b12e62",
+    "elapsed_s": 118.63,
+    "lift_cpu_s": {
+      "ordinary": 9.587,
+      "leg-a": 10.164,
+      "leg-b": 10.092,
+      "onward": 9.84
+    }
+  },
+  "replayed_shared40": {
+    "sha256": "e8fc1b94830cb04bbba1e13b637f47316b718a8140418ce7b968fc9323be2b77",
+    "verify": {
+      "accepted": true,
+      "binary_depth": 40,
+      "custom_wire_B": 136188,
+      "decode": {
+        "cpu_s": 0.13527,
+        "wall_s": 0.13592
+      },
+      "degree0_constraints": 80,
+      "descriptor_sha256": "6595e6ff9fcaafea1a118dbdd74273111c617d15f32a5d7fd5a004cb54381ff2",
+      "framed_B": 136741,
+      "paths": 2,
+      "process_peak_RSS_KiB": 1011940,
+      "profile": "shared40",
+      "public_parameter_generation": {
+        "cpu_s": 0.23862,
+        "wall_s": 0.24079
+      },
+      "public_root_B": 512,
+      "ring_constraints": 164,
+      "role": "verify",
+      "uncompressed_arrays_B": 196096,
+      "verify": {
+        "cpu_s": 104.87954,
+        "wall_s": 105.23322
+      },
+      "witness_degree": 512,
+      "witness_vectors": 1648,
+      "zk": true,
+      "whole_process": {
+        "wall_s": 114.65,
+        "user_s": 113.34,
+        "sys_s": 0.81,
+        "peak_RSS_KiB": 1011940
+      },
+      "upstream_estimate_rounded_KiB": 122.31
+    },
+    "independent_decoding": {
+      "root_sha256": "6fbb9ce0095003b7e2ccf147df07553b68fa70d7cfd6171ccbf55d50190d2f58",
+      "arrays_sha256": "d5f22183799a931029b9c005a0e9032d7aacd044e22cfeacf829dd89649461fc",
+      "exact_XZ_stream": true,
+      "framed_B": 136741
+    }
+  },
+  "fresh_stock64": {
+    "sha256": "dc0ea328212d1153dc19535152e2fcbf90d267c1d333eadd3061aad6316613e0",
+    "prove": {
+      "binary_depth": 64,
+      "custom_wire_B": 136176,
+      "degree0_constraints": 64,
+      "descriptor_sha256": "62cab42319c82040c22a1a29a817282bdfeecf0a87e1b433257275a130a98f3c",
+      "encode": {
+        "cpu_s": 0.24059,
+        "wall_s": 0.24162
+      },
+      "framed_B": 136729,
+      "params_and_prove": {
+        "cpu_s": 188.5684,
+        "wall_s": 189.19841
+      },
+      "paths": 1,
+      "process_peak_RSS_KiB": 1069912,
+      "profile": "stock64",
+      "public_root_B": 512,
+      "ring_constraints": 130,
+      "role": "prove",
+      "uncompressed_arrays_B": 196096,
+      "witness_degree": 512,
+      "witness_vectors": 1304,
+      "zk": true,
+      "whole_process": {
+        "wall_s": 198.87,
+        "user_s": 197.27,
+        "sys_s": 0.9,
+        "peak_RSS_KiB": 1069912
+      },
+      "upstream_estimate_rounded_KiB": 122.31
+    },
+    "verify": {
+      "accepted": true,
+      "binary_depth": 64,
+      "custom_wire_B": 136176,
+      "decode": {
+        "cpu_s": 0.13597,
+        "wall_s": 0.13661
+      },
+      "degree0_constraints": 64,
+      "descriptor_sha256": "62cab42319c82040c22a1a29a817282bdfeecf0a87e1b433257275a130a98f3c",
+      "framed_B": 136729,
+      "paths": 1,
+      "process_peak_RSS_KiB": 1016572,
+      "profile": "stock64",
+      "public_parameter_generation": {
+        "cpu_s": 0.24189,
+        "wall_s": 0.24422
+      },
+      "public_root_B": 512,
+      "ring_constraints": 130,
+      "role": "verify",
+      "uncompressed_arrays_B": 196096,
+      "verify": {
+        "cpu_s": 102.58753,
+        "wall_s": 102.97481
+      },
+      "witness_degree": 512,
+      "witness_vectors": 1304,
+      "zk": true,
+      "whole_process": {
+        "wall_s": 112.01,
+        "user_s": 110.72,
+        "sys_s": 0.84,
+        "peak_RSS_KiB": 1016572
+      },
+      "upstream_estimate_rounded_KiB": 122.31
+    },
+    "independent_decoding": {
+      "root_sha256": "f340af61f6fb22185928678a612387fe814bbe06c3881c2cdfd43faf483526fc",
+      "arrays_sha256": "3aa5c7c9f4ec43db3650a9351518f2f2360fbf68413e53e3d93918efe19b89a4",
+      "exact_XZ_stream": true,
+      "framed_B": 136729
+    },
+    "root_matches_published_height64_fixture": true
+  }
+}

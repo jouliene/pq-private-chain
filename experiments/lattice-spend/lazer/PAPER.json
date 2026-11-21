@@ -1,0 +1,32 @@
+{
+  "source": {
+    "lazer": "51baa16c4a642ad90b964b9c1592c230aa0c0941",
+    "labrador": "18b6814bc81ebcdf1c6b7e033fe648d35005937d",
+    "upstream_benchmark_sha256": "c91249281d1a257f56eb9845dc66ef9278ee97a6567e7d292590a2729af34f77",
+    "source_patch": null
+  },
+  "function": "benchmark_membership_proof(64,1,True)",
+  "assertions": true,
+  "process": "original author in-process native prover and actual C verifier under Intel SDE -tgl",
+  "source_path": "proof_statement.pack_prove -> pack_verify -> labrador38_py_verify -> dch_pack_verify",
+  "real_verifier_print": "Pack Verify = True",
+  "accepted": true,
+  "paths": 1,
+  "height": 64,
+  "zk": true,
+  "whole_process": {
+    "wall_s": 351.7,
+    "user_s": 349.43,
+    "sys_s": 0.99,
+    "peak_RSS_KiB": 1073988
+  },
+  "authors_timing_wall_s": {
+    "trace": 0.12600108096376061,
+    "params_and_prove": 245.86826649587601,
+    "verify": 95.4471477700863
+  },
+  "upstream_estimate_rounded_KiB": 122.31,
+  "serializer": "no emitted proof bytes in upstream function",
+  "single_sample": true,
+  "core": "Intel i7-8700K CPU 2 emulating Tiger Lake; Linux x86-64"
+}

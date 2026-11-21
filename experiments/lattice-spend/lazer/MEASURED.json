@@ -85,6 +85,80 @@
           "peak_RSS_KiB": 1001336
         },
         "upstream_estimate_rounded_KiB": 122.31
+      },
+      "wrong-root": {
+        "accepted": false,
+        "binary_depth": 40,
+        "custom_wire_B": 136188,
+        "decode": {
+          "cpu_s": 0.13921,
+          "wall_s": 0.13992
+        },
+        "degree0_constraints": 80,
+        "descriptor_sha256": "6595e6ff9fcaafea1a118dbdd74273111c617d15f32a5d7fd5a004cb54381ff2",
+        "framed_B": 136741,
+        "paths": 2,
+        "process_peak_RSS_KiB": 999244,
+        "profile": "shared40",
+        "public_parameter_generation": {
+          "cpu_s": 0.24601,
+          "wall_s": 0.24829
+        },
+        "public_root_B": 512,
+        "ring_constraints": 164,
+        "role": "wrong-root",
+        "uncompressed_arrays_B": 196096,
+        "verify": {
+          "cpu_s": 106.1477,
+          "wall_s": 106.51178
+        },
+        "witness_degree": 512,
+        "witness_vectors": 1648,
+        "zk": true,
+        "whole_process": {
+          "wall_s": 115.83,
+          "user_s": 114.58,
+          "sys_s": 0.81,
+          "peak_RSS_KiB": 999244
+        },
+        "upstream_estimate_rounded_KiB": 122.31
+      },
+      "changed-proof": {
+        "accepted": false,
+        "binary_depth": 40,
+        "custom_wire_B": 136188,
+        "decode": {
+          "cpu_s": 0.06466,
+          "wall_s": 0.06502
+        },
+        "degree0_constraints": 80,
+        "descriptor_sha256": "6595e6ff9fcaafea1a118dbdd74273111c617d15f32a5d7fd5a004cb54381ff2",
+        "framed_B": 136741,
+        "paths": 2,
+        "process_peak_RSS_KiB": 1019244,
+        "profile": "shared40",
+        "public_parameter_generation": {
+          "cpu_s": 0.24554,
+          "wall_s": 0.24779
+        },
+        "public_root_B": 512,
+        "ring_constraints": 164,
+        "role": "changed-proof",
+        "uncompressed_arrays_B": 196096,
+        "verify": {
+          "cpu_s": 105.44429,
+          "wall_s": 105.81211
+        },
+        "witness_degree": 512,
+        "witness_vectors": 1648,
+        "zk": true,
+        "whole_process": {
+          "wall_s": 115.69,
+          "user_s": 114.38,
+          "sys_s": 0.85,
+          "peak_RSS_KiB": 1019244
+        },
+        "upstream_estimate_rounded_KiB": 122.31
       }
     },
     "stock64": {
