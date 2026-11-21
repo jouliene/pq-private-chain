@@ -12,7 +12,8 @@ The verifier rebuilt the branch from 12 public PoW blocks. It derived the eligib
 
 | Scope | Released SLG1 | Fixed-parent FTL1 |
 |---|---:|---:|
-| Bare side-zero proof | 139,658 B | 238,120 B |
+| Cryptographic body alone | 139,378 B | 238,120 B |
+| Serialized proof field, including any count and public inputs | 139,658 B | 238,120 B |
 | Signed physical side-zero frame | 160,446 B | 259,212 B |
 | Corresponding two-owner submission | 320,905 B | 419,671 B |
 | Complete mined block | 321,122 B | 419,888 B |
@@ -43,3 +44,5 @@ Before another funded proof, require a membership construction with a justified 
 ## Public reproduction
 
 A non-author built both released roles from public source, rebuilt the registered TCitH verifier and repeated both price calculations and the complete public branch experiment at revision `00918a5eae77bd422cc13750539a823d371ee399`. A wire reader written independently of the C++ code reconstructed the funded proof's 32 sampled parties and 387 authentication hashes. The reviewer then created another 237,800-byte proof with its own independently funded disposable wallets on a different selected PoW branch. Its signed frame measured 258,892 bytes. The integration owner replayed that second public archive in a fresh source-built node and obtained both conflict rejections and the orphan rollback again. The original local decision stands. [Independent review](review/CLEAN.md) · [Second wire readback](review/FRESH_WIRE.json) · [Second ledger evidence](review/FRESH_NODE.json) · [Public fixtures](https://github.com/jouliene/pq-private-chain/releases/tag/funded-tcith-2026-11-21)
+
+[Physical byte reconciliation from both public fixtures](../new-note/baseline/WIRE.md)

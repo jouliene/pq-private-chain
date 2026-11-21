@@ -1,0 +1,173 @@
+{
+  "N7_measured_sample_projection": {
+    "ordinary_B": 235795,
+    "swap_B": 507056,
+    "block_extra_B": 180,
+    "weighted_framed_B": 263101.1,
+    "per_included_operations": {
+      "10000000": {
+        "archive_TB": 2.631,
+        "wallet_inclusion_TB": 2.6292,
+        "archive_input_Mbps": 0.667,
+        "pre_relay_plus_block_one_copy_each_TB": 5.2602,
+        "four_outgoing_peers_both_flows_Mbps": 5.334
+      },
+      "30000000": {
+        "archive_TB": 7.893,
+        "wallet_inclusion_TB": 7.8876,
+        "archive_input_Mbps": 2.001,
+        "pre_relay_plus_block_one_copy_each_TB": 15.7807,
+        "four_outgoing_peers_both_flows_Mbps": 16.002
+      },
+      "100000000": {
+        "archive_TB": 26.3101,
+        "wallet_inclusion_TB": 26.2921,
+        "archive_input_Mbps": 6.67,
+        "pre_relay_plus_block_one_copy_each_TB": 52.6022,
+        "four_outgoing_peers_both_flows_Mbps": 53.34
+      }
+    }
+  },
+  "N7_IID_query_mean_projection": {
+    "ordinary_B": 235954.5867,
+    "swap_B": 506267.1734,
+    "block_extra_B": 180,
+    "weighted_framed_B": 263165.85,
+    "per_included_operations": {
+      "10000000": {
+        "archive_TB": 2.6317,
+        "wallet_inclusion_TB": 2.6299,
+        "archive_input_Mbps": 0.667,
+        "pre_relay_plus_block_one_copy_each_TB": 5.2615,
+        "four_outgoing_peers_both_flows_Mbps": 5.335
+      },
+      "30000000": {
+        "archive_TB": 7.895,
+        "wallet_inclusion_TB": 7.8896,
+        "archive_input_Mbps": 2.001,
+        "pre_relay_plus_block_one_copy_each_TB": 15.7846,
+        "four_outgoing_peers_both_flows_Mbps": 16.006
+      },
+      "100000000": {
+        "archive_TB": 26.3166,
+        "wallet_inclusion_TB": 26.2986,
+        "archive_input_Mbps": 6.671,
+        "pre_relay_plus_block_one_copy_each_TB": 52.6152,
+        "four_outgoing_peers_both_flows_Mbps": 53.353
+      }
+    }
+  },
+  "N7_shape_max": {
+    "ordinary_B": 249961,
+    "swap_B": 534280,
+    "block_extra_B": 180,
+    "weighted_framed_B": 278572.9,
+    "per_included_operations": {
+      "10000000": {
+        "archive_TB": 2.7857,
+        "wallet_inclusion_TB": 2.7839,
+        "archive_input_Mbps": 0.706,
+        "pre_relay_plus_block_one_copy_each_TB": 5.5697,
+        "four_outgoing_peers_both_flows_Mbps": 5.648
+      },
+      "30000000": {
+        "archive_TB": 8.3572,
+        "wallet_inclusion_TB": 8.3518,
+        "archive_input_Mbps": 2.119,
+        "pre_relay_plus_block_one_copy_each_TB": 16.709,
+        "four_outgoing_peers_both_flows_Mbps": 16.943
+      },
+      "100000000": {
+        "archive_TB": 27.8573,
+        "wallet_inclusion_TB": 27.8393,
+        "archive_input_Mbps": 7.062,
+        "pre_relay_plus_block_one_copy_each_TB": 55.6966,
+        "four_outgoing_peers_both_flows_Mbps": 56.477
+      }
+    }
+  },
+  "N3_priced": {
+    "ordinary_B": 542320649,
+    "swap_B": 1084675656,
+    "block_extra_B": 180,
+    "weighted_framed_B": 596556329.7,
+    "per_included_operations": {
+      "10000000": {
+        "archive_TB": 5965.5633,
+        "wallet_inclusion_TB": 5965.5615,
+        "archive_input_Mbps": 1512.298,
+        "pre_relay_plus_block_one_copy_each_TB": 11931.1248,
+        "four_outgoing_peers_both_flows_Mbps": 12098.385
+      },
+      "30000000": {
+        "archive_TB": 17896.6899,
+        "wallet_inclusion_TB": 17896.6845,
+        "archive_input_Mbps": 4536.895,
+        "pre_relay_plus_block_one_copy_each_TB": 35793.3744,
+        "four_outgoing_peers_both_flows_Mbps": 36295.155
+      },
+      "100000000": {
+        "archive_TB": 59655.633,
+        "wallet_inclusion_TB": 59655.615,
+        "archive_input_Mbps": 15122.983,
+        "pre_relay_plus_block_one_copy_each_TB": 119311.2479,
+        "four_outgoing_peers_both_flows_Mbps": 120983.85
+      }
+    }
+  },
+  "live_payload_only": {
+    "ordinary_B": 143233,
+    "swap_B": 320905,
+    "block_extra_B": 0,
+    "weighted_framed_B": 161000.2,
+    "per_included_operations": {
+      "10000000": {
+        "archive_TB": 1.61,
+        "wallet_inclusion_TB": 1.61,
+        "archive_input_Mbps": 0.408,
+        "pre_relay_plus_block_one_copy_each_TB": 3.22,
+        "four_outgoing_peers_both_flows_Mbps": 3.265
+      },
+      "30000000": {
+        "archive_TB": 4.83,
+        "wallet_inclusion_TB": 4.83,
+        "archive_input_Mbps": 1.224,
+        "pre_relay_plus_block_one_copy_each_TB": 9.66,
+        "four_outgoing_peers_both_flows_Mbps": 9.795
+      },
+      "100000000": {
+        "archive_TB": 16.1,
+        "wallet_inclusion_TB": 16.1,
+        "archive_input_Mbps": 4.081,
+        "pre_relay_plus_block_one_copy_each_TB": 32.2,
+        "four_outgoing_peers_both_flows_Mbps": 32.651
+      }
+    }
+  },
+  "verification": {
+    "fresh_per_leg_CPU_mean": 4.925,
+    "prep_ms_range": [
+      1807.217,
+      1902.393
+    ],
+    "check_ms_range": [
+      12.077,
+      12.735
+    ],
+    "projected_proof_cores_at_100M": 17.17
+  },
+  "N7_max_frame": {
+    "old": 262144,
+    "isolated": 278528,
+    "max_signed": 267134,
+    "increment_per_64_full_queued_frames_B": 1048576,
+    "increment_ser_time_20Mbps_ms": 6.554
+  },
+  "recovery": {
+    "legs_per_year": 110000000,
+    "envelope_attempts_20yr": 4400000000,
+    "N7_scan_projection_B_per_leg": 3713,
+    "N7_scan_projection_TB_20yr": 8.1686,
+    "N7_nf_plus_leaf_and_parent_GB_year": 36.96
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "min_max_siblings": [
+    13,
+    416
+  ],
+  "max_components": {
+    "stages": 192,
+    "salts": 1024,
+    "opened_fields": 136448,
+    "merkle": 26624,
+    "degree_tail": 30888,
+    "nonlinear_tail": 35520,
+    "linear_secrets": 4640,
+    "linear_other": 4640
+  },
+  "min_max_proof": [
+    214184,
+    239976
+  ],
+  "min_max_frame": [
+    235276,
+    261068
+  ],
+  "author": {
+    "candidate_proof": 238120,
+    "candidate_signed": 259212,
+    "candidate_siblings": 387,
+    "released_proof_body": 139378,
+    "released_with_inputs": 139658,
+    "released_signed": 160446,
+    "extra_proof_bytes": 98742,
+    "extra_signed_bytes": 98766,
+    "mixed_pair": 419671,
+    "released_pair": 320905,
+    "ordinary_frame": 143233,
+    "ordinary_proof_body": 139378
+  },
+  "independent": {
+    "candidate_proof": 237800,
+    "candidate_signed": 258892,
+    "candidate_siblings": 382,
+    "released_proof_body": 139378,
+    "released_with_inputs": 139658,
+    "released_signed": 160446,
+    "extra_proof_bytes": 98422,
+    "extra_signed_bytes": 98446,
+    "mixed_pair": 419351,
+    "released_pair": 320905,
+    "ordinary_frame": 143233,
+    "ordinary_proof_body": 139378
+  },
+  "projected_frames": {
+    "old_geometry_SLG1": 417772,
+    "old_geometry_MNG1": 395439,
+    "screen_height_18_SLG1": 393060,
+    "screen_height_18_MNG1": 372311,
+    "screen_height_20_SLG1": 348780,
+    "screen_height_20_MNG1": 328031,
+    "screen_height_28_SLG1": 261468,
+    "screen_height_28_MNG1": 241567,
+    "single_challenge_MNG1": 1145544999,
+    "single_challenge_SLG1": 1189845092
+  }
+}

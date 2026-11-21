@@ -1,0 +1,60 @@
+{
+  "permutations_by_role": {
+    "authority": 1,
+    "note": 8,
+    "leaf": 2,
+    "parent": 80,
+    "anchor": 4,
+    "nullifier": 4
+  },
+  "permutations": 99,
+  "other_AND_by_role": {
+    "nonzero OR reductions": 759,
+    "OR of native/token nonzero bits": 4,
+    "equalities accumulated into output bit": 2443,
+    "select canonical private asset tag": 1024,
+    "41-bit unsigned borrow comparator": 164,
+    "order path children using conditional swap": 30720,
+    "OR of four token activity bits": 3,
+    "66-bit ripple additions": 660
+  },
+  "other_AND": 35777,
+  "all_AND": 3837377,
+  "per_party_gate_bytes": 479673,
+  "witness_bytes": 4378,
+  "view_bytes": 484115,
+  "first_message_bytes": 108080,
+  "proof_bytes": 542316880,
+  "ordinary_bytes": 542320649,
+  "signed_leg_bytes": 542337822,
+  "swap_bundle_bytes": 1084675656,
+  "signed_leg_excess_over_frame": 542075678,
+  "receipt_bytes": 1728,
+  "repetitions": 560,
+  "challenge_bits": 887,
+  "wallet_Keccak_f": 110880,
+  "node_Keccak_f": 55440,
+  "wallet_tape_bytes": 1611701280,
+  "node_tape_bytes": 537233760,
+  "wallet_view_hash_payload_bytes": 813313200,
+  "node_view_hash_payload_bytes": 542208800,
+  "workspace_wallet_algorithmic_B": 3217096,
+  "workspace_node_algorithmic_B": 2101192,
+  "rounding": "decimal bytes and seconds. ceil(bits/8) independently per vector",
+  "hypothetical_archive_payload_B_per_year": {
+    "10000000": {
+      "ordinary_only": 5423206490000000,
+      "swap_only": 10846756560000000
+    },
+    "30000000": {
+      "ordinary_only": 16269619470000000,
+      "swap_only": 32540269680000000
+    },
+    "100000000": {
+      "ordinary_only": 54232064900000000,
+      "swap_only": 108467565600000000
+    }
+  },
+  "ideal_per_statement_extraction_failure_log2_bound": -64.678,
+  "ideal_2^40_union_failure_log2_bound": -24.678
+}

@@ -1,0 +1,43 @@
+{
+  "log_n": 14,
+  "public_rows": 49,
+  "quartic_modulus": "u^4-7",
+  "trace_omega": 7126024226993609386,
+  "full_domain_point": [
+    19,
+    7,
+    41,
+    8
+  ],
+  "full_domain_term": [
+    12004804001671881292,
+    11032958234673718261,
+    10114777417045309863,
+    16557067373647965048
+  ],
+  "checks": {
+    "64": {
+      "off_domain_checks": 3,
+      "on_domain_oracle_checks": 64
+    },
+    "16384": {
+      "off_domain_checks": 1,
+      "on_domain_oracle_checks": 0
+    }
+  },
+  "changed_single_words": 49,
+  "python_component_samples_ms": [
+    2.347411,
+    2.347279,
+    2.365452,
+    2.396874,
+    2.343652,
+    2.3609,
+    2.388749,
+    2.369814,
+    2.363748,
+    2.364052,
+    2.358336
+  ],
+  "median_python_component_ms": 2.363748
+}

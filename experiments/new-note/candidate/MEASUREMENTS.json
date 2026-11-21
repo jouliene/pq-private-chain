@@ -1,0 +1,168 @@
+{
+  "expanded_before_codec": {
+    "prove": {
+      "exit_code": 0,
+      "elapsed_s": 5.666777167003602,
+      "meter": {
+        "degree_bits": 14,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "gates_before_blinding": 664,
+        "operation_ms": 3600.8928300000002,
+        "peak_rss_kib": 1855244,
+        "preparation_ms": 1849.51268,
+        "proof_bytes": 267504,
+        "public_inputs": 0,
+        "role": "prove"
+      }
+    },
+    "verify": {
+      "exit_code": 0,
+      "elapsed_s": 1.9958274150267243,
+      "meter": {
+        "degree_bits": 14,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "gates_before_blinding": 664,
+        "operation_ms": 6.823309,
+        "peak_rss_kib": 724996,
+        "preparation_ms": 1833.641407,
+        "proof_bytes": 267504,
+        "public_inputs": 0,
+        "role": "verify"
+      }
+    },
+    "controls": {
+      "count": {
+        "exit_code": 1,
+        "elapsed_s": 1.9580268820282072,
+        "meter": null
+      },
+      "context": {
+        "exit_code": 1,
+        "elapsed_s": 2.007965168915689,
+        "meter": null
+      },
+      "root": {
+        "exit_code": 1,
+        "elapsed_s": 2.006387374131009,
+        "meter": null
+      },
+      "fee": {
+        "exit_code": 1,
+        "elapsed_s": 2.054876638110727,
+        "meter": null
+      },
+      "outputs": {
+        "exit_code": 1,
+        "elapsed_s": 1.9504565310198814,
+        "meter": null
+      },
+      "nullifiers": {
+        "exit_code": 1,
+        "elapsed_s": 2.0113969340454787,
+        "meter": null
+      },
+      "ownership": {
+        "exit_code": 1,
+        "elapsed_s": 2.0808613609988242,
+        "meter": null
+      },
+      "position": {
+        "exit_code": 1,
+        "elapsed_s": 2.0911926890257746,
+        "meter": null
+      },
+      "duplicate": {
+        "exit_code": 1,
+        "elapsed_s": 1.962477173190564,
+        "meter": null
+      },
+      "inflation": {
+        "exit_code": 1,
+        "elapsed_s": 1.9927534400485456,
+        "meter": null
+      },
+      "asset": {
+        "exit_code": 1,
+        "elapsed_s": 1.9909485620446503,
+        "meter": null
+      },
+      "path": {
+        "exit_code": 1,
+        "elapsed_s": 2.0206264690496027,
+        "meter": null
+      },
+      "range": {
+        "exit_code": 1,
+        "elapsed_s": 1.9866200799588114,
+        "meter": null
+      }
+    },
+    "proof_sha256": "5081b8598a8b0e29b51395ab5bfd7d23919fa905e227544104cc0fc80e9a4ad6",
+    "statement_sha256": "020065d187c7f256d62506a26f6cf6d8615c0ef3357759516cf22ebd4a779f32"
+  },
+  "canonical_compressed": {
+    "prove": {
+      "exit_code": 0,
+      "elapsed_s": 5.4780713559594005,
+      "meter": {
+        "degree_bits": 14,
+        "expanded_proof_bytes": 267504,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "gates_before_blinding": 664,
+        "operation_ms": 3492.017374,
+        "peak_rss_kib": 1855456,
+        "preparation_ms": 1799.676514,
+        "proof_bytes": 226239,
+        "public_inputs": 0,
+        "role": "prove"
+      }
+    },
+    "verify": {
+      "exit_code": 0,
+      "elapsed_s": 1.927563131088391,
+      "meter": {
+        "degree_bits": 14,
+        "expanded_proof_bytes": 267504,
+        "folds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "gates_before_blinding": 664,
+        "operation_ms": 12.370485,
+        "peak_rss_kib": 728884,
+        "preparation_ms": 1774.5368660000001,
+        "proof_bytes": 226239,
+        "public_inputs": 0,
+        "role": "verify"
+      }
+    },
+    "controls": {},
+    "proof_sha256": "1bdc8db5168a80123d4d56c8a86df1e947c7e72f907ab89c61ef35802a8622b6",
+    "statement_sha256": "e9b4f8bd67d0402f4e4be2f4532bc2cabb885edd490d94a5e9c04b2e2a09a57c"
+  }
+}

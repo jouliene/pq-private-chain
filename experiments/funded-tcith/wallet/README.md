@@ -23,7 +23,8 @@ python3 -IB experiments/funded-tcith/wallet/run.py "$lab" "$capture" "$constants
 
 | Alice's leg | Released SLG1 | Fixed-parent FTL1 |
 | --- | ---: | ---: |
-| Proof, bytes | 139,658 | 238,120 |
+| Serialized proof field, bytes | 139,658 | 238,120 |
+| Cryptographic proof body alone, bytes | 139,378 | 238,120 |
 | Complete signed physical frame, bytes | 160,446 | 259,212 |
 | Proving role wall time, seconds | 4.790 | 27.45 |
 | Proving role CPU time, seconds | 9.28 | 27.44 |
