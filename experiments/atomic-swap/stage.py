@@ -66,6 +66,39 @@ def patch_chain(s):
     return s
 
 
+def install_sources(dest):
+    dev=base.install_sources(dest)
+    for name in ("swap_ledger.py","swap_wire.py"):
+        shutil.copyfile(HERE/name,dev/name)
+    chain=dev/"chain.py"
+    chain.write_text(patch_chain(chain.read_text()))
+    p=dev/"managed_ledger.py"
+    s=replace(p.read_text(),'packet = decode_block(hit["raw"]).packets[hit["idx"]]','''packets = decode_block(hit["raw"]).packets
+                index = hit["idx"]
+                packet = packets[index]''')
+    s=replace(s,'                slot, = self.backend.verify(packet)','''                from swap_wire import FRAME, read_frame
+                if packet.startswith(FRAME):
+                    from chain import NETWORK
+                    from swap_ledger import verify_pair
+                    side = read_frame(packet).side
+                    base = index-side
+                    slot = verify_pair(packets[base:base+2],self.swap_verifier(),NETWORK,hit["h"])[side]
+                else:
+                    slot, = self.backend.verify(packet)''')
+    p.write_text(s)
+    p=dev/"history.py"
+    s=replace(p.read_text(),'MNGHIS01','SWPHIS01')
+    s=replace(s,'bytes([bool(slot.envelope_digest)])','bytes([2 if slot.fee==0 else int(bool(slot.envelope_digest))])')
+    s=replace(s,'row[-1] in (0,1)','row[-1] in (0,1,2)')
+    s=replace(s,'slots.append(dict(txid=row[:32],','slots.append(dict(txid=row[:32],fee=0 if row[-1]==2 else 3,')
+    p.write_text(s)
+    p=dev/"wallet_sync.py"
+    s=replace(p.read_text(),'sum(FEE for _ in slots)','sum(slot["fee"] for slot in slots)')
+    p.write_text(replace(s,'chain.public_transition(nfs,cms,FEE,','chain.public_transition(nfs,cms,slot["fee"],'))
+    module("atomic_wallet_stage",HERE/"wallet/stage.py").stage_wallet(dev)
+    return dev
+
+
 def install(home,managed,managed_sha,swap,swap_sha):
     base.check_build(managed,managed_sha)
     ref=json.loads((HERE/"native/BUILD.json").read_bytes())
@@ -78,35 +111,7 @@ def install(home,managed,managed_sha,swap,swap_sha):
     with tempfile.TemporaryDirectory(dir=home,prefix=".bootstrap-") as tmp:
         dest=Path(tmp)/"network"
         dest.mkdir()
-        dev=base.install_sources(dest)
-        for name in ("swap_ledger.py","swap_wire.py"):
-            shutil.copyfile(HERE/name,dev/name)
-        chain=dev/"chain.py"
-        chain.write_text(patch_chain(chain.read_text()))
-        p=dev/"managed_ledger.py"
-        s=replace(p.read_text(),'packet = decode_block(hit["raw"]).packets[hit["idx"]]','''packets = decode_block(hit["raw"]).packets
-                index = hit["idx"]
-                packet = packets[index]''')
-        s=replace(s,'                slot, = self.backend.verify(packet)','''                from swap_wire import FRAME, read_frame
-                if packet.startswith(FRAME):
-                    from chain import NETWORK
-                    from swap_ledger import verify_pair
-                    side = read_frame(packet).side
-                    base = index-side
-                    slot = verify_pair(packets[base:base+2],self.swap_verifier(),NETWORK,hit["h"])[side]
-                else:
-                    slot, = self.backend.verify(packet)''')
-        p.write_text(s)
-        p=dev/"history.py"
-        s=replace(p.read_text(),'MNGHIS01','SWPHIS01')
-        s=replace(s,'bytes([bool(slot.envelope_digest)])','bytes([2 if slot.fee==0 else int(bool(slot.envelope_digest))])')
-        s=replace(s,'row[-1] in (0,1)','row[-1] in (0,1,2)')
-        s=replace(s,'slots.append(dict(txid=row[:32],','slots.append(dict(txid=row[:32],fee=0 if row[-1]==2 else 3,')
-        p.write_text(s)
-        p=dev/"wallet_sync.py"
-        s=replace(p.read_text(),'sum(FEE for _ in slots)','sum(slot["fee"] for slot in slots)')
-        p.write_text(replace(s,'chain.public_transition(nfs,cms,FEE,','chain.public_transition(nfs,cms,slot["fee"],'))
-        module("atomic_wallet_stage",HERE/"wallet/stage.py").stage_wallet(dev)
+        dev=install_sources(dest)
         for build,sub,key,pin,tag in [(managed,"",MANAGED/"native/registry/managed.vk",managed_sha,""),
                                       (swap,"swap-",vk,swap_sha,"swap-")]:
             runtime,keys=dest/(sub+"runtime"),dest/(sub+"keys")

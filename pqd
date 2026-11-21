@@ -1,5 +1,9 @@
 #!/bin/sh
 set -eu
+if [ "${1:-}" = upgrade ]; then
+    shift
+    exec python3 -IB "$(dirname "$0")/experiments/funded-upgrade/entry.py" "$@"
+fi
 if [ "${1:-}" = market ]; then
     shift
     exec python3 -IB "$(dirname "$0")/experiments/stranger-swap/entry.py" "$@"

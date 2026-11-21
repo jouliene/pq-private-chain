@@ -1,0 +1,34 @@
+{
+  "early_funded_transfer": {
+    "accepted_block": "000000c73bd21f9623daf8984fbc8e4eec4f711e8c8ffd7281ac70c9107a4f46",
+    "accepted_height": 13,
+    "anchor": 11,
+    "fee": 3,
+    "refused_candidate": 12,
+    "spent_increase": 2,
+    "tx": "339e8f03c9f7b760adb2043c203f5b7a6bbf5d3002c29d23c93719e97dabc89e"
+  },
+  "premature_B_anchor": 12,
+  "premature_block": "00000216c51d3c591812fd554cb4f4c54492045679bb6248eb6dd037687a9694",
+  "premature_height": 12,
+  "premature_reason": "inactive proof suite",
+  "rejected_nonzero_B_public_delta_mutation": true,
+  "rejected_transfer_as_issue": true,
+  "rejected_version_relabel": true,
+  "retained_issuance": {
+    "anchor": 7,
+    "asset": "4c214222f5b3d1562ddf7e52ef4ec63da1ae593a732e961485ababf036344339",
+    "block": "0000027bda7a9c990a699e9f5748d6b40cf048c82be4f9bf861c293ed2f18027",
+    "fee": 3,
+    "height": 15,
+    "subsidy": 100,
+    "supply": 100,
+    "tx": "79f4544492f1cfb607a4f2a121fda6fe2129b3c0eda4435e1fbfe65d2f80b853"
+  },
+  "retired_A_anchor": 12,
+  "retired_block": "00000316a876ea22eb829e99564f33258d77bf6e501542a4b2136b00440dfc38",
+  "retired_height": 15,
+  "retired_reason": "inactive proof suite",
+  "same_block_accepted_by_original_A": true,
+  "stale_A_database_reopen": "inactive proof suite"
+}

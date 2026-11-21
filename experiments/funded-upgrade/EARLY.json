@@ -1,0 +1,45 @@
+{
+  "anchor_height": 11,
+  "early_parent": {
+    "anchor": "2c572d2a9e99816c80cd1d10a9dab308424eae3843ef316a98cd3fd97f30d4ae",
+    "fees": 15,
+    "height": 11,
+    "issued": 1100,
+    "notes": 21,
+    "spent": 10,
+    "spent_set_sha256": "43799ad8402335798eca73725ae21d1ef626d7214a504d87318dbd1f37d7782f",
+    "tip": "0000038c73e8faaf76ed7e1972e74764a9cd555a77a80a906f00639e03063464",
+    "work": 46137344
+  },
+  "eligible_parent": {
+    "anchor": "e0c3b9a0d35779c4c219dd5f56ab07992394c6a0d2c0e3e2d022891043c5b0f7",
+    "fees": 18,
+    "height": 12,
+    "issued": 1200,
+    "notes": 24,
+    "spent": 12,
+    "spent_set_sha256": "c04e52cbbdbd1c47b3b4ba68c98aa44910297067d7dfefb831136a7234d81e7b",
+    "tip": "00000102d81a3a068af0af9a2b3ecb9ced51fd58659c2a841f9643bf98c88e4d",
+    "work": 50331648
+  },
+  "fee": 3,
+  "included": {
+    "anchor": "ef253c44f60b412ec0d5abc9733e9a6c0410b5701356e12325fc9b44b79e90e9",
+    "fees": 21,
+    "height": 13,
+    "issued": 1300,
+    "notes": 27,
+    "spent": 14,
+    "spent_set_sha256": "b7faf81d3902ef059ce69874fa5c6f805c9dfa1c68ed0fbf6a27955a5c1fd125",
+    "tip": "000000c73bd21f9623daf8984fbc8e4eec4f711e8c8ffd7281ac70c9107a4f46",
+    "work": 54525952
+  },
+  "native_change": 10,
+  "native_paid": 7,
+  "packet_B": 182855,
+  "packet_in_mined_block_identical": true,
+  "packet_sha256": "339e8f03c9f7b760adb2043c203f5b7a6bbf5d3002c29d23c93719e97dabc89e",
+  "refusal": "inactive proof suite",
+  "refused_candidate": 12,
+  "state_and_pool_unchanged": true
+}

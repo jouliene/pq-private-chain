@@ -1,3 +1,7 @@
+# Funded proof upgrades
+
+For changes to height-dependent MNG1/SLG1 and MNG2/SLG2 admission, run the [funded upgrade reproduction](experiments/funded-upgrade/README.md). Verify both eras on the same genesis, single nullifier set and issuance registry. Count fees once per logical transaction. Preserve the released A installation for prefix funding and the independent public replay of both branches.
+
 # Funded proof comparison
 
 Run the [funded WHIR reproduction](experiments/funded-whir/README.md) for changes to these relation and proof roles. Test policy from the current checkout even when the funding branch was mined using an earlier staged deployment. The registered roles authenticate receipt ownership and amount. Ordinary outputs shuffle, while swap legs assign recipient and change to fixed slots. Each proof-producing wallet gets exactly one seed and builds its private assignment locally. A clean recovery process receives its own backup and public history. Publish the allowlisted public packets and measurements only.

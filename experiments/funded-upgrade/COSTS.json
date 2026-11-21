@@ -1,0 +1,84 @@
+{
+  "MNG1": {
+    "altered_public_root_rejected": true,
+    "cold_launch_through_first_verdict_wall_s": 1.3579402979999031,
+    "native_peak_RSS_KiB": 201100,
+    "proof_B": 139634,
+    "retagged_other_proofs_rejected": 1,
+    "sample_sha256": [
+      "768f4cbe24c6dee064d3862697f9c4dd2d663039ee67685ebb51c7ea3c450d83"
+    ],
+    "setup": {
+      "cpu_s": 2.465591208,
+      "elapsed_s": 1.332810521,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 201100
+    },
+    "wallet_submission_B": 143233,
+    "warm_complete_calls": 3,
+    "warm_crypto_median_wall_s": 0.007139948000030927,
+    "warm_native_median_cpu_s": 0.006973838
+  },
+  "MNG2": {
+    "altered_public_root_rejected": true,
+    "cold_launch_through_first_verdict_wall_s": 2.762539679999918,
+    "native_peak_RSS_KiB": 351284,
+    "proof_B": 179256,
+    "retagged_other_proofs_rejected": 1,
+    "sample_sha256": [
+      "638e8fcf5cfa2186315b51147c8bb9ac9866adc5e1fdd1659e7db0f5bfadfa7a"
+    ],
+    "setup": {
+      "cpu_s": 5.026299897,
+      "elapsed_s": 2.732492998,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 351284
+    },
+    "wallet_submission_B": 182855,
+    "warm_complete_calls": 3,
+    "warm_crypto_median_wall_s": 0.008923064000100567,
+    "warm_native_median_cpu_s": 0.00859245
+  },
+  "SLG1": {
+    "altered_public_root_rejected": true,
+    "cold_launch_through_first_verdict_wall_s": 1.390889345000005,
+    "native_peak_RSS_KiB": 201004,
+    "proof_B": 139658,
+    "retagged_other_proofs_rejected": 2,
+    "sample_sha256": [
+      "fa9b8a6a6c866e6182fb9b0f2e9d9cb724bf864a12b3878d03ab67d758504b3a",
+      "af24c5667400fdbc0853c00d13ca542b03b964dec4d744571ddf56bfa3695fa0"
+    ],
+    "setup": {
+      "cpu_s": 2.501446168,
+      "elapsed_s": 1.348627145,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 201004
+    },
+    "wallet_submission_B": 320905,
+    "warm_complete_calls": 3,
+    "warm_crypto_median_wall_s": 0.024260380999976405,
+    "warm_native_median_cpu_s": 0.023664217
+  },
+  "SLG2": {
+    "altered_public_root_rejected": true,
+    "cold_launch_through_first_verdict_wall_s": 3.7669343780000872,
+    "native_peak_RSS_KiB": 351172,
+    "proof_B": 179280,
+    "retagged_other_proofs_rejected": 2,
+    "sample_sha256": [
+      "065443a3a69438d4406377552d6cb6c9c86480626afc36c4e198dea5ad5e9f9c",
+      "d51d0dd536febaff36cef552215d30e57119a7ee3f9790c1a29680e63c09246b"
+    ],
+    "setup": {
+      "cpu_s": 6.90205226,
+      "elapsed_s": 3.719140435,
+      "operation": "verifier_setup",
+      "peak_rss_kib": 351172
+    },
+    "wallet_submission_B": 400149,
+    "warm_complete_calls": 3,
+    "warm_crypto_median_wall_s": 0.02863663599987376,
+    "warm_native_median_cpu_s": 0.028171973
+  }
+}

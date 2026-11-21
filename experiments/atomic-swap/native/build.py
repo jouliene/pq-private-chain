@@ -16,7 +16,7 @@ direct = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(direct)
 LOCK = "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20"
 
-def prepare(work, upstream, target):
+def prepare(work, upstream, target, adjust_sources=None):
     if (work/"native").exists():
         raise ValueError("use a fresh output directory")
     work.mkdir(exist_ok=True, parents=True)
@@ -83,6 +83,8 @@ pub struct Meter""")
         if src.count(before)!=2:
             raise ValueError("expected both private asset debug printers")
         pq.write_text(src.replace(before,'.field("token_value", &"[REDACTED]")'))
+        if adjust_sources is not None:
+            adjust_sources(dest)
         sources={str(p.relative_to(tree)):direct.sha(p) for p in [*sorted(dest.iterdir()),enc,pq]}
         cmd=["rustup","run","1.93.0","cargo"]
         env=dict(os.environ,CARGO_TARGET_DIR=str(target))

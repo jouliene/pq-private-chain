@@ -1,0 +1,32 @@
+{
+  "managed": {
+    "generated_sources": {
+      "crates/qnero-notes/src/encrypt.rs": "9016ae1c57d517390bdf104d935d971281dfa275fb9bb7683885e2572c316ede",
+      "crates/qnero-pqcrypto/src/note_encryption.rs": "b7f11268f850eb2f545a76afd6d7d4243c71f8a73d4b2a0db904d6b8efe37fe4",
+      "crates/qnero-prover/examples/managed_spend/checks.inc": "bba1a55acb0b6647d99bd8436372d7955477109847cd08f00d436965c172f542",
+      "crates/qnero-prover/examples/managed_spend/codec.rs": "9c2ced7f6a176a511ade65d06b02182af772e746300d61f082e0f94f8754c7a6",
+      "crates/qnero-prover/examples/managed_spend/legacy.rs": "33a0ee37cd7dc81138ce159b1cce264820db6b9ebc8368c258784174bcfe43bb",
+      "crates/qnero-prover/examples/managed_spend/legacy_ast1.vk": "99ed868d5bd0f8541bb6467a210bf75140ec696e49e53044f7bca011ed59438a",
+      "crates/qnero-prover/examples/managed_spend/main.rs": "9904321a45b0454401117fed39acd6b9eb5ba0179f966a09864498de2b3dac75",
+      "crates/qnero-prover/examples/managed_spend/registry.rs": "c8df70e6bbca01e6bfa836ec978c5a02fbacd7fe5583746d0e6de50c5be0cfa2",
+      "crates/qnero-prover/examples/managed_spend/seed.inc": "985813e3eab0a6d0f91b76750ccb63406a1629b57b34ff0a3fc97890411126e5",
+      "crates/qnero-prover/examples/managed_spend/wallet.rs": "219251660c6d928fb5b64053894aff99edf7a5edbddb74d54727380548b6c668"
+    },
+    "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+  },
+  "swap": {
+    "generated_sources": {
+      "crates/qnero-notes/src/encrypt.rs": "4e5ca385d96449a3136855f90e4f41f9234a040eea205aa093142a472015ddf4",
+      "crates/qnero-pqcrypto/src/note_encryption.rs": "b7f11268f850eb2f545a76afd6d7d4243c71f8a73d4b2a0db904d6b8efe37fe4",
+      "crates/qnero-prover/examples/swap_leg/checks.inc": "e3ce7d6354772857f7a1e6bcda141ee61eb4a2cec5998b82f0c1bbf89bd1ae73",
+      "crates/qnero-prover/examples/swap_leg/codec.rs": "37282958a7b9c3662ec77dc8a32f6f7086047e7f917991664b1f8d4ac0ecaf4e",
+      "crates/qnero-prover/examples/swap_leg/main.rs": "7e7982ab1a05a68ad676adbd5228f4eaa6218098f79bbd19dac64802da996d60",
+      "crates/qnero-prover/examples/swap_leg/registry.rs": "aed9ee5ad74599864d4d9e717bf1f2333ccd99cccf2e51fc3ac32c2aff310d16",
+      "crates/qnero-prover/examples/swap_leg/seed.inc": "985813e3eab0a6d0f91b76750ccb63406a1629b57b34ff0a3fc97890411126e5",
+      "crates/qnero-prover/examples/swap_leg/wallet.rs": "f9def3e574bf945f4b47be40c473a9241e71e601ea056386f8632cf393951c77"
+    },
+    "lock_sha256": "ed076404a8d396ddda4acf9a42a915c54472bb70d3dc58300e262f7ecf152a20",
+    "upstream": "f04c91307837c0231668383bec76ba98d89d2652"
+  }
+}
