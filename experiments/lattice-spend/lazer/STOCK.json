@@ -1,0 +1,30 @@
+{
+  "upstream_lazer": "b958e247a2fdb9593b3c25c9603c6c5305c19420",
+  "upstream_labrador": "c1ae0e612d5accd9e7d9d1c264951c1afe949c83",
+  "patch": "none",
+  "hardware": "Intel i7-8700K single core, Intel SDE -tgl",
+  "profile": "stock64",
+  "honest_serializer": "LZM1",
+  "public_root_B": 512,
+  "proof_B": 136268,
+  "proof_SHA256": "4f5ad45f2f4a4cd4713f5804ad9764635fc9f1c8877a75ed3eb9933b637b14b1",
+  "upstream_parameter_estimate_KiB": 122.31,
+  "uncompressed_message_arrays_B": 196096,
+  "prover": {
+    "process_user_s": 209.17,
+    "process_system_s": 0.93,
+    "process_wall_s": 210.95,
+    "process_peak_RSS_KiB": 1067796,
+    "status": 0
+  },
+  "separate_verifier": {
+    "process_user_s": 109.99,
+    "process_system_s": 0.88,
+    "process_wall_s": 111.3,
+    "process_peak_RSS_KiB": 1002232,
+    "upstream_pack_verify": false,
+    "reported": "final system check failed at reduction round 13",
+    "driver_exit": 1
+  },
+  "registered_for_public_acceptance": false
+}

@@ -1,0 +1,31 @@
+{
+  "available_two_paths_and_binding_B": 33676,
+  "one_path_one_response_literal_dense_B": 815104,
+  "one_path_one_round_with_commitments_B": {
+    "challenge1": 857801,
+    "challenge2_or_3": 1249411
+  },
+  "parameters": {
+    "depth": 40,
+    "k": 8,
+    "m": 4096,
+    "n": 256,
+    "q": 256
+  },
+  "per_object_ranks": {
+    "balance_rank_bits": 4090,
+    "permutation_rank_bits": 43251
+  },
+  "two_independent_paths_without_bridge": {
+    "128": {
+      "repetitions": 219,
+      "two_all_challenge1_B": 375716838,
+      "two_all_challenge2_or_3_B": 547242018
+    },
+    "256": {
+      "repetitions": 438,
+      "two_all_challenge1_B": 751433676,
+      "two_all_challenge2_or_3_B": 1094484036
+    }
+  }
+}

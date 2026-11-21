@@ -1,0 +1,22 @@
+{
+  "MNG1_at_16": {
+    "committed_field_bytes_per_tree": 232783872,
+    "complete_frame_B": 287607,
+    "proof_B": 283728
+  },
+  "MNG1_at_18": {
+    "committed_field_bytes_per_tree": 1075838976,
+    "complete_frame_B": 238735,
+    "proof_B": 234856
+  },
+  "SLG1_at_16": {
+    "committed_field_bytes_per_tree": 240648192,
+    "complete_frame_B": 310220,
+    "proof_B": 289128
+  },
+  "SLG1_at_18": {
+    "committed_field_bytes_per_tree": 1117782016,
+    "complete_frame_B": 261068,
+    "proof_B": 239976
+  }
+}

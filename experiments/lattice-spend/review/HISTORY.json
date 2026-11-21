@@ -1,0 +1,22 @@
+{
+  "prefix_blocks": 12,
+  "original_root_matches_including_extension": 13,
+  "common": {
+    "height": 12,
+    "leaves": 22,
+    "spent": 10,
+    "spent_set_sha256": "4c49d423314287b55d38cf15d50ee463a596c223d74ad95a39d9c6d4ebe7ad20",
+    "old_root": "7d39a3e58545712438d5bce4e16ce3d922e785269d9b9491b8482330b4db3ad9",
+    "new_root": "4e5e42d34db05933c1350b99b745c6cea25197065642b05f34802d9ca9915185",
+    "tip": "000002199e08d8eed9254dc699686679ddf074a1f053e25696db67d652bdc3b5"
+  },
+  "selected_swap": {
+    "height": 13,
+    "leaves": 27,
+    "spent": 14,
+    "spent_set_sha256": "fedaf8fed6e9a8a69097df8ae32d3236b75bedfd69677a435cff663d11129e5f",
+    "old_root": "edfc161224c5c60118667c61acfb43db77a2035a410788483a43979341cd85fc",
+    "new_root": "462a6b66abdad0cfd0a2908e073f1ff3da9260976136b73291ee9ca83a796376",
+    "tip": "000001494f04f1970c4c6a031325a0c0bd67b31cf5dab69d15ceebbe2bc057ba"
+  }
+}

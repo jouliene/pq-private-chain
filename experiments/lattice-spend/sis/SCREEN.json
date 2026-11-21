@@ -1,0 +1,137 @@
+{
+  "split": {
+    "signed_frame_B": 262144,
+    "fixed_frame_B": 21060,
+    "proof_cap_B": 241084,
+    "monetary_model_N": 65536,
+    "monetary_without_paths_B": 207408,
+    "room_B": 33676
+  },
+  "original_illustration": {
+    "n": 256,
+    "q": 256,
+    "k": 8,
+    "depth": 40,
+    "occurrences": 2,
+    "SIS_matrix_raw_B": 1048576,
+    "public_SIS_root_B": 256,
+    "private_siblings_B_per_path": 10240,
+    "private_directions_B_per_path": 5,
+    "nodes_hashed_per_new_append": 40,
+    "dense_matrix_column_entries_per_path": 41943040
+  },
+  "figure2": {
+    "node_bits": 2048,
+    "m": 4096,
+    "field_response_words_per_path": 815104,
+    "case1": {
+      "commitments_bits": 6144,
+      "revealed_COM_coins_bits": 8192,
+      "field_response_bits": 6520832,
+      "masked_directions_bits": 40,
+      "permuted_balanced_vectors_bits": 327200
+    },
+    "case23": {
+      "commitments_bits": 6144,
+      "revealed_COM_coins_bits": 8192,
+      "field_response_bits": 6520832,
+      "masked_directions_bits": 40,
+      "permutation_ranks_bits": 3460080
+    },
+    "case1_B": 857801,
+    "case23_B": 1249411
+  },
+  "two_paths": {
+    "80": {
+      "repetitions_per_occurrence": 137,
+      "literal_pair_min_B": 235037474,
+      "literal_pair_max_B": 342338614,
+      "mean_B_numerator": 919714702,
+      "mean_B_denominator": 3,
+      "tags_B": 0,
+      "raw_response_pair_B": 223338496,
+      "interactive_challenge_vector_rank_B_per_path": 28
+    },
+    "128": {
+      "repetitions_per_occurrence": 219,
+      "literal_pair_min_B": 375716838,
+      "literal_pair_max_B": 547242018,
+      "mean_B_numerator": 1470200874,
+      "mean_B_denominator": 3,
+      "tags_B": 0,
+      "raw_response_pair_B": 357015552,
+      "interactive_challenge_vector_rank_B_per_path": 44
+    },
+    "256": {
+      "repetitions_per_occurrence": 438,
+      "literal_pair_min_B": 751433676,
+      "literal_pair_max_B": 1094484036,
+      "mean_B_numerator": 2940401748,
+      "mean_B_denominator": 3,
+      "tags_B": 0,
+      "raw_response_pair_B": 714031104,
+      "interactive_challenge_vector_rank_B_per_path": 87
+    },
+    "257": {
+      "repetitions_per_occurrence": 440,
+      "literal_pair_min_B": 754864880,
+      "literal_pair_max_B": 1099481680,
+      "mean_B_numerator": 2953828240,
+      "mean_B_denominator": 3,
+      "tags_B": 0,
+      "raw_response_pair_B": 717291520,
+      "interactive_challenge_vector_rank_B_per_path": 88
+    }
+  },
+  "same_note_example": {
+    "random_binary_bits_per_slot": 4096,
+    "link_tag_B_per_slot": 256,
+    "TCitH_max_integer_dot": 1109760,
+    "quotient_bits_per_modular_row": 13,
+    "TCitH_per_slot_new_random_bit_checks": 4096,
+    "TCitH_per_slot_modular_rows": 256,
+    "TCitH_per_slot_quotient_bit_checks": 3328,
+    "dot_strictly_below_goldilocks": true,
+    "linked_figure2": {
+      "node_bits": 2048,
+      "m": 4096,
+      "field_response_words_per_path": 815104,
+      "case1": {
+        "commitments_bits": 6144,
+        "revealed_COM_coins_bits": 8192,
+        "field_response_bits": 6520832,
+        "masked_directions_bits": 40,
+        "permuted_balanced_vectors_bits": 327200,
+        "link_mask_bits": 65536,
+        "link_balanced_vector_bits": 8186
+      },
+      "case23": {
+        "commitments_bits": 6144,
+        "revealed_COM_coins_bits": 8192,
+        "field_response_bits": 6520832,
+        "masked_directions_bits": 40,
+        "permutation_ranks_bits": 3460080,
+        "link_mask_bits": 65536,
+        "link_permutation_rank_bits": 94686
+      },
+      "case1_B": 867017,
+      "case23_B": 1269439
+    },
+    "linked_pair_at_256": {
+      "repetitions_per_occurrence": 438,
+      "literal_pair_min_B": 759507404,
+      "literal_pair_max_B": 1112029076,
+      "mean_B_numerator": 2983565556,
+      "mean_B_denominator": 3,
+      "tags_B": 512,
+      "raw_response_pair_B": 714031104,
+      "interactive_challenge_vector_rank_B_per_path": 87
+    }
+  },
+  "literal_entropy_floor": {
+    "smallest_formal_n": 1,
+    "smallest_formal_q": 2,
+    "min_all_branches_two_paths_at_256_B": 43581,
+    "two_paths_floor_at_128_for_injective_256_bit_leaf_B": 5578368
+  }
+}

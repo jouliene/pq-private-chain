@@ -1,0 +1,26 @@
+{
+  "leg-a": {
+    "complete_integer_lift_checked": true,
+    "fixed_parent_funded_assignment_and_shared_spent_rule_checked": true,
+    "released_proof_verified": true,
+    "selected_funded_inputs_and_receipts_checked": true
+  },
+  "leg-b": {
+    "complete_integer_lift_checked": true,
+    "fixed_parent_funded_assignment_and_shared_spent_rule_checked": true,
+    "released_proof_verified": true,
+    "selected_funded_inputs_and_receipts_checked": true
+  },
+  "onward": {
+    "complete_integer_lift_checked": true,
+    "fixed_parent_funded_assignment_and_shared_spent_rule_checked": true,
+    "released_proof_verified": true,
+    "selected_funded_inputs_and_receipts_checked": true
+  },
+  "ordinary": {
+    "complete_integer_lift_checked": true,
+    "fixed_parent_funded_assignment_and_shared_spent_rule_checked": true,
+    "released_proof_verified": true,
+    "selected_funded_inputs_and_receipts_checked": true
+  }
+}

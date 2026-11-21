@@ -1,0 +1,11 @@
+{
+  "scope": "four isolated roles; released proof, private replay, original and fixed-parent gates, full non-native coefficient oracle; one role at a time",
+  "wallet_lab_inputs": "locally held disposable mined branch; no existing wallet material required when creating a fresh lab",
+  "oracle_process_cpu_s": {
+    "ordinary": 10.018,
+    "leg-a": 10.064,
+    "leg-b": 10.022,
+    "onward": 9.728
+  },
+  "elapsed_s_including_namespace_startup": 119.9
+}

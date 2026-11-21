@@ -1,0 +1,166 @@
+{
+  "lazer": "b958e247a2fdb9593b3c25c9603c6c5305c19420",
+  "labrador": "c1ae0e612d5accd9e7d9d1c264951c1afe949c83",
+  "transcript": "canonical-quadratic-v1",
+  "execution": "Intel SDE 10.13.1 -tgl, Intel Core i7-8700K single core",
+  "public_frames": {
+    "shared40": {
+      "file": "public/shared40.bin",
+      "bytes": 136741,
+      "sha256": "e8fc1b94830cb04bbba1e13b637f47316b718a8140418ce7b968fc9323be2b77"
+    },
+    "stock64": {
+      "file": "public/stock64.bin",
+      "bytes": 136769,
+      "sha256": "49b540db8d80d66c17bf7a01134e07f0749ce26cf73a32b5aa08eabe596f2e23"
+    }
+  },
+  "runs": {
+    "shared40": {
+      "prove": {
+        "binary_depth": 40,
+        "custom_wire_B": 136188,
+        "degree0_constraints": 80,
+        "encode": {
+          "cpu_s": 0.25473,
+          "wall_s": 0.26085
+        },
+        "params_and_prove": {
+          "cpu_s": 285.72234,
+          "wall_s": 287.23532
+        },
+        "paths": 2,
+        "process_peak_RSS_KiB": 1065420,
+        "profile": "shared40",
+        "public_root_B": 512,
+        "ring_constraints": 164,
+        "role": "prove",
+        "uncompressed_arrays_B": 196096,
+        "witness_degree": 512,
+        "witness_vectors": 1648,
+        "zk": true,
+        "whole_process": {
+          "wall_s": 297.57,
+          "user_s": 294.94,
+          "sys_s": 1.02,
+          "peak_RSS_KiB": 1065420
+        },
+        "upstream_estimate_rounded_KiB": 122.31,
+        "framed_B": 136741,
+        "descriptor_sha256": "6595e6ff9fcaafea1a118dbdd74273111c617d15f32a5d7fd5a004cb54381ff2"
+      },
+      "verify": {
+        "accepted": true,
+        "binary_depth": 40,
+        "custom_wire_B": 136188,
+        "decode": {
+          "cpu_s": 0.13329,
+          "wall_s": 0.13387
+        },
+        "degree0_constraints": 80,
+        "descriptor_sha256": "6595e6ff9fcaafea1a118dbdd74273111c617d15f32a5d7fd5a004cb54381ff2",
+        "framed_B": 136741,
+        "paths": 2,
+        "process_peak_RSS_KiB": 1001336,
+        "profile": "shared40",
+        "public_parameter_generation": {
+          "cpu_s": 0.23969,
+          "wall_s": 0.24195
+        },
+        "public_root_B": 512,
+        "ring_constraints": 164,
+        "role": "verify",
+        "uncompressed_arrays_B": 196096,
+        "verify": {
+          "cpu_s": 108.85106,
+          "wall_s": 109.27017
+        },
+        "witness_degree": 512,
+        "witness_vectors": 1648,
+        "zk": true,
+        "whole_process": {
+          "wall_s": 118.67,
+          "user_s": 117.22,
+          "sys_s": 0.84,
+          "peak_RSS_KiB": 1001336
+        },
+        "upstream_estimate_rounded_KiB": 122.31
+      }
+    },
+    "stock64": {
+      "prove": {
+        "binary_depth": 64,
+        "custom_wire_B": 136216,
+        "degree0_constraints": 64,
+        "descriptor_sha256": "62cab42319c82040c22a1a29a817282bdfeecf0a87e1b433257275a130a98f3c",
+        "encode": {
+          "cpu_s": 0.23281,
+          "wall_s": 0.23378
+        },
+        "framed_B": 136769,
+        "params_and_prove": {
+          "cpu_s": 243.589,
+          "wall_s": 244.4433
+        },
+        "paths": 1,
+        "process_peak_RSS_KiB": 1066336,
+        "profile": "stock64",
+        "public_root_B": 512,
+        "ring_constraints": 130,
+        "role": "prove",
+        "uncompressed_arrays_B": 196096,
+        "witness_degree": 512,
+        "witness_vectors": 1304,
+        "zk": true,
+        "whole_process": {
+          "wall_s": 254.02,
+          "user_s": 252.21,
+          "sys_s": 0.88,
+          "peak_RSS_KiB": 1066336
+        },
+        "upstream_estimate_rounded_KiB": 122.31
+      },
+      "verify": {
+        "accepted": true,
+        "binary_depth": 64,
+        "custom_wire_B": 136216,
+        "decode": {
+          "cpu_s": 0.13348,
+          "wall_s": 0.1341
+        },
+        "degree0_constraints": 64,
+        "descriptor_sha256": "62cab42319c82040c22a1a29a817282bdfeecf0a87e1b433257275a130a98f3c",
+        "framed_B": 136769,
+        "paths": 1,
+        "process_peak_RSS_KiB": 1006736,
+        "profile": "stock64",
+        "public_parameter_generation": {
+          "cpu_s": 0.22905,
+          "wall_s": 0.23112
+        },
+        "public_root_B": 512,
+        "ring_constraints": 130,
+        "role": "verify",
+        "uncompressed_arrays_B": 196096,
+        "verify": {
+          "cpu_s": 101.87431,
+          "wall_s": 102.23523
+        },
+        "witness_degree": 512,
+        "witness_vectors": 1304,
+        "zk": true,
+        "whole_process": {
+          "wall_s": 111.08,
+          "user_s": 109.84,
+          "sys_s": 0.81,
+          "peak_RSS_KiB": 1006736
+        },
+        "upstream_estimate_rounded_KiB": 122.31
+      }
+    }
+  },
+  "framing_negative_controls": {
+    "registered_frames_accepted": 2,
+    "different_profile_or_descriptor_boundary_rejected": 10
+  }
+}

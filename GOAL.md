@@ -1,3 +1,7 @@
+# Select the next funded private-spend prototype
+
+Starting from public `10cbb07909a62b6293518cbe70aba4213e0faa4c`, compare a two-input SIS accumulator bridge with corrected LaZer/LaBRADOR for the complete existing transaction. Require exact field and note bindings, realistic costs, independent public reproduction and an architecture decision. Preserve MNG1/SLG1, existing funds and spent identities. A qualifying new prover must demonstrate funded transfer, signed swap and recovered spending.
+
 # Packed arithmetic TCitH for funded private spends
 
 Start from `d92de79fe1fce97a33d88f706996e6cdd8ec188f`. Compare the registered Goldilocks constraints with a degree-seven Poseidon2 encoding under one packed TCitH security and cost profile. Exercise funded membership, preserve the full tree, monetary rules and receipts, compare the signed-leg budget and role costs, and qualify the exact quantum-knowledge and joint-privacy assumptions. Prove a funded cycle for a qualifying construction, or reproduce the decisive exclusions and propose a specific membership or note change. Public independent reproduction and CI precede completion. Keep deployed MNG1/SLG1 operational.

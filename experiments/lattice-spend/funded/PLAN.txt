@@ -1,0 +1,6 @@
+MNG1
+Estimated proof size: 126.47KB
+field_arrays_B=208384 rounds=15 zk_round=6
+SLG1
+Estimated proof size: 126.47KB
+field_arrays_B=208384 rounds=15 zk_round=6

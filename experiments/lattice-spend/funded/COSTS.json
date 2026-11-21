@@ -1,0 +1,113 @@
+{
+  "lift": {
+    "MNG1": {
+      "stage1_node_allocated_B_at_least": 13582732240,
+      "stage1_wallet_allocated_B_at_least": 19047143808,
+      "included_support_statement_B": 7299322800,
+      "wallet_input_forward_NTT256": 7102788,
+      "direct_C_API_offset_bytes_written": 1869207571616
+    },
+    "SLG1": {
+      "stage1_node_allocated_B_at_least": 13973451800,
+      "stage1_wallet_allocated_B_at_least": 19596012144,
+      "included_support_statement_B": 7510573840,
+      "wallet_input_forward_NTT256": 7308354,
+      "direct_C_API_offset_bytes_written": 1979326386056
+    }
+  },
+  "network": {
+    "live": {
+      "transfer_B": 143233,
+      "signed_leg_B": 160446,
+      "swap_B": 320905,
+      "mixed": [
+        {
+          "operations": 10000000,
+          "packed_blocks": 2750000,
+          "final_wallet_RPC_B": 1610232000000,
+          "pending_body_B": 1610002000000,
+          "packed_archive_B": 1610643500000,
+          "sparse_archive_B": 1612253000000
+        },
+        {
+          "operations": 30000000,
+          "packed_blocks": 8250000,
+          "final_wallet_RPC_B": 4830696000000,
+          "pending_body_B": 4830006000000,
+          "packed_archive_B": 4831930500000,
+          "sparse_archive_B": 4836759000000
+        },
+        {
+          "operations": 100000000,
+          "packed_blocks": 27500000,
+          "final_wallet_RPC_B": 16102320000000,
+          "pending_body_B": 16100020000000,
+          "packed_archive_B": 16106435000000,
+          "sparse_archive_B": 16122530000000
+        }
+      ]
+    },
+    "toolkit_fixed_raw_projection": {
+      "transfer_B": 212235,
+      "signed_leg_B": 229448,
+      "swap_B": 458909,
+      "mixed": [
+        {
+          "operations": 10000000,
+          "packed_blocks": 2750000,
+          "final_wallet_RPC_B": 2369254000000,
+          "pending_body_B": 2369024000000,
+          "packed_archive_B": 2369665500000,
+          "sparse_archive_B": 2371275000000
+        },
+        {
+          "operations": 30000000,
+          "packed_blocks": 8250000,
+          "final_wallet_RPC_B": 7107762000000,
+          "pending_body_B": 7107072000000,
+          "packed_archive_B": 7108996500000,
+          "sparse_archive_B": 7113825000000
+        },
+        {
+          "operations": 100000000,
+          "packed_blocks": 27500000,
+          "final_wallet_RPC_B": 23692540000000,
+          "pending_body_B": 23690240000000,
+          "packed_archive_B": 23696655000000,
+          "sparse_archive_B": 23712750000000
+        }
+      ]
+    },
+    "fixed_parent_tcith_projection": {
+      "transfer_B": 238735,
+      "signed_leg_B": 261068,
+      "swap_B": 522149,
+      "mixed": [
+        {
+          "operations": 10000000,
+          "packed_blocks": 2750000,
+          "final_wallet_RPC_B": 2670994000000,
+          "pending_body_B": 2670764000000,
+          "packed_archive_B": 2671493500000,
+          "sparse_archive_B": 2673335000000
+        },
+        {
+          "operations": 30000000,
+          "packed_blocks": 8250000,
+          "final_wallet_RPC_B": 8012982000000,
+          "pending_body_B": 8012292000000,
+          "packed_archive_B": 8014480500000,
+          "sparse_archive_B": 8020005000000
+        },
+        {
+          "operations": 100000000,
+          "packed_blocks": 27500000,
+          "final_wallet_RPC_B": 26709940000000,
+          "pending_body_B": 26707640000000,
+          "packed_archive_B": 26714935000000,
+          "sparse_archive_B": 26733350000000
+        }
+      ]
+    }
+  }
+}

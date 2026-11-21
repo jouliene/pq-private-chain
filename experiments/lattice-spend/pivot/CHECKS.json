@@ -1,0 +1,63 @@
+{
+  "MNG1": {
+    "accepted_legacy_and_both_new_encodings": true,
+    "active_depth": 20,
+    "emitted_programs": {
+      "r1cs": "774e00e9e61a8f10f1a811ca4897bc5a24c7429f594b88401c13882e56544ef6",
+      "degree7": "b60397b80e6bd46da58648ea3ecfebef7cb4d8b153795c41a4c5b0e0f86697f2"
+    },
+    "original_effect_words_unchanged": 31,
+    "public_words": 35,
+    "independent_packed_verifier": true,
+    "rejected_mutations": [
+      "root",
+      "header",
+      "sibling",
+      "direction",
+      "nullifier",
+      "fee",
+      "supply_or_authorizing_key",
+      "native_conservation",
+      "token_conservation"
+    ],
+    "rejected_unselected_branch_with_valid_arithmetic": true,
+    "rejected_unknown_anchor": true,
+    "rejected_swapped_receipts": true
+  },
+  "SLG1": {
+    "accepted_legacy_and_both_new_encodings": true,
+    "active_depth": 20,
+    "emitted_programs": {
+      "r1cs": "ee4fbb9890183b856e61000b0eb5a18863a73a323db4ad614834cf0d8da78831",
+      "degree7": "77533cc1c383bec78358ae8b304a1151aab834c34656d2edcc167dccdaf1c339"
+    },
+    "original_effect_words_unchanged": 34,
+    "public_words": 38,
+    "independent_packed_verifier": true,
+    "rejected_mutations": [
+      "root",
+      "header",
+      "sibling",
+      "direction",
+      "nullifier",
+      "fee",
+      "supply_or_authorizing_key",
+      "native_conservation",
+      "token_conservation"
+    ],
+    "rejected_unselected_branch_with_valid_arithmetic": true,
+    "rejected_unknown_anchor": true,
+    "rejected_swapped_receipts": true
+  },
+  "archived_branch": {
+    "common_tip": "000002199e08d8eed9254dc699686679ddf074a1f053e25696db67d652bdc3b5",
+    "funded_blocks": 12,
+    "funded_occurrences": 22,
+    "new_root": "4e5e42d34db05933c1350b99b745c6cea25197065642b05f34802d9ca9915185",
+    "legacy_root": "7d39a3e58545712438d5bce4e16ce3d922e785269d9b9491b8482330b4db3ad9",
+    "independently_checked_positive_mined_occurrences": 2,
+    "path_evaluations": 6,
+    "rejected_adjacent_branch_state_root": true,
+    "every_original_root_matches": true
+  }
+}

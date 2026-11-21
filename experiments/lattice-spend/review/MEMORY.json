@@ -1,0 +1,22 @@
+{
+  "MNG1": {
+    "dachshund_node_payload_B": 5312815200,
+    "dachshund_wallet_payload_B": 10171122192,
+    "integrated_stage1_node_B": 13582732240,
+    "integrated_stage1_wallet_B": 19047143808,
+    "node_plus_source_B": 12302841320,
+    "omitted_canonical_operand_copies_and_source_carry_coefficients_B": 4250400000,
+    "source_public_coefficient_payload_B": 6990026120,
+    "wallet_plus_source_B": 17161148312
+  },
+  "SLG1": {
+    "dachshund_node_payload_B": 5463528840,
+    "dachshund_wallet_payload_B": 10462442976,
+    "integrated_stage1_node_B": 13973451800,
+    "integrated_stage1_wallet_B": 19596012144,
+    "node_plus_source_B": 12655781600,
+    "omitted_canonical_operand_copies_and_source_carry_coefficients_B": 4373492200,
+    "source_public_coefficient_payload_B": 7192252760,
+    "wallet_plus_source_B": 17654695736
+  }
+}
