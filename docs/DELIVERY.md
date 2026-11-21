@@ -57,6 +57,16 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Fresh-genesis private spend selection
+
+A non-author rebuilt both pinned proof components and exercised fresh
+signed issuance, offline receipt and onward witness construction from an
+anonymous public clone of `13989d9448216f2573b0b2faf349da80d854392b`.
+Both full payment geometries failed the preintegration screen. The public
+review records the exact byte counts, source-matched limitations, fresh
+component costs and three successful CI runs on the tested revision.
+[Decision and command](../experiments/fresh-spend/DECISION.md) · [Independent receipt](../experiments/fresh-spend/review/PUBLIC.md)
+
 ## Funded profile C assurance
 
 Starting public baseline:

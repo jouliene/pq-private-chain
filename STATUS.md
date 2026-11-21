@@ -1,4 +1,4 @@
-# Fresh-genesis private spend selection — LOCAL
+# Fresh-genesis private spend selection — VERIFIED
 
 The public starting revision is `7d5887842ba513c254128bbb5818bbd6617ce3fc`.
 Two proof geometries have been screened for the same wide SHAKE monetary
@@ -7,9 +7,17 @@ archives, checked fresh leaf proofs and stock signatures and ran funding,
 receipt recovery and onward clear-witness checks. The ordinary payment
 projections are 10,751,268 B and 424,891,726 B. Private membership dominates
 both. Complete FS01 proof integration stopped at the preintegration gate.
-Independent source review and public-clone reproduction determine acceptance.
+Independent source review confirmed both price formulas and the
+membership-only lower bounds. Research source is public at
+`13989d9448216f2573b0b2faf349da80d854392b`. A non-author rebuilt both
+components and repeated the six wallet/relation tests with fresh keys and
+all four pinned public downloads from an anonymous clone. The price reports
+matched byte for byte. All three push workflows passed on the tested SHA.
+Both candidates are held before integration. The next decision-changing
+experiment is to prove two linked, privately ordered parent permutations
+under SmallWood+ and price the full wiring. The global project remains active.
 Run `bash experiments/fresh-spend/reproduce.sh NEW_SCRATCH_DIRECTORY`.
-[Architecture decision](experiments/fresh-spend/DECISION.md)
+[Architecture decision](experiments/fresh-spend/DECISION.md) · [Public reproduction and CI](experiments/fresh-spend/review/PUBLIC.md)
 
 # Funded profile C post-quantum assurance — independently verified
 
