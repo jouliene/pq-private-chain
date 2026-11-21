@@ -137,3 +137,5 @@ complete-payment storage costs and formal PQ/privacy obligations remain open.
 ## Funded fixed-parent TCitH evaluation
 
 The reviewed delivery includes the complete native proof, two-owner wallet harness, isolated PoW registration, branch and spent-state controls, costed security alternatives and a checksum-pinned release of public signed bundles and funding blocks. Reproduce the full decision with `bash experiments/funded-tcith/reproduce.sh`. The live proof registration and public history are preserved. [Decision](../experiments/funded-tcith/DECISION.md) · [Reproduction](../experiments/funded-tcith/README.md)
+
+The non-author independently rebuilt the proof and both released verifiers, reproduced the first signed leg and produced a fresh funded leg on another branch. The second signed pair and its public funding prefix are separately checksummed assets on the same release. [Independent report](../experiments/funded-tcith/review/CLEAN.md) · [Second archive checksum](../experiments/funded-tcith/review/INDEPENDENT.sha256)

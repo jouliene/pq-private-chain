@@ -1,0 +1,90 @@
+{
+  "archived_records_rebuilt": 18,
+  "controls": {
+    "authorization": "owner authorization",
+    "auxiliary_root": "funded root",
+    "proof": "verify rejected",
+    "receipt": "ordered ciphertext digest"
+  },
+  "funding": {
+    "anchored_leaves": 22,
+    "at_offer_height": 13,
+    "at_offer_leaves": 23,
+    "blocks": 12,
+    "tip": "000002199e08d8eed9254dc699686679ddf074a1f053e25696db67d652bdc3b5"
+  },
+  "orders": {
+    "mixed_first": {
+      "block_B": 419568,
+      "chain_rejection": "spent nullifier",
+      "fees": 18,
+      "height": 14,
+      "meter": {
+        "bundle_B": 419351,
+        "instrumented_CPU_s": 1.488222261,
+        "parent_cpu_s": 0.038222261000000035,
+        "parent_lifetime_peak_KiB": 35856,
+        "registered": {
+          "anchor_height": 12,
+          "aux_root": "4e5e42d34db05933c1350b99b745c6cea25197065642b05f34802d9ca9915185",
+          "endpoint": "000002199e08d8eed9254dc699686679ddf074a1f053e25696db67d652bdc3b5",
+          "engine": {
+            "candidate": {
+              "isolated_wall_s": 1.444469,
+              "max_rss_KiB": 22820,
+              "system_s": 0.0,
+              "user_s": 1.43,
+              "wall_s": 1.43
+            },
+            "released": {
+              "cpu_s": 0.01,
+              "max_rss_KiB": 201136,
+              "wall_s": 0.006896
+            }
+          },
+          "leaf_count": 22
+        },
+        "service_lifetime_peak_KiB": 201136,
+        "signature_and_SLG1_service_cpu_s": 0.020000000000000018,
+        "wall_s": 1.4996039750985801
+      },
+      "notes": 28,
+      "pool_rejection": "pool conflict",
+      "spent": 14,
+      "spent_set_sha256": "a162ff42ce30617ff37e1fadc4921a7e3d244906bb64f5a0e9fb3b29ea00d457",
+      "tip": "000002ff88fc31e4ca685e2c5ae6a95338ebbcd024b81c3c6e09c9dfd429628e"
+    },
+    "released_first": {
+      "block_B": 321122,
+      "chain_rejection": "spent nullifier",
+      "fees": 18,
+      "height": 14,
+      "meter": {
+        "bundle_B": 320905,
+        "instrumented_CPU_s": 0.03488726600000014,
+        "parent_cpu_s": 0.00488726599999989,
+        "parent_lifetime_peak_KiB": 36752,
+        "service_lifetime_peak_KiB": 200880,
+        "signature_and_SLG1_service_cpu_s": 0.03000000000000025,
+        "wall_s": 0.02747545181773603
+      },
+      "notes": 28,
+      "pool_rejection": "pool conflict",
+      "spent": 14,
+      "spent_set_sha256": "a162ff42ce30617ff37e1fadc4921a7e3d244906bb64f5a0e9fb3b29ea00d457",
+      "tip": "000002f7891f2918bb38ae954a7abbf277be93c0d53c654c6d28207d075ad312"
+    }
+  },
+  "orphan": {
+    "fees": 15,
+    "height": 15,
+    "reason": "anchor branch",
+    "released_reason": "anchor branch",
+    "spent": 10,
+    "tip": "0000025656821b7587152a051cbdfea2b0d9992bde66730bb9d6e8badc30d74e"
+  },
+  "public_inputs_sha256": {
+    "mixed": "fd36046e07c935896a5bf957919d1b49c899c15532bfd13a1fc5382d284f8e5a",
+    "released": "97a2cff8bf2d183142092779135c6d2ca06a5502915b35d83f1f6d901afdb2e2"
+  }
+}
