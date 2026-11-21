@@ -1,0 +1,192 @@
+{
+  "author_public_replay_byte_identical": true,
+  "author_release_archive_sha256": "24fc62066d1c43b46e33152d83ee642b4d077aed7d9030ce3ffa2b31b5ceea87",
+  "branch_heads": [
+    "0000016df9ef086559bae0ec14b4c640531d74506bd1b2ecc4cc5693af83f023",
+    "000001d2cfca2e572bd35f91e838efcd96efe729e602d2fa8d72087825e1d446"
+  ],
+  "consensus_and_recovery": {
+    "c_depth_transition": [
+      {
+        "anchor_count": 64,
+        "anchor_height": 30,
+        "height": 32,
+        "parent_count": 65,
+        "proved_depth": 3
+      },
+      {
+        "anchor_count": 68,
+        "anchor_height": 32,
+        "height": 33,
+        "parent_count": 68,
+        "proved_depth": 4
+      }
+    ],
+    "lifetime_nullifier_comparison": {
+      "fee_total": 30,
+      "height": 25,
+      "present_in_c_graph": false,
+      "shared_public_nullifiers": 2,
+      "txid": "7374d35009d4fb5942fbecab9ba3c8e96df6d1d163423b00d63629f476878070",
+      "valid_under_previous_rules": true
+    },
+    "owner_checks": {
+      "backup_B_per_role": 32,
+      "funded_real_inputs_in_each_of_three_distinct_payments": 2,
+      "historical_note_amounts": [
+        [
+          20,
+          12
+        ],
+        [
+          14,
+          16
+        ]
+      ],
+      "payer_remaining": [
+        3,
+        3
+      ],
+      "recipient_final_change": [
+        1,
+        8
+      ],
+      "recipient_first_note": [
+        28,
+        25
+      ],
+      "recipient_subsequent_real_spend_heights": [
+        26,
+        33
+      ]
+    },
+    "selected": {
+      "atomic_swaps": 2,
+      "fees": 51,
+      "height": 33,
+      "issued": 3300,
+      "notes": 71,
+      "spent": 38,
+      "tip": "000001d2cfca2e572bd35f91e838efcd96efe729e602d2fa8d72087825e1d446"
+    }
+  },
+  "cost_samples": {
+    "final_sqlite_B": 3678208,
+    "public_groups_by_height": {
+      "25": {
+        "durable_wall_s": 0.01926,
+        "first_wall_s": 2.72698,
+        "packet_B": 182863,
+        "warm_median_wall_s": 0.00858
+      },
+      "27": {
+        "durable_wall_s": 0.04524,
+        "first_wall_s": 2.6722,
+        "packet_B": 400165,
+        "warm_median_wall_s": 0.02842
+      },
+      "28": {
+        "durable_wall_s": 0.02057,
+        "first_wall_s": 0.01796,
+        "packet_B": 200023,
+        "warm_median_wall_s": 0.01403
+      },
+      "32": {
+        "durable_wall_s": 0.01421,
+        "first_wall_s": 0.00875,
+        "packet_B": 182863,
+        "warm_median_wall_s": 0.0086
+      },
+      "33": {
+        "durable_wall_s": 0.01515,
+        "first_wall_s": 0.00878,
+        "packet_B": 182863,
+        "warm_median_wall_s": 0.00877
+      }
+    },
+    "two_real_input_ordinary": {
+      "B": {
+        "packet_B": 182855,
+        "prover_cpu_s": 18.68,
+        "prover_role_peak_rss_KiB": 886512,
+        "proving_wall_s": 9.641901121998671
+      },
+      "C": {
+        "packet_B": 182863,
+        "prover_cpu_s": 19.05,
+        "prover_role_peak_rss_KiB": 887000,
+        "proving_wall_s": 9.838927496002725
+      }
+    }
+  },
+  "every_named_operation_branch_and_asset_distinct_from_author": true,
+  "executable_revision": "0842fc21fa77291e382282da103b9154ac0ff50f",
+  "fresh_release_archive_B": 7702676,
+  "fresh_release_archive_sha256": "1ecf06c401e2669da88eb2a4175fd9819d72a15d25e502bbd6e39f404f179c3b",
+  "funded_prefix_transactions": {
+    "A": "eecf3c8c5dca632ef4f35ede48c9d56d0c5b1fedada3901574fcecb6197ee418",
+    "B": "34b146fb8e1373e2247f1485d29b0899eeb26fad83302fa19095ad0a92adbde6"
+  },
+  "policy_checks": {
+    "boundary_levels": 20,
+    "detached_root": {
+      "proof_valid": true,
+      "rejection": "anchor branch",
+      "selected_state_and_pool_preserved": true,
+      "wrong_branch_height": 25
+    },
+    "historical_MSP1_operation_codes_in_graph": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "legacy_dispatch_selectors": 9,
+    "native_transcript_controls": {
+      "managed": {
+        "rejected_canonical_depth": 1,
+        "verified_depth": 3
+      },
+      "swap": {
+        "rejected_canonical_depth": 1,
+        "verified_depth": 3
+      }
+    }
+  },
+  "public_graph": {
+    "blocks": 34,
+    "c_proofs_with_branch_derived_depth": 10,
+    "proofs": {
+      "MNG1": 7,
+      "MNG2": 1,
+      "MNG3": 8,
+      "SLG2": 2,
+      "SLG3": 2
+    },
+    "raw_packet_files": 20,
+    "unique_signatures": 8,
+    "wallet_balance_snapshots": 11,
+    "wallets_at_each_snapshot": 8
+  },
+  "reference": {
+    "block_roots": 34,
+    "depths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "occupied_values_checked_across_snapshots": 1579,
+    "owned_mining_reward_inputs_matched": 7,
+    "payment_proof_fields": {
+      "MNG1": 7,
+      "MNG2": 1,
+      "MNG3": 8,
+      "SLG2": 2,
+      "SLG3": 2
+    }
+  },
+  "reproduce_sh": {
+    "elapsed_s": 654.96
+  }
+}

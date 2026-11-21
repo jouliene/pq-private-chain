@@ -33,3 +33,5 @@ curl -fLsS "$base/funded-membership-public.tar.gz" -o /tmp/funded-membership-pub
 tar -xzf /tmp/funded-membership-public-check/funded-membership-public.tar.gz -C /tmp/funded-membership-public-check
 python3 -IB experiments/funded-membership/review/replay.py /tmp/funded-membership-public-check/public "$d" "$o/helpers" "$o/node-v24.22.1-linux-x64/bin/node" | cmp - experiments/funded-membership/evidence/REPLAY.json
 ```
+
+The independently funded graph is `funded-membership-independent.tar.gz` at the same release URL. Use [its checksum](review/INDEPENDENT.sha256), extract in another empty directory and run the same public readers. Its tips, key-dependent identities and roots are recorded in [the fresh result](review/FRESH.json). All three CI jobs tested the [executable revision](https://github.com/jouliene/pq-private-chain/commit/0842fc21fa77291e382282da103b9154ac0ff50f). [Public review](review/CLEAN.md) · [CI](review/CI.json)

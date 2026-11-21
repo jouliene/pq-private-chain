@@ -1,0 +1,19 @@
+# Independent reproduction with fresh funds
+
+An independent reviewer cloned the public HTTPS repository into an empty private directory. Credential helpers, prompts, the SSH agent, global/system Git configuration and local Git object sources were disabled. Anonymous `origin/main` resolved to `0842fc21fa77291e382282da103b9154ac0ff50f`. The detached revision had no object alternates. Its tracked source remained clean through the run. [Tested revision](https://github.com/jouliene/pq-private-chain/commit/0842fc21fa77291e382282da103b9154ac0ff50f)
+
+From that clone, `bash experiments/funded-membership/reproduce.sh NEW_PRIVATE_DIRECTORY` completed in **654.96 seconds**. It built the A/B/C roles and public reference helpers with a fresh Cargo home, Rust 1.93.0 and the checked Node 24.22.1 distribution. Both original funding transactions, all nine named later transactions, all four asset IDs and every reported branch tip differed from the author's. Genesis, network identity, profile registrations and protocol parameters matched. [Measured fresh results](FRESH.json)
+
+| Check | Fresh result |
+| --- | --- |
+| Public replay | The reader verified 34 original blocks on two branches, 20 packets and eight distinct issuer or swap authorizations. One separate H25 block under the historical B rules carried a further valid MNG2 proof. |
+| Funding and lifetime spending identity | Separate single-backup restores matched the H12 A note (20 native, 12 managed) and H13 B note (14, 16) to the real inputs of the historical B payment and both competing C payments. The winning C payment delivered 28 and 25, paid a fee of 3, and returned 3 and 3. Its recipient spent at H26 and H33. |
+| Anchor boundary | At H32 the burn used the H30 anchor's 64 commitments and depth 3 although its parent contained 65 commitments. At H33 a new payment used 68 commitments and depth 4. A genuine detached-branch payment failed while the selected state and pending pool remained intact. |
+| Final state | At H33 the eight fixture wallets reconciled with 3,300 issued native units, 51 cumulative fees and 38 published nullifiers. The old fixed and managed supplies were 80 and 97. The two newly issued assets had supplies of 13 and 15. |
+| Measured cost | The two-real-input B and C payments took 9.642 and 9.839 seconds to prove and occupied 182,855 and 182,863 bytes. The complete C swap occupied 400,165 bytes. Three warm checks had median times of 8.58 ms for the C payment and 28.42 ms for the C swap. |
+
+Separately, the reviewer anonymously downloaded the author's 7,707,797-byte release asset and matched its SHA-256 to the committed checksum. All 59 members were regular public fixture files. Using the independently rebuilt deployment and helpers, the public reader replayed the author's graph in 4.80 seconds. Its output matched the committed `evidence/REPLAY.json` byte for byte. The fresh capture was packaged with the published allowlist. It contains 34 blocks, 20 raw packets, three control files, the signed swap bundle and the disclosed scenario observations. [Author checksum](../RELEASE.sha256) · [Fresh capture checksum](INDEPENDENT.sha256) · [Reproduction commands](../README.md)
+
+All three public GitHub Actions runs for the executable revision concluded successfully. [Funded membership](https://github.com/jouliene/pq-private-chain/actions/runs/44902612648) · [Local proof-of-work](https://github.com/jouliene/pq-private-chain/actions/runs/44902612650) · [Research payment smoke](https://github.com/jouliene/pq-private-chain/actions/runs/44902612636)
+
+These observations cover funded test histories, concrete registration behavior and measured costs on one host. General monetary soundness under quantum attack and the joint receipt-privacy claim require the additional arguments in the independent assurance review. [Assumptions and bounds](ASSURANCE.md)
