@@ -1,0 +1,150 @@
+{
+  "archive_body_coverage": {
+    "deep": 28,
+    "extend": 2,
+    "final_extend": 2,
+    "gap": 11,
+    "resume": 13
+  },
+  "captured_blocks": 42,
+  "clone": {
+    "empty_dependency_home": true,
+    "object_alternates": false,
+    "origin_main_at_clone": "d761ee1e70fb585b90757da809c3a8abcfa3d5c8",
+    "remote": "https://github.com/jouliene/pq-private-chain.git"
+  },
+  "cold_wallet": {
+    "blocks": 24,
+    "process_elapsed_s": 0.181888006999543,
+    "public_body_B": 45188,
+    "reply_B": 48951,
+    "request_B": 1380,
+    "wallet_db_B": 73728
+  },
+  "fresh_run_time": "elapsed_s=498.01 peak_RSS_KiB=405592",
+  "full_archive_disk_and_home_body_B": {
+    "archive1": {
+      "canonical_or_fork_body_B": 1995024,
+      "logical_B": 2260992
+    },
+    "archive2": {
+      "canonical_or_fork_body_B": 1811721,
+      "logical_B": 2248704
+    },
+    "home": {
+      "canonical_or_fork_body_B": 183525,
+      "logical_B": 442368
+    }
+  },
+  "genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+  "independent_public_bundle_sha256": "da0c336c60ab4f4d94fbfe496cc37cb9b966190c45e164f4681777c3bcb4d1fc",
+  "initial_managed": 107,
+  "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+  "original_public_bundle_sha256": "bd71e2bdad0f3144c562df8f70d2c31e2a8f3dcb6f94e048be0b5c7da459510f",
+  "original_replay_exact": true,
+  "public_funding_transactions": {
+    "fund-offline": "a343d009c79565cb21f13c3cfd6ecad29dff15f5365fd2cd7c77504c113fe33f",
+    "fund-offline-b": "d93377875aa5fdf2cbf74803b9701111b683a90db667773d05ae33012f4f286f"
+  },
+  "public_proof_calls": {
+    "MNG1": 7,
+    "MNG2": 3,
+    "SLG2": 2
+  },
+  "public_signatures_checked": 4,
+  "public_test_fixture": {
+    "final": "0000026050c8b54ed181d87b7bc70be7dea2626785877944bba1d1a8567f86e3",
+    "final_spend": "17f9f53352b0bb16355d8f40679d18a98b336ff1b429f1b56709801ded9f3fb1",
+    "initial_settled": "000002bf75f11496984c99a537c6c7e1d42043d2f3265c1dacddc857d68e0144",
+    "initial_spend": "dcdd65915c8aef09c11b704f105e5572159257247f7e1c0746fa45526dbefc3b",
+    "reorganized": "000002b60418d1fb005cd3670e284ef463edbda8ffb66a8f6dcf8704ea63ce6e"
+  },
+  "replay_home": {
+    "exact_selected_asset_and_nullifier_state": true,
+    "height": 30,
+    "home_files_B": 442368,
+    "home_files_checked": 3,
+    "old_proof_samples_absent": 11,
+    "outputs": 50,
+    "payments": 10,
+    "physically_pruned_blocks": 27,
+    "receipt_history_records_compared": 30,
+    "retained_full_blocks": 3,
+    "sqlite_and_sidecars_B": 442368,
+    "supply_events": 2
+  },
+  "restart_controls": {
+    "corruption_refused": true,
+    "equal_work_height": 19,
+    "fork_resume_height": 10,
+    "prefix_before_restart": 4,
+    "resume_height": 5,
+    "retained_bodies": 3
+  },
+  "seed_check": {
+    "exact_selected_nullifiers_from_scan": 2,
+    "fresh_spend_height": 29,
+    "historical_managed": [
+      12,
+      16
+    ],
+    "historical_native": [
+      20,
+      14
+    ],
+    "later_selected_blocks": 1,
+    "restored_seed_B": 32,
+    "unspent_managed": 3,
+    "unspent_native": 3
+  },
+  "selected": {
+    "fees": 27,
+    "fixed": 80,
+    "height": 30,
+    "issued": 3000,
+    "managed": 100,
+    "spent": 20
+  },
+  "stages": {
+    "deep": {
+      "body_B": 1465801,
+      "height": 28,
+      "reply_B": 1470300,
+      "request_B": 2817,
+      "wall_seconds": 6.756429588000174
+    },
+    "extend": {
+      "body_B": 183303,
+      "height": 26,
+      "reply_B": 185224,
+      "request_B": 326,
+      "wall_seconds": 0.03537298700030078
+    },
+    "final_extend": {
+      "body_B": 183303,
+      "height": 30,
+      "reply_B": 185224,
+      "request_B": 326,
+      "wall_seconds": 0.029976148000059766
+    },
+    "gap": {
+      "body_B": 735787,
+      "height": 11,
+      "reply_B": 740098,
+      "request_B": 1595,
+      "wall_seconds": 1.388300153000273
+    },
+    "resume": {
+      "body_B": 889523,
+      "height": 24,
+      "reply_B": 892590,
+      "request_B": 1455,
+      "wall_seconds": 5.470784563000052
+    }
+  },
+  "tested_commit": "d761ee1e70fb585b90757da809c3a8abcfa3d5c8",
+  "wallet_proving_s": {
+    "final_payment": 9.53831815600006,
+    "initial_payment": 9.603592273999311
+  }
+}
