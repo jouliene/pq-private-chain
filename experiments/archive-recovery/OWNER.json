@@ -1,0 +1,16 @@
+{
+  "exact_selected_nullifiers_from_scan": 2,
+  "fresh_spend_height": 29,
+  "historical_managed": [
+    12,
+    16
+  ],
+  "historical_native": [
+    20,
+    14
+  ],
+  "later_selected_blocks": 1,
+  "restored_seed_B": 32,
+  "unspent_managed": 3,
+  "unspent_native": 3
+}

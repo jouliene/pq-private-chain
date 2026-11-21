@@ -1,0 +1,31 @@
+name: Funded archive loss and recovery
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/archive-recovery/**'
+      - '.github/workflows/archive-recovery.yml'
+  pull_request:
+    paths:
+      - 'experiments/archive-recovery/**'
+      - '.github/workflows/archive-recovery.yml'
+permissions:
+  contents: read
+jobs:
+  funded-recovery:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Prepare the pinned compiler and process isolation
+        run: |
+          set -eu
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap build-essential git curl
+          rustup toolchain install 1.93.0 --profile minimal
+          bwrap --unshare-all --ro-bind /usr /usr --symlink usr/lib /lib --symlink usr/lib64 /lib64 -- /usr/bin/true
+      - name: Lose the original archive and recover newly funded money
+        run: bash experiments/archive-recovery/reproduce.sh "$RUNNER_TEMP/ar"

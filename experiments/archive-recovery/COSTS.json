@@ -1,0 +1,264 @@
+{
+  "measured": {
+    "archive_interpeer": {
+      "archive1_final": {
+        "blocks": 16,
+        "body_B": 186411,
+        "elapsed_s": 4.199745668000105,
+        "reply_B": 189910,
+        "request_B": 1619
+      },
+      "archive2_fork": {
+        "blocks": 14,
+        "body_B": 3108,
+        "elapsed_s": 6.45986949600001,
+        "reply_B": 6411,
+        "request_B": 1431
+      },
+      "fork_seed": {
+        "blocks": 14,
+        "body_B": 1462693,
+        "elapsed_s": 6.684578502000022,
+        "reply_B": 1465058,
+        "request_B": 1431
+      }
+    },
+    "archives": {
+      "archive1": {
+        "final_disk": {
+          "allocated_B": 2265088,
+          "common_history_B": 58230,
+          "file_count": 1,
+          "logical_B": 2260992,
+          "observation_logs_B": 14623,
+          "original_body_B": 1995024,
+          "original_body_count": 42,
+          "page_B": 4096,
+          "table_and_index_B": {
+            "assets": 4096,
+            "assets_h": 4096,
+            "blocks": 2031616,
+            "config": 4096,
+            "funded_upgrade_blocks": 4096,
+            "metrics": 4096,
+            "outs": 49152,
+            "outs_h": 4096,
+            "pool": 4096,
+            "sel": 4096,
+            "spent": 4096,
+            "spent_h": 4096,
+            "sqlite_autoindex_assets_1": 4096,
+            "sqlite_autoindex_outs_1": 4096,
+            "sqlite_autoindex_pool_1": 4096,
+            "sqlite_autoindex_pool_2": 4096,
+            "sqlite_autoindex_sel_1": 4096,
+            "sqlite_autoindex_swap_pool_2": 4096,
+            "sqlite_autoindex_swap_pool_3": 4096,
+            "sqlite_autoindex_wallet_history_v2_1": 4096,
+            "sqlite_schema": 4096,
+            "swap_archive": 4096,
+            "swap_pool": 4096,
+            "txloc": 4096,
+            "wallet_header_lookup": 16384,
+            "wallet_history_v2": 73728
+          }
+        },
+        "initial_disk": 1859584,
+        "initial_download": {
+          "blocks": 24,
+          "body_B": 1625310,
+          "elapsed_s": 7.031914878999942,
+          "reply_B": 1628749,
+          "request_B": 2371
+        }
+      },
+      "archive2": {
+        "final_disk": {
+          "allocated_B": 2256896,
+          "common_history_B": 53835,
+          "file_count": 1,
+          "logical_B": 2252800,
+          "observation_logs_B": 18539,
+          "original_body_B": 1811721,
+          "original_body_count": 40,
+          "page_B": 4096,
+          "table_and_index_B": {
+            "assets": 4096,
+            "assets_h": 4096,
+            "blocks": 1847296,
+            "config": 4096,
+            "funded_upgrade_blocks": 4096,
+            "metrics": 4096,
+            "outs": 49152,
+            "outs_h": 4096,
+            "pool": 4096,
+            "sel": 4096,
+            "spent": 4096,
+            "spent_h": 4096,
+            "sqlite_autoindex_assets_1": 4096,
+            "sqlite_autoindex_outs_1": 4096,
+            "sqlite_autoindex_pool_1": 4096,
+            "sqlite_autoindex_pool_2": 4096,
+            "sqlite_autoindex_sel_1": 4096,
+            "sqlite_autoindex_swap_pool_2": 4096,
+            "sqlite_autoindex_swap_pool_3": 4096,
+            "sqlite_autoindex_wallet_history_v2_1": 4096,
+            "sqlite_schema": 4096,
+            "swap_archive": 4096,
+            "swap_pool": 4096,
+            "txloc": 4096,
+            "wallet_header_lookup": 16384,
+            "wallet_history_v2": 69632
+          }
+        },
+        "initial_disk": 1859584,
+        "initial_download": {
+          "blocks": 24,
+          "body_B": 1625310,
+          "elapsed_s": 7.0453890119997595,
+          "reply_B": 1628749,
+          "request_B": 2371
+        }
+      }
+    },
+    "final_validation": {
+      "exact_selected_asset_and_nullifier_state": true,
+      "height": 30,
+      "home_files_B": 442368,
+      "home_files_checked": 3,
+      "old_proof_samples_absent": 11,
+      "outputs": 50,
+      "payments": 10,
+      "physically_pruned_blocks": 27,
+      "receipt_history_records_compared": 30,
+      "retained_full_blocks": 3,
+      "sqlite_and_sidecars_B": 442368,
+      "supply_events": 2
+    },
+    "home_download": {
+      "deep": {
+        "body_B": 1465801,
+        "elapsed_s": 6.830953310000041,
+        "height": 28,
+        "peak_candidate_main_file_B": 958464,
+        "reply_B": 1470300,
+        "request_B": 2817
+      },
+      "extend": {
+        "body_B": 183303,
+        "elapsed_s": 0.0295544619998509,
+        "height": 26,
+        "peak_candidate_main_file_B": 0,
+        "reply_B": 185224,
+        "request_B": 326
+      },
+      "final_extend": {
+        "body_B": 183303,
+        "elapsed_s": 0.02974323500029641,
+        "height": 30,
+        "peak_candidate_main_file_B": 0,
+        "reply_B": 185224,
+        "request_B": 326
+      },
+      "gap": {
+        "body_B": 735787,
+        "elapsed_s": 1.4784727619999103,
+        "height": 11,
+        "peak_candidate_main_file_B": 0,
+        "reply_B": 740098,
+        "request_B": 1595
+      },
+      "resume": {
+        "body_B": 889523,
+        "elapsed_s": 5.594066022000334,
+        "height": 24,
+        "peak_candidate_main_file_B": 0,
+        "reply_B": 892590,
+        "request_B": 1455
+      }
+    },
+    "stopped_home": {
+      "allocated_B": 442368,
+      "common_history_B": 47000,
+      "file_count": 2,
+      "logical_B": 442368,
+      "observation_logs_B": 0,
+      "original_body_B": 183525,
+      "original_body_count": 3,
+      "page_B": 4096,
+      "table_and_index_B": {
+        "assets": 4096,
+        "assets_h": 4096,
+        "blocks": 200704,
+        "config": 4096,
+        "funded_upgrade_blocks": 4096,
+        "home_policy": 4096,
+        "home_seal": 4096,
+        "metrics": 4096,
+        "outs": 49152,
+        "outs_h": 4096,
+        "pool": 4096,
+        "sel": 4096,
+        "spent": 4096,
+        "spent_h": 4096,
+        "sqlite_autoindex_assets_1": 4096,
+        "sqlite_autoindex_outs_1": 4096,
+        "sqlite_autoindex_pool_1": 4096,
+        "sqlite_autoindex_pool_2": 4096,
+        "sqlite_autoindex_sel_1": 4096,
+        "sqlite_autoindex_swap_pool_2": 4096,
+        "sqlite_autoindex_swap_pool_3": 4096,
+        "sqlite_autoindex_wallet_history_v2_1": 4096,
+        "sqlite_schema": 20480,
+        "swap_archive": 4096,
+        "swap_pool": 4096,
+        "txloc": 4096,
+        "wallet_header_lookup": 12288,
+        "wallet_history_v2": 61440
+      }
+    },
+    "stopped_wallet": {
+      "allocated_B": 323584,
+      "file_count": 7,
+      "logical_B": 312929,
+      "observation_logs_B": 0
+    },
+    "wallet_cold_scan": {
+      "blocks": 24,
+      "process_elapsed_s": 0.1701707750003152,
+      "public_body_B": 45188,
+      "reply_B": 48951,
+      "request_B": 1380,
+      "wallet_db_B": 73728
+    },
+    "wallet_incomplete_process_s": 0.17045695800015892,
+    "wallet_proving": {
+      "final_payment": 9.819166620000033,
+      "initial_payment": 9.667235352000262
+    }
+  },
+  "projection": {
+    "B_ordinary_and_swap_counts": [
+      90000000,
+      10000000
+    ],
+    "archive_body_B_per_copy_year": 20480950000000,
+    "block_body_B": [
+      183081,
+      400366
+    ],
+    "blocks_per_operation": 1,
+    "excluded": "headers, frontiers, extra table columns, SQLite pages and indexes, framing, forks, temporary replay space and retries are additional",
+    "home_common_records_B_per_year": 446850000000,
+    "home_first_year_minimum_B_with_14_day_window": 1654340684932,
+    "home_minimum_permanent_growth_B_per_year": 868770000000,
+    "home_nullifier_B_per_year": 7040000000,
+    "home_out_cm_B_per_year": 10240000000,
+    "home_output_ciphertext_and_reward_B_per_year": 404640000000,
+    "offline_wallet_full_common_record_B_per_year": 446850000000,
+    "operations_per_year": 100000000,
+    "recent_body_B_14_days": 785570684932,
+    "single_block_relay_edge_body_B_per_year": 20480950000000,
+    "two_archive_body_B_per_year": 40961900000000
+  }
+}

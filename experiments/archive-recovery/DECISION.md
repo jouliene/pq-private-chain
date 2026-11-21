@@ -1,0 +1,32 @@
+# Retain original proofs on independent archives and prune home block bodies
+
+**Adopt for the local devnet.** A new home validator can validate both funded eras after the original source disappears, provided a surviving peer can serve each original consensus body it needs. The home can then serve its own offline wallet compact authenticated history. The experiment supports this division of labor. It does not establish adequate archive incentives, independent failure domains or affordable operation over a network lifetime.
+
+## Measured recovery
+
+Both archives started at the pinned genesis. Each downloaded 1,625,310 original body bytes for 24 blocks, independently verified them in about 7.0 seconds and used 1,859,584 logical bytes including indexes. The three funding peers had stopped before home recovery. Bubblewrap denied the home access to any reference or archive database. The wallet saw its local node's public Unix socket, its private store, the registered deployment and its own original backup. The confirming miner received a forwarded public packet.
+
+| Author run, loopback | Original bodies or compact wallet payload | Application request / reply | Elapsed |
+|---|---:|---:|---:|
+| Home through H11, both peers refuse H12 | 735,787 B | 1,595 / 740,098 B | 1.48 s |
+| Home resumes at H12 through H24 | 889,523 B | 1,455 / 892,590 B | 5.59 s |
+| Restored wallet scans H1–24 from home | 45,188 B | 1,380 / 48,951 B | 0.17 s fresh process |
+| Restarted home replays winning H1–28 | 1,465,801 B | 2,817 / 1,470,300 B | 6.83 s |
+
+The missing H12 contained a genuine A payment. No target balance or submission was available during the gap. Only archive 2 reopened access to H12. Home retained just 666 original bytes at H24, the three most recent empty blocks. The A receipt yielded 20 native and 12 managed units. The B receipt yielded 14 and 16. The restored wallet paid 28 native and 25 managed, with one 3-native fee and change of three units of each currency. Each of its two alternative B submissions was 182,855 bytes. Its new proof on the winning branch took 9.82 s and 886,848 KiB prover peak RSS.
+
+The first spend was mined at H25 and confirmed at H26. The competing branch forked at H14, removed the H15 signed mint of seven managed units and both H25 debits. The restarted home independently chose the heavier branch. The same payment intent spent both recovered inputs again at H29 and received another confirmation at H30. Two independent implementations reconciled H30 with 3,000 native, 80 fixed, 100 managed, 27 cumulative native fees, 50 occurrences and 20 spent identifiers. The seed-only reader independently linked the two accepted nullifiers to the original A/B receipts. The seven control owners accounted for every unit. Across the two branch histories, the public reader verified 12 physical proof calls and four signatures.
+
+The stopped H30 home occupied 442,368 bytes including indexes, with three original bodies totaling 183,525 bytes. The independent reader matched 30 compact records and checked all 27 older bodies were gone, including eleven sampled interior proof fragments absent from the stopped home files. The candidate main database reached 958,464 bytes during fork validation; a live database, temporary SQLite journals and native roles are additional costs. The two full stores finished at 2,260,992 and 2,252,800 logical bytes. One also held both blocks of the detached payment. The restored wallet's files occupied 75,361 bytes after the cold scan and 312,929 bytes after both attempts. Its private outbox accounts for part of the increase. File lengths, allocated bytes, indexes, audit-log overhead and separate inter-peer costs are reported in [COSTS.json](COSTS.json).
+
+## What each observer sees
+
+Archive TCP requests consisted of public status, selected height ranges and named full block IDs. Each server learned the requesting IP, timing, branch interests and retry behavior. The test used local loopback. The seven differently funded wallets at identical cursors issued byte-identical history requests through their own validating endpoint. A local node sees who connected to it and receives any submitted public packet. The two signed payment attempts share spent identifiers across branches. This test establishes neither network anonymity nor general unlinkability. Test participant balances are voluntary disclosures.
+
+## Annual scenario and failure boundary
+
+Assume 100 million included B operations in one year, 90% ordinary and 10% signed swaps, one operation per block. First-copy complete canonical bodies cost 20.481 decimal TB/year, or 40.962 TB on two archives before indexes and forks. A hypothetical 14-day rolling body window would occupy 0.786 TB. The tested three-block window lasted minutes. Common wallet records add 0.447 TB/year permanently. The present output index repeats encrypted receipts and rewards (0.405 TB/year), and output commitment and spent-ID columns also grow. These components alone give the home 0.869 TB/year of permanent growth and at least 1.654 TB at the end of a first year with the 14-day window. Restart checks also scan the retained local state. One cold wallet scanning that year would need the common records plus framing and its own validation work. These are design scenarios, not measured annual service levels or an owner budget.
+
+If all original sources for an obligatory block disappear before validation, an empty node cannot authenticate its old proofs or continue beyond the gap. A local validator that already verified that selected history can still serve its retained common wallet records. Loss of every copy of a necessary receipt or membership-history fragment defeats complete seed-only restoration. Reachability and advertised tips also affect liveness: an unverified higher advertised frontier can keep a wallet incomplete. Deep replay rereads common ancestry and needs temporary additional storage. A local host able to replace its own trusted installation or entire database is outside this experiment. End-to-end quantum assurance and production archive availability remain open.
+
+The next architecture decision is how much independent, monitored original-data availability the chain requires at the measured size, and how nodes can detect and recover service across independent failure domains.

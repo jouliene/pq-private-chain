@@ -1,0 +1,137 @@
+{
+  "observed_request_fields": {
+    "block": [
+      "id",
+      "op"
+    ],
+    "selected": [
+      "limit",
+      "op",
+      "start"
+    ],
+    "status": [
+      "op"
+    ]
+  },
+  "phase_framed_observations": {
+    "archive1": {
+      "deep": {
+        "body_B": 0,
+        "failures": 0,
+        "operations": {
+          "status": 1
+        },
+        "reply_B": 799,
+        "request_B": 23
+      },
+      "extend": {
+        "body_B": 183303,
+        "failures": 0,
+        "operations": {
+          "block": 2,
+          "selected": 2,
+          "status": 1
+        },
+        "reply_B": 184425,
+        "request_B": 303
+      },
+      "final_extend": {
+        "body_B": 0,
+        "failures": 0,
+        "operations": {
+          "status": 1
+        },
+        "reply_B": 799,
+        "request_B": 23
+      },
+      "gap": {
+        "body_B": 735787,
+        "failures": 2,
+        "operations": {
+          "block": 13,
+          "selected": 1,
+          "status": 1
+        },
+        "reply_B": 738165,
+        "request_B": 1291
+      },
+      "resume": {
+        "body_B": 746064,
+        "failures": 1,
+        "operations": {
+          "block": 13,
+          "selected": 2,
+          "status": 1
+        },
+        "reply_B": 748301,
+        "request_B": 1338
+      }
+    },
+    "archive2": {
+      "deep": {
+        "body_B": 1465801,
+        "failures": 0,
+        "operations": {
+          "block": 28,
+          "selected": 3,
+          "status": 1
+        },
+        "reply_B": 1469501,
+        "request_B": 2794
+      },
+      "extend": {
+        "body_B": 0,
+        "failures": 0,
+        "operations": {
+          "status": 1
+        },
+        "reply_B": 799,
+        "request_B": 23
+      },
+      "final_extend": {
+        "body_B": 183303,
+        "failures": 0,
+        "operations": {
+          "block": 2,
+          "selected": 2,
+          "status": 1
+        },
+        "reply_B": 184425,
+        "request_B": 303
+      },
+      "gap": {
+        "body_B": 0,
+        "failures": 2,
+        "operations": {
+          "block": 2,
+          "selected": 2,
+          "status": 1
+        },
+        "reply_B": 1933,
+        "request_B": 304
+      },
+      "resume": {
+        "body_B": 143459,
+        "failures": 0,
+        "operations": {
+          "block": 1,
+          "status": 1
+        },
+        "reply_B": 144289,
+        "request_B": 117
+      }
+    }
+  },
+  "refused_by_distinct_archives": 2,
+  "request_body_B": 0,
+  "second_archive_served_exact_block_bytes": true,
+  "source_address_scope": "loopback",
+  "unique_successful_bodies": {
+    "deep": 28,
+    "extend": 2,
+    "final_extend": 2,
+    "gap": 11,
+    "resume": 13
+  },
+  "withheld_height": 12
+}

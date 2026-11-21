@@ -1,3 +1,7 @@
+# Recover funded A/B money after loss of the original archive
+
+Starting from f8ef595cc9ed898c5975b238d019cafaecd174de, recover the existing funded two-era network from independently validated archival copies. Demonstrate an unavailable historical interval and resumption, actual body pruning and restart, a deeper competing chain, and a confirmed two-era spend by an offline recipient restored from the original seed. Charge the complete disk and transfer obligations to their roles, independently reconcile the full histories, and reproduce fresh funding from public main. Consensus and monetary rules stay fixed. The global blockchain objective remains active.
+
 # Funded protocol upgrade on one PoW chain
 
 Start at 4a9a315da451c47ddddd9c235b451a194e67c436. Fund wallets under the released MNG1/SLG1 deployment. Activate a genuinely different private proof profile on the same genesis and existing databases. Restore an offline recipient from the original backup, consume a pre-upgrade note, spend the resulting output and execute a joint swap. Exercise simultaneous eligibility, a fork across activation, strict retirement and genesis replay. Reconcile all selected economic state. Publish under docs/DELIVERY.md and require fresh public-clone reproduction. Archive retention, issuer rotation, mainnet deployment and formal PQ assurance belong to other decisions.

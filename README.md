@@ -1,5 +1,7 @@
 # PQ private chain
 
+Run the [archive-loss recovery walkthrough](experiments/archive-recovery/README.md) to restore a funded offline wallet through a pruned PoW validator and two surviving archives.
+
 Run the [funded protocol upgrade](experiments/funded-upgrade/README.md) to pay an offline wallet under the released rules, recover its funds and spend them under an activated proof profile on the same PoW chain.
 
 An independent blockchain research project with private payments and a post-quantum security objective. Run `./pqd start` to launch the first local proof-of-work network with two CPU miners and three validating peers. Follow the [short wallet walkthrough and reproduction instructions](devnet/README.md) to make a payment, restore a wallet from seed and test a deep reorganization. End-to-end PQ security, network privacy and production economics remain open.

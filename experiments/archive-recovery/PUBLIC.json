@@ -1,0 +1,385 @@
+{
+  "branches": [
+    {
+      "common_height": 14,
+      "detached_tip": {
+        "anchor": "e8a18286dcde47a301a5b1bf80fe4ebcb1e98546c7749556d97c798ccefb3ca2",
+        "atomic_swaps": 1,
+        "fees": 30,
+        "funded_root": "9f7fecf7f71f9034161e4d9cb9cc4e5baa696181e6bd3f0d4dee2fc95363f5cf",
+        "height": 26,
+        "issued": 2600,
+        "logical_payments": 10,
+        "miner_credits": 2630,
+        "notes": 48,
+        "physical_payments_and_legs": 11,
+        "registry": {
+          "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": {
+            "authority": "",
+            "height": 7,
+            "id": "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f",
+            "mode": "fixed",
+            "sequence": 1,
+            "supply": 80,
+            "tx": "af8da7b5570fa422c04c11e9b1e09ba50bfd526f2aa1fc42b905775e0987b71f"
+          },
+          "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": {
+            "authority": "492b23019b8aed8f20d320af2b62220863d84fbdf837b5ee59919527856b7284",
+            "height": 15,
+            "id": "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536",
+            "mode": "managed",
+            "sequence": 2,
+            "supply": 107,
+            "tx": "dc5e4d39c1d7f03e5adcbca9ba40f13978113131298baf1bf20bf020f40d54d2"
+          }
+        },
+        "spent": 22,
+        "spent_set_sha256": "107b0e92dfe082b65d3584f5e2238d62ac51d32d81464feb9b8a3b84ee6b76e5",
+        "tip": "0000001c2e2eb5b59f3540cdcda89f1476ba8838707ab8a20a82382672f7743f",
+        "total_supply_events": 3,
+        "work": 109051904
+      }
+    }
+  ],
+  "captured_blocks": 42,
+  "disclosed_fixture": {
+    "common": {
+      "balances": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 30
+          },
+          "native": 40
+        },
+        "bob": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 50
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 540
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 38
+          },
+          "native": 556
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 12
+          },
+          "native": 20
+        }
+      },
+      "fees": 18,
+      "height": 12,
+      "issued": 1200,
+      "managed_supply": 100
+    },
+    "final": {
+      "balances": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 25
+          },
+          "native": 28
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 540
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 2348
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        }
+      },
+      "fees": 27,
+      "height": 30,
+      "issued": 3000,
+      "managed_supply": 100
+    },
+    "fork": {
+      "balances": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {},
+          "native": 0
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 540
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 745
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 28
+          },
+          "native": 34
+        }
+      },
+      "fees": 24,
+      "height": 14,
+      "issued": 1400,
+      "managed_supply": 100
+    },
+    "initial": {
+      "balances": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 7
+          },
+          "native": 0
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1440
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 845
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 28
+          },
+          "native": 34
+        }
+      },
+      "fees": 27,
+      "height": 24,
+      "issued": 2400,
+      "managed_supply": 107
+    },
+    "initial_settled": {
+      "balances": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 32
+          },
+          "native": 28
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 1643
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 845
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 3
+          },
+          "native": 3
+        }
+      },
+      "fees": 30,
+      "height": 26,
+      "issued": 2600,
+      "managed_supply": 107
+    },
+    "reorganized": {
+      "balances": {
+        "alice": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 23,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 9
+          },
+          "native": 37
+        },
+        "bob": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 7,
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 41
+          },
+          "native": 24
+        },
+        "conflict": {
+          "assets": {},
+          "native": 20
+        },
+        "forward": {
+          "assets": {},
+          "native": 0
+        },
+        "miner-a": {
+          "assets": {
+            "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": 50
+          },
+          "native": 540
+        },
+        "miner-b": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 22
+          },
+          "native": 2145
+        },
+        "offline": {
+          "assets": {
+            "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": 28
+          },
+          "native": 34
+        }
+      },
+      "fees": 24,
+      "height": 28,
+      "issued": 2800,
+      "managed_supply": 100
+    }
+  },
+  "genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+  "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+  "public_proof_calls": {
+    "MNG1": 7,
+    "MNG2": 3,
+    "SLG2": 2
+  },
+  "public_signatures_checked": 4,
+  "selected": {
+    "anchor": "bc86b2d4df98cb77ad49b414320dfe8e18c8dc838a27eeab53cc1c17ceaf2724",
+    "atomic_swaps": 1,
+    "fees": 27,
+    "funded_root": "e35acf07d59fda55c32e64ed2694a8da11317bfe82c5692614daaee18cdb552c",
+    "height": 30,
+    "issued": 3000,
+    "logical_payments": 9,
+    "miner_credits": 3027,
+    "notes": 50,
+    "physical_payments_and_legs": 10,
+    "registry": {
+      "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f": {
+        "authority": "",
+        "height": 7,
+        "id": "3c6fa3091e24fd701e2330b3f2119d17029adc30260aab32da5858a053978b4f",
+        "mode": "fixed",
+        "sequence": 1,
+        "supply": 80,
+        "tx": "af8da7b5570fa422c04c11e9b1e09ba50bfd526f2aa1fc42b905775e0987b71f"
+      },
+      "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536": {
+        "authority": "492b23019b8aed8f20d320af2b62220863d84fbdf837b5ee59919527856b7284",
+        "height": 8,
+        "id": "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536",
+        "mode": "managed",
+        "sequence": 1,
+        "supply": 100,
+        "tx": "7d55add07af3c22e22cffa2eb13b6c06e2702d8ecf62b6d1e40e56ad0352a20b"
+      }
+    },
+    "spent": 20,
+    "spent_set_sha256": "19936d51ba9f2445efc17343b521e57894724c0dffc1bf35e06630c3d8e7802d",
+    "tip": "00000107bd387dea656e5d30d415c7102f28ef504972f183c215584f19347c3e",
+    "total_supply_events": 2,
+    "work": 125829120
+  },
+  "selected_miner_fees": {
+    "7a6bf537b27502de14ffd68bc2d76477f50bf6cc990e71f523fdbe989df21856": 18,
+    "af530e13542b453232980f1c7dd769439b2d45c4bd0afe550adea8a30cfbd5f8": 9
+  },
+  "signed_swaps": 1
+}
