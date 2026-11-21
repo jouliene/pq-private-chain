@@ -1,0 +1,33 @@
+# N7P2 branch state and storage
+
+The public service accepts the 64 most recent height-by-height pairs of commitment root and occurrence count, including its current tip. At height 63, genesis is still in the window. At height 64 its record drops out. An empty block adds another record of the same pair. A pair still present on the selected branch remains eligible even if the same pair also appeared elsewhere. Each ordinary packet and each signed swap leg must select an eligible pair. Both wallets check each leg separately when approving the exchange. All nullifier and output uniqueness checks use the current branch, including conflicts between legs.
+
+These are experimental block and anchor parameters. With one operation per block and 100 million operations spread uniformly over a 365-day year, 64 subsequent blocks take about 20.18 seconds. The eligibility interval on an actual branch depends on block production, competing traffic and reorganization. The two parties can prove against different eligible roots.
+
+## Public validator
+
+One service owns the public directory lock. Its authoritative history comprises the externally pinned genesis and ordered block files. Each block contains complete signed or ordinary packets and proof bytes. The public node keeps at most two tree digests per level, 64 anchor records and eight reversible block deltas in process memory. The rolling frontier, stored to depth 40, suffices to derive and check the next root. The block log retains output ciphertexts.
+
+The service creates `.n7-index.sqlite` and its SQLite journal under the writable host-bound `/public` directory. It has three `WITHOUT ROWID` tables, with primary keys for spent nullifier bytes, commitment bytes and miner addresses. The first two use canonical 56-byte binary keys. Each miner row stores the current fee total. Normal admission touches the keys and frontier paths affected by the new block. The SQLite page-cache target is 2 MiB, its process-wide heap ceiling is 32 MiB, and database mmap is disabled. The kernel file cache, Python runtime, cryptographic workers and founding supply table have separate costs.
+
+After all public checks, the service builds the tentative tree change and stages the new index rows in one SQLite transaction. It fsyncs the complete new block file, installs its numbered name without overwriting an existing block, and fsyncs the public directory. It then commits the derived index and updates the in-process tip before acknowledging acceptance. The SQLite index uses a persistent rollback journal and disables database fsync. The block and directory fsyncs establish the sole durable transaction decision. Index or storage errors terminate the service. If termination occurs after the durable block reached disk but before acknowledgement, independent replay includes the complete operation and its fee exactly once.
+
+Every public-service start holds the exclusive directory lock, discards any previous derived database and journal, recreates empty indexes, and revalidates the canonical block sequence with the registered verifier. Normal shutdown deletes both derived files. The public capture allowlist covers the founding record and actual blocks. Restart requires the full history and cryptographic replay. Work grows with history, and the archive has no pruning mechanism in this experiment.
+
+Disconnect is available only through the explicit fork-test service. It stages precise inverse index changes, unlinks the tip block and fsyncs the directory, then commits the index and restores the frontier, anchor ring, fee balances and tip. Beyond the eight retained undo records it rebuilds and verifies the surviving prefix before unlinking. The test driver chooses which local disconnect to exercise. This fixture tests branch transitions and provides no competing-chain selection policy.
+
+## Measurement and recovery
+
+The public service reports `index_stat` on readiness and in every warm admission metric. It includes the actual database file length, page size, page count, target cache and current journal file length. `journal_before_commit_B` samples the journal length after staging the candidate index updates. A persistent journal can retain capacity from prior transactions. These lengths measure file space, and write traffic requires a separate I/O measurement. A small database has a multi-page minimum size. Use an occupied sample for marginal disk projections. An ordinary payment adds two indexed nullifiers and two indexed commitments, totaling 224 raw key bytes before page overhead. A complete swap adds eight keys totaling 448 raw bytes. The miner-fee table grows with the count of credited miner addresses.
+
+The timed public service runs against a bind-mounted filesystem. Wallet roles retain authenticated history and paths for full scanning, and use an in-memory SQLite index. The optional read-only diagnostic CLI also uses an in-memory index. Those roles have different memory profiles. A full summary streams sorted nullifiers through the spent-set hash, then materializes the miner totals. Normal acceptance returns fixed-size counters.
+
+A targeted storage check used a genuine funded pilot block in a disposable directory. Forced process exit after the block/directory fsync and before the SQLite commit left the new block visible. Fresh verification rebuilt both nullifiers, both commitments and three fee units. After 63 additional empty blocks the genesis root expired at height 64. One disconnect restored eligibility. All 64 blocks then disconnected, the original fee and four new keys disappeared, and the same payment was eligible for inclusion again. The resulting disposable index had four 4,096-byte pages and a 16,928-byte journal on this host. This check exercised process failure and filesystem recovery on a running kernel. It did not simulate a hardware power loss.
+
+Run the crash and deep-disconnect regression against the ten released blocks with explicit paths to the registered N7P2 binary, pinned Node executable, public capture directory and approved founding digest file.
+
+```sh
+python3 experiments/advancing-note/lab/storage_check.py "$circuit" "$node" "$capture/public" "$founding_id"
+```
+
+The command runs four isolated public processes with disposable local storage. They terminate immediately after the real payment's block-directory fsync, recover the operation from the block log, verify all ten published blocks and disconnect nine, then restart at height one. The recovered states from the three successful processes must agree on height, tip, root, count, spent-set digest, fees and issued supply. The ninth disconnect must exercise full verified prefix reconstruction.

@@ -1,0 +1,163 @@
+{
+  "registered_vk_sha3_384": "6512fef3faf2e077592284053014091d952dc1194849722d2d42272d8638d44470fbe37a93eda9f0c6f9b1e4a7b202bc",
+  "frame": {
+    "reference": 262144,
+    "isolated_cap": 278528,
+    "honest_body_max": 246120,
+    "ordinary_max": 249961,
+    "signed_max": 267134,
+    "pair_max": 534280,
+    "actual_transfer_B": [
+      230705,
+      238488,
+      238533,
+      240454,
+      238054,
+      235701,
+      239495,
+      238967,
+      233252
+    ],
+    "signed_actual_B": [
+      252777,
+      256091
+    ],
+    "swap_actual_B": 508880,
+    "weighted_block_B": 264432.9
+  },
+  "cold_node": {
+    "wall_s": [
+      0.05812,
+      0.05982
+    ],
+    "cpu_s": [
+      0.03,
+      0.04
+    ],
+    "peak_tree_RSS_KiB": [
+      32988,
+      33376
+    ]
+  },
+  "funded_wallet": {
+    "ordinary_or_leg_wall_s": [
+      6.22741,
+      6.80603
+    ],
+    "peak_tree_RSS_KiB": [
+      1891788,
+      1895192
+    ],
+    "restore_only": {
+      "max_individual_RSS_KiB": 51000,
+      "sampled_tree_PSS_KiB": 63534,
+      "sampled_tree_RSS_KiB": 87628,
+      "system_s": 0.12,
+      "user_s": 0.37,
+      "wall_s": 0.501487803
+    },
+    "restored_send": {
+      "max_individual_RSS_KiB": 1855788,
+      "sampled_tree_PSS_KiB": 1869246,
+      "sampled_tree_RSS_KiB": 1894592,
+      "system_s": 1.17,
+      "user_s": 16.92,
+      "wall_s": 6.469811488
+    }
+  },
+  "warm_node": {
+    "physical_cpus": [
+      0,
+      1
+    ],
+    "unique_operations": 10,
+    "replays": 3,
+    "full_admission_CPU_s_by_batch": [
+      0.255911,
+      0.257534,
+      0.250864
+    ],
+    "full_admission_core_s_per_mixed_operation": 0.025591,
+    "unique_ingress_cores_at_100M": 0.0811,
+    "twice_verified_cores_at_100M": 0.1622,
+    "request_boundary_CPU_s": [
+      0.24999999999999997,
+      0.27,
+      0.27
+    ],
+    "request_boundary_cores_at_100M": 0.0856,
+    "serial_ops_per_s_at_request_boundary": 31.371,
+    "ordinary_wall_s": [
+      0.01691,
+      0.02383
+    ],
+    "swap_wall_s": [
+      0.11527,
+      0.12323
+    ],
+    "warm_tree_RSS_KiB": [
+      86440,
+      91048
+    ],
+    "native_check_ms": [
+      10.52288,
+      12.21939
+    ]
+  },
+  "transfers_per_second_at_100M": 3.16881,
+  "cold_vs_warm_note": "End-to-end replay includes signature and state workers.",
+  "flows": [
+    {
+      "included_per_year": 10000000,
+      "public_wallet_upload_TB": 2.64253,
+      "canonical_archive_TB": 2.64433,
+      "one_block_ingress_Mbps": 0.67,
+      "four_peers_preinclusion_and_block_Mbps": 5.361,
+      "four_peers_full_body_once_Mbps": 2.681,
+      "two_peers_full_body_once_Mbps": 1.341
+    },
+    {
+      "included_per_year": 30000000,
+      "public_wallet_upload_TB": 7.92759,
+      "canonical_archive_TB": 7.93299,
+      "one_block_ingress_Mbps": 2.011,
+      "four_peers_preinclusion_and_block_Mbps": 16.083,
+      "four_peers_full_body_once_Mbps": 8.044,
+      "two_peers_full_body_once_Mbps": 4.022
+    },
+    {
+      "included_per_year": 100000000,
+      "public_wallet_upload_TB": 26.42529,
+      "canonical_archive_TB": 26.44329,
+      "one_block_ingress_Mbps": 6.703,
+      "four_peers_preinclusion_and_block_Mbps": 53.61,
+      "four_peers_full_body_once_Mbps": 26.814,
+      "two_peers_full_body_once_Mbps": 13.407
+    }
+  ],
+  "anchor_design": {
+    "old_window": 8,
+    "new_window": 64,
+    "mean_arrival_interval_s": 0.315576,
+    "eight_states_seconds_at_mean": 2.5246,
+    "sixty_four_states_seconds_at_mean": 20.1969,
+    "additional_raw_anchor_B": 3584,
+    "retained_undo_blocks": 8
+  },
+  "storage": {
+    "keys_per_year": 440000000,
+    "index_raw_key_GB_per_year": 24.64,
+    "observed_index_after_ten_operations": {
+      "cache_target_KiB": 2048,
+      "database_file_B": 16384,
+      "database_pages": 4,
+      "journal_file_B": 16928,
+      "page_B": 4096,
+      "sqlite_heap_limit_B": 33554432
+    },
+    "home_2TB_archive_only_days": 27.625,
+    "cold_full_history_TB_after_20_years": 528.866,
+    "priced_14day_body_retention_TB": 1.0136,
+    "retained_private_scan_payload_TB_year_if_authenticated": 0.40843
+  }
+}

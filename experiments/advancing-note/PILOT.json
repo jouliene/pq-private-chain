@@ -1,0 +1,54 @@
+{
+  "zero": {
+    "assets": {},
+    "count": 0,
+    "native": 0
+  },
+  "restored": {
+    "assets": {
+      "38faacb02e2e7f4e92b2570e632d399cefa17fe06a63151e88a9522f85fb7067": 13
+    },
+    "count": 1,
+    "native": 7
+  },
+  "controls": {
+    "changed_approval": "owner authorization",
+    "current_conflict": "spent or repeated nullifier",
+    "detached_after_restart": "wrong branch root/count",
+    "detached_root": "wrong branch root/count",
+    "incomplete_swap": "incomplete swap",
+    "same_prefix_spent": "spent or repeated nullifier"
+  },
+  "overlap": {
+    "accept_end_ns": 1186815927267494,
+    "accept_start_ns": 1186815905262326,
+    "advanced_height": 2,
+    "native_end_ns": 1186819261282047,
+    "native_start_ns": 1186815900781877
+  },
+  "final": {
+    "count": 30,
+    "height": 10,
+    "issued": {
+      "21ef24c3fad2b6380ee6f08337f27ac5b12a015b856dd30c16f0c61d417216fd": 35,
+      "38faacb02e2e7f4e92b2570e632d399cefa17fe06a63151e88a9522f85fb7067": 67,
+      "native": 82
+    },
+    "miner_fees": {
+      "4e37206465766e6574206d696e657221": 30
+    },
+    "root": "37878f5a7ea249c5eb435016abcc7324d6cad749584a27d9d52171807097edfb209f62abc4b6a7e552b31c0f489635ba8a52aa9f79cf875f",
+    "spent": 22,
+    "spent_hash": "a4dc0be4fccbc4a7858a19eabdb5ff1635e25a401164688284d3c01d2ca9deaeb6f8757c46d6fd241fb7adaaa1a46d15",
+    "tip": "003736b8bdcc07bc6db82b94103752806645cbf66f16629833f3f552fe457b9c69fe3b0adbacad4ea935f3a63d948745"
+  },
+  "purpose": "Eight-anchor feasibility pilot before the registered disk-indexed product trial. Only synthetic public aggregates are reported.",
+  "VK": "6512fef3faf2e077592284053014091d952dc1194849722d2d42272d8638d44470fbe37a93eda9f0c6f9b1e4a7b202bc",
+  "restored_wallet_wall_s": 5.907343677,
+  "proof_core_only_wall_s": 3.36050017,
+  "rate_scenario": {
+    "included_operations_per_year": 100000000,
+    "one_operation_per_block": true,
+    "average_8_block_interval_s": 2.524608
+  }
+}

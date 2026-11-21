@@ -1,0 +1,140 @@
+{
+  "genesis": "f286036cede63c84b2442e77b4cfaca12d019195058b0cce5ef5f7993b80c1adf045cf1642836d2678182893be6fea9b",
+  "tip": "0032aba1d70613b6d41ba761c3fbab74722dc902723944233f6a33d9e19f24a3677ae8864a280981b38aeac6ae258e1c",
+  "leaves": 30,
+  "nullifiers": 22,
+  "spent_hash": "52cc5fd1c4cadcd2ae26e238bb0b12a1d862f9099b6fe3da738ab257f75071d6bb79a1d4ddb87d7b40b411fadecd8adb",
+  "miner_fees": {
+    "4e37206465766e6574206d696e657221": 30
+  },
+  "totals": {
+    "proof_B": 2565920,
+    "operation_B": 2642529,
+    "archive_block_B": 2644329,
+    "legs": 11
+  },
+  "rows": [
+    {
+      "height": 1,
+      "legs": 1,
+      "packet_B": 230705,
+      "block_B": 230885,
+      "proof_B": [
+        226864
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 2,
+      "legs": 1,
+      "packet_B": 238488,
+      "block_B": 238668,
+      "proof_B": [
+        234647
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 3,
+      "legs": 1,
+      "packet_B": 238533,
+      "block_B": 238713,
+      "proof_B": [
+        234692
+      ],
+      "min_anchor_age": [
+        2
+      ]
+    },
+    {
+      "height": 4,
+      "legs": 1,
+      "packet_B": 240454,
+      "block_B": 240634,
+      "proof_B": [
+        236613
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 5,
+      "legs": 1,
+      "packet_B": 238054,
+      "block_B": 238234,
+      "proof_B": [
+        234213
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 6,
+      "legs": 1,
+      "packet_B": 235701,
+      "block_B": 235881,
+      "proof_B": [
+        231860
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 7,
+      "legs": 1,
+      "packet_B": 239495,
+      "block_B": 239675,
+      "proof_B": [
+        235654
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 8,
+      "legs": 1,
+      "packet_B": 238967,
+      "block_B": 239147,
+      "proof_B": [
+        235126
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 9,
+      "legs": 1,
+      "packet_B": 233252,
+      "block_B": 233432,
+      "proof_B": [
+        229411
+      ],
+      "min_anchor_age": [
+        0
+      ]
+    },
+    {
+      "height": 10,
+      "legs": 2,
+      "packet_B": 508880,
+      "block_B": 509060,
+      "proof_B": [
+        231763,
+        235077
+      ],
+      "min_anchor_age": [
+        9,
+        0
+      ]
+    }
+  ]
+}

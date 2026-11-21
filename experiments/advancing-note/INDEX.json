@@ -1,0 +1,46 @@
+{
+  "kind": "Synthetic index occupancy, no proofs or throughput claim",
+  "sqlite": "3.45.1",
+  "legs": [
+    1024,
+    8192,
+    32768,
+    65536
+  ],
+  "physical": {
+    "1024": {
+      "cache_target_KiB": 2048,
+      "sqlite_heap_limit_B": 33554432,
+      "database_file_B": 294912,
+      "database_pages": 72,
+      "page_B": 4096,
+      "journal_file_B": 57968
+    },
+    "8192": {
+      "cache_target_KiB": 2048,
+      "sqlite_heap_limit_B": 33554432,
+      "database_file_B": 2289664,
+      "database_pages": 559,
+      "page_B": 4096,
+      "journal_file_B": 74384
+    },
+    "32768": {
+      "cache_target_KiB": 2048,
+      "sqlite_heap_limit_B": 33554432,
+      "database_file_B": 8941568,
+      "database_pages": 2183,
+      "page_B": 4096,
+      "journal_file_B": 74384
+    },
+    "65536": {
+      "cache_target_KiB": 2048,
+      "sqlite_heap_limit_B": 33554432,
+      "database_file_B": 17924096,
+      "database_pages": 4376,
+      "page_B": 4096,
+      "journal_file_B": 86696
+    }
+  },
+  "marginal_db_B_per_leg": 274.125,
+  "projected_database_GB_per_110M_legs": 30.15375
+}
