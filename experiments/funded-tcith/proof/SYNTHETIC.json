@@ -1,0 +1,48 @@
+{
+  "kind": "full_geometry_synthetic_regression",
+  "funded": false,
+  "started": "2026-11-21T03:05:10Z",
+  "ended": "2026-11-21T03:05:46Z",
+  "affinitized_cpu": 3,
+  "role_timeout_s": 240,
+  "role_exit_code": {
+    "prove": 0,
+    "fresh_public_verify": 0
+  },
+  "geometry": {
+    "N": 262144,
+    "slots": 117,
+    "open": 32,
+    "degree": 7
+  },
+  "synthetic_active_levels": 20,
+  "proof_bytes": 238248,
+  "frontier_hashes": 389,
+  "prove_wall_s": 27.379,
+  "verify_wall_s": 1.441,
+  "source_predecessor": "33bc626c66ba6a83e8ee496e8b6f44b7e207333f",
+  "command": "taskset -c 3 python3 -IB experiments/funded-tcith/proof/smoke.py BIN SHAPE CONSTANTS",
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "build_flags": "-std=c++17 -O3 -Wall -Wextra -Werror",
+  "binary_sha256": "fc8fc51b398c5227c59254ada31c79102e08a564273a2652e90fd81a9832f9a8",
+  "shape_sha256": "77533cc1c383bec78358ae8b304a1151aab834c34656d2edcc167dccdaf1c339",
+  "checks_rejected": [
+    "context",
+    "public_statement",
+    "auxiliary_root",
+    "root_commitment",
+    "degree_digest",
+    "broadcast_digest",
+    "opening_salt",
+    "opening_share",
+    "noncanonical_opening",
+    "multiproof",
+    "degree_tail",
+    "polynomial_tail",
+    "linear_tail",
+    "trailing",
+    "truncated",
+    "invalid_assignment"
+  ]
+}

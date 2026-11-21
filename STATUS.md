@@ -1,3 +1,7 @@
+# Funded fixed-parent TCitH — LOCAL, ready for publication
+
+The complete funded FTL1 leg passed public PoW admission, reorg and cross-registration conflict tests. Close this experimental branch and retain the live MNG1/SLG1 path. The funded candidate's larger wire size and verification work buy no established 128-bit quantum membership/knowledge or joint receipt-privacy improvement. A wider level-tagged index is costed. The global private blockchain objective remains active. Next verify the pinned source and public funding archive from an anonymous clean clone and record CI. [Decision](experiments/funded-tcith/DECISION.md) · [Exact reproduction](experiments/funded-tcith/README.md)
+
 # Lattice spend architecture decision — public verification passed
 
 Keep the deployed MNG1 transfer and SLG1 swap. Select the fixed-arity, four-child parent with a branch-derived auxiliary root for the next funded TCitH prototype. At the first fitting geometry this reduces modeled per-leg field-share processing from 6.24 GB to 1.12 GB. A complete new funded proof and 128-bit quantum knowledge/receipt privacy guarantees remain open. The broader permissionless PoW chain objective is ACTIVE.

@@ -1,0 +1,238 @@
+{
+  "census": {
+    "MNG1": {
+      "serialized_shape_sha256": "227609aad68ddfe8c6cd31a72b59ed1ad8eb0ae1b248c12cf48562a75d79a424",
+      "public_words": 39,
+      "rows": 39804,
+      "private_columns": 39786,
+      "permutations": 316,
+      "path_permutations": 276,
+      "seventh_powers": 37288,
+      "rows_by_degree": {
+        "1": 92,
+        "2": 2424,
+        "7": 37288
+      },
+      "packing_groups": [
+        39786,
+        2424,
+        2424,
+        2424,
+        37288,
+        37288
+      ],
+      "linear_wiring_equations": 81940,
+      "global_matrix_private_nnz": 764323,
+      "known_rhs_affine_nnz": 38610,
+      "rows_with_structural_public_or_constant_rhs": 38409
+    },
+    "SLG1": {
+      "serialized_shape_sha256": "ebf7f436a3f5680508228f2c2302386c83e4257e1f34c717a7acd97633ab51c2",
+      "public_words": 42,
+      "rows": 40544,
+      "private_columns": 40522,
+      "permutations": 320,
+      "path_permutations": 276,
+      "seventh_powers": 37760,
+      "rows_by_degree": {
+        "1": 103,
+        "2": 2681,
+        "7": 37760
+      },
+      "packing_groups": [
+        40522,
+        2681,
+        2681,
+        2681,
+        37760,
+        37760
+      ],
+      "linear_wiring_equations": 83666,
+      "global_matrix_private_nnz": 775219,
+      "known_rhs_affine_nnz": 39542,
+      "rows_with_structural_public_or_constant_rhs": 39149
+    }
+  },
+  "pricing": {
+    "old_geometry": {
+      "MNG1": {
+        "proof_bytes": 391528,
+        "fixed_bytes": 3911,
+        "framed_bytes": 395439,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 262144,
+          "s": 117,
+          "ell": 32,
+          "tau": 1,
+          "rho": 5,
+          "eta": 33,
+          "degree": 7,
+          "witness_packs": 1042,
+          "hint_packs_per_mpc": 10,
+          "leaf_words": 1125,
+          "max_frontier_hashes_per_tree": 416
+        },
+        "leaf_field_bytes": 2359296000
+      },
+      "SLG1": {
+        "proof_bytes": 396648,
+        "fixed_bytes": 21124,
+        "framed_bytes": 417772,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 262144,
+          "s": 117,
+          "ell": 32,
+          "tau": 1,
+          "rho": 5,
+          "eta": 33,
+          "degree": 7,
+          "witness_packs": 1062,
+          "hint_packs_per_mpc": 10,
+          "leaf_words": 1145,
+          "max_frontier_hashes_per_tree": 416
+        },
+        "leaf_field_bytes": 2401239040
+      },
+      "signed_pair_bytes": 835557
+    },
+    "screen_height_18": {
+      "MNG1": {
+        "proof_bytes": 368400,
+        "fixed_bytes": 3911,
+        "framed_bytes": 372311,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 262144,
+          "s": 172,
+          "ell": 34,
+          "tau": 1,
+          "rho": 5,
+          "eta": 42,
+          "degree": 7,
+          "witness_packs": 711,
+          "hint_packs_per_mpc": 10,
+          "leaf_words": 803,
+          "max_frontier_hashes_per_tree": 438
+        },
+        "leaf_field_bytes": 1684013056
+      },
+      "SLG1": {
+        "proof_bytes": 371936,
+        "fixed_bytes": 21124,
+        "framed_bytes": 393060,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 262144,
+          "s": 172,
+          "ell": 34,
+          "tau": 1,
+          "rho": 5,
+          "eta": 42,
+          "degree": 7,
+          "witness_packs": 724,
+          "hint_packs_per_mpc": 10,
+          "leaf_words": 816,
+          "max_frontier_hashes_per_tree": 438
+        },
+        "leaf_field_bytes": 1711276032
+      },
+      "signed_pair_bytes": 786133
+    },
+    "screen_height_20": {
+      "MNG1": {
+        "proof_bytes": 324120,
+        "fixed_bytes": 3911,
+        "framed_bytes": 328031,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 1048576,
+          "s": 139,
+          "ell": 26,
+          "tau": 1,
+          "rho": 5,
+          "eta": 41,
+          "degree": 7,
+          "witness_packs": 879,
+          "hint_packs_per_mpc": 10,
+          "leaf_words": 970,
+          "max_frontier_hashes_per_tree": 396
+        },
+        "leaf_field_bytes": 8136949760
+      },
+      "SLG1": {
+        "proof_bytes": 327656,
+        "fixed_bytes": 21124,
+        "framed_bytes": 348780,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 1048576,
+          "s": 139,
+          "ell": 26,
+          "tau": 1,
+          "rho": 5,
+          "eta": 41,
+          "degree": 7,
+          "witness_packs": 896,
+          "hint_packs_per_mpc": 10,
+          "leaf_words": 987,
+          "max_frontier_hashes_per_tree": 396
+        },
+        "leaf_field_bytes": 8279556096
+      },
+      "signed_pair_bytes": 697573
+    },
+    "screen_height_28": {
+      "MNG1": {
+        "proof_bytes": 237656,
+        "fixed_bytes": 3911,
+        "framed_bytes": 241567,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 268435456,
+          "s": 107,
+          "ell": 14,
+          "tau": 1,
+          "rho": 5,
+          "eta": 47,
+          "degree": 7,
+          "witness_packs": 1139,
+          "hint_packs_per_mpc": 9,
+          "leaf_words": 1231,
+          "max_frontier_hashes_per_tree": 338
+        },
+        "leaf_field_bytes": 2643552370688
+      },
+      "SLG1": {
+        "proof_bytes": 240344,
+        "fixed_bytes": 21124,
+        "framed_bytes": 261468,
+        "profile": {
+          "stage_target_bits": 256,
+          "digest_B": 64,
+          "N": 268435456,
+          "s": 107,
+          "ell": 14,
+          "tau": 1,
+          "rho": 5,
+          "eta": 47,
+          "degree": 7,
+          "witness_packs": 1163,
+          "hint_packs_per_mpc": 9,
+          "leaf_words": 1255,
+          "max_frontier_hashes_per_tree": 338
+        },
+        "leaf_field_bytes": 2695091978240
+      },
+      "signed_pair_bytes": 522949
+    }
+  }
+}

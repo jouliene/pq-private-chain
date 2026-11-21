@@ -133,3 +133,7 @@ See [PUBLICATION.json](../experiments/incremental-sync/PUBLICATION.json),
 [non-implementing review](../experiments/incremental-sync/review/CLEAN_REPRODUCTION01.md).
 This completes wallet synchronization only. Global blockchain development,
 complete-payment storage costs and formal PQ/privacy obligations remain open.
+
+## Funded fixed-parent TCitH evaluation
+
+The reviewed delivery includes the complete native proof, two-owner wallet harness, isolated PoW registration, branch and spent-state controls, costed security alternatives and a checksum-pinned release of public signed bundles and funding blocks. Reproduce the full decision with `bash experiments/funded-tcith/reproduce.sh`. The live proof registration and public history are preserved. [Decision](../experiments/funded-tcith/DECISION.md) · [Reproduction](../experiments/funded-tcith/README.md)

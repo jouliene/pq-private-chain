@@ -1,0 +1,71 @@
+{
+  "current_TCITH": {
+    "interactive_negative_log2": {
+      "batch": 319.9999999983205,
+      "degree": 284.9210190265606,
+      "subset": 256.1572249456121,
+      "sum": 256.1572249424468
+    },
+    "dfm_log2_loss": 771.4150374992788,
+    "dfm_log2_soundness_product": 515.257812556832,
+    "log2_terminal_challenges": 458.334006529662,
+    "dfm_log2_ordering_term_if_native_terminal_range": 315.665993470338,
+    "ideal_parent_log2": {
+      "capacity": 255.9999999986564,
+      "output": 255.9999999986564,
+      "classical_capacity_matching": 127.9999999993282,
+      "quantum_capacity_matching": 85.33333333288546,
+      "generic_digest_only_target_search": 127.9999999993282,
+      "capacity_matching_table_bytes_at_four_limbs": 90.33333333288546
+    }
+  },
+  "single_challenge": {
+    "repetitions": 480,
+    "challenge_bits": 760,
+    "log2_max_without_extractable_repetition": -280.0,
+    "query_budget_after_surcharge": "680564733841876926926749214863536423874",
+    "dfms42_log2_collision_term": -110.04598549227745,
+    "dfms42_log2_challenge_term": -17.67807190511264,
+    "dfms42_log2_sum": -17.67807190511264,
+    "suites": {
+      "MNG1": {
+        "registered_shape": "b60397b80e6bd46da58648ea3ecfebef7cb4d8b153795c41a4c5b0e0f86697f2",
+        "private_words": 16082,
+        "residuals": 16093,
+        "multiplications_per_repetition": 58482,
+        "raw_view_bytes": 1064432,
+        "proof_parts": {
+          "common_residual_share_vectors": 123594240,
+          "all_individual_commitments": 92160,
+          "two_complete_openings": 1021854720
+        },
+        "proof_bytes": 1145541120,
+        "framing_bytes": 3879,
+        "total_bytes": 1145544999,
+        "physical_limit": 262144,
+        "over_limit_bytes": 1145282855,
+        "two_leg_submission_bytes": null,
+        "minimum_opened_private_share_bytes_in_this_raw_codec": 123509760
+      },
+      "SLG1": {
+        "registered_shape": "77533cc1c383bec78358ae8b304a1151aab834c34656d2edcc167dccdaf1c339",
+        "private_words": 16818,
+        "residuals": 16833,
+        "multiplications_per_repetition": 60627,
+        "raw_view_bytes": 1104640,
+        "proof_parts": {
+          "common_residual_share_vectors": 129277440,
+          "all_individual_commitments": 92160,
+          "two_complete_openings": 1060454400
+        },
+        "proof_bytes": 1189824000,
+        "framing_bytes": 21092,
+        "total_bytes": 1189845092,
+        "physical_limit": 262144,
+        "over_limit_bytes": 1189582948,
+        "two_leg_submission_bytes": 2379690197,
+        "minimum_opened_private_share_bytes_in_this_raw_codec": 129162240
+      }
+    }
+  }
+}

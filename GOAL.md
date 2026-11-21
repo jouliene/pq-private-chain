@@ -1,3 +1,7 @@
+# Evaluate a complete funded fixed-parent TCitH swap leg
+
+Start from public 33bc626c66ba6a83e8ee496e8b6f44b7e207333f. Build and verify the entire 2^18-party proof, owner approval and branch-eligible ledger admission. Compare it with live SLG1 and assess any concrete funded security improvement. Gate subsequent product operations on both security and engineering. Independently reproduce the decision from public main. The global chain objective remains active.
+
 # Select the next funded private-spend prototype
 
 Starting from public `10cbb07909a62b6293518cbe70aba4213e0faa4c`, compare a two-input SIS accumulator bridge with corrected LaZer/LaBRADOR for the complete existing transaction. Require exact field and note bindings, realistic costs, independent public reproduction and an architecture decision. Preserve MNG1/SLG1, existing funds and spent identities. A qualifying new prover must demonstrate funded transfer, signed swap and recovered spending.

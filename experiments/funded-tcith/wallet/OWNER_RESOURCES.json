@@ -1,0 +1,115 @@
+{
+  "alice_native_candidate": {
+    "isolated_wall_s": 27.655408,
+    "max_rss_KiB": 64904,
+    "system_s": 0.02,
+    "user_s": 27.62,
+    "wall_s": 27.64
+  },
+  "both_registrations_verified_and_cross_signatures_rejected": true,
+  "candidate_proof_B": 238376,
+  "engine_sha256": "fc8fc51b398c5227c59254ada31c79102e08a564273a2652e90fd81a9832f9a8",
+  "funded_tip": "000003d1126576c0472aef9ead03b2fcfc5f03a6b4d2abf24912b374683b43e2",
+  "mixed_submission_sha256": "704dbfc747f26f481bbcce3a108575472b971553e2becea1f0785fc1d48fb26f",
+  "owners": {
+    "alice": {
+      "candidate_frontend": {
+        "longest_gap_s": 0.0503,
+        "peak_sum_PSS_KiB": 277706,
+        "peak_sum_RSS_KiB": 312708,
+        "samples": 20,
+        "wall_s": 0.993582
+      },
+      "candidate_frontend_and_prover": {
+        "longest_gap_s": 0.052,
+        "peak_sum_PSS_KiB": 336442,
+        "peak_sum_RSS_KiB": 382500,
+        "samples": 572,
+        "wall_s": 28.649239
+      },
+      "candidate_prover": {
+        "longest_gap_s": 0.052,
+        "peak_sum_PSS_KiB": 336442,
+        "peak_sum_RSS_KiB": 382500,
+        "samples": 552,
+        "wall_s": 27.655657
+      },
+      "full_owner": {
+        "longest_gap_s": 0.0533,
+        "peak_sum_PSS_KiB": 728450,
+        "peak_sum_RSS_KiB": 768428,
+        "samples": 868,
+        "wall_s": 43.460591
+      },
+      "prepare": {
+        "longest_gap_s": 0.0533,
+        "peak_sum_PSS_KiB": 728450,
+        "peak_sum_RSS_KiB": 768428,
+        "samples": 703,
+        "wall_s": 35.200184
+      },
+      "protocol_wait": {
+        "longest_gap_s": 0.0517,
+        "peak_sum_PSS_KiB": 277359,
+        "peak_sum_RSS_KiB": 312708,
+        "samples": 131,
+        "wall_s": 6.551129
+      },
+      "sample_interval_s": 0.05,
+      "teardown": {
+        "longest_gap_s": 0.0177,
+        "peak_sum_PSS_KiB": 147190,
+        "peak_sum_RSS_KiB": 173076,
+        "samples": 1,
+        "wall_s": 0.031841
+      },
+      "verify_and_authorize": {
+        "longest_gap_s": 0.0512,
+        "peak_sum_PSS_KiB": 291962,
+        "peak_sum_RSS_KiB": 340608,
+        "samples": 33,
+        "wall_s": 1.677438
+      }
+    },
+    "bob": {
+      "full_owner": {
+        "longest_gap_s": 0.0528,
+        "peak_sum_PSS_KiB": 725740,
+        "peak_sum_RSS_KiB": 768712,
+        "samples": 200,
+        "wall_s": 9.998952
+      },
+      "prepare": {
+        "longest_gap_s": 0.0528,
+        "peak_sum_PSS_KiB": 725740,
+        "peak_sum_RSS_KiB": 768712,
+        "samples": 131,
+        "wall_s": 6.550287
+      },
+      "protocol_wait": {
+        "longest_gap_s": 0.0509,
+        "peak_sum_PSS_KiB": 274852,
+        "peak_sum_RSS_KiB": 312848,
+        "samples": 34,
+        "wall_s": 1.710929
+      },
+      "sample_interval_s": 0.05,
+      "teardown": {
+        "longest_gap_s": 0.0245,
+        "peak_sum_PSS_KiB": 149247,
+        "peak_sum_RSS_KiB": 176832,
+        "samples": 1,
+        "wall_s": 0.031647
+      },
+      "verify_and_authorize": {
+        "longest_gap_s": 0.0506,
+        "peak_sum_PSS_KiB": 294655,
+        "peak_sum_RSS_KiB": 340812,
+        "samples": 34,
+        "wall_s": 1.706089
+      }
+    }
+  },
+  "purpose": "Separate fresh funded resource run with the same branch and registrations as the retained public proof pair.",
+  "shape_sha256": "77533cc1c383bec78358ae8b304a1151aab834c34656d2edcc167dccdaf1c339"
+}

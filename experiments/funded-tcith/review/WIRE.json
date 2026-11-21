@@ -1,0 +1,14 @@
+{
+  "physical_frames": [
+    259212,
+    160446
+  ],
+  "bare_proof": 238120,
+  "merkle_siblings": 387,
+  "terminal_words": 9461,
+  "digest_sha256": "7a6d2582f62fb52af1a9ff20efede3fa32f23ccaa22334313cd541146cd2fb99",
+  "opened_parties": 32,
+  "height": 12,
+  "fee": 0,
+  "remaining_frame_bytes": 2932
+}
