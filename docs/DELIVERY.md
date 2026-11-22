@@ -57,6 +57,15 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Structured private Keccak spending
+
+The public executable revision `9502266c7e976f16af47cb23a7104257dacf6968`
+passed four push workflows. An independent anonymous clone rebuilt the field code,
+proved both complete hidden paths from freshly signed funding, constructed the
+183,224-byte ordinary payment and opened both encrypted outputs. The proof fits
+the signed-leg allowance. Warm verification and the exact quantum-security
+argument remain integration gates. [Decision and command](../experiments/structured-keccak/DECISION.md) · [Public reproduction and CI](../experiments/structured-keccak/review/PUBLIC.md)
+
 ## Hidden funded membership
 
 An anonymous clean clone of `9dc3ca8ad63a47efe8982942296cc34debc527cd`

@@ -1,4 +1,4 @@
-# Structured Keccak — LOCAL, public verification pending
+# Structured Keccak — VERIFIED
 
 Public base `4810fefa6bc8de48e0ad4adb6b8e881242793a7a`. The four private orderings,
 fully encoded disconnected proof and eight-level control ran. A dual funded-depth-40
@@ -7,10 +7,14 @@ proof measured 173,138 B. The 99-permutation SGM1 ordinary payment measured
 receipt, fee or proof failed in a fresh verifier. The registered signed-leg shape
 fits by 48,992 B. Warm proof verification took 2.13 CPU seconds, above the
 0.574 s two-core budget for 100M mixed operations per year. Source and security
-review passed for research. The non-author will repeat from anonymous public main.
+review passed for research. Public main includes executable revision `9502266c7e976f16af47cb23a7104257dacf6968`.
+The non-author completed the full runner from an anonymous public clone on fresh signed
+funding and independently reproduced the four private orientations, invalid link, both depth-40
+inputs, complete ordinary payment, two working receipts and exact projected swap extent.
+Fresh proving took 41.15 s and public verification 2.34 s. All four public workflows passed.
 The global blockchain objective remains active.
 Run `bash experiments/structured-keccak/reproduce.sh "$(mktemp -d)/run"`.
-[Decision](experiments/structured-keccak/DECISION.md)
+[Decision](experiments/structured-keccak/DECISION.md) · [Independent run and CI](experiments/structured-keccak/review/PUBLIC.md)
 
 # Hidden funded membership — VERIFIED
 
