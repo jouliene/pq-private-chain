@@ -1,3 +1,7 @@
+# Snapshot bootstrap on funded C
+
+Measure startup to independently pinned provisional state and fully genesis-verified history. Restore an old seed from authenticated common records, spend on the original and winning branches, and publish reproducible fixtures and a development decision. Keep funded consensus and fork choice. The global blockchain goal stays active.
+
 # Online profile-C partial fills
 
 Implement and independently reproduce a persistent off-chain 100 A maker offer with 10 A for 1 B lots, two separately authorized and mined 50 A purchases, selected-branch accounting, cancellation, authorization recovery and fee/byte comparison. Keep consensus and funded profile C. Follow public delivery.

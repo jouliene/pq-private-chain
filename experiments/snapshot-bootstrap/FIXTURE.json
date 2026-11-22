@@ -1,0 +1,16 @@
+{
+  "archive_B": 3948506,
+  "archive_sha256": "c20e7c5d6985d6f0f81683de1720bce5eb45820a35d45e5721da959a01c2e3ed",
+  "file": "snapshot-c-public.tar.gz",
+  "members": 92,
+  "pin": {
+    "genesis": "42af130a8eea597a752a5a4c06d3f79fa33dada67ff6c66af651e5be0afd4678",
+    "height": 37,
+    "network": "7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac",
+    "rules": "ed7d970675cdcc418ad9456b96c1324431a27af14915f9599f09388e978b1b08",
+    "state_sha256": "1a6dee277cfe2a1cf692c5f564fc07fbcb2067e5f34d957eb99cd79375aa3a63",
+    "tip": "0000035c3a3737026688cdeacd8c2af57ee1c41b9ea412b9fc1d2ad88bef4964",
+    "version": 1,
+    "work": 155189248
+  }
+}

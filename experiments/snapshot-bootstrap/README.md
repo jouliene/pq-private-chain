@@ -1,0 +1,33 @@
+# Bootstrap a funded profile-C validator and recover an old wallet
+
+On Linux x86-64 install Python 3.10+, curl, gzip, tar and bubblewrap with working unprivileged user namespaces. From the repository root, run the complete fresh scenario in a new directory.
+
+```sh
+bash experiments/snapshot-bootstrap/reproduce.sh "$(mktemp -d)/run"
+```
+
+Three original funded-C validating peers replay the published H33 history. Fresh mining rewards fund an offline wallet on the original chain. Two of the peers independently derive the H37 checkpoint after receiving and validating the same blocks. The snapshot validator, genesis-only validator, public fixture server, and restored wallets run in separate processes with explicit mounts. The operator controls CPU mining and network partitions on one machine. The fresh test downloads the two [versioned, checksum-pinned inputs](reproduce.sh). It writes public measurements to `results.json` and checks the original bodies independently. Keep the containing runtime directory private: it also holds fresh funds, backups and wallet databases.
+
+To validate the specific public capture with the expected checksum and trust pin shipped in this checkout, use a different new directory. This path validates both branches and checks that a fully replayed heavier branch can replace an assumed checkpoint even when the losing base body is unavailable. The capture contains public blocks, compact records, snapshot state, manifest and scenario identifiers. Spending requires fresh owner keys and is exercised by the first command. [Fixture registration](FIXTURE.json) · [Versioned public release](https://github.com/jouliene/pq-private-chain/releases/tag/snapshot-bootstrap-c-v1)
+
+```sh
+bash experiments/snapshot-bootstrap/public-fixture.sh "$(mktemp -d)/public"
+```
+
+## What an operator trusts
+
+The operator supplies the expected state SHA-256, version, network, genesis, exact deployed rules identity, ordinary mined base ID, height and cumulative work through a separate local input. In the fresh experiment node B generates that input from its own validated database; node A exports the downloadable snapshot from a different validated database. The roles share implementation and physical host. The fixed-fixture experiment gets its expected registration from the published source, separately from the file server. An operator choosing a pin in practice also chooses its provenance.
+
+The versioned state binds selected anchors, header data and frontiers, cumulative fees and output counts, ordered commitments with creation heights, all spent identifiers with heights, complete per-asset registry events, and a digest for each height's common wallet record. A canonical, length-bounded encoding and independent registration bind the state. The rules digest covers the installed public source, native workers, registrations and helper code. A change to a wallet-only component can conservatively invalidate this deployment-specific pin. [Codec and verification](node_snapshot.py) · [Deployment identity](node_deployment.py)
+
+**Historical prefix assumed** means the receiver verified the pinned state identity, genesis-to-base parent linkage, actual PoW preimages, fixed target and cumulative work, plus the normal consensus transitions for the suffix. It has not independently verified every pre-base payment or established that the independent pin reports the true monetary state. It can subscribe to common history, evaluate new proofs and enforce current spentness under that assumption. A peer's reported chain height or work does not promote the node.
+
+Replaying original bodies into a separate empty database verifies the historical proofs and signatures. The receiver must match both the independently registered base and the selected suffix before publishing full status. Missing original bodies retain the prior status. A demonstrated mismatch quarantines the state across restart and disables monetary service. A fork through the assumed base requires a locally replayed preferred candidate. The winning work/tie rule, subsidy, registered verifiers and fee rules are the original funded rules. The original devnet also validates and mines the new payments on both forks. [Replay and fork rules](node_snapshot.py) · [Quarantine control](node_check.py)
+
+## Wallet data and measurement
+
+A pre-snapshot note commitment alone does not let its owner recover the encrypted receipt. The wallet obtains common ranges from its own node. The receiver checks every attached prefix record against its per-height pinned digest. That commitment covers the entire record, including ciphertext bytes, ordering and originating block. The later full replay independently regenerates those records from original validated transactions. A missing record produces an incomplete result without an asserted balance; a corrupt record is rejected. Only a 32-byte original backup is mounted as private input in the fresh recovery process. The recipient verifies the old receipt locally and the native wallet pins that exact note when proving the spend. Public peers receive block IDs or common ranges. A local node can still see client timing and the submitted transaction. [Wallet checks](wallet.py) · [Independent wire parser](review/check.py)
+
+Cold-role measurements time an initially empty validator through the identical H39 target, which includes the newly proved spend. Ordinary replay runs first. Its usable endpoint is already fully verified. Snapshot timing separates provisional availability and the additional independent replay. Snapshot construction, independent attestation, mining, wallet recovery and the comparison oracle are outside those clocks. The two roles share a machine and OS page cache. Exact traffic includes framed requests, replies, public inventory, state bytes and original blocks; the separately provisioned pin and installed software are reported separately. The snapshot policy drops old templates after checking work and fetches them again for historical validation. During full validation both databases and SQLite journals count toward the disk measurement. The 1 ms sampler records observed high-water logical/allocated bytes in the role's store, including scratch replay files; very short intermediate allocations may fall between samples. Deployed software, process memory, isolated tmpfs, source archives, wallets and diagnostic logs are outside node-store totals.
+
+The prototype transfer caps are 256 MiB for encoded state, 512 MiB for encoded work and 65,536 heights per served branch. It materializes state and the work package in memory. These are experiment transport limits. [Measurement and scenario](campaign.py) · [Architectural decision](DECISION.md)

@@ -1,3 +1,7 @@
+# Funded snapshot bootstrap
+
+For snapshot work, preserve the [explicit trust states, common history, original PoW preimages and genesis-replay controls](experiments/snapshot-bootstrap/README.md). A recognized state digest allows provisional suffix admission. Only independent local replay can verify an assumed prefix. Report startup and complete historical verification separately, including duplicate downloads and scratch disk. Keep expected pins independent of the download peer.
+
 # Online profile-C partial fills
 
 Use the [fresh partial-fill walkthrough](experiments/partial-fills/README.md) for changes to off-chain offer accounting and C negotiation. Hold potentially signed quantities across restart, expiry and reorg; confirm only exact selected SWB3 frame pairs. Keep participant homes and signing journals private.

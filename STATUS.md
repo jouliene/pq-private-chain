@@ -1,3 +1,7 @@
+# Funded C snapshot bootstrap — LOCAL
+
+Base `7e8a687e164d5e17f14ef428237b5985ae0349d8`. The operator completed fresh funding, authenticated pre-base wallet recovery, real C spending, full local replay, and the H36 competing branch. At H39 provisional operation took 3.24 s against 13.12 s for ordinary replay; cumulative full snapshot verification took 14.94 s. The fixed fixture passed independent block parsing and direct adoption of a fully validated winning branch while the original base was offline. Next are public release, anonymous fresh and fixed reproduction and CI. [Decision](experiments/snapshot-bootstrap/DECISION.md) · [Commands](experiments/snapshot-bootstrap/README.md)
+
 # Online profile-C partial fills — VERIFIED
 
 Two independently funded buyers discovered one 100 A order and each paid 5 B plus 3 native units for 50 A. The maker had 50 A remaining after the first selected purchase and zero after the second. A heavier branch detached the second purchase and reversed its fee. Outstanding authorization continued to encumber those 50 A until the exact signed pair was mined again. Competing requests for the last 10 A yielded one reservation. After a lost final reply and a maker restart, the buyer recovered the exact pair from its own node with the maker offline.
