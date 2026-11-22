@@ -1,3 +1,7 @@
+# Phase 1E — funded profile-C atomic swaps
+
+Extend occurrence-indexed supply across the two independently authorized legs, their shared block reward, and subsequent selected spends. Track acceptance from original SWB3 bytes, and reconcile the second partial fill with actual funded outputs. The global private PoW objective remains active.
+
 # Phase 1D — occurrence-indexed supply
 
 Account for every selected output at creation, then identify the unique earlier occurrence only at a real spend. Prove the selected-history invariant, compare it with Phase 1B and verify offline receipt and spending with the deployed profile C. Phase 1D passed kernel checks, a fresh funded wallet cycle, independent anonymous public reproduction and three automatic workflows at `e2f4647dbe5200122c4d41bfab84de3d746d8b9f`. The global private PoW objective remains active. [Decision and limits](experiments/occurrence-supply/README.md) · [Independent reproduction](experiments/occurrence-supply/review/PUBLIC.md)

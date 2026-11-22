@@ -1,0 +1,63 @@
+{
+  "accepted_owner_authorizations": 2,
+  "block_wide_duplicate_rejected": true,
+  "confirmed_fills": 2,
+  "durable_added_marks": 4,
+  "durable_miner_outputs": 1,
+  "durable_user_outputs": 4,
+  "first_opened_incoming_and_change": [
+    [
+      50,
+      0
+    ],
+    [
+      5,
+      40
+    ]
+  ],
+  "first_real_inputs_by_leg": [
+    1,
+    1
+  ],
+  "incomplete_pool_submission_rejected": true,
+  "incomplete_pow_block_rejected": true,
+  "native_fee_by_leg": [
+    3,
+    0
+  ],
+  "native_miner_credit": 103,
+  "registered_leg_proofs": 2,
+  "registry_writes": 0,
+  "rejected_cases_left_durable_state_unchanged": true,
+  "second_anchor_depths": [
+    4,
+    4
+  ],
+  "second_block_height": 48,
+  "second_buyer_input_B": 5,
+  "second_buyer_input_native": 3,
+  "second_opened_incoming_and_change": [
+    [
+      50,
+      0
+    ],
+    [
+      5,
+      0
+    ]
+  ],
+  "second_parent_height": 47,
+  "second_real_inputs_by_leg": [
+    1,
+    2
+  ],
+  "second_seller_input_A": [
+    10,
+    40
+  ],
+  "second_seller_uses_exact_first_change": true,
+  "selected_anchor_and_state_checked": true,
+  "selected_nodes": 3,
+  "signed_bundle_bytes": 400165,
+  "spent_bundle_rejected": true
+}

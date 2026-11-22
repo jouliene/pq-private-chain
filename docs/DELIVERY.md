@@ -57,6 +57,10 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Funded C atomic swap conservation
+
+The [Phase 1E command](../experiments/swap-occurrence/README.md) rebuilds the occurrence proof and reconciles two fresh partial fills. Publish only the allowlisted aggregate JSON summaries in the [workflow](../.github/workflows/swap-occurrence.yml). The packet-to-wallet correlations, private wire case and signing journals stay in the disposable reproduction directory.
+
 ## Funded C occurrence-indexed supply
 
 The [Phase 1D reproduction](../experiments/occurrence-supply/README.md) uses the public Phase 1C history, a fresh offline receipt and a newly proved spend. Publish only the three [workflow summaries](../.github/workflows/occurrence-supply.yml). The example used by the Lean path checker contains a private input link and stays inside the private reproduction directory.

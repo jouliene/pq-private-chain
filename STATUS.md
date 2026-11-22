@@ -1,3 +1,7 @@
+# Phase 1E — LOCAL, public verification pending
+
+Baseline `773c6a7c6062a43c6488d489ad546d2927b14538`. The integrated run compiled the history, two registered leg bridges and public-row refinement, reconciled both fresh swaps on three nodes, and reproduced rejection of incomplete and duplicate groups without changing persistent rows. The second fill consumed precisely 40 A of prior swap change plus an older 10 A. All 34 named kernel dependencies passed the final audit. Pending steps are anonymous public reproduction, exact-SHA Actions and the documentation handoff. [Run one command](experiments/swap-occurrence/README.md).
+
 # Phase 1D — VERIFIED for occurrence-indexed token supply
 
 Public implementation `e2f4647dbe5200122c4d41bfab84de3d746d8b9f` extends verified Phase 1C `8e0787f7468bdfb53fa4ae2aac7ed5a4e7b77c98`. Lean checked 51 named results. The covered selected C steps preserve public outstanding supply as the sum of unconsumed committed face values, without a spending key or real nullifier at birth. An eligible sorted-tree member has one chronological occurrence. Local body and owner binding plus NF freshness rule out a second debit. Under the stronger complete-opening premises, the Phase 1B balances agree. The general result is conditional on the pinned verifier's soundness and binding assumptions, and on a faithful interpretation of an imported prefix. The global private PoW goal remains active.
