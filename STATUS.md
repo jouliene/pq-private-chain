@@ -1,3 +1,7 @@
+# Phase 1D — LOCAL, public verification pending
+
+Lean checked the conditional selected-history invariant and an opaque positive birth. A fresh offline wallet restored 19 tokens and 9 native units, spent one real input and paid a fee of 3. Three nodes selected H48. The exact publication and independent test are pending. Run the [walkthrough](experiments/occurrence-supply/README.md) in a new private directory.
+
 # Phase 1C — VERIFIED with a conditional private-state refinement
 
 Lean 4.19.0 checked 16 refinement theorems for selected C supply packets. The modeled SQL event and its private monetary delta agree for the same packet and parent under the named openings, soundness and identity assumptions. Revisions, predecessor checks, the asset ID and the transaction digest are derived. A complete assignment of a compatible true nullifier to every arbitrary output recipient digest remains open. The global private PoW chain objective remains active.

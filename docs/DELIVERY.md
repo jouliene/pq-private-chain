@@ -57,6 +57,10 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Funded C occurrence-indexed supply
+
+The [Phase 1D reproduction](../experiments/occurrence-supply/README.md) uses the public Phase 1C history, a fresh offline receipt and a newly proved spend. Publish only the three [workflow summaries](../.github/workflows/occurrence-supply.yml). The example used by the Lean path checker contains a private input link and stays inside the private reproduction directory.
+
 ## Funded C supply packet refinement
 
 The Phase 1C [walkthrough](../experiments/supply-refinement/README.md) checks fresh private openings, original public block replay and Lean against selected SQLite rows. The versioned fixture contains only nine public blocks. The output directory also holds private funding links and true output nullifiers. Only the explicitly named aggregate JSON files in the [workflow](../.github/workflows/supply-refinement.yml) are deliverable.

@@ -1,0 +1,20 @@
+{
+  "inherited_blocks": 42,
+  "offline_restore_seed_bytes": 32,
+  "recovered_notes": 1,
+  "recovered_native": 9,
+  "recovered_tokens": 19,
+  "real_inputs": 1,
+  "public_marks": 2,
+  "unique_eligible_occurrence": true,
+  "native_paid": 4,
+  "native_change": 2,
+  "fee": 3,
+  "token_paid": 7,
+  "token_change": 12,
+  "registry_supply": 40,
+  "total_opened_holdings": 40,
+  "selected_nodes": 3,
+  "selected_height": 48,
+  "cumulative_fees": 78
+}

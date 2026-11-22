@@ -1,3 +1,7 @@
+# Phase 1D — occurrence-indexed supply
+
+Account for every selected output at creation, then identify the unique earlier occurrence only at a real spend. Prove the selected-history invariant, compare it with Phase 1B and verify offline receipt and spending with the deployed profile C. The global private PoW objective remains active.
+
 # Phase 1C — committed C supply packets
 
 Phase 1C derives all four modeled registry writes from packet bytes, registered worker replies and pre-block guards. The conditional monetary theorem, actual funded partial burn and public-clone reproduction cover the stated bounded objective. A compatible spend identity for every accepted output remains an explicit open premise. Global private PoW chain development remains active. [Decision](experiments/supply-refinement/README.md) · [Independent reproduction](experiments/supply-refinement/review/PUBLIC.md)
