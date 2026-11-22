@@ -1,4 +1,4 @@
-# Decide how a fresh-genesis spend proves two hidden inputs were funded
+# Decide how a fresh-genesis spend proves two hidden inputs were funded — verified
 
 Starting at public `51897f17bc9e564160066770083b3bb682bf4131`, qualify
 SmallWood+ on a linked pair of hidden parent hashes with a verifier-owned
@@ -8,6 +8,11 @@ wallet work and data availability. Compare mixed traffic at 10M, 30M and
 100M annual operations. Publish the exact limits or a measured design and
 obtain independent public reproduction. C, N7P2 and the global PoW
 blockchain objective remain available.
+
+The independent public run reproduced both funded depth-40 paths and their measured
+5,966,544-byte mixed argument. Hold both full monetary ports and advance the
+packed, privately wired Keccak transition experiment. The global chain goal remains active.
+[Decision](experiments/hidden-membership/DECISION.md) · [Independent acceptance](experiments/hidden-membership/review/PUBLIC.md)
 
 # Select a fresh-genesis private spend design — verified
 

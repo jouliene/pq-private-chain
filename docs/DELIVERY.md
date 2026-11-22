@@ -57,6 +57,16 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Hidden funded membership
+
+An anonymous clean clone of `9dc3ca8ad63a47efe8982942296cc34debc527cd`
+rebuilt every dependency, produced fresh signed funding and verified two distinct
+hidden openings against one public depth-40 root. It reproduced both full path
+profiles, the table-lookup component, size models and branch controls. All four
+push workflows passed on the same executable revision. Keep the funded tree and
+change the proof of its private hash transitions before integrating a payment.
+[Decision](../experiments/hidden-membership/DECISION.md) · [Independent measurements, commands and CI](../experiments/hidden-membership/review/PUBLIC.md)
+
 ## Fresh-genesis private spend selection
 
 A non-author rebuilt both pinned proof components and exercised fresh
