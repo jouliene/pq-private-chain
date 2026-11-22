@@ -1,0 +1,215 @@
+{
+  "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+  "genesis_validator_agreed": true,
+  "holder_transfer": "2ca0ce59cff58a975a879dcfd2930c19bfc7a8c879a3c7108f904f91f52e5a19",
+  "issuance_ceiling": 4611686018427387903,
+  "losing": {
+    "assets": 5,
+    "fees": 63,
+    "height": 41,
+    "outputs": 87,
+    "registry_events": 10,
+    "registry_supplies": [
+      [
+        "fixed",
+        13
+      ],
+      [
+        "fixed",
+        80
+      ],
+      [
+        "managed",
+        1
+      ],
+      [
+        "managed",
+        15
+      ],
+      [
+        "managed",
+        97
+      ]
+    ],
+    "selected_compact_rows": 41,
+    "spent": 46,
+    "subsidy": 4100,
+    "tip": "000000f3e7b12e4a666d744b429da59e0c88ded20373562e31749b9536525c8a",
+    "validation_mode": "original"
+  },
+  "original_burn": "c04be62603a92831cc6cf3aa0e45514dda88f1c86b547226307df6cc4c37b0f5",
+  "registration": "a40bc11172c00dbcdf843e32c6a76c22c40a73e9018cb5bb058a6045aa0b6fad",
+  "rejection_checks": [
+    "outstanding supply overflow",
+    "stale issuer state"
+  ],
+  "remint": "6bb504ef0c8ded1267cd95ebd38e3373d9e3913a4037bcb10343620b8ef12812",
+  "scanned_new_receipt_commitments": 8,
+  "stages": {
+    "full_burn": {
+      "events": [
+        {
+          "after": 4611686018427387903,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 0,
+          "delta": 4611686018427387903,
+          "encoded_delta": 4611686018427387903,
+          "height": 38,
+          "operation": "register",
+          "token_in": 0,
+          "token_out": 4611686018427387903,
+          "tx": "a40bc11172c00dbcdf843e32c6a76c22c40a73e9018cb5bb058a6045aa0b6fad"
+        },
+        {
+          "after": 0,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 4611686018427387903,
+          "delta": -4611686018427387903,
+          "encoded_delta": 9223372036854775807,
+          "height": 40,
+          "operation": "burn",
+          "token_in": 4611686018427387903,
+          "token_out": 0,
+          "tx": "c04be62603a92831cc6cf3aa0e45514dda88f1c86b547226307df6cc4c37b0f5"
+        }
+      ],
+      "height": 40,
+      "opened_face_value": 0,
+      "tip": "000001d79599f6d62ef53fb74c9ca652ab4a5d18e580c0b35966b9d21545d5dd"
+    },
+    "pre_burn": {
+      "events": [
+        {
+          "after": 4611686018427387903,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 0,
+          "delta": 4611686018427387903,
+          "encoded_delta": 4611686018427387903,
+          "height": 38,
+          "operation": "register",
+          "token_in": 0,
+          "token_out": 4611686018427387903,
+          "tx": "a40bc11172c00dbcdf843e32c6a76c22c40a73e9018cb5bb058a6045aa0b6fad"
+        }
+      ],
+      "height": 39,
+      "opened_face_value": 4611686018427387903,
+      "tip": "000003a990558ac3917d338909fc37440ba7669379b73ab8c820abcbe181c574"
+    },
+    "registration": {
+      "events": [
+        {
+          "after": 4611686018427387903,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 0,
+          "delta": 4611686018427387903,
+          "encoded_delta": 4611686018427387903,
+          "height": 38,
+          "operation": "register",
+          "token_in": 0,
+          "token_out": 4611686018427387903,
+          "tx": "a40bc11172c00dbcdf843e32c6a76c22c40a73e9018cb5bb058a6045aa0b6fad"
+        }
+      ],
+      "height": 38,
+      "opened_face_value": 4611686018427387903,
+      "tip": "000003ccb88e62496509208b92ea8e06f6902c12330b52668f40b317e9bcf004"
+    },
+    "remint": {
+      "events": [
+        {
+          "after": 4611686018427387903,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 0,
+          "delta": 4611686018427387903,
+          "encoded_delta": 4611686018427387903,
+          "height": 38,
+          "operation": "register",
+          "token_in": 0,
+          "token_out": 4611686018427387903,
+          "tx": "a40bc11172c00dbcdf843e32c6a76c22c40a73e9018cb5bb058a6045aa0b6fad"
+        },
+        {
+          "after": 0,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 4611686018427387903,
+          "delta": -4611686018427387903,
+          "encoded_delta": 9223372036854775807,
+          "height": 40,
+          "operation": "burn",
+          "token_in": 4611686018427387903,
+          "token_out": 0,
+          "tx": "c04be62603a92831cc6cf3aa0e45514dda88f1c86b547226307df6cc4c37b0f5"
+        },
+        {
+          "after": 1,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 0,
+          "delta": 1,
+          "encoded_delta": 1,
+          "height": 41,
+          "operation": "mint",
+          "token_in": 0,
+          "token_out": 1,
+          "tx": "6bb504ef0c8ded1267cd95ebd38e3373d9e3913a4037bcb10343620b8ef12812"
+        }
+      ],
+      "height": 41,
+      "opened_face_value": 1,
+      "tip": "000000f3e7b12e4a666d744b429da59e0c88ded20373562e31749b9536525c8a"
+    },
+    "winning": {
+      "events": [
+        {
+          "after": 4611686018427387903,
+          "asset": "733c87faa1b8c84d44cf8d5f5e980c1f1695ca5d269bab2a1d22a8e8c678d432",
+          "before": 0,
+          "delta": 4611686018427387903,
+          "encoded_delta": 4611686018427387903,
+          "height": 38,
+          "operation": "register",
+          "token_in": 0,
+          "token_out": 4611686018427387903,
+          "tx": "a40bc11172c00dbcdf843e32c6a76c22c40a73e9018cb5bb058a6045aa0b6fad"
+        }
+      ],
+      "height": 42,
+      "opened_face_value": 4611686018427387903,
+      "tip": "000001c633c6294aced9ee7e4338c261fcee0068c7297b68e36cc7a70d70b1c6"
+    }
+  },
+  "winning": {
+    "assets": 5,
+    "fees": 57,
+    "height": 42,
+    "outputs": 84,
+    "registry_events": 8,
+    "registry_supplies": [
+      [
+        "fixed",
+        13
+      ],
+      [
+        "fixed",
+        80
+      ],
+      [
+        "managed",
+        15
+      ],
+      [
+        "managed",
+        97
+      ],
+      [
+        "managed",
+        4611686018427387903
+      ]
+    ],
+    "selected_compact_rows": 42,
+    "spent": 42,
+    "subsidy": 4200,
+    "tip": "000001c633c6294aced9ee7e4338c261fcee0068c7297b68e36cc7a70d70b1c6",
+    "validation_mode": "original"
+  }
+}

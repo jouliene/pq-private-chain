@@ -1,3 +1,7 @@
+# Funded C token supply invariant
+
+Derive fixed and managed registration, additional mint and holder burn from the actual MNG3 equations and selected registry. Prove the invariant from consistent state for every asset, cover zero and the ceiling, and compare funded openings and post-reorg winning replay. Independent public reproduction is required.
+
 # Machine-checked monetary conservation for a funded C transfer
 
 Derive per-asset and native conservation from the registered ordinary circuit, selected live notes, nullifiers, and the actual single miner credit. Compare with known funded wallet openings and a mined block. Publish and independently reproduce under `docs/DELIVERY.md`. Keep cryptographic binding, proof acceptance and privacy qualifications explicit.

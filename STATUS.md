@@ -1,3 +1,9 @@
+# Funded C token supply — LOCAL
+
+Lean 4.19.0 derived the invariant for every asset, from the actual bounded field equations, selected live-note transition and public registry update. The director reconciled all 40 original encrypted outputs across the archived branches with eight test backups. C covered +6 mint, fixed +13, managed +15 and a holder burn of 16. The new fork covered a maximum registration, complete burn, remint from zero, cap and predecessor rejection, and rollback to the maximum. A fourth node replayed only the winning originals from genesis. Public independent reproduction and CI are pending. The global blockchain objective remains active.
+
+[Decision and commands](experiments/funded-supply/README.md) · [Lean model](experiments/funded-supply/Supply.lean) · [Source map](experiments/funded-supply/MAPPING.md)
+
 # Ordinary funded C transfer conservation — VERIFIED
 
 Lean 4.19.0 derives integer conservation for every asset from the registered ordinary transfer's local equations and ranges. Under the funded-opening and unique-spent-identity premises, the live native sum falls by the fee until the miner receives it. The single inclusion creates only the block subsidy of 100. The director checked original H25 wallet openings. A non-author cloned public main, replayed H25 and independently opened the four notes in a fresh H40 payment. The two inputs supplied 34 native and 28 token units. Recipient and change accounted for 31 native and all 28 tokens. Both miners' selected rewards were 103 in their respective blocks. All three fresh nodes agreed on the 40-block selected history.
