@@ -1,6 +1,10 @@
-# Phase 1C — in progress
+# Phase 1C — VERIFIED with a conditional private-state refinement
 
-The registered C wallet produced a genuine two-input partial burn. Initial funding of 16 tokens and 17 native left change of 4 and 14. The H41 row fell from 30 to 18 and the H42 mint signed the new revision. Public replay traced four historical and four new supply events through the unmodified validator. The conditional refinement and its remaining output-key obligation are under independent review. [Decision and one-command reproduction](experiments/supply-refinement/README.md) · [Pinned original evidence](experiments/supply-refinement/fixed-trace.json)
+Lean 4.19.0 checked 16 refinement theorems for selected C supply packets. The modeled SQL event and its private monetary delta agree for the same packet and parent under the named openings, soundness and identity assumptions. Revisions, predecessor checks, the asset ID and the transaction digest are derived. A complete assignment of a compatible true nullifier to every arbitrary output recipient digest remains open. The global private PoW chain objective remains active.
+
+A non-author cloned public HTTPS revision `d449aeae595b6563e2e2551fcecdbe9fcdcaca2c`, verified the pinned original trace and generated fresh wallets and blocks. In the fresh H41 burn, funded inputs of 16 tokens and 17 native units returned 4 and 14, respectively. Supply fell from 30 to 18. The block reward of 106 paid the subsidy and two fees of 3. The H42 mint bound the preceding burn and increased supply to 20. The auditor independently rejected both a wrong prior revision and incorrect private change. The source and test revision passed all three public workflows. The handoff adds only documentation and independent observations.
+
+[Decision and one-command reproduction](experiments/supply-refinement/README.md) · [Four-operation source map](experiments/supply-refinement/OBLIGATIONS.md) · [Independent review](experiments/supply-refinement/review/PUBLIC.md) · [Original public fixture](https://github.com/jouliene/pq-private-chain/releases/tag/phase1c-funded-supply-v1) · [Phase 1C CI](https://github.com/jouliene/pq-private-chain/actions/runs/45020537974) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/45020537976) · [Payment CI](https://github.com/jouliene/pq-private-chain/actions/runs/45020537996)
 
 # Phase 1B — funded C token supply VERIFIED
 

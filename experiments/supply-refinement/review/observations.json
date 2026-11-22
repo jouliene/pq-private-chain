@@ -1,0 +1,72 @@
+{
+  "additional_lean_checks": {
+    "sha256_and_binary_roundtrip_cases": 20,
+    "valid_anchor_count_cases": 60
+  },
+  "command_exit": 0,
+  "fixed": {
+    "burn_private_residual_checked": false,
+    "burn_tx": "dac03ee85faad7740dd101266c2bf75ee6db5e65c88af9aebeaf44611efc43fa",
+    "fees": 69,
+    "issuer_verifications": 4,
+    "kernel_receipt_sha256": "8ec83899a6fefaa2d3c116892239728f35ea27b4fc664b6cf0328f9ecfdd5fec",
+    "mint_tx": "7efb5c30e725bc1dfb7fb557d6b012e00fe425765fe2290c1925db054a41889a",
+    "output_leaves": 92,
+    "public_events": 8,
+    "registry_events": 11,
+    "selected_tip": "000001769c109df6a80293e45490b4285f8736251f815036a1966c7d2ea288e0",
+    "spent": 50,
+    "trace_sha256": "90954bee613b7713ac395de24fb79a4ff50c071fc0dbacc5e560ec13a4c4ca62"
+  },
+  "fixture_archive_sha256": "d87fe6525f029565844c53563a7fdbc6be71996a07ad3fcee5a6d9c4f1999910",
+  "fixture_tag": "phase1c-funded-supply-v1",
+  "fresh": {
+    "burn_private_residual_checked": true,
+    "burn_tx": "15f353228a3bb3d3f6e3b9fb780fe7a051f07f3bb7f6837bd7ee7a26ec02434f",
+    "fees": 69,
+    "issuer_verifications": 4,
+    "kernel_receipt_sha256": "a3e3d1aba074c3352c67d998fef3988ae2fa636a3c3cfd681e7f2b1cdb13efa5",
+    "mint_tx": "a2abeab360867f0ea6c99cfbd0d39bd5ebe606d78b307bd1f64d2cae30589162",
+    "output_leaves": 92,
+    "public_events": 8,
+    "registry_events": 11,
+    "selected_tip": "0000035a3eb03a207d571c537de75d21f3dfcd75369987227e097267f3c7a1e7",
+    "spent": 50,
+    "trace_sha256": "c52c508cec9e1535077ae9fc88f7ba2eae8e1a62309ad1de81d51af26af5e7fb"
+  },
+  "lean_4_19_named_refinement_theorems": 16,
+  "negative_controls": [
+    {
+      "exit": 1,
+      "input_changed": "latest sequence",
+      "rejection": "rejected original packet or pre-block issuer policy"
+    },
+    {
+      "exit": 1,
+      "input_changed": "token change",
+      "rejection": "private monetary residual rejected"
+    }
+  ],
+  "source_registration": {
+    "native_sha256": "881128195a079fab2f97c0a32c02fdf390b08fe0f168b77d6f5f739a5e523ef6",
+    "regenerated_source_pins": 12,
+    "registered_key_sha256": "6cb89745c94ec7b2ff97173ec0819b8567ae5672991b2fdbbe3cbe5810ebadf2",
+    "registration": {
+      "degree_bits": 13,
+      "folds": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "gates_before_blinding": 548,
+      "public_inputs": 32,
+      "suite": "MNG3"
+    },
+    "reward_role_sha256": "07793c1d2d7d76c9196a3c95a098e1c70791bbc0720a56627f7cb8fd05af4164",
+    "reward_vectors": 5
+  },
+  "tested_public_commit": "d449aeae595b6563e2e2551fcecdbe9fcdcaca2c",
+  "upstream_commit": "f04c91307837c0231668383bec76ba98d89d2652"
+}

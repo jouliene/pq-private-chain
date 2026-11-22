@@ -1,6 +1,6 @@
 # Phase 1C — committed C supply packets
 
-Derive the four selected supply transitions from packet and verifier bytes, pre-block checks and actual state writes. Check a funded partial burn with change, kernel-check the formal portion and reproduce the public revision. Global private PoW chain development remains active.
+Phase 1C derives all four modeled registry writes from packet bytes, registered worker replies and pre-block guards. The conditional monetary theorem, actual funded partial burn and public-clone reproduction cover the stated bounded objective. A compatible spend identity for every accepted output remains an explicit open premise. Global private PoW chain development remains active. [Decision](experiments/supply-refinement/README.md) · [Independent reproduction](experiments/supply-refinement/review/PUBLIC.md)
 
 # Funded C token supply invariant
 
