@@ -1,6 +1,10 @@
-# Funded C snapshot bootstrap — LOCAL
+# Funded C snapshot bootstrap — VERIFIED
 
-Base `7e8a687e164d5e17f14ef428237b5985ae0349d8`. The operator completed fresh funding, authenticated pre-base wallet recovery, real C spending, full local replay, and the H36 competing branch. At H39 provisional operation took 3.24 s against 13.12 s for ordinary replay; cumulative full snapshot verification took 14.94 s. The fixed fixture passed independent block parsing and direct adoption of a fully validated winning branch while the original base was offline. Next are public release, anonymous fresh and fixed reproduction and CI. [Decision](experiments/snapshot-bootstrap/DECISION.md) · [Commands](experiments/snapshot-bootstrap/README.md)
+**Continue as an optional fast start with an independently obtained registration.** An empty node reached the same H39 tip in 3.40 s in the non-author run, with its historical prefix explicitly assumed. Ordinary full replay took 13.03 s; fully corroborating the snapshot took 15.42 s. The respective framed byte counts were 3,753,027, 3,715,205 and 7,284,607. File-store peaks and timing methodology are in the decision. Genesis replay remains the default for full historical assurance.
+
+Source `1237ed898eda343c10d3518ae588ac46e84c607b` descends from `7e8a687e164d5e17f14ef428237b5985ae0349d8`. A non-author downloaded the public source into an empty directory and ran both published commands. The fresh 32-byte backup recovered one 17-unit note, spent it after H37, and recovered the selected funds across a heavier fork below the base. All selected funds, four asset supplies, fees and spent identifiers matched genesis replay. The fixed release also validated the winning branch with the losing base body unavailable. The three public workflows passed on the executable SHA. The later handoff contains documentation and reviewer observations only. The global blockchain objective stays active.
+
+[Decision](experiments/snapshot-bootstrap/DECISION.md) · [Independent evidence](experiments/snapshot-bootstrap/review/PUBLIC.md) · [Walkthrough](experiments/snapshot-bootstrap/README.md) · [Public fixture](https://github.com/jouliene/pq-private-chain/releases/tag/snapshot-bootstrap-c-v1) · [Snapshot CI](https://github.com/jouliene/pq-private-chain/actions/runs/45009519073) · [Payment CI](https://github.com/jouliene/pq-private-chain/actions/runs/45009519140) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/45009519057)
 
 # Online profile-C partial fills — VERIFIED
 

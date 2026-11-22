@@ -1,0 +1,224 @@
+{
+  "checkpoint_state_B": 37586,
+  "conflicting_pin_quarantined_across_restart": true,
+  "fixed": {
+    "branches": {
+      "anchor_heights": [
+        38,
+        40
+      ],
+      "common_height": 36,
+      "original_height": 39,
+      "original_tip": "00000311d03f6555bb5e05ed11d6eea2906a2ca299c8e7581d5755c5202d96e4",
+      "selected_fee": 3,
+      "shared_spend_nullifiers": 1,
+      "winning_height": 41,
+      "winning_tip": "00000089cb4673e40a99025dfc2bcb35c7ef85b55d95bbcc6b37c2c172876340"
+    },
+    "checkpoint": "0000035c3a3737026688cdeacd8c2af57ee1c41b9ea412b9fc1d2ad88bef4964",
+    "checkpoint_ordered_compact_sha256": "e0f9d7e89011388a726d842f237d83f6aeeca84d8ea12a740b37345c67b7ceb4",
+    "compact_B": 96690,
+    "compact_records": 44,
+    "original_B": 3892900,
+    "original_blocks": 44,
+    "receipt_origins_checked": 44,
+    "reward_origins_checked": 44,
+    "selected": {
+      "assets": 4,
+      "fees": 57,
+      "height": 41,
+      "outputs": 83,
+      "registry_events": 7,
+      "registry_supplies": [
+        [
+          "fixed",
+          13
+        ],
+        [
+          "fixed",
+          80
+        ],
+        [
+          "managed",
+          15
+        ],
+        [
+          "managed",
+          97
+        ]
+      ],
+      "selected_compact_rows": 41,
+      "spent": 42,
+      "subsidy": 4100,
+      "tip": "00000089cb4673e40a99025dfc2bcb35c7ef85b55d95bbcc6b37c2c172876340",
+      "validation_mode": "full"
+    },
+    "state_sha256": "1a6dee277cfe2a1cf692c5f564fc07fbcb2067e5f34d957eb99cd79375aa3a63"
+  },
+  "fixed_branch_adopted_with_losing_base_offline": true,
+  "fixed_exit": 0,
+  "fresh": {
+    "branches": {
+      "anchor_heights": [
+        38,
+        40
+      ],
+      "common_height": 36,
+      "original_height": 39,
+      "original_tip": "000000332095b4c7a8247b2f8878bc8bd6e296c32b63b70de440aa0b721494c2",
+      "selected_fee": 3,
+      "shared_spend_nullifiers": 1,
+      "winning_height": 41,
+      "winning_tip": "000003fd9f19181957d912def74c157219f2a4199a915469f63800b3b5356602"
+    },
+    "checkpoint": "00000158eee7c5cd0364133bfeed545d8cc26031f91a72eaead37c20f692e5d7",
+    "checkpoint_ordered_compact_sha256": "c988f58f07aa112c049acd699d89e1422fce9cbc0eedbddea60ba82a9f843245",
+    "compact_B": 96690,
+    "compact_records": 44,
+    "original_B": 3892900,
+    "original_blocks": 44,
+    "receipt_origins_checked": 44,
+    "reward_origins_checked": 44,
+    "selected": {
+      "assets": 4,
+      "fees": 57,
+      "height": 41,
+      "outputs": 83,
+      "registry_events": 7,
+      "registry_supplies": [
+        [
+          "fixed",
+          13
+        ],
+        [
+          "fixed",
+          80
+        ],
+        [
+          "managed",
+          15
+        ],
+        [
+          "managed",
+          97
+        ]
+      ],
+      "selected_compact_rows": 41,
+      "spent": 42,
+      "subsidy": 4100,
+      "tip": "000003fd9f19181957d912def74c157219f2a4199a915469f63800b3b5356602",
+      "validation_mode": "full"
+    },
+    "state_sha256": "84fde87cfcdcbdfd029a02a6b8b902418b4aa028ed30bff8c5cbe7fcc3e43ca7"
+  },
+  "fresh_exit": 0,
+  "fresh_operator_pin_B": 460,
+  "fresh_operator_pin_sha256": "005554f325ce1a7702735ae13693dd7638d09d3a229e27fc6aa477690a2e26ea",
+  "fresh_run_results_sha256": "873e69e1f8a30b178eac9b5f8f3307f5ed40e35311ffc8c78a21d8402b414406",
+  "fresh_wallet": {
+    "final_wallets": [
+      3,
+      11
+    ],
+    "first_spend": {
+      "change": 3,
+      "complete": true,
+      "fee": 3,
+      "history_reply_B": 2612,
+      "history_request_B": 1520,
+      "packet_B": 182863,
+      "real_inputs": 1,
+      "source_height": 36,
+      "submitted": true
+    },
+    "fork_wallets": [
+      17,
+      0
+    ],
+    "missing": {
+      "complete": false,
+      "history_reply_B": 80121,
+      "history_request_B": 716,
+      "reason": "snapshot wallet history unavailable",
+      "submitted": false
+    },
+    "old_branch_balances": [
+      3,
+      11
+    ],
+    "old_complete": {
+      "complete": true,
+      "history_reply_B": 11759,
+      "history_request_B": 1173,
+      "native": 17,
+      "notes": 1,
+      "submitted": false
+    },
+    "reference_final_wallets": [
+      3,
+      11
+    ],
+    "reference_fork_wallets": [
+      17,
+      0
+    ],
+    "winning_spend": {
+      "change": 3,
+      "complete": true,
+      "fee": 3,
+      "history_reply_B": 2612,
+      "history_request_B": 1520,
+      "packet_B": 182863,
+      "real_inputs": 1,
+      "source_height": 36,
+      "submitted": true
+    }
+  },
+  "installed_release_matches_expected_pin": true,
+  "measured_H39": {
+    "ordinary_to_full": {
+      "application_B": 3715205,
+      "blocks": 39,
+      "elapsed_s": 13.028894301998662,
+      "end_allocated_B": 4083712,
+      "observed_peak_allocated_B": 4173824,
+      "observed_peak_logical_B": 4170408,
+      "original_body_B": 3708923,
+      "reply_B": 3711422,
+      "request_B": 3783
+    },
+    "snapshot_to_full": {
+      "application_B": 7284607,
+      "blocks": 76,
+      "elapsed_s": 15.41842204099521,
+      "end_allocated_B": 4083712,
+      "observed_peak_allocated_B": 8491008,
+      "observed_peak_logical_B": 8484872,
+      "original_body_B": 7234535,
+      "reply_B": 7277078,
+      "request_B": 7529
+    },
+    "snapshot_to_usable": {
+      "application_B": 3753027,
+      "blocks": 39,
+      "elapsed_s": 3.403678286005743,
+      "end_allocated_B": 348160,
+      "observed_peak_allocated_B": 434176,
+      "observed_peak_logical_B": 430752,
+      "original_body_B": 3708923,
+      "reply_B": 3749093,
+      "request_B": 3934
+    }
+  },
+  "operator_and_peer_pins_match": true,
+  "origin": "https://github.com/jouliene/pq-private-chain.git",
+  "original_public_blocks_sha256": "24fc62066d1c43b46e33152d83ee642b4d077aed7d9030ce3ffa2b31b5ceea87",
+  "original_public_deployment_sha256": "682ed92c510c0b73ddf21ed7c50c048c4430bb8b06c5e6fc28db1e63e8c5d942",
+  "release_archive_B": 3948506,
+  "release_archive_sha256": "c20e7c5d6985d6f0f81683de1720bce5eb45820a35d45e5721da959a01c2e3ed",
+  "release_members": 92,
+  "release_tag": "snapshot-bootstrap-c-v1",
+  "rules_sha256": "ed7d970675cdcc418ad9456b96c1324431a27af14915f9599f09388e978b1b08",
+  "shared_prefix_gap_kept_provisional": true,
+  "tested_commit": "1237ed898eda343c10d3518ae588ac46e84c607b"
+}

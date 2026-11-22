@@ -2,6 +2,8 @@
 
 Measure startup to independently pinned provisional state and fully genesis-verified history. Restore an old seed from authenticated common records, spend on the original and winning branches, and publish reproducible fixtures and a development decision. Keep funded consensus and fork choice. The global blockchain goal stays active.
 
+The fresh and fixed public reproductions both passed. Continue the opt-in bootstrap for early availability; ordinary replay remains the default for complete historical verification. [Decision](experiments/snapshot-bootstrap/DECISION.md) · [Independent reproduction](experiments/snapshot-bootstrap/review/PUBLIC.md)
+
 # Online profile-C partial fills
 
 Implement and independently reproduce a persistent off-chain 100 A maker offer with 10 A for 1 B lots, two separately authorized and mined 50 A purchases, selected-branch accounting, cancellation, authorization recovery and fee/byte comparison. Keep consensus and funded profile C. Follow public delivery.

@@ -57,6 +57,10 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Funded C snapshot bootstrap
+
+The fresh-wallet and fixed-fixture [reproduction commands](../experiments/snapshot-bootstrap/README.md) cover distinct obligations. The [versioned release](https://github.com/jouliene/pq-private-chain/releases/tag/snapshot-bootstrap-c-v1) carries only public originals, compact wallet records, checkpoint state, manifest and test branch identities. The checkout pins its archive digest and independently obtained base registration. Record provisional and fully verified measurements separately. [Decision](../experiments/snapshot-bootstrap/DECISION.md)
+
 ## Online partial fills on funded C
 
 The [CLI walkthrough](../experiments/partial-fills/README.md) downloads public pinned inputs, extends the funded chain, negotiates two purchases against one private order, detaches and re-includes a signed fill, and mines an equal-notional full swap. Its final independent parser checks all three selected chains, both owners’ signing journals and the source of the second fill’s change. The published evidence contains public block identities and synthetic accounting totals. Keep the runtime directories and off-chain order capabilities private. [Measured decision](../experiments/partial-fills/RESULTS.md)
