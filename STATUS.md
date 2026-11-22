@@ -1,3 +1,15 @@
+# SGM1 two-core admission — first funded integration tested
+
+From public `beae20b4b9b81598708262cc407f21553ca7ae94`, the native verifier and
+two resident wallets passed the first 20-operation integration. Both public
+verifiers accepted all 22 legs. The seed-restored payment, exact swap rollback
+and alternate branch passed, including 21 differential rejection vectors.
+The first 20-frame hash list has SHA-256
+`ee8118b3bf28305271afde1f9b5e90da48d2f1005dbef509119ee6b5d2248175`.
+Complete the ten-wave capacity trace, independent anonymous reproduction and CI
+before the bounded decision. The funded C registration remains in service.
+[Commands and measurement roles](experiments/sgm1-admission/README.md)
+
 # Structured Keccak — VERIFIED
 
 Public base `4810fefa6bc8de48e0ad4adb6b8e881242793a7a`. The four private orderings,

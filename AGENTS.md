@@ -1,3 +1,12 @@
+# SGM1 isolated admission
+
+For the native four-group verifier, compare every changed public wiring address and
+constraint target with the registered Python relation. Exercise signed pairs, the
+single fee and current branch/spentness at the ordered write boundary. Use the
+[SGM1 reproduction](experiments/sgm1-admission/README.md) for independent correctness
+and two-core measurements. Keep fixture proving and the reference oracle outside
+the admission timer. The funded PoW chain retains C.
+
 # Funded profile C assurance
 
 For changes under `experiments/funded-pq-assurance`, preserve profile C and all published funded-membership evidence as the executable baseline. Keep arbitrary hash collisions, fixed-target openings, unauthorized monetary outcomes, proof knowledge and joint receipt privacy as distinct games. Report quantum queries, classical time, memory, target counts and lifetime aggregation assumptions separately. Reuse K384, WHIR and N7P2 evidence where it answers the exact question. Any migration experiment must consume an old funded identity atomically and demonstrate backup-restored spending of the successor note. Never present a configured security flag, a FRI query count or an ideal primitive width as an end-to-end guarantee.

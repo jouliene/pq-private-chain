@@ -1,3 +1,13 @@
+# Two-core capacity for SGM1 monetary admission
+
+From `beae20b4b9b81598708262cc407f21553ca7ae94`, measure native four-group SGM1 in
+an isolated durable ledger. Exercise fresh payments and independently approved swaps,
+changing funded anchors and current spentness, recovery and onward spending, and an
+atomic competing branch. Include setup, signatures, state writes, observed backlog
+and historical catch-up. Evaluate 10M, 30M and 100M yearly operations at 90/10,
+review the actual ring and Fiat–Shamir transcript, and reproduce from public main.
+The funded profile C and the global private PoW chain objective remain active.
+
 # Structured Keccak for a wallet-created private spend — verified
 
 Start at public `4810fefa6bc8de48e0ad4adb6b8e881242793a7a`. Measure a real round-batched GKR and ring-switching proof of two complete FS01 parents. Use one verifier-owned root, both hidden order bits, all four honest paths and a disconnected pair. Price shared and marginal data at two funded paths and the full monetary relation, including receipts and signatures. Use 228,226 B as the signed-leg proof allowance. Run fresh funded paths if the envelope is credible. A versioned architecture decision, independent public reproduction and CI close this milestone. Keep C as the funded reference, N7P2 as the comparator and the global chain objective active.

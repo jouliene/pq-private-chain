@@ -1,0 +1,45 @@
+{
+  "packet_sha256": "7d824013f097fa234c51bd1343f20034845a2ae6fadf9bfdb4a957f21832a6d7",
+  "proof_bytes": 179234,
+  "count": 13,
+  "samples": [
+    {
+      "wall_s": 0.1350652870023623,
+      "cpu_s": 0.135070599
+    },
+    {
+      "wall_s": 0.12420740698871668,
+      "cpu_s": 0.124206611
+    },
+    {
+      "wall_s": 0.11716397300187964,
+      "cpu_s": 0.11717011799999999
+    },
+    {
+      "wall_s": 0.11585609900066629,
+      "cpu_s": 0.11586247100000002
+    },
+    {
+      "wall_s": 0.11332306999247521,
+      "cpu_s": 0.11332969500000001
+    }
+  ],
+  "max_rss_kib": 63792,
+  "rejections": {
+    "chain": "SGM1 proof rejected: ring trace projection rejected",
+    "root": "SGM1 proof rejected: ring trace projection rejected",
+    "count": "SGM1 proof rejected: ring trace projection rejected",
+    "fee": "SGM1 proof rejected: ring trace projection rejected",
+    "nf0": "SGM1 proof rejected: ring trace projection rejected",
+    "nf1": "SGM1 proof rejected: ring trace projection rejected",
+    "cm0": "SGM1 proof rejected: ring trace projection rejected",
+    "cm1": "SGM1 proof rejected: ring trace projection rejected",
+    "intent": "SGM1 proof rejected: ring trace projection rejected",
+    "auth": "SGM1 proof rejected: ring trace projection rejected",
+    "genesis": "SGM1 proof rejected: ring trace projection rejected",
+    "truncation": "SGM1 proof rejected: noncanonical proof length",
+    "trailing": "SGM1 proof rejected: noncanonical proof length",
+    "trace": "SGM1 proof rejected: ring trace projection rejected",
+    "final_opening": "SGM1 proof rejected: mixed degree check rejected"
+  }
+}

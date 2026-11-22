@@ -57,6 +57,16 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## SGM1 two-core admission
+
+The [capacity walkthrough](../experiments/sgm1-admission/README.md) regenerates
+funding and payment proofs, compares the registered reference with the native
+verifier, and measures independently submitted transfers and swaps on a durable
+isolated ledger. Preserve the exact code SHA, public packet hashes, raw
+arrival/commit traces, aggregate RSS sampling convention, catch-up costs and
+independent reproduction beside the decision. A calibration on a previously
+funded packet is a verifier check. It cannot establish node service capacity.
+
 ## Structured private Keccak spending
 
 The public executable revision `9502266c7e976f16af47cb23a7104257dacf6968`

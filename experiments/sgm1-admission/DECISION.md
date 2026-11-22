@@ -1,0 +1,13 @@
+# SGM1 home-validator decision
+
+**The funded PoW chain retains C.** The C++ verifier warrants a full two-core load run. Its bit wiring, proof transcript and authenticated openings match the executable Python registration on the checked cases. It uses the same proof parameters and accepts the same ordinary packet. The launch assurance decision still depends on quantum knowledge and joint receipt privacy. [Native comparison](native/README.md) · [Independent assurance analysis](review/SECURITY.md)
+
+## Local calibration before the capacity run
+
+The initial 20-operation trace contained 18 ordinary payments and two swaps. All 22 legs verified in both implementations. The durable tip contained 57 output occurrences and 44 spent nullifiers, up from 13 funded occurrences. A restored recipient spent its first payment. At the 100M/year offered rate the calibration used 0.140 CPU-seconds per leg, including the two signature helpers on a swap and synchronous state writes. The prior Python result was around two CPU-seconds for proof verification alone. The calibration used test-driver-provisioned keys. The capacity fixture moves the swap owners' spending keys, backup, proof creation and final approvals into separate resident processes. The operating range will use the resulting ten-wave trace. [Method and commands](README.md)
+
+The reference serializes the two receipts and proof into a 183,224-byte ordinary frame at the initial count. The admitted pair contains two complete signed legs and measures 426,324 bytes. Identifiers for the funded root and output count, the two nullifiers, the fee and the role-specific intent are inputs to fresh transaction-specific native setup. Admission reconstructs the statement from the selected branch and the exact frame. The signer independently verifies both proofs and the incoming receipt. A single ordered write transaction checks the current spent set and publishes both sides and one fee. Reorganization restores the previous selected branch or atomically validates its replacement. No PoW registration or funded C note is modified.
+
+## Decision gate
+
+Compare actual frame arrivals with durable commits, peak and end-of-offer backlogs, CPU and process-tree memory. Charge fresh funding and close to catch-up, count each of the 100 different operations once per live trace, and report repeated empty-database replays separately. The 0.574 CPU-second comparison at 100M/year assumes two fully available cores, 1.1 proof-bearing legs per operation and no network or other consensus work. Owners have not set an annual traffic ceiling. Public reproduction and the long-run measurements are pending at this revision.
