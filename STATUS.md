@@ -1,8 +1,10 @@
-# Ordinary funded C transfer conservation — LOCAL
+# Ordinary funded C transfer conservation — VERIFIED
 
-Lean 4.19.0 checks natural-number conservation for each currency and the selected-ledger debit, fee and single miner credit. The director opened the original H25 funded test notes and repeated the transfer with fresh keys at H40. Source registration and historical charges match. Public clean reproduction and applicable CI are pending. The global blockchain objective remains active.
+Lean 4.19.0 derives integer conservation for every asset from the registered ordinary transfer's local equations and ranges. Under the funded-opening and unique-spent-identity premises, the live native sum falls by the fee until the miner receives it. The single inclusion creates only the block subsidy of 100. The director checked original H25 wallet openings. A non-author cloned public main, replayed H25 and independently opened the four notes in a fresh H40 payment. The two inputs supplied 34 native and 28 token units. Recipient and change accounted for 31 native and all 28 tokens. Both miners' selected rewards were 103 in their respective blocks. All three fresh nodes agreed on the 40-block selected history.
 
-[Result and reproduction](experiments/funded-conservation/README.md) · [Source map](experiments/funded-conservation/MAPPING.md) · [H25 openings and fee](experiments/funded-conservation/original.json)
+Independent reproduction and all three public workflows passed on `8b4928140d5da645dcf209fded42f5edfa5c6ab0`. The handoff adds documentation and reviewer observations. The global private PoW blockchain objective remains active. Binding funded openings to accepted proofs against a malicious prover and end-to-end privacy remain open cryptographic obligations.
+
+[Decision and reproduction](experiments/funded-conservation/README.md) · [Lean proof](experiments/funded-conservation/Conservation.lean) · [Source map](experiments/funded-conservation/MAPPING.md) · [Independent review](experiments/funded-conservation/review/PUBLIC.md) · [Monetary CI](https://github.com/jouliene/pq-private-chain/actions/runs/45013758459) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/45013758435) · [Payment CI](https://github.com/jouliene/pq-private-chain/actions/runs/45013758493)
 
 # Funded C snapshot bootstrap — VERIFIED
 

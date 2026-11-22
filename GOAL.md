@@ -2,6 +2,8 @@
 
 Derive per-asset and native conservation from the registered ordinary circuit, selected live notes, nullifiers, and the actual single miner credit. Compare with known funded wallet openings and a mined block. Publish and independently reproduce under `docs/DELIVERY.md`. Keep cryptographic binding, proof acceptance and privacy qualifications explicit.
 
+The formal derivation and independent public-clone opening comparison passed. This bounded requirement concerns ordinary C transfers. The global private PoW design and its cryptographic assurance remain open. [Proof and decision](experiments/funded-conservation/README.md) · [Independent reproduction](experiments/funded-conservation/review/PUBLIC.md)
+
 # Snapshot bootstrap on funded C
 
 Measure startup to independently pinned provisional state and fully genesis-verified history. Restore an old seed from authenticated common records, spend on the original and winning branches, and publish reproducible fixtures and a development decision. Keep funded consensus and fork choice. The global blockchain goal stays active.
