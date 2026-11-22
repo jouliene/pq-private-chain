@@ -1,8 +1,10 @@
-# Funded C token supply — LOCAL
+# Phase 1B — funded C token supply VERIFIED
 
-Lean 4.19.0 derived the invariant for every asset, from the actual bounded field equations, selected live-note transition and public registry update. The director reconciled all 40 original encrypted outputs across the archived branches with eight test backups. C covered +6 mint, fixed +13, managed +15 and a holder burn of 16. The new fork covered a maximum registration, complete burn, remint from zero, cap and predecessor rejection, and rollback to the maximum. A fourth node replayed only the winning originals from genesis. Public independent reproduction and CI are pending. The global blockchain objective remains active.
+Lean 4.19.0 proves from consistent selected state that fixed and managed registration, managed minting and holder burning preserve equality between each public outstanding quantity and the live face value of that asset's notes. Thirty-nine named supply theorems and seven observed event equations passed. The source mapping identifies funded-opening, nullifier, proof-acceptance, hash and issuer-signature assumptions.
 
-[Decision and commands](experiments/funded-supply/README.md) · [Lean model](experiments/funded-supply/Supply.lean) · [Source map](experiments/funded-supply/MAPPING.md)
+A non-author reproduced the published command at `41c2e794f947390a286ff3b42f48be610c6ef3c8` from a clean anonymous public clone. Fresh C wallets exercised the maximum supply, complete burn to zero, current-authority remint to one, and a heavier fork restoring the holder's maximum receipt. A fourth validator verified only the winning branch from genesis. Its selected registry, 84 outputs, 42 spent identifiers and 57 cumulative fee units agreed with the reorganized node. The non-author then separately repeated the privileged scan with eight original backups. All 40 historical receipts reconciled at all eleven captured states. The initial decision prose counted ten checkpoints; the raw evidence and the corrected report give eleven.
+
+Three public CI workflows passed on the executable revision. The handoff contains documentation and independent observations. The global blockchain objective remains active. [Decision and reproduction](experiments/funded-supply/README.md) · [Proof](experiments/funded-supply/Supply.lean) · [Source mapping](experiments/funded-supply/MAPPING.md) · [Independent review](experiments/funded-supply/review/PUBLIC.md) · [Supply CI](https://github.com/jouliene/pq-private-chain/actions/runs/45016224196) · [PoW CI](https://github.com/jouliene/pq-private-chain/actions/runs/45016224214) · [Payment CI](https://github.com/jouliene/pq-private-chain/actions/runs/45016224175)
 
 # Ordinary funded C transfer conservation — VERIFIED
 

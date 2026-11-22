@@ -2,6 +2,8 @@
 
 Derive fixed and managed registration, additional mint and holder burn from the actual MNG3 equations and selected registry. Prove the invariant from consistent state for every asset, cover zero and the ceiling, and compare funded openings and post-reorg winning replay. Independent public reproduction is required.
 
+Phase 1B passed the Lean kernel and the independent public-clone funded run. The original owner-assisted decryption was separately reproduced. The global blockchain objective remains active. [Decision](experiments/funded-supply/README.md) · [Independent verification](experiments/funded-supply/review/PUBLIC.md)
+
 # Machine-checked monetary conservation for a funded C transfer
 
 Derive per-asset and native conservation from the registered ordinary circuit, selected live notes, nullifiers, and the actual single miner credit. Compare with known funded wallet openings and a mined block. Publish and independently reproduce under `docs/DELIVERY.md`. Keep cryptographic binding, proof acceptance and privacy qualifications explicit.

@@ -1,0 +1,125 @@
+{
+  "executable_commit": "41c2e794f947390a286ff3b42f48be610c6ef3c8",
+  "fresh_case": {
+    "aggregate_result_sha256": "08e80decae5d905bc025f25814ead3c7d7250e04efeb64e9bc46d6065dfd455c",
+    "asset": "d26a9471babe3a1a22b47dac7ae53c2b32e70cf002d9b920eb20a784739f8334",
+    "branch_states": {
+      "full_burn": {
+        "fees": 60,
+        "height": 40,
+        "leaves": 84,
+        "miner_credits": 4060,
+        "registry_events": 9,
+        "revision": 2,
+        "spent": 44,
+        "supply": 0,
+        "tip": "000003b7df86eddcb54be027327dd6eeaf6a1823db7c850d4a6a0807e2ee2834"
+      },
+      "pre_burn": {
+        "fees": 57,
+        "height": 39,
+        "leaves": 81,
+        "miner_credits": 3957,
+        "registry_events": 8,
+        "revision": 1,
+        "spent": 42,
+        "supply": 4611686018427387903,
+        "tip": "0000007033efb40947faee10c27f3b63bce9b18c39a88b21a1df3b36229e9a4c"
+      },
+      "registration": {
+        "fees": 54,
+        "height": 38,
+        "leaves": 78,
+        "miner_credits": 3854,
+        "registry_events": 8,
+        "revision": 1,
+        "spent": 40,
+        "supply": 4611686018427387903,
+        "tip": "00000347a666294f7ab0985297d104ac0e3e905655ff99f45c6c7052e9530209"
+      },
+      "remint": {
+        "fees": 63,
+        "height": 41,
+        "leaves": 87,
+        "miner_credits": 4163,
+        "registry_events": 10,
+        "revision": 3,
+        "spent": 46,
+        "supply": 1,
+        "tip": "000002506d81884830f5b9139065b94f3b82b976f01ba92c635f43fe4e32c93e"
+      },
+      "winning": {
+        "fees": 57,
+        "height": 42,
+        "leaves": 84,
+        "miner_credits": 4257,
+        "registry_events": 8,
+        "revision": 1,
+        "spent": 42,
+        "supply": 4611686018427387903,
+        "tip": "0000026af0307145436d8e05518ea5d5062906f60bf221307d64484246907f0a"
+      }
+    },
+    "distinct_receipt_commitments_opened": 8,
+    "durable_stores": {
+      "a": {
+        "has_burn_body": true,
+        "has_remint_body": true,
+        "raw_bodies": 45,
+        "selected": 42
+      },
+      "b": {
+        "has_burn_body": false,
+        "has_remint_body": false,
+        "raw_bodies": 43,
+        "selected": 42
+      },
+      "c": {
+        "has_burn_body": false,
+        "has_remint_body": false,
+        "raw_bodies": 43,
+        "selected": 42
+      },
+      "d": {
+        "has_burn_body": false,
+        "has_remint_body": false,
+        "raw_bodies": 42,
+        "selected": 42
+      }
+    },
+    "rejections": [
+      "outstanding supply overflow",
+      "stale issuer state"
+    ]
+  },
+  "historical_tip": "000003b3161779eafe382ebf82daa4a23769d92dfcb3c104d646313f52320f16",
+  "observed_supply_events": 7,
+  "privileged_historical_openings": {
+    "aggregate_exact_match_sha256": "7a876605cd38396cd75cbd16535b7e47a5c9cd7af74bd384f961ebacd0b7de77",
+    "distinct_receipt_commitments": 40,
+    "owner_backups": 8,
+    "stages_reconciled": 11
+  },
+  "published_command_exit": 0,
+  "source_registration": {
+    "native_sha256": "881128195a079fab2f97c0a32c02fdf390b08fe0f168b77d6f5f739a5e523ef6",
+    "regenerated_source_pins": 12,
+    "registered_key_sha256": "6cb89745c94ec7b2ff97173ec0819b8567ae5672991b2fdbbe3cbe5810ebadf2",
+    "registration": {
+      "degree_bits": 13,
+      "folds": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "gates_before_blinding": 548,
+      "public_inputs": 32,
+      "suite": "MNG3"
+    },
+    "reward_role_sha256": "07793c1d2d7d76c9196a3c95a098e1c70791bbc0720a56627f7cb8fd05af4164",
+    "reward_vectors": 5
+  },
+  "supply_theorems": 39
+}

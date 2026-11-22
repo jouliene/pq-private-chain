@@ -19,7 +19,7 @@ A registration or additional mint forces the two input token quantities to zero 
 
 ## Reused funded evidence
 
-The published graph contains 33 blocks on the winning branch and a competing H25 block. The director restored all eight original test-wallet keys in separate native wallet roles and opened **all 40 distinct encrypted receipt commitments** across both branches. At every block in each of the ten published checkpoint histories, the checker removed spent note identities, added newly opened notes and compared each live token sum against its accumulated public events. It also compared all ten checkpoint registries against the original wire replay and wallet disclosures. Public reward notes carry zero tokens.
+The published graph contains 33 blocks on the winning branch and a competing H25 block. The director restored all eight original test-wallet keys in separate native wallet roles and opened **all 40 distinct encrypted receipt commitments** across both branches. At every block in each of the eleven published checkpoint histories, the checker removed spent note identities, added newly opened notes and compared each live token sum against its accumulated public events. It also compared all eleven checkpoint registries against the original wire replay and wallet disclosures. Public reward notes carry zero tokens.
 
 | C block | Event | Opened token inputs | Opened token outputs | Outstanding before → after |
 |---|---|---:|---:|---:|
@@ -43,6 +43,8 @@ The H33 fixture contained neither a full burn nor a managed asset at the ceiling
 | H42 on the heavier branch from H39 | 4,611,686,018,427,387,903 | Both supply changes detached. The holder recovered the full amount and the registry returned to revision 1 |
 
 The same genuine signed one-unit mint was rejected at H39 for exceeding the ceiling and after the burn for referring to the old revision. Both rejections left the selected tip, registry, spent-set digest, fee total and pending pool intact. The H42 branch contained three empty replacement blocks. A fourth validator started with an empty database, received only the winning originals and validated from genesis. Its selected commitments, spent set, registry revisions and fees matched the reorganized validator and an independent wire reader. The losing fees totalled 63 and the winning fees 57. The two supply events' six native fee units were rolled back. [Funded experiment](campaign.py) · [Director's observations](fresh.json)
+
+The non-author clean-clone run checked 39 supply theorems, seven distinct observed supply events and four final node stores. Its anonymous part used newly generated wallets. The reviewer then repeated the original decryption with the separately authorized historical backups and reproduced the public aggregate file byte for byte. [Independent report](review/PUBLIC.md) · [Independent observations](review/observations.json)
 
 ## Assumptions and scope
 
