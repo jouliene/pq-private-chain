@@ -1,0 +1,121 @@
+{
+  "source": {
+    "origin": "https://github.com/jouliene/pq-private-chain.git",
+    "observed_origin_main": "d473157c3193af890a3cc394f1c8422a7a1488ae",
+    "verified_baseline_ancestor": "d9fbd8d6af51f92304cdfa3b0f2eb055cd7ef4e2",
+    "empty_directory": true,
+    "https_only": true,
+    "alternates": false,
+    "global_system_git_config_disabled": true,
+    "credentials_disabled": true,
+    "clean_after_run": true
+  },
+  "reproduction": {
+    "command": "PATH=/usr/bin:/bin bash experiments/ear1-authorization/reproduce.sh NEW_DIRECTORY",
+    "exit_code": 0,
+    "byte_identical_reports": [
+      "costs.json",
+      "loss.json",
+      "decoder.json",
+      "transport.json"
+    ],
+    "entire_walkthrough_elapsed_s": 22.66,
+    "entire_walkthrough_peak_child_RSS_KiB": 134912
+  },
+  "sha256": {
+    "early.tgz": "5f6bdc65105e3cdde4551b7cbd97f3f8c96f72a76ad434a6c1d85b627901ea80",
+    "node.tar.xz": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6",
+    "ear1/payment.bin": "e8858eae087cc3bdeccbac25d51b96d2b9e72942fff9aad80d92586625bc73ac",
+    "ear1/prefix/genesis.bin": "682a34abd047472df4caa7ac30452529a231f5d904ff544bb1ad743024379c11",
+    "events.json": "3e5f99379a838736c96d2e0241c96df7eefa544892965f22a2dd99fd6f78a8b8",
+    "loss.json": "71f24c8032e503591d0a314b4f5191638c3ae49392d5ea6e256ae7f6e2ea71d1",
+    "costs.json": "6045dc513d1ddf7c47b473d48db6440dcad9d239500867d17552fffb18cb7fb0",
+    "decoder.json": "b5928791392234d788b278d6c0a8c3853b5c472d606f2ce5f2419d152294afe8",
+    "transport.json": "762834ddf9d42f7e4ab7d9942d810afda74b723744dc2a2852f1d3c0243686ad",
+    "public-transport.bin": "9495c9f338951abddca43e4e2205f814d1b48a61165be85989a29e6031587661"
+  },
+  "registered_payment": {
+    "suite": "EAR1",
+    "funded_count": 13,
+    "wire_B": 192160,
+    "proof_B": 188170,
+    "authenticated_columns": 60,
+    "original_matches": 60,
+    "constant_offset_matches": 0,
+    "degree_basis_B": 22650,
+    "interacting_coin_blocks": 215,
+    "schedule_sha256": "acd705f15899e4aff63270a8400440cd37bbce25098d7799f439b5573915e9bc"
+  },
+  "fresh_decoder": {
+    "funded_input_count": 2,
+    "owner_secrets_distinct": true,
+    "witness_exact": true,
+    "supplied_authenticated_columns": 152,
+    "reconstruction_positions": 151,
+    "additional_consistency_checks": 1,
+    "encoded_witness_B": 6155,
+    "changed_ASKs_rejected": [
+      0,
+      1
+    ],
+    "protocol_opening_count": 60,
+    "insufficient_for_unique_interpolation": true,
+    "matching_sampled_columns": 60,
+    "unchanged_R_basis_positions": 151,
+    "distinct_at_unopened_position": true,
+    "qualification": "Test-owned partial-oracle decoder, without adversarial extraction or a new proof."
+  },
+  "public_transport": {
+    "fixture": "public synthetic EC01 transport only",
+    "serialized_B": 248885,
+    "packet_sha256": "9495c9f338951abddca43e4e2205f814d1b48a61165be85989a29e6031587661",
+    "VC_checked": 994,
+    "FS_calls_per_role": 215,
+    "changed_answer_rejected_by_CheckIO": true
+  },
+  "separately_checked": {
+    "transport_occupied_parents_by_level": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      27,
+      38,
+      44,
+      56,
+      58,
+      59,
+      59
+    ],
+    "transport_occupied_parent_count": 372,
+    "transport_size_B": 248885,
+    "transport_sha256": "9495c9f338951abddca43e4e2205f814d1b48a61165be85989a29e6031587661",
+    "primary_worst_proof_B": 257045,
+    "primary_literal_proof_B": 348405,
+    "uniform_expected_internal_parents": 374.86119130167754,
+    "RBR_bits_for_quarter_global_and_lifetime": [
+      267,
+      298
+    ],
+    "q128_finite_log2": -118.251807,
+    "q128_VC_sum_log2_512_and_640": [
+      -115.430144,
+      -243.430144
+    ]
+  },
+  "projected_complete_primary_B": {
+    "ordinary": 261035,
+    "signed_leg": 290963,
+    "two_signed": 581946
+  },
+  "primary_shorter_salt_hash_sensitivity": {
+    "same_column_geometry": true,
+    "sigma_bits": 512,
+    "leaf_salt_bits": 256,
+    "round_salt_bits": 256,
+    "ordinary_B": 228411,
+    "signed_leg_B": 258339,
+    "two_signed_B": 516698
+  }
+}

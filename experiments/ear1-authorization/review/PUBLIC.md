@@ -1,0 +1,26 @@
+# Independent public reproduction of the EAR1 authorization decision
+
+I support parking EAR1 and EC01 for external cryptographic review. The published EAR1 payment verified against its signed funding history. The new decoder recovered both funded input secrets when given additional authenticated data. The first EAR1 challenge still uses a rolling hash where the CDHZ extractor needs to read indexed commitments from the challenge input. EC01 specifies that interface. Its monetary knowledge bound and its joint privacy argument remain open. [Theorem correspondence](../THEOREM.md)
+
+## Source and execution
+
+On November 22, 2026 I used a new empty directory and cloned `https://github.com/jouliene/pq-private-chain.git` over HTTPS with `--no-local`. I cleared the environment, disabled system/global Git configuration, helpers and prompts, and allowed only HTTPS. The clone had no object alternates. Its remote-tracking main and my detached checkout both identified `d473157c3193af890a3cc394f1c8422a7a1488ae`. I verified ancestry from `d9fbd8d6af51f92304cdfa3b0f2eb055cd7ef4e2` and a clean checkout after the run. [Tested source](https://github.com/jouliene/pq-private-chain/tree/d473157c3193af890a3cc394f1c8422a7a1488ae/experiments/ear1-authorization)
+
+I ran `PATH=/usr/bin:/bin bash experiments/ear1-authorization/reproduce.sh NEW_DIRECTORY`. Both downloads passed their pinned SHA-256 checks. The four regenerated JSON files matched their published bytes. The 22.66 seconds cover the entire walkthrough, including downloads, build, public verification and the decoder fixture. [Public observations and hashes](observations.json)
+
+| Exercise | Independent observation |
+|---|---|
+| Released monetary proof | The 192,160-byte EAR1 packet contained 188,170 proof bytes. Its signed prefix had 13 entries. All 60 opened columns satisfied the published degree table, and zero satisfied the constant-offset control. |
+| Fresh funded decoder | A signed fixture with two different owner secrets supplied 152 authenticated columns to the decoder. It interpolated 151, checked the extra column, and recovered the exact 6,155-byte witness. Changing either recovered ASK failed the monetary predicate. A degree-layer perturbation preserved all 60 disclosed values and the 151 early-table basis values while changing an undisclosed value. The full Merkle commitment and terminal impose additional constraints. |
+| EC01 transport | The public filler-cell packet contained 248,885 bytes. Its verifier assembled all 994 VC input/output pairs, checked their digests, then issued 215 full-prefix FS queries and verified the selected indices. A changed opened answer failed the digest check. This fixture exercises the compiler encoding with public test cells. |
+| Projected complete EC01 sizes | I recomputed the primary worst-case proof at 257,045 bytes, ordinary payment at 261,035, signed leg at 290,963, and bundle at 581,946. I counted 372 occupied internal parents in the actual transport and 423 in the worst case, charging two child labels per parent. Literal uncompressed openings cost 348,405 proof bytes. |
+
+Only the released EAR1 ordinary payment above exercised a complete monetary proof. The decoder received test-owned authenticated columns. EC01 monetary proof generation, swap settlement, throughput and payment-verification times remain unmeasured in this exercise.
+
+## Quantitative and theorem checks
+
+From the March 2 manuscript I retained the proof-opening offline term in Theorem 11.3. Remark 11.5 suggests dropping it when there are no implicit outputs, but Appendix A's second hybrid still checks the opened proof coordinates. I used the named oracle-query masses and a total-budget envelope for the online term. Theorem 6.10 still requires a deterministic efficient predecessor-witness extractor on every verifier prefix, including witnesses selected after seeing the challenge. Sixty checked positions, the honest decoder, and individual polynomial bounds do not establish that premise. [CDHZ manuscript](https://eprint.iacr.asia/2025/2166.pdf)
+
+Using a separate exact-rational calculation with a global budget of 2^128 queries, I obtained a finite-challenge term of approximately 2^-118.252 and a VC-only sum of 2^-243.430 for 640-bit ideal digests. A quarter-success allowance requires an integer per-round error exponent of at least 267. The separate union scenario allowing that same budget independently for each of 2.2 billion legs requires 298. These exponents quantify what the displayed upper bound would need. They do not measure an attack or furnish a funded-target reduction. A 512-bit tree with two 256-bit salt widths in the same column geometry projects to 258,339 bytes per signed leg. Frame size alone does not decide authorization. [Calculator outputs](../loss.json) · [Compiler assumptions](../ALTERNATIVE.md)
+
+Adaptive statement selection in Definition 10.3 covers a prover in the specified oracle experiment. A funded-target argument must additionally account for oracle-correlated honest payment history, legitimate approvals, extraction work, and binding the recovered opening to the live honest occurrence. Receipt privacy requires a joint argument covering transcripts, recipients, retries and later spends. [Funded-target decision](../DECISION.md)
