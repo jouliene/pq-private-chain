@@ -64,8 +64,12 @@ funding and payment proofs, compares the registered reference with the native
 verifier, and measures independently submitted transfers and swaps on a durable
 isolated ledger. Preserve the exact code SHA, public packet hashes, raw
 arrival/commit traces, aggregate RSS sampling convention, catch-up costs and
-independent reproduction beside the decision. A calibration on a previously
-funded packet is a verifier check. It cannot establish node service capacity.
+independent reproduction beside the decision. The non-author reproduced the measurements on exact executable
+`823cdcc43e6e47a4e58e83ba78aefef237f4f04e`, including fresh independent wallets,
+the release's 110 proof-bearing legs, actual arrival backlogs and twelve historical
+replays. All three applicable workflows passed on the executable. Subsequent
+decision, evidence and review commits contain documentation and public JSON only.
+[Independent record](../experiments/sgm1-admission/review/PUBLIC.md)
 
 ## Structured private Keccak spending
 

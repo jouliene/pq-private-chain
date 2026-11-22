@@ -1,0 +1,598 @@
+{
+  "source": "823cdcc43e6e47a4e58e83ba78aefef237f4f04e",
+  "base": "beae20b4b9b81598708262cc407f21553ca7ae94",
+  "release": {
+    "tag": "sgm1-two-core-2026-11-22",
+    "name": "sgm1-public-100.tar.gz",
+    "bytes": 19313729,
+    "sha256": "eb9126b06ac3d84b628528bb622fb8b331d0f0d7a59548a2ea7473f096bbeb2b",
+    "matched_manifest_entries": 110
+  },
+  "controls_comparison": {
+    "author_result_at": "ef2c9eb84f3aeb59df0e3735b79cd6cad99af702",
+    "released_corpus_controls_sha256": "3e1d8b8de82bb3f18ff238fd965688af2fc081b7697cfc3d6f6d7c71036c480f"
+  },
+  "ci_runs": {
+    "SGM1 native monetary admission": 44982950623,
+    "Research payment smoke": 44982950545,
+    "Local proof-of-work devnet": 44982950539
+  },
+  "tools": {
+    "CPU": "Intel i7-8700K",
+    "OS": "Linux Mint 22.3 x86-64 (Ubuntu 24.04 base)",
+    "filesystem": "ext4",
+    "Python": "3.12.3",
+    "NumPy": "1.26.4",
+    "psutil": "5.9.8",
+    "g++": "13.3.0",
+    "kernel": "6.8.0-151-generic",
+    "SQLite": "3.45.1",
+    "Native OpenSSL": "3.0.13",
+    "Node": "24.22.1",
+    "Node OpenSSL": "3.5.9"
+  },
+  "legacy": {
+    "packet_sha256": "7d824013f097fa234c51bd1343f20034845a2ae6fadf9bfdb4a957f21832a6d7",
+    "proof_bytes": 179234,
+    "count": 13,
+    "samples": [
+      {
+        "wall_s": 0.128364,
+        "cpu_s": 0.128361
+      },
+      {
+        "wall_s": 0.117056,
+        "cpu_s": 0.117049
+      },
+      {
+        "wall_s": 0.107117,
+        "cpu_s": 0.107116
+      },
+      {
+        "wall_s": 0.103698,
+        "cpu_s": 0.103697
+      },
+      {
+        "wall_s": 0.103581,
+        "cpu_s": 0.103553
+      }
+    ],
+    "max_rss_kib": 64116,
+    "rejected_cases": [
+      "auth",
+      "chain",
+      "cm0",
+      "cm1",
+      "count",
+      "fee",
+      "final_opening",
+      "genesis",
+      "intent",
+      "nf0",
+      "nf1",
+      "root",
+      "trace",
+      "trailing",
+      "truncation"
+    ]
+  },
+  "fresh": {
+    "controls": {
+      "distinct_operations": 20,
+      "ordinary": 18,
+      "swaps": 2,
+      "fees": 20,
+      "funded_prefix": 13,
+      "final_count": 57,
+      "spent": 44,
+      "accepted_proof_legs": 22,
+      "restored_onward_operation": 11,
+      "anchor_age_64_and_65_checked": false,
+      "swap_expiry_100_and_101_checked": false,
+      "fully_encoded_differential_rejections": 21,
+      "canonical_root": "969d5bc4368b4716de9abb0ceae6a50f7eacf51e298369f4c2e426ed99cbf03baf18fcc327f7eb1eac11ecb3632c502631454b9ee354acc57d8495a3cfce5d39",
+      "distinct_anchor_counts": [
+        13,
+        35
+      ],
+      "public_packet_list_sha256": "c61dcd93abe8b1653643ebdf7753d6f9d04214eff6eb73c1572c08b4c2b976fa",
+      "pair_state": {
+        "rollback_to_common_prefix": {
+          "height": 9,
+          "count": 31,
+          "fees": 9,
+          "spent_per_owner": [
+            0,
+            0
+          ],
+          "swap_outputs_per_owner": [
+            0,
+            0
+          ]
+        },
+        "competing_ordinary": {
+          "height": 10,
+          "count": 33,
+          "fees": 10,
+          "spent_per_owner": [
+            2,
+            0
+          ],
+          "swap_outputs_per_owner": [
+            0,
+            0
+          ]
+        },
+        "selected_swap": {
+          "height": 10,
+          "count": 35,
+          "fees": 10,
+          "spent_per_owner": [
+            2,
+            2
+          ],
+          "swap_outputs_per_owner": [
+            2,
+            2
+          ]
+        }
+      },
+      "rollback_both_sides_fee_and_restart": true,
+      "conflicting_alternative_then_original": true
+    },
+    "genesis_sha256": "e113d2849df0b017f5037f0451b7c5cceec1715bb070fc2fc4438ca5ac3a6c71",
+    "raw_frame_concatenation_sha256": "9f059847129ae670d9be38dfc7cead4b8f99562711aacd857760471d04dc4c42",
+    "ordinary_frame_sizes_B": [
+      183224
+    ],
+    "pair_frame_sizes_B": [
+      426324
+    ],
+    "measured": [
+      {
+        "mode": "100M",
+        "offered_ops_s": 3.168808781402895,
+        "actual_ingress_ops_s": 3.16874,
+        "first_offer_to_last_commit_ops_s": 3.159311,
+        "mean_charged_cores": 0.469158,
+        "cpu_s_per_leg": 0.135,
+        "outstanding_peak_last": [
+          1,
+          1
+        ],
+        "outstanding_at_each_tenth_offer": [
+          1,
+          1
+        ],
+        "drain_s": 0.334008,
+        "latency_p50_max_s": [
+          0.140555,
+          0.334008
+        ],
+        "rss_tree_peak_KiB": 125020
+      },
+      {
+        "mode": "overload",
+        "offered_ops_s": 20.0,
+        "actual_ingress_ops_s": 19.990951,
+        "first_offer_to_last_commit_ops_s": 11.552679,
+        "mean_charged_cores": 1.605822,
+        "cpu_s_per_leg": 0.126364,
+        "outstanding_peak_last": [
+          10,
+          10
+        ],
+        "outstanding_at_each_tenth_offer": [
+          4,
+          10
+        ],
+        "drain_s": 0.780454,
+        "latency_p50_max_s": [
+          0.439206,
+          0.780454
+        ],
+        "rss_tree_peak_KiB": 158588
+      },
+      {
+        "mode": "catchup",
+        "offered_ops_s": null,
+        "actual_ingress_ops_s": 22.077569,
+        "first_offer_to_last_commit_ops_s": 11.842789,
+        "mean_charged_cores": 1.640226,
+        "cpu_s_per_leg": 0.125909,
+        "outstanding_peak_last": [
+          10,
+          10
+        ],
+        "outstanding_at_each_tenth_offer": [
+          10,
+          10
+        ],
+        "drain_s": 0.827879,
+        "latency_p50_max_s": [
+          0.742013,
+          0.85247
+        ],
+        "rss_tree_peak_KiB": 162604
+      }
+    ],
+    "historical": {
+      "pass_count": 1,
+      "operations": 20,
+      "bytes_read": 4150680,
+      "workload": "fresh stores over the same branch in each replay",
+      "cpu_s_after_funding_including_close": 2.77,
+      "cpu_s_including_funding_close": 2.84,
+      "wall_s_including_funding_close": 1.775906,
+      "cpu_s_per_leg_after_funding_including_close": 0.125909,
+      "max_tree_peak_KiB": 162604,
+      "ops_s_including_funding_close": 11.261859,
+      "ops_s_after_funding_including_close": 11.8155,
+      "per_pass_ops_s_including_funding_close": [
+        11.261859
+      ]
+    },
+    "public_payload_bytes": 4150680,
+    "closed_db_bytes": 4325376,
+    "cpu_ids": [
+      0,
+      1
+    ]
+  },
+  "release_run": {
+    "controls": {
+      "distinct_operations": 100,
+      "ordinary": 90,
+      "swaps": 10,
+      "fees": 100,
+      "funded_prefix": 13,
+      "final_count": 233,
+      "spent": 220,
+      "accepted_proof_legs": 110,
+      "restored_onward_operation": 11,
+      "anchor_age_64_and_65_checked": true,
+      "swap_expiry_100_and_101_checked": true,
+      "fully_encoded_differential_rejections": 21,
+      "canonical_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+      "distinct_anchor_counts": [
+        13,
+        35,
+        57,
+        79,
+        101,
+        123,
+        145,
+        167,
+        189,
+        211
+      ],
+      "public_packet_list_sha256": "70ef83ff5eb5bed20b35da46d8824b9c5d4714e9bf0966a007550059818327bd",
+      "pair_state": {
+        "rollback_to_common_prefix": {
+          "height": 9,
+          "count": 31,
+          "fees": 9,
+          "spent_per_owner": [
+            0,
+            0
+          ],
+          "swap_outputs_per_owner": [
+            0,
+            0
+          ]
+        },
+        "competing_ordinary": {
+          "height": 10,
+          "count": 33,
+          "fees": 10,
+          "spent_per_owner": [
+            2,
+            0
+          ],
+          "swap_outputs_per_owner": [
+            0,
+            0
+          ]
+        },
+        "selected_swap": {
+          "height": 10,
+          "count": 35,
+          "fees": 10,
+          "spent_per_owner": [
+            2,
+            2
+          ],
+          "swap_outputs_per_owner": [
+            2,
+            2
+          ]
+        }
+      },
+      "rollback_both_sides_fee_and_restart": true,
+      "conflicting_alternative_then_original": true
+    },
+    "genesis_sha256": "8061a2d092909313f27282bca273aa52a3f45694a7ddea781a08de9ed65faf20",
+    "raw_frame_concatenation_sha256": "3f5821d9c29610b36f2c98e589333eadab488ca93d35f1f8add9c7256a6f268c",
+    "ordinary_frame_sizes_B": [
+      183224
+    ],
+    "pair_frame_sizes_B": [
+      426324
+    ],
+    "measured": [
+      {
+        "mode": "10M",
+        "offered_ops_s": 0.3168808781402895,
+        "actual_ingress_ops_s": 0.316881,
+        "first_offer_to_last_commit_ops_s": 0.319739,
+        "mean_charged_cores": 0.046106,
+        "cpu_s_per_leg": 0.131091,
+        "outstanding_peak_last": [
+          1,
+          1
+        ],
+        "outstanding_at_each_tenth_offer": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "drain_s": 0.33472,
+        "latency_p50_max_s": [
+          0.128906,
+          0.355954
+        ],
+        "rss_tree_peak_KiB": 125188
+      },
+      {
+        "mode": "30M",
+        "offered_ops_s": 0.9506426344208685,
+        "actual_ingress_ops_s": 0.950643,
+        "first_offer_to_last_commit_ops_s": 0.957168,
+        "mean_charged_cores": 0.140512,
+        "cpu_s_per_leg": 0.133455,
+        "outstanding_peak_last": [
+          1,
+          1
+        ],
+        "outstanding_at_each_tenth_offer": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "drain_s": 0.334525,
+        "latency_p50_max_s": [
+          0.133656,
+          0.368406
+        ],
+        "rss_tree_peak_KiB": 124968
+      },
+      {
+        "mode": "100M",
+        "offered_ops_s": 3.168808781402895,
+        "actual_ingress_ops_s": 3.168811,
+        "first_offer_to_last_commit_ops_s": 3.16748,
+        "mean_charged_cores": 0.466887,
+        "cpu_s_per_leg": 0.134,
+        "outstanding_peak_last": [
+          2,
+          1
+        ],
+        "outstanding_at_each_tenth_offer": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "drain_s": 0.328498,
+        "latency_p50_max_s": [
+          0.13362,
+          0.370548
+        ],
+        "rss_tree_peak_KiB": 125204
+      },
+      {
+        "mode": "8ops",
+        "offered_ops_s": 8.0,
+        "actual_ingress_ops_s": 8.000026,
+        "first_offer_to_last_commit_ops_s": 7.886378,
+        "mean_charged_cores": 1.022863,
+        "cpu_s_per_leg": 0.117909,
+        "outstanding_peak_last": [
+          3,
+          1
+        ],
+        "outstanding_at_each_tenth_offer": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "drain_s": 0.304787,
+        "latency_p50_max_s": [
+          0.116916,
+          0.373895
+        ],
+        "rss_tree_peak_KiB": 163816
+      },
+      {
+        "mode": "12ops",
+        "offered_ops_s": 12.0,
+        "actual_ingress_ops_s": 12.00017,
+        "first_offer_to_last_commit_ops_s": 11.694182,
+        "mean_charged_cores": 1.541293,
+        "cpu_s_per_leg": 0.119818,
+        "outstanding_peak_last": [
+          5,
+          2
+        ],
+        "outstanding_at_each_tenth_offer": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "drain_s": 0.301017,
+        "latency_p50_max_s": [
+          0.221829,
+          0.354539
+        ],
+        "rss_tree_peak_KiB": 164388
+      },
+      {
+        "mode": "16ops",
+        "offered_ops_s": 16.0,
+        "actual_ingress_ops_s": 15.995688,
+        "first_offer_to_last_commit_ops_s": 12.119705,
+        "mean_charged_cores": 1.655552,
+        "cpu_s_per_leg": 0.124182,
+        "outstanding_peak_last": [
+          25,
+          24
+        ],
+        "outstanding_at_each_tenth_offer": [
+          3,
+          6,
+          9,
+          11,
+          12,
+          14,
+          18,
+          20,
+          21,
+          24
+        ],
+        "drain_s": 2.061507,
+        "latency_p50_max_s": [
+          1.034009,
+          2.061507
+        ],
+        "rss_tree_peak_KiB": 169320
+      },
+      {
+        "mode": "overload",
+        "offered_ops_s": 20.0,
+        "actual_ingress_ops_s": 19.989436,
+        "first_offer_to_last_commit_ops_s": 12.231799,
+        "mean_charged_cores": 1.664748,
+        "cpu_s_per_leg": 0.123727,
+        "outstanding_peak_last": [
+          40,
+          40
+        ],
+        "outstanding_at_each_tenth_offer": [
+          5,
+          10,
+          12,
+          18,
+          21,
+          24,
+          30,
+          31,
+          36,
+          40
+        ],
+        "drain_s": 3.222468,
+        "latency_p50_max_s": [
+          1.704361,
+          3.222468
+        ],
+        "rss_tree_peak_KiB": 170984
+      },
+      {
+        "mode": "catchup",
+        "offered_ops_s": null,
+        "actual_ingress_ops_s": 13.54259,
+        "first_offer_to_last_commit_ops_s": 12.392952,
+        "mean_charged_cores": 1.702792,
+        "cpu_s_per_leg": 0.124909,
+        "outstanding_peak_last": [
+          10,
+          10
+        ],
+        "outstanding_at_each_tenth_offer": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "drain_s": 0.758519,
+        "latency_p50_max_s": [
+          0.805828,
+          0.844677
+        ],
+        "rss_tree_peak_KiB": 165548
+      }
+    ],
+    "historical": {
+      "pass_count": 12,
+      "operations": 1200,
+      "bytes_read": 249040800,
+      "workload": "fresh stores over the same branch in each replay",
+      "cpu_s_after_funding_including_close": 160.31,
+      "cpu_s_including_funding_close": 161.19,
+      "wall_s_including_funding_close": 95.31081,
+      "cpu_s_per_leg_after_funding_including_close": 0.121447,
+      "max_tree_peak_KiB": 166104,
+      "ops_s_including_funding_close": 12.590387,
+      "ops_s_after_funding_including_close": 12.730902,
+      "per_pass_ops_s_including_funding_close": [
+        12.253002,
+        12.93855,
+        12.714356,
+        12.897681,
+        12.617873,
+        12.697214,
+        12.316974,
+        12.793812,
+        13.147213,
+        12.460527,
+        12.219976,
+        12.11939
+      ]
+    },
+    "public_payload_bytes": 20753400,
+    "closed_db_bytes": 21430272,
+    "cpu_ids": [
+      0,
+      1
+    ]
+  }
+}

@@ -1,17 +1,18 @@
-# SGM1 two-core admission — PUBLISHED, VERIFICATION PENDING
+# Two-core SGM1 monetary admission — VERIFIED
 
-Executable SHA `823cdcc43e6e47a4e58e83ba78aefef237f4f04e` is public and its three
-CI workflows passed. The author completed the 100-operation, ten-anchor experiment,
-native/reference verification of all 110 legs, 21 differential negatives, swap and
-fee rollback, seed-restored onward spend, eight arrival/replay modes and twelve
-empty-store historical passes. At 100M/year admission used 0.141 CPU-s/leg and
-0.491 cores. The 12/s stream ended with two operations outstanding, versus 21 at
-16/s. Historical validation averaged 12.77 ops/s. Keep C on the funded chain.
-An independent anonymous clone has verified the tagged corpus and original legacy
-payment. Complete the fresh-wallet cycle and exact released capacity replay there
-before closing. [Decision](experiments/sgm1-admission/DECISION.md) ·
-[Full commands](experiments/sgm1-admission/README.md) ·
-[Public corpus](https://github.com/jouliene/pq-private-chain/releases/tag/sgm1-two-core-2026-11-22)
+Tested executable `823cdcc43e6e47a4e58e83ba78aefef237f4f04e` is reachable from
+public main. All three applicable CI workflows succeeded on that SHA. From an
+anonymous public clone a non-author created new wallet keys, executed two new swaps
+and restored and spent, then checked every proof in the published 100-operation
+corpus. The functional result matched byte for byte. At 100M/year the two runs
+used 0.141 and 0.134 CPU-s/leg. At 12 offered operations/s both peaked at five
+outstanding. At 16/s their queues grew. Independent historical service measured
+12.59 ops/s across 1,200 admissions. Advance isolated SGM1 development and retain
+C on the funded PoW chain. The global objective and the quantitative quantum
+knowledge and joint receipt privacy questions remain open.
+[Measurements and decision](experiments/sgm1-admission/DECISION.md) ·
+[Independent run and CI](experiments/sgm1-admission/review/PUBLIC.md) ·
+[Exact commands](experiments/sgm1-admission/README.md)
 
 # Structured Keccak — VERIFIED
 

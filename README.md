@@ -1,5 +1,7 @@
 # PQ private chain
 
+The [SGM1 two-core admission experiment](experiments/sgm1-admission/README.md) verifies real private payments and atomic swaps on an isolated durable ledger. See the [measured operating range and funded-chain decision](experiments/sgm1-admission/DECISION.md).
+
 Run the [archive-loss recovery walkthrough](experiments/archive-recovery/README.md) to restore a funded offline wallet through a pruned PoW validator and two surviving archives.
 
 Run the [funded protocol upgrade](experiments/funded-upgrade/README.md) to pay an offline wallet under the released rules, recover its funds and spend them under an activated proof profile on the same PoW chain.
