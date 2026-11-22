@@ -57,6 +57,10 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Funded C supply packet refinement
+
+The Phase 1C [walkthrough](../experiments/supply-refinement/README.md) checks fresh private openings, original public block replay and Lean against selected SQLite rows. The versioned fixture contains only nine public blocks. The output directory also holds private funding links and true output nullifiers. Only the explicitly named aggregate JSON files in the [workflow](../.github/workflows/supply-refinement.yml) are deliverable.
+
 ## Funded C snapshot bootstrap
 
 The fresh-wallet and fixed-fixture [reproduction commands](../experiments/snapshot-bootstrap/README.md) cover distinct obligations. The [versioned release](https://github.com/jouliene/pq-private-chain/releases/tag/snapshot-bootstrap-c-v1) carries only public originals, compact wallet records, checkpoint state, manifest and test branch identities. The checkout pins its archive digest and independently obtained base registration. Record provisional and fully verified measurements separately. [Decision](../experiments/snapshot-bootstrap/DECISION.md)

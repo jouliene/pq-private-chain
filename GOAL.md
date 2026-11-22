@@ -1,3 +1,7 @@
+# Phase 1C — committed C supply packets
+
+Derive the four selected supply transitions from packet and verifier bytes, pre-block checks and actual state writes. Check a funded partial burn with change, kernel-check the formal portion and reproduce the public revision. Global private PoW chain development remains active.
+
 # Funded C token supply invariant
 
 Derive fixed and managed registration, additional mint and holder burn from the actual MNG3 equations and selected registry. Prove the invariant from consistent state for every asset, cover zero and the ceiling, and compare funded openings and post-reorg winning replay. Independent public reproduction is required.

@@ -1,0 +1,70 @@
+{
+  "tip": "000001769c109df6a80293e45490b4285f8736251f815036a1966c7d2ea288e0",
+  "height": 42,
+  "burn_block": "0000011afca5dd1fb97e793b969e7e55fbb31b9cb6e9236b3df324c1c7156607",
+  "burn_height": 41,
+  "opened_events": [
+    {
+      "height": 38,
+      "operation": "register",
+      "tx": "05cbf356fde663b32091d3b3a10644c83ac848cfae751b8b6a62b0b5d5a5e0a8",
+      "asset": "dd2814e14829f704dd5b8e8457c7080b39f717b93cf85321761778520b76a609",
+      "token_in": 0,
+      "token_out": 30,
+      "encoded_delta": 30,
+      "delta": 30,
+      "before": 0,
+      "after": 30
+    },
+    {
+      "height": 41,
+      "operation": "burn",
+      "tx": "dac03ee85faad7740dd101266c2bf75ee6db5e65c88af9aebeaf44611efc43fa",
+      "asset": "dd2814e14829f704dd5b8e8457c7080b39f717b93cf85321761778520b76a609",
+      "token_in": 16,
+      "token_out": 4,
+      "encoded_delta": 4611686018427387916,
+      "delta": -12,
+      "before": 30,
+      "after": 18
+    },
+    {
+      "height": 41,
+      "operation": "fixed",
+      "tx": "c6897388812e1f5a84fb8a1b77a5499144cde5b0508765def8a281a74899f2d0",
+      "asset": "f47864b46d82337e209d9a61b801f75d5b108096b08ed83249134e960c11b01f",
+      "token_in": 0,
+      "token_out": 5,
+      "encoded_delta": 5,
+      "delta": 5,
+      "before": 0,
+      "after": 5
+    },
+    {
+      "height": 42,
+      "operation": "mint",
+      "tx": "7efb5c30e725bc1dfb7fb557d6b012e00fe425765fe2290c1925db054a41889a",
+      "asset": "dd2814e14829f704dd5b8e8457c7080b39f717b93cf85321761778520b76a609",
+      "token_in": 0,
+      "token_out": 2,
+      "encoded_delta": 2,
+      "delta": 2,
+      "before": 18,
+      "after": 20
+    }
+  ],
+  "burn_tx": "dac03ee85faad7740dd101266c2bf75ee6db5e65c88af9aebeaf44611efc43fa",
+  "asset": "dd2814e14829f704dd5b8e8457c7080b39f717b93cf85321761778520b76a609",
+  "funded_inputs": 2,
+  "token_inputs": 16,
+  "token_change": 4,
+  "burned": 12,
+  "native_inputs": 17,
+  "native_change": 14,
+  "fee": 3,
+  "block_reward": 106,
+  "separate_fixed_asset": "f47864b46d82337e209d9a61b801f75d5b108096b08ed83249134e960c11b01f",
+  "selected_notes": 84,
+  "eligible_anchor": "5e9ffecf48277fa99461863569a606720cf7417c6c655171bbc2355cf895e3a8",
+  "tree_root": "8b56ce57cc3a1b0f9bdd65b472ecae9842e12172b622834e04c0040fbcde95b2"
+}

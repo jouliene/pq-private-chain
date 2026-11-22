@@ -1,3 +1,7 @@
+# Phase 1C — in progress
+
+The registered C wallet produced a genuine two-input partial burn. Initial funding of 16 tokens and 17 native left change of 4 and 14. The H41 row fell from 30 to 18 and the H42 mint signed the new revision. Public replay traced four historical and four new supply events through the unmodified validator. The conditional refinement and its remaining output-key obligation are under independent review. [Decision and one-command reproduction](experiments/supply-refinement/README.md) · [Pinned original evidence](experiments/supply-refinement/fixed-trace.json)
+
 # Phase 1B — funded C token supply VERIFIED
 
 Lean 4.19.0 proves from consistent selected state that fixed and managed registration, managed minting and holder burning preserve equality between each public outstanding quantity and the live face value of that asset's notes. Thirty-nine named supply theorems and seven observed event equations passed. The source mapping identifies funded-opening, nullifier, proof-acceptance, hash and issuer-signature assumptions.
