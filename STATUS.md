@@ -1,6 +1,10 @@
-# Online profile-C partial fills — LOCAL
+# Online profile-C partial fills — VERIFIED
 
-Base e1dc16d2a617143442c738d10f559d6b49d2e795. The operator completed the CLI walkthrough on three validating nodes with fresh wallets and assets. Two selected 50 A swaps cost 800,330 B and 6 native units, compared with 400,165 B and 3 units for the 100 A swap. A dropped final reply, maker restart and a heavier branch preserved already released authorizations. [Results](experiments/partial-fills/RESULTS.md) · [Reproduction](experiments/partial-fills/README.md). The next checks are anonymous reproduction and push CI.
+Two independently funded buyers discovered one 100 A order and each paid 5 B plus 3 native units for 50 A. The maker had 50 A remaining after the first selected purchase and zero after the second. A heavier branch detached the second purchase and reversed its fee. Outstanding authorization continued to encumber those 50 A until the exact signed pair was mined again. Competing requests for the last 10 A yielded one reservation. After a lost final reply and a maker restart, the buyer recovered the exact pair from its own node with the maker offline.
+
+Public executable `23903f335d9d832c226e36084f81984245da722e` starts from `e1dc16d2a617143442c738d10f559d6b49d2e795`. An independent anonymous clone repeated the CLI walkthrough in 419.32 seconds with five fresh wallets, new assets and blocks. Three validating nodes and an independent block/journal parser confirmed 800,330 B and 6 native fee units for two fills against 400,165 B and 3 units for one full swap. All four push workflows succeeded on the executable SHA. This handoff adds reports and public observations only. The global blockchain goal remains active. EAR1 and EC01 stay parked.
+
+[Measured decision](experiments/partial-fills/RESULTS.md) · [Independent reproduction](experiments/partial-fills/review/PUBLIC.md) · [Operator commands](experiments/partial-fills/README.md) · [Partial fills CI](https://github.com/jouliene/pq-private-chain/actions/runs/45006480915) · [Stranger swap CI](https://github.com/jouliene/pq-private-chain/actions/runs/45006480950) · [Payment smoke CI](https://github.com/jouliene/pq-private-chain/actions/runs/45006480918) · [PoW devnet CI](https://github.com/jouliene/pq-private-chain/actions/runs/45006480886)
 
 # EAR1 adaptive funded authorization — VERIFIED
 

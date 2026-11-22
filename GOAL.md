@@ -2,6 +2,8 @@
 
 Implement and independently reproduce a persistent off-chain 100 A maker offer with 10 A for 1 B lots, two separately authorized and mined 50 A purchases, selected-branch accounting, cancellation, authorization recovery and fee/byte comparison. Keep consensus and funded profile C. Follow public delivery.
 
+The independent public run reproduced this bounded feature with fresh funds. The global private PoW blockchain objective remains active. [Measured outcome](experiments/partial-fills/RESULTS.md) · [Independent evidence](experiments/partial-fills/review/PUBLIC.md)
+
 # EAR1 adaptive funded authorization
 
 Starting at d9fbd8d6af51f92304cdfa3b0f2eb055cd7ef4e2, qualify the exact EAR1 transcript against CDHZ 2025/2166. Resolve the first missing premise or cost one compiler-conforming alternative. Require non-author public reproduction of the decisive argument. Keep C funded and SGM1 executable.

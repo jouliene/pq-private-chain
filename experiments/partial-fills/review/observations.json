@@ -1,0 +1,203 @@
+{
+  "tested_source": "23903f335d9d832c226e36084f81984245da722e",
+  "baseline": "e1dc16d2a617143442c738d10f559d6b49d2e795",
+  "origin": "https://github.com/jouliene/pq-private-chain.git",
+  "command": "./pqd market --home NEW_DIRECTORY partial-walkthrough",
+  "fresh_clone": {
+    "HTTPS_only": true,
+    "empty_parent": true,
+    "global_and_system_git_config_disabled": true,
+    "credentials_disabled": true,
+    "object_alternates": false,
+    "local_fixture_overrides": false
+  },
+  "public_inputs_sha256": {
+    "blocks.tgz": "24fc62066d1c43b46e33152d83ee642b4d077aed7d9030ce3ffa2b31b5ceea87",
+    "c.tgz": "682ed92c510c0b73ddf21ed7c50c048c4430bb8b06c5e6fc28db1e63e8c5d942",
+    "node.tar.xz": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6"
+  },
+  "funded_branch": {
+    "common_H33": "000003b3161779eafe382ebf82daa4a23769d92dfcb3c104d646313f52320f16",
+    "fresh_H46": "000001c51496acd6ab46745380c7b5ed47707a873cbcb0da512fd5fd403e1558",
+    "final_H51": "00000016543bfd2afa27db123815ca0f6b05342f4009a93d69559b1499d5d0bb",
+    "asset_ids_and_all_three_bundle_hashes_differ_from_author": true
+  },
+  "canonical_chain": {
+    "orphaned_second_block": "00000310292bfdab3a671abb7110eeadc74f7fbdcbfb44f62183a7fa5d3703c0",
+    "canonical_second_block": "000002de51eb6d3e19c9fabeddc3f828ae0ca94d7c17fd1f793f79fe760264c0",
+    "second_bundle_sha256": "298cde9b92f47a3da0027cba6acd2235bd455031a19aba8867ffb52560cf6c3d"
+  },
+  "private_wallet_and_public_node_readback": {
+    "selected_nodes": 3,
+    "confirmed_pairs": 3,
+    "distinct_final_signatures": 6,
+    "orphaned_pair_reincluded": true,
+    "second_fill_spent_first_40A_change": true,
+    "fills": {
+      "first": {
+        "seller_source_A": [
+          90
+        ],
+        "buyer_source_B": 5,
+        "buyer_source_native": 3,
+        "physical_frame_B": [
+          200076,
+          200076
+        ],
+        "bundle_B": 400165,
+        "selected_height": 47,
+        "fee": 3
+      },
+      "second_reconfirmed": {
+        "seller_source_A": [
+          10,
+          40
+        ],
+        "buyer_source_B": 5,
+        "buyer_source_native": 3,
+        "physical_frame_B": [
+          200076,
+          200076
+        ],
+        "bundle_B": 400165,
+        "selected_height": 50,
+        "fee": 3
+      },
+      "full": {
+        "seller_source_A": [
+          10,
+          90
+        ],
+        "buyer_source_B": 10,
+        "buyer_source_native": 3,
+        "physical_frame_B": [
+          200076,
+          200076
+        ],
+        "bundle_B": 400165,
+        "selected_height": 51,
+        "fee": 3
+      }
+    },
+    "comparison": {
+      "two_partial": {
+        "packet_B": 800330,
+        "block_B": 800764,
+        "packet_list_B": 800322,
+        "fee": 6
+      },
+      "one_full": {
+        "packet_B": 400165,
+        "block_B": 400382,
+        "packet_list_B": 400161,
+        "fee": 3
+      }
+    }
+  },
+  "inventory": [
+    {
+      "view": "last_ten_reserved",
+      "height": 46,
+      "remaining": 100,
+      "available": 0,
+      "reserved": 100,
+      "exposed": 0,
+      "confirmed": 0
+    },
+    {
+      "view": "first_confirmed",
+      "height": 47,
+      "remaining": 50,
+      "available": 50,
+      "reserved": 0,
+      "exposed": 0,
+      "confirmed": 50
+    },
+    {
+      "view": "restart",
+      "height": 47,
+      "remaining": 50,
+      "available": 0,
+      "reserved": 0,
+      "exposed": 50,
+      "confirmed": 50
+    },
+    {
+      "view": "second_confirmed",
+      "height": 48,
+      "remaining": 0,
+      "available": 0,
+      "reserved": 0,
+      "exposed": 0,
+      "confirmed": 100
+    },
+    {
+      "view": "second_detached",
+      "height": 49,
+      "remaining": 50,
+      "available": 0,
+      "reserved": 0,
+      "exposed": 50,
+      "confirmed": 50
+    },
+    {
+      "view": "reconfirmed",
+      "height": 50,
+      "remaining": 0,
+      "available": 0,
+      "reserved": 0,
+      "exposed": 0,
+      "confirmed": 100
+    }
+  ],
+  "competitor": {
+    "accepted": 1,
+    "competing_buyers": 2,
+    "initial_hold_A": 90,
+    "lot_A": 10,
+    "rejected": 1
+  },
+  "lost_final_reply": {
+    "buyer_recovered_from_validated_chain": true,
+    "maker_offline": true,
+    "receiver_state": "released",
+    "seller_recovered_signed_packet": true,
+    "withheld_B": 22968
+  },
+  "encrypted_wire": {
+    "first": {
+      "connections": 3,
+      "encrypted_to_buyer_B": 290720,
+      "encrypted_to_maker_B": 275963,
+      "submit_reply_B": 120,
+      "submit_request_B": 400188
+    },
+    "full": {
+      "connections": 3,
+      "encrypted_to_buyer_B": 290721,
+      "encrypted_to_maker_B": 275964,
+      "submit_reply_B": 120,
+      "submit_request_B": 400188
+    },
+    "second": {
+      "connections": 3,
+      "encrypted_from_maker_B": 290724,
+      "encrypted_to_buyer_B": 267756,
+      "encrypted_to_maker_B": 275939,
+      "submit_reply_B": 120,
+      "submit_request_B": 400188,
+      "withheld_B": 22968
+    }
+  },
+  "literal_visibility": {
+    "distinct_advert_identities": 2,
+    "offer_handles_checked": 2,
+    "full_descriptors_checked": 5,
+    "late_bodies_scanned": 6,
+    "advert_payload_field_count": 9,
+    "literal_identifier_or_descriptor_matches": 0
+  },
+  "exact_economic_and_consensus_size_parity_with_author": true,
+  "elapsed_walkthrough_seconds": 419.32,
+  "clean_checkout_after_exit": true
+}

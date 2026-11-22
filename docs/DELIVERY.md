@@ -57,6 +57,10 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## Online partial fills on funded C
+
+The [CLI walkthrough](../experiments/partial-fills/README.md) downloads public pinned inputs, extends the funded chain, negotiates two purchases against one private order, detaches and re-includes a signed fill, and mines an equal-notional full swap. Its final independent parser checks all three selected chains, both owners’ signing journals and the source of the second fill’s change. The published evidence contains public block identities and synthetic accounting totals. Keep the runtime directories and off-chain order capabilities private. [Measured decision](../experiments/partial-fills/RESULTS.md)
+
 ## SGM1 monetary-security decision
 
 The [funded security walkthrough](../experiments/sgm1-security/README.md) verifies
