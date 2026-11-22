@@ -1,0 +1,40 @@
+{
+  "trace_dual_symbols": 65536,
+  "artin_schreier_symbols": 65536,
+  "adjoint_bit_widths": [
+    0,
+    1,
+    15,
+    16,
+    17,
+    255,
+    512,
+    1023
+  ],
+  "proof_bytes": 83866,
+  "sha256": "d394d04f0a1ed858f83627f29946aa24a556c2ea7c61ce37cac74342ce11cced",
+  "public_only_subprocess": true,
+  "parts": {
+    "symbols": 641,
+    "rows": 8,
+    "columns": 13800,
+    "salts": 1920,
+    "siblings": 46080,
+    "R_completion": 13650,
+    "Q": 7744,
+    "roots": 128,
+    "masked_projections": 512,
+    "blinded_square": 32
+  },
+  "rejected": {
+    "wrong input bit": "ring trace projection rejected",
+    "wrong wide trace coordinate": "ring trace projection rejected",
+    "inconsistent committed square": "mixed linear constraints rejected",
+    "truncated packet": "truncated proof",
+    "trailing bytes": "wire size rejected",
+    "commitment root": "mixed linear constraints rejected",
+    "masked projection": "mixed linear constraints rejected",
+    "blinded square projection": "mixed linear constraints rejected",
+    "LCS Q": "mixed linear constraints rejected"
+  }
+}

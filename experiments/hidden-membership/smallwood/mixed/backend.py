@@ -42,8 +42,8 @@ def pack_coeff(coef,width):
 
 
 class MixedCommitment:
-    def __init__(self,tr,length,wt=None):
-        p = PROFILE
+    def __init__(self,tr,length,wt=None,*,profile=PROFILE):
+        p = self.profile = profile
         self.n = n = (length+p.pack-1)//p.pack
         d = len(p.points)
         if tr.producing:
@@ -74,7 +74,7 @@ class MixedCommitment:
         self.digest = tr.message(b"mixed degree digest",p.hash_bytes,digest if tr.producing else None)
 
     def open(self,tr,coef,target,*,invalid_calibration=False):
-        p,n = PROFILE,self.n
+        p,n = self.profile,self.n
         weights = np.pad(coef,(0,n*p.pack-len(coef))).reshape(n,p.pack)
         def weights_at(xs):
             # A has coefficients in K; interpolate at embedded points in F, using F Lagrange weights.

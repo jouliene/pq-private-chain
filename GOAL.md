@@ -1,3 +1,7 @@
+# Can a wallet prove two privately linked SHAKE parents using batched Keccak?
+
+Start at public `4810fefa6bc8de48e0ad4adb6b8e881242793a7a`. Measure a real round-batched GKR and ring-switching proof of two complete FS01 parents. Use one verifier-owned root, both hidden order bits, all four honest paths and a disconnected pair. Price shared and marginal data at two funded paths and the full monetary relation, including receipts and signatures. Use 228,226 B as the signed-leg proof allowance. Run fresh funded paths if the envelope is credible. A versioned architecture decision, independent public reproduction and CI close this milestone. Keep C as the funded reference, N7P2 as the comparator and the global chain objective active.
+
 # Decide how a fresh-genesis spend proves two hidden inputs were funded — verified
 
 Starting at public `51897f17bc9e564160066770083b3bb682bf4131`, qualify

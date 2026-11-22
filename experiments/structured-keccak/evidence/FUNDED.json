@@ -1,0 +1,49 @@
+{
+  "public_rows": 13,
+  "capacity": 1099511627776,
+  "private_inputs": 2,
+  "genesis_sha256": "95322cbc68938bc4a9cdfff5daba54ad4f59424517a18341dcb5d8a207cd18f4",
+  "proof_B": 173138,
+  "proof_sha256": "998a659b3e05cd026b998f226187bddb07ed3aba6f5aa5e8f316f137368e1043",
+  "geometry": {
+    "permutations": 92,
+    "parents": 80,
+    "flatten": 4,
+    "bit_coordinates": 720752,
+    "trace_words": 566,
+    "scalar_rows": 120,
+    "linear_rows": 47531,
+    "scalar_ell": 7,
+    "ring": {
+      "symbols": 54647,
+      "rows": 601,
+      "columns": 84960,
+      "salts": 1920,
+      "siblings": 46080,
+      "R_completion": 13650,
+      "Q": 7744,
+      "roots": 128,
+      "masked_projections": 512,
+      "blinded_square": 32
+    },
+    "proof_B": 173138
+  },
+  "prover": {
+    "wall_s": 41.3,
+    "user_s": 39.14,
+    "sys_s": 2.15,
+    "peak_KiB": 314164
+  },
+  "verifier": {
+    "wall_s": 2.2,
+    "user_s": 2.1,
+    "sys_s": 0.1,
+    "peak_KiB": 125116
+  },
+  "other_branch_rejection": {
+    "wall_s": 1.24,
+    "user_s": 1.16,
+    "sys_s": 0.08,
+    "peak_KiB": 117260
+  }
+}

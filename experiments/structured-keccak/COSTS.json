@@ -1,0 +1,236 @@
+{
+  "mix": "90% ordinary, 10% two-owner swaps, 100% included, decimal TB, 365.25 days",
+  "pricing": "body only; separate lost attempts, consensus headers, forks and archival copies",
+  "measured_ordinary_and_compiled_swap": {
+    "ordinary_B": 183224,
+    "signed_leg_B": 213152,
+    "swap_B": 426324
+  },
+  "proof_allowance_B": 228226,
+  "signed_proof_headroom_B": 48992,
+  "payment": {
+    "rows": 647,
+    "parts": {
+      "opened_data_rows": 77640,
+      "mask_rows": 12840,
+      "salt": 1920,
+      "merkle_paths": 46080,
+      "degree_completion": 13650,
+      "quotient": 7744,
+      "digests": 128,
+      "ring": 544,
+      "masked_trace": 18688
+    },
+    "total": 179234
+  },
+  "constant_except_opened_rows_and_trace_B": 82906,
+  "parent_proofs_B": {
+    "1": 105354,
+    "2": 107106,
+    "8": 113610,
+    "40": 139386,
+    "80": 168618
+  },
+  "funded_proof_B": 173138,
+  "ordinary_flattentable_at_count_2": {
+    "1": {
+      "ordinary_B": 219608,
+      "signed_leg_B": 249536,
+      "swap_B": 499092
+    },
+    "2": {
+      "ordinary_B": 182936,
+      "signed_leg_B": 212864,
+      "swap_B": 425748
+    },
+    "3": {
+      "ordinary_B": 179432,
+      "signed_leg_B": 209360,
+      "swap_B": 418740
+    },
+    "4": {
+      "ordinary_B": 183224,
+      "signed_leg_B": 213152,
+      "swap_B": 426324
+    },
+    "6": {
+      "ordinary_B": 200840,
+      "signed_leg_B": 230768,
+      "swap_B": 461556
+    },
+    "8": {
+      "ordinary_B": 222080,
+      "signed_leg_B": 252008,
+      "swap_B": 504036
+    },
+    "12": {
+      "ordinary_B": 269912,
+      "signed_leg_B": 299840,
+      "swap_B": 599700
+    },
+    "24": {
+      "ordinary_B": 421712,
+      "signed_leg_B": 451640,
+      "swap_B": 903300
+    }
+  },
+  "C": {
+    "ordinary_B": 182863,
+    "swap_B": 400165,
+    "ordinary_native_verify_cpu_s": 0.008130479,
+    "swap_native_verify_cpu_s": 0.026839713,
+    "wallet_prover_CPU_s": 18.9,
+    "wallet_prover_KiB": 886988
+  },
+  "SGM1": {
+    "ordinary_warm_crypto_s": 2.1274858114999997,
+    "wallet_prover": {
+      "wall_s": 42.44,
+      "user_s": 40.25,
+      "sys_s": 2.19,
+      "peak_KiB": 322716
+    },
+    "cold_verifier": {
+      "wall_s": 2.52,
+      "user_s": 2.43,
+      "sys_s": 0.09,
+      "peak_KiB": 133536
+    }
+  },
+  "annual": {
+    "10000000": {
+      "C": {
+        "accepted_body_B": 2045932000000,
+        "canonical_body_TB": 2.045932,
+        "original_submitted_B": 2045932000000,
+        "mean_one_copy_in_Mbps": 0.518653383020255,
+        "four_body_copies_out_Mbps": 2.07461353208102,
+        "full_mempool_and_block_four_peers_out_Mbps": 4.14922706416204,
+        "fourteen_day_body_TB": 0.07842039151266257,
+        "mean_crypto_CPU_cores": 0.0031692531751463986,
+        "busy_share_of_two_cores": 0.0015846265875731993
+      },
+      "N7P2": {
+        "ordinary_B": 238488,
+        "swap_B": 508880,
+        "body_archive_B": 2655272000000,
+        "mixed_measured_core_s_per_operation": 0.025591,
+        "mean_cores": 0.008109298552488148
+      },
+      "SGM1": {
+        "accepted_body_B": 2075340000000,
+        "canonical_body_TB": 2.07534,
+        "original_submitted_B": 2075340000000,
+        "mean_one_copy_in_Mbps": 0.5261084493117347,
+        "four_body_copies_out_Mbps": 2.104433797246939,
+        "full_mempool_and_block_four_peers_out_Mbps": 4.208867594493878,
+        "fourteen_day_body_TB": 0.0795475975359343,
+        "mean_crypto_CPU_cores": 0.741575529397039,
+        "busy_share_of_two_cores": 0.3707877646985195
+      },
+      "two_core_cpu_budget_s_per_crypto_leg": 5.737745454545455
+    },
+    "30000000": {
+      "C": {
+        "accepted_body_B": 6137796000000,
+        "canonical_body_TB": 6.137796,
+        "original_submitted_B": 6137796000000,
+        "mean_one_copy_in_Mbps": 1.555960149060765,
+        "four_body_copies_out_Mbps": 6.22384059624306,
+        "full_mempool_and_block_four_peers_out_Mbps": 12.44768119248612,
+        "fourteen_day_body_TB": 0.23526117453798767,
+        "mean_crypto_CPU_cores": 0.009507759525439197,
+        "busy_share_of_two_cores": 0.004753879762719598
+      },
+      "N7P2": {
+        "ordinary_B": 238488,
+        "swap_B": 508880,
+        "body_archive_B": 7965816000000,
+        "mixed_measured_core_s_per_operation": 0.025591,
+        "mean_cores": 0.024327895657464446
+      },
+      "SGM1": {
+        "accepted_body_B": 6226020000000,
+        "canonical_body_TB": 6.22602,
+        "original_submitted_B": 6226020000000,
+        "mean_one_copy_in_Mbps": 1.5783253479352042,
+        "four_body_copies_out_Mbps": 6.313301391740817,
+        "full_mempool_and_block_four_peers_out_Mbps": 12.626602783481633,
+        "fourteen_day_body_TB": 0.23864279260780288,
+        "mean_crypto_CPU_cores": 2.224726588191117,
+        "busy_share_of_two_cores": 1.1123632940955586
+      },
+      "two_core_cpu_budget_s_per_crypto_leg": 1.912581818181818
+    },
+    "100000000": {
+      "C": {
+        "accepted_body_B": 20459320000000,
+        "canonical_body_TB": 20.45932,
+        "original_submitted_B": 20459320000000,
+        "mean_one_copy_in_Mbps": 5.186533830202551,
+        "four_body_copies_out_Mbps": 20.746135320810204,
+        "full_mempool_and_block_four_peers_out_Mbps": 41.49227064162041,
+        "fourteen_day_body_TB": 0.7842039151266256,
+        "mean_crypto_CPU_cores": 0.03169253175146399,
+        "busy_share_of_two_cores": 0.015846265875731996
+      },
+      "N7P2": {
+        "ordinary_B": 238488,
+        "swap_B": 508880,
+        "body_archive_B": 26552720000000,
+        "mixed_measured_core_s_per_operation": 0.025591,
+        "mean_cores": 0.08109298552488149
+      },
+      "SGM1": {
+        "accepted_body_B": 20753400000000,
+        "canonical_body_TB": 20.7534,
+        "original_submitted_B": 20753400000000,
+        "mean_one_copy_in_Mbps": 5.261084493117347,
+        "four_body_copies_out_Mbps": 21.04433797246939,
+        "full_mempool_and_block_four_peers_out_Mbps": 42.08867594493878,
+        "fourteen_day_body_TB": 0.7954759753593429,
+        "mean_crypto_CPU_cores": 7.41575529397039,
+        "busy_share_of_two_cores": 3.707877646985195
+      },
+      "two_core_cpu_budget_s_per_crypto_leg": 0.5737745454545454
+    }
+  },
+  "extension_sensitivity_fixed_K4": {
+    "256": {
+      "encoding_B": 179234,
+      "pack": 91,
+      "opens": 60,
+      "N": 4096,
+      "eta": 75,
+      "degree_exponent": 267.43869853884405,
+      "subset_exponent": 256.1946505535468
+    },
+    "272": {
+      "encoding_B": 182000,
+      "pack": 91,
+      "opens": 60,
+      "N": 4096,
+      "eta": 75,
+      "degree_exponent": 267.43869853884405,
+      "subset_exponent": 256.1946505535468
+    },
+    "288": {
+      "encoding_B": 184766,
+      "pack": 91,
+      "opens": 60,
+      "N": 4096,
+      "eta": 75,
+      "degree_exponent": 267.43869853884405,
+      "subset_exponent": 256.1946505535468
+    },
+    "512": {
+      "encoding_B": 222896,
+      "pack": 101,
+      "opens": 62,
+      "N": 4096,
+      "eta": 78,
+      "degree_exponent": 259.813499058816,
+      "subset_exponent": 256.2095879782154
+    }
+  }
+}

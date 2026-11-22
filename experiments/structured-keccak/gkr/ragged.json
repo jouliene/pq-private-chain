@@ -1,0 +1,28 @@
+{
+  "parents": 3,
+  "paths": 2,
+  "depths": [
+    2,
+    1
+  ],
+  "flatten": 3,
+  "prover": {
+    "wall_s": 2.985013983998215,
+    "bytes": 116226,
+    "flatten": 3,
+    "bit_count": 21763,
+    "trace_count": 580,
+    "peak_rss_KiB": 57168
+  },
+  "verifier": {
+    "wall_s": 0.3612528300000122,
+    "bytes": 116226,
+    "flatten": 3,
+    "bit_count": 21763,
+    "trace_count": 580,
+    "peak_rss_KiB": 52516
+  },
+  "packet_sha256": "faf87537683b93b82686b675f9b55adf43c7809d26dd1bd17504d8a768b06278",
+  "root_0_mutation": "ring trace projection rejected",
+  "root_1_mutation": "ring trace projection rejected"
+}

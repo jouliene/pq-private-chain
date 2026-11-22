@@ -1,0 +1,29 @@
+{
+  "depth": 8,
+  "flatten": 4,
+  "start_level": 5,
+  "public_statement_B": 72,
+  "independent_root_sha256": "d2474ebc7ba026c8e0e89f5a5b8b2fb8f03f82c5bddf64dd86b0514bbd64db6f",
+  "samples": [
+    {
+      "case": 0,
+      "proof_B": 113610,
+      "prover": {
+        "wall_s": 4.31,
+        "user_s": 4.24,
+        "sys_s": 0.06,
+        "peak_KiB": 68572
+      },
+      "verifier": {
+        "wall_s": 0.6,
+        "user_s": 0.57,
+        "sys_s": 0.02,
+        "peak_KiB": 62512
+      },
+      "public_proof_sha256": "f87688ca8d0881e485f441655955bd93069ce636c02d44791a585b9142a604b0"
+    }
+  ],
+  "changed_root_rejected": true,
+  "changed_proof_rejected": true,
+  "truncation_rejected": true
+}
