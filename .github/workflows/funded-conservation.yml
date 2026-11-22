@@ -1,0 +1,36 @@
+name: Funded C monetary conservation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/funded-conservation/**'
+      - '.github/workflows/funded-conservation.yml'
+  pull_request:
+    paths:
+      - 'experiments/funded-conservation/**'
+      - '.github/workflows/funded-conservation.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install role isolation and unpacking tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap zstd curl git
+      - name: Check Lean derivation and compare funded wallet openings
+        run: bash experiments/funded-conservation/reproduce.sh "$RUNNER_TEMP/monetary"
+      - name: Publish public counts and identities
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: conservation-evidence
+          path: |
+            ${{ runner.temp }}/monetary/result.json
+            ${{ runner.temp }}/monetary/source-result.json
+          if-no-files-found: error

@@ -1,3 +1,9 @@
+# Ordinary funded C transfer conservation — LOCAL
+
+Lean 4.19.0 checks natural-number conservation for each currency and the selected-ledger debit, fee and single miner credit. The director opened the original H25 funded test notes and repeated the transfer with fresh keys at H40. Source registration and historical charges match. Public clean reproduction and applicable CI are pending. The global blockchain objective remains active.
+
+[Result and reproduction](experiments/funded-conservation/README.md) · [Source map](experiments/funded-conservation/MAPPING.md) · [H25 openings and fee](experiments/funded-conservation/original.json)
+
 # Funded C snapshot bootstrap — VERIFIED
 
 **Continue as an optional fast start with an independently obtained registration.** An empty node reached the same H39 tip in 3.40 s in the non-author run, with its historical prefix explicitly assumed. Ordinary full replay took 13.03 s; fully corroborating the snapshot took 15.42 s. The respective framed byte counts were 3,753,027, 3,715,205 and 7,284,607. File-store peaks and timing methodology are in the decision. Genesis replay remains the default for full historical assurance.

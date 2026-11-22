@@ -1,0 +1,44 @@
+{
+  "anchor_count": 44,
+  "anchor_height": 24,
+  "block": "0000019c59d8c250bd834396eee35bb8a098c6e6c2aa67d97211136d20cf64a8",
+  "cumulative_fees": [
+    27,
+    30
+  ],
+  "depth": 3,
+  "fee": 3,
+  "funded_input_paths_checked": 2,
+  "height": 25,
+  "miner_credit": 103,
+  "opened_inputs": [
+    [
+      20,
+      12
+    ],
+    [
+      14,
+      16
+    ]
+  ],
+  "opened_outputs": [
+    [
+      28,
+      25
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "packet_bytes": 182863,
+  "public_issue_delta": 0,
+  "registered_public_verification": true,
+  "reward_output_count": 1,
+  "seed_only_opening_roles": 2,
+  "spent_added": 2,
+  "subsidy": 100,
+  "test_asset": "aa901a8babaf203a4ac668fe559431179e232000309c643c2270fb7655207536",
+  "tx": "96599833fcd217a37dc07ae078c72bca18ef89bf8b507f545413643f3fc551e3",
+  "user_output_count": 2
+}
