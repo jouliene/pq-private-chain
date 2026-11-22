@@ -1,0 +1,35 @@
+{
+  "profile": "mixed16x256",
+  "processor": "Intel Core i7-8700K",
+  "platform": "Linux Mint 22.3 x86-64, CPython 3.12.3, NumPy 1.26.4",
+  "public_rows": 13,
+  "capacity": 1099511627776,
+  "private_inputs": 2,
+  "shape": {
+    "width": 3723978,
+    "rows": 3746507,
+    "ell": 22
+  },
+  "proof_bytes": 5966544,
+  "proof_sha256": "577730731798138f08a02d6702c801c6e0c26a3cb634bef9f5cf7d1c02108f06",
+  "genesis_sha256": "d10cae2644a6d3a7ae9132ab5e8488fa436fd497e06795d03a0d0499252f1205",
+  "prover": {
+    "wall_s": 241.83,
+    "user_s": 226.67,
+    "sys_s": 15.12,
+    "peak_KiB": 2604824
+  },
+  "verifier": {
+    "wall_s": 44.58,
+    "user_s": 42.65,
+    "sys_s": 1.91,
+    "peak_KiB": 1961996
+  },
+  "wrong_branch_rejected": true,
+  "wrong_branch_check": {
+    "wall_s": 35.68,
+    "user_s": 34.22,
+    "sys_s": 1.46,
+    "peak_KiB": 1962056
+  }
+}

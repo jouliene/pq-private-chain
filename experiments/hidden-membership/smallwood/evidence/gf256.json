@@ -1,0 +1,30 @@
+{
+  "profile": "gf256",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "cpu": "x86_64",
+  "runs": [
+    {
+      "level": 12,
+      "calibration_case": 2,
+      "prove": {
+        "seconds": 22.96861321599863,
+        "max_rss_kib": 360980,
+        "process_wall_s": 23.097068089002278
+      },
+      "verify": {
+        "seconds": 2.9166157499930705,
+        "max_rss_kib": 98344,
+        "process_wall_s": 3.039498216996435
+      },
+      "bytes": 6926976,
+      "sha256": "fbdd19a2d85860ca1717f5e5f09f506ede10ac8906ecc28c09e07dee42069a13",
+      "wrong_root": "linear constraints rejected",
+      "wrong_level": "linear constraints rejected",
+      "opening_mutation": "DECS Merkle path rejected",
+      "truncated": "truncated proof",
+      "trailing": "trailing bytes",
+      "detached_link": "linear constraints rejected"
+    }
+  ]
+}

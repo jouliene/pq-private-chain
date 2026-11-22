@@ -1,0 +1,23 @@
+{
+  "profile": "mixed16x256",
+  "prove": {
+    "seconds": 6.516628162993584,
+    "max_rss_kib": 102628,
+    "process_wall_s": 6.71068525800365
+  },
+  "verify": {
+    "seconds": 1.0342252330010524,
+    "max_rss_kib": 97768,
+    "process_wall_s": 1.2211615349951899
+  },
+  "bytes": 241664,
+  "sha256": "7b136f5b9b6386ba4c41bf9aa5163cc06f853f7d23d8dfce46333ba006f6a3ec",
+  "wrong_root": "mixed linear constraints rejected",
+  "wrong_level": "mixed linear constraints rejected",
+  "detached_link": "mixed linear constraints rejected",
+  "trace_mutation": "mixed linear constraints rejected",
+  "column_mutation": "mixed Merkle opening rejected",
+  "degree_response_mutation": "mixed degree check rejected",
+  "truncated": "wire size rejected",
+  "trailing": "wire size rejected"
+}

@@ -1,0 +1,228 @@
+{
+  "mix": "90% ordinary and 10% two-leg swaps, all included",
+  "literal_profiles": {
+    "gf16": {
+      "link_bytes": 87760,
+      "two_funded_inputs_bytes": 3730382,
+      "modeled_full_proof_floor": 3910638
+    },
+    "gf256": {
+      "link_bytes": 6926976,
+      "two_funded_inputs_bytes": 312905184,
+      "modeled_full_proof_floor": 328046688
+    },
+    "mixed16x256": {
+      "link_bytes": 241664,
+      "two_funded_inputs_bytes": 5966544,
+      "modeled_full_proof_floor": 6249904
+    }
+  },
+  "single_field": {
+    "field_bits": 288,
+    "local_opening_bits": 256,
+    "N": 2048,
+    "coarse_minimum_opens": 24,
+    "assignment_elements": 3904225,
+    "monetary_argmin_pack": 304,
+    "monetary_argmin_opens": 170,
+    "both_paths_proof_floor_B": 61870608,
+    "full_monetary_proof_floor_B": 78621048
+  },
+  "traffic": {
+    "10000000": {
+      "funded_C_measured_sample": {
+        "ordinary_B": 182863,
+        "swap_B": 400165,
+        "body_archive_B_year": 2045932000000,
+        "one_live_copy_Mbps": 0.51865,
+        "four_full_gossip_copies_out_Mbps": 2.07461
+      },
+      "N7P2_sample_median_ordinary_and_measured_swap": {
+        "ordinary_B": 238488,
+        "swap_B": 508880,
+        "body_archive_B_year": 2655272000000,
+        "one_live_copy_Mbps": 0.67312,
+        "four_full_gossip_copies_out_Mbps": 2.6925
+      },
+      "C1_unpacked_288bit_partial_proof_floor_plus_FS01_envelope": {
+        "ordinary_B": 78625038,
+        "swap_B": 157309952,
+        "body_archive_B_year": 864935294000000,
+        "one_live_copy_Mbps": 219.26516,
+        "four_full_gossip_copies_out_Mbps": 877.06066
+      },
+      "C1_literal_gf16_complete_packet_floor": {
+        "ordinary_B": 3914628,
+        "swap_B": 7889132,
+        "body_archive_B_year": 43120784000000,
+        "one_live_copy_Mbps": 10.93132,
+        "four_full_gossip_copies_out_Mbps": 43.72529
+      },
+      "C1_literal_gf256_complete_packet_floor": {
+        "ordinary_B": 328050678,
+        "swap_B": 656161232,
+        "body_archive_B_year": 3608617334000000,
+        "one_live_copy_Mbps": 914.80146,
+        "four_full_gossip_copies_out_Mbps": 3659.20585
+      },
+      "C1_literal_mixed16x256_complete_packet_floor": {
+        "ordinary_B": 6253894,
+        "swap_B": 12567664,
+        "body_archive_B_year": 68852710000000,
+        "one_live_copy_Mbps": 17.45449,
+        "four_full_gossip_copies_out_Mbps": 69.81794
+      },
+      "ANF_end_year_snapshot": {
+        "ordinary_B": 3518218,
+        "swap_B": 7096312,
+        "body_archive_B_year": 38760274000000,
+        "one_live_copy_Mbps": 9.82591,
+        "four_full_gossip_copies_out_Mbps": 39.30365
+      },
+      "ANF_full_capacity": {
+        "ordinary_B": 279079218,
+        "swap_B": 558218312,
+        "body_archive_B_year": 3069931274000000,
+        "one_live_copy_Mbps": 778.24201,
+        "four_full_gossip_copies_out_Mbps": 3112.96806
+      },
+      "ANF_growing_first_year": {
+        "body_archive_B_year": 33570166382734,
+        "one_live_copy_Mbps": 8.5102,
+        "four_full_gossip_copies_out_Mbps": 34.04078,
+        "raw_funded_digest_growth_B": 1408000000,
+        "receipt_ciphertext_B": 39424000000
+      }
+    },
+    "30000000": {
+      "funded_C_measured_sample": {
+        "ordinary_B": 182863,
+        "swap_B": 400165,
+        "body_archive_B_year": 6137796000000,
+        "one_live_copy_Mbps": 1.55596,
+        "four_full_gossip_copies_out_Mbps": 6.22384
+      },
+      "N7P2_sample_median_ordinary_and_measured_swap": {
+        "ordinary_B": 238488,
+        "swap_B": 508880,
+        "body_archive_B_year": 7965816000000,
+        "one_live_copy_Mbps": 2.01937,
+        "four_full_gossip_copies_out_Mbps": 8.07749
+      },
+      "C1_unpacked_288bit_partial_proof_floor_plus_FS01_envelope": {
+        "ordinary_B": 78625038,
+        "swap_B": 157309952,
+        "body_archive_B_year": 2594805882000000,
+        "one_live_copy_Mbps": 657.79549,
+        "four_full_gossip_copies_out_Mbps": 2631.18197
+      },
+      "C1_literal_gf16_complete_packet_floor": {
+        "ordinary_B": 3914628,
+        "swap_B": 7889132,
+        "body_archive_B_year": 129362352000000,
+        "one_live_copy_Mbps": 32.79396,
+        "four_full_gossip_copies_out_Mbps": 131.17586
+      },
+      "C1_literal_gf256_complete_packet_floor": {
+        "ordinary_B": 328050678,
+        "swap_B": 656161232,
+        "body_archive_B_year": 10825852002000000,
+        "one_live_copy_Mbps": 2744.40439,
+        "four_full_gossip_copies_out_Mbps": 10977.61756
+      },
+      "C1_literal_mixed16x256_complete_packet_floor": {
+        "ordinary_B": 6253894,
+        "swap_B": 12567664,
+        "body_archive_B_year": 206558130000000,
+        "one_live_copy_Mbps": 52.36346,
+        "four_full_gossip_copies_out_Mbps": 209.45383
+      },
+      "ANF_end_year_snapshot": {
+        "ordinary_B": 4239114,
+        "swap_B": 8538104,
+        "body_archive_B_year": 140070390000000,
+        "one_live_copy_Mbps": 35.5085,
+        "four_full_gossip_copies_out_Mbps": 142.03401
+      },
+      "ANF_full_capacity": {
+        "ordinary_B": 279079218,
+        "swap_B": 558218312,
+        "body_archive_B_year": 9209793822000000,
+        "one_live_copy_Mbps": 2334.72604,
+        "four_full_gossip_copies_out_Mbps": 9338.90417
+      },
+      "ANF_growing_first_year": {
+        "body_archive_B_year": 122785654477198,
+        "one_live_copy_Mbps": 31.12674,
+        "four_full_gossip_copies_out_Mbps": 124.50696,
+        "raw_funded_digest_growth_B": 4224000000,
+        "receipt_ciphertext_B": 118272000000
+      }
+    },
+    "100000000": {
+      "funded_C_measured_sample": {
+        "ordinary_B": 182863,
+        "swap_B": 400165,
+        "body_archive_B_year": 20459320000000,
+        "one_live_copy_Mbps": 5.18653,
+        "four_full_gossip_copies_out_Mbps": 20.74614
+      },
+      "N7P2_sample_median_ordinary_and_measured_swap": {
+        "ordinary_B": 238488,
+        "swap_B": 508880,
+        "body_archive_B_year": 26552720000000,
+        "one_live_copy_Mbps": 6.73124,
+        "four_full_gossip_copies_out_Mbps": 26.92496
+      },
+      "C1_unpacked_288bit_partial_proof_floor_plus_FS01_envelope": {
+        "ordinary_B": 78625038,
+        "swap_B": 157309952,
+        "body_archive_B_year": 8649352940000000,
+        "one_live_copy_Mbps": 2192.65164,
+        "four_full_gossip_copies_out_Mbps": 8770.60658
+      },
+      "C1_literal_gf16_complete_packet_floor": {
+        "ordinary_B": 3914628,
+        "swap_B": 7889132,
+        "body_archive_B_year": 431207840000000,
+        "one_live_copy_Mbps": 109.31322,
+        "four_full_gossip_copies_out_Mbps": 437.25286
+      },
+      "C1_literal_gf256_complete_packet_floor": {
+        "ordinary_B": 328050678,
+        "swap_B": 656161232,
+        "body_archive_B_year": 36086173340000000,
+        "one_live_copy_Mbps": 9148.01464,
+        "four_full_gossip_copies_out_Mbps": 36592.05855
+      },
+      "C1_literal_mixed16x256_complete_packet_floor": {
+        "ordinary_B": 6253894,
+        "swap_B": 12567664,
+        "body_archive_B_year": 688527100000000,
+        "one_live_copy_Mbps": 174.54486,
+        "four_full_gossip_copies_out_Mbps": 698.17943
+      },
+      "ANF_end_year_snapshot": {
+        "ordinary_B": 6403188,
+        "swap_B": 12866252,
+        "body_archive_B_year": 704949440000000,
+        "one_live_copy_Mbps": 178.708,
+        "four_full_gossip_copies_out_Mbps": 714.83199
+      },
+      "ANF_full_capacity": {
+        "ordinary_B": 279079218,
+        "swap_B": 558218312,
+        "body_archive_B_year": 30699312740000000,
+        "one_live_copy_Mbps": 7782.42014,
+        "four_full_gossip_copies_out_Mbps": 31129.68057
+      },
+      "ANF_growing_first_year": {
+        "body_archive_B_year": 566671918256804,
+        "one_live_copy_Mbps": 143.654,
+        "four_full_gossip_copies_out_Mbps": 574.61598,
+        "raw_funded_digest_growth_B": 14080000000,
+        "receipt_ciphertext_B": 394240000000
+      }
+    }
+  }
+}

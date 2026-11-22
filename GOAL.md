@@ -1,4 +1,15 @@
-# Select a fresh-genesis private spend design
+# Decide how a fresh-genesis spend proves two hidden inputs were funded
+
+Starting at public `51897f17bc9e564160066770083b3bb682bf4131`, qualify
+SmallWood+ on a linked pair of hidden parent hashes with a verifier-owned
+root. Advance a qualifying construction to two funded paths and a payment
+where viable. Measure a materially different funding lookup, including
+wallet work and data availability. Compare mixed traffic at 10M, 30M and
+100M annual operations. Publish the exact limits or a measured design and
+obtain independent public reproduction. C, N7P2 and the global PoW
+blockchain objective remain available.
+
+# Select a fresh-genesis private spend design — verified
 
 Evaluate two independently verifiable private two-input payment designs at
 public base `7d5887842ba513c254128bbb5818bbd6617ce3fc`. Qualify the exact

@@ -1,0 +1,96 @@
+{
+  "profile": "gf16",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "cpu": "x86_64",
+  "runs": [
+    {
+      "level": 0,
+      "calibration_case": 0,
+      "prove": {
+        "seconds": 1.2739445619954495,
+        "max_rss_kib": 91164,
+        "process_wall_s": 1.402070055999502
+      },
+      "verify": {
+        "seconds": 0.6123472990002483,
+        "max_rss_kib": 91168,
+        "process_wall_s": 0.7452315770060522
+      },
+      "bytes": 87760,
+      "sha256": "26921f62b89fdc1157902649757f03f84b361be38f7f35fd4611fd048d6a00d9",
+      "wrong_root": "linear constraints rejected",
+      "wrong_level": "linear constraints rejected",
+      "opening_mutation": "DECS Merkle path rejected",
+      "truncated": "truncated proof",
+      "trailing": "trailing bytes",
+      "detached_link": "linear constraints rejected"
+    },
+    {
+      "level": 7,
+      "calibration_case": 1,
+      "prove": {
+        "seconds": 1.1886389080027584,
+        "max_rss_kib": 91040,
+        "process_wall_s": 1.3108662800004822
+      },
+      "verify": {
+        "seconds": 0.5580051430006279,
+        "max_rss_kib": 91080,
+        "process_wall_s": 0.6773375400007353
+      },
+      "bytes": 87760,
+      "sha256": "903825e07af803bd763dd0de31da97d1951c75f485885b6b03d56faa71928693",
+      "wrong_root": "linear constraints rejected",
+      "wrong_level": "linear constraints rejected",
+      "opening_mutation": "DECS Merkle path rejected",
+      "truncated": "truncated proof",
+      "trailing": "trailing bytes",
+      "detached_link": "linear constraints rejected"
+    },
+    {
+      "level": 12,
+      "calibration_case": 2,
+      "prove": {
+        "seconds": 1.192893011997512,
+        "max_rss_kib": 91032,
+        "process_wall_s": 1.3138864770007785
+      },
+      "verify": {
+        "seconds": 0.5437223310000263,
+        "max_rss_kib": 91040,
+        "process_wall_s": 0.664095828004065
+      },
+      "bytes": 87760,
+      "sha256": "ca3232796c0f804246294dd1625722caf8b47e73536aa07b26ae331e97e4555e",
+      "wrong_root": "linear constraints rejected",
+      "wrong_level": "linear constraints rejected",
+      "opening_mutation": "DECS Merkle path rejected",
+      "truncated": "truncated proof",
+      "trailing": "trailing bytes",
+      "detached_link": "linear constraints rejected"
+    },
+    {
+      "level": 38,
+      "calibration_case": 3,
+      "prove": {
+        "seconds": 1.2258863640017807,
+        "max_rss_kib": 91044,
+        "process_wall_s": 1.3482445209956495
+      },
+      "verify": {
+        "seconds": 0.54461053799605,
+        "max_rss_kib": 91036,
+        "process_wall_s": 0.6629790179940755
+      },
+      "bytes": 87760,
+      "sha256": "678a23694e33bf95fe175c1ef3b22ac7c9148c37e6ffdfc4147f838988e27398",
+      "wrong_root": "linear constraints rejected",
+      "wrong_level": "linear constraints rejected",
+      "opening_mutation": "DECS Merkle path rejected",
+      "truncated": "truncated proof",
+      "trailing": "trailing bytes",
+      "detached_link": "linear constraints rejected"
+    }
+  ]
+}

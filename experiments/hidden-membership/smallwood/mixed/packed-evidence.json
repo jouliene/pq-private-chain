@@ -1,0 +1,10 @@
+{
+  "boolean_values_checked": 65536,
+  "ordered_input_basis_checks": 2048,
+  "affine_offset_checks": 80,
+  "keccak_reference_checks": 160,
+  "depth40_paths_to_one_funded_root": 2,
+  "packed_products_per_parent": 32,
+  "packed_products_two_depth40_paths": 2560,
+  "additional_bitness_if_unavailable": 80
+}

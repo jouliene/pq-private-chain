@@ -1,0 +1,286 @@
+{
+  "sizing": {
+    "53": {
+      "count": 53,
+      "bits": 6,
+      "low_bits": 4,
+      "high_bits": 2,
+      "unpadded_funded_digest_bytes": 3392,
+      "table_coefficient_bytes": 4096,
+      "lookup_ands_per_input": 1548,
+      "other_ands_per_payment": 742032,
+      "two_input_ands": 745128,
+      "private_bits": 8273,
+      "expected_coefficient_xors_per_input_at_ideal_digests": 16384,
+      "candidate_compiler_xors_per_input_for_combining_groups": 2048,
+      "profiles": {
+        "256s": {
+          "proof": 2082512,
+          "ordinary": 2086502,
+          "signed_leg": 2116430,
+          "swap": 4232880,
+          "ordinary_upload_s_at_20_Mbps": 0.835,
+          "swap_upload_s_at_20_Mbps": 1.693
+        },
+        "256f": {
+          "proof": 3026404,
+          "ordinary": 3030394,
+          "signed_leg": 3060322,
+          "swap": 6120664,
+          "ordinary_upload_s_at_20_Mbps": 1.212,
+          "swap_upload_s_at_20_Mbps": 2.448
+        }
+      }
+    },
+    "209000000": {
+      "count": 209000000,
+      "bits": 28,
+      "low_bits": 19,
+      "high_bits": 9,
+      "unpadded_funded_digest_bytes": 13376000000,
+      "table_coefficient_bytes": 17179869184,
+      "lookup_ands_per_input": 786402,
+      "other_ands_per_payment": 742032,
+      "two_input_ands": 2314836,
+      "private_bits": 8273,
+      "expected_coefficient_xors_per_input_at_ideal_digests": 68719476736,
+      "candidate_compiler_xors_per_input_for_combining_groups": 262144,
+      "profiles": {
+        "256s": {
+          "proof": 6399198,
+          "ordinary": 6403188,
+          "signed_leg": 6433116,
+          "swap": 12866252,
+          "ordinary_upload_s_at_20_Mbps": 2.561,
+          "swap_upload_s_at_20_Mbps": 5.147
+        },
+        "256f": {
+          "proof": 9305220,
+          "ordinary": 9309210,
+          "signed_leg": 9339138,
+          "swap": 18678296,
+          "ordinary_upload_s_at_20_Mbps": 3.724,
+          "swap_upload_s_at_20_Mbps": 7.471
+        }
+      }
+    },
+    "220000000": {
+      "count": 220000000,
+      "bits": 28,
+      "low_bits": 19,
+      "high_bits": 9,
+      "unpadded_funded_digest_bytes": 14080000000,
+      "table_coefficient_bytes": 17179869184,
+      "lookup_ands_per_input": 786402,
+      "other_ands_per_payment": 742032,
+      "two_input_ands": 2314836,
+      "private_bits": 8273,
+      "expected_coefficient_xors_per_input_at_ideal_digests": 68719476736,
+      "candidate_compiler_xors_per_input_for_combining_groups": 262144,
+      "profiles": {
+        "256s": {
+          "proof": 6399198,
+          "ordinary": 6403188,
+          "signed_leg": 6433116,
+          "swap": 12866252,
+          "ordinary_upload_s_at_20_Mbps": 2.561,
+          "swap_upload_s_at_20_Mbps": 5.147
+        },
+        "256f": {
+          "proof": 9305220,
+          "ordinary": 9309210,
+          "signed_leg": 9339138,
+          "swap": 18678296,
+          "ordinary_upload_s_at_20_Mbps": 3.724,
+          "swap_upload_s_at_20_Mbps": 7.471
+        }
+      }
+    },
+    "2090000000": {
+      "count": 2090000000,
+      "bits": 31,
+      "low_bits": 20,
+      "high_bits": 11,
+      "unpadded_funded_digest_bytes": 133760000000,
+      "table_coefficient_bytes": 137438953472,
+      "lookup_ands_per_input": 2098655,
+      "other_ands_per_payment": 742032,
+      "two_input_ands": 4939342,
+      "private_bits": 8273,
+      "expected_coefficient_xors_per_input_at_ideal_digests": 549755813888,
+      "candidate_compiler_xors_per_input_for_combining_groups": 1048576,
+      "profiles": {
+        "256s": {
+          "proof": 13616584,
+          "ordinary": 13620574,
+          "signed_leg": 13650502,
+          "swap": 27301024,
+          "ordinary_upload_s_at_20_Mbps": 5.448,
+          "swap_upload_s_at_20_Mbps": 10.92
+        },
+        "256f": {
+          "proof": 19803236,
+          "ordinary": 19807226,
+          "signed_leg": 19837154,
+          "swap": 39674328,
+          "ordinary_upload_s_at_20_Mbps": 7.923,
+          "swap_upload_s_at_20_Mbps": 15.87
+        }
+      }
+    },
+    "2200000000": {
+      "count": 2200000000,
+      "bits": 32,
+      "low_bits": 21,
+      "high_bits": 11,
+      "unpadded_funded_digest_bytes": 140800000000,
+      "table_coefficient_bytes": 274877906944,
+      "lookup_ands_per_input": 3147230,
+      "other_ands_per_payment": 742032,
+      "two_input_ands": 7036492,
+      "private_bits": 8273,
+      "expected_coefficient_xors_per_input_at_ideal_digests": 1099511627776,
+      "candidate_compiler_xors_per_input_for_combining_groups": 1048576,
+      "profiles": {
+        "256s": {
+          "proof": 19383752,
+          "ordinary": 19387742,
+          "signed_leg": 19417670,
+          "swap": 38835360,
+          "ordinary_upload_s_at_20_Mbps": 7.755,
+          "swap_upload_s_at_20_Mbps": 15.534
+        },
+        "256f": {
+          "proof": 28191844,
+          "ordinary": 28195834,
+          "signed_leg": 28225762,
+          "swap": 56451544,
+          "ordinary_upload_s_at_20_Mbps": 11.278,
+          "swap_upload_s_at_20_Mbps": 22.581
+        }
+      }
+    },
+    "1099511627776": {
+      "count": 1099511627776,
+      "bits": 40,
+      "low_bits": 25,
+      "high_bits": 15,
+      "unpadded_funded_digest_bytes": 70368744177664,
+      "table_coefficient_bytes": 70368744177664,
+      "lookup_ands_per_input": 50363862,
+      "other_ands_per_payment": 742032,
+      "two_input_ands": 101469756,
+      "private_bits": 8273,
+      "expected_coefficient_xors_per_input_at_ideal_digests": 281474976710656,
+      "candidate_compiler_xors_per_input_for_combining_groups": 16777216,
+      "profiles": {
+        "256s": {
+          "proof": 279075228,
+          "ordinary": 279079218,
+          "signed_leg": 279109146,
+          "swap": 558218312,
+          "ordinary_upload_s_at_20_Mbps": 111.632,
+          "swap_upload_s_at_20_Mbps": 223.287
+        },
+        "256f": {
+          "proof": 405924900,
+          "ordinary": 405928890,
+          "signed_leg": 405958818,
+          "swap": 811917656,
+          "ordinary_upload_s_at_20_Mbps": 162.372,
+          "swap_upload_s_at_20_Mbps": 324.767
+        }
+      }
+    }
+  },
+  "traffic": [
+    {
+      "accepted_of_100m_offered": 95000000,
+      "snapshot": "year_1_end",
+      "ordinary_count_per_year": 85500000,
+      "swap_count_per_year": 9500000,
+      "new_rows_per_year": 209000000,
+      "digest_projection_growth_bytes": 13376000000,
+      "receipt_ciphertexts_bytes_per_year": 374528000000,
+      "one_copy_body_bytes_at_fixed_snapshot_for_one_year": 669701968000000,
+      "one_copy_Mbps": 169.773
+    },
+    {
+      "accepted_of_100m_offered": 95000000,
+      "snapshot": "year_10_end",
+      "ordinary_count_per_year": 85500000,
+      "swap_count_per_year": 9500000,
+      "new_rows_per_year": 209000000,
+      "digest_projection_growth_bytes": 13376000000,
+      "receipt_ciphertexts_bytes_per_year": 374528000000,
+      "one_copy_body_bytes_at_fixed_snapshot_for_one_year": 1423918805000000,
+      "one_copy_Mbps": 360.97
+    },
+    {
+      "accepted_of_100m_offered": 95000000,
+      "snapshot": "at_capacity",
+      "ordinary_count_per_year": 85500000,
+      "swap_count_per_year": 9500000,
+      "new_rows_per_year": 209000000,
+      "digest_projection_growth_bytes": 13376000000,
+      "receipt_ciphertexts_bytes_per_year": 374528000000,
+      "one_copy_body_bytes_at_fixed_snapshot_for_one_year": 29164347103000000,
+      "one_copy_Mbps": 7393.299
+    },
+    {
+      "accepted_of_100m_offered": 100000000,
+      "snapshot": "year_1_end",
+      "ordinary_count_per_year": 90000000,
+      "swap_count_per_year": 10000000,
+      "new_rows_per_year": 220000000,
+      "digest_projection_growth_bytes": 14080000000,
+      "receipt_ciphertexts_bytes_per_year": 394240000000,
+      "one_copy_body_bytes_at_fixed_snapshot_for_one_year": 704949440000000,
+      "one_copy_Mbps": 178.708
+    },
+    {
+      "accepted_of_100m_offered": 100000000,
+      "snapshot": "year_10_end",
+      "ordinary_count_per_year": 90000000,
+      "swap_count_per_year": 10000000,
+      "new_rows_per_year": 220000000,
+      "digest_projection_growth_bytes": 14080000000,
+      "receipt_ciphertexts_bytes_per_year": 394240000000,
+      "one_copy_body_bytes_at_fixed_snapshot_for_one_year": 2133250380000000,
+      "one_copy_Mbps": 540.789
+    },
+    {
+      "accepted_of_100m_offered": 100000000,
+      "snapshot": "at_capacity",
+      "ordinary_count_per_year": 90000000,
+      "swap_count_per_year": 10000000,
+      "new_rows_per_year": 220000000,
+      "digest_projection_growth_bytes": 14080000000,
+      "receipt_ciphertexts_bytes_per_year": 394240000000,
+      "one_copy_body_bytes_at_fixed_snapshot_for_one_year": 30699312740000000,
+      "one_copy_Mbps": 7782.42
+    }
+  ],
+  "changing_occupancy_body_bytes": [
+    {
+      "accepted": 95000000,
+      "year": 1,
+      "bytes": 531424446256804
+    },
+    {
+      "accepted": 95000000,
+      "year": 10,
+      "bytes": 1423918805000000
+    },
+    {
+      "accepted": 100000000,
+      "year": 1,
+      "bytes": 566671918256804
+    },
+    {
+      "accepted": 100000000,
+      "year": 10,
+      "bytes": 1650297212365568
+    }
+  ]
+}

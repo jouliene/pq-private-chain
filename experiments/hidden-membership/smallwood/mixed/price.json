@@ -1,0 +1,58 @@
+{
+  "linked_segment": {
+    "width": 81412,
+    "ell": 17,
+    "rows": 735,
+    "parts": {
+      "columns": 148192,
+      "siblings": 61952,
+      "salts": 2816,
+      "R_completion": 16800,
+      "Q": 9984,
+      "digests": 128,
+      "trace": 1792
+    },
+    "proof_bytes": 241664
+  },
+  "funded_only_2x40": {
+    "width": 3723978,
+    "ell": 22,
+    "rows": 33260,
+    "parts": {
+      "columns": 5872592,
+      "siblings": 61952,
+      "salts": 2816,
+      "R_completion": 16800,
+      "Q": 9984,
+      "digests": 128,
+      "trace": 2272
+    },
+    "proof_bytes": 5966544
+  },
+  "complete_payment_uncompiled_wire_inventory": {
+    "width": 3904227,
+    "ell": 22,
+    "rows": 34870,
+    "parts": {
+      "columns": 6155952,
+      "siblings": 61952,
+      "salts": 2816,
+      "R_completion": 16800,
+      "Q": 9984,
+      "digests": 128,
+      "trace": 2272
+    },
+    "proof_bytes": 6249904
+  },
+  "interactive_exponents": {
+    "row": 251.91253715874967,
+    "DECS": 256.67692729752935,
+    "LCS_opening": 256.2625032355479,
+    "LCS_mix": 256
+  },
+  "conditional_wire_bytes": {
+    "ordinary": 6253894,
+    "one_signed_leg": 6283822,
+    "two_leg_bundle": 12567664
+  }
+}

@@ -1,3 +1,17 @@
+# Hidden funded membership — LOCAL, awaiting public reproduction
+
+Public base `51897f17bc9e564160066770083b3bb682bf4131`. The independently implemented
+SmallWood+ mixed-field compiler produced and publicly verified a 5,966,544-byte
+argument for two owned, funded inputs at depth 40 on freshly signed FS01 funding.
+A second valid ordering was rejected. Full monetary encoding starts at 6,253,894 B
+per ordinary payment for this compiler. The alternative global lookup needs 949,316 B
+for one real small-table opening and grows with occupancy. Keep C and N7P2.
+Advance only the structured private Keccak transition, with a separate quantum
+extraction gate. A non-author reviewed the source, constraints and arithmetic.
+Public HTTPS reproduction and CI remain pending. The global PoW project stays active.
+Run `bash experiments/hidden-membership/reproduce.sh "$(mktemp -d)/run"`.
+[Decision and costs](experiments/hidden-membership/DECISION.md)
+
 # Fresh-genesis private spend selection — VERIFIED
 
 The public starting revision is `7d5887842ba513c254128bbb5818bbd6617ce3fc`.

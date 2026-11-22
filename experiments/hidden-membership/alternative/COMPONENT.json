@@ -1,0 +1,23 @@
+{
+  "profile": "EM-256f",
+  "funded_rows": 53,
+  "capacity": 64,
+  "table_bytes": 3525,
+  "table_check": "checked all 64 positions and a changed row at each",
+  "geometry": {
+    "ands": 231954,
+    "witness_bits": 2182,
+    "wires": 1182861,
+    "proof_bytes": 949316
+  },
+  "public_packet_bytes": 949380,
+  "timing_fields": "wall_s user_s system_s max_rss_KiB",
+  "samples": [
+    {
+      "prove": "0.52 0.49 0.03 94132",
+      "verify": "0.47 0.44 0.02 76624"
+    }
+  ],
+  "public_rejections": 6,
+  "unsatisfied_opening_rejections": 9
+}
