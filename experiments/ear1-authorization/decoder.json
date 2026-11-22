@@ -1,0 +1,19 @@
+{
+  "funded_input_count": 2,
+  "owner_secrets_distinct": true,
+  "witness_exact": true,
+  "supplied_authenticated_columns": 152,
+  "reconstruction_positions": 151,
+  "additional_consistency_checks": 1,
+  "encoded_witness_B": 6155,
+  "changed_ASKs_rejected": [
+    0,
+    1
+  ],
+  "protocol_opening_count": 60,
+  "insufficient_for_unique_interpolation": true,
+  "matching_sampled_columns": 60,
+  "unchanged_R_basis_positions": 151,
+  "distinct_at_unopened_position": true,
+  "qualification": "Test-owned partial-oracle decoder, without adversarial extraction or a new proof."
+}

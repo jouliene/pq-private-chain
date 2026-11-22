@@ -1,3 +1,7 @@
+# EAR1 adaptive funded authorization
+
+Starting at d9fbd8d6af51f92304cdfa3b0f2eb055cd7ef4e2, qualify the exact EAR1 transcript against CDHZ 2025/2166. Resolve the first missing premise or cost one compiler-conforming alternative. Require non-author public reproduction of the decisive argument. Keep C funded and SGM1 executable.
+
 # SGM1 post-quantum monetary security
 
 Starting at `3d37e5979409f7f7176c3a0a3e0e06d6194bce4f`, decide whether the

@@ -1,3 +1,7 @@
+# EAR1 adaptive authorization — LOCAL
+
+Decision: park EAR1 and the EC01 compiler registration for external cryptographic review. The public EAR1 funded payment passed, a fresh conditional decoder recovered two distinct owner secrets, and the full-size EC01 transport checked all 994 Merkle calls. Its funded adaptive knowledge lemma remains open. The quarter-slack screen requires 267 whole bits under one global query budget. Public verification and CI are pending. [Decision](experiments/ear1-authorization/DECISION.md) · [Reproduce](experiments/ear1-authorization/README.md)
+
 # SGM1 monetary security — VERIFIED
 
 **Decision: revise SGM1.** Keep profile C funded. A typed partial-oracle decoder

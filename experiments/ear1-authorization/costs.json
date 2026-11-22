@@ -1,0 +1,403 @@
+{
+  "registration": "CDHZ-11.7/MT8.2 funded EAR1 IOP projection",
+  "profile": {
+    "N": 4096,
+    "s": 91,
+    "t": 60,
+    "eta": 75,
+    "K_bits": 256,
+    "F_bits": 16,
+    "sigma_bits": 640,
+    "nu_bits": 512,
+    "rs_bits": 512
+  },
+  "compressed_round_schedule": [
+    {
+      "repeat": 1,
+      "cell_B": 1508,
+      "coin_B": 101850
+    },
+    {
+      "repeat": 1,
+      "cell_B": 22650,
+      "coin_B": 640
+    },
+    {
+      "repeat": 1,
+      "cell_B": 128,
+      "coin_B": 32
+    },
+    {
+      "repeat": 19,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 96
+    },
+    {
+      "repeat": 11,
+      "cell_B": 64,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 128,
+      "coin_B": 32
+    },
+    {
+      "repeat": 19,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 96
+    },
+    {
+      "repeat": 11,
+      "cell_B": 64,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 128,
+      "coin_B": 32
+    },
+    {
+      "repeat": 19,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 96
+    },
+    {
+      "repeat": 11,
+      "cell_B": 64,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 128,
+      "coin_B": 32
+    },
+    {
+      "repeat": 19,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 96
+    },
+    {
+      "repeat": 11,
+      "cell_B": 64,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 128,
+      "coin_B": 32
+    },
+    {
+      "repeat": 19,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 96
+    },
+    {
+      "repeat": 11,
+      "cell_B": 64,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 128,
+      "coin_B": 32
+    },
+    {
+      "repeat": 19,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 384
+    },
+    {
+      "repeat": 12,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 416
+    },
+    {
+      "repeat": 13,
+      "cell_B": 96,
+      "coin_B": 32
+    },
+    {
+      "repeat": 1,
+      "cell_B": 96,
+      "coin_B": 1982112
+    },
+    {
+      "repeat": 1,
+      "cell_B": 256,
+      "coin_B": 96
+    },
+    {
+      "repeat": 1,
+      "cell_B": 32,
+      "coin_B": 576
+    },
+    {
+      "repeat": 1,
+      "cell_B": 512,
+      "coin_B": 8192
+    },
+    {
+      "repeat": 1,
+      "cell_B": 32,
+      "coin_B": 8256
+    },
+    {
+      "repeat": 1,
+      "cell_B": 7744,
+      "coin_B": 120
+    }
+  ],
+  "wire": {
+    "components_B": {
+      "round_indices": 215,
+      "queries": 548,
+      "roots": 17200,
+      "fs_salts": 13760,
+      "first_answers": 90480,
+      "broadcast_answers": 49626,
+      "leaf_salts": 17536
+    },
+    "branch_digest_count_min": 132,
+    "branch_digest_count_max": 846,
+    "literal_proof_B": 348405,
+    "structural_min_proof_B": 199925,
+    "structural_max_proof_B": 257045,
+    "ordinary_max_B": 261035,
+    "signed_leg_max_B": 290963,
+    "two_signed_max_B": 581946,
+    "literal_ordinary_B": 352395,
+    "literal_signed_B": 382323,
+    "literal_bundle_B": 764666
+  },
+  "resources": {
+    "funded_permutations": 99,
+    "depth40_parents": 80,
+    "bit_coordinates": 783808,
+    "K_trace_masks": 584,
+    "packed_F_symbols": 58876,
+    "packed_rows": 647,
+    "codeword_F_rows": 754,
+    "zero_padded_F_coordinates": 1,
+    "F_row_blind_slots": 38820,
+    "F_decs_pad_symbols": 11325,
+    "F_randomized_split_symbols": 960,
+    "F_zero_sum_mask_free_coefficients": 3856,
+    "F_ring_pad_samples": 272,
+    "F_ring_pad_committed_slots": 544,
+    "wallet_column_bytes": 6176768,
+    "wallet_tree_digest_bytes": 672400,
+    "wallet_leaf_salt_bytes": 275840,
+    "wallet_fs_salt_bytes": 13760,
+    "wallet_column_evaluations_F": 3088384,
+    "wallet_dense_column_product_terms_F": 466345984,
+    "wallet_degree_table_product_terms_F": 7689675,
+    "node_degree_open_product_terms_F": 3055500,
+    "node_degree_eval_terms_F": 679500,
+    "node_quotient_eval_terms_K": 14520,
+    "wallet_leaf_and_pair_hashes": 8405,
+    "node_MT_CheckIO_queries": 994,
+    "FS_queries_each": 215,
+    "node_total_RO_queries": 1209,
+    "qPi": 274,
+    "lmax": 4096,
+    "ri_min_bits": 256,
+    "ri_max_bits": 15856896,
+    "FS_consumed_B": 2109522,
+    "FS_fixed_codomain_full_materialization_B": 426154080,
+    "FS_prefix_tuple_input_B": 3487730,
+    "proof_alphabet_max_payload_B": 22650
+  },
+  "hash_width_sensitivities": [
+    {
+      "sigma_bits": 384,
+      "components_B": {
+        "round_indices": 215,
+        "queries": 548,
+        "roots": 10320,
+        "fs_salts": 13760,
+        "first_answers": 90480,
+        "broadcast_answers": 49626,
+        "leaf_salts": 17536
+      },
+      "branch_digest_count_min": 132,
+      "branch_digest_count_max": 846,
+      "literal_proof_B": 277909,
+      "structural_min_proof_B": 188821,
+      "structural_max_proof_B": 223093,
+      "ordinary_max_B": 227083,
+      "signed_leg_max_B": 257011,
+      "two_signed_max_B": 514042,
+      "literal_ordinary_B": 281899,
+      "literal_signed_B": 311827,
+      "literal_bundle_B": 623674
+    },
+    {
+      "sigma_bits": 512,
+      "components_B": {
+        "round_indices": 215,
+        "queries": 548,
+        "roots": 13760,
+        "fs_salts": 13760,
+        "first_answers": 90480,
+        "broadcast_answers": 49626,
+        "leaf_salts": 17536
+      },
+      "branch_digest_count_min": 132,
+      "branch_digest_count_max": 846,
+      "literal_proof_B": 313157,
+      "structural_min_proof_B": 194373,
+      "structural_max_proof_B": 240069,
+      "ordinary_max_B": 244059,
+      "signed_leg_max_B": 273987,
+      "two_signed_max_B": 547994,
+      "literal_ordinary_B": 317147,
+      "literal_signed_B": 347075,
+      "literal_bundle_B": 694170
+    },
+    {
+      "sigma_bits": 640,
+      "components_B": {
+        "round_indices": 215,
+        "queries": 548,
+        "roots": 17200,
+        "fs_salts": 13760,
+        "first_answers": 90480,
+        "broadcast_answers": 49626,
+        "leaf_salts": 17536
+      },
+      "branch_digest_count_min": 132,
+      "branch_digest_count_max": 846,
+      "literal_proof_B": 348405,
+      "structural_min_proof_B": 199925,
+      "structural_max_proof_B": 257045,
+      "ordinary_max_B": 261035,
+      "signed_leg_max_B": 290963,
+      "two_signed_max_B": 581946,
+      "literal_ordinary_B": 352395,
+      "literal_signed_B": 382323,
+      "literal_bundle_B": 764666
+    }
+  ],
+  "geometry_sensitivities": [
+    {
+      "N": 512,
+      "s": 30,
+      "t": 138,
+      "eta": 45,
+      "proof_B": 721015,
+      "signed_leg_B": 754933,
+      "bundle_B": 1509886,
+      "wallet_column_evaluations_F": 1044480,
+      "subset_bits": 256.3514,
+      "degree_bits": 256.2549
+    },
+    {
+      "N": 1024,
+      "s": 75,
+      "t": 114,
+      "eta": 60,
+      "proof_B": 378407,
+      "signed_leg_B": 412325,
+      "bundle_B": 824670,
+      "wallet_column_evaluations_F": 899072,
+      "subset_bits": 256.0483,
+      "degree_bits": 256.2914
+    },
+    {
+      "N": 2048,
+      "s": 87,
+      "t": 79,
+      "eta": 68,
+      "proof_B": 294063,
+      "signed_leg_B": 327981,
+      "bundle_B": 655982,
+      "wallet_column_evaluations_F": 1591296,
+      "subset_bits": 256.4193,
+      "degree_bits": 258.207
+    },
+    {
+      "N": 4096,
+      "s": 86,
+      "t": 59,
+      "eta": 73,
+      "proof_B": 256927,
+      "signed_leg_B": 290845,
+      "bundle_B": 581710,
+      "wallet_column_evaluations_F": 3235840,
+      "subset_bits": 256.2899,
+      "degree_bits": 263.7756
+    },
+    {
+      "N": 8192,
+      "s": 82,
+      "t": 47,
+      "eta": 76,
+      "proof_B": 234357,
+      "signed_leg_B": 268275,
+      "bundle_B": 536570,
+      "wallet_column_evaluations_F": 6766592,
+      "subset_bits": 256.2845,
+      "degree_bits": 257.6798
+    },
+    {
+      "N": 16384,
+      "s": 77,
+      "t": 39,
+      "eta": 79,
+      "proof_B": 219937,
+      "signed_leg_B": 253855,
+      "bundle_B": 507730,
+      "wallet_column_evaluations_F": 14352384,
+      "subset_bits": 256.1037,
+      "degree_bits": 266.3983
+    },
+    {
+      "N": 32768,
+      "s": 80,
+      "t": 34,
+      "eta": 85,
+      "proof_B": 209407,
+      "signed_leg_B": 243325,
+      "bundle_B": 486670,
+      "wallet_column_evaluations_F": 27951104,
+      "subset_bits": 256.2915,
+      "degree_bits": 261.3599
+    }
+  ]
+}

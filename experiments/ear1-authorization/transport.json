@@ -1,0 +1,8 @@
+{
+  "fixture": "public synthetic EC01 transport only",
+  "serialized_B": 248885,
+  "packet_sha256": "9495c9f338951abddca43e4e2205f814d1b48a61165be85989a29e6031587661",
+  "VC_checked": 994,
+  "FS_calls_per_role": 215,
+  "changed_answer_rejected_by_CheckIO": true
+}

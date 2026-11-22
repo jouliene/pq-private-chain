@@ -1,0 +1,101 @@
+{
+  "geometry": {
+    "k": 215,
+    "q_pi": 274,
+    "q_v": 1209,
+    "proof_oracle_decider_queries": 0
+  },
+  "model": "CDHZ conditional upper envelope, no established RRBR for the money IOR",
+  "one_global_adversary": [
+    {
+      "log2_global_or_per_trial_queries": 32,
+      "comparison_events": 1,
+      "log2_multiplier": 72.321928,
+      "log2_finite_challenge": -214.251807,
+      "log2_offline": -531.678072,
+      "log2_online": -534.093108,
+      "log2_commutes": -578.613912,
+      "log2_VC_terms": -531.430144,
+      "minimum_integer_error_bits_for_quarter_slack": 75,
+      "max_log2_RRBR_for_quarter_slack": -74.321928,
+      "log2_unit_example_unclipped_extraction_upper": -183.678072,
+      "merkle_commitment_bits": 640,
+      "longest_vector": 4096
+    },
+    {
+      "log2_global_or_per_trial_queries": 64,
+      "comparison_events": 1,
+      "log2_multiplier": 136.321928,
+      "log2_finite_challenge": -182.251807,
+      "log2_offline": -435.678072,
+      "log2_online": -438.093109,
+      "log2_commutes": -546.613912,
+      "log2_VC_terms": -435.430144,
+      "minimum_integer_error_bits_for_quarter_slack": 139,
+      "max_log2_RRBR_for_quarter_slack": -138.321928,
+      "log2_unit_example_unclipped_extraction_upper": -119.678072,
+      "merkle_commitment_bits": 640,
+      "longest_vector": 4096
+    },
+    {
+      "log2_global_or_per_trial_queries": 96,
+      "comparison_events": 1,
+      "log2_multiplier": 200.321928,
+      "log2_finite_challenge": -150.251807,
+      "log2_offline": -339.678072,
+      "log2_online": -342.093109,
+      "log2_commutes": -514.613912,
+      "log2_VC_terms": -339.430144,
+      "minimum_integer_error_bits_for_quarter_slack": 203,
+      "max_log2_RRBR_for_quarter_slack": -202.321928,
+      "log2_unit_example_unclipped_extraction_upper": -55.678072,
+      "merkle_commitment_bits": 640,
+      "longest_vector": 4096
+    },
+    {
+      "log2_global_or_per_trial_queries": 128,
+      "comparison_events": 1,
+      "log2_multiplier": 264.321928,
+      "log2_finite_challenge": -118.251807,
+      "log2_offline": -243.678072,
+      "log2_online": -246.093109,
+      "log2_commutes": -482.613912,
+      "log2_VC_terms": -243.430144,
+      "minimum_integer_error_bits_for_quarter_slack": 267,
+      "max_log2_RRBR_for_quarter_slack": -266.321928,
+      "log2_unit_example_unclipped_extraction_upper": 8.321928,
+      "merkle_commitment_bits": 640,
+      "longest_vector": 4096
+    }
+  ],
+  "per_leg_conditional_union": {
+    "log2_global_or_per_trial_queries": 128,
+    "comparison_events": 2200000000,
+    "log2_multiplier": 264.321928,
+    "log2_finite_challenge": -118.251807,
+    "log2_offline": -243.678072,
+    "log2_online": -246.093109,
+    "log2_commutes": -482.613912,
+    "log2_VC_terms": -243.430144,
+    "minimum_integer_error_bits_for_quarter_slack": 298,
+    "max_log2_RRBR_for_quarter_slack": -297.356784,
+    "log2_unit_example_unclipped_extraction_upper": 8.321928,
+    "merkle_commitment_bits": 640,
+    "longest_vector": 4096
+  },
+  "original_digest_width_sensitivity_only": {
+    "log2_global_or_per_trial_queries": 128,
+    "comparison_events": 1,
+    "log2_multiplier": 264.321928,
+    "log2_finite_challenge": -118.251807,
+    "log2_offline": -115.678072,
+    "log2_online": -118.093109,
+    "log2_commutes": -354.613912,
+    "log2_VC_terms": -115.430144,
+    "minimum_integer_error_bits_for_quarter_slack": 267,
+    "max_log2_RRBR_for_quarter_slack": -266.321928,
+    "log2_unit_example_unclipped_extraction_upper": 8.321928,
+    "merkle_commitment_bits": 512,
+    "longest_vector": 4096
+  }
+}
