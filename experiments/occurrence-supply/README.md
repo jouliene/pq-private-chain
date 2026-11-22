@@ -35,6 +35,8 @@ The kernel checks the induction, the membership derivation, the earlier arithmet
 
 The funded run replays 42 original selected blocks on three nodes. A miner creates a fixed asset with supply 40, then pays a previously disconnected fresh address. A fresh wallet process restores its seed, finds one note with 19 tokens and 9 native units and spends it. Independent verification of the real onward proof, private reopening, the authenticated prefix, and the confirmed outputs checks 7 tokens to the payee and 12 change; 4 native to the payee, 2 change and a fee of 3. Two fresh public marks enter the database for one real input. The three nodes agree at H48 with cumulative fees of 78. The three test balances sum to 40. The runtime additionally recomputes the actual normalized header hash and every selected Merkle level in Lean, checks the private path and compares every relevant witness parent preimage to the finite selected tree. [Observed aggregate counts](observed.json) · [Fresh wallet experiment](wallet.py) · [Executable path check](AnchorCheck.lean)
 
+A non-author repeated the public command with fresh keys and independently reconciled the restored wallet with three selected ledgers. The three public summaries matched the developer and Phase 1D CI outputs byte for byte. [Independent reproduction and hashes](review/PUBLIC.md)
+
 Only `wallet-result.json`, `kernel-result.json` and `source-result.json` are public summaries. The reproduction directory also contains backups, witness data, databases and correlations. Keep it private. The deployed validator and the public artifacts receive no private input-to-output mapping from the experiment.
 
 ## Assurance boundary

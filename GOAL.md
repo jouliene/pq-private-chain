@@ -1,6 +1,6 @@
 # Phase 1D — occurrence-indexed supply
 
-Account for every selected output at creation, then identify the unique earlier occurrence only at a real spend. Prove the selected-history invariant, compare it with Phase 1B and verify offline receipt and spending with the deployed profile C. The global private PoW objective remains active.
+Account for every selected output at creation, then identify the unique earlier occurrence only at a real spend. Prove the selected-history invariant, compare it with Phase 1B and verify offline receipt and spending with the deployed profile C. Phase 1D passed kernel checks, a fresh funded wallet cycle, independent anonymous public reproduction and three automatic workflows at `e2f4647dbe5200122c4d41bfab84de3d746d8b9f`. The global private PoW objective remains active. [Decision and limits](experiments/occurrence-supply/README.md) · [Independent reproduction](experiments/occurrence-supply/review/PUBLIC.md)
 
 # Phase 1C — committed C supply packets
 

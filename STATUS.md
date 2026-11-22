@@ -1,6 +1,10 @@
-# Phase 1D — LOCAL, public verification pending
+# Phase 1D — VERIFIED for occurrence-indexed token supply
 
-Lean checked the conditional selected-history invariant and an opaque positive birth. A fresh offline wallet restored 19 tokens and 9 native units, spent one real input and paid a fee of 3. Three nodes selected H48. The exact publication and independent test are pending. Run the [walkthrough](experiments/occurrence-supply/README.md) in a new private directory.
+Public implementation `e2f4647dbe5200122c4d41bfab84de3d746d8b9f` extends verified Phase 1C `8e0787f7468bdfb53fa4ae2aac7ed5a4e7b77c98`. Lean checked 51 named results. The covered selected C steps preserve public outstanding supply as the sum of unconsumed committed face values, without a spending key or real nullifier at birth. An eligible sorted-tree member has one chronological occurrence. Local body and owner binding plus NF freshness rule out a second debit. Under the stronger complete-opening premises, the Phase 1B balances agree. The general result is conditional on the pinned verifier's soundness and binding assumptions, and on a faithful interpretation of an imported prefix. The global private PoW goal remains active.
+
+An independent reviewer ran the default command from an anonymous public clone. A fresh seed-restored wallet received 19 tokens and 9 native units and then made a confirmed payment of 7 and 4, with change of 12 and 2 and a native fee of 3. Three selected stores agreed at H48. The reviewer confirmed the private match and the three public summaries. The downloaded Phase 1D CI artifact contained exactly those summaries, byte-identical to the developer and reviewer results. All three automatic workflows succeeded on the implementation SHA above. The following handoff changes only documentation and the review record.
+
+[Decision and reproduction](experiments/occurrence-supply/README.md) · [Source mapping and assumptions](experiments/occurrence-supply/ASSUMPTIONS.md) · [Independent reproduction](experiments/occurrence-supply/review/PUBLIC.md) · [Occurrence-supply CI](https://github.com/jouliene/pq-private-chain/actions/runs/45023226427) · [PoW devnet CI](https://github.com/jouliene/pq-private-chain/actions/runs/45023226448) · [Payment CI](https://github.com/jouliene/pq-private-chain/actions/runs/45023226395)
 
 # Phase 1C — VERIFIED with a conditional private-state refinement
 
