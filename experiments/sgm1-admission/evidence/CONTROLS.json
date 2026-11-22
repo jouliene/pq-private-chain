@@ -1,0 +1,71 @@
+{
+  "distinct_operations": 100,
+  "ordinary": 90,
+  "swaps": 10,
+  "fees": 100,
+  "funded_prefix": 13,
+  "final_count": 233,
+  "spent": 220,
+  "accepted_proof_legs": 110,
+  "restored_onward_operation": 11,
+  "anchor_age_64_and_65_checked": true,
+  "swap_expiry_100_and_101_checked": true,
+  "fully_encoded_differential_rejections": 21,
+  "canonical_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+  "distinct_anchor_counts": [
+    13,
+    35,
+    57,
+    79,
+    101,
+    123,
+    145,
+    167,
+    189,
+    211
+  ],
+  "public_packet_list_sha256": "70ef83ff5eb5bed20b35da46d8824b9c5d4714e9bf0966a007550059818327bd",
+  "pair_state": {
+    "rollback_to_common_prefix": {
+      "height": 9,
+      "count": 31,
+      "fees": 9,
+      "spent_per_owner": [
+        0,
+        0
+      ],
+      "swap_outputs_per_owner": [
+        0,
+        0
+      ]
+    },
+    "competing_ordinary": {
+      "height": 10,
+      "count": 33,
+      "fees": 10,
+      "spent_per_owner": [
+        2,
+        0
+      ],
+      "swap_outputs_per_owner": [
+        0,
+        0
+      ]
+    },
+    "selected_swap": {
+      "height": 10,
+      "count": 35,
+      "fees": 10,
+      "spent_per_owner": [
+        2,
+        2
+      ],
+      "swap_outputs_per_owner": [
+        2,
+        2
+      ]
+    }
+  },
+  "rollback_both_sides_fee_and_restart": true,
+  "conflicting_alternative_then_original": true
+}

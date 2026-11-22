@@ -14,6 +14,21 @@ The default `capacity` run creates a fresh signed funding prefix and 100 distinc
 
 The runner places the public corpus in `run/public/`, the functional receipt in `run/controls.json`, actual arrival/commit and per-operation measurements in `run/loads/traces.json`, and the calendar calculation in `run/capacity.json`. Recompute the projections with `python3 experiments/sgm1-admission/report.py run/loads/traces.json`. The corpus generator needs no original wallet or stored proof. No private witness, note-opening record, backup or signing key is written to the evidence. Wallet peers run separately on a cooperative host. OS privilege separation or resistance to a malicious host is outside this experiment. The synthetic genesis and issuance records include their deliberately public grants.
 
+## Replay the exact published payments
+
+The versioned [public corpus](https://github.com/jouliene/pq-private-chain/releases/tag/sgm1-two-core-2026-11-22) includes the 100-operation trace, the genuine conflicting transaction, public funding, and the older SGM1 payment identified by its published digest. The archived tests need only public data. Use fresh generation above to exercise both private signing processes and backup recovery with new keys.
+
+```bash
+s=$(mktemp -d)
+curl -fL https://github.com/jouliene/pq-private-chain/releases/download/sgm1-two-core-2026-11-22/sgm1-public-100.tar.gz -o "$s/corpus.tgz"
+echo "eb9126b06ac3d84b628528bb622fb8b331d0f0d7a59548a2ea7473f096bbeb2b  $s/corpus.tgz" | sha256sum -c -
+mkdir "$s/inputs"
+tar -xzf "$s/corpus.tgz" -C "$s/inputs"
+(cd "$s/inputs" && sha256sum --quiet -c SHA256SUMS)
+bash experiments/sgm1-admission/reproduce.sh "$s/replay" public "$s/inputs/public"
+FS_RECEIPT_NODE="$s/replay/node-v24.22.1-linux-x64/bin/node" SGM1_NATIVE_LIB="$s/replay/native/libsgm1_verify.so" python3 experiments/sgm1-admission/native/replay.py "$s/inputs/legacy" 783d64bbbd924023a813dbe8b6c279013bd6d3dcdb2b0702466708ab48b6bac9
+```
+
 ## What a node verifies
 
 The starting chain has eleven pinned native grants and two distinct fixed-supply issues carrying SLH-DSA-SHAKE-256s signatures. The pin comes from test network setup. Consensus selection and mining stay outside this selected-branch experiment. Each subsequent isolated block holds one ordinary frame or one complete ordered swap. The block identity hashes the parent, height and full wire. The signed-prefix spend anchor identifies a chain/genesis-bound funded root and count. Two histories with the same funded state have the same proof anchor. Current branch eligibility, output occurrence uniqueness and spentness are ledger checks. The last 64 predecessor states are eligible under this registration. [Public funding replay](../hidden-membership/paths/funding_fixture.py) · [Packet grammar](packets.py)

@@ -1,0 +1,122 @@
+[
+  {
+    "operations": 100,
+    "funding_s": 0.08457699698919896,
+    "wall_including_close_s": 7.7814556889934465,
+    "funding_cpu_s": 0.07,
+    "cpu_including_close_s": 13.079999999999998,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 165356
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.12699153000721708,
+    "wall_including_close_s": 7.764670044998638,
+    "funding_cpu_s": 0.10000000000000002,
+    "cpu_including_close_s": 12.87,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 223584
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.08633315098995809,
+    "wall_including_close_s": 7.766658704989823,
+    "funding_cpu_s": 0.06999999999999999,
+    "cpu_including_close_s": 13.03,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 165152
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.084129782000673,
+    "wall_including_close_s": 7.711395580001408,
+    "funding_cpu_s": 0.08000000000000002,
+    "cpu_including_close_s": 12.89,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164772
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.08424887999717612,
+    "wall_including_close_s": 7.625279693995253,
+    "funding_cpu_s": 0.06,
+    "cpu_including_close_s": 12.700000000000001,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164928
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.09002658400277141,
+    "wall_including_close_s": 7.683212624004227,
+    "funding_cpu_s": 0.06999999999999999,
+    "cpu_including_close_s": 12.840000000000002,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164932
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.08160418599436525,
+    "wall_including_close_s": 7.86075052000524,
+    "funding_cpu_s": 0.07,
+    "cpu_including_close_s": 13.090000000000002,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164284
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.09534292000171263,
+    "wall_including_close_s": 7.760059318999993,
+    "funding_cpu_s": 0.07,
+    "cpu_including_close_s": 12.940000000000001,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164940
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.08650312600366306,
+    "wall_including_close_s": 7.724622947993339,
+    "funding_cpu_s": 0.07999999999999999,
+    "cpu_including_close_s": 12.92,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 165336
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.0845534590043826,
+    "wall_including_close_s": 7.730068771998049,
+    "funding_cpu_s": 0.06999999999999999,
+    "cpu_including_close_s": 12.89,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164680
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.08303541998611763,
+    "wall_including_close_s": 7.753801015991485,
+    "funding_cpu_s": 0.07,
+    "cpu_including_close_s": 12.940000000000001,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 164872
+  },
+  {
+    "operations": 100,
+    "funding_s": 0.08287703699897975,
+    "wall_including_close_s": 7.744558453996433,
+    "funding_cpu_s": 0.07,
+    "cpu_including_close_s": 12.989999999999998,
+    "bytes_read": 20753400,
+    "final_root": "81cf7531f638233d54ab1377eb60ee25338f43724065936c3449d775540948cd87c73d2c53af0a105e2399bc95b7156f8ecf24ca6e5ceb4b8b1dd6fdec933e2c",
+    "sampled_process_tree_peak_KiB": 165104
+  }
+]
