@@ -9,6 +9,7 @@ import time
 
 NETWORK = '7384e1f6a0114d698310e66965beed74870d394214fc5386421d6d4b339f9eac'
 SERVICE = 'token-for-native'
+PARTIAL = 'private-swap'
 DEFAULT_RELAYS = ('127.0.0.1:24871', '127.0.0.1:24872')
 MAX_TTL = 600
 MAX_ADS = 24
@@ -33,7 +34,7 @@ def validate(ad, at=None):
     at = int(time.time()) if at is None else at
     if not isinstance(ad, dict) or set(ad) != FIELDS or type(ad['version']) is not int or ad['version'] != 1:
         raise ValueError('unsupported advertisement')
-    if ad['network'] != NETWORK or ad['service'] != SERVICE:
+    if ad['network'] != NETWORK or ad['service'] not in (SERVICE,PARTIAL):
         raise ValueError('wrong advertisement network or service')
     if (type(ad['issued']) is not int or type(ad['expires']) is not int or
             not ad['issued'] <= at < ad['expires'] <= ad['issued'] + MAX_TTL):
@@ -104,7 +105,7 @@ class Directory:
         if register:
             ad = body['ad']
             ident = validate(ad, now)
-        elif body != {'op':'list','network':NETWORK,'service':SERVICE}:
+        elif body not in ({'op':'list','network':NETWORK,'service':v} for v in (SERVICE,PARTIAL)):
             raise ValueError('unknown directory request')
         with self.lock:
             self.entries = {k:v for k,v in self.entries.items() if v['expires'] > now}
@@ -113,7 +114,7 @@ class Directory:
                     raise ValueError('directory full')
                 self.entries[ident] = ad
                 return {'ok':True,'id':ident}
-            return {'ok':True,'ads':[self.entries[k] for k in sorted(self.entries)]}
+            return {'ok':True,'ads':[self.entries[k] for k in sorted(self.entries) if self.entries[k]['service']==body['service']]}
 
 
 class Relay(socketserver.ThreadingTCPServer):
@@ -157,8 +158,8 @@ class Handler(socketserver.StreamRequestHandler):
             pass
 
 
-def directory_round(relays, ad=None):
-    payload = {'op':'list','network':NETWORK,'service':SERVICE} if ad is None else {'op':'register','ad':ad}
+def directory_round(relays, ad=None, *,service=SERVICE):
+    payload = {'op':'list','network':NETWORK,'service':service} if ad is None else {'op':'register','ad':ad}
     wanted = validate(ad) if ad is not None else None
     accepted, counters = {}, []
     for address in relays:
@@ -172,7 +173,8 @@ def directory_round(relays, ad=None):
                     raise ValueError('invalid inventory')
                 for item in ads:
                     try:
-                        accepted[validate(item)] = item
+                        if isinstance(item,dict) and item.get("service")==service:
+                            accepted[validate(item)] = item
                     except (ValueError,TypeError,KeyError):
                         continue
             elif result.get('id') != wanted:

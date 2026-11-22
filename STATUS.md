@@ -1,3 +1,7 @@
+# Online profile-C partial fills — LOCAL
+
+Base e1dc16d2a617143442c738d10f559d6b49d2e795. The operator completed the CLI walkthrough on three validating nodes with fresh wallets and assets. Two selected 50 A swaps cost 800,330 B and 6 native units, compared with 400,165 B and 3 units for the 100 A swap. A dropped final reply, maker restart and a heavier branch preserved already released authorizations. [Results](experiments/partial-fills/RESULTS.md) · [Reproduction](experiments/partial-fills/README.md). The next checks are anonymous reproduction and push CI.
+
 # EAR1 adaptive funded authorization — VERIFIED
 
 **Park EAR1 and EC01 for external cryptographic review.** Keep C funded and SGM1 executable. Early degree data support conditional decoding of two real funded openings. The published CDHZ extractor requires a different first challenge interface and a whole-relation predecessor-witness argument. The latter is still missing after compiler normalization. At 2^128 ideal queries the selected quarter-slack scenario requires a proved per-round error of at most about 2^-266.322. Joint receipt privacy and production security remain open. The global private PoW blockchain objective stays active.

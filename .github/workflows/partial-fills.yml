@@ -1,0 +1,36 @@
+name: Online partial fills on funded C
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/partial-fills/**'
+      - 'experiments/stranger-swap/**'
+      - '.github/workflows/partial-fills.yml'
+  pull_request:
+    paths:
+      - 'experiments/partial-fills/**'
+      - 'experiments/stranger-swap/**'
+      - '.github/workflows/partial-fills.yml'
+permissions:
+  contents: read
+jobs:
+  exchange:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install local role isolation
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends bubblewrap curl openssl xz-utils
+      - name: Reproduce the funded marketplace
+        run: bash experiments/partial-fills/reproduce.sh "$RUNNER_TEMP/partial-fills"
+      - name: Preserve public measurements
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: synthetic-market-totals
+          path: ${{ runner.temp }}/partial-fills/result.json
+          if-no-files-found: error

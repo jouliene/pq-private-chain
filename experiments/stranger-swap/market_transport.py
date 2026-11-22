@@ -112,7 +112,7 @@ def _call(op, data, timeout=12):
 
 def _fields(q):
     _need(set(q) == APP_FIELDS and type(q["version"]) is int and q["version"] == 1 and
-          q["service"] == "token-for-native" and _hex(q["network"]) and
+          q["service"] in ("token-for-native","private-swap") and _hex(q["network"]) and
           type(q["issued"]) is int and type(q["expires"]) is int and
           0 <= q["issued"] < q["expires"] < 2**53, "invalid public advert fields")
 

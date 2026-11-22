@@ -1,0 +1,417 @@
+{
+  "comparison": {
+    "one_full": {
+      "block_B": 400382,
+      "fee": 3,
+      "packet_B": 400165,
+      "packet_list_B": 400161
+    },
+    "two_partial": {
+      "block_B": 800764,
+      "fee": 6,
+      "packet_B": 800330,
+      "packet_list_B": 800322
+    }
+  },
+  "controls": {
+    "alternate_prepared": {
+      "A": 20,
+      "B": 2
+    },
+    "alternative_zero_fees": true,
+    "closed_offer_honors_prior_signature": true,
+    "confirmed_duplicate_no_effect": true,
+    "duplicate_pending_idempotent": true,
+    "exact_packet_reincluded": true,
+    "independent_discovery_same_private_order": true,
+    "last_lot": {
+      "accepted": 1,
+      "competing_buyers": 2,
+      "initial_hold_A": 90,
+      "lot_A": 10,
+      "rejected": 1
+    },
+    "lost_final_reply": {
+      "buyer_recovered_from_validated_chain": true,
+      "maker_offline": true,
+      "receiver_state": "released",
+      "seller_recovered_signed_packet": true,
+      "withheld_B": 22968
+    },
+    "non_lot_rejected": true,
+    "orphan_fee_reversed": true,
+    "signed_cancellation_refused": true
+  },
+  "discovery": [
+    {
+      "available": 100,
+      "directory_reply_B": 14726,
+      "directory_request_B": 238,
+      "inspect_reply_B": 5747,
+      "inspect_request_B": 1628,
+      "role": "buyer-one"
+    },
+    {
+      "available": 100,
+      "directory_reply_B": 14726,
+      "directory_request_B": 238,
+      "inspect_reply_B": 5747,
+      "inspect_request_B": 1628,
+      "role": "buyer-two"
+    },
+    {
+      "available": 100,
+      "directory_reply_B": 14726,
+      "directory_request_B": 238,
+      "inspect_reply_B": 5747,
+      "inspect_request_B": 1628,
+      "role": "full-buyer"
+    },
+    {
+      "available": 50,
+      "directory_reply_B": 14726,
+      "directory_request_B": 238,
+      "inspect_reply_B": 5747,
+      "inspect_request_B": 1628,
+      "role": "buyer-two"
+    },
+    {
+      "available": 100,
+      "directory_reply_B": 29406,
+      "directory_request_B": 238,
+      "inspect_reply_B": 5745,
+      "inspect_request_B": 1628,
+      "role": "full-buyer"
+    }
+  ],
+  "fills": {
+    "first": {
+      "block": "000001d2500ab9366450686021fbd64aba164abb68876b764bba58b8b777634a",
+      "block_B": 400382,
+      "bundle_sha256": "0dfb1fd0442acb24f0d0373f849374d9e145c2c84a51e3a86bead90b7fe09ae3",
+      "fee": 3,
+      "height": 47,
+      "legs_B": [
+        182881,
+        182881
+      ],
+      "packet_B": 400165,
+      "packet_list_B": 400161,
+      "physical_frames_B": [
+        200076,
+        200076
+      ],
+      "reward": 103
+    },
+    "full": {
+      "block": "00000371e75b792b3e3f32415363e767dd16803784b08ab8993a7a6a85e96785",
+      "block_B": 400382,
+      "bundle_sha256": "e0a110fc8870b83f568fd0a1ec3fb1c1ceb8fd2b327b811853fb10faa56dcf1e",
+      "fee": 3,
+      "height": 51,
+      "legs_B": [
+        182881,
+        182881
+      ],
+      "packet_B": 400165,
+      "packet_list_B": 400161,
+      "physical_frames_B": [
+        200076,
+        200076
+      ],
+      "reward": 103
+    },
+    "second_before_reorg": {
+      "block": "0000035bcf75241d50479a8cc48aace3f8e493dde0894390b4bc54d33681f409",
+      "block_B": 400382,
+      "bundle_sha256": "64efeb8df96266d04b7c6e0dcdcf0c5af0256c5015cb43f36f3cf5053b58f557",
+      "fee": 3,
+      "height": 48,
+      "legs_B": [
+        182881,
+        182881
+      ],
+      "packet_B": 400165,
+      "packet_list_B": 400161,
+      "physical_frames_B": [
+        200076,
+        200076
+      ],
+      "reward": 103
+    },
+    "second_reconfirmed": {
+      "block": "0000024fbf1562f83b34d6e1293c6104247cacf340eab2ff70600fc908d365a8",
+      "block_B": 400382,
+      "bundle_sha256": "64efeb8df96266d04b7c6e0dcdcf0c5af0256c5015cb43f36f3cf5053b58f557",
+      "fee": 3,
+      "height": 50,
+      "legs_B": [
+        182881,
+        182881
+      ],
+      "packet_B": 400165,
+      "packet_list_B": 400161,
+      "physical_frames_B": [
+        200076,
+        200076
+      ],
+      "reward": 103
+    }
+  },
+  "funding": {
+    "asset_a": "6876e25b9b1490499c18109780396013c8fc13a7a3ee4e668159eceaf34c5f65",
+    "asset_b": "824e38b78907236bb5af06aed718ec03b55f46a099a5ba5d536ed21cd17bfc1f",
+    "fees": 78,
+    "height": 46,
+    "historical_fees": 51,
+    "historical_tip": "000003b3161779eafe382ebf82daa4a23769d92dfcb3c104d646313f52320f16",
+    "setup_fees": 27,
+    "starting_funds_verified": true,
+    "tip": "0000015549865670386db3dab55ad11ac5838ff77b31c3787eb59c3116d685dd"
+  },
+  "inventory": {
+    "first_confirmed": {
+      "available": 50,
+      "closed": false,
+      "confirmed": 50,
+      "exposed": 0,
+      "height": 47,
+      "remaining": 50,
+      "reserved": 0,
+      "tip": "000001d2500ab9366450686021fbd64aba164abb68876b764bba58b8b777634a"
+    },
+    "full_confirmed": {
+      "available": 0,
+      "closed": false,
+      "confirmed": 100,
+      "exposed": 0,
+      "height": 51,
+      "remaining": 0,
+      "reserved": 0,
+      "tip": "00000371e75b792b3e3f32415363e767dd16803784b08ab8993a7a6a85e96785"
+    },
+    "last_reserved": {
+      "available": 0,
+      "closed": false,
+      "confirmed": 50,
+      "exposed": 0,
+      "height": 47,
+      "remaining": 50,
+      "reserved": 50,
+      "tip": "000001d2500ab9366450686021fbd64aba164abb68876b764bba58b8b777634a"
+    },
+    "last_ten_open": {
+      "available": 10,
+      "closed": false,
+      "confirmed": 0,
+      "exposed": 0,
+      "height": 46,
+      "remaining": 100,
+      "reserved": 90,
+      "tip": "0000015549865670386db3dab55ad11ac5838ff77b31c3787eb59c3116d685dd"
+    },
+    "last_ten_reserved": {
+      "available": 0,
+      "closed": false,
+      "confirmed": 0,
+      "exposed": 0,
+      "height": 46,
+      "remaining": 100,
+      "reserved": 100,
+      "tip": "0000015549865670386db3dab55ad11ac5838ff77b31c3787eb59c3116d685dd"
+    },
+    "race_released": {
+      "available": 100,
+      "closed": false,
+      "confirmed": 0,
+      "exposed": 0,
+      "height": 46,
+      "remaining": 100,
+      "reserved": 0,
+      "tip": "0000015549865670386db3dab55ad11ac5838ff77b31c3787eb59c3116d685dd"
+    },
+    "reconfirmed": {
+      "available": 0,
+      "closed": true,
+      "confirmed": 100,
+      "exposed": 0,
+      "height": 50,
+      "remaining": 0,
+      "reserved": 0,
+      "tip": "0000024fbf1562f83b34d6e1293c6104247cacf340eab2ff70600fc908d365a8"
+    },
+    "restart": {
+      "available": 0,
+      "closed": false,
+      "confirmed": 50,
+      "exposed": 50,
+      "height": 47,
+      "remaining": 50,
+      "reserved": 0,
+      "tip": "000001d2500ab9366450686021fbd64aba164abb68876b764bba58b8b777634a"
+    },
+    "second_confirmed": {
+      "available": 0,
+      "closed": true,
+      "confirmed": 100,
+      "exposed": 0,
+      "height": 48,
+      "remaining": 0,
+      "reserved": 0,
+      "tip": "0000035bcf75241d50479a8cc48aace3f8e493dde0894390b4bc54d33681f409"
+    },
+    "second_detached": {
+      "available": 0,
+      "closed": true,
+      "confirmed": 50,
+      "exposed": 50,
+      "height": 49,
+      "remaining": 50,
+      "reserved": 0,
+      "tip": "0000036ce91a2615836f6ecc23b1cd0deae53d564eb1c39c9d4a68b860527bae"
+    },
+    "signed_before_restart": {
+      "available": 0,
+      "closed": false,
+      "confirmed": 50,
+      "exposed": 50,
+      "height": 47,
+      "remaining": 50,
+      "reserved": 0,
+      "tip": "000001d2500ab9366450686021fbd64aba164abb68876b764bba58b8b777634a"
+    },
+    "twenty_cancelled": {
+      "available": 100,
+      "closed": false,
+      "confirmed": 0,
+      "exposed": 0,
+      "height": 46,
+      "remaining": 100,
+      "reserved": 0,
+      "tip": "0000015549865670386db3dab55ad11ac5838ff77b31c3787eb59c3116d685dd"
+    },
+    "twenty_prepared": {
+      "available": 80,
+      "closed": false,
+      "confirmed": 0,
+      "exposed": 0,
+      "height": 46,
+      "remaining": 100,
+      "reserved": 20,
+      "tip": "0000015549865670386db3dab55ad11ac5838ff77b31c3787eb59c3116d685dd"
+    }
+  },
+  "selected": {
+    "fees": 87,
+    "height": 51,
+    "issued": 5100,
+    "spent": 68,
+    "spent_set_sha256": "c3cb919aefe9f6fea6cd76ff7fa5e53b78559cc561aa81cac254c8f499bccff6",
+    "tip": "00000371e75b792b3e3f32415363e767dd16803784b08ab8993a7a6a85e96785"
+  },
+  "wallets": {
+    "detached": {
+      "buyer-one": {
+        "A": 50,
+        "B": 0,
+        "native": 0
+      },
+      "buyer-two": {
+        "A": 0,
+        "B": 5,
+        "native": 3
+      },
+      "seller": {
+        "A": 50,
+        "B": 5,
+        "native": 0
+      }
+    },
+    "final": {
+      "buyer-one": {
+        "A": 50,
+        "B": 0,
+        "native": 0
+      },
+      "buyer-two": {
+        "A": 50,
+        "B": 0,
+        "native": 0
+      },
+      "full-buyer": {
+        "A": 100,
+        "B": 0,
+        "native": 0
+      },
+      "full-seller": {
+        "A": 0,
+        "B": 10,
+        "native": 0
+      },
+      "seller": {
+        "A": 0,
+        "B": 10,
+        "native": 0
+      }
+    },
+    "first": {
+      "buyer-one": {
+        "A": 50,
+        "B": 0,
+        "native": 0
+      },
+      "buyer-two": {
+        "A": 0,
+        "B": 5,
+        "native": 3
+      },
+      "seller": {
+        "A": 50,
+        "B": 5,
+        "native": 0
+      }
+    },
+    "second": {
+      "buyer-one": {
+        "A": 50,
+        "B": 0,
+        "native": 0
+      },
+      "buyer-two": {
+        "A": 50,
+        "B": 0,
+        "native": 0
+      },
+      "seller": {
+        "A": 0,
+        "B": 10,
+        "native": 0
+      }
+    }
+  },
+  "wire": {
+    "first": {
+      "connections": 3,
+      "encrypted_to_buyer_B": 290727,
+      "encrypted_to_maker_B": 275963,
+      "submit_reply_B": 120,
+      "submit_request_B": 400188
+    },
+    "full": {
+      "connections": 3,
+      "encrypted_to_buyer_B": 290722,
+      "encrypted_to_maker_B": 275964,
+      "submit_reply_B": 120,
+      "submit_request_B": 400188
+    },
+    "second": {
+      "connections": 3,
+      "encrypted_from_maker_B": 290727,
+      "encrypted_to_buyer_B": 267759,
+      "encrypted_to_maker_B": 275939,
+      "submit_reply_B": 120,
+      "submit_request_B": 400188,
+      "withheld_B": 22968
+    }
+  }
+}

@@ -17,7 +17,7 @@ import time
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "atomic-swap/wallet"))
 from terms import LIMIT, ZERO, Party, Terms, asset_id, need
-from swap_wallet import MAX_LEG, SIGNATURE, emit, frame
+from swap_wallet import MAX_LEG, SIGNATURE, emit as emit_immutable, frame
 
 VERSION = 1
 PREFIX = b"SSW1/firm-quote/v1\0"
@@ -81,6 +81,19 @@ def quote_terms(q,ad,req):
                  (Party(word(q["taker"],1601),asset,q["quantity"]),Party(word(q["maker"],1601),ZERO,q["native"])),1)
 
 
+def sync_dir(folder):
+    fd=os.open(folder,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
+def emit(path,data):
+    emit_immutable(path,data)
+    sync_dir(Path(path).parent)
+
+
 def write_state(folder, value):
     # fsync+replace allows replay after an interrupted handshake or an ambiguous network reply.
     fd, name = tempfile.mkstemp(dir=folder)
@@ -111,7 +124,9 @@ def materialize(folder,terms,side):
 
 def view(st):
     q = st["firm"]
-    result = {k:q[k] for k in ("quote","advert","asset","quantity","native","fee","payer","expiry_height","expires")}
+    fields=("quote","advert","asset","quantity","fee","payer","expiry_height","expires")
+    fields+=("offer","take","lot","price","payment") if "offer" in q else ("native",)
+    result = {k:q[k] for k in fields}
     result["state"] = st["state"]
     result["delivery"] = st.get("delivery","none")
     return result
@@ -128,6 +143,7 @@ class Local:
         for part in ("stranger-private",wallet,side):
             base = base/part
             base.mkdir(mode=0o700,exist_ok=True)
+            sync_dir(base.parent)
             need(not base.is_symlink() and base.is_dir() and not base.stat().st_mode & 0o077,"unsafe negotiation store")
         self.base = base
 
@@ -151,6 +167,7 @@ class Local:
         count = sum(read_state(p)["ad"]==st["ad"] for p in self.folders())
         need(count<MAX_HISTORY,"session limit reached for this advertisement")
         folder.mkdir(mode=0o700,exist_ok=True)
+        sync_dir(folder.parent)
         need(not folder.is_symlink() and not (folder/"session.json").exists(),"session already exists")
         write_state(folder,st)
 
@@ -412,13 +429,19 @@ class Taker(Local):
             return {**view(st),"remote":remote}
 
     def settle(self,quote,request,*,asset,quantity,native,expiry,stage="complete"):
+        expected = {"asset":asset,"quantity":integer(quantity,1,LIMIT),"native":integer(native,1,LIMIT),
+                    "expiry_height":integer(expiry,1,2**32-1)}
+        return self.settle_selected(quote,request,expected,stage)
+
+    def before_delivery(self,folder,st):
+        pass
+
+    def settle_selected(self,quote,request,expected,stage):
         need(stage in ("prepared","released","complete"),"unknown settlement stage")
         with self.locked():
             folder,st=self.find(quote)
             q=st["firm"]
-            need((q["asset"],q["quantity"],q["native"],q["expiry_height"])==
-                 (asset,integer(quantity,1,LIMIT),integer(native,1,LIMIT),integer(expiry,1,2**32-1)),
-                 "selected quote differs from local economic instructions")
+            need(all(q.get(k)==v for k,v in expected.items()),"selected quote differs from local economic instructions")
             self.recover(folder,st)
             need(st["state"] in ("quoted","prepared","releasing","released","complete"),"selected quote closed")
             if st["state"] in ("quoted","prepared","releasing"):
@@ -440,6 +463,7 @@ class Taker(Local):
                 st["state"]="released"
                 write_state(folder,st)
             if st["state"]=="released" and stage=="complete":
+                self.before_delivery(folder,st)
                 msg=self.continuation(st,"final")
                 msg["leg"]=b64((folder/"leg-a").read_bytes())
                 msg["signature"]=b64((folder/"sig-a").read_bytes())

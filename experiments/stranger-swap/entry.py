@@ -10,7 +10,7 @@ import time
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from directory import DEFAULT_RELAYS, MAX_TTL, NETWORK, SERVICE, Relay, directory_round, endpoint, validate
+from directory import PARTIAL, DEFAULT_RELAYS, MAX_TTL, NETWORK, SERVICE, Relay, directory_round, endpoint, validate
 import market_transport
 
 
@@ -47,7 +47,7 @@ def wallet_folder(home, name):
 
 def parser():
     p=argparse.ArgumentParser(description=__doc__,prog='pqd market')
-    p.add_argument('--home',type=Path,default=HERE.parents[1]/'.work/atomic-swap-devnet')
+    p.add_argument('--home',type=Path)
     subs=p.add_subparsers(dest='op',required=True)
     relay=subs.add_parser('relay',help='run one independent public directory instance')
     relay.add_argument('--listen',required=True)
@@ -55,6 +55,8 @@ def parser():
         sub=subs.add_parser(name)
         sub.add_argument('wallet')
         sub.add_argument('--node',choices=list('abcd'),default='c')
+        if name=="discover":
+            sub.add_argument("--partial",action="store_true",help="discover private lot order services")
         if name in ('maker','quote','settle'):
             sub.add_argument('--asset',required=True)
             sub.add_argument('--quantity',type=int,required=True)
@@ -75,6 +77,9 @@ def parser():
             sub.add_argument('--prepare-only',action='store_true',help='reserve a funded offer without signing or submitting')
         if name=='cancel':
             sub.add_argument('--offline',action='store_true',help='cancel a locally unsigned offer without contacting the maker')
+    from partial_wallet import add_commands
+    add_commands(subs)
+    subs.add_parser('partial-walkthrough',help='run the funded C partial-fill scenario in an explicitly supplied new --home')
     walk=subs.add_parser('walkthrough')
     walk.add_argument('--remote-ssh',help='optional SSH-config host used for the second relay and winning maker')
     walk.add_argument('--ssh-config',type=Path)
@@ -86,8 +91,15 @@ def parser():
 
 def main():
     os.umask(0o077)
-    a=parser().parse_args()
-    h=a.home.resolve()
+    cli=parser()
+    a=cli.parse_args()
+    if a.op=="partial-walkthrough":
+        if a.home is None or a.home.exists() or a.home.is_symlink():
+            cli.error("partial-walkthrough requires an explicitly supplied new --home directory")
+        import subprocess
+        return subprocess.call(["bash",str(HERE.parent/"partial-fills"/"reproduce.sh"),str(a.home.absolute())])
+    h=(a.home or HERE.parents[1]/".work/atomic-swap-devnet").resolve()
+    a.home=h
     if a.op=='walkthrough':
         from walkthrough_market import run
         return publish(run(a))
@@ -99,9 +111,16 @@ def main():
     folder=wallet_folder(h,a.wallet)
     relays=boot(h)
     if a.op=='discover':
-        ads,meters=directory_round(relays)
-        atomic(folder/'market-directory.json',ads)
+        ads,meters=directory_round(relays,service=PARTIAL if a.partial else SERVICE)
+        atomic(folder/("partial-directory.json" if a.partial else "market-directory.json"),ads)
         return publish({'makers':sorted(ads),'discovery':meters})
+    if a.op in ("offer","serve-offer","offer-status","cancel-offer","recover-fill","inspect-offer","reserve","fill","cancel-fill","fill-status","list-fills"):
+        from partial_wallet import commands
+        try:
+            return commands(a,h,folder,relays,publish)
+        except (ValueError,OSError,KeyError) as exc:
+            publish({"ok":False,"error":str(exc)})
+            return 1
     from negotiation import Maker,Taker
     if a.op=='maker':
         if not 5 <= a.lifetime <= MAX_TTL:

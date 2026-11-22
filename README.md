@@ -1,5 +1,7 @@
 # PQ private chain
 
+Run `./pqd market --home "$(mktemp -d)/partial" partial-walkthrough` to buy an online maker's 100 A offer in two separate 50 A fills on the funded profile-C PoW devnet. [CLI commands and walkthrough](experiments/partial-fills/README.md)
+
 The [SGM1 two-core admission experiment](experiments/sgm1-admission/README.md) verifies real private payments and atomic swaps on an isolated durable ledger. See the [measured operating range and funded-chain decision](experiments/sgm1-admission/DECISION.md).
 
 Run the [archive-loss recovery walkthrough](experiments/archive-recovery/README.md) to restore a funded offline wallet through a pruned PoW validator and two surviving archives.
