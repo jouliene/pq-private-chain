@@ -1,6 +1,7 @@
 """Resident swap wallet. Its coordinator pipe carries public records, proposals, cores and signatures."""
 import json
 from pathlib import Path
+import os
 import secrets
 import sys
 
@@ -20,7 +21,9 @@ def unpack(value, size):
 
 
 class Owner:
-    def __init__(self, public, slot):
+    def __init__(self, public, slot, enrollment, *, allow_conflict=False):
+        self.allow_conflict = allow_conflict and slot==0
+        self.enrollment = enrollment
         self.public = public
         self.slot = slot
         self.peer = 1-slot
@@ -34,6 +37,8 @@ class Owner:
         self.seed = secrets.token_bytes(64)
         self.ask = spend_key(self.chain,self.seed)
         self.desc = descriptor(self.chain,self.seed)
+        self.identity = helper("approval.mjs","key",b"")
+        self.enrollment.write(b"SWI1"+bytes([self.slot])+self.chain+self.desc+self.identity[:64])
         self.grant = new_note(self.desc[:64],100+self.slot,ZERO,0)
         cap = (99,173)[self.slot]
         issuer = helper("approval.mjs","key",b"")
@@ -53,7 +58,17 @@ class Owner:
     def register(self, request):
         need(self.phase=="funding","unexpected funding registration")
         self.pin = unpack(request["pin"],32)
-        self.peer_desc = unpack(request["peer_descriptor"],1632)
+        data = self.enrollment.read(4+1+64+1632+64+1)
+        self.enrollment.close()
+        need(len(data)==4+1+64+1632+64 and data[:69]==b"SWI1"+bytes([self.peer])+self.chain,
+             "incompatible peer enrollment")
+        self.peer_desc = data[69:-64]
+        self.descriptors = [self.desc,self.peer_desc] if self.slot==0 else [self.peer_desc,self.desc]
+        keys = (self.identity[:64],data[-64:])
+        self.identities = list(keys if self.slot==0 else reversed(keys))
+        need(self.desc[:64]!=self.peer_desc[:64] and self.identities[0]!=self.identities[1],
+             "duplicate enrolled owner or signing identity")
+        need(unpack(request["peer_descriptor"],1632)==self.peer_desc,"unregistered peer descriptor")
         self.node = Ledger(":memory:",self.public,self.pin)
         need(self.node.chain==self.chain,"unexpected signed funding chain")
         self.rows = [(occ,cm) for occ,cm in self.node.db.execute(
@@ -122,26 +137,43 @@ class Owner:
         need(len(offers)==2 and offers[self.slot]["key"]==self.keys[:64].hex(),"own key substitution")
         self.pks = [unpack(o["key"],64) for o in offers]
         need(self.pks[0]!=self.pks[1],"reused approval key")
-        desc = [self.desc,self.peer_desc] if self.slot==0 else [self.peer_desc,self.desc]
+        desc = [unpack(encoded,1632) for encoded in request["descriptors"]]
+        need(desc==self.descriptors,"unregistered receiving descriptors")
         for i,o in enumerate(offers):
             need(unpack(o["asset"],64)==self.assets[i] and o["cash"]==4 and o["quantity"]==(7,9)[i]
                  and unpack(o["anchor"],64)==self.wave_anchor,"unagreed asset, amount or anchor")
         self.expiry = 100
-        self.terms = h("terms",self.chain,salt,le(self.expiry,8),le(1,8),*self.pks,
-                       *(d[:64] for d in desc),*(a+le(q,8)+le(4,8) for a,q in zip(self.assets,(7,9))))
+        self.terms = h("terms",b"SGM1/pinned-swap/v1",self.pin,self.chain,self.wave_anchor,
+                       le(self.wave,8),salt,le(self.expiry,8),le(1,8),*self.identities,*self.pks,
+                       *desc,*(a+le(q,8)+le(4,8) for a,q in zip(self.assets,(7,9))))
+        approval = helper("approval.mjs","sign",self.authorization(self.slot)+self.identity[64:])
+        self.phase = "attested"
+        return {"terms":self.terms.hex(),"approval":approval.hex()}
+
+    def authorization(self,slot):
+        return h("terms",b"SGM1/pre-draft-approval/v1",bytes([slot]),self.terms)
+
+    def unlock(self,request):
+        need(self.phase=="attested" and unpack(request["terms"],64)==self.terms,"wrong pre-draft terms")
+        approvals = request["approvals"]
+        need(len(approvals)==2,"two pre-draft approvals required")
+        for i,(token,pk) in enumerate(zip(approvals,self.identities,strict=True)):
+            message = self.authorization(i)+pk+unpack(token,SIGNATURE)
+            need(helper("approval.mjs","verify",message)==b"\x01","invalid pre-draft approval")
         self.phase = "agreed"
-        return {"terms":self.terms.hex()}
+        return {"ready":True}
 
     def conflict(self, request):
-        need(self.phase=="agreed" and self.wave==0 and self.slot==0,"unexpected conflicting operation")
-        dest = unpack(request["destination"],1632)
+        need(self.phase=="agreed" and self.wave==0 and self.allow_conflict,"unexpected conflicting operation")
+        need(set(request)=={"action"},"unexpected destination for own conflicting variant")
+        self.allow_conflict = False
         asset = self.assets[0]
         body,st,wit,_,_ = prepare(self.pin,self.chain,self.rows,[self.coins[i] for i in self.next_inputs],
-                                  [(dest,1,asset,5),(self.desc,98,asset,94)],1)
+                                  [(self.desc,1,asset,5),(self.desc,98,asset,94)],1)
         return {"core":prove(self.pin,body,st,wit).hex()}
 
     def draft(self, request):
-        need(self.phase=="agreed","unexpected draft")
+        need(self.phase=="agreed" and set(request)=={"action"},"unexpected draft")
         coins = [self.coins[i] for i in self.next_inputs]
         fee = int(self.slot==0)
         qty = (7,9)[self.slot]
@@ -201,14 +233,20 @@ class Owner:
 def main():
     slot = int(sys.argv[1])
     need(slot in (0,1),"owner role")
-    wallet = Owner(Path(sys.argv[2]),slot)
+    need(sys.argv[4:] in ([],["--fixture-conflict"]),"unregistered fixture option")
+    wallet = Owner(Path(sys.argv[2]),slot,os.fdopen(int(sys.argv[3]),"r+b",buffering=0),
+                   allow_conflict=sys.argv[4:]==["--fixture-conflict"])
     actions = {name:getattr(wallet,name) for name in
-               ("initial","register","offer","agree","conflict","draft","approve","confirm")}
+               ("initial","register","offer","agree","unlock","conflict","draft","approve","confirm")}
     try:
         for line in sys.stdin.buffer:
-            req = json.loads(line)
-            need(req["action"] in actions,"unknown wallet command")
-            result = actions[req["action"]](req)
+            try:
+                req = json.loads(line)
+                need(wallet.phase!="aborted" and req["action"] in actions,"closed or unknown command")
+                result = actions[req["action"]](req)
+            except (ValueError,KeyError,TypeError,IndexError):
+                wallet.phase = "aborted"
+                result = {"error":"rejected"}
             print(json.dumps(result,separators=(",",":")),flush=True)
     finally:
         if wallet.node is not None:

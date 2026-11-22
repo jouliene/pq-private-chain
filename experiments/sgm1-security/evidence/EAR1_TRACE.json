@@ -1,0 +1,167 @@
+{
+  "suite": "EAR1",
+  "funded_count": 13,
+  "pin": "682a34abd047472df4caa7ac30452529a231f5d904ff544bb1ad743024379c11",
+  "wire_B": 192160,
+  "proof_B": 188170,
+  "packet_sha256": "e8858eae087cc3bdeccbac25d51b96d2b9e72942fff9aad80d92586625bc73ac",
+  "schedule_sha256": "acd705f15899e4aff63270a8400440cd37bbce25098d7799f439b5573915e9bc",
+  "totals": {
+    "coin_calls": 217,
+    "coin_bytes": 2109472,
+    "message_calls": 1061,
+    "message_bytes": 188170
+  },
+  "interacting_coin_blocks": 215,
+  "degree_basis_B": 22650,
+  "columns_B": 1508,
+  "authenticated_columns": 60,
+  "original_matches": 60,
+  "constant_offset_matches": 0,
+  "events_by_label": {
+    "registered ring id, parameters and dimensions": {
+      "coin_calls": 1,
+      "coin_bytes": 0
+    },
+    "mixed DECS root": {
+      "message_calls": 1,
+      "message_bytes": 64
+    },
+    "mixed degree matrix": {
+      "coin_calls": 1,
+      "coin_bytes": 101856
+    },
+    "explicit degree table v1": {
+      "message_calls": 1,
+      "message_bytes": 22650
+    },
+    "Keccak output state index": {
+      "coin_calls": 1,
+      "coin_bytes": 352
+    },
+    "flattened permutation index": {
+      "coin_calls": 1,
+      "coin_bytes": 288
+    },
+    "masked output state MLE": {
+      "message_calls": 1,
+      "message_bytes": 32
+    },
+    "Keccak chi sumcheck": {
+      "message_calls": 120,
+      "message_bytes": 11520
+    },
+    "Keccak chi sumcheck fold": {
+      "coin_calls": 120,
+      "coin_bytes": 3840
+    },
+    "Keccak affine-map MLEs": {
+      "message_calls": 6,
+      "message_bytes": 576
+    },
+    "combine Keccak maps": {
+      "coin_calls": 5,
+      "coin_bytes": 480
+    },
+    "Keccak linear map sumcheck": {
+      "message_calls": 55,
+      "message_bytes": 3520
+    },
+    "Keccak linear map sumcheck fold": {
+      "coin_calls": 55,
+      "coin_bytes": 1760
+    },
+    "previous state MLE": {
+      "message_calls": 5,
+      "message_bytes": 160
+    },
+    "packed private ordering row": {
+      "coin_calls": 1,
+      "coin_bytes": 384
+    },
+    "packed private ordering": {
+      "message_calls": 12,
+      "message_bytes": 1152
+    },
+    "packed private ordering fold": {
+      "coin_calls": 12,
+      "coin_bytes": 384
+    },
+    "packed private ordering endpoints": {
+      "message_calls": 1,
+      "message_bytes": 96
+    },
+    "FS01 scalar predicates row": {
+      "coin_calls": 1,
+      "coin_bytes": 416
+    },
+    "FS01 scalar predicates": {
+      "message_calls": 13,
+      "message_bytes": 1248
+    },
+    "FS01 scalar predicates fold": {
+      "coin_calls": 13,
+      "coin_bytes": 416
+    },
+    "FS01 scalar predicates endpoints": {
+      "message_calls": 1,
+      "message_bytes": 96
+    },
+    "funded FS01 public and absorb wiring": {
+      "coin_calls": 1,
+      "coin_bytes": 1982112
+    },
+    "trace quotient": {
+      "message_calls": 1,
+      "message_bytes": 256
+    },
+    "trace quotient point": {
+      "coin_calls": 1,
+      "coin_bytes": 32
+    },
+    "blinded trace evaluation": {
+      "message_calls": 1,
+      "message_bytes": 32
+    },
+    "joint bit and trace equations": {
+      "coin_calls": 1,
+      "coin_bytes": 576
+    },
+    "ring masked projections": {
+      "message_calls": 1,
+      "message_bytes": 512
+    },
+    "ring square batch": {
+      "coin_calls": 1,
+      "coin_bytes": 8192
+    },
+    "ring blinded square projection": {
+      "message_calls": 1,
+      "message_bytes": 32
+    },
+    "ring authenticate projections and squares": {
+      "coin_calls": 1,
+      "coin_bytes": 8256
+    },
+    "mixed Q": {
+      "message_calls": 1,
+      "message_bytes": 7744
+    },
+    "mixed opening indices": {
+      "coin_calls": 1,
+      "coin_bytes": 128
+    },
+    "mixed open column": {
+      "message_calls": 60,
+      "message_bytes": 90480
+    },
+    "mixed salt": {
+      "message_calls": 60,
+      "message_bytes": 1920
+    },
+    "mixed Merkle sibling": {
+      "message_calls": 720,
+      "message_bytes": 46080
+    }
+  }
+}

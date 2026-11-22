@@ -1,0 +1,373 @@
+[
+  {
+    "case": "enrollment-kem",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "enrollment-identity",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "proposal-kem-maker",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "proposal-kem-taker",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "proposal-identity",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "descriptor-role-order",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "offered-key-order",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "different-salts",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "different-peer-keys",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "one-approval",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "swapped-approvals",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "direct-draft",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "prior-session",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ]
+  },
+  {
+    "case": "unrequested-conflict",
+    "frames": [
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ],
+    "authorized_terms": true
+  },
+  {
+    "case": "draft-override",
+    "frames": [
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 0,
+        "action": "conflict",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      },
+      {
+        "role": 1,
+        "action": "draft",
+        "response_bytes": 21,
+        "draft_bytes": 0
+      }
+    ],
+    "authorized_terms": true
+  }
+]

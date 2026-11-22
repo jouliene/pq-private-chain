@@ -14,7 +14,7 @@ from relation import FundedTree, Input, Statement, Witness, evaluate, h, new_not
 HERE = Path(__file__).resolve().parent
 
 
-def main(directory,native):
+def main(directory,native,*,envelope=Ordinary,role_path=HERE/"payment_role.py"):
     os.umask(0o077)
     directory.mkdir(mode=0o700)
     public = directory/"prefix"
@@ -59,7 +59,7 @@ def main(directory,native):
         receipts.append(kem("seal",ctx+desc+note.encode()))
         contexts.append(ctx)
     cms = tuple(note.cm(chain) for note in outputs)
-    body = Ordinary(1,0,anchor(pin,chain,tree.root,count),1,nfs,cms,tuple(receipts))
+    body = envelope(1,0,anchor(pin,chain,tree.root,count),1,nfs,cms,tuple(receipts))
     intent = body.intent(chain,tree.root,count)
     auth = h("auth",inputs[0].ask,intent)
     s = Statement(chain,tree.root,count,1,nfs,cms,intent,auth)
@@ -72,7 +72,7 @@ def main(directory,native):
     def role(action,private=None,reject=False,sample=""):
         timing = directory/(action+sample+".time")
         cmd = ["/usr/bin/time","-f","%e %U %S %M","-o",str(timing),sys.executable,"-B",
-               str(HERE/"payment_role.py"),action,str(public),pin,str(packet),str(header)]
+               str(role_path),action,str(public),pin,str(packet),str(header)]
         args = dict(input=private) if private is not None else dict(stdin=subprocess.DEVNULL)
         p = subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,cwd=directory,env=env,**args)
         if reject:

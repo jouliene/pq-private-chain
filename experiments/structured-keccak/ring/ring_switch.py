@@ -57,19 +57,24 @@ def bit_coordinates(x):
     return ((split(x)[:, None] >> np.arange(16)) & 1).ravel().astype(F)
 
 
-def wire_size(nbits, ntrace, profile=PROFILE):
+def wire_size(nbits, ntrace, profile=PROFILE, *, early_degree=False):
     """Ring commitment, projection messages and opening only, excluding caller data."""
     n = (nbits + 15) // 16 + 16*ntrace + RING_SYMBOLS
     p = profile
     rows = (n + p.pack - 1) // p.pack
-    return dict(symbols=n, rows=rows, columns=2*p.opens*(rows + 32 + p.decs_rows),
+    sizes = dict(symbols=n, rows=rows, columns=2*p.opens*(rows + 32 + p.decs_rows),
                 salts=p.opens*p.salt_bytes, siblings=p.opens*(p.leaves.bit_length()-1)*p.hash_bytes,
                 R_completion=2*p.pack*p.decs_rows, Q=32*len(p.qpoints),
                 roots=2*p.hash_bytes, masked_projections=512, blinded_square=32)
+    if early_degree:
+        sizes.update(roots=p.hash_bytes, R_completion=0,
+                     explicit_degree_table=2*len(p.points)*p.decs_rows)
+    return sizes
 
 
-def wire_bytes(nbits, ntrace, profile=PROFILE):
-    return sum(v for k, v in wire_size(nbits, ntrace, profile).items() if k not in ("symbols", "rows"))
+def wire_bytes(nbits, ntrace, profile=PROFILE, *, early_degree=False):
+    sizes = wire_size(nbits, ntrace, profile, early_degree=early_degree)
+    return sum(v for k, v in sizes.items() if k not in ("symbols", "rows"))
 
 
 def _blocks(coefs):
@@ -139,7 +144,7 @@ def _pads():
 
 
 class RingCommitment:
-    def __init__(self, tr, nbits, ntrace, bits=None, masks=None, *, profile=PROFILE):
+    def __init__(self, tr, nbits, ntrace, bits=None, masks=None, *, profile=PROFILE, early_degree=False):
         if nbits < 0 or ntrace < 0:
             raise ValueError("invalid ring dimensions")
         self.nbits, self.ntrace = nbits, ntrace
@@ -167,7 +172,7 @@ class RingCommitment:
                                       self.r, self.q, self.d, self.e])
         elif bits is not None or masks is not None:
             raise ValueError("private values in verifier")
-        self.commitment = MixedCommitment(tr, (nbits+15)//16+16*ntrace+RING_SYMBOLS, witness, profile=profile)
+        self.commitment = MixedCommitment(tr, (nbits+15)//16+16*ntrace+RING_SYMBOLS, witness, profile=profile, early_degree=early_degree)
 
     def open(self, tr, coef, trace_coef, rhs, *, invalid_calibration=False):
         if self.opened or tr.producing != self.producing:

@@ -5,7 +5,7 @@ import resource
 import sys
 import time
 
-from payment_codec import EXPERIMENTS, parse_head
+from payment_codec import EXPERIMENTS, Ordinary, parse_head
 sys.path[:0] = [str(EXPERIMENTS/"structured-keccak"/"payment"),str(EXPERIMENTS/"structured-keccak"/"funding")]
 from argument import FLATTEN, run, shape
 from monetary import build_payment, private_witness
@@ -15,7 +15,7 @@ replay = module_from_spec(spec)
 spec.loader.exec_module(replay)
 
 
-def main():
+def main(*,envelope=Ordinary,early_degree=False):
     if len(sys.argv)!=6:
         raise ValueError("expected action, signed funding directory, genesis pin, packet and public header")
     action,directory,pin,packet,header = sys.argv[1:]
@@ -32,19 +32,20 @@ def main():
         if not 3990 < len(wire) <= 262144 or int.from_bytes(wire[3982:3990],"little")!=len(wire)-3990:
             raise ValueError("invalid complete packet length")
         head = wire[:3982]
-    s = parse_head(head,pin,chain,root,count)
+    s = parse_head(head,pin,chain,root,count,envelope=envelope)
     w = build_payment(s,FLATTEN,private)
     domain = b"SGM1/complete-FS01/signed-prefix/v1" + bytes.fromhex(pin) + s.encode()
     if action=="prove":
-        proof = run(w,domain)
+        proof = run(w,domain,early_degree=early_degree)
         Path(packet).write_bytes(head+len(proof).to_bytes(8,"little")+proof)
     else:
         result = []
         for _ in range(3 if action=="warm" else 1):
             wall,cpu = time.perf_counter(),time.process_time()
-            run(w,domain,wire[3990:])
+            run(w,domain,wire[3990:],early_degree=early_degree)
             result.append(dict(wall_s=time.perf_counter()-wall,cpu_s=time.process_time()-cpu))
-        print(json.dumps(dict(geometry=shape(w),complete_bytes=len(wire),passes=result,
+        geometry = shape(w,early_degree=early_degree)
+        print(json.dumps(dict(geometry=geometry,complete_bytes=len(wire),passes=result,
                               peak_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)))
 
 

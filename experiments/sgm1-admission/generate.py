@@ -11,6 +11,7 @@ import sys
 import threading
 
 from packets import HERE, SIGNATURE, digest, funded, le, need, pair_frame, parse, parse_leg
+from wallet_launcher import run_paired
 from wallet import Coin, descriptor, prepare, prove
 from funding_fixture import GRANTS, ISSUE_FILES, POLICY
 from relation import FundedTree, ZERO, h, new_note, spend_key
@@ -18,29 +19,32 @@ from relation import FundedTree, ZERO, h, new_note, spend_key
 
 class PublicChannel:
     """Request/reply endpoint. Both directions carry public protocol material only."""
-    def __init__(self,public,slot):
-        self.process = subprocess.Popen([sys.executable,"-B",HERE/"swap_owner.py",str(slot),public],
-                                        stdin=subprocess.PIPE,stdout=subprocess.PIPE)
+    def __init__(self,read_fd,write_fd):
+        self.writer = os.fdopen(write_fd,"wb")
+        self.reader = os.fdopen(read_fd,"rb")
         self.lock = threading.Lock()
 
-    def call(self,action,**kwargs):
+    def exchange(self,action,**kwargs):
         with self.lock:
-            self.process.stdin.write((json.dumps({"action":action,**kwargs})+"\n").encode())
-            self.process.stdin.flush()
-            line = self.process.stdout.readline()
+            self.writer.write((json.dumps({"action":action,**kwargs})+"\n").encode())
+            self.writer.flush()
+            line = self.reader.readline()
             if not line:
                 raise RuntimeError(f"wallet exited while handling {action}")
-            return json.loads(line)
+            return line
+
+    def call(self,action,**kwargs):
+        response = json.loads(self.exchange(action,**kwargs))
+        if "error" in response:
+            raise ValueError(f"wallet rejected {action}")
+        return response
 
     def close(self):
-        try:
-            self.process.stdin.close()
-        finally:
-            self.process.stdout.close()
-            self.process.wait()
+        self.reader.close()
+        self.writer.close()
 
 
-def initial(public,owners,pool):
+def funding(public,owners,pool):
     prefix = public/"prefix"
     prefix.mkdir()
     nonce = secrets.token_bytes(64)
@@ -60,21 +64,27 @@ def initial(public,owners,pool):
         (prefix/filename).write_bytes(bytes.fromhex(offers[i]["issuance"]))
     checked,rows = funded(prefix,pin)
     need(checked==chain,"chain identity")
-    root = FundedTree(rows).root.hex()
-    for i,wallet in enumerate(owners):
-        need(wallet.call("register",pin=pin.hex(),peer_descriptor=desc[1-i].hex())["funding_root"]==root,
-             "wallet funding disagreement")
     pockets = {i:[Coin(i,n,spend_key(chain,seeds[i]))] for i,n in notes.items()}
     return pin,chain,rows,seeds,desc,pockets
 
 
-def main(public,workers,waves):
+def initial(public,owners,pool):
+    result = funding(public,owners,pool)
+    pin,_,rows,_,desc,_ = result
+    root = FundedTree(rows).root.hex()
+    for i,wallet in enumerate(owners):
+        need(wallet.call("register",pin=pin.hex(),peer_descriptor=desc[1-i].hex())["funding_root"]==root,
+             "wallet funding disagreement")
+    return result
+
+
+def main(public,workers,waves,fds):
     os.umask(0o077)
     public.mkdir()
     with ExitStack() as stack:
         owners = []
-        for i in range(2):
-            channel = PublicChannel(public,i)
+        for read_fd,write_fd in zip(fds[::2],fds[1::2],strict=True):
+            channel = PublicChannel(read_fd,write_fd)
             stack.callback(channel.close)
             owners.append(channel)
         pool = stack.enter_context(ThreadPoolExecutor(max_workers=workers))
@@ -84,10 +94,14 @@ def main(public,workers,waves):
             base = list(rows)
             offers = list(pool.map(lambda w:w.call("offer",wave=wave),owners))
             salt = secrets.token_bytes(64).hex()
-            agreements = list(pool.map(lambda w:w.call("agree",offers=offers,salt=salt),owners))
-            need(agreements[0]==agreements[1],"swap wallets derived different terms")
+            descriptors = [desc[i].hex() for i in range(2)]
+            agreements = list(pool.map(lambda w:w.call("agree",offers=offers,salt=salt,descriptors=descriptors),owners))
+            terms = agreements[0]["terms"]
+            need(agreements[1]["terms"]==terms,"swap wallets derived different terms")
+            approvals = [a["approval"] for a in agreements]
+            list(pool.map(lambda w:w.call("unlock",terms=terms,approvals=approvals),owners))
             if wave==0:
-                conflict = pool.submit(owners[0].call,"conflict",destination=desc[8].hex())
+                conflict = pool.submit(owners[0].call,"conflict")
             ops = []
             for i in range(2,11):
                 ix = 10*wave+i-1
@@ -134,5 +148,11 @@ if __name__=="__main__":
     ap.add_argument("public",type=Path)
     ap.add_argument("--workers",type=int,default=3,choices=range(1,7))
     ap.add_argument("--waves",type=int,default=2,choices=range(2,11))
+    ap.add_argument("--wallet-fds",type=int,nargs=4,help=argparse.SUPPRESS)
     args=ap.parse_args()
-    main(args.public.resolve(),args.workers,args.waves)
+    public=args.public.resolve()
+    if args.wallet_fds is None:
+        run_paired(public,[sys.executable,"-B",Path(__file__).resolve(),public,
+                           "--workers",str(args.workers),"--waves",str(args.waves)],allow_maker_conflict=True)
+    else:
+        main(public,args.workers,args.waves,args.wallet_fds)

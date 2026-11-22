@@ -42,7 +42,8 @@ def pack_coeff(coef,width):
 
 
 class MixedCommitment:
-    def __init__(self,tr,length,wt=None,*,profile=PROFILE):
+    def __init__(self,tr,length,wt=None,*,profile=PROFILE, early_degree=False):
+        self.early_degree = early_degree
         p = self.profile = profile
         self.n = n = (length+p.pack-1)//p.pack
         d = len(p.points)
@@ -70,8 +71,13 @@ class MixedCommitment:
         if tr.producing:
             self.rsamples = np.array([row ^ freduce(fmul(self.samples[:n+32],g[:,None]),axis=0)
                                       for row,g in zip(self.samples[n+32:],self.gamma)])
-            digest = hash_bytes(b"mixed R",fencode(self.rsamples)).digest(p.hash_bytes)
-        self.digest = tr.message(b"mixed degree digest",p.hash_bytes,digest if tr.producing else None)
+        if early_degree:
+            data = self.rsamples.ravel() if tr.producing else None
+            self.rsamples = ff_message(tr, b"explicit degree table v1",
+                                       p.decs_rows*d, data).reshape(p.decs_rows, d)
+        else:
+            digest = hash_bytes(b"mixed R",fencode(self.rsamples)).digest(p.hash_bytes) if tr.producing else None
+            self.digest = tr.message(b"mixed degree digest",p.hash_bytes,digest)
 
     def open(self,tr,coef,target,*,invalid_calibration=False):
         p,n = self.profile,self.n
@@ -116,6 +122,11 @@ class MixedCommitment:
             if xor(mul(q,EMBED[fbasis(p.qpoints,x)])) != qvalue(x,col,av[j]):
                 raise ValueError("mixed Q opening rejected")
             r_open.append(col[n+32:] ^ freduce(fmul(self.gamma,col[:n+32]),axis=1))
+        if self.early_degree:
+            for x, column in zip(xs, r_open, strict=True):
+                if not np.array_equal(feval(self.rsamples,p.points,x), column):
+                    raise ValueError("explicit degree opening rejected")
+            return
         extra = [j for j in range(p.leaves) if j not in indices][:len(p.points)-p.opens]
         for i in extra:
             v = feval(self.rsamples,p.points,p.evaluation(i)) if tr.producing else None

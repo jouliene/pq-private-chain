@@ -9,7 +9,7 @@ from ring_switch import RingCommitment
 
 
 def execute(statement,nbits,ntrace,build_constraints,*,bits=None,packet=None,
-            invalid_calibration=False,profile=None):
+            invalid_calibration=False,profile=None,early_degree=False):
     if (bits is None)==(packet is None) or (packet is not None and invalid_calibration):
         raise ValueError("select exactly one proof role")
     tr = Transcript(b"structured Keccak GKR/C1/v1"+statement,packet)
@@ -19,7 +19,7 @@ def execute(statement,nbits,ntrace,build_constraints,*,bits=None,packet=None,
         if bits.shape != (nbits,) or np.any((bits != 0) & (bits != 1)):
             raise ValueError("expected one binary witness vector")
         bits = bits.astype(np.uint8, copy=False)
-    ring = RingCommitment(tr,nbits,ntrace,bits,masks,**({} if profile is None else {"profile":profile}))
+    ring = RingCommitment(tr,nbits,ntrace,bits,masks,early_degree=early_degree,**({} if profile is None else {"profile":profile}))
     ctx = Context(tr,nbits,ntrace,bits,masks)
     build_constraints(ctx)
     coeff,trace_coeff,target = ctx.finalize()

@@ -1,0 +1,67 @@
+{
+  "identical_retransmission": {
+    "wire_B": [
+      183224,
+      183224
+    ],
+    "same_wire": true,
+    "same_fees": true,
+    "same_anchor": true,
+    "same_role_sequence": true,
+    "shared_nullifiers": 2,
+    "shared_commitments": 2,
+    "shared_receipts": 2
+  },
+  "different_ordinary_same_wave": {
+    "wire_B": [
+      183224,
+      183224
+    ],
+    "same_wire": false,
+    "same_fees": true,
+    "same_anchor": true,
+    "same_role_sequence": true,
+    "shared_nullifiers": 0,
+    "shared_commitments": 0,
+    "shared_receipts": 0
+  },
+  "intentional_conflict_against_first_pair": {
+    "wire_B": [
+      183224,
+      426324
+    ],
+    "same_wire": false,
+    "same_fees": false,
+    "same_anchor": true,
+    "same_role_sequence": false,
+    "shared_nullifiers": 2,
+    "shared_commitments": 0,
+    "shared_receipts": 0
+  },
+  "first_receipt_then_onward": {
+    "wire_B": [
+      183224,
+      183224
+    ],
+    "same_wire": false,
+    "same_fees": true,
+    "same_anchor": false,
+    "same_role_sequence": true,
+    "shared_nullifiers": 0,
+    "shared_commitments": 0,
+    "shared_receipts": 0
+  },
+  "same_two_swap_wallets_later_wave": {
+    "wire_B": [
+      426324,
+      426324
+    ],
+    "same_wire": false,
+    "same_fees": true,
+    "same_anchor": false,
+    "same_role_sequence": true,
+    "shared_nullifiers": 0,
+    "shared_commitments": 0,
+    "shared_receipts": 0
+  }
+}

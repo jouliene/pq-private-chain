@@ -1,0 +1,42 @@
+[
+  {
+    "case": "honest",
+    "genesis_sha256": "84f2a3ec0583da72db1d73379de32af12241dfeb9d27549f99f7a33214925f14",
+    "height": 20,
+    "tip_id": "ecc6be59711a058883484271ab2268368ef0b5de4185d433f020c13bfef23b0a",
+    "root": "f74eea9f5db16ee61b778dcc7830c1b12a5eed1438c8c36863d86798d5a2dca355c96d97f4c6fffb28e1155f1a0965ce477a0e0feb7349d326ea4594746b252f",
+    "outputs": 57,
+    "fees": 20,
+    "reopened": true,
+    "frames": [
+      {
+        "height": 10,
+        "role": 0,
+        "draft_bytes": 183360,
+        "response_bytes": 366732,
+        "core_sha256": "ac87e4333a433a4166ad237b24a5e969b0cb085f900d60eb084f248d5586b555"
+      },
+      {
+        "height": 10,
+        "role": 1,
+        "draft_bytes": 183360,
+        "response_bytes": 366732,
+        "core_sha256": "c0becfbb76826e2cee2e051f7f91be303c8a983987b8134ed79a15c91347a175"
+      },
+      {
+        "height": 20,
+        "role": 0,
+        "draft_bytes": 183360,
+        "response_bytes": 366732,
+        "core_sha256": "41acac62e9d7147ec1f1cb4f0d8202aeeb8897be8160fc703a9cfeafe3bf3864"
+      },
+      {
+        "height": 20,
+        "role": 1,
+        "draft_bytes": 183360,
+        "response_bytes": 366732,
+        "core_sha256": "42dd43ef69a8b9c645aebb1c9222329f3332390b6e21536bb2f2afd32a6ead6c"
+      }
+    ]
+  }
+]

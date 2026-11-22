@@ -1,3 +1,18 @@
+# SGM1 monetary security — LOCAL
+
+Starting revision `3d37e5979409f7f7176c3a0a3e0e06d6194bce4f`. Replayed the exact
+179,234-byte funded proof. A fresh EAR1 payment with a 188,170-byte proof passed
+public verification, receipt decryption and a corrupt early-table control. The
+partial-oracle decoder isolates the quantum prefix-extraction premise. Both
+swap wallets now require independently pinned descriptors and matching
+preflight approvals. The 15-case negative suite received zero draft bytes.
+Two newly signed swaps matched four measured draft digests, and a fresh
+durable replay reached height 20 with 57 outputs and 20 fees. Next publish
+reviewed source and the checksum-pinned EAR1 public frame, then check the
+anonymous reproduction and CI under docs/DELIVERY.md.
+[Decision](experiments/sgm1-security/DECISION.md) ·
+[Reproduction](experiments/sgm1-security/README.md)
+
 # Two-core SGM1 monetary admission — VERIFIED
 
 Tested executable `823cdcc43e6e47a4e58e83ba78aefef237f4f04e` is reachable from

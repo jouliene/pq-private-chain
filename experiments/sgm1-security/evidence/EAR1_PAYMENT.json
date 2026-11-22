@@ -1,0 +1,63 @@
+{
+  "ordinary_B": 192160,
+  "proof_B": 188170,
+  "public_rows": 13,
+  "private_inputs": 2,
+  "output_receipts_opened": 2,
+  "changed_fee_receipts_and_proof_rejected": true,
+  "signed_leg_B_if_same_proof": 222088,
+  "two_owner_bundle_B_if_same_proof": 444196,
+  "geometry": {
+    "permutations": 99,
+    "parents": 80,
+    "flatten": 4,
+    "bit_coordinates": 783808,
+    "trace_words": 584,
+    "scalar_rows": 6065,
+    "linear_rows": 61941,
+    "scalar_ell": 13,
+    "ring": {
+      "symbols": 58876,
+      "rows": 647,
+      "columns": 90480,
+      "salts": 1920,
+      "siblings": 46080,
+      "R_completion": 0,
+      "Q": 7744,
+      "roots": 64,
+      "masked_projections": 512,
+      "blinded_square": 32,
+      "explicit_degree_table": 22650
+    },
+    "proof_B": 188170
+  },
+  "prover": {
+    "wall_s": 45.16,
+    "user_s": 42.78,
+    "sys_s": 2.39,
+    "peak_KiB": 322132
+  },
+  "cold_verifier": {
+    "wall_s": 2.56,
+    "user_s": 2.47,
+    "sys_s": 0.08,
+    "peak_KiB": 133536
+  },
+  "repeated_public_checks": [
+    {
+      "wall_s": 2.202547742999741,
+      "cpu_s": 2.20252168
+    },
+    {
+      "wall_s": 2.1395214289950673,
+      "cpu_s": 2.1391870199999996
+    },
+    {
+      "wall_s": 2.1510454429953825,
+      "cpu_s": 2.1509651229999998
+    }
+  ],
+  "genesis_sha256": "682a34abd047472df4caa7ac30452529a231f5d904ff544bb1ad743024379c11",
+  "public_packet_sha256": "e8858eae087cc3bdeccbac25d51b96d2b9e72942fff9aad80d92586625bc73ac",
+  "reference_keccak_permutations": 99
+}

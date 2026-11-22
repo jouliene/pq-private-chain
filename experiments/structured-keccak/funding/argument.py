@@ -54,19 +54,22 @@ def check_bits(w,ell,ctx):
     run_products(ctx,ell,arrays,endpoints,b"FS01 scalar predicates")
 
 
-def shape(w):
+def shape(w, *, early_degree=False):
     b = w.batch()
     t,ell = dimensions(w,b)
     return dict(permutations=b.p, parents=len(w.selectors), flatten=b.k,
                 bit_coordinates=w.width, trace_words=t, scalar_rows=sum(len(a) for a,_,_ in w.products),
                 linear_rows=sum(len(v) for _,v in w.linear), scalar_ell=ell,
-                ring=wire_size(w.width,t), proof_B=wire_bytes(w.width,t)+32*t)
+                ring=wire_size(w.width,t,early_degree=early_degree),
+                proof_B=wire_bytes(w.width,t,early_degree=early_degree)+32*t)
 
 
-def run(w,domain,packet=None):
+def run(w,domain,packet=None,*,early_degree=False):
     batch = w.batch()
     t,ell = dimensions(w,batch)
-    size = wire_bytes(w.width,t)+32*t
+    size = wire_bytes(w.width,t,early_degree=early_degree)+32*t
+    if early_degree:
+        domain = b"SGM1/early-explicit-degree/v1" + domain
     if packet is not None and len(packet)!=size:
         raise ValueError("funded packet length rejected")
 
@@ -77,7 +80,7 @@ def run(w,domain,packet=None):
         check_bits(w,ell,ctx)
         linear_bindings(w,ctx)
     bits = np.frombuffer(w.values, np.uint8) if w.private else None
-    result = execute(domain+bytes([w.flatten]),w.width,t,constraints,bits=bits,packet=packet)
+    result = execute(domain+bytes([w.flatten]),w.width,t,constraints,bits=bits,packet=packet,early_degree=early_degree)
     if packet is None and len(result)!=size:
         raise ValueError("funded serialization mismatch")
     return result

@@ -57,6 +57,15 @@ Git integration and publication.
    milestone incomplete and report the exact blocker and last publicly verified
    SHA.
 
+## SGM1 monetary-security decision
+
+The [funded security walkthrough](../experiments/sgm1-security/README.md) verifies
+the prior public proof, the explicit degree-table variant, the conditional query
+calculations and the pre-draft wallet endpoint checks. The optional EAR1 public
+archive contains just the verified transaction and funded prefix. Preserve the
+distinction between a complete public verifier run and a quantum extraction
+claim. [Architecture decision](../experiments/sgm1-security/DECISION.md)
+
 ## SGM1 two-core admission
 
 The [capacity walkthrough](../experiments/sgm1-admission/README.md) regenerates

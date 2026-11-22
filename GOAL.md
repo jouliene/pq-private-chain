@@ -1,3 +1,12 @@
+# SGM1 post-quantum monetary security
+
+Starting at `3d37e5979409f7f7176c3a0a3e0e06d6194bce4f`, decide whether the
+exact funded-spend argument supports further 128-bit research. Develop the
+strongest candidate reduction, test a targeted protocol revision, and bind both
+complete receiving descriptors to intended swap owners before draft release.
+Keep C funded. Require independent public reproduction of the mathematics and
+wallet measurements before closing this milestone.
+
 # Two-core capacity for SGM1 monetary admission
 
 From `beae20b4b9b81598708262cc407f21553ca7ae94`, measure native four-group SGM1 in
