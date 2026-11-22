@@ -1,6 +1,6 @@
 # Phase 1E — funded profile-C atomic swaps
 
-Extend occurrence-indexed supply across the two independently authorized legs, their shared block reward, and subsequent selected spends. Track acceptance from original SWB3 bytes, and reconcile the second partial fill with actual funded outputs. The global private PoW objective remains active.
+Extend occurrence-indexed supply across the two independently authorized legs, their shared block reward, and subsequent selected spends. Track acceptance from original SWB3 bytes, and reconcile the second partial fill with actual funded outputs. Phase 1E passed the kernel audit, independent anonymous public reproduction and all three automatic workflows on `d16943a92b6c6b0e5efef14b4a6dd6d1680a3d93`. The global private PoW objective remains active. [Decision and scope](experiments/swap-occurrence/README.md) · [Independent review](experiments/swap-occurrence/review/PUBLIC.md)
 
 # Phase 1D — occurrence-indexed supply
 

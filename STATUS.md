@@ -1,6 +1,10 @@
-# Phase 1E — LOCAL, public verification pending
+# Phase 1E — VERIFIED for deployed profile-C atomic swaps
 
-Baseline `773c6a7c6062a43c6488d489ad546d2927b14538`. The integrated run compiled the history, two registered leg bridges and public-row refinement, reconciled both fresh swaps on three nodes, and reproduced rejection of incomplete and duplicate groups without changing persistent rows. The second fill consumed precisely 40 A of prior swap change plus an older 10 A. All 34 named kernel dependencies passed the final audit. Pending steps are anonymous public reproduction, exact-SHA Actions and the documentation handoff. [Run one command](experiments/swap-occurrence/README.md).
+Public implementation `d16943a92b6c6b0e5efef14b4a6dd6d1680a3d93` extends Phase 1D handoff `773c6a7c6062a43c6488d489ad546d2927b14538`. Lean 4.19.0 audited 34 named results. Starting from a faithfully interpreted prefix, covered C blocks can interleave swaps, ordinary payments, all four supply operations and rewards without resetting the occurrence invariant. Each complete swap settles both ordered legs, conserves every asset, leaves the registry event list unchanged and pays exactly 3 native units. Body/owner binding, header and tree binding, registered verification, signature assumptions and inherited A/B state remain explicit. The global private PoW goal stays active.
+
+A non-author reproduced two fresh purchases through the published command and independently queried all three selected ledgers. In the second purchase the seller spent precisely the prior 40 A change output and an older 10 A output. Each swap paid the miner 103, including the fee once. Submission of either isolated half failed in the tested cases with no partial writes. The independent public clone, developer run and downloaded Phase 1E CI artifact agreed byte for byte on all three public summaries. The three linked automatic workflows passed on the implementation SHA. The final handoff adds only Markdown.
+
+[Decision and one-command reproduction](experiments/swap-occurrence/README.md) · [Model-to-source mapping](experiments/swap-occurrence/MAPPING.md) · [Independent review](experiments/swap-occurrence/review/PUBLIC.md) · [Swap conservation CI](https://github.com/jouliene/pq-private-chain/actions/runs/45027938773) · [PoW devnet CI](https://github.com/jouliene/pq-private-chain/actions/runs/45027938721) · [Payment CI](https://github.com/jouliene/pq-private-chain/actions/runs/45027938716)
 
 # Phase 1D — VERIFIED for occurrence-indexed token supply
 
