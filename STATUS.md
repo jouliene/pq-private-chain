@@ -1,17 +1,28 @@
-# SGM1 monetary security — LOCAL
+# SGM1 monetary security — VERIFIED
 
-Starting revision `3d37e5979409f7f7176c3a0a3e0e06d6194bce4f`. Replayed the exact
-179,234-byte funded proof. A fresh EAR1 payment with a 188,170-byte proof passed
-public verification, receipt decryption and a corrupt early-table control. The
-partial-oracle decoder isolates the quantum prefix-extraction premise. Both
-swap wallets now require independently pinned descriptors and matching
-preflight approvals. The 15-case negative suite received zero draft bytes.
-Two newly signed swaps matched four measured draft digests, and a fresh
-durable replay reached height 20 with 57 outputs and 20 fees. Next publish
-reviewed source and the checksum-pinned EAR1 public frame, then check the
-anonymous reproduction and CI under docs/DELIVERY.md.
+**Decision: revise SGM1.** Keep profile C funded. A typed partial-oracle decoder
+and a genuine EAR1 payment isolate the outstanding quantum extraction premise.
+The schedule and conditional bounds reproduced from the published funded proof.
+EAR1 added 8,936 proof bytes in both new wallet runs. The public reviewer
+verified both receipts and regenerated a 192,160-byte funded payment using
+fresh keys. The 15-case wallet suite returned 1,029 control bytes and zero draft
+bytes for 49 requests. The independent wallets settled two genuine swaps. A
+read-only check reconciled all 20 durable frames, 57 outputs, 44 spent identifiers
+and 20 fees. An authenticated local pairing channel is assumed. Joint privacy
+and 128-bit adaptive monetary knowledge remain open.
+
+Tested and released executable `84175411ad6f693a9d232ec021147a9c21d9154d`,
+starting at `3d37e5979409f7f7176c3a0a3e0e06d6194bce4f`. The later handoff adds
+review measurements, a conditional fold calculation and documentation only.
+All five source workflows passed on the executable SHA.
 [Decision](experiments/sgm1-security/DECISION.md) ·
-[Reproduction](experiments/sgm1-security/README.md)
+[Independent reproduction](experiments/sgm1-security/review/PUBLIC.md) ·
+[Commands](experiments/sgm1-security/README.md) ·
+[SGM1 and EAR1](https://github.com/jouliene/pq-private-chain/actions/runs/44988583332) ·
+[Funded paths](https://github.com/jouliene/pq-private-chain/actions/runs/44988583266) ·
+[Structured proof](https://github.com/jouliene/pq-private-chain/actions/runs/44988583277) ·
+[Payment smoke](https://github.com/jouliene/pq-private-chain/actions/runs/44988583400) ·
+[PoW](https://github.com/jouliene/pq-private-chain/actions/runs/44988583289)
 
 # Two-core SGM1 monetary admission — VERIFIED
 

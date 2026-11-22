@@ -7,6 +7,12 @@ complete receiving descriptors to intended swap owners before draft release.
 Keep C funded. Require independent public reproduction of the mathematics and
 wallet measurements before closing this milestone.
 
+The bounded decision was independently reproduced from public source
+`84175411ad6f693a9d232ec021147a9c21d9154d`. Revise the proof protocol.
+The funded PoW chain continues with C. The global blockchain objective remains
+active. [Public review](experiments/sgm1-security/review/PUBLIC.md) ·
+[Open cryptographic question](experiments/sgm1-security/DECISION.md)
+
 # Two-core capacity for SGM1 monetary admission
 
 From `beae20b4b9b81598708262cc407f21553ca7ae94`, measure native four-group SGM1 in
